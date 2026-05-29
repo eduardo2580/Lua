@@ -1,6 +1,6 @@
 --[[
   SUPER SIMPLE NEOVIM
-  –––––––––––––––––––
+  -------------------
   Just copy this file to:
     ~/.config/nvim/init.lua   (Linux/Mac)
     %USERPROFILE%\AppData\Local\nvim\init.lua   (Windows)
@@ -8,13 +8,13 @@
   Then restart Neovim. Everything installs itself.
 
   EASY SHORTCUTS (just hold Alt and press a letter):
-    Alt+t   →  open file tree
-    Alt+f   →  find files
-    Alt+g   →  search text
-    Alt+s   →  save file
-    Alt+q   →  close window
-    F12     →  open terminal
-    Space   →  show all shortcuts
+    Alt+t   ->  open file tree
+    Alt+f   ->  find files
+    Alt+g   ->  search text
+    Alt+s   ->  save file
+    Alt+q   ->  close window
+    F12     ->  open terminal
+    Space   ->  show all shortcuts
 
   That's it. No config, no tears.
 ]]
@@ -34,10 +34,11 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
+vim.opt.encoding = "utf-8"
 
 -- Helper to open a folder
 function _G.OpenFolder()
-  local path = vim.fn.input("📂 Folder path: ", vim.fn.getcwd(), "dir")
+  local path = vim.fn.input("Folder path: ", vim.fn.getcwd(), "dir")
   if path ~= "" then
     vim.cmd("cd " .. vim.fn.fnameescape(path))
     vim.cmd("Neotree reveal")
@@ -66,13 +67,12 @@ local plugins = {
     end,
   },
 
-  -- File tree (press Alt+t)
+  -- File tree (press Alt+t) - without devicons to avoid Unicode
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
     keys = {
@@ -87,6 +87,10 @@ local plugins = {
           filtered_items = { hide_dotfiles = false, hide_gitignored = false },
         },
         window = { width = 35 },
+        -- Disable icons (they are Unicode)
+        default_component_configs = {
+          icon = { enabled = false },
+        },
       })
     end,
   },
@@ -104,12 +108,17 @@ local plugins = {
     },
     config = function()
       require("telescope").setup({
-        defaults = { border = true, prompt_prefix = "🔍 " },
+        defaults = {
+          border = true,
+          prompt_prefix = "> ",
+          -- Use ASCII borders
+          borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+        },
       })
     end,
   },
 
-  -- Syntax highlighting and code understanding (auto‑installs)
+  -- Syntax highlighting and code understanding (auto-installs)
   {
     "nvim-treesitter/nvim-treesitter",
     build = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
@@ -205,7 +214,7 @@ local plugins = {
     end,
   },
 
-  -- Floating terminal (press F12)
+  -- Floating terminal (press F12) – fixed API call
   {
     "akinsho/toggleterm.nvim",
     version = "*",
@@ -220,13 +229,17 @@ local plugins = {
         open_mapping = [[<F12>]],
         direction = "float",
         start_in_insert = true,
-        float_opts = { border = "curved", width = 0.9, height = 0.8 },
+        float_opts = { border = "single", width = 0.9, height = 0.8 },  -- ASCII border
       })
+
       local function get_terminal()
-        local Terminal = require("toggleterm.terminal").Terminal
-        local terminals = Terminal:get_terminals()
-        return terminals and terminals[1] or nil
+        local ok, terminals = pcall(require("toggleterm.terminal").get_terminals)
+        if not ok or not terminals or #terminals == 0 then
+          return nil
+        end
+        return terminals[1]
       end
+
       _G.SendToTerm = function()
         local term = get_terminal()
         if not term then
@@ -249,16 +262,20 @@ local plugins = {
         end
         term:send(text .. "\n", false)
       end
+
       vim.keymap.set("t", "<Esc>", "<cmd>ToggleTerm<CR>", { desc = "Close terminal" })
     end,
   },
 
-  -- Help menu (press Space or Alt+? but Space is easier)
+  -- Help menu (press Space)
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      require("which-key").setup({ win = { border = "double" } })
+      -- Use ASCII border (single line box)
+      require("which-key").setup({
+        win = { border = "single" },
+      })
       local wk = require("which-key")
       wk.add({
         { "<leader>?", group = "Help" },
@@ -280,7 +297,6 @@ local plugins = {
 }
 
 -- ==================== EASY ALT KEYMAPS ====================
--- File & navigation
 vim.keymap.set("n", "<A-t>", ":Neotree toggle<CR>", { desc = "File tree" })
 vim.keymap.set("n", "<A-f>", ":Telescope find_files<CR>", { desc = "Find files" })
 vim.keymap.set("n", "<A-g>", ":Telescope live_grep<CR>", { desc = "Search text" })
@@ -288,30 +304,27 @@ vim.keymap.set("n", "<A-s>", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<A-q>", ":q<CR>", { desc = "Close window" })
 vim.keymap.set("n", "<A-x>", ":wq<CR>", { desc = "Save and close" })
 
--- Window movement (Ctrl still works, but Alt+arrows is more intuitive)
 vim.keymap.set("n", "<A-Left>", "<C-w>h", { desc = "Left window" })
 vim.keymap.set("n", "<A-Down>", "<C-w>j", { desc = "Down window" })
 vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Up window" })
 vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Right window" })
 
--- Keep old leader mappings for compatibility
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close current window" })
 vim.keymap.set("n", "<leader>x", ":wq<CR>", { desc = "Save and close" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { desc = "Clear search highlights" })
 
--- Mouse toggle (for touch screens)
 vim.keymap.set("n", "<leader>tm", function()
   vim.o.mouse = vim.o.mouse == "a" and "" or "a"
   vim.notify("Mouse " .. (vim.o.mouse == "a" and "enabled" or "disabled"), vim.log.levels.INFO)
 end, { desc = "Toggle mouse" })
 
--- Install all plugins (Lazy will show a progress window, then close automatically)
+-- Install all plugins (ASCII border)
 require("lazy").setup(plugins, {
   install = { colorscheme = { "tokyonight" } },
   ui = {
-    border = "rounded",
+    border = "single",   -- ASCII border
     title = "Installing plugins... please wait",
     title_pos = "center",
     size = { width = 0.5, height = 0.3 },
@@ -319,73 +332,48 @@ require("lazy").setup(plugins, {
   performance = { rtp = { disabled_plugins = { "gzip", "tarPlugin", "tohtml", "tutor", "zipPlugin" } } },
 })
 
--- Auto‑open file tree if you start with a folder, otherwise show a welcome screen with shortcuts
+-- Welcome screen with pure ASCII
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     local args = vim.fn.argv()
     if #args == 0 then
-      -- Welcome message with easy shortcuts
       vim.defer_fn(function()
         local buf = vim.api.nvim_create_buf(false, true)
         local win = vim.api.nvim_open_win(buf, true, {
           relative = "editor",
           width = 70,
-          height = 20,
-          row = (vim.o.lines - 20) / 2,
+          height = 18,
+          row = (vim.o.lines - 18) / 2,
           col = (vim.o.columns - 70) / 2,
           style = "minimal",
-          border = "rounded",
+          border = "single",   -- ASCII border
         })
         vim.api.nvim_win_set_option(win, "winblend", 10)
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, {
           "",
-          "  ╭────────────────────────────────────────────────────╮",
-          "  │             WELCOME TO SUPER SIMPLE NEOVIM         │",
-          "  ╰────────────────────────────────────────────────────╯",
+          "  +------------------------------------------------------+",
+          "  |          WELCOME TO SUPER SIMPLE NEOVIM             |",
+          "  +------------------------------------------------------+",
           "",
-          "  🎯 EASY SHORTCUTS (hold Alt and press a letter):",
-          "     Alt + t   →  open file tree",
-          "     Alt + f   →  find files",
-          "     Alt + g   →  search text inside files",
-          "     Alt + s   →  save current file",
-          "     Alt + q   →  close current window",
-          "     F12       →  open terminal",
-          "     Space     →  show all shortcuts",
+          "  EASY SHORTCUTS (hold Alt and press a letter):",
+          "     Alt + t   ->  open file tree",
+          "     Alt + f   ->  find files",
+          "     Alt + g   ->  search text inside files",
+          "     Alt + s   ->  save current file",
+          "     Alt + q   ->  close current window",
+          "     F12       ->  open terminal",
+          "     Space     ->  show all shortcuts",
           "",
-          "  🖱️  You can also click with your mouse.",
+          "  You can also click with your mouse.",
           "",
           "  Press any key to close this window and start coding.",
           "",
         })
         vim.api.nvim_buf_set_keymap(buf, "n", "<CR>", "<cmd>q<CR>", { noremap = true, silent = true })
         vim.api.nvim_buf_set_keymap(buf, "n", "<Space>", "<cmd>q<CR>", { noremap = true, silent = true })
-        -- Also close on any key press
-        vim.api.nvim_buf_set_keymap(buf, "n", "a", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "b", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "c", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "d", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "e", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "f", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "g", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "h", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "i", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "j", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "k", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "l", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "m", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "n", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "o", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "p", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "q", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "r", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "s", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "t", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "u", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "v", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "w", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "x", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "y", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "z", "<cmd>q<CR>", { noremap = true, silent = true })
+        for _, key in ipairs({ "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" }) do
+          vim.api.nvim_buf_set_keymap(buf, "n", key, "<cmd>q<CR>", { noremap = true, silent = true })
+        end
       end, 200)
     else
       vim.defer_fn(function() pcall(vim.cmd, "Neotree reveal") end, 200)
