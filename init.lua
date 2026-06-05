@@ -1,28 +1,29 @@
 --[[
-  SUPER SIMPLE NEOVIM
-  -------------------
+  SUPER SIMPLE NEOVIM – PHP + HTML (FULL AUTOCOMPLETE)
+  -----------------------------------------------------
   Just copy this file to:
     ~/.config/nvim/init.lua   (Linux/Mac)
     %USERPROFILE%\AppData\Local\nvim\init.lua   (Windows)
 
-  Then restart Neovim. Everything installs itself.
+  Then restart Neovim. The plugin window will close automatically.
 
-  EASY SHORTCUTS (just hold Alt and press a letter):
-    Alt+t   ->  open file tree
-    Alt+f   ->  find files
-    Alt+g   ->  search text
-    Alt+s   ->  save file
-    Alt+q   ->  close window
-    F12     ->  open terminal
-    Space   ->  show all shortcuts
+  Now inside any .php file you get:
+    - HTML tag autocompletion (type <div then Tab)
+    - CSS property suggestions
+    - PHP functions/classes via phpactor
+    - Emmet expansion with <C-y>,
 
-  That's it. No config, no tears.
+  SHORTCUTS:
+    Alt+t   file tree       Alt+f   find files
+    Alt+g   search text     Alt+s   save
+    Alt+q   close window    F12     terminal
+    Space   show all shortcuts
 ]]
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Basic settings (easy on the eyes)
+-- Basic settings
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
@@ -45,7 +46,7 @@ function _G.OpenFolder()
   end
 end
 
--- Install lazy.nvim (plugin manager)
+-- Install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
@@ -56,69 +57,45 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- List of plugins (everything you need, nothing you don't)
+-- Plugins list
 local plugins = {
-  -- Color theme (pretty)
-  {
-    "folke/tokyonight.nvim",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme "tokyonight-night"
-    end,
-  },
+  { "folke/tokyonight.nvim", priority = 1000, config = function() vim.cmd.colorscheme "tokyonight-night" end },
 
-  -- File tree (press Alt+t) - without devicons to avoid Unicode
+  -- File tree
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-    },
-    keys = {
-      { "<A-t>", ":Neotree toggle<CR>", desc = "Toggle file tree" },
-      { "<leader>e", ":Neotree reveal<CR>", desc = "Find current file in tree" },
-    },
+    dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
+    keys = { { "<A-t>", ":Neotree toggle<CR>", desc = "Toggle file tree" }, { "<leader>e", ":Neotree reveal<CR>", desc = "Find current file" } },
     config = function()
       require("neo-tree").setup({
         close_if_last_window = true,
-        filesystem = {
-          follow_current_file = { enabled = true },
-          filtered_items = { hide_dotfiles = false, hide_gitignored = false },
-        },
+        filesystem = { follow_current_file = { enabled = true }, filtered_items = { hide_dotfiles = false, hide_gitignored = false } },
         window = { width = 35 },
-        -- Disable icons (they are Unicode)
-        default_component_configs = {
-          icon = { enabled = false },
-        },
+        default_component_configs = { icon = { enabled = false } },
       })
     end,
   },
 
-  -- Fuzzy finder (press Alt+f to find files, Alt+g to grep)
+  -- Telescope
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
       { "<A-f>", "<cmd>Telescope find_files<CR>", desc = "Find files" },
-      { "<A-g>", "<cmd>Telescope live_grep<CR>",  desc = "Search text" },
-      { "<leader>fb", "<cmd>Telescope buffers<CR>",    desc = "List buffers" },
-      { "<leader>fo", "<cmd>Telescope oldfiles<CR>",   desc = "Recent files" },
-      { "<leader>fk", "<cmd>Telescope keymaps<CR>",    desc = "All shortcuts" },
+      { "<A-g>", "<cmd>Telescope live_grep<CR>", desc = "Search text" },
+      { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "List buffers" },
+      { "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Recent files" },
+      { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "All shortcuts" },
     },
     config = function()
       require("telescope").setup({
-        defaults = {
-          border = true,
-          prompt_prefix = "> ",
-          -- Use ASCII borders
-          borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-        },
+        defaults = { border = true, prompt_prefix = "> ", borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" } },
       })
     end,
   },
 
-  -- Syntax highlighting and code understanding (auto-installs)
+  -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     build = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
@@ -128,7 +105,7 @@ local plugins = {
         local ok, ts = pcall(require, "nvim-treesitter.configs")
         if not ok then vim.defer_fn(setup, 100) return end
         ts.setup({
-          ensure_installed = { "lua", "python", "javascript", "c", "rust", "go", "bash", "json", "yaml", "markdown" },
+          ensure_installed = { "lua", "python", "javascript", "c", "rust", "go", "bash", "json", "yaml", "markdown", "php", "html", "css" },
           auto_install = true,
           highlight = { enable = true },
           indent = { enable = true },
@@ -138,7 +115,10 @@ local plugins = {
     end,
   },
 
-  -- LSP and autocompletion (smart code help)
+  { "windwp/nvim-ts-autotag", dependencies = { "nvim-treesitter/nvim-treesitter" }, event = "InsertEnter", config = function() require("nvim-ts-autotag").setup() end },
+  { "mattn/emmet-vim", ft = { "html", "css", "php", "javascript", "vue", "jsx", "tsx" }, init = function() vim.g.user_emmet_leader_key = "<C-y>" end },
+
+  -- LSP & Mason
   { "williamboman/mason.nvim", build = ":MasonUpdate", cmd = "Mason", config = true },
   { "williamboman/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
   {
@@ -151,20 +131,38 @@ local plugins = {
       local on_attach = function(client, bufnr)
         local opts = { buffer = bufnr, noremap = true, silent = true }
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-        vim.keymap.set("n", "K",  vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, opts)
         vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts)
       end
+
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer" },
+        ensure_installed = {
+          "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer",
+          "phpactor",   -- PHP LSP (pure PHP, no Node.js)
+          "html",       -- HTML LSP
+          "cssls",      -- CSS LSP
+        },
         automatic_installation = true,
-        handlers = { function(server_name) lspconfig[server_name].setup({ on_attach = on_attach, capabilities = capabilities }) end },
+        handlers = {
+          function(server_name)
+            local config = { on_attach = on_attach, capabilities = capabilities }
+            -- Force HTML and CSS LSP to attach also to PHP files
+            if server_name == "html" or server_name == "cssls" then
+              config.filetypes = { "php", "html", "css" }
+            end
+            lspconfig[server_name].setup(config)
+          end,
+        },
       })
+
+      -- Optional: if you prefer intelephense (needs Node.js), replace 'phpactor' with 'intelephense'
+      -- and install Node.js from https://nodejs.org
     end,
   },
 
-  -- Autocomplete popup
+  -- Autocomplete
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -176,6 +174,15 @@ local plugins = {
       local cmp = require("cmp")
       local luasnip = require("luasnip")
       require("luasnip.loaders.from_vscode").lazy_load()
+
+      -- Make HTML/CSS snippets also available in PHP files
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "php",
+        callback = function()
+          luasnip.filetype_extend("php", { "html", "css" })
+        end,
+      })
+
       cmp.setup({
         snippet = { expand = function(args) luasnip.lsp_expand(args.body) end },
         mapping = cmp.mapping.preset.insert({
@@ -202,7 +209,7 @@ local plugins = {
     end,
   },
 
-  -- Git signs (see changes in the sidebar)
+  -- Git signs
   {
     "lewis6991/gitsigns.nvim",
     event = "BufReadPre",
@@ -214,125 +221,108 @@ local plugins = {
     end,
   },
 
-  -- Floating terminal (press F12) – fixed API call
+  -- Terminal
   {
     "akinsho/toggleterm.nvim",
     version = "*",
     keys = {
       { "<F12>", "<cmd>ToggleTerm<CR>", desc = "Open/close terminal" },
-      { "<leader>tr", "<cmd>lua SendToTerm()<CR>", desc = "Send current line to terminal", mode = "n" },
-      { "<leader>tr", "<cmd>lua SendToTerm()<CR>", desc = "Send selection to terminal", mode = "x" },
+      { "<leader>tr", "<cmd>lua SendToTerm()<CR>", desc = "Send line/selection to terminal", mode = { "n", "x" } },
     },
     config = function()
       require("toggleterm").setup({
-        size = 15,
-        open_mapping = [[<F12>]],
-        direction = "float",
-        start_in_insert = true,
-        float_opts = { border = "single", width = 0.9, height = 0.8 },  -- ASCII border
+        size = 15, open_mapping = [[<F12>]], direction = "float",
+        start_in_insert = true, float_opts = { border = "single", width = 0.9, height = 0.8 },
       })
-
       local function get_terminal()
         local ok, terminals = pcall(require("toggleterm.terminal").get_terminals)
-        if not ok or not terminals or #terminals == 0 then
-          return nil
-        end
+        if not ok or not terminals or #terminals == 0 then return nil end
         return terminals[1]
       end
-
       _G.SendToTerm = function()
         local term = get_terminal()
-        if not term then
-          vim.notify("Press <F12> to open terminal first", vim.log.levels.WARN)
-          return
-        end
+        if not term then vim.notify("Press <F12> to open terminal first", vim.log.levels.WARN) return end
         local mode = vim.api.nvim_get_mode().mode
         local text = ""
         if mode == "v" or mode == "V" then
           local start_pos = vim.fn.getpos("'<")
           local end_pos = vim.fn.getpos("'>")
           local lines = vim.api.nvim_buf_get_lines(0, start_pos[2]-1, end_pos[2], false)
-          if #lines == 1 then
-            text = lines[1]:sub(start_pos[3], end_pos[3])
-          else
-            text = table.concat(lines, "\n")
-          end
+          if #lines == 1 then text = lines[1]:sub(start_pos[3], end_pos[3])
+          else text = table.concat(lines, "\n") end
         else
           text = vim.api.nvim_get_current_line()
         end
         term:send(text .. "\n", false)
       end
-
       vim.keymap.set("t", "<Esc>", "<cmd>ToggleTerm<CR>", { desc = "Close terminal" })
     end,
   },
 
-  -- Help menu (press Space)
+  -- Which-key
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      -- Use ASCII border (single line box)
-      require("which-key").setup({
-        win = { border = "single" },
-      })
+      require("which-key").setup({ win = { border = "single" } })
       local wk = require("which-key")
       wk.add({
-        { "<leader>?", group = "Help" },
-        { "<leader>f", group = "Find" },
-        { "<leader>g", group = "Git" },
-        { "<leader>l", group = "LSP" },
-        { "<leader>t", group = "Terminal" },
-        { "<leader>w", group = "Save" },
+        { "<leader>?", group = "Help" }, { "<leader>f", group = "Find" }, { "<leader>g", group = "Git" },
+        { "<leader>l", group = "LSP" }, { "<leader>t", group = "Terminal" }, { "<leader>w", group = "Save" },
         { "<leader>q", group = "Quit" },
       })
       vim.keymap.set("n", "<leader>?", function() require("which-key").show({ global = false }) end, { desc = "Show help" })
     end,
   },
 
-  -- Extra useful tools (autopairs, comments, indent lines)
+  -- Extras
   { "windwp/nvim-autopairs", event = "InsertEnter", config = function() require("nvim-autopairs").setup() end },
   { "numToStr/Comment.nvim", keys = { "gc", "gb" }, config = function() require("Comment").setup() end },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", event = "BufReadPost", config = function() require("ibl").setup() end },
 }
 
--- ==================== EASY ALT KEYMAPS ====================
+-- Keymaps
 vim.keymap.set("n", "<A-t>", ":Neotree toggle<CR>", { desc = "File tree" })
 vim.keymap.set("n", "<A-f>", ":Telescope find_files<CR>", { desc = "Find files" })
 vim.keymap.set("n", "<A-g>", ":Telescope live_grep<CR>", { desc = "Search text" })
 vim.keymap.set("n", "<A-s>", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<A-q>", ":q<CR>", { desc = "Close window" })
 vim.keymap.set("n", "<A-x>", ":wq<CR>", { desc = "Save and close" })
-
 vim.keymap.set("n", "<A-Left>", "<C-w>h", { desc = "Left window" })
 vim.keymap.set("n", "<A-Down>", "<C-w>j", { desc = "Down window" })
 vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Up window" })
 vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Right window" })
-
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close current window" })
 vim.keymap.set("n", "<leader>x", ":wq<CR>", { desc = "Save and close" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { desc = "Clear search highlights" })
-
 vim.keymap.set("n", "<leader>tm", function()
   vim.o.mouse = vim.o.mouse == "a" and "" or "a"
   vim.notify("Mouse " .. (vim.o.mouse == "a" and "enabled" or "disabled"), vim.log.levels.INFO)
 end, { desc = "Toggle mouse" })
 
--- Install all plugins (ASCII border)
+-- Install plugins
 require("lazy").setup(plugins, {
   install = { colorscheme = { "tokyonight" } },
-  ui = {
-    border = "single",   -- ASCII border
-    title = "Installing plugins... please wait",
-    title_pos = "center",
-    size = { width = 0.5, height = 0.3 },
-  },
+  ui = { border = "single", title = "Installing plugins... please wait", title_pos = "center", size = { width = 0.5, height = 0.3 } },
   performance = { rtp = { disabled_plugins = { "gzip", "tarPlugin", "tohtml", "tutor", "zipPlugin" } } },
 })
 
--- Welcome screen with pure ASCII
+-- Auto-close lazy window when done
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyDone",
+  callback = function()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+      local buf = vim.api.nvim_win_get_buf(win)
+      if vim.api.nvim_buf_get_option(buf, "filetype") == "lazy" then
+        pcall(vim.api.nvim_win_close, win, false)
+      end
+    end
+  end,
+})
+
+-- Welcome screen
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     local args = vim.fn.argv()
@@ -340,38 +330,26 @@ vim.api.nvim_create_autocmd("VimEnter", {
       vim.defer_fn(function()
         local buf = vim.api.nvim_create_buf(false, true)
         local win = vim.api.nvim_open_win(buf, true, {
-          relative = "editor",
-          width = 70,
-          height = 18,
-          row = (vim.o.lines - 18) / 2,
-          col = (vim.o.columns - 70) / 2,
-          style = "minimal",
-          border = "single",   -- ASCII border
+          relative = "editor", width = 70, height = 18,
+          row = (vim.o.lines - 18) / 2, col = (vim.o.columns - 70) / 2,
+          style = "minimal", border = "single",
         })
         vim.api.nvim_win_set_option(win, "winblend", 10)
         vim.api.nvim_buf_set_lines(buf, 0, -1, false, {
-          "",
-          "  +------------------------------------------------------+",
+          "", "  +------------------------------------------------------+",
           "  |          WELCOME TO SUPER SIMPLE NEOVIM             |",
-          "  +------------------------------------------------------+",
-          "",
+          "  +------------------------------------------------------+", "",
           "  EASY SHORTCUTS (hold Alt and press a letter):",
-          "     Alt + t   ->  open file tree",
-          "     Alt + f   ->  find files",
-          "     Alt + g   ->  search text inside files",
-          "     Alt + s   ->  save current file",
-          "     Alt + q   ->  close current window",
-          "     F12       ->  open terminal",
-          "     Space     ->  show all shortcuts",
-          "",
-          "  You can also click with your mouse.",
-          "",
-          "  Press any key to close this window and start coding.",
-          "",
+          "     Alt + t   ->  open file tree", "     Alt + f   ->  find files",
+          "     Alt + g   ->  search text inside files", "     Alt + s   ->  save current file",
+          "     Alt + q   ->  close current window", "     F12       ->  open terminal",
+          "     Space     ->  show all shortcuts", "",
+          "  PHP/HTML extras:", "     <C-y>,     ->  expand Emmet (div>p -> <div><p></p></div>)",
+          "     gd         ->  go to definition (PHP function/class)", "     K          ->  show LSP hover info",
+          "", "  HTML/CSS autocompletion now works inside PHP files!",
+          "", "  Press any key to close this window and start coding.", "",
         })
-        vim.api.nvim_buf_set_keymap(buf, "n", "<CR>", "<cmd>q<CR>", { noremap = true, silent = true })
-        vim.api.nvim_buf_set_keymap(buf, "n", "<Space>", "<cmd>q<CR>", { noremap = true, silent = true })
-        for _, key in ipairs({ "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" }) do
+        for _, key in ipairs({ "<CR>", "<Space>", "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" }) do
           vim.api.nvim_buf_set_keymap(buf, "n", key, "<cmd>q<CR>", { noremap = true, silent = true })
         end
       end, 200)

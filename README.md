@@ -1,6 +1,6 @@
-# Super Simple Neovim
+# Neovim
 
-A zero-fuss Neovim config for humans. Copy one file, restart, done.
+A Neovim config for humans. Copy one file, restart, done.
 
 ---
 
@@ -16,7 +16,9 @@ cp init.lua ~/.config/nvim/init.lua
 %USERPROFILE%\AppData\Local\nvim\init.lua
 ```
 
-Restart Neovim. Plugins install themselves — no extra steps.
+Restart Neovim. Plugins install themselves — the installation window closes automatically when finished.
+
+No extra steps.
 
 ---
 
@@ -38,6 +40,20 @@ You can also click around with your mouse.
 
 ---
 
+## PHP / HTML / CSS Features (NEW)
+
+Editing `.php` files now gives you full HTML and CSS support inside the same buffer:
+
+- **HTML tag autocompletion** – type `<div` and press `Tab`
+- **CSS property suggestions** – type `backg` → `background-color`
+- **Emmet expansion** – press `<C-y>,` (Ctrl+y then comma) to expand abbreviations like `div>p*2`
+- **Automatic closing of HTML tags** – type `</` and the matching tag appears
+- **PHP LSP** – go to definition, hover info, rename, code actions
+
+No extra configuration required – it just works.
+
+---
+
 ## What's Included
 
 | Feature | Plugin |
@@ -45,9 +61,14 @@ You can also click around with your mouse.
 | Color theme | tokyonight-night |
 | File tree | neo-tree |
 | Fuzzy finder | Telescope |
-| Syntax highlighting | Treesitter |
+| Syntax highlighting | Treesitter (PHP, HTML, CSS, etc.) |
 | Language servers (LSP) | mason + nvim-lspconfig |
+| PHP LSP | phpactor (pure PHP, no Node.js) |
+| HTML / CSS LSP | html-lsp + cssls |
 | Autocompletion | nvim-cmp + LuaSnip |
+| Snippets | friendly-snippets (HTML/CSS in PHP too) |
+| Emmet | emmet-vim |
+| Auto-close HTML tags | nvim-ts-autotag |
 | Git change indicators | gitsigns |
 | Floating terminal | toggleterm |
 | Shortcut help menu | which-key |
@@ -59,9 +80,10 @@ You can also click around with your mouse.
 
 ## Language Support
 
-LSP and syntax highlighting are pre-configured for:
+**Pre‑configured LSP and Treesitter:**
 
-Lua · Python · JavaScript / TypeScript · C / C++ · Rust · Go · Bash · JSON · YAML · Markdown
+Lua · Python · JavaScript / TypeScript · C / C++ · Rust · Go · Bash · JSON · YAML · Markdown  
+**PHP · HTML · CSS**  ← new
 
 Additional languages can be added via `:Mason`.
 
@@ -73,7 +95,7 @@ These activate automatically when a language server attaches.
 
 | Key | Action |
 |-----|--------|
-| `gd` | Go to definition |
+| `gd` | Go to definition (works for PHP classes/functions, HTML, CSS) |
 | `K` | Hover documentation |
 | `Space lr` | Rename symbol |
 | `Space la` | Code actions |
@@ -124,7 +146,9 @@ Space + tr
 
 - Neovim 0.9 or later
 - Git (for plugin installation)
-- A [Nerd Font](https://www.nerdfonts.com) is optional — the config works without one
+- **For PHP LSP**: [PHP](https://windows.php.net/download) must be installed and in your PATH (only if you edit PHP files).  
+  *If you prefer the Node.js‑based PHP LSP (`intelephense`), change `phpactor` to `intelephense` in `ensure_installed` and install Node.js.*
+- A [Nerd Font](https://www.nerdfonts.com) is optional – the config works without one.
 
 ---
 
@@ -132,7 +156,8 @@ Space + tr
 
 Everything lives in a single file (`init.lua`). To change things:
 
-- **Theme** — swap `tokyonight-night` for any other tokyonight variant (`tokyonight-moon`, `tokyonight-storm`, `tokyonight-day`)
-- **Tab width** — change `tabstop` and `shiftwidth` (default: 2)
-- **Languages** — add entries to `ensure_installed` in the Treesitter and mason-lspconfig blocks
-- **Plugins** — add any lazy.nvim-compatible plugin to the `plugins` table
+- **Theme** – swap `tokyonight-night` for `tokyonight-moon`, `tokyonight-storm`, or `tokyonight-day`
+- **Tab width** – change `tabstop` and `shiftwidth` (default: 2)
+- **Languages** – add entries to `ensure_installed` in the Treesitter and `mason-lspconfig` blocks
+- **PHP LSP** – replace `phpactor` with `intelephense` if you prefer (requires Node.js)
+- **Plugins** – add any lazy.nvim‑compatible plugin to the `plugins` table
