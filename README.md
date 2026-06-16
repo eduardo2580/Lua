@@ -1,17 +1,21 @@
-# Neovim
+# MY LUA PROJECTS
+
+## Neovim
 
 A Neovim config for humans. Copy one file, restart, done.
 
 ---
 
-## Installation
+### Installation
 
 **Linux / Mac**
+
 ```bash
 cp init.lua ~/.config/nvim/init.lua
 ```
 
 **Windows**
+
 ```
 %USERPROFILE%\AppData\Local\nvim\init.lua
 ```
@@ -22,25 +26,25 @@ No extra steps.
 
 ---
 
-## Shortcuts
+### Shortcuts
 
 All the essentials, no Vim muscle memory required.
 
-| Key | Action |
-|-----|--------|
-| `Alt + t` | Open / close file tree |
-| `Alt + f` | Find files |
+| Key       | Action                   |
+| --------- | ------------------------ |
+| `Alt + t` | Open / close file tree   |
+| `Alt + f` | Find files               |
 | `Alt + g` | Search text inside files |
-| `Alt + s` | Save file |
-| `Alt + q` | Close window |
-| `F12` | Open / close terminal |
-| `Space` | Show all shortcuts |
+| `Alt + s` | Save file                |
+| `Alt + q` | Close window             |
+| `F12`     | Open / close terminal    |
+| `Space`   | Show all shortcuts       |
 
 You can also click around with your mouse.
 
 ---
 
-## PHP / HTML / CSS Features (NEW)
+### PHP / HTML / CSS Features (NEW)
 
 Editing `.php` files now gives you full HTML and CSS support inside the same buffer:
 
@@ -54,66 +58,66 @@ No extra configuration required – it just works.
 
 ---
 
-## What's Included
+### What's Included
 
-| Feature | Plugin |
-|---------|--------|
-| Color theme | tokyonight-night |
-| File tree | neo-tree |
-| Fuzzy finder | Telescope |
-| Syntax highlighting | Treesitter (PHP, HTML, CSS, etc.) |
-| Language servers (LSP) | mason + nvim-lspconfig |
-| PHP LSP | phpactor (pure PHP, no Node.js) |
-| HTML / CSS LSP | html-lsp + cssls |
-| Autocompletion | nvim-cmp + LuaSnip |
-| Snippets | friendly-snippets (HTML/CSS in PHP too) |
-| Emmet | emmet-vim |
-| Auto-close HTML tags | nvim-ts-autotag |
-| Git change indicators | gitsigns |
-| Floating terminal | toggleterm |
-| Shortcut help menu | which-key |
-| Auto-close brackets | nvim-autopairs |
-| Toggle comments | Comment.nvim |
-| Indent guides | indent-blankline |
+| Feature                | Plugin                                  |
+| ---------------------- | --------------------------------------- |
+| Color theme            | tokyonight-night                        |
+| File tree              | neo-tree                                |
+| Fuzzy finder           | Telescope                               |
+| Syntax highlighting    | Treesitter (PHP, HTML, CSS, etc.)       |
+| Language servers (LSP) | mason + nvim-lspconfig                  |
+| PHP LSP                | phpactor (pure PHP, no Node.js)         |
+| HTML / CSS LSP         | html-lsp + cssls                        |
+| Autocompletion         | nvim-cmp + LuaSnip                      |
+| Snippets               | friendly-snippets (HTML/CSS in PHP too) |
+| Emmet                  | emmet-vim                               |
+| Auto-close HTML tags   | nvim-ts-autotag                         |
+| Git change indicators  | gitsigns                                |
+| Floating terminal      | toggleterm                              |
+| Shortcut help menu     | which-key                               |
+| Auto-close brackets    | nvim-autopairs                          |
+| Toggle comments        | Comment.nvim                            |
+| Indent guides          | indent-blankline                        |
 
 ---
 
-## Language Support
+### Language Support
 
 **Pre‑configured LSP and Treesitter:**
 
 Lua · Python · JavaScript / TypeScript · C / C++ · Rust · Go · Bash · JSON · YAML · Markdown  
-**PHP · HTML · CSS**  ← new
+**PHP · HTML · CSS** ← new
 
 Additional languages can be added via `:Mason`.
 
 ---
 
-## LSP Keymaps
+### LSP Keymaps
 
 These activate automatically when a language server attaches.
 
-| Key | Action |
-|-----|--------|
-| `gd` | Go to definition (works for PHP classes/functions, HTML, CSS) |
-| `K` | Hover documentation |
-| `Space lr` | Rename symbol |
-| `Space la` | Code actions |
-| `Space lf` | Format file |
+| Key        | Action                                                        |
+| ---------- | ------------------------------------------------------------- |
+| `gd`       | Go to definition (works for PHP classes/functions, HTML, CSS) |
+| `K`        | Hover documentation                                           |
+| `Space lr` | Rename symbol                                                 |
+| `Space la` | Code actions                                                  |
+| `Space lf` | Format file                                                   |
 
 ---
 
-## Git Keymaps
+### Git Keymaps
 
-| Key | Action |
-|-----|--------|
-| `]h` | Next change |
-| `[h` | Previous change |
+| Key        | Action             |
+| ---------- | ------------------ |
+| `]h`       | Next change        |
+| `[h`       | Previous change    |
 | `Space gb` | Blame current line |
 
 ---
 
-## Terminal
+### Terminal
 
 Press `F12` to open a floating terminal. Press `F12` or `Esc` to close it.
 
@@ -125,34 +129,34 @@ Space + tr
 
 ---
 
-## Other Useful Keymaps
+### Other Useful Keymaps
 
-| Key | Action |
-|-----|--------|
-| `Space w` | Save file |
-| `Space q` | Close window |
-| `Space x` | Save and close |
-| `Space bd` | Close buffer |
-| `Space tm` | Toggle mouse on/off |
-| `Esc` | Clear search highlights |
+| Key           | Action                     |
+| ------------- | -------------------------- |
+| `Space w`     | Save file                  |
+| `Space q`     | Close window               |
+| `Space x`     | Save and close             |
+| `Space bd`    | Close buffer               |
+| `Space tm`    | Toggle mouse on/off        |
+| `Esc`         | Clear search highlights    |
 | `Alt + Arrow` | Move between split windows |
-| `Space fb` | List open buffers |
-| `Space fo` | Recent files |
-| `Space fk` | Browse all keymaps |
+| `Space fb`    | List open buffers          |
+| `Space fo`    | Recent files               |
+| `Space fk`    | Browse all keymaps         |
 
 ---
 
-## Requirements
+### Requirements
 
 - Neovim 0.9 or later
 - Git (for plugin installation)
 - **For PHP LSP**: [PHP](https://windows.php.net/download) must be installed and in your PATH (only if you edit PHP files).  
-  *If you prefer the Node.js‑based PHP LSP (`intelephense`), change `phpactor` to `intelephense` in `ensure_installed` and install Node.js.*
+  _If you prefer the Node.js‑based PHP LSP (`intelephense`), change `phpactor` to `intelephense` in `ensure_installed` and install Node.js._
 - A [Nerd Font](https://www.nerdfonts.com) is optional – the config works without one.
 
 ---
 
-## Customization
+### Customization
 
 Everything lives in a single file (`init.lua`). To change things:
 
