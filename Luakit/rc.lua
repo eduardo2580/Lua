@@ -1,44 +1,53 @@
 -- ~/.config/luakit/rc.lua
--- Luakit Super Config — v1.0
--- Drop‑in replacement for your rc.lua. Backup your old config first!
+-- Super Browser — GNOME Web aesthetic, all features, KISS.
 
 -- ---------------------------------------------------------------------------
--- 1. Global settings & modules
+-- 1. Load modules
 -- ---------------------------------------------------------------------------
-local lousy = require("lousy")       -- plugin / utility loader
-local tabgroup = require("tabgroup") -- vertical tab tree
-local adblock = require("adblock")   -- ad blocking
-local styles = require("styles")     -- user stylesheets
-local follow = require("follow")     -- alternative link hints
+local lousy = require("lousy")
+local tabgroup = require("tabgroup")
+local adblock = require("adblock")
+local styles = require("styles")
+local follow = require("follow")
 local downloads = require("downloads")
 local bookmarks = require("bookmarks")
 local sql_webhistory = require("sql_webhistory")
 local search = require("search")
 
--- Make global modules available
+-- Optional modules
+local quickmarks = pcall(require, "quickmarks") and require("quickmarks") or nil
+local user_scripts = pcall(require, "user_scripts") and require("user_scripts") or nil
+local undo = pcall(require, "undo") and require("undo") or nil
+
+-- Show command suggestions automatically (press Tab if needed)
+pcall(function()
+  local completion = require("completion")
+  completion.show_list = true
+end)
+
 window = window
 bind = lousy.bind
 modes = lousy.modes
 
 -- ---------------------------------------------------------------------------
--- 2. User interface tweaks
+-- 2. Look & Feel – GNOME Web style
 -- ---------------------------------------------------------------------------
-
--- Vertical tab bar (left side, 200px wide)
 window.tabs_position = "left"
 window.tabs_width = 200
-
--- Statusbar format: [mode] tab_index/tab_count | title | url
+window.tabs_show_close_buttons = true
+window.tabs_show_new_tab_button = true
+window.title_format = "%t – Web"
 window.statusbar_format = "[%m] %t/%T | %p | %u"
-
--- Remove menu & scrollbars
 window.menu_bar = false
 window.scrollbars = false
+window.home_page = "about:home"
+window.new_tab_page = "about:home"
+window.context_menu = true
+window.middle_click_open_new_tab = true
 
--- Start page
-window.home_page = "about:blank"
-
--- Download directory (auto‑create if missing)
+-- ---------------------------------------------------------------------------
+-- 3. Downloads
+-- ---------------------------------------------------------------------------
 os.execute("mkdir -p " .. os.getenv("HOME") .. "/downloads")
 downloads.default_dir = os.getenv("HOME") .. "/downloads"
 downloads.add_signal("download-created", function(d)
@@ -46,72 +55,135 @@ downloads.add_signal("download-created", function(d)
 end)
 
 -- ---------------------------------------------------------------------------
--- 3. Adblock + privacy
+-- 4. Privacy & Adblock (daily auto‑update)
 -- ---------------------------------------------------------------------------
 adblock.load_dir(lousy.util.find_data_dir("adblock"))
 adblock.sources = {
   "https://easylist.to/easylist/easylist.txt",
   "https://easylist.to/easylist/easyprivacy.txt",
-  "https://someonewhocares.org/hosts/zero/hosts",
+  "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
 }
-adblock.update() -- fetch & parse lists (run once; can be scheduled)
+adblock.update()
 
--- Block third‑party cookies by default (except bookmarked sites)
 window.set_policy("cookie-accept", "no-third-party")
 
+local last_update = os.time()
+window.add_signal("periodic-save", function()
+  if os.difftime(os.time(), last_update) > 86400 then
+    adblock.update()
+    last_update = os.time()
+  end
+end)
+
 -- ---------------------------------------------------------------------------
--- 4. Dark mode & user styles
+-- 5. Dark mode toggle (<Ctrl-Shift-d>)
 -- ---------------------------------------------------------------------------
--- Universal dark mode CSS injected into every page
-local dark_theme_css = [[
-    html, body, div, table, tr, td, th, ul, ol, li, p, span,
-    input, textarea, select, button, pre, code, blockquote {
-        background-color: #222 !important;
-        color: #ddd !important;
-        border-color: #555 !important;
-    }
-    a { color: #88b0ff !important; }
-    a:visited { color: #c58af9 !important; }
-    img, video { filter: brightness(0.9) !important; }
+local dark_mode_enabled = false
+local dark_css = [[
+  html { background-color: #222 !important; color: #ddd !important; }
+  a { color: #88b0ff !important; }
+  img, video { filter: brightness(0.9) !important; }
 ]]
-styles.register_global_stylesheet("dark-mode", dark_theme_css)
-
--- Additional per‑domain styles can be added here:
--- styles.register_domain_stylesheet("example.com", "myrules.css")
+bind("n", "<Control-Shift-d>", function(w)
+  if dark_mode_enabled then
+    styles.unregister_global_stylesheet("dark-mode")
+    dark_mode_enabled = false
+    w:notify("Dark mode off", "info")
+  else
+    styles.register_global_stylesheet("dark-mode", dark_css)
+    dark_mode_enabled = true
+    w:notify("Dark mode on", "info")
+  end
+end)
 
 -- ---------------------------------------------------------------------------
--- 5. Vim‑like keybindings (normal mode)
+-- 6. Per‑domain settings (JS, images, zoom, user agent)
+-- ---------------------------------------------------------------------------
+local per_domain = {
+  ["example-bank.com"] = { enable_javascript = false },
+  ["netflix.com"] = {
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124",
+    enable_javascript = true,
+  },
+}
+
+window.add_signal("load-status", function(w, status, uri)
+  if status ~= "finished" then return end
+  local host = uri.host or ""
+  local rules = per_domain[host]
+  if rules then
+    if rules.user_agent then w.view.user_agent = rules.user_agent end
+    if rules.enable_javascript ~= nil then w.view.enable_javascript = rules.enable_javascript end
+  end
+  local zoom = sql_webhistory.get_property(host, "zoom")
+  if zoom then w:zoom_set(tonumber(zoom)) end
+end)
+
+window.add_signal("zoom-changed", function(w, zoom, uri)
+  if uri and uri.host then
+    sql_webhistory.set_property(uri.host, "zoom", tostring(zoom))
+  end
+end)
+
+bind("n", "<Control-Shift-j>", function(w)
+  local enabled = w.view.enable_javascript
+  w.view.enable_javascript = not enabled
+  w:notify("JavaScript " .. (not enabled and "on" or "off"), "info")
+end)
+
+bind("n", "<Control-Shift-i>", function(w)
+  local settings = w.view.settings
+  settings.auto_load_images = not settings.auto_load_images
+  w:notify("Images " .. (settings.auto_load_images and "on" or "off"), "info")
+end)
+
+-- ---------------------------------------------------------------------------
+-- 7. Keyboard shortcuts (normal mode)
 -- ---------------------------------------------------------------------------
 local function scroll(pixels)
   return function(w) w.view:scroll { y = pixels, relative = true } end
 end
-
 bind("n", "j", scroll(60))
 bind("n", "k", scroll(-60))
-bind("n", "h", scroll(-120, true))       -- horizontal (shifted)
-bind("n", "l", scroll(120, true))
+bind("n", "h", function(w) w.view:scroll { x = -120, relative = true } end)
+bind("n", "l", function(w) w.view:scroll { x = 120, relative = true } end)
 bind("n", "gg", function(w) w.view:scroll { y = 0 } end)
 bind("n", "G", function(w) w.view:scroll { y = -1 } end)
 bind("n", "d", function(w) w.view:scroll { y = window.page_height / 2, relative = true } end)
 bind("n", "u", function(w) w.view:scroll { y = -window.page_height / 2, relative = true } end)
+bind("n", "]]", function(w) w.view:scroll { y = window.page_height, relative = true } end)
+bind("n", "[[", function(w) w.view:scroll { y = -window.page_height, relative = true } end)
+
+-- Reload / navigation
 bind("n", "r", function(w) w:reload() end)
 bind("n", "R", function(w) w:reload(true) end)
-bind("n", "yy", function(w) w:set_clipboard(w.view.uri) end)
-bind("n", "p", function(w) w:open_paste() end)
-bind("n", "P", function(w) w:open_paste(true) end)        -- new tab
+bind("n", "H", function(w) w:go_back() end)
+bind("n", "L", function(w) w:go_forward() end)
+bind("n", "gh", function(w) w:open(window.home_page) end)
 
--- Tab management
+-- Clipboard
+bind("n", "yy", function(w) w:set_clipboard(w.view.uri) end)
+bind("n", "yt", function(w) w:set_clipboard(w.view.title) end)
+bind("n", "yT", function(w) w:set_clipboard(w.view.title .. " " .. w.view.uri) end)
+bind("n", "p", function(w) w:open_paste() end)
+bind("n", "P", function(w) w:open_paste(true) end)
+
+-- Tabs
 bind("n", "t", function(w) w:new_tab(window.home_page) end)
-bind("n", "T", function(w) w:new_tab(window.home_page, false) end)        -- background tab
+bind("n", "T", function(w) w:new_tab(window.home_page, false) end)
 bind("n", "gt", function(w) w:next_tab() end)
 bind("n", "gT", function(w) w:previous_tab() end)
 bind("n", "x", function(w) w:close_tab() end)
-bind("n", "H", function(w) w:go_back() end)
-bind("n", "L", function(w) w:go_forward() end)
+bind("n", "u", function(w) if undo then w:undo_close_tab() end end)
+bind("n", "<Ctrl-PageUp>", function(w) w:move_tab_left() end)
+bind("n", "<Ctrl-PageDown>", function(w) w:move_tab_right() end)
 
--- Link hinting (press 'f' to label links)
-bind("n", "f", function(w) follow.start(w) end)
-bind("n", "F", function(w) follow.start(w, "current") end)        -- open in current tab
+-- Hints
+bind("n", "f", function(w) follow.start(w, "new-tab") end)
+bind("n", "F", function(w) follow.start(w, "current") end)
+bind("n", ";t", function(w) follow.start(w, "background-tab") end)
+bind("n", ";y", function(w) follow.start(w, "yank") end)
+bind("n", ";Y", function(w) follow.start(w, "yank-text") end)
 
 -- Search
 bind("n", "/", function(w) w:set_mode("search") end)
@@ -123,24 +195,46 @@ bind("n", "+", function(w) w:zoom_in() end)
 bind("n", "-", function(w) w:zoom_out() end)
 bind("n", "=", function(w) w:zoom_set(1.0) end)
 
--- Reader mode (inject readability script)
+-- Reader mode
 bind("n", "<Control-Alt>r", function(w)
-  local script = [[(function(){var s=document.createElement('script');
-        s.src='https://cdnjs.cloudflare.com/ajax/libs/readability/0.4.4/Readability.js';
-        document.body.appendChild(s);})()]]
-  w.view:eval_js(script)
+  w.view:eval_js [[
+    (function(){
+      var s=document.createElement('script');
+      s.src='https://cdnjs.cloudflare.com/ajax/libs/readability/0.4.4/Readability.js';
+      document.body.appendChild(s);
+    })()
+  ]]
 end)
 
--- Save session & quit
+-- Bookmarks
+bind("n", "m", function(w) bookmarks.add(w.view.uri, w.view.title) end)
+bind("n", "B", ":bookmarks")
+bind("n", "D", ":downloads")
+
+-- Quickmarks (if available)
+if quickmarks then
+  bind("n", "M", function(w) quickmarks.add(w.view.uri, w.view.title) end)
+  bind("n", "go", function(w)
+    local key = w:get_input("Quickmark key:")
+    if key then quickmarks.open(key, w) end
+  end)
+end
+
+-- Session / quit
 bind("n", "ZZ", function(w)
   w:save_session(); w:close()
 end)
 bind("n", "ZQ", function(w) w:close() end)
+bind("n", ":q", function(w) w:close() end)
+bind("n", ":wq", function(w)
+  w:save_session(); w:close()
+end)
 
--- Command mode (standard ':' binding is added by lousy)
+-- Reload config
+bind("n", "<F5>", function(w) lousy.reload() end)
 
 -- ---------------------------------------------------------------------------
--- 6. Custom search engines
+-- 8. Search engines
 -- ---------------------------------------------------------------------------
 search.engines = {
   google    = "https://www.google.com/search?q=%s",
@@ -148,111 +242,82 @@ search.engines = {
   yt        = "https://www.youtube.com/results?search_query=%s",
   github    = "https://github.com/search?q=%s",
   wikipedia = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+  maps      = "https://www.google.com/maps/search/%s",
+  amazon    = "https://www.amazon.com/s?k=%s",
+  imdb      = "https://www.imdb.com/find?q=%s",
+  reddit    = "https://www.reddit.com/search/?q=%s",
 }
 search.default_engine = "ddg"
 
--- Enable keyword searches from the address bar
--- Example: ":open google luakit" searches Google for "luakit"
-
 -- ---------------------------------------------------------------------------
--- 7. Per‑domain settings (user agent, JS toggle)
+-- 9. Vertical tab tree
 -- ---------------------------------------------------------------------------
-local per_domain = {
-  ["netflix.com"] = {
-    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124",
-    enable_javascript = true,
-  },
-  ["example-bank.com"] = {
-    enable_javascript = false,     -- hardened mode
-  }
-}
-
--- Apply settings when a page loads
-window.add_signal("load-status", function(w, status, uri)
-  if status ~= "finished" then return end
-  local host = uri.host or ""
-  local domain = host:match("%.(%w+%.%w+)$") or host
-  local rules = per_domain[domain]
-  if rules then
-    if rules.user_agent then
-      w.view.user_agent = rules.user_agent
-    end
-    if rules.enable_javascript ~= nil then
-      w.view.enable_javascript = rules.enable_javascript
-    end
-  end
-end)
-
--- ---------------------------------------------------------------------------
--- 8. Vertical tab tree (tab group plugin)
--- ---------------------------------------------------------------------------
--- Groups tabs by domain automatically
 tabgroup.add_signal("page-created", function(w, view)
   local host = view.uri.host or "new tab"
-  -- Create group named after domain
   tabgroup.add(view, host)
 end)
-
--- Collapse other groups when switching
 tabgroup.add_signal("page-focused", function(w, view)
   local group = tabgroup.get(view)
   if group then tabgroup.collapse_all_except(group) end
 end)
 
 -- ---------------------------------------------------------------------------
--- 9. Hints follow alternative (if you prefer it)
+-- 10. Hints
 -- ---------------------------------------------------------------------------
 follow.default_labels = "asdfghjklqwertyuiop"
 follow.auto_follow_delay = 0
 follow.always_open_new_tab = true
 
 -- ---------------------------------------------------------------------------
--- 10. Bookmarks (optional, using sql_webhistory)
+-- 11. History & bookmarks
 -- ---------------------------------------------------------------------------
--- Enable history & bookmark search via :bookmarks
 sql_webhistory.enable()
 bookmarks.add_signal("bookmark-added", function(b)
   window:notify("Bookmarked: " .. b.title, "info")
 end)
 
--- Shortcut to add bookmark: 'm'
-bind("n", "m", function(w) bookmarks.add(w.view.uri, w.view.title) end)
+-- ---------------------------------------------------------------------------
+-- 12. User scripts (optional)
+-- ---------------------------------------------------------------------------
+if user_scripts then
+  user_scripts.load_dir(lousy.util.find_data_dir("userscripts"))
+  user_scripts.add_signal("script-installed", function(s)
+    window:notify("User script installed: " .. s.name, "info")
+  end)
+end
 
 -- ---------------------------------------------------------------------------
--- 11. Start‑up actions & session restore
--- ---------------------------------------------------------------------------
-window.add_signal("init", function(w)
-  -- Try to restore last session, otherwise open home
-  if not w:load_session() then
-    w:new_tab(window.home_page)
-  end
-  -- Update adblock daily (optional; runs async)
-  adblock.update()
-end)
-
--- ---------------------------------------------------------------------------
--- 12. Extra goodies (context menu, mouse gestures)
--- ---------------------------------------------------------------------------
--- Enable right‑click context menu with "Open in new tab", "Copy link", etc.
-window.context_menu = true
-
--- Middle‑click on link opens in new tab
-window.middle_click_open_new_tab = true
-
--- ---------------------------------------------------------------------------
--- 13. Smooth scrolling script injection
+-- 13. Smooth scrolling injection
 -- ---------------------------------------------------------------------------
 window.add_signal("page-created", function(w, view)
   view:eval_js([[
-        (function() {
-            var css = document.createElement('style');
-            css.textContent = 'html { scroll-behavior: smooth; }';
-            document.head.appendChild(css);
-        })();
-    ]], { no_return = true })
+    (function() {
+      var css = document.createElement('style');
+      css.textContent = 'html { scroll-behavior: smooth; }';
+      document.head.appendChild(css);
+    })();
+  ]], { no_return = true })
 end)
 
 -- ---------------------------------------------------------------------------
--- End of Super Config
+-- 14. Password manager (pass) – uncomment if you use pass
 -- ---------------------------------------------------------------------------
+-- bind("n", "<Control-Shift-p>", function(w)
+--   local host = w.view.uri.host or ""
+--   if host == "" then return end
+--   os.execute(string.format(
+--     "pass -c %s 2>/dev/null && xdotool type \"$(pass %s | head -1)\" && xdotool key Tab && xdotool type \"$(pass %s | head -2 | tail -1)\"",
+--     host, host, host
+--   ))
+-- end)
+
+-- ---------------------------------------------------------------------------
+-- 15. Startup
+-- ---------------------------------------------------------------------------
+window.add_signal("init", function(w)
+  if not w:load_session() then
+    w:new_tab(window.home_page)
+  end
+end)
+
 -- vim: ft=lua
