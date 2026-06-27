@@ -319,8 +319,18 @@ local plugins = {
         },
       },
     },
-    config       = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+    config = function(_, opts)
+      -- nvim-treesitter < 1.0 used nvim-treesitter.configs.setup()
+      -- nvim-treesitter >= 1.0 merged configs back into the main module
+      local ok, ts_cfg = pcall(require, "nvim-treesitter.configs")
+      if ok then
+        ts_cfg.setup(opts)
+      else
+        -- v1.0+ API: textobjects are self-configured by the textobjects plugin
+        local ts_opts = vim.deepcopy(opts)
+        ts_opts.textobjects = nil
+        require("nvim-treesitter").setup(ts_opts)
+      end
     end,
   },
   {
@@ -383,24 +393,29 @@ local plugins = {
         end
       end
 
-      require("mason-lspconfig").setup({
+      local mlsp = require("mason-lspconfig")
+      mlsp.setup({
         ensure_installed = {
           "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer",
           "phpactor", "html", "cssls", "intelephense", "tailwindcss",
           "bashls", "dockerls", "jsonls", "yamlls",
         },
+        -- FIX: mason-lspconfig v2 renamed automatic_installation → automatic_enable
+        --      Keep both so the config works on either version.
         automatic_installation = true,
-        handlers = {
-          function(server_name)
-            local cfg = { on_attach = on_attach, capabilities = capabilities }
-            if server_name == "html" or server_name == "cssls" then
-              cfg.filetypes = { "php", "html", "css" }
-            end
-            if lspconfig[server_name] then
-              lspconfig[server_name].setup(cfg)
-            end
-          end,
-        },
+        automatic_enable       = false, -- servers are configured via setup_handlers below
+      })
+      -- FIX: mason-lspconfig v2 removed `handlers` from setup(); use setup_handlers().
+      mlsp.setup_handlers({
+        function(server_name)
+          local cfg = { on_attach = on_attach, capabilities = capabilities }
+          if server_name == "html" or server_name == "cssls" then
+            cfg.filetypes = { "php", "html", "css" }
+          end
+          if lspconfig[server_name] then
+            lspconfig[server_name].setup(cfg)
+          end
+        end,
       })
     end,
   },
@@ -521,10 +536,10 @@ local plugins = {
           typescript = { "prettier" },
           php        = { "php_cs_fixer" },
         },
-        format_on_save = { timeout_ms = 500, lsp_fallback = true },
+        format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
       })
       vim.keymap.set({ "n", "v" }, "<leader>lf", function()
-        require("conform").format({ async = true, lsp_fallback = true })
+        require("conform").format({ async = true, lsp_format = "fallback" })
       end, { desc = "Format file/range" })
     end,
   },
