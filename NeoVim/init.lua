@@ -109,7 +109,12 @@ function phpunit_adapter.build_spec(args)
   local tmpfile = (os.tmpname()):gsub("\\", "/")
 
   -- FIX: `command` must be a plain list of strings for Neotest, not a function.
-  local cmd = { "phpunit", "--no-interaction", "--log-json", tmpfile }
+  -- FIX: `--log-json` was removed from PHPUnit in 6.0 (2017) and has not existed
+  -- in any supported PHPUnit release since; this flag was silently failing with
+  -- "unrecognized option" and results() was parsing an empty/missing file every
+  -- run. --log-teamcity is still supported by current PHPUnit and is simple to
+  -- parse line-by-line below without pulling in an XML library.
+  local cmd = { "phpunit", "--no-interaction", "--log-teamcity", tmpfile }
   if spec_name ~= base_name then
     table.insert(cmd, "--filter")
     table.insert(cmd, spec_name)
@@ -127,6 +132,26 @@ function phpunit_adapter.build_spec(args)
   }
 end
 
+-- TeamCity service-message strings escape a handful of characters with a
+-- leading `|`. Good enough for surfacing readable pass/fail output; it isn't
+-- a full parser, but a stray literal `'` inside a failure message is the
+-- only realistic edge case and it degrades to a merely-truncated message,
+-- not a wrong pass/fail status (the status comes from the event name).
+local function tc_unescape(s)
+  if not s then return s end
+  return (s:gsub("|n", "\n"):gsub("|r", "\r"):gsub("|%[", "["):gsub("|%]", "]"):gsub("|'", "'"):gsub("||", "|"))
+end
+
+local function tc_parse_line(line)
+  local event, rest = line:match("^##teamcity%[(%a+)%s+(.*)%]$")
+  if not event then return nil end
+  local attrs = {}
+  for key, val in rest:gmatch("(%w+)='(.-)'%s*") do
+    attrs[key] = tc_unescape(val)
+  end
+  return event, attrs
+end
+
 function phpunit_adapter.results(spec, _result, _helpers)
   local logfile = spec.env and spec.env.LOG_FILE
   if not logfile then return {} end
@@ -135,25 +160,31 @@ function phpunit_adapter.results(spec, _result, _helpers)
   if not f then
     return { [spec.name] = { status = "failed", output = "Cannot open log: " .. (err or "") } }
   end
-  local raw = f:read("*a")
+
+  local results = {}
+  for line in f:lines() do
+    local event, attrs = tc_parse_line(line)
+    if event and attrs.name then
+      if event == "testFailed" then
+        local msg = attrs.message or "Unknown failure"
+        if attrs.details and attrs.details ~= "" then
+          msg = msg .. "\n" .. attrs.details
+        end
+        results[attrs.name] = { status = "failed", short = "FAIL", output = msg, errors = { { message = msg } } }
+      elseif event == "testIgnored" then
+        results[attrs.name] = { status = "skipped", short = "SKIP" }
+      elseif event == "testFinished" and not results[attrs.name] then
+        results[attrs.name] = { status = "passed", short = "PASS" }
+      end
+    end
+  end
   f:close()
   pcall(os.remove, logfile)
 
-  local ok, data = pcall(vim.json.decode, raw)
-  if not ok or type(data) ~= "table" then
-    return { [spec.name] = { status = "failed", output = "Invalid JSON output:\n" .. tostring(raw) } }
+  if vim.tbl_isempty(results) then
+    results[spec.name] = { status = "failed", output = "No test events found in PHPUnit teamcity log; the run may have errored before any test started." }
   end
 
-  local results = {}
-  for _, event in ipairs(data) do
-    local name = event.test or spec.name
-    if event.event == "testPassed" then
-      results[name] = { status = "passed", short = "PASS" }
-    elseif event.event == "testFailed" then
-      local msg = event.message or "Unknown failure"
-      results[name] = { status = "failed", short = "FAIL", output = msg, errors = { { message = msg } } }
-    end
-  end
   return results
 end
 
@@ -287,50 +318,103 @@ local plugins = {
   },
 
   -- ── TREESITTER ─────────────────────────────────────────────────────────────
+  -- FIX (Jul 2026): nvim-treesitter's classic `nvim-treesitter.configs` module
+  -- (the ensure_installed/highlight.enable/indent.enable API) is gone. The repo
+  -- did a full rewrite on its `main` branch months ago and `main` is now the
+  -- default branch, which is what you get with no `branch =` pinned -- that's
+  -- what the "module 'nvim-treesitter.configs' not found" error was. The repo
+  -- was then archived (frozen, read-only) on April 3, 2026, after Neovim 0.12
+  -- absorbed native treesitter support; `main`'s new minimal API still works
+  -- fine, it's just no longer receiving updates. The old `master` branch (the
+  -- API this file used to use) is explicitly documented as not working
+  -- correctly on current Neovim, so pinning back to it is not a real fix.
+  --
+  -- REQUIRES the `tree-sitter` CLI on $PATH to compile parsers now, in addition
+  -- to a C compiler -- confirmed by actually running this: without it, install
+  -- fails with "ENOENT: no such file or directory (cmd): 'tree-sitter'" for
+  -- every parser. Install it with `npm i -g tree-sitter-cli` or
+  -- `cargo install tree-sitter-cli` (either is fine, just needs to be on PATH).
   {
     "nvim-treesitter/nvim-treesitter",
-    build        = ":TSUpdate",
-    event        = "BufReadPre",
-    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
-    opts         = {
-      ensure_installed = {
+    branch = "main",
+    build  = ":TSUpdate",
+    event  = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local ts = require("nvim-treesitter")
+      ts.setup({})
+
+      local ensure_installed = {
         "lua", "python", "javascript", "c", "rust", "go", "bash",
-        "json", "yaml", "markdown", "php", "html", "css", "typescript",
-        "tsx", "vue", "dockerfile", "gitignore", "toml",
-      },
-      auto_install     = true,
-      highlight        = { enable = true },
-      indent           = { enable = true },
-      textobjects      = {
-        select = {
-          enable    = true,
-          lookahead = true,
-          keymaps   = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-          },
-        },
-        swap = {
-          enable        = true,
-          swap_next     = { ["<leader>sn"] = "@parameter.inner" },
-          swap_previous = { ["<leader>sp"] = "@parameter.inner" },
-        },
-      },
-    },
-    config = function(_, opts)
-      -- nvim-treesitter < 1.0 used nvim-treesitter.configs.setup()
-      -- nvim-treesitter >= 1.0 merged configs back into the main module
-      local ok, ts_cfg = pcall(require, "nvim-treesitter.configs")
-      if ok then
-        ts_cfg.setup(opts)
-      else
-        -- v1.0+ API: textobjects are self-configured by the textobjects plugin
-        local ts_opts = vim.deepcopy(opts)
-        ts_opts.textobjects = nil
-        require("nvim-treesitter").setup(ts_opts)
+        "json", "yaml", "markdown", "markdown_inline", "php", "html", "css",
+        "typescript", "tsx", "vue", "dockerfile", "gitignore", "toml",
+        "vim", "vimdoc", "query",
+      }
+      local installed = ts.get_installed("parsers")
+      local to_install = vim.tbl_filter(function(lang)
+        return not vim.tbl_contains(installed, lang)
+      end, ensure_installed)
+      if #to_install > 0 then
+        -- Blocks startup only the first time (or when a new language is added
+        -- to the list above); once everything's installed this list is empty
+        -- and this whole branch is skipped, same as the old plugin's behavior.
+        pcall(function()
+          ts.install(to_install, { summary = true }):wait(300000)
+        end)
       end
+
+      -- highlight/indent are opt-in per buffer now -- there's no more
+      -- highlight.enable/indent.enable table. This autocmd also reproduces
+      -- the old auto_install = true behavior for any filetype not in the
+      -- list above.
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(ev)
+          local lang = vim.treesitter.language.get_lang(ev.match) or ev.match
+          if not vim.tbl_contains(ts.get_available(), lang) then
+            return -- no treesitter parser exists for this filetype
+          end
+          if not vim.tbl_contains(ts.get_installed("parsers"), lang) then
+            ts.install({ lang })
+          end
+          if pcall(vim.treesitter.get_parser, ev.buf, lang) then
+            pcall(vim.treesitter.start, ev.buf, lang)
+            vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+        end,
+      })
+    end,
+  },
+  {
+    -- FIX: same rewrite as nvim-treesitter itself -- needs `branch = "main"`
+    -- too, and select/swap are now plain functions you map yourself instead
+    -- of a declarative keymaps table, so this reproduces the exact same
+    -- af/if/ac/ic select and <leader>sn/<leader>sp swap bindings this file
+    -- had before, just through the current API.
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch       = "main",
+    event        = { "BufReadPre", "BufNewFile" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("nvim-treesitter-textobjects").setup({
+        select = { lookahead = true },
+        move   = { set_jumps = true },
+      })
+
+      local select_obj = require("nvim-treesitter-textobjects.select")
+      local function select_map(key, query, desc)
+        vim.keymap.set({ "x", "o" }, key, function()
+          select_obj.select_textobject(query, "textobjects")
+        end, { desc = desc })
+      end
+      select_map("af", "@function.outer", "Select outer function")
+      select_map("if", "@function.inner", "Select inner function")
+      select_map("ac", "@class.outer", "Select outer class")
+      select_map("ic", "@class.inner", "Select inner class")
+
+      local swap_obj = require("nvim-treesitter-textobjects.swap")
+      vim.keymap.set("n", "<leader>sn", function() swap_obj.swap_next("@parameter.inner") end,
+        { desc = "Swap next parameter" })
+      vim.keymap.set("n", "<leader>sp", function() swap_obj.swap_previous("@parameter.inner") end,
+        { desc = "Swap previous parameter" })
     end,
   },
   {
@@ -341,16 +425,29 @@ local plugins = {
   },
 
   -- ── LSP: MASON ─────────────────────────────────────────────────────────────
-  { "williamboman/mason.nvim",           build = ":MasonUpdate",         cmd = "Mason", config = true },
-  { "williamboman/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
+  -- FIX: williamboman/mason.nvim and mason-lspconfig.nvim moved to the
+  -- mason-org GitHub org. The old williamboman/* paths still redirect fine
+  -- (verified: both resolve to the identical commit), this just points at
+  -- the current canonical location instead of relying on the redirect.
+  { "mason-org/mason.nvim",           build = ":MasonUpdate", cmd = "Mason", config = true },
+  { "mason-org/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
   {
-    -- FIX: added config so mason-nvim-dap actually installs adapters automatically.
     "jay-babu/mason-nvim-dap.nvim",
     dependencies = { "mason.nvim", "mfussenegger/nvim-dap" },
     config = function()
       require("mason-nvim-dap").setup({
-        ensure_installed       = { "python", "delve" },
-        automatic_installation = true,
+        ensure_installed = { "python", "delve" },
+        -- FIX: this was `true`, which raced with ensure_installed above and
+        -- caused "Package is already installing". Both settings call mason's
+        -- install() independently and only check "is it installed yet" (not
+        -- "is an install already running"). Since nvim-dap's own config()
+        -- already registers the python/go adapters before this plugin loads
+        -- (it's a dependency), automatic_installation saw those adapters and
+        -- tried to install debugpy at the same moment ensure_installed did;
+        -- the second of the two calls hit mason's own "already installing"
+        -- assertion. ensure_installed alone already installs exactly what's
+        -- listed above, so automatic_installation is redundant here anyway.
+        automatic_installation = false,
       })
     end,
   },
@@ -361,61 +458,66 @@ local plugins = {
   { "hrsh7th/cmp-nvim-lsp", lazy = true },
 
   -- ── LSP: LSPCONFIG ─────────────────────────────────────────────────────────
+  -- FIX: require('lspconfig').<server>.setup{} (the pattern this section used
+  -- to use) is deprecated -- it now prints a warning on every startup and is
+  -- scheduled for hard removal in nvim-lspconfig v3.0.0, in favor of Neovim's
+  -- own native vim.lsp.config()/vim.lsp.enable() (built in since 0.11).
+  -- nvim-lspconfig is still listed as a dependency below -- it's not going
+  -- away, it just now ships its server configs as plain lsp/*.lua files that
+  -- vim.lsp.config reads automatically, rather than a require('lspconfig')
+  -- "framework" you call .setup() on.
   {
     "neovim/nvim-lspconfig",
     dependencies = { "mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      local lspconfig    = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local on_attach    = function(client, bufnr)
-        local o = { buffer = bufnr, noremap = true, silent = true }
-        vim.keymap.set("n", "gd", vim.lsp.buf.definition, o)
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, o)
-        vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, o)
-        vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, o)
-        -- <leader>lf formatting is handled exclusively by conform.nvim (no duplicate)
-        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, o)
-        vim.keymap.set("n", "]d", vim.diagnostic.goto_next, o)
-        vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, o)
+      -- '*' applies to every server; the per-server calls below merge on top
+      -- of it (confirmed: vim.lsp.config.html ends up with both the custom
+      -- filetypes AND the inherited capabilities from '*').
+      vim.lsp.config("*", { capabilities = capabilities })
+      vim.lsp.config("html", { filetypes = { "php", "html", "css" } })
+      vim.lsp.config("cssls", { filetypes = { "php", "html", "css" } })
 
-        -- FIX: native inlay hints (Neovim 0.10+) replaces the abandoned
-        --      lvimuser/lsp-inlayhints.nvim plugin.
-        if vim.lsp.inlay_hint and client.server_capabilities.inlayHintProvider then
-          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-          vim.keymap.set("n", "<leader>lh", function()
-            vim.lsp.inlay_hint.enable(
-              not vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }),
-              { bufnr = bufnr }
-            )
-          end, { buffer = bufnr, desc = "Toggle inlay hints" })
-        end
-      end
+      -- FIX: on_attach is an nvim-lspconfig-only concept; its native
+      -- replacement is an LspAttach autocmd.
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(ev)
+          local client = vim.lsp.get_client_by_id(ev.data.client_id)
+          local o = { buffer = ev.buf, noremap = true, silent = true }
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, o)
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, o)
+          vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, o)
+          vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, o)
+          -- <leader>lf formatting is handled exclusively by conform.nvim (no duplicate)
+          vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, o)
+          vim.keymap.set("n", "]d", vim.diagnostic.goto_next, o)
+          vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, o)
 
-      local mlsp = require("mason-lspconfig")
-      mlsp.setup({
+          -- FIX: native inlay hints (Neovim 0.10+) replaces the abandoned
+          --      lvimuser/lsp-inlayhints.nvim plugin.
+          if client and vim.lsp.inlay_hint and client.server_capabilities.inlayHintProvider then
+            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+            vim.keymap.set("n", "<leader>lh", function()
+              vim.lsp.inlay_hint.enable(
+                not vim.lsp.inlay_hint.is_enabled({ bufnr = ev.buf }),
+                { bufnr = ev.buf }
+              )
+            end, { buffer = ev.buf, desc = "Toggle inlay hints" })
+          end
+        end,
+      })
+
+      require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer",
           "phpactor", "html", "cssls", "intelephense", "tailwindcss",
           "bashls", "dockerls", "jsonls", "yamlls",
         },
-        -- FIX: mason-lspconfig v2 renamed automatic_installation → automatic_enable
-        --      Keep both so the config works on either version.
-        automatic_installation = true,
-        automatic_enable       = false, -- servers are configured via setup_handlers below
-      })
-      -- FIX: mason-lspconfig v2 removed `handlers` from setup(); use setup_handlers().
-      mlsp.setup_handlers({
-        function(server_name)
-          local cfg = { on_attach = on_attach, capabilities = capabilities }
-          if server_name == "html" or server_name == "cssls" then
-            cfg.filetypes = { "php", "html", "css" }
-          end
-          if lspconfig[server_name] then
-            lspconfig[server_name].setup(cfg)
-          end
-        end,
+        -- FIX: replaces the old setup_handlers() loop below it -- mason-lspconfig
+        -- now calls vim.lsp.enable() on every installed server for you.
+        automatic_enable = true,
       })
     end,
   },
