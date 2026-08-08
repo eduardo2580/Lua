@@ -30,25 +30,32 @@ vim.opt.undofile       = true -- persistent undo across sessions
 
 -- ============================================================================
 --  COMPATIBILITY SHIM
---  vim.tbl_flatten was deprecated in Neovim 0.10; some older plugins still
---  call it. Provide a safe fallback only when the builtin is absent.
+--  vim.tbl_flatten was deprecated in Neovim 0.10; some older plugins (pulled
+--  in transitively) still call it directly, which prints a "vim.tbl_flatten
+--  is deprecated. Run ':checkhealth vim.deprecated' for more information"
+--  notice on startup.
+--  FIX: this used to only install the fallback `if not vim.tbl_flatten` --
+--  but on current Neovim the deprecated builtin still exists (it's wrapped
+--  to emit the notice, not removed), so that guard never fired and callers
+--  kept hitting the real deprecated function every time. Install the pure
+--  Lua reimplementation unconditionally: identical behavior for every
+--  caller, but they now call our function instead of the notice-emitting
+--  builtin, so the warning never fires.
 -- ============================================================================
-if not vim.tbl_flatten then
-  ---@diagnostic disable-next-line: duplicate-set-field
-  vim.tbl_flatten = function(t)
-    local result = {}
-    local function flatten(tbl)
-      for _, v in ipairs(tbl) do
-        if type(v) == "table" then
-          flatten(v)
-        else
-          result[#result + 1] = v
-        end
+---@diagnostic disable-next-line: duplicate-set-field
+vim.tbl_flatten = function(t)
+  local result = {}
+  local function flatten(tbl)
+    for _, v in ipairs(tbl) do
+      if type(v) == "table" then
+        flatten(v)
+      else
+        result[#result + 1] = v
       end
     end
-    flatten(t)
-    return result
   end
+  flatten(t)
+  return result
 end
 
 -- ============================================================================
@@ -82,6 +89,44 @@ function phpunit_adapter.root(file)
     if foundfile and foundfile ~= "" then return vim.fn.fnamemodify(foundfile, ":h") end
   end
   return vim.fn.getcwd()
+end
+
+-- FIX: this is the function that was crashing every "*" BufEnter/CursorHold
+-- autocmd. Neotest's client calls `adapter.is_test_file(position_id)`
+-- unconditionally on *every* registered adapter for *every* buffer you enter
+-- (see neotest/client/init.lua: find_adapter/_get_adapter) -- not just PHP
+-- ones. phpunit_adapter never defined this field, so it was `nil`, and
+-- "attempt to call field 'is_test_file' (a nil value)" fired the instant
+-- neotest tried to identify which adapter owned the current buffer,
+-- regardless of filetype. Skip directories neotest shouldn't crawl at all.
+function phpunit_adapter.filter_dir(name, _rel_path, _root)
+  return name ~= "vendor" and name ~= "node_modules" and name ~= ".git"
+end
+
+function phpunit_adapter.is_test_file(file_path)
+  if not file_path then return false end
+  return file_path:match("Test%.php$") ~= nil
+end
+
+-- FIX: also missing entirely -- without discover_positions, is_test_file
+-- would have matched *Test.php files correctly but neotest would then have
+-- had nothing to build a position tree from, erroring again as soon as you
+-- opened one. Node types/fields (class_declaration.name, method_declaration
+-- .name, both typed `name`) verified directly against tree-sitter-php's
+-- node-types.json rather than assumed.
+local phpunit_query = [[
+  (class_declaration
+    name: (name) @namespace.name) @namespace.definition
+
+  (method_declaration
+    name: (name) @test.name
+    (#match? @test.name "^test")) @test.definition
+]]
+
+function phpunit_adapter.discover_positions(file_path)
+  return require("neotest.lib").treesitter.parse_positions(file_path, phpunit_query, {
+    nested_tests = true,
+  })
 end
 
 function phpunit_adapter.build_spec(args)
@@ -334,6 +379,16 @@ local plugins = {
   -- fails with "ENOENT: no such file or directory (cmd): 'tree-sitter'" for
   -- every parser. Install it with `npm i -g tree-sitter-cli` or
   -- `cargo install tree-sitter-cli` (either is fine, just needs to be on PATH).
+  --
+  -- FIX: the code below used to call ts.install() unconditionally and wrap it
+  -- in pcall. That pcall did nothing useful -- ts.install() reports each
+  -- parser's failure via vim.notify as a side effect of its async job, not
+  -- as a Lua error raised back to the caller, so pcall never sees anything
+  -- to catch. Without the CLI, that produced one "ENOENT ... 'tree-sitter'"
+  -- error per parser (20+ of them) on every single startup, plus the same
+  -- again from the per-filetype autocmd below as soon as you opened a
+  -- buffer. Check for the CLI once up front instead: if it's missing, skip
+  -- every install attempt and print exactly one clear, actionable warning.
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
@@ -349,17 +404,30 @@ local plugins = {
         "typescript", "tsx", "vue", "dockerfile", "gitignore", "toml",
         "vim", "vimdoc", "query",
       }
-      local installed = ts.get_installed("parsers")
-      local to_install = vim.tbl_filter(function(lang)
-        return not vim.tbl_contains(installed, lang)
-      end, ensure_installed)
-      if #to_install > 0 then
-        -- Blocks startup only the first time (or when a new language is added
-        -- to the list above); once everything's installed this list is empty
-        -- and this whole branch is skipped, same as the old plugin's behavior.
-        pcall(function()
-          ts.install(to_install, { summary = true }):wait(300000)
-        end)
+
+      local has_tree_sitter_cli = vim.fn.executable("tree-sitter") == 1
+      if not has_tree_sitter_cli then
+        vim.notify(
+          "nvim-treesitter: 'tree-sitter' CLI not found on $PATH -- parser "
+            .. "installs skipped. Install it with 'npm i -g tree-sitter-cli' "
+            .. "or 'cargo install tree-sitter-cli', restart, then run "
+            .. ":TSUpdate.",
+          vim.log.levels.WARN
+        )
+      else
+        local installed = ts.get_installed("parsers")
+        local to_install = vim.tbl_filter(function(lang)
+          return not vim.tbl_contains(installed, lang)
+        end, ensure_installed)
+        if #to_install > 0 then
+          -- Blocks startup only the first time (or when a new language is
+          -- added to the list above); once everything's installed this list
+          -- is empty and this whole branch is skipped, same as the old
+          -- plugin's behavior.
+          pcall(function()
+            ts.install(to_install, { summary = true }):wait(300000)
+          end)
+        end
       end
 
       -- highlight/indent are opt-in per buffer now -- there's no more
@@ -372,7 +440,7 @@ local plugins = {
           if not vim.tbl_contains(ts.get_available(), lang) then
             return -- no treesitter parser exists for this filetype
           end
-          if not vim.tbl_contains(ts.get_installed("parsers"), lang) then
+          if has_tree_sitter_cli and not vim.tbl_contains(ts.get_installed("parsers"), lang) then
             ts.install({ lang })
           end
           if pcall(vim.treesitter.get_parser, ev.buf, lang) then
