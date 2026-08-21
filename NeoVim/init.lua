@@ -245,7 +245,7 @@ local plugins = {
       ts.setup({})
 
       local ensure_installed = {
-        "lua", "python", "javascript", "c", "rust", "go", "bash",
+        "lua", "python", "javascript", "java", "c", "rust", "go", "bash",
         "json", "yaml", "markdown", "markdown_inline", "php", "html", "css",
         "typescript", "tsx", "vue", "dockerfile", "gitignore", "toml",
         "vim", "vimdoc", "query",
@@ -453,13 +453,24 @@ local plugins = {
         ensure_installed = {
           "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer",
           "phpactor", "html", "cssls", "intelephense", "tailwindcss",
-          "bashls", "dockerls", "jsonls", "yamlls",
+          "bashls", "dockerls", "jsonls", "yamlls", "jdtls",
         },
         -- FIX: replaces the old setup_handlers() loop below it -- mason-lspconfig
         -- now calls vim.lsp.enable() on every installed server for you.
-        automatic_enable = true,
+        automatic_enable = {
+          exclude = { "jdtls" },
+        },
       })
     end,
+  },
+
+  -- ── JAVA: JDTLS ───────────────────────────────────────────────────────────
+  -- jdtls must be started from ftplugin/java.lua so each project gets its own
+  -- root and workspace. It is excluded from Mason's generic auto-enable above.
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
+    dependencies = { "mfussenegger/nvim-dap", "hrsh7th/cmp-nvim-lsp" },
   },
 
   -- ── LSP EXTRAS ─────────────────────────────────────────────────────────────
