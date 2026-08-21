@@ -9,6 +9,7 @@ local config_root = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:
 package.path = config_root .. "/lua/?.lua;" .. package.path
 require("core.options")
 require("core.keymaps")
+require("core.prerequisites").setup()
 
 -- ============================================================================
 --  COMPATIBILITY SHIM
@@ -153,6 +154,7 @@ local plugins = {
   -- ── TELESCOPE ──────────────────────────────────────────────────────────────
   {
     "nvim-telescope/telescope.nvim",
+    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       {
@@ -163,6 +165,7 @@ local plugins = {
       "nvim-telescope/telescope-file-browser.nvim",
       "nvim-telescope/telescope-project.nvim",
     },
+    cmd = "Telescope",
     keys = {
       { "<A-f>",      "<cmd>Telescope find_files<CR>",   desc = "Find files" },
       { "<A-g>",      "<cmd>Telescope live_grep<CR>",    desc = "Search text" },
@@ -222,7 +225,15 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
-    build  = ":TSUpdate",
+    build  = function()
+      local has_compiler = vim.fn.executable("cl") == 1
+        or vim.fn.executable("clang") == 1
+        or vim.fn.executable("gcc") == 1
+        or vim.fn.executable("cc") == 1
+      if vim.fn.executable("tree-sitter") == 1 and has_compiler then
+        vim.cmd("TSUpdate")
+      end
+    end,
     event  = { "BufReadPre", "BufNewFile" },
     config = function()
       local ts = require("nvim-treesitter")
@@ -236,12 +247,18 @@ local plugins = {
       }
 
       local has_tree_sitter_cli = vim.fn.executable("tree-sitter") == 1
-      if not has_tree_sitter_cli then
+      local has_c_compiler = vim.fn.executable("cl") == 1
+        or vim.fn.executable("clang") == 1
+        or vim.fn.executable("gcc") == 1
+        or vim.fn.executable("cc") == 1
+      if not has_tree_sitter_cli or not has_c_compiler then
+        local missing = {}
+        if not has_tree_sitter_cli then missing[#missing + 1] = "tree-sitter CLI" end
+        if not has_c_compiler then missing[#missing + 1] = "C compiler (cl, clang, gcc, or cc)" end
         vim.notify(
-          "nvim-treesitter: 'tree-sitter' CLI not found on $PATH -- parser "
-            .. "installs skipped. Install it with 'npm i -g tree-sitter-cli' "
-            .. "or 'cargo install tree-sitter-cli', restart, then run "
-            .. ":TSUpdate.",
+          "nvim-treesitter: " .. table.concat(missing, " and ")
+            .. " not found on $PATH -- parser installs skipped. Install the "
+            .. "missing tools, restart, then run :TSUpdate.",
           vim.log.levels.WARN
         )
       else
@@ -270,7 +287,8 @@ local plugins = {
           if not vim.tbl_contains(ts.get_available(), lang) then
             return -- no treesitter parser exists for this filetype
           end
-          if has_tree_sitter_cli and not vim.tbl_contains(ts.get_installed("parsers"), lang) then
+          if has_tree_sitter_cli and has_c_compiler
+              and not vim.tbl_contains(ts.get_installed("parsers"), lang) then
             ts.install({ lang })
           end
           if pcall(vim.treesitter.get_parser, ev.buf, lang) then
@@ -334,6 +352,20 @@ local plugins = {
     opts = { install_root_dir = config_root .. "/mason" },
   },
   { "mason-org/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "mason.nvim" },
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "black", "debugpy", "flake8", "isort", "mypy", "pylint",
+        },
+        run_on_start = true,
+        start_delay = 0,
+        debounce_hours = 24,
+      })
+    end,
+  },
   {
     "jay-babu/mason-nvim-dap.nvim",
     dependencies = { "mason.nvim", "mfussenegger/nvim-dap" },
@@ -867,7 +899,7 @@ local plugins = {
     "jim-fx/sudoku.nvim",
     cmd = "Sudoku",
     keys = { { "<leader>vu", "<cmd>Sudoku<CR>", desc = "Sudoku" } },
-    config = function() require("sudoku").setup() end,
+    config = function() require("sudoku").setup({}) end,
   },
   { "seandewar/killersheep.nvim", cmd = "KillKillKill", keys = { { "<leader>vk", "<cmd>KillKillKill<CR>", desc = "Killer Sheep" } } },
   {
@@ -1002,6 +1034,7 @@ local plugins = {
 } -- end plugins
 
 vim.list_extend(plugins, require("plugins.starter"))
+require("core.games")
 
 -- ============================================================================
 --  GLOBAL KEYMAPS
