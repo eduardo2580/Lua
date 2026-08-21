@@ -5,6 +5,8 @@
 
 vim.g.mapleader      = " "
 vim.g.maplocalleader = " "
+local config_root = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h")
+package.path = config_root .. "/lua/?.lua;" .. package.path
 require("core.options")
 require("core.keymaps")
 
@@ -41,7 +43,6 @@ end
 -- ============================================================================
 --  INSTALL LAZY.NVIM BOOTSTRAP
 -- ============================================================================
-local config_root = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h")
 local plugin_root = config_root .. "/lazy"
 local lazypath = plugin_root .. "/lazy.nvim"
 vim.fn.mkdir(plugin_root, "p")
@@ -54,167 +55,7 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- ============================================================================
---  CUSTOM PHPUNIT NEOTEST ADAPTER
---  Self-contained: no external plugin dependency, cross-platform temp files.
---  FIX: removed dead first-draft table; `command` is now a plain list (not a
---  function); logfile path is propagated via spec.env so results() can read it.
--- ============================================================================
-local phpunit_adapter = {}
-phpunit_adapter.name = "phpunit"
-
-function phpunit_adapter.root(file)
-  local patterns = { "phpunit.xml", "phpunit.xml.dist", ".git" }
-  for _, pat in ipairs(patterns) do
-    local found = vim.fn.finddir(pat, file .. ";")
-    if found and found ~= "" then return vim.fn.fnamemodify(found, ":h") end
-    local foundfile = vim.fn.findfile(pat, file .. ";")
-    if foundfile and foundfile ~= "" then return vim.fn.fnamemodify(foundfile, ":h") end
-  end
-  return vim.fn.getcwd()
-end
-
--- FIX: this is the function that was crashing every "*" BufEnter/CursorHold
--- autocmd. Neotest's client calls `adapter.is_test_file(position_id)`
--- unconditionally on *every* registered adapter for *every* buffer you enter
--- (see neotest/client/init.lua: find_adapter/_get_adapter) -- not just PHP
--- ones. phpunit_adapter never defined this field, so it was `nil`, and
--- "attempt to call field 'is_test_file' (a nil value)" fired the instant
--- neotest tried to identify which adapter owned the current buffer,
--- regardless of filetype. Skip directories neotest shouldn't crawl at all.
-function phpunit_adapter.filter_dir(name, _rel_path, _root)
-  return name ~= "vendor" and name ~= "node_modules" and name ~= ".git"
-end
-
-function phpunit_adapter.is_test_file(file_path)
-  if not file_path then return false end
-  return file_path:match("Test%.php$") ~= nil
-end
-
--- FIX: also missing entirely -- without discover_positions, is_test_file
--- would have matched *Test.php files correctly but neotest would then have
--- had nothing to build a position tree from, erroring again as soon as you
--- opened one. Node types/fields (class_declaration.name, method_declaration
--- .name, both typed `name`) verified directly against tree-sitter-php's
--- node-types.json rather than assumed.
-local phpunit_query = [[
-  (class_declaration
-    name: (name) @namespace.name) @namespace.definition
-
-  (method_declaration
-    name: (name) @test.name
-    (#match? @test.name "^test")) @test.definition
-]]
-
-function phpunit_adapter.discover_positions(file_path)
-  return require("neotest.lib").treesitter.parse_positions(file_path, phpunit_query, {
-    nested_tests = true,
-  })
-end
-
-function phpunit_adapter.build_spec(args)
-  local file        = args.file
-  local pos         = args.position
-  local method_name = nil
-
-  if pos then
-    local line = vim.fn.getline(pos[1])
-    method_name = line:match("function%s+(test%w+)")
-    if not method_name then
-      -- check @test annotation on the line above
-      local prev = vim.fn.getline(pos[1] - 1)
-      if prev and prev:match("@test") then
-        local fn_line = vim.fn.getline(pos[1])
-        method_name = fn_line:match("function%s+(%w+)")
-      end
-    end
-  end
-
-  local base_name = vim.fn.fnamemodify(file, ":t:r")
-  local spec_name = method_name or base_name
-
-  -- Use a deterministic-enough temp path (cross-platform forward-slashes)
-  local tmpfile = (os.tmpname()):gsub("\\", "/")
-
-  -- FIX: `command` must be a plain list of strings for Neotest, not a function.
-  -- FIX: `--log-json` was removed from PHPUnit in 6.0 (2017) and has not existed
-  -- in any supported PHPUnit release since; this flag was silently failing with
-  -- "unrecognized option" and results() was parsing an empty/missing file every
-  -- run. --log-teamcity is still supported by current PHPUnit and is simple to
-  -- parse line-by-line below without pulling in an XML library.
-  local cmd = { "phpunit", "--no-interaction", "--log-teamcity", tmpfile }
-  if spec_name ~= base_name then
-    table.insert(cmd, "--filter")
-    table.insert(cmd, spec_name)
-  end
-  table.insert(cmd, file)
-
-  return {
-    {
-      name    = spec_name,
-      file    = file,
-      command = cmd, -- plain list, not a function
-      env     = { LOG_FILE = tmpfile },
-      cwd     = phpunit_adapter.root(file),
-    },
-  }
-end
-
--- TeamCity service-message strings escape a handful of characters with a
--- leading `|`. Good enough for surfacing readable pass/fail output; it isn't
--- a full parser, but a stray literal `'` inside a failure message is the
--- only realistic edge case and it degrades to a merely-truncated message,
--- not a wrong pass/fail status (the status comes from the event name).
-local function tc_unescape(s)
-  if not s then return s end
-  return (s:gsub("|n", "\n"):gsub("|r", "\r"):gsub("|%[", "["):gsub("|%]", "]"):gsub("|'", "'"):gsub("||", "|"))
-end
-
-local function tc_parse_line(line)
-  local event, rest = line:match("^##teamcity%[(%a+)%s+(.*)%]$")
-  if not event then return nil end
-  local attrs = {}
-  for key, val in rest:gmatch("(%w+)='(.-)'%s*") do
-    attrs[key] = tc_unescape(val)
-  end
-  return event, attrs
-end
-
-function phpunit_adapter.results(spec, _result, _helpers)
-  local logfile = spec.env and spec.env.LOG_FILE
-  if not logfile then return {} end
-
-  local f, err = io.open(logfile, "r")
-  if not f then
-    return { [spec.name] = { status = "failed", output = "Cannot open log: " .. (err or "") } }
-  end
-
-  local results = {}
-  for line in f:lines() do
-    local event, attrs = tc_parse_line(line)
-    if event and attrs.name then
-      if event == "testFailed" then
-        local msg = attrs.message or "Unknown failure"
-        if attrs.details and attrs.details ~= "" then
-          msg = msg .. "\n" .. attrs.details
-        end
-        results[attrs.name] = { status = "failed", short = "FAIL", output = msg, errors = { { message = msg } } }
-      elseif event == "testIgnored" then
-        results[attrs.name] = { status = "skipped", short = "SKIP" }
-      elseif event == "testFinished" and not results[attrs.name] then
-        results[attrs.name] = { status = "passed", short = "PASS" }
-      end
-    end
-  end
-  f:close()
-  pcall(os.remove, logfile)
-
-  if vim.tbl_isempty(results) then
-    results[spec.name] = { status = "failed", output = "No test events found in PHPUnit teamcity log; the run may have errored before any test started." }
-  end
-
-  return results
-end
+local phpunit_adapter = require("core.phpunit")
 
 -- ============================================================================
 --  PLUGIN DEFINITIONS
@@ -1165,28 +1006,4 @@ require("lazy").setup(plugins, {
     cache = { enabled = true },
   },
 })
-
--- ============================================================================
---  AUTOCMDS
--- ============================================================================
-
--- Open file tree when nvim is opened with a file argument
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if #vim.fn.argv() > 0 then
-      vim.schedule(function() pcall(vim.cmd, "Neotree reveal") end)
-    end
-  end,
-})
-
--- Equalise splits on terminal resize
-vim.api.nvim_create_autocmd("VimResized", {
-  callback = function() vim.cmd("tabdo wincmd =") end,
-})
-
--- Flash yanked region
-vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
-  end,
-})
+require("core.autocmds")

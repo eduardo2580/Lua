@@ -11,4 +11,7 @@ return {
       { "<leader>sm", "<cmd>MaximizerToggle<CR>", desc = "Maximize window" },
     },
   },
+  {
+    "diepm/vim-rest-console",
+  },
 }
