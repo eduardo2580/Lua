@@ -886,6 +886,26 @@ local plugins = {
     end,
   },
 
+  -- ── MOTION TRAINING ───────────────────────────────────────────────────────
+  {
+    "m4xshen/hardtime.nvim",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {},
+    keys = {
+      { "<leader>uh", "<cmd>Hardtime toggle<CR>", desc = "Toggle Hardtime" },
+      { "<leader>ur", "<cmd>Hardtime report<CR>", desc = "Hardtime report" },
+    },
+  },
+  {
+    "tris203/precognition.nvim",
+    event = "VeryLazy",
+    opts = { startVisible = true },
+    keys = {
+      { "<leader>up", "<cmd>Precognition toggle<CR>", desc = "Toggle Precognition" },
+    },
+  },
+
   -- ── MARKDOWN PREVIEW ───────────────────────────────────────────────────────
   {
     "iamcco/markdown-preview.nvim",
