@@ -57,7 +57,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local phpunit_adapter = require("core.phpunit")
-local hardtime_enabled = vim.g.hardtime_enabled ~= false and vim.env.NVIM_DISABLE_HARDTIME ~= "1"
 
 -- ============================================================================
 --  PLUGIN DEFINITIONS
@@ -888,18 +887,6 @@ local plugins = {
     end,
   },
 
-  -- ── MOTION TRAINING ───────────────────────────────────────────────────────
-  {
-    "m4xshen/hardtime.nvim",
-    enabled = hardtime_enabled,
-    lazy = false,
-    dependencies = { "MunifTanjim/nui.nvim" },
-    opts = {},
-    keys = {
-      { "<leader>uh", "<cmd>Hardtime toggle<CR>", desc = "Toggle Hardtime" },
-      { "<leader>ur", "<cmd>Hardtime report<CR>", desc = "Hardtime report" },
-    },
-  },
   {
     "tris203/precognition.nvim",
     event = "VeryLazy",
@@ -915,6 +902,57 @@ local plugins = {
     build = "cd app && yarn install",
     ft    = "markdown",
     keys  = { { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Preview markdown" } },
+  },
+
+  -- ── W3M BROWSER ───────────────────────────────────────────────────────────
+  {
+    "yuratomo/w3m.vim",
+    init = function()
+      local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
+      local w3m_command = vim.fn.exepath("w3m")
+      if is_windows and w3m_command == "" then w3m_command = "C:\\w3m.exe" end
+      vim.g["w3m#command"] = w3m_command
+      vim.g["w3m#disable_vimproc"] = 1
+
+      local browser = vim.env.BROWSER
+      if not browser or browser == "" then
+        if is_windows then
+          browser = "rundll32 url.dll,FileProtocolHandler"
+        elseif vim.uv.os_uname().sysname == "Darwin" then
+          browser = "open"
+        else
+          browser = "xdg-open"
+        end
+      end
+      vim.g["w3m#external_browser"] = browser
+
+      vim.api.nvim_create_user_command("W3mGopher", function(opts)
+        local target = opts.args
+        if target == "" then
+          target = "gopher://gopher.floodgap.com:70/1"
+        elseif not target:match("^gopher://") then
+          target = "gopher://" .. target
+        end
+        vim.cmd({ cmd = "W3m", args = { target } })
+      end, { nargs = "?", desc = "Open a Gopher URL in w3m" })
+    end,
+    cond = function()
+      local w3m_command = vim.fn.exepath("w3m")
+      if vim.uv.os_uname().sysname == "Windows_NT" and w3m_command == "" then
+        w3m_command = "C:\\w3m.exe"
+      end
+      return vim.fn.executable(w3m_command) == 1
+    end,
+    cmd = {
+      "W3m", "W3mTab", "W3mSplit", "W3mVSplit", "W3mLocal",
+      "W3mHistory", "W3mHistoryClear", "W3mClose", "W3mCopyUrl",
+      "W3mReload", "W3mAddressBar", "W3mShowTitle", "W3mShowExtenalBrowser",
+      "W3mShowSource", "W3mShowDump", "W3mSyntaxOff", "W3mSyntaxOn",
+      "W3mSetUserAgent", "W3mGopher",
+    },
+    keys = {
+      { "<leader>ww", "<cmd>W3m<CR>", desc = "Open w3m browser" },
+    },
   },
 
   -- ── EMMET ──────────────────────────────────────────────────────────────────

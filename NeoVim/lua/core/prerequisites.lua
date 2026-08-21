@@ -14,12 +14,18 @@ end
 function M.check()
   local missing = {}
   local required_version = "0.9.1"
+  local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
+  local w3m_command = vim.fn.exepath("w3m")
+  if is_windows and w3m_command == "" then w3m_command = "C:\\w3m.exe" end
 
   if vim.fn.has("nvim-" .. required_version) ~= 1 then
     missing[#missing + 1] = "Neovim " .. required_version .. "+"
   end
   if vim.fn.executable("git") ~= 1 then missing[#missing + 1] = "git" end
   if vim.fn.executable("rg") ~= 1 then missing[#missing + 1] = "ripgrep (rg)" end
+  if vim.fn.executable(w3m_command) ~= 1 then
+    missing[#missing + 1] = "w3m (for w3m.vim)"
+  end
   if vim.fn.executable("node") ~= 1 then missing[#missing + 1] = "Node.js" end
   if vim.fn.executable("npm") ~= 1 and vim.fn.executable("npm.cmd") ~= 1 then
     missing[#missing + 1] = "npm"
@@ -38,8 +44,12 @@ function M.check()
   end
 
   if vim.fn.has("win32") == 0 and vim.fn.has("mac") == 0 then
-    if vim.fn.executable("xclip") ~= 1 and vim.fn.executable("xsel") ~= 1 then
-      missing[#missing + 1] = "xclip or xsel"
+    local has_x_clipboard = vim.fn.executable("xclip") == 1
+      or vim.fn.executable("xsel") == 1
+    local has_wayland_clipboard = vim.fn.executable("wl-copy") == 1
+      and vim.fn.executable("wl-paste") == 1
+    if not has_x_clipboard and not has_wayland_clipboard then
+      missing[#missing + 1] = "xclip, xsel, or wl-clipboard"
     end
   end
 
