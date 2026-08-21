@@ -35,6 +35,9 @@ luac.out
 *.exe
 *.out
 *.app
+
+# Neovim plugin cache managed by lazy.nvim
+/NeoVim/lazy/
 *.i*86
 *.x86_64
 *.hex

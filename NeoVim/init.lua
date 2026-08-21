@@ -853,6 +853,32 @@ local plugins = {
     init = function() vim.g.user_emmet_leader_key = "<C-y>" end,
   },
 
+  -- ── GAMES ──────────────────────────────────────────────────────────────────
+  { "alec-gibson/nvim-tetris", cmd = "Tetris", keys = { { "<leader>vt", "<cmd>Tetris<CR>", desc = "Tetris" } } },
+  { "ThePrimeagen/vim-be-good", cmd = "VimBeGood", keys = { { "<leader>vv", "<cmd>VimBeGood<CR>", desc = "Vim motion game" } } },
+  { "seandewar/nvimesweeper", cmd = "Nvimesweeper", keys = { { "<leader>vm", "<cmd>Nvimesweeper<CR>", desc = "Minesweeper" } } },
+  {
+    "rktjmp/shenzhen-solitaire.nvim",
+    cmd = { "ShenzhenSolitaireNewGame", "ShenzhenSolitaireNextGame" },
+    keys = { { "<leader>vz", "<cmd>ShenzhenSolitaireNewGame<CR>", desc = "Shenzhen Solitaire" } },
+  },
+  { "zyedidia/vim-snake", cmd = "Snake", keys = { { "<leader>vn", "<cmd>Snake<CR>", desc = "Snake" } } },
+  {
+    "jim-fx/sudoku.nvim",
+    cmd = "Sudoku",
+    keys = { { "<leader>vu", "<cmd>Sudoku<CR>", desc = "Sudoku" } },
+    config = function() require("sudoku").setup() end,
+  },
+  { "seandewar/killersheep.nvim", cmd = "KillKillKill", keys = { { "<leader>vk", "<cmd>KillKillKill<CR>", desc = "Killer Sheep" } } },
+  {
+    "alanfortlink/blackjack.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    cmd = { "BlackJackNewGame", "BlackJackQuit", "BlackJackResetScores" },
+    keys = { { "<leader>vb", "<cmd>BlackJackNewGame<CR>", desc = "Blackjack" } },
+  },
+  { "efueyo/td.nvim", cmd = { "TDStart", "TDToggle", "TDStop" }, keys = { { "<leader>vd", "<cmd>TDStart<CR>", desc = "Tower Defense" } } },
+  { "luk400/vim-lichess", cmd = "LichessFindGame", keys = { { "<leader>vc", "<cmd>LichessFindGame<CR>", desc = "Chess (Lichess)" } } },
+
   -- ── AUTOPAIRS ──────────────────────────────────────────────────────────────
   {
     "windwp/nvim-autopairs",
@@ -881,7 +907,7 @@ local plugins = {
     version = "*",
     keys = {
       { "<F12>",      "<cmd>ToggleTerm<CR>",       desc = "Open/close terminal" },
-      { "<leader>tr", "<cmd>lua SendToTerm()<CR>", desc = "Send line/selection to terminal", mode = { "n", "x" } },
+      { "<leader>te", "<cmd>lua SendToTerm()<CR>", desc = "Send line/selection to terminal", mode = { "n", "x" } },
     },
     config = function()
       -- FIX: float_opts width/height must be integers (columns × rows),
@@ -951,15 +977,21 @@ local plugins = {
         { "<leader>f", group = "Find" },
         { "<leader>g", group = "Git" },
         { "<leader>l", group = "LSP" },
-        { "<leader>t", group = "Terminal/Test" },
+        { "<leader>t", group = "Terminal and Tests" },
         { "<leader>w", group = "Save" },
-        { "<leader>q", group = "Quit/Session" },
+        { "<leader>q", group = "Quit and Sessions" },
         { "<leader>h", group = "Harpoon" },
         { "<leader>d", group = "Debug" },
-        { "<leader>b", group = "Buffer" },
-        { "<leader>S", group = "Spectre" },
-        { "<leader>p", group = "Project" },
+        { "<leader>b", group = "Buffers" },
+        { "<leader>e", group = "Explorer" },
+        { "<leader>s", group = "Splits and Layout" },
+        { "<leader>c", group = "Diff and Conflicts" },
+        { "<leader>S", group = "Search and Replace" },
         { "<leader>r", group = "Refactor" },
+        { "<leader>i", group = "Illuminate" },
+        { "<leader>m", group = "Markdown" },
+        { "<leader>u", group = "Undo" },
+        { "<leader>v", group = "Games" },
       })
       vim.keymap.set("n", "<leader>?", function()
         require("which-key").show({ global = false })
