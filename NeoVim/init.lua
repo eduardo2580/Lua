@@ -57,6 +57,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local phpunit_adapter = require("core.phpunit")
+local hardtime_enabled = vim.g.hardtime_enabled ~= false and vim.env.NVIM_DISABLE_HARDTIME ~= "1"
+
 -- ============================================================================
 --  PLUGIN DEFINITIONS
 -- ============================================================================
@@ -889,6 +891,7 @@ local plugins = {
   -- ── MOTION TRAINING ───────────────────────────────────────────────────────
   {
     "m4xshen/hardtime.nvim",
+    enabled = hardtime_enabled,
     lazy = false,
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {},
