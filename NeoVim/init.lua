@@ -3,30 +3,10 @@
 --  ASCII-only UI labels. No user configuration required.
 -- ============================================================================
 
-vim.g.mapleader        = " "
-vim.g.maplocalleader   = " "
-
--- ============================================================================
---  BASIC EDITOR SETTINGS
--- ============================================================================
-vim.opt.number         = true
-vim.opt.relativenumber = true
-vim.opt.mouse          = "a"
-vim.opt.clipboard      = "unnamedplus"
-vim.opt.tabstop        = 2
-vim.opt.shiftwidth     = 2
-vim.opt.expandtab      = true
-vim.opt.termguicolors  = true
-vim.opt.cursorline     = true
-vim.opt.scrolloff      = 10
-vim.opt.signcolumn     = "yes"
-vim.opt.encoding       = "utf-8"
-vim.opt.updatetime     = 50
-vim.opt.timeoutlen     = 300
-vim.opt.wrap           = false
-vim.opt.splitbelow     = true
-vim.opt.splitright     = true
-vim.opt.undofile       = true -- persistent undo across sessions
+vim.g.mapleader      = " "
+vim.g.maplocalleader = " "
+require("core.options")
+require("core.keymaps")
 
 -- ============================================================================
 --  COMPATIBILITY SHIM
@@ -61,7 +41,10 @@ end
 -- ============================================================================
 --  INSTALL LAZY.NVIM BOOTSTRAP
 -- ============================================================================
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local config_root = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h")
+local plugin_root = config_root .. "/lazy"
+local lazypath = plugin_root .. "/lazy.nvim"
+vim.fn.mkdir(plugin_root, "p")
 if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git", "clone", "--filter=blob:none",
@@ -331,6 +314,11 @@ local plugins = {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        cond = function() return vim.fn.executable("make") == 1 end,
+      },
       "nvim-telescope/telescope-file-browser.nvim",
       "nvim-telescope/telescope-project.nvim",
     },
@@ -358,6 +346,7 @@ local plugins = {
         },
       })
       pcall(telescope.load_extension, "file_browser")
+      pcall(telescope.load_extension, "fzf")
       pcall(telescope.load_extension, "project")
     end,
   },
@@ -497,7 +486,12 @@ local plugins = {
   -- mason-org GitHub org. The old williamboman/* paths still redirect fine
   -- (verified: both resolve to the identical commit), this just points at
   -- the current canonical location instead of relying on the redirect.
-  { "mason-org/mason.nvim",           build = ":MasonUpdate", cmd = "Mason", config = true },
+  {
+    "mason-org/mason.nvim",
+    build = ":MasonUpdate",
+    cmd = "Mason",
+    opts = { install_root_dir = config_root .. "/mason" },
+  },
   { "mason-org/mason-lspconfig.nvim", dependencies = { "mason.nvim" } },
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -1134,36 +1128,17 @@ local plugins = {
 
 } -- end plugins
 
+vim.list_extend(plugins, require("plugins.starter"))
+
 -- ============================================================================
 --  GLOBAL KEYMAPS
 -- ============================================================================
-vim.keymap.set("n", "<A-t>", ":Neotree toggle<CR>", { desc = "File tree" })
-vim.keymap.set("n", "<A-f>", ":Telescope find_files<CR>", { desc = "Find files" })
-vim.keymap.set("n", "<A-g>", ":Telescope live_grep<CR>", { desc = "Search text" })
-vim.keymap.set("n", "<A-s>", ":w<CR>", { desc = "Save file" })
-vim.keymap.set("n", "<A-q>", ":q<CR>", { desc = "Close window" })
-vim.keymap.set("n", "<A-x>", ":wq<CR>", { desc = "Save and close" })
-vim.keymap.set("n", "<A-Left>", "<C-w>h", { desc = "Left window" })
-vim.keymap.set("n", "<A-Down>", "<C-w>j", { desc = "Down window" })
-vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Up window" })
-vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Right window" })
-vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close window" })
-vim.keymap.set("n", "<leader>x", ":wq<CR>", { desc = "Save and close" })
-vim.keymap.set("n", "<Esc>", ":noh<CR>", { desc = "Clear highlights" })
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go left" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go down" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go up" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go right" })
-vim.keymap.set("n", "<leader>tm", function()
-  vim.o.mouse = vim.o.mouse == "a" and "" or "a"
-  vim.notify("Mouse " .. (vim.o.mouse == "a" and "enabled" or "disabled"), vim.log.levels.INFO)
-end, { desc = "Toggle mouse" })
 
 -- ============================================================================
 --  BOOTSTRAP PLUGINS
 -- ============================================================================
 require("lazy").setup(plugins, {
+  root = plugin_root,
   install = {
     colorscheme = { "tokyonight" },
     concurrency = 10,
@@ -1176,6 +1151,12 @@ require("lazy").setup(plugins, {
     title     = " Installing plugins... please wait ",
     title_pos = "center",
     size      = { width = 0.5, height = 0.3 },
+  },
+  headless = {
+    process = true,
+    log     = true,
+    task    = true,
+    colors  = false,
   },
   performance = {
     rtp = {

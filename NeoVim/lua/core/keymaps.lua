@@ -1,0 +1,46 @@
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+map("n", "<A-s>", "<cmd>w<CR>", { desc = "Save file" })
+map("n", "<A-q>", "<cmd>q<CR>", { desc = "Close window" })
+map("n", "<A-x>", "<cmd>wq<CR>", { desc = "Save and close" })
+map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
+map("n", "<leader>q", "<cmd>q<CR>", { desc = "Close window" })
+map("n", "<leader>x", "<cmd>wq<CR>", { desc = "Save and close" })
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear highlights" })
+
+map("n", "<A-Left>", "<C-w>h", { desc = "Left window" })
+map("n", "<A-Down>", "<C-w>j", { desc = "Down window" })
+map("n", "<A-Up>", "<C-w>k", { desc = "Up window" })
+map("n", "<A-Right>", "<C-w>l", { desc = "Right window" })
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<leader>sv", "<C-w>v", { desc = "Split vertically" })
+map("n", "<leader>se", "<C-w>=", { desc = "Equalize splits" })
+map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close split" })
+map("n", "<leader>sj", "<C-w>-", { desc = "Shorten split" })
+map("n", "<leader>sk", "<C-w>+", { desc = "Heighten split" })
+map("n", "<leader>sl", "<C-w>>5", { desc = "Widen split" })
+map("n", "<leader>sr", "<C-w><5", { desc = "Narrow split" })
+
+map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "New tab" })
+map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close tab" })
+map("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "Next tab" })
+map("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "Previous tab" })
+
+map("n", "<leader>qo", "<cmd>copen<CR>", { desc = "Open quickfix" })
+map("n", "<leader>qc", "<cmd>cclose<CR>", { desc = "Close quickfix" })
+map("n", "<leader>qn", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
+map("n", "<leader>qp", "<cmd>cprev<CR>", { desc = "Previous quickfix item" })
+map("n", "<leader>cc", "<cmd>diffput<CR>", { desc = "Put diff" })
+map("n", "<leader>cj", "<cmd>diffget 1<CR>", { desc = "Get local diff" })
+map("n", "<leader>ck", "<cmd>diffget 3<CR>", { desc = "Get remote diff" })
+map("n", "<leader>cn", "]c", { desc = "Next diff hunk" })
+map("n", "<leader>cp", "[c", { desc = "Previous diff hunk" })
+
+map("n", "<leader>tm", function()
+  vim.o.mouse = vim.o.mouse == "a" and "" or "a"
+  vim.notify("Mouse " .. (vim.o.mouse == "a" and "enabled" or "disabled"), vim.log.levels.INFO)
+end, { desc = "Toggle mouse" })
