@@ -2,17 +2,26 @@
 import sys
 import html
 import os
-from pypdf import PdfReader
+
+try:
+    from pypdf import PdfReader
+    HAS_PYPDF = True
+except ImportError:
+    HAS_PYPDF = False
 
 def main():
     if len(sys.argv) < 2:
         print("<html><body><h3>Error: No PDF file specified</h3></body></html>")
-        sys.exit(1)
+        sys.exit(0)
 
     pdf_path = sys.argv[1]
     if not os.path.exists(pdf_path):
         print(f"<html><body><h3>Error: File not found: {html.escape(pdf_path)}</h3></body></html>")
-        sys.exit(1)
+        sys.exit(0)
+
+    if not HAS_PYPDF:
+        print("<html><body><h3>Error: pypdf module is not installed. Please install pypdf (`pip install pypdf`) to view PDF files.</h3></body></html>")
+        sys.exit(0)
 
     try:
         reader = PdfReader(pdf_path)
@@ -30,7 +39,7 @@ def main():
             "pre { white-space: pre-wrap; word-wrap: break-word; }",
             "</style>",
             "</head>",
-            "body>",
+            "<body>",
             f"<h2>PDF Document Viewer: {html.escape(title)}</h2>",
             f"<p>Total Pages: {num_pages}</p>",
             "<hr/>"
