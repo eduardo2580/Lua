@@ -1,127 +1,132 @@
-# Complete CSS 2.1 & HTML Color Style Sheet (.lss) for Lynx
+# Complete High-Contrast CSS 2.1 & HTML Color Style Sheet (.lss) for Lynx
 # Format: object:attributes:foreground:background
 # Valid attributes: normal, bold, dim, reverse, underline, blink, standout
 
-# Base Screen & Defaults
-normal:      normal:   lightgray:black
-default:     normal:   lightgray:black
+# Base Screen & Defaults (Solid black background for maximum contrast)
+normal:      normal:   brightwhite:black
+default:     normal:   brightwhite:black
 
 # Typography & Text Formatting
-em:          bold:     brightcyan
-strong:      bold:     brightmagenta
-b:           bold:     white
-i:           normal:   cyan
-u:           underline:brightyellow
-s:           dim:      red
-strike:      dim:      red
-big:         bold:     brightwhite
-small:       dim:      lightgray
-sub:         dim:      cyan
-sup:         dim:      magenta
-dfn:         normal:   green
-abbr:        underline:brightgreen
-acronym:     underline:brightgreen
-q:           normal:   yellow
+em:          bold:     brightcyan:black
+strong:      bold:     brightyellow:black
+b:           bold:     brightwhite:black
+i:           normal:   brightcyan:black
+u:           underline:brightyellow:black
+s:           normal:   brightred:black
+strike:      normal:   brightred:black
+big:         bold:     brightwhite:black
+small:       normal:   lightgray:black
+sub:         normal:   brightcyan:black
+sup:         normal:   brightmagenta:black
+dfn:         normal:   brightgreen:black
+abbr:        underline:brightgreen:black
+acronym:     underline:brightgreen:black
+q:           normal:   brightyellow:black
 tt:          normal:   brightgreen:black
 code:        normal:   brightgreen:black
 samp:        normal:   brightgreen:black
-kbd:         bold:     yellow:black
-var:         normal:   magenta
-cite:        normal:   green
-blockquote:  normal:   yellow
+kbd:         bold:     brightyellow:black
+var:         normal:   brightmagenta:black
+cite:        normal:   brightgreen:black
+blockquote:  normal:   brightyellow:black
 pre:         normal:   brightgreen:black
 
 # Headings (CSS 2.1 Block Typography h1 - h6)
-title:       bold:     brightblue
-h1:          bold:     brightblue
-h2:          bold:     brightcyan
-h3:          bold:     brightgreen
-h4:          normal:   brightyellow
-h5:          normal:   cyan
-h6:          normal:   magenta
+title:       bold:     white:blue
+h1:          bold:     brightyellow:black
+h2:          bold:     brightcyan:black
+h3:          bold:     brightgreen:black
+h4:          bold:     brightmagenta:black
+h5:          bold:     brightwhite:black
+h6:          bold:     lightgray:black
 
 # Layout, Structure & Semantic Blocks (CSS 2.1 / HTML)
-div:         normal:   default
-span:        normal:   default
-p:           normal:   default
-address:     normal:   magenta
-center:      normal:   default
-hr:          bold:     brightblack
-article:     normal:   default
-section:     normal:   default
-nav:         normal:   brightcyan
-aside:       dim:      lightgray
-header:      bold:     brightblue
-footer:      dim:      lightgray
-main:        normal:   default
-figure:      normal:   yellow
-figcaption:  normal:   yellow
-details:     normal:   brightcyan
-summary:     bold:     brightcyan
-mark:        bold:     black:yellow
-time:        normal:   cyan
+div:         normal:   brightwhite:black
+span:        normal:   brightwhite:black
+p:           normal:   brightwhite:black
+address:     normal:   brightmagenta:black
+center:      normal:   brightwhite:black
+hr:          bold:     brightcyan:black
+article:     normal:   brightwhite:black
+section:     normal:   brightwhite:black
+nav:         normal:   brightcyan:black
+aside:       normal:   lightgray:black
+header:      bold:     white:blue
+footer:      normal:   lightgray:black
+main:        normal:   brightwhite:black
+figure:      normal:   brightyellow:black
+figcaption:  normal:   brightyellow:black
+details:     normal:   brightcyan:black
+summary:     bold:     brightcyan:black
+mark:        bold:     black:brightyellow
+time:        normal:   brightcyan:black
 
 # Image & Media Placeholders
-img:         dim:      brown
-audio:       dim:      brightmagenta
-video:       dim:      brightmagenta
-canvas:      dim:      brightblue
-svg:         dim:      brightcyan
+img:         normal:   brightyellow:black
+audio:       normal:   brightmagenta:black
+video:       normal:   brightmagenta:black
+canvas:      normal:   brightcyan:black
+svg:         normal:   brightcyan:black
 
 # Inline Revisions
-ins:         normal:   brightgreen
-del:         dim:      red
+ins:         normal:   brightgreen:black
+del:         normal:   brightred:black
 
 # Links & Anchors
-a:           bold:     brightcyan
-link:        normal:   brightcyan
-alink:       reverse:  yellow:black
+a:           bold:     brightcyan:black
+link:        bold:     brightcyan:black
+alink:       bold:     black:brightyellow
 
-# Navigation & Status Bars (Qutebrowser-like minimal status)
-status:      reverse:  brightgreen:black
-alert:       bold:     brightred:black
-whereis:     reverse:  yellow:blue
+# Navigation & Status Bars
+status:      bold:     white:blue
+alert:       bold:     white:red
+whereis:     bold:     black:brightyellow
 
 # Lists (ul, ol, dl)
-ul:          normal:   default
-ol:          normal:   default
-li:          normal:   default
-dl:          normal:   default
-dt:          bold:     brightyellow
-dd:          normal:   lightgray
-dir:         normal:   default
-menu:        normal:   default
+ul:          normal:   brightwhite:black
+ol:          normal:   brightwhite:black
+li:          normal:   brightwhite:black
+dl:          normal:   brightwhite:black
+dt:          bold:     brightyellow:black
+dd:          normal:   brightwhite:black
+dir:         normal:   brightwhite:black
+menu:        normal:   brightwhite:black
 
 # Tables & Grid Data (CSS 2.1 Table Formatting)
-table:       normal:   brightcyan
-caption:     bold:     brightyellow
-tr:          normal:   lightgray
-td:          normal:   default
+table:       normal:   brightcyan:black
+caption:     bold:     brightyellow:black
+tr:          normal:   brightwhite:black
+td:          normal:   brightwhite:black
 th:          bold:     white:blue
 thead:       bold:     white:blue
-tbody:       normal:   default
+tbody:       normal:   brightwhite:black
 tfoot:       bold:     lightgray:black
-col:         normal:   default
-colgroup:    normal:   default
+col:         normal:   brightwhite:black
+colgroup:    normal:   brightwhite:black
 
 # Interactive & Form Elements
-form:        normal:   brightyellow
-input:       normal:   white:blue
-textarea:    normal:   white:blue
-select:      normal:   lightgray:black
-option:      normal:   lightgray:black
-optgroup:    bold:     yellow:black
+form:        normal:   brightyellow:black
+input:       bold:     white:blue
+textarea:    bold:     white:blue
+select:      bold:     white:blue
+option:      normal:   brightwhite:black
+optgroup:    bold:     brightyellow:black
 button:      bold:     black:white
 submit:      bold:     black:white
-label:       bold:     brightyellow
-fieldset:    normal:   brightcyan
-legend:      bold:     brightyellow
+label:       bold:     brightyellow:black
+fieldset:    normal:   brightcyan:black
+legend:      bold:     brightyellow:black
+
+# Scrollbar
+scroll.bar:   bold:    white:blue
+scroll.back:  normal:  lightgray:black
+scroll.arrow: bold:    white:blue
 
 # Source Code Highlighting (CSS / PrettySrc)
-prettysrc:       normal: white:black
-psrc:tag:        bold:   brightblue
-psrc:attr:       normal: cyan
-psrc:val:        normal: brightgreen
-psrc:comment:    dim:    lightgray
-psrc:entity:     bold:   brightmagenta
-psrc:badcon:     bold:   brightred
+prettysrc:       normal: brightwhite:black
+psrc:tag:        bold:   brightcyan:black
+psrc:attr:       normal: brightmagenta:black
+psrc:val:        normal: brightgreen:black
+psrc:comment:    normal: lightgray:black
+psrc:entity:     bold:   brightyellow:black
+psrc:badcon:     bold:   white:red
