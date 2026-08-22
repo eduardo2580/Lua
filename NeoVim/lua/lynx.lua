@@ -44,7 +44,7 @@ local function lynx_supports_ssl()
     return false
   end
   local version_out = vim.fn.system({ cmd, "-version" })
-  if type(version_out) == "string" and (version_out:match("SSL") or version_out:match("OpenSSL") or version_out:match("GNUTLS")) then
+  if type(version_out) == "string" and (version_out:upper():match("SSL") or version_out:upper():match("TLS")) then
     ssl_support_cache = true
   else
     ssl_support_cache = false
@@ -52,10 +52,100 @@ local function lynx_supports_ssl()
   return ssl_support_cache
 end
 
+local function get_sandbox_dir()
+  return config_root() .. "/Downloads/Lynx/sandbox"
+end
+
+local function ensure_sandbox()
+  local sdir = get_sandbox_dir()
+  if vim.fn.isdirectory(sdir) == 0 then
+    vim.fn.mkdir(sdir, "p")
+  end
+end
+
+local function url_to_cache_filename(url)
+  local hash = vim.fn.sha256(url):sub(1, 16)
+  local ext = ".html"
+  if url:match("%.pdf$") or url:match("%.pdf%?") then
+    ext = ".pdf"
+  elseif url:match("%.json$") or url:match("%.json%?") then
+    ext = ".json"
+  elseif url:match("%.txt$") or url:match("%.txt%?") then
+    ext = ".txt"
+  end
+  local clean_name = url:gsub("^%w+://", ""):gsub("[^%w%.%-]", "_")
+  if #clean_name > 30 then
+    clean_name = clean_name:sub(1, 30)
+  end
+  return get_sandbox_dir() .. "/" .. clean_name .. "_" .. hash .. ext
+end
+
+local function fetch_and_cache(url, force_reload)
+  ensure_sandbox()
+  local cache_path = url_to_cache_filename(url)
+  if not force_reload and vim.fn.filereadable(cache_path) == 1 then
+    return cache_path
+  end
+
+  local download_cmd = nil
+  if vim.fn.executable("curl") == 1 then
+    download_cmd = { "curl", "-sSL", "-o", cache_path, url }
+  elseif vim.fn.executable("wget") == 1 then
+    download_cmd = { "wget", "-q", "-O", cache_path, url }
+  end
+
+  if download_cmd then
+    local _ = vim.fn.system(download_cmd)
+    if vim.v.shell_error == 0 and vim.fn.filereadable(cache_path) == 1 and vim.fn.getfsize(cache_path) > 0 then
+      if cache_path:match("%.json$") then
+        local formatted = vim.fn.system({ "python3", "-m", "json.tool", cache_path })
+        if vim.v.shell_error == 0 and formatted and formatted ~= "" then
+          local f = io.open(cache_path, "w")
+          if f then
+            f:write("<!DOCTYPE html><html><head><title>JSON Document</title></head><body><pre>" .. vim.fn.escape(formatted, "<>") .. "</pre></body></html>")
+            f:close()
+          end
+        end
+      end
+      return cache_path
+    end
+  end
+  return url
+end
+
+function M.clear_cache()
+  ensure_sandbox()
+  local sdir = get_sandbox_dir()
+  local files = vim.fn.glob(sdir .. "/*", false, true)
+  local count = 0
+  for _, f in ipairs(files) do
+    if vim.fn.delete(f) == 0 then
+      count = count + 1
+    end
+  end
+  vim.notify("Lynx sandbox cache cleared (" .. count .. " files deleted).", vim.log.levels.INFO)
+end
+
+function M.reload(url)
+  local target_url = url or cfg.home
+  if target_url:match("%.pdf$") or target_url:match("%.json$") then
+    local cached_file = fetch_and_cache(target_url, true)
+    M.toggle(cached_file)
+  else
+    M.toggle(target_url)
+  end
+end
+
 local function process_url(url)
   if not url or url == "" then
     return url
   end
+
+  -- Cache specific static non-HTML resources like PDF/JSON for rendering
+  if url:match("%.pdf$") or url:match("%.pdf%?") or url:match("%.json$") or url:match("%.json%?") then
+    return fetch_and_cache(url, false)
+  end
+
   if not lynx_supports_ssl() then
     if url:match("^https://") then
       vim.schedule(function()
@@ -70,10 +160,12 @@ end
 local function lynx_args(url)
   local args = { lynx_command() }
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
-    table.insert(args, "-cfg=" .. (cfg.cfg_file:gsub("\\", "/")))
+    table.insert(args, "-cfg")
+    table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
   end
   if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 then
-    table.insert(args, "-lss=" .. (cfg.lss_file:gsub("\\", "/")))
+    table.insert(args, "-lss")
+    table.insert(args, (cfg.lss_file:gsub("\\", "/")))
   end
   local final_url = process_url(url)
   if final_url and final_url ~= "" then
@@ -204,6 +296,10 @@ function M.setup(opts)
     M.gopher(args.args)
   end, { nargs = "?", desc = "Open a Gopher URL in Lynx" })
   vim.api.nvim_create_user_command("LynxGx", M.gx, { desc = "Open URL under cursor in Lynx" })
+  vim.api.nvim_create_user_command("LynxClearCache", M.clear_cache, { desc = "Clear Lynx sandbox offline cache" })
+  vim.api.nvim_create_user_command("LynxReload", function(args)
+    M.reload(args.args ~= "" and args.args or nil)
+  end, { nargs = "?", desc = "Reload current or specified URL from internet" })
 
   vim.keymap.set("n", "<leader>bb", M.toggle, { desc = "Toggle Lynx browser" })
   vim.keymap.set("n", "<leader>ww", M.toggle, { desc = "Open Lynx browser" })
