@@ -33,6 +33,12 @@ Use `:Lynx [url]` or `<leader>ww` to open a URL in a terminal, and
 `:LynxGopher [host/path]` for Gopher. URLs are passed unchanged, so Lynx can
 handle HTTP, HTTPS, FTP, Gopher, WAIS, and NNTP resources.
 
+Use `:Lynx` for the floating browser, `:LynxSplit [url]` for a vertical split,
+`:LynxGopher [host/path]` for Gopher, and `gx` or `<leader>bb` to open Lynx
+from normal mode. The bundled `Downloads/Lynx/lynx.cfg` and
+`Downloads/Lynx/lynx-nvim.lss` are passed automatically, and the floating
+window keeps its Lynx session alive when hidden.
+
 The first startup uses Mason to install the Python tools used by this config:
 `black`, `debugpy`, `flake8`, `isort`, `mypy`, and `pylint`.
 

@@ -22,12 +22,3 @@
 2026-08-22 12:36:17.513   Message box (OK):
                           No SSL library found
 2026-08-22 12:36:19.102   User chose OK.
-2026-08-22 12:48:21.270   Message box (Yes/No):
-                          Setup is not complete. If you exit now, the program will not be installed.
-                          
-                          You may run Setup again at another time to complete the installation.
-                          
-                          Exit Setup?
-2026-08-22 12:48:22.311   User chose Yes.
-2026-08-22 12:48:22.311   Deinitializing Setup.
-2026-08-22 12:48:22.335   Log closed.
