@@ -208,7 +208,12 @@ function M.clear_cache()
   vim.notify("Lynx sandbox cache cleared (" .. count .. " files deleted).", vim.log.levels.INFO)
 end
 
+local close_existing_session
+
 function M.reload(url)
+  if close_existing_session then
+    close_existing_session()
+  end
   local target_url = url or cfg.home
   if target_url:match("%.pdf$") or target_url:match("%.json$") or target_url:match("%.css$") or target_url:match("%.css%?") then
     local cached_file = fetch_and_cache(target_url, true)
@@ -275,6 +280,18 @@ local function float_opts()
   }
 end
 
+close_existing_session = function()
+  if state.win and vim.api.nvim_win_is_valid(state.win) then
+    pcall(vim.api.nvim_win_close, state.win, true)
+    state.win = nil
+  end
+  if state.buf and vim.api.nvim_buf_is_valid(state.buf) then
+    pcall(vim.api.nvim_buf_delete, state.buf, { force = true })
+    state.buf = nil
+  end
+  state.job_started = false
+end
+
 local function start_job(url)
   local command = lynx_command()
   if command == "" then
@@ -296,40 +313,45 @@ local function start_job(url)
 end
 
 local function open_float(url)
-  if state.buf and vim.api.nvim_buf_is_valid(state.buf) then
+  if url or not state.job_started or not (state.buf and vim.api.nvim_buf_is_valid(state.buf)) then
+    close_existing_session()
+    state.buf = vim.api.nvim_create_buf(false, true)
+    vim.bo[state.buf].bufhidden = "wipe"
     state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
-    if url and not state.job_started then
-      start_job(url)
+    if not start_job(url or cfg.home) then
+      close_existing_session()
+      return
     end
     vim.cmd("startinsert")
+
+    vim.api.nvim_create_autocmd("TermClose", {
+      buffer = state.buf,
+      once = true,
+      callback = function()
+        state.buf, state.win, state.job_started = nil, nil, false
+      end,
+    })
     return
   end
 
-  state.buf = vim.api.nvim_create_buf(false, true)
-  state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
-  if not start_job(url or cfg.home) then
-    vim.api.nvim_win_close(state.win, true)
-    state.buf, state.win = nil, nil
-    return
+  if not (state.win and vim.api.nvim_win_is_valid(state.win)) then
+    state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
   end
   vim.cmd("startinsert")
-
-  vim.api.nvim_create_autocmd("TermClose", {
-    buffer = state.buf,
-    once = true,
-    callback = function()
-      state.buf, state.win, state.job_started = nil, nil, false
-    end,
-  })
 end
 
 function M.toggle(url)
+  if url and url ~= "" then
+    open_float(url)
+    return
+  end
+
   if state.win and vim.api.nvim_win_is_valid(state.win) then
     vim.api.nvim_win_hide(state.win)
     state.win = nil
     return
   end
-  open_float(url)
+  open_float()
 end
 
 function M.split(url)
@@ -339,6 +361,9 @@ function M.split(url)
     return
   end
   vim.cmd("vsplit")
+  local buf = vim.api.nvim_create_buf(false, true)
+  vim.api.nvim_win_set_buf(0, buf)
+  vim.bo[buf].bufhidden = "wipe"
   vim.fn.termopen(lynx_args(url or cfg.home), { cwd = config_root() })
   vim.cmd("startinsert")
 end
