@@ -2,194 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Minimal Qutebrowser Terminal :: Lynx Browser Portal &amp; CSS 2.1 Engine</title>
-  <style>
-    body {
-      background-color: #181a1b;
-      color: #e8e6e3;
-      font-family: monospace, monospace;
-      margin: 1em 2em;
-      line-height: 1.4;
-    }
-    h1 {
-      color: #3399ff;
-      border-bottom: 2px solid #3399ff;
-      padding-bottom: 0.3em;
-    }
-    h2 {
-      color: #2eb8b8;
-      border-bottom: 1px dashed #2eb8b8;
-      margin-top: 1.5em;
-    }
-    h3 {
-      color: #e5a93c;
-    }
-    a {
-      color: #47a3ff;
-      text-decoration: underline;
-    }
-    .badge {
-      background-color: #222527;
-      color: #e8e6e3;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: bold;
-      border: 1px solid #3a3f42;
-    }
-    .card {
-      border: 1px solid #3a3f42;
-      background-color: #222527;
-      padding: 1em;
-      margin-bottom: 1em;
-    }
-    kbd {
-      background-color: #2a2d2f;
-      color: #ff6b6b;
-      padding: 2px 5px;
-      font-weight: bold;
-      border: 1px solid #4a4f52;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #3a3f42;
-      padding: 6px 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #2a2d2f;
-      color: #3399ff;
-    }
-    input[type="text"], input[type="submit"] {
-      background-color: #2a2d2f;
-      color: #e8e6e3;
-      border: 1px solid #4a4f52;
-      padding: 4px 8px;
-    }
-  </style>
+  <title>Lynx Home</title>
 </head>
 <body>
+  <h1>Lynx Home</h1>
+  <p>Pick a place to go:</p>
+  <ol>
+    <li><a href="https://html.duckduckgo.com/html/">Search the Web</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Main_Page">Read Wikipedia</a></li>
+    <li><a href="gopher://gopher.floodgap.com:70/1">Visit Gopher Space</a></li>
+  </ol>
 
-  <h1>🌐 Minimal Qutebrowser Terminal :: Lynx Web &amp; CSS 2.1 Navigation Hub</h1>
-  <p>Welcome to your <b>Keyboard-Focused Qutebrowser-like Terminal Web Browser</b> inside NeoVim! Built with full CSS 2.1 element support and native <code>.css</code> stylesheet rendering.</p>
+  <h2>How to move</h2>
+  <ul>
+    <li>Use the mouse to click a link.</li>
+    <li>Use Up and Down, or J and K, to choose a link.</li>
+    <li>Press Enter, Right, or L to open it.</li>
+    <li>Press Left or H to go back.</li>
+    <li>Press Space to read the next part.</li>
+    <li>Press G to type a web address.</li>
+    <li>Press Q to close Lynx.</li>
+  </ul>
 
-  <div class="card">
-    <h2>🔍 Quick Web Search (HTTP / HTTPS)</h2>
-    <p>Type your query into any search engine form below and press <b>[Enter]</b>:</p>
-
-    <form action="https://html.duckduckgo.com/html/" method="post">
-      <label><b>DuckDuckGo:</b></label>
-      <input type="text" name="q" size="40" placeholder="Search privacy-first web...">
-      <input type="submit" value="Search DDG">
-    </form>
-    <br>
-
-    <form action="https://www.google.com/search" method="get">
-      <label><b>Google Search:</b></label>
-      <input type="text" name="q" size="40" placeholder="Search with Google...">
-      <input type="submit" value="Search Google">
-    </form>
-    <br>
-
-    <form action="https://en.wikipedia.org/w/index.php" method="get">
-      <label><b>Wikipedia:</b></label>
-      <input type="text" name="search" size="40" placeholder="Search Wikipedia articles...">
-      <input type="submit" value="Search Wikipedia">
-    </form>
-
-    <p><b>Popular Search Engine Quick Links:</b></p>
-    <ul>
-      <li><a href="https://duckduckgo.com/html/">DuckDuckGo (Lite HTML)</a> - Fast, ad-free text search.</li>
-      <li><a href="https://www.google.com">Google Home</a> - World search engine portal.</li>
-      <li><a href="https://www.bing.com">Microsoft Bing</a> - Web search portal.</li>
-      <li><a href="https://www.startpage.com">Startpage</a> - Google search results without tracking.</li>
-      <li><a href="https://searx.be">SearXNG Metasearch</a> - Open source, decentralized search.</li>
-      <li><a href="https://www.ecosia.org">Ecosia Search</a> - Search engine planting trees.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>🎨 Full CSS 2.1 &amp; .css File Support</h2>
-    <p>Lynx is configured with comprehensive CSS 2.1 style mappings and dedicated <code>.css</code> document rendering:</p>
-    <ul>
-      <li><b>CSS 2.1 Structural &amp; Typography Rules:</b> Rich terminal colors for <code>h1-h6</code>, <code>em</code>, <code>strong</code>, <code>code</code>, <code>pre</code>, <code>blockquote</code>, <code>table</code>, <code>form</code>, <code>fieldset</code>, and pseudo-classes.</li>
-      <li><b>Direct .css File Viewer:</b> Open local or web <code>.css</code> files directly in Lynx (e.g. <code>:Lynx style.css</code> or <code>:Lynx https://example.com/style.css</code>) to view formatted CSS code with full styling.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>🎓 Master Qutebrowser-style Keyboard Navigation</h2>
-    <table>
-      <tr>
-        <th>Key Action</th>
-        <th>Shortcut</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><b>Navigate Links / Inputs</b></td>
-        <td><kbd>j</kbd> / <kbd>k</kbd> or <kbd>Up</kbd> / <kbd>Down</kbd></td>
-        <td>Move focus to previous or next link or form field (Vim keys active).</td>
-      </tr>
-      <tr>
-        <td><b>Follow Link / Submit Form</b></td>
-        <td><kbd>l</kbd> or <kbd>Right</kbd> or <kbd>Enter</kbd></td>
-        <td>Follow focused link or submit active input form.</td>
-      </tr>
-      <tr>
-        <td><b>Go Back</b></td>
-        <td><kbd>h</kbd> or <kbd>Left</kbd></td>
-        <td>Go back to previous page in history stack.</td>
-      </tr>
-      <tr>
-        <td><b>Open URL Prompt (Qute-style :open)</b></td>
-        <td><kbd>g</kbd></td>
-        <td>Open 'Go to URL' prompt (type any web address or domain).</td>
-      </tr>
-      <tr>
-        <td><b>Jump by Link Number</b></td>
-        <td><kbd>1</kbd> - <kbd>9</kbd> + <kbd>Enter</kbd></td>
-        <td>Jump directly to a specific numbered link on screen.</td>
-      </tr>
-      <tr>
-        <td><b>Scroll Half / Full Page</b></td>
-        <td><kbd>Space</kbd> / <kbd>b</kbd></td>
-        <td>Scroll down or up one full window page height.</td>
-      </tr>
-      <tr>
-        <td><b>Search Text on Page</b></td>
-        <td><kbd>/</kbd> then text</td>
-        <td>Search for text in current document (<kbd>n</kbd> for next match).</td>
-      </tr>
-      <tr>
-        <td><b>View Document Source</b></td>
-        <td><kbd>\</kbd> (backslash)</td>
-        <td>Toggle raw HTML page source mode.</td>
-      </tr>
-      <tr>
-        <td><b>Quit Lynx Window</b></td>
-        <td><kbd>q</kbd> or <kbd>Q</kbd></td>
-        <td>Exit Lynx session and return to NeoVim buffer.</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="card">
-    <h2>⚡ NeoVim Lynx Commands Cheatsheet</h2>
-    <ul>
-      <li><b>:Lynx [url_or_css]</b> &mdash; Toggle or open floating minimal Lynx browser (opens this portal by default).</li>
-      <li><b>:LynxSplit [url_or_css]</b> &mdash; Open Lynx in a vertical window split.</li>
-      <li><b>:LynxGopher [url]</b> &mdash; Quick launch a Gopher URL.</li>
-      <li><b>:LynxGx</b> or press <kbd>gx</kbd> in Normal mode &mdash; Open URL or CSS under cursor.</li>
-      <li><b>:LynxClearCache</b> &mdash; Clear offline sandbox cache.</li>
-      <li><b>:LynxReload [url]</b> &mdash; Force refresh document or stylesheet.</li>
-      <li><b>&lt;leader&gt;bb</b> / <b>&lt;leader&gt;ww</b> &mdash; Keymaps to toggle floating Lynx browser instantly.</li>
-    </ul>
-  </div>
-
-  <hr>
-  <p><i>State-of-the-Art Lynx CSS 2.1 Integration for NeoVim &bull; Minimal Qutebrowser Edition</i></p>
-
+  <p><a href="https://lynx.invisible-island.net/lynx_help/lynx_help_main.html">Help</a></p>
 </body>
 </html>

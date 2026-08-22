@@ -46,12 +46,13 @@ cp lynx ../native/lynx
 
 When Lynx is built without SSL support, the Neovim integration automatically detects this via `lynx -version` and transparently converts `https://` URLs to `http://` so browsing continues uninterrupted.
 
-## Text-Only Browser, Gopher & Gemini Protocol Support
+## Text-Only Browser and Supported Protocols
 
 Lynx is configured as a clean, text-only browser. CSS styling has been removed to keep browsing simple and focused:
-- **Gemini Protocol (`gemini://`):** Full compatibility with the Gemini protocol via `:LynxGemini` or direct URLs. Gemini documents (`text/gemini`) are fetched using `gemini_fetcher.py` and rendered as clean, structured text pages with clickable links.
+- **HTTP and HTTPS:** Native Lynx browsing, with HTTPS using the bundled SSL-capable build when available.
+- **FTP:** Native Lynx FTP browsing.
 - **Gopher Protocol (`gopher://`):** Native Gopher browsing support via `:LynxGopher`.
-- **Text-Only Experience:** No CSS clutter, focusing on simple text navigation across Web, Gopher, and Gemini space.
+- **Text-Only Experience:** No CSS clutter, focusing on simple text navigation across supported protocols.
 
 ## Minimal UI & Shortcuts
 

@@ -32,15 +32,6 @@ local function lynx_command()
   return vim.fn.exepath("lynx") ~= "" and vim.fn.exepath("lynx") or vim.fn.exepath("lynx.exe")
 end
 
-local function python_executable()
-  if vim.fn.executable("python3") == 1 then
-    return "python3"
-  elseif vim.fn.executable("python") == 1 then
-    return "python"
-  end
-  return "python3"
-end
-
 local default_colors_support_cache = nil
 local function lynx_supports_default_colors()
   if default_colors_support_cache ~= nil then
@@ -102,8 +93,6 @@ local function url_to_cache_filename(url)
     ext = ".pdf"
   elseif url:match("%.json$") or url:match("%.json%?") then
     ext = ".json"
-  elseif url:match("^gemini://") or url:match("%.gmi$") then
-    ext = ".gemini.html"
   elseif url:match("%.txt$") or url:match("%.txt%?") then
     ext = ".txt"
   end
@@ -121,16 +110,6 @@ local function fetch_and_cache(url, force_reload)
     return cache_path
   end
 
-  if url:match("^gemini://") then
-    local fetcher_script = config_root() .. "/Downloads/Lynx/gemini_fetcher.py"
-    local py_cmd = python_executable()
-    vim.fn.system({ py_cmd, fetcher_script, url, cache_path })
-    if vim.fn.filereadable(cache_path) == 1 then
-      return cache_path
-    end
-    return url
-  end
-
   -- Local file handling
   if vim.fn.filereadable(url) == 1 then
     return url
@@ -146,17 +125,6 @@ local function fetch_and_cache(url, force_reload)
   if download_cmd then
     local _ = vim.fn.system(download_cmd)
     if vim.v.shell_error == 0 and vim.fn.filereadable(cache_path) == 1 and vim.fn.getfsize(cache_path) > 0 then
-      if cache_path:match("%.json$") then
-        local py_cmd = python_executable()
-        local formatted = vim.fn.system({ py_cmd, "-m", "json.tool", cache_path })
-        if vim.v.shell_error == 0 and formatted and formatted ~= "" then
-          local f = io.open(cache_path, "w")
-          if f then
-            f:write("<!DOCTYPE html><html><head><title>JSON Document</title></head><body><pre>" .. vim.fn.escape(formatted, "<>") .. "</pre></body></html>")
-            f:close()
-          end
-        end
-      end
       return cache_path
     end
   end
@@ -183,7 +151,7 @@ function M.reload(url)
     close_existing_session()
   end
   local target_url = url or cfg.home
-  if target_url:match("^gemini://") or target_url:match("%.pdf$") or target_url:match("%.json$") then
+  if target_url:match("%.pdf$") or target_url:match("%.json$") then
     local cached_file = fetch_and_cache(target_url, true)
     M.toggle(cached_file)
   else
@@ -196,9 +164,8 @@ local function process_url(url)
     return url
   end
 
-  -- Cache static non-HTML resources like Gemini/PDF/JSON for clean text rendering
-  if url:match("^gemini://")
-     or url:match("%.pdf$") or url:match("%.pdf%?")
+  -- Cache static non-HTML resources like PDF and JSON for clean text rendering
+  if url:match("%.pdf$") or url:match("%.pdf%?")
      or url:match("%.json$") or url:match("%.json%?") then
     return fetch_and_cache(url, false)
   end
@@ -216,9 +183,6 @@ end
 
 local function lynx_args(url)
   local args = { lynx_command() }
-  if lynx_supports_default_colors() then
-    table.insert(args, "-default_colors")
-  end
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
     table.insert(args, "-cfg")
     table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
@@ -334,7 +298,7 @@ function M.gx()
   if word == "" then
     return
   end
-  if word:match("^gemini://") or word:match("^gophers?://") then
+  if word:match("^gophers?://") then
     M.toggle(word)
   elseif word:match("^https?://") or word:match("^%w[%w%-]*%.%a%a+") then
     M.toggle(word:match("^https?://") and word or "https://" .. word)
@@ -353,16 +317,6 @@ function M.gopher(args)
   M.toggle(target)
 end
 
-function M.gemini(args)
-  local target = args
-  if target == "" then
-    target = "gemini://geminiprotocol.net/"
-  elseif not target:match("^gemini://") then
-    target = "gemini://" .. target
-  end
-  M.toggle(target)
-end
-
 function M.setup(opts)
   cfg = vim.tbl_deep_extend("force", cfg, opts or {})
   cfg.cfg_file = cfg.cfg_file or config_root() .. "/Downloads/Lynx/lynx.cfg"
@@ -377,9 +331,6 @@ function M.setup(opts)
   vim.api.nvim_create_user_command("LynxGopher", function(args)
     M.gopher(args.args)
   end, { nargs = "?", desc = "Open a Gopher URL in Lynx" })
-  vim.api.nvim_create_user_command("LynxGemini", function(args)
-    M.gemini(args.args)
-  end, { nargs = "?", desc = "Open a Gemini URL in Lynx" })
   vim.api.nvim_create_user_command("LynxGx", M.gx, { desc = "Open URL under cursor in Lynx" })
   vim.api.nvim_create_user_command("LynxClearCache", M.clear_cache, { desc = "Clear Lynx sandbox offline cache" })
   vim.api.nvim_create_user_command("LynxReload", function(args)
