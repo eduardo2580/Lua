@@ -4,7 +4,6 @@ local state = { buf = nil, win = nil, job_started = false }
 
 local cfg = {
   cfg_file = nil,
-  lss_file = nil,
   home = nil,
   width_ratio = 0.88,
   height_ratio = 0.88,
@@ -61,25 +60,6 @@ local function lynx_supports_default_colors()
   return default_colors_support_cache
 end
 
-local lss_support_cache = nil
-local function lynx_supports_lss()
-  if lss_support_cache ~= nil then
-    return lss_support_cache
-  end
-  local cmd = lynx_command()
-  if cmd == "" then
-    lss_support_cache = false
-    return false
-  end
-  local help_out = vim.fn.system({ cmd, "-help" })
-  if type(help_out) == "string" and (help_out:match("%-lss") or help_out:match("%-LSS")) then
-    lss_support_cache = true
-  else
-    lss_support_cache = false
-  end
-  return lss_support_cache
-end
-
 local ssl_support_cache = nil
 local function lynx_supports_ssl()
   if ssl_support_cache ~= nil then
@@ -122,8 +102,8 @@ local function url_to_cache_filename(url)
     ext = ".pdf"
   elseif url:match("%.json$") or url:match("%.json%?") then
     ext = ".json"
-  elseif url:match("%.css$") or url:match("%.css%?") then
-    ext = ".css.html"
+  elseif url:match("^gemini://") or url:match("%.gmi$") then
+    ext = ".gemini.html"
   elseif url:match("%.txt$") or url:match("%.txt%?") then
     ext = ".txt"
   end
@@ -134,21 +114,6 @@ local function url_to_cache_filename(url)
   return get_sandbox_dir() .. "/" .. clean_name .. "_" .. hash .. ext
 end
 
-local function format_css_as_html(raw_css, title)
-  local escaped = raw_css:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")
-  return "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</title>"
-    .. "<style>"
-    .. "body { font-family: monospace; background: #181a1b; color: #e8e6e3; padding: 1em; line-height: 1.4; }"
-    .. "h2 { color: #3399ff; border-bottom: 2px solid #3399ff; padding-bottom: 4px; font-size: 1.2em; }"
-    .. "pre { background: #222527; color: #e8e6e3; padding: 1em; border: 1px solid #3a3f42; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }"
-    .. ".info { color: #2eb8b8; margin-bottom: 1em; font-weight: bold; }"
-    .. "</style></head><body>"
-    .. "<h2>🎨 CSS 2.1 Stylesheet: " .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</h2>"
-    .. "<div class='info'>[ Rendered with full CSS 2.1 support in Lynx Minimal Web Viewer ]</div>"
-    .. "<pre><code>" .. escaped .. "</code></pre>"
-    .. "</body></html>"
-end
-
 local function fetch_and_cache(url, force_reload)
   ensure_sandbox()
   local cache_path = url_to_cache_filename(url)
@@ -156,22 +121,18 @@ local function fetch_and_cache(url, force_reload)
     return cache_path
   end
 
+  if url:match("^gemini://") then
+    local fetcher_script = config_root() .. "/Downloads/Lynx/gemini_fetcher.py"
+    local py_cmd = python_executable()
+    vim.fn.system({ py_cmd, fetcher_script, url, cache_path })
+    if vim.fn.filereadable(cache_path) == 1 then
+      return cache_path
+    end
+    return url
+  end
+
   -- Local file handling
   if vim.fn.filereadable(url) == 1 then
-    if url:match("%.css$") then
-      local f = io.open(url, "r")
-      if f then
-        local content = f:read("*a")
-        f:close()
-        local formatted_html = format_css_as_html(content, vim.fn.fnamemodify(url, ":t"))
-        local out_f = io.open(cache_path, "w")
-        if out_f then
-          out_f:write(formatted_html)
-          out_f:close()
-          return cache_path
-        end
-      end
-    end
     return url
   end
 
@@ -193,18 +154,6 @@ local function fetch_and_cache(url, force_reload)
           if f then
             f:write("<!DOCTYPE html><html><head><title>JSON Document</title></head><body><pre>" .. vim.fn.escape(formatted, "<>") .. "</pre></body></html>")
             f:close()
-          end
-        end
-      elseif cache_path:match("%.css") or url:match("%.css") then
-        local f = io.open(cache_path, "r")
-        if f then
-          local content = f:read("*a")
-          f:close()
-          local formatted_html = format_css_as_html(content, url)
-          local out_f = io.open(cache_path, "w")
-          if out_f then
-            out_f:write(formatted_html)
-            out_f:close()
           end
         end
       end
@@ -234,7 +183,7 @@ function M.reload(url)
     close_existing_session()
   end
   local target_url = url or cfg.home
-  if target_url:match("%.pdf$") or target_url:match("%.json$") or target_url:match("%.css$") or target_url:match("%.css%?") then
+  if target_url:match("^gemini://") or target_url:match("%.pdf$") or target_url:match("%.json$") then
     local cached_file = fetch_and_cache(target_url, true)
     M.toggle(cached_file)
   else
@@ -247,11 +196,10 @@ local function process_url(url)
     return url
   end
 
-  -- Cache static non-HTML resources like PDF/JSON/CSS for clean rendering
-  if url:match("%.pdf$") or url:match("%.pdf%?")
-     or url:match("%.json$") or url:match("%.json%?")
-     or url:match("%.css$") or url:match("%.css%?")
-     or (vim.fn.filereadable(url) == 1 and url:match("%.css$")) then
+  -- Cache static non-HTML resources like Gemini/PDF/JSON for clean text rendering
+  if url:match("^gemini://")
+     or url:match("%.pdf$") or url:match("%.pdf%?")
+     or url:match("%.json$") or url:match("%.json%?") then
     return fetch_and_cache(url, false)
   end
 
@@ -275,10 +223,6 @@ local function lynx_args(url)
     table.insert(args, "-cfg")
     table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
   end
-  if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 and lynx_supports_lss() then
-    table.insert(args, "-lss")
-    table.insert(args, (cfg.lss_file:gsub("\\", "/")))
-  end
   local final_url = process_url(url)
   if final_url and final_url ~= "" then
     table.insert(args, (final_url:gsub("\\", "/")))
@@ -297,7 +241,7 @@ local function float_opts()
     col = math.floor((vim.o.columns - width) / 2),
     style = "minimal",
     border = cfg.border,
-    title = " qute-lynx ",
+    title = " Lynx ",
     title_pos = "center",
   }
 end
@@ -390,7 +334,9 @@ function M.gx()
   if word == "" then
     return
   end
-  if word:match("^https?://") or word:match("^%w[%w%-]*%.%a%a+") then
+  if word:match("^gemini://") or word:match("^gophers?://") then
+    M.toggle(word)
+  elseif word:match("^https?://") or word:match("^%w[%w%-]*%.%a%a+") then
     M.toggle(word:match("^https?://") and word or "https://" .. word)
   else
     M.toggle(cfg.home .. "?q=" .. vim.fn.escape(word, " "))
@@ -407,10 +353,19 @@ function M.gopher(args)
   M.toggle(target)
 end
 
+function M.gemini(args)
+  local target = args
+  if target == "" then
+    target = "gemini://geminiprotocol.net/"
+  elseif not target:match("^gemini://") then
+    target = "gemini://" .. target
+  end
+  M.toggle(target)
+end
+
 function M.setup(opts)
   cfg = vim.tbl_deep_extend("force", cfg, opts or {})
   cfg.cfg_file = cfg.cfg_file or config_root() .. "/Downloads/Lynx/lynx.cfg"
-  cfg.lss_file = cfg.lss_file or config_root() .. "/Downloads/Lynx/lynx-nvim.lss"
   cfg.home = cfg.home or config_root() .. "/Downloads/Lynx/portal.html"
 
   vim.api.nvim_create_user_command("Lynx", function(args)
@@ -422,6 +377,9 @@ function M.setup(opts)
   vim.api.nvim_create_user_command("LynxGopher", function(args)
     M.gopher(args.args)
   end, { nargs = "?", desc = "Open a Gopher URL in Lynx" })
+  vim.api.nvim_create_user_command("LynxGemini", function(args)
+    M.gemini(args.args)
+  end, { nargs = "?", desc = "Open a Gemini URL in Lynx" })
   vim.api.nvim_create_user_command("LynxGx", M.gx, { desc = "Open URL under cursor in Lynx" })
   vim.api.nvim_create_user_command("LynxClearCache", M.clear_cache, { desc = "Clear Lynx sandbox offline cache" })
   vim.api.nvim_create_user_command("LynxReload", function(args)

@@ -26,7 +26,7 @@ Build into the local directory when a C compiler, ncurses, and OpenSSL are avail
 
 ```sh
 cd Downloads/Lynx/lynx2.9.3
-./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --enable-color-style --with-ssl
+./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --without-color-style --with-ssl
 make
 mkdir -p ../native
 cp lynx ../native/lynx
@@ -38,7 +38,7 @@ If OpenSSL development libraries are unavailable, Lynx can be built without SSL:
 
 ```sh
 cd Downloads/Lynx/lynx2.9.3
-./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --enable-color-style --without-ssl
+./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --without-color-style --without-ssl
 make
 mkdir -p ../native
 cp lynx ../native/lynx
@@ -46,15 +46,16 @@ cp lynx ../native/lynx
 
 When Lynx is built without SSL support, the Neovim integration automatically detects this via `lynx -version` and transparently converts `https://` URLs to `http://` so browsing continues uninterrupted.
 
-## Style Sheet, CSS 2.1 & .css File Rendering
+## Text-Only Browser, Gopher & Gemini Protocol Support
 
-Lynx uses style sheets (`.lss` files) for CSS element styling and color mapping. The Neovim integration passes `lynx.cfg` and `lynx-nvim.lss` (`-lss=...`) automatically:
-- **CSS 2.1 Support:** Complete styling rules covering HTML typography (`h1-h6`, `em`, `strong`, `code`, `pre`, `blockquote`), tables (`table`, `th`, `td`), form elements (`input`, `button`, `select`), lists, and link pseudo-classes.
-- **Direct .css Rendering:** Opening `.css` files (local path or web URL) renders formatted CSS code inside Lynx using `format_css_as_html` and the sandbox cache.
+Lynx is configured as a clean, text-only browser. CSS styling has been removed to keep browsing simple and focused:
+- **Gemini Protocol (`gemini://`):** Full compatibility with the Gemini protocol via `:LynxGemini` or direct URLs. Gemini documents (`text/gemini`) are fetched using `gemini_fetcher.py` and rendered as clean, structured text pages with clickable links.
+- **Gopher Protocol (`gopher://`):** Native Gopher browsing support via `:LynxGopher`.
+- **Text-Only Experience:** No CSS clutter, focusing on simple text navigation across Web, Gopher, and Gemini space.
 
-## Minimal Qutebrowser-style UI & Shortcuts
+## Minimal UI & Shortcuts
 
-The browser is configured for a minimal, keyboard-driven experience reminiscent of `qutebrowser`:
+The browser is configured for a minimal, keyboard-driven experience:
 - `j` / `k` / `h` / `l` or arrow keys for navigation and following links
 - `g` to open URL input prompt
 - `1` - `9` + `Enter` to select numbered links directly
