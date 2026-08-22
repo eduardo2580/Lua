@@ -81,12 +81,6 @@ local plugins = {
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
-
-  -- ── LARGE FILES ───────────────────────────────────────────────────────────
-  {
-    "LunarVim/bigfile.nvim",
-    event = "BufReadPre",
-  },
     dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "nvim-tree/nvim-web-devicons" },
     keys = {
       { "<A-t>",     ":Neotree toggle<CR>", desc = "Toggle file tree" },
@@ -104,6 +98,12 @@ local plugins = {
         default_component_configs = { icon = { enabled = false } },
       })
     end,
+  },
+
+  -- ── LARGE FILES ───────────────────────────────────────────────────────────
+  {
+    "LunarVim/bigfile.nvim",
+    event = "BufReadPre",
   },
 
   -- ── OIL.NVIM (parent-dir editor) ──────────────────────────────────────────
