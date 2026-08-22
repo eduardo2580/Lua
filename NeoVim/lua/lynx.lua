@@ -71,15 +71,15 @@ local function lynx_args(url)
   local args = { lynx_command() }
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
     table.insert(args, "-cfg")
-    table.insert(args, cfg.cfg_file:gsub("\\", "/"))
+    table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
   end
   if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 then
     table.insert(args, "-lss")
-    table.insert(args, cfg.lss_file:gsub("\\", "/"))
+    table.insert(args, (cfg.lss_file:gsub("\\", "/")))
   end
   local final_url = process_url(url)
   if final_url and final_url ~= "" then
-    table.insert(args, final_url:gsub("\\", "/"))
+    table.insert(args, (final_url:gsub("\\", "/")))
   end
   return args
 end
