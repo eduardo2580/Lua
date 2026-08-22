@@ -37,17 +37,22 @@ local function open_lynx(target)
     return
   end
 
+  local terminal_opts = {}
+  local bundled_cfg = config_root .. "/Downloads/Lynx/native/lynx.cfg"
+  if vim.fn.filereadable(bundled_cfg) == 1 and command:find(config_root .. "/Downloads/Lynx/native/", 1, true) == 1 then
+    terminal_opts.env = { LYNX_CFG = bundled_cfg, LYNX_CFG_PATH = vim.fn.fnamemodify(bundled_cfg, ":h") }
+  end
+
   vim.cmd("botright new")
   vim.api.nvim_win_set_height(0, math.max(10, vim.o.lines - 8))
-  vim.fn.termopen({ command, target }, {
-    on_exit = function(_, code)
-      if code ~= 0 then
-        vim.schedule(function()
-          vim.notify("Lynx exited with code " .. code, vim.log.levels.WARN)
-        end)
-      end
-    end,
-  })
+  terminal_opts.on_exit = function(_, code)
+    if code ~= 0 then
+      vim.schedule(function()
+        vim.notify("Lynx exited with code " .. code, vim.log.levels.WARN)
+      end)
+    end
+  end
+  vim.fn.termopen({ command, target }, terminal_opts)
   vim.cmd("startinsert")
 end
 
