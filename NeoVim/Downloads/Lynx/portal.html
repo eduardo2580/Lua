@@ -2,51 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chrome Terminal :: Lynx Browser Portal &amp; Search Engine Hub</title>
+  <title>Minimal Qutebrowser Terminal :: Lynx Browser Portal &amp; CSS 2.1 Engine</title>
   <style>
     body {
-      background-color: #1e1e2e;
-      color: #cdd6f4;
+      background-color: #0f1419;
+      color: #e6b450;
       font-family: monospace, monospace;
       margin: 1em 2em;
       line-height: 1.4;
     }
     h1 {
-      color: #89b4fa;
-      border-bottom: 2px solid #89b4fa;
+      color: #36a3d9;
+      border-bottom: 2px solid #36a3d9;
       padding-bottom: 0.3em;
     }
     h2 {
-      color: #a6e3a1;
-      border-bottom: 1px dashed #a6e3a1;
+      color: #27a7b0;
+      border-bottom: 1px dashed #27a7b0;
       margin-top: 1.5em;
     }
     h3 {
-      color: #f9e2af;
+      color: #ffb454;
     }
     a {
-      color: #89dcfe;
+      color: #59c2ff;
       text-decoration: underline;
     }
     .badge {
-      background-color: #313244;
-      color: #f5e0dc;
+      background-color: #151b23;
+      color: #e6b450;
       padding: 2px 6px;
       border-radius: 4px;
       font-weight: bold;
+      border: 1px solid #27a7b0;
     }
     .card {
-      border: 1px solid #45475a;
-      background-color: #181825;
+      border: 1px solid #1f2430;
+      background-color: #151b23;
       padding: 1em;
       margin-bottom: 1em;
     }
-    .grid {
-      margin-bottom: 1em;
-    }
     kbd {
-      background-color: #45475a;
-      color: #f38ba8;
+      background-color: #1f2430;
+      color: #ff3333;
       padding: 2px 5px;
       font-weight: bold;
     }
@@ -55,20 +53,20 @@
       border-collapse: collapse;
     }
     th, td {
-      border: 1px solid #313244;
+      border: 1px solid #1f2430;
       padding: 6px 10px;
       text-align: left;
     }
     th {
-      background-color: #313244;
-      color: #89b4fa;
+      background-color: #1f2430;
+      color: #36a3d9;
     }
   </style>
 </head>
 <body>
 
-  <h1>🌐 Chrome Terminal :: Lynx Web &amp; Gopher Navigation Hub</h1>
-  <p>Welcome to your <b>State-of-the-Art Terminal Web Browser</b> inside NeoVim! Designed to replicate the seamless productivity of Google Chrome in a high-speed text terminal.</p>
+  <h1>🌐 Minimal Qutebrowser Terminal :: Lynx Web &amp; CSS 2.1 Navigation Hub</h1>
+  <p>Welcome to your <b>Keyboard-Focused Qutebrowser-like Terminal Web Browser</b> inside NeoVim! Built with full CSS 2.1 element support and native <code>.css</code> stylesheet rendering.</p>
 
   <div class="card">
     <h2>🔍 Quick Web Search (HTTP / HTTPS)</h2>
@@ -106,18 +104,16 @@
   </div>
 
   <div class="card">
-    <h2>🌌 Gopher Space Search &amp; Navigation</h2>
-    <p>Explore the classic text-based Gopher protocol directly within Lynx!</p>
+    <h2>🎨 Full CSS 2.1 &amp; .css File Support</h2>
+    <p>Lynx is configured with comprehensive CSS 2.1 style mappings and dedicated <code>.css</code> document rendering:</p>
     <ul>
-      <li><a href="gopher://gopher.floodgap.com:70/7/v2">Veronica-2 Gopher Search Engine</a> - The premier search engine for Gopherspace.</li>
-      <li><a href="gopher://gopher.floodgap.com">Floodgap Gopher Root (gopher.floodgap.com)</a> - The major Gopher hub &amp; server.</li>
-      <li><a href="gopher://gopherpedia.com">Gopherpedia Portal</a> - Wikipedia formatted specifically for Gopher browsing.</li>
-      <li><a href="gopher://gopher.quux.org">Quux Gopher Portal</a> - Archive and news on Gopherspace.</li>
+      <li><b>CSS 2.1 Structural &amp; Typography Rules:</b> Rich terminal colors for <code>h1-h6</code>, <code>em</code>, <code>strong</code>, <code>code</code>, <code>pre</code>, <code>blockquote</code>, <code>table</code>, <code>form</code>, <code>fieldset</code>, and pseudo-classes.</li>
+      <li><b>Direct .css File Viewer:</b> Open local or web <code>.css</code> files directly in Lynx (e.g. <code>:Lynx style.css</code> or <code>:Lynx https://example.com/style.css</code>) to view formatted CSS code with full styling.</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>🎓 Master Lynx Keyboard Shortcuts (Chrome-in-Terminal Guide)</h2>
+    <h2>🎓 Master Qutebrowser-style Keyboard Navigation</h2>
     <table>
       <tr>
         <th>Key Action</th>
@@ -125,24 +121,24 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><b>Navigate Links</b></td>
-        <td><kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td>
-        <td>Move focus to previous or next link/input field.</td>
+        <td><b>Navigate Links / Inputs</b></td>
+        <td><kbd>j</kbd> / <kbd>k</kbd> or <kbd>Up</kbd> / <kbd>Down</kbd></td>
+        <td>Move focus to previous or next link or form field (Vim keys active).</td>
       </tr>
       <tr>
-        <td><b>Open Link</b></td>
-        <td><kbd>Right Arrow</kbd> or <kbd>Enter</kbd></td>
-        <td>Follow the currently focused link or form action.</td>
+        <td><b>Follow Link / Submit Form</b></td>
+        <td><kbd>l</kbd> or <kbd>Right</kbd> or <kbd>Enter</kbd></td>
+        <td>Follow focused link or submit active input form.</td>
       </tr>
       <tr>
         <td><b>Go Back</b></td>
-        <td><kbd>Left Arrow</kbd></td>
-        <td>Go back to the previous web page in history stack.</td>
+        <td><kbd>h</kbd> or <kbd>Left</kbd></td>
+        <td>Go back to previous page in history stack.</td>
       </tr>
       <tr>
-        <td><b>Open URL / Address Bar</b></td>
+        <td><b>Open URL Prompt (Qute-style :open)</b></td>
         <td><kbd>g</kbd></td>
-        <td>Open 'Go to URL' prompt (type any address or domain).</td>
+        <td>Open 'Go to URL' prompt (type any web address or domain).</td>
       </tr>
       <tr>
         <td><b>Jump by Link Number</b></td>
@@ -150,49 +146,24 @@
         <td>Jump directly to a specific numbered link on screen.</td>
       </tr>
       <tr>
-        <td><b>Page Scroll Down</b></td>
-        <td><kbd>Space</kbd> or <kbd>PageDown</kbd></td>
-        <td>Scroll down one full screen height.</td>
+        <td><b>Scroll Half / Full Page</b></td>
+        <td><kbd>Space</kbd> / <kbd>b</kbd></td>
+        <td>Scroll down or up one full window page height.</td>
       </tr>
       <tr>
-        <td><b>Page Scroll Up</b></td>
-        <td><kbd>b</kbd> or <kbd>PageUp</kbd></td>
-        <td>Scroll up one full screen height.</td>
+        <td><b>Search Text on Page</b></td>
+        <td><kbd>/</kbd> then text</td>
+        <td>Search for text in current document (<kbd>n</kbd> for next match).</td>
       </tr>
       <tr>
-        <td><b>Find / Search Page</b></td>
-        <td><kbd>/</kbd> then type text</td>
-        <td>Search for text string inside current document (<kbd>n</kbd> for next).</td>
-      </tr>
-      <tr>
-        <td><b>Bookmarks</b></td>
-        <td><kbd>a</kbd> (Add) / <kbd>v</kbd> (View)</td>
-        <td>Add current page to bookmarks or view bookmark list.</td>
-      </tr>
-      <tr>
-        <td><b>History Stack</b></td>
-        <td><kbd>Backspace</kbd> or <kbd>DEL</kbd></td>
-        <td>Display document history list.</td>
-      </tr>
-      <tr>
-        <td><b>Options Menu</b></td>
-        <td><kbd>o</kbd></td>
-        <td>Open Lynx user preferences and configuration menu.</td>
-      </tr>
-      <tr>
-        <td><b>View Source</b></td>
+        <td><b>View Document Source</b></td>
         <td><kbd>\</kbd> (backslash)</td>
         <td>Toggle raw HTML page source mode.</td>
       </tr>
       <tr>
-        <td><b>Download File</b></td>
-        <td><kbd>d</kbd></td>
-        <td>Download targeted link or file to disk.</td>
-      </tr>
-      <tr>
-        <td><b>Quit Lynx</b></td>
+        <td><b>Quit Lynx Window</b></td>
         <td><kbd>q</kbd> or <kbd>Q</kbd></td>
-        <td>Exit Lynx browser session and return to NeoVim window.</td>
+        <td>Exit Lynx session and return to NeoVim buffer.</td>
       </tr>
     </table>
   </div>
@@ -200,16 +171,18 @@
   <div class="card">
     <h2>⚡ NeoVim Lynx Commands Cheatsheet</h2>
     <ul>
-      <li><b>:Lynx [url]</b> &mdash; Toggle or open floating Lynx browser (opens this portal by default).</li>
-      <li><b>:LynxSplit [url]</b> &mdash; Open Lynx in a vertical window split.</li>
+      <li><b>:Lynx [url_or_css]</b> &mdash; Toggle or open floating minimal Lynx browser (opens this portal by default).</li>
+      <li><b>:LynxSplit [url_or_css]</b> &mdash; Open Lynx in a vertical window split.</li>
       <li><b>:LynxGopher [url]</b> &mdash; Quick launch a Gopher URL.</li>
-      <li><b>:LynxGx</b> or press <kbd>gx</kbd> in Normal mode &mdash; Open URL or search phrase under cursor.</li>
+      <li><b>:LynxGx</b> or press <kbd>gx</kbd> in Normal mode &mdash; Open URL or CSS under cursor.</li>
+      <li><b>:LynxClearCache</b> &mdash; Clear offline sandbox cache.</li>
+      <li><b>:LynxReload [url]</b> &mdash; Force refresh document or stylesheet.</li>
       <li><b>&lt;leader&gt;bb</b> / <b>&lt;leader&gt;ww</b> &mdash; Keymaps to toggle floating Lynx browser instantly.</li>
     </ul>
   </div>
 
   <hr>
-  <p><i>State-of-the-Art Lynx Integration for NeoVim &bull; Chrome Terminal Edition</i></p>
+  <p><i>State-of-the-Art Lynx CSS 2.1 Integration for NeoVim &bull; Minimal Qutebrowser Edition</i></p>
 
 </body>
 </html>

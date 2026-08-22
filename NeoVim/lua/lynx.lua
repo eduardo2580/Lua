@@ -6,8 +6,8 @@ local cfg = {
   cfg_file = nil,
   lss_file = nil,
   home = nil,
-  width_ratio = 0.85,
-  height_ratio = 0.85,
+  width_ratio = 0.88,
+  height_ratio = 0.88,
   border = "rounded",
 }
 
@@ -103,6 +103,8 @@ local function url_to_cache_filename(url)
     ext = ".pdf"
   elseif url:match("%.json$") or url:match("%.json%?") then
     ext = ".json"
+  elseif url:match("%.css$") or url:match("%.css%?") then
+    ext = ".css.html"
   elseif url:match("%.txt$") or url:match("%.txt%?") then
     ext = ".txt"
   end
@@ -113,11 +115,45 @@ local function url_to_cache_filename(url)
   return get_sandbox_dir() .. "/" .. clean_name .. "_" .. hash .. ext
 end
 
+local function format_css_as_html(raw_css, title)
+  local escaped = raw_css:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")
+  return "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</title>"
+    .. "<style>"
+    .. "body { font-family: monospace; background: #0f1419; color: #e6b450; padding: 1em; line-height: 1.4; }"
+    .. "h2 { color: #36a3d9; border-bottom: 2px solid #36a3d9; padding-bottom: 4px; font-size: 1.2em; }"
+    .. "pre { background: #151b23; color: #e6b450; padding: 1em; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }"
+    .. ".info { color: #27a7b0; margin-bottom: 1em; font-weight: bold; }"
+    .. "</style></head><body>"
+    .. "<h2>🎨 CSS 2.1 Stylesheet: " .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</h2>"
+    .. "<div class='info'>[ Rendered with full CSS 2.1 support in Lynx Minimal Web Viewer ]</div>"
+    .. "<pre><code>" .. escaped .. "</code></pre>"
+    .. "</body></html>"
+end
+
 local function fetch_and_cache(url, force_reload)
   ensure_sandbox()
   local cache_path = url_to_cache_filename(url)
   if not force_reload and vim.fn.filereadable(cache_path) == 1 then
     return cache_path
+  end
+
+  -- Local file handling
+  if vim.fn.filereadable(url) == 1 then
+    if url:match("%.css$") then
+      local f = io.open(url, "r")
+      if f then
+        local content = f:read("*a")
+        f:close()
+        local formatted_html = format_css_as_html(content, vim.fn.fnamemodify(url, ":t"))
+        local out_f = io.open(cache_path, "w")
+        if out_f then
+          out_f:write(formatted_html)
+          out_f:close()
+          return cache_path
+        end
+      end
+    end
+    return url
   end
 
   local download_cmd = nil
@@ -138,6 +174,18 @@ local function fetch_and_cache(url, force_reload)
           if f then
             f:write("<!DOCTYPE html><html><head><title>JSON Document</title></head><body><pre>" .. vim.fn.escape(formatted, "<>") .. "</pre></body></html>")
             f:close()
+          end
+        end
+      elseif cache_path:match("%.css") or url:match("%.css") then
+        local f = io.open(cache_path, "r")
+        if f then
+          local content = f:read("*a")
+          f:close()
+          local formatted_html = format_css_as_html(content, url)
+          local out_f = io.open(cache_path, "w")
+          if out_f then
+            out_f:write(formatted_html)
+            out_f:close()
           end
         end
       end
@@ -162,7 +210,7 @@ end
 
 function M.reload(url)
   local target_url = url or cfg.home
-  if target_url:match("%.pdf$") or target_url:match("%.json$") then
+  if target_url:match("%.pdf$") or target_url:match("%.json$") or target_url:match("%.css$") or target_url:match("%.css%?") then
     local cached_file = fetch_and_cache(target_url, true)
     M.toggle(cached_file)
   else
@@ -175,8 +223,11 @@ local function process_url(url)
     return url
   end
 
-  -- Cache specific static non-HTML resources like PDF/JSON for rendering
-  if url:match("%.pdf$") or url:match("%.pdf%?") or url:match("%.json$") or url:match("%.json%?") then
+  -- Cache static non-HTML resources like PDF/JSON/CSS for clean rendering
+  if url:match("%.pdf$") or url:match("%.pdf%?")
+     or url:match("%.json$") or url:match("%.json%?")
+     or url:match("%.css$") or url:match("%.css%?")
+     or (vim.fn.filereadable(url) == 1 and url:match("%.css$")) then
     return fetch_and_cache(url, false)
   end
 
@@ -219,7 +270,7 @@ local function float_opts()
     col = math.floor((vim.o.columns - width) / 2),
     style = "minimal",
     border = cfg.border,
-    title = " lynx ",
+    title = " qute-lynx ",
     title_pos = "center",
   }
 end

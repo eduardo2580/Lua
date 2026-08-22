@@ -46,9 +46,19 @@ cp lynx ../native/lynx
 
 When Lynx is built without SSL support, the Neovim integration automatically detects this via `lynx -version` and transparently converts `https://` URLs to `http://` so browsing continues uninterrupted.
 
-## Style Sheet & CSS Compatibility
+## Style Sheet, CSS 2.1 & .css File Rendering
 
-Lynx uses style sheets (`.lss` files) for CSS element styling and color mapping. The Neovim integration passes `lynx.cfg` and `lynx-nvim.lss` (`-lss=...`) automatically, configuring formatting and colors for headings (h1-h6), links, tables, code blocks, form elements, status indicators, and source code syntax highlighting (`PRETTYSRC`).
+Lynx uses style sheets (`.lss` files) for CSS element styling and color mapping. The Neovim integration passes `lynx.cfg` and `lynx-nvim.lss` (`-lss=...`) automatically:
+- **CSS 2.1 Support:** Complete styling rules covering HTML typography (`h1-h6`, `em`, `strong`, `code`, `pre`, `blockquote`), tables (`table`, `th`, `td`), form elements (`input`, `button`, `select`), lists, and link pseudo-classes.
+- **Direct .css Rendering:** Opening `.css` files (local path or web URL) renders formatted CSS code inside Lynx using `format_css_as_html` and the sandbox cache.
+
+## Minimal Qutebrowser-style UI & Shortcuts
+
+The browser is configured for a minimal, keyboard-driven experience reminiscent of `qutebrowser`:
+- `j` / `k` / `h` / `l` or arrow keys for navigation and following links
+- `g` to open URL input prompt
+- `1` - `9` + `Enter` to select numbered links directly
+- `q` to close the browser window and return to Neovim
 
 ## Build Windows from source
 

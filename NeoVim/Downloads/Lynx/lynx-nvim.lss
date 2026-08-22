@@ -1,23 +1,37 @@
-# State-of-the-art Neovim Lynx Color Style Sheet (.lss)
+# Complete CSS 2.1 & HTML Color Style Sheet (.lss) for Lynx
 # Format: object:attributes:foreground:background
+# Valid attributes: normal, bold, dim, reverse, underline, blink, standout
 
+# Base Screen & Defaults
 normal:      normal:   lightgray:black
 default:     normal:   lightgray:black
 
-# Emphasis & Formatting
+# Typography & Text Formatting
 em:          bold:     brightcyan
 strong:      bold:     brightmagenta
 b:           bold:     white
 i:           normal:   cyan
+u:           underline:brightyellow
+s:           dim:      red
+strike:      dim:      red
+big:         bold:     brightwhite
+small:       dim:      lightgray
+sub:         dim:      cyan
+sup:         dim:      magenta
+dfn:         normal:   green
+abbr:        underline:brightgreen
+acronym:     underline:brightgreen
+q:           normal:   yellow
 tt:          normal:   brightgreen:black
 code:        normal:   brightgreen:black
 samp:        normal:   brightgreen:black
 kbd:         bold:     yellow:black
-var:         italic:   magenta
+var:         normal:   magenta
 cite:        normal:   green
 blockquote:  normal:   yellow
+pre:         normal:   brightgreen:black
 
-# Headings (h1 - h6)
+# Headings (CSS 2.1 Block Typography h1 - h6)
 title:       bold:     brightblue
 h1:          bold:     brightblue
 h2:          bold:     brightcyan
@@ -26,36 +40,88 @@ h4:          normal:   brightyellow
 h5:          normal:   cyan
 h6:          normal:   magenta
 
-# Structs & Containers
+# Layout, Structure & Semantic Blocks (CSS 2.1 / HTML)
+div:         normal:   default
+span:        normal:   default
+p:           normal:   default
 address:     normal:   magenta
+center:      normal:   default
+hr:          bold:     brightblack
+article:     normal:   default
+section:     normal:   default
+nav:         normal:   brightcyan
+aside:       dim:      lightgray
+header:      bold:     brightblue
+footer:      dim:      lightgray
+main:        normal:   default
+figure:      normal:   yellow
+figcaption:  normal:   yellow
+details:     normal:   brightcyan
+summary:     bold:     brightcyan
+mark:        bold:     black:yellow
+time:        normal:   cyan
+
+# Image & Media Placeholders
 img:         dim:      brown
+audio:       dim:      brightmagenta
+video:       dim:      brightmagenta
+canvas:      dim:      brightblue
+svg:         dim:      brightcyan
+
+# Inline Revisions
 ins:         normal:   brightgreen
-del:         strikethrough:red
+del:         dim:      red
 
 # Links & Anchors
 a:           bold:     brightcyan
 link:        normal:   brightcyan
 alink:       reverse:  yellow:black
 
-# UI Elements & Status
+# Navigation & Status Bars (Qutebrowser-like minimal status)
 status:      reverse:  brightgreen:black
 alert:       bold:     brightred:black
 whereis:     reverse:  yellow:blue
 
-# Tables & Forms
+# Lists (ul, ol, dl)
+ul:          normal:   default
+ol:          normal:   default
+li:          normal:   default
+dl:          normal:   default
+dt:          bold:     brightyellow
+dd:          normal:   lightgray
+dir:         normal:   default
+menu:        normal:   default
+
+# Tables & Grid Data (CSS 2.1 Table Formatting)
 table:       normal:   brightcyan
+caption:     bold:     brightyellow
 tr:          normal:   lightgray
 td:          normal:   default
 th:          bold:     white:blue
+thead:       bold:     white:blue
+tbody:       normal:   default
+tfoot:       bold:     lightgray:black
+col:         normal:   default
+colgroup:    normal:   default
+
+# Interactive & Form Elements
 form:        normal:   brightyellow
 input:       normal:   white:blue
-submit:      bold:     black:white
+textarea:    normal:   white:blue
+select:      normal:   lightgray:black
 option:      normal:   lightgray:black
+optgroup:    bold:     yellow:black
+button:      bold:     black:white
+submit:      bold:     black:white
+label:       bold:     brightyellow
+fieldset:    normal:   brightcyan
+legend:      bold:     brightyellow
 
-# Source Code Highlighting (PrettySrc)
+# Source Code Highlighting (CSS / PrettySrc)
 prettysrc:       normal: white:black
 psrc:tag:        bold:   brightblue
 psrc:attr:       normal: cyan
 psrc:val:        normal: brightgreen
 psrc:comment:    dim:    lightgray
 psrc:entity:     bold:   brightmagenta
+psrc:badcon:     bold:   brightred
