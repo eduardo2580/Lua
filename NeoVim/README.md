@@ -34,10 +34,9 @@ non-SSL support and converts `https://` URLs to `http://`.
 
 Use `:Lynx [url]` or `<leader>ww` to open a URL in a floating browser window,
 `:LynxSplit [url]` for a vertical split, `:LynxGopher [host/path]` for Gopher,
-and `gx` or `<leader>bb` to open Lynx from normal mode. The bundled
-`Downloads/Lynx/lynx.cfg` and `Downloads/Lynx/lynx-nvim.lss` are passed
-automatically to enable basic CSS styling, colors, nested tables, source
-highlighting, and mouse support.
+`:LynxGemini [url]` for Gemini, and `gx` or `<leader>bb` to open Lynx from normal mode.
+The browser is configured as a simple, text-only browser with native support for HTTP,
+HTTPS, Gopher, and Gemini protocols.
 
 The first startup uses Mason to install the Python tools used by this config:
 `black`, `debugpy`, `flake8`, `isort`, `mypy`, and `pylint`.
