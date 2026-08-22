@@ -5,7 +5,7 @@ local state = { buf = nil, win = nil, job_started = false }
 local cfg = {
   cfg_file = nil,
   lss_file = nil,
-  home = "https://duckduckgo.com/html/",
+  home = nil,
   width_ratio = 0.85,
   height_ratio = 0.85,
   border = "rounded",
@@ -70,14 +70,16 @@ end
 local function lynx_args(url)
   local args = { lynx_command() }
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
-    table.insert(args, "-cfg=" .. cfg.cfg_file)
+    table.insert(args, "-cfg")
+    table.insert(args, cfg.cfg_file:gsub("\\", "/"))
   end
   if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 then
-    table.insert(args, "-lss=" .. cfg.lss_file)
+    table.insert(args, "-lss")
+    table.insert(args, cfg.lss_file:gsub("\\", "/"))
   end
   local final_url = process_url(url)
   if final_url and final_url ~= "" then
-    table.insert(args, final_url)
+    table.insert(args, final_url:gsub("\\", "/"))
   end
   return args
 end
@@ -192,6 +194,7 @@ function M.setup(opts)
   cfg = vim.tbl_deep_extend("force", cfg, opts or {})
   cfg.cfg_file = cfg.cfg_file or config_root() .. "/Downloads/Lynx/lynx.cfg"
   cfg.lss_file = cfg.lss_file or config_root() .. "/Downloads/Lynx/lynx-nvim.lss"
+  cfg.home = cfg.home or config_root() .. "/Downloads/Lynx/portal.html"
 
   vim.api.nvim_create_user_command("Lynx", function(args)
     M.toggle(args.args ~= "" and args.args or nil)

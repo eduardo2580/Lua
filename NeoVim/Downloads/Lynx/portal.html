@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chrome Terminal :: Lynx Browser Portal &amp; Search Engine Hub</title>
+  <style>
+    body {
+      background-color: #1e1e2e;
+      color: #cdd6f4;
+      font-family: monospace, monospace;
+      margin: 1em 2em;
+      line-height: 1.4;
+    }
+    h1 {
+      color: #89b4fa;
+      border-bottom: 2px solid #89b4fa;
+      padding-bottom: 0.3em;
+    }
+    h2 {
+      color: #a6e3a1;
+      border-bottom: 1px dashed #a6e3a1;
+      margin-top: 1.5em;
+    }
+    h3 {
+      color: #f9e2af;
+    }
+    a {
+      color: #89dcfe;
+      text-decoration: underline;
+    }
+    .badge {
+      background-color: #313244;
+      color: #f5e0dc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .card {
+      border: 1px solid #45475a;
+      background-color: #181825;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+    .grid {
+      margin-bottom: 1em;
+    }
+    kbd {
+      background-color: #45475a;
+      color: #f38ba8;
+      padding: 2px 5px;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #313244;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #313244;
+      color: #89b4fa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 Chrome Terminal :: Lynx Web &amp; Gopher Navigation Hub</h1>
+  <p>Welcome to your <b>State-of-the-Art Terminal Web Browser</b> inside NeoVim! Designed to replicate the seamless productivity of Google Chrome in a high-speed text terminal.</p>
+
+  <div class="card">
+    <h2>🔍 Quick Web Search (HTTP / HTTPS)</h2>
+    <p>Type your query into any search engine form below and press <b>[Enter]</b>:</p>
+
+    <form action="https://html.duckduckgo.com/html/" method="post">
+      <label><b>DuckDuckGo:</b></label>
+      <input type="text" name="q" size="40" placeholder="Search privacy-first web...">
+      <input type="submit" value="Search DDG">
+    </form>
+    <br>
+
+    <form action="https://www.google.com/search" method="get">
+      <label><b>Google Search:</b></label>
+      <input type="text" name="q" size="40" placeholder="Search with Google...">
+      <input type="submit" value="Search Google">
+    </form>
+    <br>
+
+    <form action="https://en.wikipedia.org/w/index.php" method="get">
+      <label><b>Wikipedia:</b></label>
+      <input type="text" name="search" size="40" placeholder="Search Wikipedia articles...">
+      <input type="submit" value="Search Wikipedia">
+    </form>
+
+    <p><b>Popular Search Engine Quick Links:</b></p>
+    <ul>
+      <li><a href="https://duckduckgo.com/html/">DuckDuckGo (Lite HTML)</a> - Fast, ad-free text search.</li>
+      <li><a href="https://www.google.com">Google Home</a> - World search engine portal.</li>
+      <li><a href="https://www.bing.com">Microsoft Bing</a> - Web search portal.</li>
+      <li><a href="https://www.startpage.com">Startpage</a> - Google search results without tracking.</li>
+      <li><a href="https://searx.be">SearXNG Metasearch</a> - Open source, decentralized search.</li>
+      <li><a href="https://www.ecosia.org">Ecosia Search</a> - Search engine planting trees.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🌌 Gopher Space Search &amp; Navigation</h2>
+    <p>Explore the classic text-based Gopher protocol directly within Lynx!</p>
+    <ul>
+      <li><a href="gopher://gopher.floodgap.com:70/7/v2">Veronica-2 Gopher Search Engine</a> - The premier search engine for Gopherspace.</li>
+      <li><a href="gopher://gopher.floodgap.com">Floodgap Gopher Root (gopher.floodgap.com)</a> - The major Gopher hub &amp; server.</li>
+      <li><a href="gopher://gopherpedia.com">Gopherpedia Portal</a> - Wikipedia formatted specifically for Gopher browsing.</li>
+      <li><a href="gopher://gopher.quux.org">Quux Gopher Portal</a> - Archive and news on Gopherspace.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🎓 Master Lynx Keyboard Shortcuts (Chrome-in-Terminal Guide)</h2>
+    <table>
+      <tr>
+        <th>Key Action</th>
+        <th>Shortcut</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><b>Navigate Links</b></td>
+        <td><kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td>
+        <td>Move focus to previous or next link/input field.</td>
+      </tr>
+      <tr>
+        <td><b>Open Link</b></td>
+        <td><kbd>Right Arrow</kbd> or <kbd>Enter</kbd></td>
+        <td>Follow the currently focused link or form action.</td>
+      </tr>
+      <tr>
+        <td><b>Go Back</b></td>
+        <td><kbd>Left Arrow</kbd></td>
+        <td>Go back to the previous web page in history stack.</td>
+      </tr>
+      <tr>
+        <td><b>Open URL / Address Bar</b></td>
+        <td><kbd>g</kbd></td>
+        <td>Open 'Go to URL' prompt (type any address or domain).</td>
+      </tr>
+      <tr>
+        <td><b>Jump by Link Number</b></td>
+        <td><kbd>1</kbd> - <kbd>9</kbd> + <kbd>Enter</kbd></td>
+        <td>Jump directly to a specific numbered link on screen.</td>
+      </tr>
+      <tr>
+        <td><b>Page Scroll Down</b></td>
+        <td><kbd>Space</kbd> or <kbd>PageDown</kbd></td>
+        <td>Scroll down one full screen height.</td>
+      </tr>
+      <tr>
+        <td><b>Page Scroll Up</b></td>
+        <td><kbd>b</kbd> or <kbd>PageUp</kbd></td>
+        <td>Scroll up one full screen height.</td>
+      </tr>
+      <tr>
+        <td><b>Find / Search Page</b></td>
+        <td><kbd>/</kbd> then type text</td>
+        <td>Search for text string inside current document (<kbd>n</kbd> for next).</td>
+      </tr>
+      <tr>
+        <td><b>Bookmarks</b></td>
+        <td><kbd>a</kbd> (Add) / <kbd>v</kbd> (View)</td>
+        <td>Add current page to bookmarks or view bookmark list.</td>
+      </tr>
+      <tr>
+        <td><b>History Stack</b></td>
+        <td><kbd>Backspace</kbd> or <kbd>DEL</kbd></td>
+        <td>Display document history list.</td>
+      </tr>
+      <tr>
+        <td><b>Options Menu</b></td>
+        <td><kbd>o</kbd></td>
+        <td>Open Lynx user preferences and configuration menu.</td>
+      </tr>
+      <tr>
+        <td><b>View Source</b></td>
+        <td><kbd>\</kbd> (backslash)</td>
+        <td>Toggle raw HTML page source mode.</td>
+      </tr>
+      <tr>
+        <td><b>Download File</b></td>
+        <td><kbd>d</kbd></td>
+        <td>Download targeted link or file to disk.</td>
+      </tr>
+      <tr>
+        <td><b>Quit Lynx</b></td>
+        <td><kbd>q</kbd> or <kbd>Q</kbd></td>
+        <td>Exit Lynx browser session and return to NeoVim window.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>⚡ NeoVim Lynx Commands Cheatsheet</h2>
+    <ul>
+      <li><b>:Lynx [url]</b> &mdash; Toggle or open floating Lynx browser (opens this portal by default).</li>
+      <li><b>:LynxSplit [url]</b> &mdash; Open Lynx in a vertical window split.</li>
+      <li><b>:LynxGopher [url]</b> &mdash; Quick launch a Gopher URL.</li>
+      <li><b>:LynxGx</b> or press <kbd>gx</kbd> in Normal mode &mdash; Open URL or search phrase under cursor.</li>
+      <li><b>&lt;leader&gt;bb</b> / <b>&lt;leader&gt;ww</b> &mdash; Keymaps to toggle floating Lynx browser instantly.</li>
+    </ul>
+  </div>
+
+  <hr>
+  <p><i>State-of-the-Art Lynx Integration for NeoVim &bull; Chrome Terminal Edition</i></p>
+
+</body>
+</html>
