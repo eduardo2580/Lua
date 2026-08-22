@@ -119,10 +119,10 @@ local function format_css_as_html(raw_css, title)
   local escaped = raw_css:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")
   return "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>" .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</title>"
     .. "<style>"
-    .. "body { font-family: monospace; background: #0f1419; color: #e6b450; padding: 1em; line-height: 1.4; }"
-    .. "h2 { color: #36a3d9; border-bottom: 2px solid #36a3d9; padding-bottom: 4px; font-size: 1.2em; }"
-    .. "pre { background: #151b23; color: #e6b450; padding: 1em; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }"
-    .. ".info { color: #27a7b0; margin-bottom: 1em; font-weight: bold; }"
+    .. "body { font-family: monospace; background: #181a1b; color: #e8e6e3; padding: 1em; line-height: 1.4; }"
+    .. "h2 { color: #3399ff; border-bottom: 2px solid #3399ff; padding-bottom: 4px; font-size: 1.2em; }"
+    .. "pre { background: #222527; color: #e8e6e3; padding: 1em; border: 1px solid #3a3f42; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }"
+    .. ".info { color: #2eb8b8; margin-bottom: 1em; font-weight: bold; }"
     .. "</style></head><body>"
     .. "<h2>🎨 CSS 2.1 Stylesheet: " .. (title:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")) .. "</h2>"
     .. "<div class='info'>[ Rendered with full CSS 2.1 support in Lynx Minimal Web Viewer ]</div>"
@@ -248,7 +248,7 @@ local function process_url(url)
 end
 
 local function lynx_args(url)
-  local args = { lynx_command() }
+  local args = { lynx_command(), "-default_colors" }
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
     table.insert(args, "-cfg")
     table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
@@ -313,31 +313,26 @@ local function start_job(url)
 end
 
 local function open_float(url)
-  if url or not state.job_started or not (state.buf and vim.api.nvim_buf_is_valid(state.buf)) then
+  close_existing_session()
+  state.buf = vim.api.nvim_create_buf(false, true)
+  vim.bo[state.buf].bufhidden = "wipe"
+  state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
+  pcall(function()
+    vim.wo[state.win].winhighlight = "Normal:NormalFloat,NormalNC:NormalFloat"
+  end)
+  if not start_job(url or cfg.home) then
     close_existing_session()
-    state.buf = vim.api.nvim_create_buf(false, true)
-    vim.bo[state.buf].bufhidden = "wipe"
-    state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
-    if not start_job(url or cfg.home) then
-      close_existing_session()
-      return
-    end
-    vim.cmd("startinsert")
-
-    vim.api.nvim_create_autocmd("TermClose", {
-      buffer = state.buf,
-      once = true,
-      callback = function()
-        state.buf, state.win, state.job_started = nil, nil, false
-      end,
-    })
     return
   end
-
-  if not (state.win and vim.api.nvim_win_is_valid(state.win)) then
-    state.win = vim.api.nvim_open_win(state.buf, true, float_opts())
-  end
   vim.cmd("startinsert")
+
+  vim.api.nvim_create_autocmd("TermClose", {
+    buffer = state.buf,
+    once = true,
+    callback = function()
+      state.buf, state.win, state.job_started = nil, nil, false
+    end,
+  })
 end
 
 function M.toggle(url)
