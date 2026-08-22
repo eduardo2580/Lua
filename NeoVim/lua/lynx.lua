@@ -4,6 +4,7 @@ local state = { buf = nil, win = nil, job_started = false }
 
 local cfg = {
   cfg_file = nil,
+  lss_file = nil,
   home = "https://duckduckgo.com/html/",
   width_ratio = 0.85,
   height_ratio = 0.85,
@@ -19,6 +20,8 @@ local function lynx_command()
   local local_candidates = {
     root .. "/Downloads/Lynx/native/lynx.exe",
     root .. "/Downloads/Lynx/native/lynx",
+    root .. "/Downloads/Lynx/lynx2.9.3/lynx.exe",
+    root .. "/Downloads/Lynx/lynx2.9.3/lynx",
     root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx.exe",
     root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx",
   }
@@ -30,13 +33,51 @@ local function lynx_command()
   return vim.fn.exepath("lynx") ~= "" and vim.fn.exepath("lynx") or vim.fn.exepath("lynx.exe")
 end
 
+local ssl_support_cache = nil
+local function lynx_supports_ssl()
+  if ssl_support_cache ~= nil then
+    return ssl_support_cache
+  end
+  local cmd = lynx_command()
+  if cmd == "" then
+    ssl_support_cache = false
+    return false
+  end
+  local version_out = vim.fn.system({ cmd, "-version" })
+  if type(version_out) == "string" and (version_out:match("SSL") or version_out:match("OpenSSL") or version_out:match("GNUTLS")) then
+    ssl_support_cache = true
+  else
+    ssl_support_cache = false
+  end
+  return ssl_support_cache
+end
+
+local function process_url(url)
+  if not url or url == "" then
+    return url
+  end
+  if not lynx_supports_ssl() then
+    if url:match("^https://") then
+      vim.schedule(function()
+        vim.notify("Lynx build lacks OpenSSL/SSL support. Converting HTTPS URL to HTTP.", vim.log.levels.INFO)
+      end)
+      return (url:gsub("^https://", "http://"))
+    end
+  end
+  return url
+end
+
 local function lynx_args(url)
   local args = { lynx_command() }
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
     table.insert(args, "-cfg=" .. cfg.cfg_file)
   end
-  if url and url ~= "" then
-    table.insert(args, url)
+  if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 then
+    table.insert(args, "-lss=" .. cfg.lss_file)
+  end
+  local final_url = process_url(url)
+  if final_url and final_url ~= "" then
+    table.insert(args, final_url)
   end
   return args
 end
@@ -150,6 +191,7 @@ end
 function M.setup(opts)
   cfg = vim.tbl_deep_extend("force", cfg, opts or {})
   cfg.cfg_file = cfg.cfg_file or config_root() .. "/Downloads/Lynx/lynx.cfg"
+  cfg.lss_file = cfg.lss_file or config_root() .. "/Downloads/Lynx/lynx-nvim.lss"
 
   vim.api.nvim_create_user_command("Lynx", function(args)
     M.toggle(args.args ~= "" and args.args or nil)

@@ -15,20 +15,40 @@ artifact; it is not needed to run the portable copy.
 
 ## macOS and Linux
 
-On macOS and Linux, Neovim first checks `Downloads/Lynx/native/lynx` and then
-`lynx` on `PATH`. Build into the local directory without root access when a C
-compiler, ncurses, and OpenSSL are already available:
+On macOS and Linux, Neovim checks candidate paths in the following order:
+1. `Downloads/Lynx/native/lynx`
+2. `Downloads/Lynx/lynx2.9.3/lynx`
+3. `lynx` on system `PATH`
+
+### Building with OpenSSL / SSL Support
+
+Build into the local directory when a C compiler, ncurses, and OpenSSL are available:
 
 ```sh
 cd Downloads/Lynx/lynx2.9.3
-./configure --with-screen=ncurses --enable-gopher
+./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --enable-color-style --with-ssl
 make
+mkdir -p ../native
 cp lynx ../native/lynx
 ```
 
-Alternatively, install the `lynx` package using the operating system's normal
-package manager. The executable must have HTTP, HTTPS, FTP, Gopher, WAIS, and
-NNTP support enabled by its build.
+### Building without OpenSSL / SSL Support
+
+If OpenSSL development libraries are unavailable, Lynx can be built without SSL:
+
+```sh
+cd Downloads/Lynx/lynx2.9.3
+./configure --with-screen=ncurses --enable-gopher --enable-nested-tables --enable-default-colors --enable-color-style --without-ssl
+make
+mkdir -p ../native
+cp lynx ../native/lynx
+```
+
+When Lynx is built without SSL support, the Neovim integration automatically detects this via `lynx -version` and transparently converts `https://` URLs to `http://` so browsing continues uninterrupted.
+
+## Style Sheet & CSS Compatibility
+
+Lynx uses style sheets (`.lss` files) for CSS element styling and color mapping. The Neovim integration passes `lynx.cfg` and `lynx-nvim.lss` (`-lss=...`) automatically, configuring formatting and colors for headings (h1-h6), links, tables, code blocks, form elements, status indicators, and source code syntax highlighting (`PRETTYSRC`).
 
 ## Build Windows from source
 

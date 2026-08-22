@@ -5,6 +5,8 @@ local function lynx_path()
   local local_candidates = {
     root .. "/Downloads/Lynx/native/lynx.exe",
     root .. "/Downloads/Lynx/native/lynx",
+    root .. "/Downloads/Lynx/lynx2.9.3/lynx.exe",
+    root .. "/Downloads/Lynx/lynx2.9.3/lynx",
     root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx.exe",
     root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx",
   }

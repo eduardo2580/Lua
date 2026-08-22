@@ -27,17 +27,17 @@ support. Windows and macOS use their native clipboard integrations.
 
 The complete Lynx 2.9.3 source is already available offline in
 `Downloads/Lynx/lynx2.9.3`, with the original archive beside it. Build it with
-the platform recipe in `Downloads/Lynx/README.md`; the Neovim commands first
-look for `Downloads/Lynx/lynx2.9.3/bin/lynx.exe` and then for `lynx` on `PATH`.
-Use `:Lynx [url]` or `<leader>ww` to open a URL in a terminal, and
-`:LynxGopher [host/path]` for Gopher. URLs are passed unchanged, so Lynx can
-handle HTTP, HTTPS, FTP, Gopher, WAIS, and NNTP resources.
+or without OpenSSL following the platform recipe in `Downloads/Lynx/README.md`.
+Neovim resolves `Downloads/Lynx/native/lynx`, `Downloads/Lynx/lynx2.9.3/lynx`,
+or `lynx` on `PATH`. If built without OpenSSL, Neovim automatically detects
+non-SSL support and converts `https://` URLs to `http://`.
 
-Use `:Lynx` for the floating browser, `:LynxSplit [url]` for a vertical split,
-`:LynxGopher [host/path]` for Gopher, and `gx` or `<leader>bb` to open Lynx
-from normal mode. The bundled `Downloads/Lynx/lynx.cfg` and
-`Downloads/Lynx/lynx-nvim.lss` are passed automatically, and the floating
-window keeps its Lynx session alive when hidden.
+Use `:Lynx [url]` or `<leader>ww` to open a URL in a floating browser window,
+`:LynxSplit [url]` for a vertical split, `:LynxGopher [host/path]` for Gopher,
+and `gx` or `<leader>bb` to open Lynx from normal mode. The bundled
+`Downloads/Lynx/lynx.cfg` and `Downloads/Lynx/lynx-nvim.lss` are passed
+automatically to enable basic CSS styling, colors, nested tables, source
+highlighting, and mouse support.
 
 The first startup uses Mason to install the Python tools used by this config:
 `black`, `debugpy`, `flake8`, `isort`, `mypy`, and `pylint`.
