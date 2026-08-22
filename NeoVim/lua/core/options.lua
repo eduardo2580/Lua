@@ -26,4 +26,7 @@ opt.backspace = "indent,eol,start"
 opt.undofile = true
 opt.iskeyword:append("-")
 
-vim.diagnostic.config({ float = { border = "rounded" } })
+vim.diagnostic.config({
+  virtual_text = false,
+  float = { border = "rounded" },
+})

@@ -441,7 +441,7 @@ local plugins = {
           -- FIX: native inlay hints (Neovim 0.10+) replaces the abandoned
           --      lvimuser/lsp-inlayhints.nvim plugin.
           if client and vim.lsp.inlay_hint and client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+            vim.lsp.inlay_hint.enable(false, { bufnr = ev.buf })
             vim.keymap.set("n", "<leader>lh", function()
               vim.lsp.inlay_hint.enable(
                 not vim.lsp.inlay_hint.is_enabled({ bufnr = ev.buf }),
@@ -541,6 +541,9 @@ local plugins = {
       })
 
       cmp.setup({
+        experimental = {
+          ghost_text = false,
+        },
         snippet = { expand = function(args) luasnip.lsp_expand(args.body) end },
         mapping = cmp.mapping.preset.insert({
           ["<Tab>"] = cmp.mapping(function(fallback)
@@ -739,7 +742,9 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     event = "BufReadPre",
     config = function()
-      require("gitsigns").setup()
+      require("gitsigns").setup({
+        current_line_blame = false,
+      })
       vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", { desc = "Next change" })
       vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Previous change" })
       vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>", { desc = "Blame line" })
@@ -892,7 +897,7 @@ local plugins = {
   {
     "tris203/precognition.nvim",
     event = "VeryLazy",
-    opts = { startVisible = true },
+    opts = { startVisible = false },
     keys = {
       { "<leader>up", "<cmd>Precognition toggle<CR>", desc = "Toggle Precognition" },
     },
