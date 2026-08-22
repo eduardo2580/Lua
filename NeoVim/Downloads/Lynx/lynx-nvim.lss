@@ -1,26 +1,61 @@
+# State-of-the-art Neovim Lynx Color Style Sheet (.lss)
+# Format: object:attributes:foreground:background
+
 normal:      normal:   lightgray:black
 default:     normal:   lightgray:black
+
+# Emphasis & Formatting
 em:          bold:     brightcyan
 strong:      bold:     brightmagenta
 b:           bold:     white
 i:           normal:   cyan
 tt:          normal:   brightgreen:black
 code:        normal:   brightgreen:black
+samp:        normal:   brightgreen:black
+kbd:         bold:     yellow:black
+var:         italic:   magenta
 cite:        normal:   green
 blockquote:  normal:   yellow
+
+# Headings (h1 - h6)
 title:       bold:     brightblue
 h1:          bold:     brightblue
-h2:          normal:   blue
-h3:          normal:   cyan
-h4:          normal:   cyan
+h2:          bold:     brightcyan
+h3:          bold:     brightgreen
+h4:          normal:   brightyellow
+h5:          normal:   cyan
+h6:          normal:   magenta
+
+# Structs & Containers
 address:     normal:   magenta
 img:         dim:      brown
+ins:         normal:   brightgreen
+del:         strikethrough:red
+
+# Links & Anchors
 a:           bold:     brightcyan
 link:        normal:   brightcyan
 alink:       reverse:  yellow:black
+
+# UI Elements & Status
 status:      reverse:  brightgreen:black
 alert:       bold:     brightred:black
 whereis:     reverse:  yellow:blue
+
+# Tables & Forms
 table:       normal:   brightcyan
-tr:           normal:   lightgray
-td:           normal:   default
+tr:          normal:   lightgray
+td:          normal:   default
+th:          bold:     white:blue
+form:        normal:   brightyellow
+input:       normal:   white:blue
+submit:      bold:     black:white
+option:      normal:   lightgray:black
+
+# Source Code Highlighting (PrettySrc)
+prettysrc:       normal: white:black
+psrc:tag:        bold:   brightblue
+psrc:attr:       normal: cyan
+psrc:val:        normal: brightgreen
+psrc:comment:    dim:    lightgray
+psrc:entity:     bold:   brightmagenta
