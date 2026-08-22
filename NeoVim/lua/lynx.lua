@@ -42,6 +42,25 @@ local function python_executable()
   return "python3"
 end
 
+local default_colors_support_cache = nil
+local function lynx_supports_default_colors()
+  if default_colors_support_cache ~= nil then
+    return default_colors_support_cache
+  end
+  local cmd = lynx_command()
+  if cmd == "" then
+    default_colors_support_cache = false
+    return false
+  end
+  local help_out = vim.fn.system({ cmd, "-help" })
+  if type(help_out) == "string" and (help_out:match("%-default_colors") or help_out:match("%-DEFAULT_COLORS")) then
+    default_colors_support_cache = true
+  else
+    default_colors_support_cache = false
+  end
+  return default_colors_support_cache
+end
+
 local lss_support_cache = nil
 local function lynx_supports_lss()
   if lss_support_cache ~= nil then
@@ -248,7 +267,10 @@ local function process_url(url)
 end
 
 local function lynx_args(url)
-  local args = { lynx_command(), "-default_colors" }
+  local args = { lynx_command() }
+  if lynx_supports_default_colors() then
+    table.insert(args, "-default_colors")
+  end
   if cfg.cfg_file and vim.fn.filereadable(cfg.cfg_file) == 1 then
     table.insert(args, "-cfg")
     table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
