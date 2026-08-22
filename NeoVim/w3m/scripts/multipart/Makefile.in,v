@@ -1,0 +1,224 @@
+head	1.6;
+access;
+symbols
+	release-0-5-3:1.6
+	release-0-5-2:1.5
+	release-0-5-1:1.4
+	release-0-5:1.3;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2010.12.15.10.50.24;	author htrb;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2007.05.30.03.15.13;	author inu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.04.09.17.18.49;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.03.21.16.07.02;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.10.05.16.14.02;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.09.22.22.53.53;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@[w3m-dev 04424] http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch
+@
+text
+@@@SET_MAKE@@
+SHELL=@@SHELL@@
+PACKAGE = @@PACKAGE@@
+VERSION = @@VERSION@@
+DOMAIN = $(PACKAGE)
+srcidr=@@srcdir@@
+top_srcdir=@@top_srcdir@@
+VPATH= $(srcdir):.
+prefix = @@prefix@@
+exec_prefix = @@exec_prefix@@
+datarootdir = @@datarootdir@@
+bindir = @@bindir@@
+datadir = @@datadir@@
+libdir = @@libdir@@
+includedir = @@includedir@@
+infodir = @@infodir@@
+libexecdir = @@libexecdir@@
+localstatedir = @@localstatedir@@
+mandir = @@mandir@@
+oldincludedir = @@oldincludedir@@
+sbindir = @@sbindir@@
+sharedstatedir = @@sharedstatedir@@
+srcdir = @@srcdir@@
+sysconfdir = @@sysconfdir@@
+top_srcdir = @@top_srcdir@@
+VPATH = $(top_srcdir):.
+
+CGIBIN_DIR = $(libexecdir)/$(PACKAGE)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(PACKAGE)
+HELP_DIR = @@HELP_DIR@@
+RC_DIR = @@RC_DIR@@
+ETC_DIR = $(sysconfdir)
+CONF_DIR = $(sysconfdir)/$(PACKAGE)
+
+LIB_TARGETS	= multipart.cgi
+
+MKDIR		= mkdir -p
+INSTALL		= @@INSTALL@@
+INSTALL_SCRIPT	= @@INSTALL_SCRIPT@@
+
+PERL		= @@PERL@@
+NKF		= @@NKF@@
+
+all: $(LIB_TARGETS)
+
+# do nothing
+$(LIB_TARGETS):
+
+install: $(LIB_TARGETS)
+	-$(MKDIR) $(DESTDIR)$(CGIBIN_DIR)
+	for file in $(LIB_TARGETS);	\
+	do	\
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(CGIBIN_DIR);	\
+	done
+
+uninstall:
+	-for file in $(LIB_TARGETS);	\
+	do	\
+		rm -f $(CGIBIN_DIR)/$$file;	\
+	done
+
+clean:
+
+distclean:
+	-rm -f $(LIB_TARGETS)
+	-rm -f Makefile
+
+dist: all
+	@@-rm -fr $(distdir)/multipart
+	$(MKDIR) $(distdir)/multipart
+	cp Makefile README multipart.cgi.in $(distdir)/multipart
+	( cd $(distdir); tar -cf - multipart | GZIP='' gzip ) \
+		> $(distdir)/multipart.tar.gz
+	-rm -fr $(distdir)/multipart
+
+@
+
+
+1.5
+log
+@add datarootdir. [w3m-dev 04264]
+@
+text
+@a26 1
+DESTDIR = 
+@
+
+
+1.4
+log
+@[w3m-dev 04063] about Makefile
+* Makefile.in (DEFS): use CGIBIN_DIR instead of LIB_DIR
+	(MAKE_ARGS): ditto
+	(distclean): rm -f
+* config.h.dist: use CGIBIN_DIR instead of LIB_DIR
+* indep.c (w3m_lib_dir): ditto
+* scripts/Makefile.in: ditto
+* scripts/multipart/Makefile.in: ditto
+* w3mimg/Makefile.in (clearn): remove w3mimg.a
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d11 1
+@
+
+
+1.3
+log
+@scripts/multipart/Makefile.in: add distclean
+scripts/w3mman/Makefile.in: add distclean
+scripts/Makefile.in: add distclean
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d50 1
+a50 1
+	-$(MKDIR) $(DESTDIR)$(LIB_DIR)
+d53 1
+a53 1
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(LIB_DIR);	\
+d59 1
+a59 1
+		rm -f $(LIB_DIR)/$$file;	\
+@
+
+
+1.2
+log
+@fix problem reported on [w3m-dev 03981]
+  from Mamoru KOMACHI <usata@@sodan.ecc.u-tokyo.ac.jp>
+* configure.in: add AC_SUBST(HELP_DIR)
+* Makefile.in (HELP_DIR): use AC_SUBT(HELP_DIR)
+* scripts/Makefile.in: add PACKAGE, VERSION, DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add SUBDIRS
+		(install unstall): do $(SUBDIRS)
+* scripts/multipart/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+* scripts/w3mman/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add BIN_DIR, MAN1_DIR
+		LIB_TARGETS->CGIBIN_TARGETS
+		fix INSTALL_MAN
+@
+text
+@d66 1
+@
+
+
+1.1
+log
+@more autoconfiscate
+@
+text
+@d3 3
+d28 4
+a31 4
+CGIBIN_DIR = $(libexecdir)/$(package)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(package)
+HELP_DIR = $(datadir)/$(package)
+RC_DIR = ~/.$(package)
+d33 1
+a33 1
+CONF_DIR = $(sysconfdir)/$(package)
+d45 3
+@
+

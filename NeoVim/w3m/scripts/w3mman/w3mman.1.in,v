@@ -1,0 +1,221 @@
+head	1.6;
+access;
+symbols
+	release-0-5-3:1.6
+	release-0-5-2:1.6
+	release-0-5-1:1.3
+	release-0-5:1.3
+	release-0-4-2:1.2
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.2
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2006.04.07.15.33.56;	author inu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2006.04.07.15.31.52;	author inu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.10.05.16.24.45;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.12.18.16.48.03;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.03.14.17.51.42;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@Add w3mman -l <file> command line argument for viewing of local man files.
+@
+text
+@.TH W3MMAN 1 "Nov 5, 2005"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+w3mman \- an interface to the on-line reference manuals by w3m(1)
+.SH SYNOPSIS
+.B w3mman
+.RI "[-M " path ] " " [ section ] " page"
+.br
+.B w3mman
+.RI "[-M " path "] -k " keyword
+.br
+.B w3mman
+.RI -l " file
+.SH DESCRIPTION
+.B w3mman
+is the system's manual pager by 
+.BR w3m (1).
+.SH OPTIONS
+A summary of options is included below.
+.TP
+.BI \-M " path"
+Specify 
+.I path
+as MANPATH.
+.TP
+.BI \-k " keyword"
+Specify 
+.I keyword.
+.TP
+.BI \-l " file"
+Specify a  
+.I file.
+.SH ENVIRONMENT
+.TP
+.B W3MMAN_W3M
+If W3MMAN_W3M is set, its value is used instead of @@W3M@@.
+.TP
+.B W3MMAN_MAN
+If W3MMAN_MAN is set, its value is used instead of @@MAN@@.
+.SH FILES
+.TP
+.I @@libexecdir@@/@@PACKAGE@@/cgi-bin/w3mman2html.cgi
+convert manual page to html.
+.SH SEE ALSO
+.BR man (1),
+.BR w3m (1).
+.SH AUTHOR
+This manual page was written by Fumitoshi UKAI <ukai@@debian.or.jp>,
+for the Debian GNU/Linux system (but may be used by others).
+@
+
+
+1.5
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d1 1
+a1 1
+.TH W3MMAN 1 "Mar 14, 2002"
+d22 3
+d37 1
+a37 1
+.B \-k " keyword"
+d40 4
+@
+
+
+1.4
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d1 1
+a1 1
+.TH W3MMAN 1 "Nov 5, 2005"
+a21 3
+.br
+.B w3mman
+.RI -l " file
+d34 1
+a34 1
+.BI \-k " keyword"
+a36 4
+.TP
+.BI \-l " file"
+Specify a  
+.I file.
+@
+
+
+1.3
+log
+@* scripts/w3mman/w3mman.1.in:
+change @@LIB_DIR@@ to @@libexecdir@@/@@PACKAGE@@/cgi-bin/
+@
+text
+@d1 1
+a1 1
+.TH W3MMAN 1 "Mar 14, 2002"
+d22 3
+d37 1
+a37 1
+.B \-k " keyword"
+d40 4
+@
+
+
+1.2
+log
+@[w3m-dev 03583] w3mman
+* scripts/w3mman/README: W3MMAN_W3M, W3MMAN_MAN
+* scripts/w3mman/w3mman.1.in: add ENVIRONMENT
+* scripts/w3mman/w3mman.in: $ENV{'W3MMAN_W3M'}, $ENV{'W3MMAN_MAN'}
+* scripts/w3mman/w3mman2html.cgi.in: $ENV{'W3MMAN_MAN'}
+				hyphenation
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d46 1
+a46 1
+.I @@LIB_DIR@@/w3mman2html.cgi
+@
+
+
+1.1
+log
+@[w3m-dev 03130] w3mman.1
+* scripts/w3mman/.cvsignore: add w3mman.1
+* scripts/w3mman/Makefile (MAN_DIR): added
+	(MAN_TARGETS): added
+	(all): add $(MAN_TARGETS)
+	(.in): replace @@LIB_DIR@@
+	(install): install $(MAN_TARGETS)
+	(uninstall): uninstall $(MAN_TARGETS)
+	(clean): clean $(MAN_TARGETS)
+* scripts/w3mman/w3mman.1.in: added
+* scripts/w3mman/w3mman2html.cgi.in: undef $PAGER
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d37 7
+@
+

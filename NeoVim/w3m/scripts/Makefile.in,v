@@ -1,0 +1,433 @@
+head	1.11;
+access;
+symbols
+	release-0-5-3:1.11
+	release-0-5-2:1.10
+	release-0-5-1:1.8
+	release-0-5:1.7;
+locks; strict;
+comment	@# @;
+
+
+1.11
+date	2010.12.15.10.50.24;	author htrb;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2007.05.30.03.15.13;	author inu;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2007.05.29.11.50.24;	author inu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2004.04.09.17.18.49;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2004.03.21.16.07.02;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.10.16.33.13;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.05.16.14.02;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.09.24.14.05.07;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.09.23.17.42.07;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.09.22.23.16.45;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.09.22.22.53.53;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.11
+log
+@[w3m-dev 04424] http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch
+@
+text
+@@@SET_MAKE@@
+SHELL=@@SHELL@@
+PACKAGE = @@PACKAGE@@
+VERSION = @@VERSION@@
+DOMAIN = $(PACKAGE)
+srcidr=@@srcdir@@
+top_srcdir=@@top_srcdir@@
+VPATH= $(srcdir):.
+prefix = @@prefix@@
+exec_prefix = @@exec_prefix@@
+datarootdir = @@datarootdir@@
+bindir = @@bindir@@
+datadir = @@datadir@@
+libdir = @@libdir@@
+includedir = @@includedir@@
+infodir = @@infodir@@
+libexecdir = @@libexecdir@@
+localstatedir = @@localstatedir@@
+mandir = @@mandir@@
+oldincludedir = @@oldincludedir@@
+sbindir = @@sbindir@@
+sharedstatedir = @@sharedstatedir@@
+srcdir = @@srcdir@@
+sysconfdir = @@sysconfdir@@
+top_srcdir = @@top_srcdir@@
+VPATH = $(srcdir):.
+
+CGIBIN_DIR = $(libexecdir)/$(PACKAGE)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(PACKAGE)
+HELP_DIR = @@HELP_DIR@@
+RC_DIR = @@RC_DIR@@
+ETC_DIR = $(sysconfdir)
+CONF_DIR = $(sysconfdir)/$(PACKAGE)
+DOCDIRS = @@DOCDIRS@@
+
+AUXBIN_TARGETS	= xface2xpm
+LIB_TARGETS	= dirlist.cgi w3mhelp.cgi w3mmail.cgi
+HELP_TARGETS	= w3mhelp-funcname.pl w3mhelp-funcdesc-stamp
+SUBDIRS = multipart w3mman
+.PHONY: $(SUBDIRS)
+
+MKDIR		= mkdir -p
+INSTALL		= @@INSTALL@@
+INSTALL_SCRIPT	= @@INSTALL_SCRIPT@@
+INSTALL_DATA	= @@INSTALL_DATA@@
+
+PERL		= @@PERL@@
+
+all: $(LIB_TARGETS) $(AUXBIN_TARGETS) $(HELP_TARGETS) $(SUBDIRS)
+
+w3mhelp-funcname.pl: w3mhelp-funcname.pl.in ../funcname.tab $(top_srcdir)/doc/keymap.default $(top_srcdir)/doc/keymap.lynx
+	@@echo "generating w3mhelp-funcname.pl..."
+	@@echo '%funcname = (' > w3mhelp-funcname.pl
+	@@sed -ne "/^[a-zA-Z@@]/s/\([a-zA-Z@@][a-zA-Z0-9@@_]*\)[ 	][ 	]*\([^ 	]*\)/'\1', '\2',/p" < ../funcname.tab >> w3mhelp-funcname.pl
+	@@echo ');' >> w3mhelp-funcname.pl
+	@@echo '%keyfunc = (' >> w3mhelp-funcname.pl
+	@@case "$(KEYBIND_SRC)" in *lynx*) keymap=keymap.lynx;; *) keymap=keymap.default;; esac; \
+	sed -ne "/^keymap/s/^keymap[ 	][ 	]*\([^ 	]*\)[ 	][ 	]*\([a-zA-Z@@][a-zA-Z0-9@@_]*\)/'\1', '\2', /p" < $(top_srcdir)/doc/$$keymap >> w3mhelp-funcname.pl
+	@@echo ');' >> w3mhelp-funcname.pl
+	@@cat $(srcdir)/w3mhelp-funcname.pl.in >> w3mhelp-funcname.pl
+	@@echo "done"
+
+w3mhelp-funcdesc-stamp: $(top_srcdir)/doc/README.func $(top_srcdir)/doc-jp/README.func w3mhelp-funcdesc.en.pl.in w3mhelp-funcdesc.ja.pl.in
+	@@echo "generating w3mhelp-funcdesc*.pl..."
+	@@for dirlang in $(DOCDIRS); do \
+	  dir=`expr "$$dirlang" : "\(.*\):.*"`; \
+	  lang=`expr "$$dirlang" : ".*:\(.*\)_.*"`; \
+	  echo '%funcdesc = (' > w3mhelp-funcdesc.$$lang.pl; \
+	  sed -ne "/^[a-zA-Z@@]/s/\([a-zA-Z@@][a-zA-Z0-9@@_]*\)[ 	][ 	]*\(.*\)/'\1', '\2',/p" < $(top_srcdir)/$$dir/README.func >> w3mhelp-funcdesc.$$lang.pl; \
+	  echo ');' >> w3mhelp-funcdesc.$$lang.pl; \
+	  cat $(srcdir)/w3mhelp-funcdesc.$$lang.pl.in >> w3mhelp-funcdesc.$$lang.pl; \
+	done
+	@@echo done
+	@@touch w3mhelp-funcdesc-stamp
+
+$(SUBDIRS):
+	for subdir in $(SUBDIRS); \
+	do \
+		(cd $$subdir && $(MAKE)); \
+	done
+
+install: $(LIB_TARGETS) $(HELP_TARGETS)
+	-$(MKDIR) $(DESTDIR)$(AUXBIN_DIR)
+	-$(MKDIR) $(DESTDIR)$(CGIBIN_DIR)
+	-$(MKDIR) $(DESTDIR)$(HELP_DIR)
+	for file in $(AUXBIN_TARGETS);     \
+	do      \
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(AUXBIN_DIR);  \
+	done
+	for file in $(LIB_TARGETS);     \
+	do      \
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(CGIBIN_DIR);  \
+	done
+	for file in w3mhelp-*.pl; \
+	do \
+		$(INSTALL_DATA) $$file $(DESTDIR)$(HELP_DIR); \
+	done
+	for subdir in $(SUBDIRS); \
+	do \
+		(cd $$subdir && $(MAKE) install); \
+	done
+
+uninstall:
+	-for file in $(AUXBIN_TARGETS); \
+	do      \
+		rm -f $(AUXBIN_DIR)/$$file; \
+	done
+	-for file in $(LIB_TARGETS); \
+	do      \
+		rm -f $(LIB_DIR)/$$file; \
+	done
+	-for file in w3mhelp-*.pl; \
+	do \
+		rm -f $(HELP_DIR)/$$file; \
+	done
+	-for subdir in $(SUBDIRS); \
+	do \
+		(cd $$subdir && $(MAKE) uninstall); \
+	done
+
+clean:
+	-rm -f $(HELP_TARGETS) w3mhelp-*.pl
+	-for subdir in $(SUBDIRS); \
+	do \
+	  (cd $$subdir && $(MAKE) clean); \
+	done
+
+distclean:
+	-rm -f $(LIB_TARGETS) $(AUXBIN_TARGETS) 
+	-for subdir in $(SUBDIRS); \
+	do \
+	  (cd $$subdir && $(MAKE) distclean); \
+	done
+	-rm -f Makefile
+
+@
+
+
+1.10
+log
+@add datarootdir. [w3m-dev 04264]
+@
+text
+@a26 1
+DESTDIR = 
+@
+
+
+1.9
+log
+@add datarootdir for Autoconf 2.60 and later.
+@
+text
+@d11 1
+a13 1
+datarootdir = @@datarootdir@@
+@
+
+
+1.8
+log
+@[w3m-dev 04063] about Makefile
+* Makefile.in (DEFS): use CGIBIN_DIR instead of LIB_DIR
+	(MAKE_ARGS): ditto
+	(distclean): rm -f
+* config.h.dist: use CGIBIN_DIR instead of LIB_DIR
+* indep.c (w3m_lib_dir): ditto
+* scripts/Makefile.in: ditto
+* scripts/multipart/Makefile.in: ditto
+* w3mimg/Makefile.in (clearn): remove w3mimg.a
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d13 1
+@
+
+
+1.7
+log
+@scripts/multipart/Makefile.in: add distclean
+scripts/w3mman/Makefile.in: add distclean
+scripts/Makefile.in: add distclean
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d84 1
+a84 1
+	-$(MKDIR) $(DESTDIR)$(LIB_DIR)
+d92 1
+a92 1
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(LIB_DIR);  \
+@
+
+
+1.6
+log
+@* scripts/Makefile.in (w3mhelp-funcname.pl): depends ../funcname.tab
+* Makefile.in (IMGOBJS): deleted
+	(indep.o): depends on fm.h funcname1.h
+	(IMGDISPLAY): depends on w3mimg/w3mimg.a
+	(w3mimg/w3mimg.a): renamed from w3mimg
+* acinclude.m4 (AC_W3M_IMAGE): modify IMBOBJS
+* w3mimg/Makefile.in (AR): added
+		(RANLIB): added
+		(IMGOBJS): added
+		(w3mimg.a): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+* [w3m-dev 03990] Re: post-m17n merge problem?
+* Makefile.in (MAN1): need $(top_srcdir)
+		(MAN1_JA): ditto
+		(LOBJS): depends on fm.h funcname1.h
+		(INFLATE): depends on $(ALIB)
+		(libwc/libwc.a): renamed from libwc
+		(IMGDISPLAY): depends on $(IMGOBJS) instead of w3mimg
+			  depends on $(ALIB)
+		(w3mimgdisplay.o): depends on w3mimg/w3mimg.h
+* acinclude.m4 (AC_W3M_M17N): WCTARGET is libwc/libwc.a
+* configure.in (HELP_DIR): expand ${prefix}
+From: qhwt@@myrealbox.com
+@
+text
+@d134 2
+@
+
+
+1.5
+log
+@fix problem reported on [w3m-dev 03981]
+  from Mamoru KOMACHI <usata@@sodan.ecc.u-tokyo.ac.jp>
+* configure.in: add AC_SUBST(HELP_DIR)
+* Makefile.in (HELP_DIR): use AC_SUBT(HELP_DIR)
+* scripts/Makefile.in: add PACKAGE, VERSION, DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add SUBDIRS
+		(install unstall): do $(SUBDIRS)
+* scripts/multipart/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+* scripts/w3mman/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add BIN_DIR, MAN1_DIR
+		LIB_TARGETS->CGIBIN_TARGETS
+		fix INSTALL_MAN
+@
+text
+@d51 1
+a51 1
+w3mhelp-funcname.pl: w3mhelp-funcname.pl.in $(top_srcdir)/funcname.tab $(top_srcdir)/doc/keymap.default $(top_srcdir)/doc/keymap.lynx
+d54 1
+a54 1
+	@@sed -ne "/^[a-zA-Z@@]/s/\([a-zA-Z@@][a-zA-Z0-9@@_]*\)[ 	][ 	]*\([^ 	]*\)/'\1', '\2',/p" < $(top_srcdir)/funcname.tab >> w3mhelp-funcname.pl
+@
+
+
+1.4
+log
+@based on [w3m-dev 03970]
+  SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+* acinclude.m4 (AC_W3M_IMAGE): add IMGTARGETS
+* w3mimg/Makefile.in (all): use @@IMGTARGETS@@
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 3
+d28 4
+a31 4
+CGIBIN_DIR = $(libexecdir)/$(package)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(package)
+HELP_DIR = $(datadir)/$(package)
+RC_DIR = ~/.$(package)
+d33 1
+a33 1
+CONF_DIR = $(sysconfdir)/$(package)
+d39 2
+d49 1
+a49 1
+all: $(LIB_TARGETS) $(AUXBIN_TARGETS) $(HELP_TARGETS)
+d76 6
+d98 4
+d116 4
+d123 1
+a123 1
+	-for dir in multipart w3mman; \
+d125 1
+a125 1
+	  (cd $$dir && $(MAKE) clean); \
+d130 1
+a130 1
+	-for dir in multipart w3mman; \
+d132 1
+a132 1
+	  (cd $$dir && $(MAKE) distclean); \
+@
+
+
+1.3
+log
+@cd in subdir
+@
+text
+@d31 1
+d114 1
+a114 1
+	done@
+
+
+1.2
+log
+@fix srcdir, top_srcdir
+@
+text
+@d105 1
+a105 1
+	  cd $$dir && $(MAKE) clean; \
+d112 1
+a112 1
+	  cd $$dir && $(MAKE) distclean; \
+@
+
+
+1.1
+log
+@more autoconfiscate
+@
+text
+@d22 1
+a22 1
+VPATH = $(top_srcdir):.
+d45 1
+a45 1
+w3mhelp-funcname.pl: w3mhelp-funcname.pl.in ../funcname.tab ../doc/keymap.default ../doc/keymap.lynx
+d48 1
+a48 1
+	@@sed -ne "/^[a-zA-Z@@]/s/\([a-zA-Z@@][a-zA-Z0-9@@_]*\)[ 	][ 	]*\([^ 	]*\)/'\1', '\2',/p" < ../funcname.tab >> w3mhelp-funcname.pl
+d52 1
+a52 1
+	sed -ne "/^keymap/s/^keymap[ 	][ 	]*\([^ 	]*\)[ 	][ 	]*\([a-zA-Z@@][a-zA-Z0-9@@_]*\)/'\1', '\2', /p" < ../doc/$$keymap >> w3mhelp-funcname.pl
+d54 1
+a54 1
+	@@cat w3mhelp-funcname.pl.in >> w3mhelp-funcname.pl
+d57 1
+a57 1
+w3mhelp-funcdesc-stamp: ../doc/README.func ../doc-jp/README.func w3mhelp-funcdesc.en.pl.in w3mhelp-funcdesc.ja.pl.in
+d63 1
+a63 1
+	  sed -ne "/^[a-zA-Z@@]/s/\([a-zA-Z@@][a-zA-Z0-9@@_]*\)[ 	][ 	]*\(.*\)/'\1', '\2',/p" < ../$$dir/README.func >> w3mhelp-funcdesc.$$lang.pl; \
+d65 1
+a65 1
+	  cat w3mhelp-funcdesc.$$lang.pl.in >> w3mhelp-funcdesc.$$lang.pl; \
+@
+

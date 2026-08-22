@@ -1,0 +1,329 @@
+head	1.4;
+access;
+symbols
+	release-0-5-3:1.4
+	release-0-5-2:1.4
+	release-0-5-1:1.4
+	release-0-5:1.4
+	release-0-4-2:1.4
+	release-0-4-1:1.4
+	release-0-4:1.4
+	release-0-4-rc3:1.4
+	release-0-4-rc2:1.4
+	release-0-4-rc1:1.4
+	release-0-3-2-2:1.3
+	release-0-3-2-1:1.3
+	branch-0-3-2:1.3.0.4
+	release-0-3-2:1.3
+	release-0-3-2-rc4:1.3
+	release-0-3-2-rc3:1.3
+	release-0-3-2-rc2:1.3
+	release-0-3-2-rc1:1.3
+	release-0-3-1:1.3
+	release-0-3:1.3
+	release-0-2-5-1:1.3
+	branch-0-2-5:1.3.0.2
+	release-0-2-5:1.3
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.2
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2002.12.13.03.02.04;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.01.23.17.19.47;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.38;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.38;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@[w3m-dev 03567] default keybinding
+* doc-jp/keymap.default (C-q,C-t,(,),+,-,D,L,T,m,r,{,|,},
+			M-c,M-k,M-l,M-m,M-o,M-t): assign
+* doc/keymap.default: ditto
+* keybind.c: ditto
+* doc-jp/keymap.lynx (C-q,C-t,C-u,(,),,,.,;,D,L,T,W,[,],
+			m,r,w,{,|,},M-<,M->,M-W,M-c,M-g,
+			M-k,M-l,M-m,M-n,M-o,M-p,M-t,M-w): assign
+* doc/keymap.lynx: ditto
+* keybind_lynx.c: ditto
+* doc-jp/menu.default (Main): Select,SelectTab,TAB_LINK
+* doc/menu.default: ditto
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@# A sample of ~/.w3m/keymap (lynx-like)
+#
+# Ctrl  : C-, ^
+# Escape: ESC-, M-, ^[
+# Space : SPC, ' '
+# Tab   : TAB, ^i, ^I
+# Delete: DEL, ^?
+# Up    : UP, ^[[A
+# Down  : DOWN, ^[[B
+# Right : RIGHT, ^[[C
+# Left  : LEFT, ^[[D
+
+keymap	C-@@	MARK
+keymap	C-a	BEGIN
+keymap	C-b	BACK
+keymap	C-e	END
+keymap	C-f	GOTO_LINK
+keymap	C-g	LINE_INFO
+keymap	C-h	HISTORY
+keymap	TAB	NEXT_LINK
+keymap	C-j	GOTO_LINK
+keymap	C-k	COOKIE
+keymap	C-l	REDRAW
+keymap	C-m	GOTO_LINK
+keymap	C-n	NEXT_LINK
+keymap	C-p	PREV_LINK
+keymap	C-q	CLOSE_TAB
+keymap	C-r	RELOAD
+keymap	C-s	SEARCH
+keymap	C-t	TAB_LINK
+keymap	C-u	PREV_LINK
+keymap	C-v	NEXT_PAGE
+keymap	C-w	REDRAW
+keymap	C-z	SUSPEND
+
+keymap	SPC	NEXT_PAGE
+keymap	!	SHELL
+keymap	\"	REG_MARK
+keymap	#	PIPE_SHELL
+keymap	$	LINE_END
+keymap	(	UNDO
+keymap	)	REDO
+keymap	+	NEXT_PAGE
+keymap	,	LEFT
+keymap	-	PREV_PAGE
+keymap	.	RIGHT
+keymap	/	SEARCH
+keymap	:	MARK_URL
+keymap	;	MARK_WORD
+keymap	<	SHIFT_LEFT
+keymap	=	INFO
+keymap	>	SHIFT_RIGHT
+keymap	?	HELP
+keymap	@@	READ_SHELL
+keymap	B	BACK
+keymap	D	DOWNLOAD_LIST
+keymap	E	EDIT
+keymap	F	FRAME
+keymap	G	GOTO_LINE
+keymap	H	HELP
+keymap	I	VIEW_IMAGE
+keymap	J	UP
+keymap	K	DOWN
+keymap	L	LIST
+keymap	M	EXTERN
+keymap	N	NEXT_MARK
+keymap	P	PREV_MARK
+keymap	Q	EXIT
+keymap	R	RELOAD
+keymap	S	SAVE_SCREEN
+keymap	T	NEW_TAB
+keymap	U	GOTO
+keymap	V	LOAD
+keymap	W	PREV_WORD
+keymap	Z	CENTER_H
+keymap	[	LINK_BEGIN
+keymap	\\	SOURCE
+keymap	]	LINK_END
+keymap	\^	LINE_BEGIN
+keymap	a	ADD_BOOKMARK
+keymap	b	PREV_PAGE
+keymap	c	PEEK
+keymap	d	SAVE_LINK
+keymap	g	GOTO
+keymap	h	MOVE_LEFT
+keymap	i	PEEK_IMG
+keymap	j	MOVE_DOWN
+keymap	k	MOVE_UP
+keymap	l	MOVE_RIGHT
+keymap	m	MOUSE_TOGGLE
+keymap	n	SEARCH_NEXT
+keymap	o	OPTIONS
+keymap	p	SAVE_SCREEN
+keymap	q	QUIT
+keymap	r	VERSION
+keymap	s	SELECT_MENU
+keymap	u	PEEK_LINK
+keymap	v	BOOKMARK
+keymap	w	NEXT_WORD
+keymap	z	CENTER_V
+keymap	{	PREV_TAB
+keymap	|	PIPE_BUF
+keymap	}	NEXT_TAB
+
+keymap	M-TAB	PREV_LINK
+keymap	M-C-j	SAVE_LINK
+keymap	M-C-m	SAVE_LINK
+
+keymap	M-:	MARK_MID
+keymap	M-<	BEGIN
+keymap	M->	END
+keymap	M-I	SAVE_IMAGE
+keymap	M-M	EXTERN_LINK
+keymap	M-W	DICT_WORD_AT
+keymap	M-a	ADD_BOOKMARK
+keymap	M-b	BOOKMARK
+keymap	M-c	COMMAND
+keymap	M-e	EDIT_SCREEN
+keymap	M-g	GOTO_LINE
+keymap	M-k	DEFINE_KEY
+keymap	M-l	LIST_MENU
+keymap	M-m	MOVE_LIST_MENU
+keymap	M-n	NEXT_MARK
+keymap	M-o	SET_OPTION
+keymap	M-p	PREV_MARK
+keymap	M-s	SAVE
+keymap	M-t	TAB_MENU
+keymap	M-u	GOTO_RELATIVE
+keymap	M-v	PREV_PAGE
+keymap	M-w	DICT_WORD
+
+keymap	UP	PREV_LINK
+keymap	DOWN	NEXT_LINK
+keymap	RIGHT	GOTO_LINK
+keymap	LEFT	BACK
+
+keymap	M-[E	MENU
+keymap	M-[L	MENU
+
+keymap	M-[1~	BEGIN
+keymap	M-[2~	MENU
+keymap	M-[4~	END
+keymap	M-[5~	PREV_PAGE
+keymap	M-[6~	NEXT_PAGE
+keymap	M-[28~	MENU
+
+@
+
+
+1.3
+log
+@[w3m-dev 02894] Re: goURL
+* file.c (HTMLtagproc1): s/goURL/gorURL/
+* keybind.c (EscKeymap): M-u = GOTO_RELATIVE
+* keybind_lynx.c (EscKeymap): ditto
+* doc/keymap.default: ditto
+* doc/keymap.lynx: ditto
+* doc-jp/keymap.default: ditto
+* doc-jp/keymap.lynx: ditto
+* main.c (MAIN): add $HTTP_HOME or $WWW_HOME to history
+* main.c (MAIN): add history even if it is local file or local cgi
+* main.c (goURL0): change args, def_url -> current
+* main.c (goURL0): delete ParsedURL *b_url
+* main.c (goURL0): add Buffer *cur_buf
+* main.c (goURL0): if current is supplied, use its URL as default
+* main.c (goURL0): add URL to history if loadURL succeeded
+* main.c (goURL): change args for goURL0()
+* main.c (gorURL): ditto
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d27 1
+d30 2
+d41 2
+d44 1
+d46 1
+d49 1
+d56 1
+d64 1
+d71 1
+d74 1
+d76 1
+d78 1
+d90 1
+d95 2
+a96 1
+keymap s       SELECT_MENU
+d99 1
+a99 1
+keymap	w	WRAP_TOGGLE
+d101 3
+d110 2
+d114 1
+d117 1
+d119 7
+d127 1
+d130 1
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d97 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d15 1
+a15 1
+keymap	C-b	PREV_PAGE
+d17 2
+a18 1
+keymap	C-f	NEXT_PAGE
+d55 1
+d69 1
+a69 1
+keymap	d	SAVE
+d80 1
+a80 1
+keymap	s	SELECT
+d83 1
+d92 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

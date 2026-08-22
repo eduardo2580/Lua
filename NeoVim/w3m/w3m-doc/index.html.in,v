@@ -1,0 +1,298 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.3
+	release-0-5:1.3
+	release-0-4-2:1.3
+	release-0-4-1:1.3
+	release-0-4:1.3
+	release-0-4-rc3:1.3
+	release-0-4-rc2:1.3
+	release-0-4-rc1:1.3
+	release-0-3-2-2:1.3
+	release-0-3-2-1:1.3
+	branch-0-3-2:1.3.0.4
+	release-0-3-2:1.3
+	release-0-3-2-rc4:1.3
+	release-0-3-2-rc3:1.3
+	release-0-3-2-rc2:1.3
+	release-0-3-2-rc1:1.3
+	release-0-3-1:1.3
+	release-0-3:1.3
+	release-0-2-5-1:1.3
+	branch-0-2-5:1.3.0.2
+	release-0-2-5:1.3
+	release-0-2-4:1.3
+	release-0-2-3-2:1.3
+	release-0-2-3-1:1.3
+	release-0-2-3:1.3
+	inu-0-2-2-rel-1-1:1.2
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.11.27.03.54.49;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.18.53;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.18.53;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@
+2001-11-27  aito@@fw.ipsj.or.jp
+	* Error correction on doc-jp/FAQ.html
+
+2001-11-27  sakane@@d4.bsd.nes.nec.co.jp (Yoshinobu Sakane)
+	* w3m-doc update.
+@
+text
+@<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+@@include define.wd
+@@include contain.wd
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<TITLE>THE DOCUMENTS FOR W3M</TITLE>
+</HEAD>
+
+<BODY>
+
+<!-- $B$3$N$"$?$j$K(B w3m $B$N%m%4(B($B$C$F$J$$$+!)(B) $B$H$+(B -->
+<!-- w3m: WWW wo Miru Tool  version @@W3M.version@@ $B$H$+(B -->
+<!-- (C) Copyright by @@W3M.author@@ March 23, 1999 $B$H$+(B -->
+<!-- $B$rF~$l$F$*$/$Y$-$+$J!)(B -->
+
+<H1><A NAME="index">$B:w0z(B</A></H1>
+<OL>
+	<LI><A HREF="@@DOC.prologue@@" NAME="prologue">$B$O$8$a$K(B</A> <!-- README $B$N!H(B1. $B$O$8$a$K!I$NItJ,(B -->
+		<UL>
+			<LI><A HREF="@@DOC.prologue@@#summary">w3m $B$H$O(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+			<LI><A HREF="@@DOC.prologue@@#glossary">$BMQ8l$N@@bL@@(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+			<LI><A HREF="@@DOC.prologue@@#disclaimer">$BCm0U;v9`(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+			<LI><A HREF="@@DOC.copyright@@">$BCx:n8"!"%i%$%;%s%9(B</A>
+			<LI><A HREF="@@DOC.prologue@@#confirmation">$BF0:n3NG'(B OS</A><IMG SRC=dummy ALT="[$B:Q(B]">
+		</UL>
+	<LI><A HREF="@@DOC.outline@@" NAME="outline">$B35MWJT(B</A>
+		<UL>
+			<LI><A HREF="@@DOC.outline@@#install">$B%$%s%9%H!<%k$N35MW(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+			<LI><A HREF="@@DOC.outline@@#operation">$BA`:nJ}K!$N35MW(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+				<UL>
+					<LI><A HREF="@@DOC.outline@@#display">$BI=<(FbMF$N@@bL@@(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.outline@@#basic">$B4pK\E*$J;H$$J}(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.outline@@#help">$B%X%k%W$N;2>H(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+				</UL>
+		</UL>
+	<LI><A HREF="@@DOC.detail@@" NAME="detail">$B>\:YJT(B</A>
+		<UL>
+			<LI><A HREF="@@DOC.install@@" NAME="install">$B%$%s%9%H!<%k$N>\:Y(B</A>
+				<UL>
+					<LI><A HREF="@@DOC.install@@#get_w3m">w3m $BF~<jJ}K!(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+						<UL>
+							<LI><A HREF="@@DOC.install@@#w3m_home">w3m Homepage</A><IMG SRC=dummy ALT="[$B:Q(B]">
+							<LI><A HREF="@@DOC.install@@#BBS">w3m $B$K4X$9$k7G<(HD(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+						</UL>
+					<LI><A HREF="@@DOC.install@@#require">$BI,MW$JJ*(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.install@@#configure">configure $B$K$D$$$F(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.install@@#config_h">config.h $B$K$D$$$F(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.install@@#make">make $B$K$D$$$F(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.install@@#tips">$BB>$N(B OS $B$G%$%s%9%H!<%k$9$k:]$N(B Tips</A><IMG SRC=dummy ALT="[$B:Q(B]">
+				</UL>
+			<LI><A HREF="@@DOC.operation@@" NAME="operation">w3m $BA`:nK!(B</A> <!-- $B%-!<A`:n@@bL@@(B -->
+				<UL>
+					<LI><A HREF="@@DOC.operation@@#buffer">$B%P%C%U%!A`:n(B</A>
+					<LI><A HREF="@@DOC.operation@@#mouse">$B%^%&%9A`:n(B</A>
+					<LI><A HREF="@@DOC.operation@@#line_edit">$B:G2<9TF~NO(B</A>
+					<LI><A HREF="@@DOC.operation@@#menu">$B%a%K%e!<A`:n(B</A>
+				</UL>
+			<LI><A HREF="@@DOC.configuration@@" NAME="configuration">$B3F<o@@_Dj(B</A>
+				<UL>
+					<LI><A HREF="@@DOC.configuration@@#option">$B5/F0%*%W%7%g%s(B</A><IMG SRC=dummy ALT="[$B:Q(B]">
+					<LI><A HREF="@@DOC.configuration@@#environment">$B4D6-JQ?t(B</A>
+					<LI><A HREF="@@DOC.configuration@@#bookmark">bookmark $B%U%!%$%k(B</A>
+					<LI><A HREF="@@DOC.configuration@@#option_panel">$B%*%W%7%g%s%Q%M%k(B</A>
+						<UL>
+							<LI><A HREF="@@DOC.configuration@@#external_viewer">$B30It%S%e!<%"$NJT=8(B</A>
+						</UL>
+					<LI><A HREF="@@DOC.configuration@@#other_customize">$B$=$NB>%+%9%?%^%$%:(B</A>
+						<UL>
+							<LI><A HREF="@@DOC.configuration@@#keymap">keymap</A>
+							<LI><A HREF="@@DOC.configuration@@#menu">menu</A>
+						</UL>
+				</UL>
+			<LI><A HREF="@@DOC.function@@" NAME="function">$B5!G=>\:Y(B</A>
+				<UL>
+					<LI><A HREF="@@DOC.function@@#url">$BBP1~$7$F$$$k(B URL</A>
+					<LI><A HREF="@@DOC.function@@#html">$BBP1~$7$F$$$k(B HTML</A>
+					<LI><A HREF="@@DOC.function@@#ssl">SSL</A>
+					<LI><A HREF="@@DOC.function@@#cookie">cookie</A>
+					<LI><A HREF="@@DOC.function@@#local_CGI">$B%m!<%+%k(B CGI $B5!G=(B</A>
+				</UL>
+			<LI><A HREF="@@DOC.FAQ@@" NAME="faq">FAQ</A>
+				<UL>
+					<LI><A HREF="@@DOC.FAQ@@#faq">$B$h$/J9$+$l$k<ALd$H$=$NEz$((B</A>
+					<LI><A HREF="@@DOC.FAQ@@#tips">Tips</A>
+				</UL>
+			<LI><A HREF="@@DOC.developement@@" NAME="developement">$B3+H/%I%-%e%a%s%H(B</A>
+				<UL>
+                    <LI><A HREF="@@DOC.developement@@#story">w3m $B$N3+H/$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.developement@@#known_bugs">$B8=:_H=L@@$7$F$$$k%P%0(B</A>
+					<LI><A HREF="@@DOC.developement@@#ToDo">ToDo</A>
+					<LI><A HREF="@@DOC.developement@@#history">$BMzNr(B</A>
+					<LI><A HREF="@@DOC.developement@@#policy">$B3+H/%]%j%7!<(B</A>
+					<LI><A HREF="@@DOC.developement@@#tips">$B3+H/<T8~$1(BTips</A>
+				</UL>
+			<LI><A HREF="@@DOC.community@@" NAME="community">w3m $B%3%_%e%K%F%#(B</A>
+				<UL>
+					<LI><A HREF="@@DOC.community@@#ML">$B%a!<%j%s%0%j%9%H(B</A>
+					<LI><A HREF="@@DOC.community@@#links">$B4XO"(B Web</A>
+				</UL>
+			<LI><A HREF="@@DOC.copyright@@" NAME="copyright">Copyright</A>
+				<UL>
+					<LI><A HREF="@@DOC.copyright@@#copyright">$BCx:n8"!"%i%$%;%s%9(B</A>
+					<LI><A HREF="@@DOC.copyright@@#thanks">$B<U<-(B</A>
+				</UL>
+		</UL>
+</OL>
+
+</BODY>
+
+</HTML>
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d1 1
+a1 1
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+d14 1
+a14 1
+<!-- $B$3$N$"$?$j$K(B w3m$B$N%m%4(B($B$C$F$J$$$+!)(B) $B$H$+(B -->
+d23 3
+a25 3
+			<LI><A HREF="@@DOC.prologue@@#summary">w3m$B$H$O(B</A>
+			<LI><A HREF="@@DOC.prologue@@#glossary">$BMQ8l$N@@bL@@(B</A>
+			<LI><A HREF="@@DOC.prologue@@#disclaimer">$BCm0U;v9`(B</A>
+d27 1
+a27 1
+			<LI><A HREF="@@DOC.prologue@@#confirmation">$BF0:n3NG'(BOS</A>
+d31 2
+a32 2
+			<LI><A HREF="@@DOC.outline@@#install">$B%$%s%9%H!<%k$N35MW(B</A>	<!-- $B35MW$N$_!%>\:Y$OJL$N>O$G(B -->
+			<LI><A HREF="@@DOC.outline@@#operation">$BA`:nJ}K!$N35MW(B</A>	<!-- $B35MW$N$_!%>\:Y$OJL$N>O$G(B -->
+d34 3
+a36 3
+					<LI><A HREF="@@DOC.outline@@#display">$BI=<(FbMF$N@@bL@@(B</A>
+					<LI><A HREF="@@DOC.outline@@#basic">$B4pK\E*$J;H$$J}(B</A>
+					<LI><A HREF="@@DOC.outline@@#help">$B%X%k%W$N;2>H(B</A>
+d43 1
+a43 1
+					<LI><A HREF="@@DOC.install@@#get_w3m">w3m$BF~<jJ}K!(B</A>
+d45 2
+a46 2
+							<LI><A HREF="@@DOC.install@@#w3m_home">w3m home</A>
+							<LI><A HREF="@@DOC.install@@#BBS">aito$BO"MmD"(B</A>
+d48 5
+a52 5
+					<LI><A HREF="@@DOC.install@@#require">$BI,MW$JJ*(B</A>
+					<LI><A HREF="@@DOC.install@@#configure">configure$B$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.install@@#config_h">config.h$B$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.install@@#make">make$B$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.install@@#tips">$BB>$N(BOS$B$G%$%s%9%H!<%k$9$k:]$N(BTips</A>
+d54 1
+a54 1
+			<LI><A HREF="@@DOC.operation@@" NAME="operation">w3m$BA`:nK!(B</A> <!-- $B%-!<A`:n@@bL@@(B -->
+d63 1
+a63 1
+					<LI><A HREF="@@DOC.configuration@@#option">$B5/F0%*%W%7%g%s(B</A>
+d65 1
+a65 1
+					<LI><A HREF="@@DOC.configuration@@#bookmark">bookmark$B%U%!%$%k(B</A>
+d78 2
+a79 2
+					<LI><A HREF="@@DOC.function@@#url">$BBP1~$7$F$$$k(BURL</A>
+					<LI><A HREF="@@DOC.function@@#html">$BBP1~$7$F$$$k(BHTML</A>
+d82 1
+a82 1
+					<LI><A HREF="@@DOC.function@@#local_CGI">$B%m!<%+%k(BCGI$B5!G=(B</A>
+d89 1
+a89 1
+			<LI><A HREF="@@DOC.development@@" NAME="development">$B3+H/%I%-%e%a%s%H(B</A>
+d91 6
+a96 6
+                    <LI><A HREF="@@DOC.development@@#story">w3m$B$N3+H/$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.development@@#known_bugs">$B8=:_H=L@@$7$F$$$k%P%0(B</A>
+					<LI><A HREF="@@DOC.development@@#ToDo">ToDo</A>
+					<LI><A HREF="@@DOC.development@@#history">$BMzNr(B</A>
+					<LI><A HREF="@@DOC.development@@#policy">$B3+H/%]%j%7!<(B</A>
+					<LI><A HREF="@@DOC.development@@#tips">$B3+H/<T8~$1(BTips</A>
+d98 1
+a98 1
+			<LI><A HREF="@@DOC.community@@" NAME="community">w3m$B%3%_%e%K%F%#(B</A>
+d101 1
+a101 1
+					<LI><A HREF="@@DOC.community@@#links">$B4XO"(BWeb</A>
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d89 1
+a89 1
+			<LI><A HREF="@@DOC.developement@@" NAME="developement">$B3+H/%I%-%e%a%s%H(B</A>
+d91 6
+a96 6
+                    <LI><A HREF="@@DOC.developement@@#story">w3m$B$N3+H/$K$D$$$F(B</A>
+					<LI><A HREF="@@DOC.developement@@#known_bugs">$B8=:_H=L@@$7$F$$$k%P%0(B</A>
+					<LI><A HREF="@@DOC.developement@@#ToDo">ToDo</A>
+					<LI><A HREF="@@DOC.developement@@#history">$BMzNr(B</A>
+					<LI><A HREF="@@DOC.developement@@#policy">$B3+H/%]%j%7!<(B</A>
+					<LI><A HREF="@@DOC.developement@@#tips">$B3+H/<T8~$1(BTips</A>
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

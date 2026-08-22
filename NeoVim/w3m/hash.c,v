@@ -1,0 +1,176 @@
+head	1.5;
+access;
+symbols
+	release-0-5-3:1.5
+	release-0-5-2:1.5
+	release-0-5-1:1.5
+	release-0-5:1.5
+	release-0-4-2:1.5
+	release-0-4-1:1.4
+	release-0-4:1.4
+	release-0-4-rc3:1.4
+	release-0-4-rc2:1.4
+	release-0-4-rc1:1.4
+	release-0-3-2-2:1.4
+	release-0-3-2-1:1.4
+	branch-0-3-2:1.4.0.4
+	release-0-3-2:1.4
+	release-0-3-2-rc4:1.4
+	release-0-3-2-rc3:1.4
+	release-0-3-2-rc2:1.4
+	release-0-3-2-rc1:1.4
+	release-0-3-1:1.4
+	release-0-3:1.4
+	release-0-2-5-1:1.4
+	branch-0-2-5:1.4.0.2
+	release-0-2-5:1.4
+	release-0-2-4:1.4
+	release-0-2-3-2:1.4
+	release-0-2-3-1:1.4
+	release-0-2-3:1.4
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	2003.04.07.16.27.10;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.12.10.17.02.44;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.20.17.49.23;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.14.56;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.14.56;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@[w3m-dev 03856] <gc.h>
+* backend.c entity.c fm.h hash.c indep.c indep.h matrix.c
+  textlist.c: s/"gc.h"/<gc.h>/
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@/* $Id: hash.c,v 1.4 2001/12/10 17:02:44 ukai Exp $ */
+#include <string.h>
+#include "hash.h"
+#include <gc.h>
+
+static unsigned int
+hashfunc(char *s)
+{
+    unsigned int h = 0;
+    while (*s) {
+	if (h & 0x80000000) {
+	    h <<= 1;
+	    h |= 1;
+	}
+	else
+	    h <<= 1;
+	h += *s;
+	s++;
+    }
+    return h;
+}
+
+#define keycomp(x,y) !strcmp(x,y)
+
+/* *INDENT-OFF* */
+defhashfunc(char *, int, si)
+defhashfunc(char *, char *, ss)
+defhashfunc(char *, void *, sv)
+defhashfunc_i(int, void *, iv)
+/* *INDENT-ON* */
+@
+
+
+1.4
+log
+@[w3m-dev 02651] search keymap using hash
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: hash.c,v 1.3 2001/11/24 02:01:26 ukai Exp $ */
+d4 1
+a4 1
+#include "gc.h"
+@
+
+
+1.3
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: hash.c,v 1.2 2001/11/20 17:49:23 ukai Exp $ */
+d28 2
+a29 1
+defhashfunc(char *, void *, hist)
+@
+
+
+1.2
+log
+@add rcsids
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d25 1
+d29 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

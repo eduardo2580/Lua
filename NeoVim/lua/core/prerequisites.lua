@@ -1,5 +1,21 @@
 local M = {}
 
+local function lynx_path()
+  local root = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h:h:h")
+  local local_candidates = {
+    root .. "/Downloads/Lynx/native/lynx.exe",
+    root .. "/Downloads/Lynx/native/lynx",
+    root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx.exe",
+    root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx",
+  }
+  for _, candidate in ipairs(local_candidates) do
+    if vim.fn.executable(candidate) == 1 then return candidate end
+  end
+  local command = vim.fn.exepath("lynx")
+  if command == "" then command = vim.fn.exepath("lynx.exe") end
+  return command
+end
+
 local function notify_missing(items)
   if #items == 0 then return end
 
@@ -14,17 +30,15 @@ end
 function M.check()
   local missing = {}
   local required_version = "0.9.1"
-  local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
-  local w3m_command = vim.fn.exepath("w3m")
-  if is_windows and w3m_command == "" then w3m_command = "C:\\w3m.exe" end
+  local lynx_command = lynx_path()
 
   if vim.fn.has("nvim-" .. required_version) ~= 1 then
     missing[#missing + 1] = "Neovim " .. required_version .. "+"
   end
   if vim.fn.executable("git") ~= 1 then missing[#missing + 1] = "git" end
   if vim.fn.executable("rg") ~= 1 then missing[#missing + 1] = "ripgrep (rg)" end
-  if vim.fn.executable(w3m_command) ~= 1 then
-    missing[#missing + 1] = "w3m (for w3m.vim)"
+  if vim.fn.executable(lynx_command) ~= 1 then
+    missing[#missing + 1] = "Lynx (build Downloads/Lynx/lynx2.9.3 or install it on PATH)"
   end
   if vim.fn.executable("node") ~= 1 then missing[#missing + 1] = "Node.js" end
   if vim.fn.executable("npm") ~= 1 and vim.fn.executable("npm.cmd") ~= 1 then

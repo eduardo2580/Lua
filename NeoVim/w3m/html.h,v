@@ -1,0 +1,1798 @@
+head	1.31;
+access;
+symbols
+	release-0-5-3:1.31
+	release-0-5-2:1.29
+	release-0-5-1:1.25
+	release-0-5:1.25
+	release-0-4-2:1.23
+	release-0-4-1:1.22
+	release-0-4:1.22
+	release-0-4-rc3:1.22
+	release-0-4-rc2:1.22
+	release-0-4-rc1:1.22
+	release-0-3-2-2:1.9
+	release-0-3-2-1:1.9
+	branch-0-3-2:1.9.0.2
+	release-0-3-2:1.9
+	release-0-3-2-rc4:1.9
+	release-0-3-2-rc3:1.9
+	release-0-3-2-rc2:1.9
+	release-0-3-2-rc1:1.9
+	release-0-3-1:1.7
+	release-0-3:1.7
+	release-0-2-5-1:1.5
+	branch-0-2-5:1.5.0.2
+	release-0-2-5:1.5
+	release-0-2-4:1.5
+	release-0-2-3-2:1.5
+	release-0-2-3-1:1.5
+	release-0-2-3:1.5
+	inu-0-2-2-rel-1-1:1.3
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.31
+date	2010.08.14.01.29.40;	author htrb;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2010.08.12.08.56.14;	author htrb;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2007.05.23.12.01.43;	author inu;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2007.04.19.12.00.38;	author inu;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2006.12.10.11.06.12;	author inu;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2006.05.29.12.54.26;	author inu;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.10.20.16.41.56;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.09.22.21.02.19;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.04.18.16.47.18;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.01.10.17.15.22;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.01.10.17.06.23;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.01.08.17.24.12;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.01.06.15.36.59;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.12.27.16.07.44;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.12.14.15.18.38;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.12.09.15.40.37;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.12.06.16.50.28;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.12.05.16.29.08;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.12.03.15.35.11;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.02.17.27.39;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.15.15.19.45;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.10.10.16.59.33;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.09.28.16.30.07;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.02.05.12.31.27;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.01.31.17.54.51;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.06.15.31.58;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.17;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.00;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.00;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.31
+log
+@All elements have the id attribute.
+@
+text
+@/* $Id: html.h,v 1.30 2010/08/12 08:56:14 htrb Exp $ */
+#ifndef _HTML_H
+#define _HTML_H
+#ifdef USE_SSL
+#include <openssl/bio.h>
+#include <openssl/x509.h>
+#include <openssl/ssl.h>
+#endif				/* USE_SSL */
+
+#include "istream.h"
+
+#define StrUFgets(f) StrISgets((f)->stream)
+#define StrmyUFgets(f) StrmyISgets((f)->stream)
+#define UFgetc(f) ISgetc((f)->stream)
+#define UFundogetc(f) ISundogetc((f)->stream)
+#define UFread(f,buf,len) ISread((f)->stream,buf,len)
+#define UFclose(f) (void)(ISclose((f)->stream) == 0 && ((f)->stream = NULL))
+#define UFfileno(f) ISfileno((f)->stream)
+
+struct cmdtable {
+    char *cmdname;
+    int cmd;
+};
+
+struct mailcap {
+    char *type;
+    char *viewer;
+    int flags;
+    char *test;
+    char *nametemplate;
+    char *edit;
+};
+
+#define MAILCAP_NEEDSTERMINAL	0x01
+#define MAILCAP_COPIOUSOUTPUT	0x02
+#define MAILCAP_HTMLOUTPUT      0x04
+
+#define MCSTAT_REPNAME          0x01
+#define MCSTAT_REPTYPE          0x02
+#define MCSTAT_REPPARAM         0x04
+
+struct table2 {
+    char *item1;
+    char *item2;
+};
+
+typedef struct {
+    char *referer;
+    int flag;
+} URLOption;
+
+typedef struct _ParsedURL {
+    int scheme;
+    char *user;
+    char *pass;
+    char *host;
+    int port;
+    char *file;
+    char *real_file;
+    char *query;
+    char *label;
+    int is_nocache;
+} ParsedURL;
+
+typedef struct {
+    unsigned char scheme;
+    char is_cgi;
+    char encoding;
+    InputStream stream;
+    char *ext;
+    int compression;
+    int content_encoding;
+    char *guess_type;
+#ifdef USE_SSL
+    char *ssl_certificate;
+#endif
+    char *url;
+    time_t modtime;
+} URLFile;
+
+#define CMP_NOCOMPRESS   0
+#define CMP_COMPRESS     1
+#define CMP_GZIP         2
+#define CMP_BZIP2        3
+#define CMP_DEFLATE      4
+
+#define ENC_7BIT	0
+#define ENC_BASE64	1
+#define ENC_QUOTE	2
+#define ENC_UUENCODE	3
+
+#define HTML_UNKNOWN	0
+#define HTML_A		1
+#define HTML_N_A	2
+#define HTML_H		3
+#define HTML_N_H	4
+#define HTML_P		5
+#define HTML_BR		6
+#define HTML_B		7
+#define HTML_N_B	8
+#define HTML_UL		9
+#define HTML_N_UL	10
+#define HTML_LI		11
+#define HTML_OL		12
+#define HTML_N_OL	13
+#define HTML_TITLE	14
+#define HTML_N_TITLE	15
+#define HTML_HR		16
+#define HTML_DL		17
+#define HTML_N_DL	18
+#define HTML_DT		19
+#define HTML_DD		20
+#define HTML_PRE	21
+#define HTML_N_PRE	22
+#define HTML_BLQ	23
+#define HTML_N_BLQ	24
+#define HTML_IMG	25
+#define HTML_LISTING	26
+#define HTML_N_LISTING	27
+#define HTML_XMP	28
+#define HTML_N_XMP	29
+#define HTML_PLAINTEXT	30
+#define HTML_TABLE      31
+#define HTML_N_TABLE    32
+#define HTML_META       33
+#define HTML_N_P        34
+#define HTML_FRAME      35
+#define HTML_FRAMESET   36
+#define HTML_N_FRAMESET 37
+#define HTML_CENTER     38
+#define HTML_N_CENTER   39
+#define HTML_FONT       40
+#define HTML_N_FONT     41
+#define HTML_FORM       42
+#define HTML_N_FORM     43
+#define HTML_INPUT      44
+#define HTML_TEXTAREA   45
+#define HTML_N_TEXTAREA 46
+#define HTML_SELECT     47
+#define HTML_N_SELECT   48
+#define HTML_OPTION     49
+#define HTML_NOBR       50
+#define HTML_N_NOBR     51
+#define HTML_DIV        52
+#define HTML_N_DIV      53
+#define HTML_ISINDEX    54
+#define HTML_MAP        55
+#define HTML_N_MAP      56
+#define HTML_AREA       57
+#define HTML_SCRIPT     58
+#define HTML_N_SCRIPT   59
+#define HTML_BASE       60
+#define HTML_DEL        61
+#define HTML_N_DEL      62
+#define HTML_INS        63
+#define HTML_N_INS      64
+#define HTML_U          65
+#define HTML_N_U        66
+#define HTML_STYLE      67
+#define HTML_N_STYLE    68
+#define HTML_WBR        69
+#define HTML_EM		70
+#define HTML_N_EM	71
+#define HTML_BODY	72
+#define HTML_N_BODY	73
+#define HTML_TR         74
+#define HTML_N_TR       75
+#define HTML_TD         76
+#define HTML_N_TD       77
+#define HTML_CAPTION    78
+#define HTML_N_CAPTION  79
+#define HTML_TH         80
+#define HTML_N_TH       81
+#define HTML_THEAD      82
+#define HTML_N_THEAD    83
+#define HTML_TBODY      84
+#define HTML_N_TBODY    85
+#define HTML_TFOOT      86
+#define HTML_N_TFOOT    87
+#define HTML_COLGROUP   88
+#define HTML_N_COLGROUP 89
+#define HTML_COL        90
+#define HTML_BGSOUND    91
+#define HTML_APPLET     92
+#define HTML_EMBED      93
+#define HTML_N_OPTION   94
+#define HTML_HEAD       95
+#define HTML_N_HEAD     96
+#define HTML_DOCTYPE    97
+#define HTML_NOFRAMES   98
+#define HTML_N_NOFRAMES 99
+#define HTML_SUP	100
+#define HTML_N_SUP	101
+#define HTML_SUB	102
+#define HTML_N_SUB	103
+#define HTML_LINK       104
+#define HTML_S          105
+#define HTML_N_S        106
+#define HTML_Q		107
+#define HTML_N_Q	108
+#define HTML_I		109
+#define HTML_N_I	110
+#define HTML_STRONG	111
+#define HTML_N_STRONG	112
+#define HTML_SPAN	113
+#define HTML_N_SPAN	114
+#define HTML_ABBR       115
+#define HTML_N_ABBR     116
+#define HTML_ACRONYM    117
+#define HTML_N_ACRONYM  118
+#define HTML_BASEFONT   119
+#define HTML_BDO        120
+#define HTML_N_BDO      121
+#define HTML_BIG        122
+#define HTML_N_BIG      123
+#define HTML_BUTTON     124
+#define HTML_FIELDSET   125
+#define HTML_N_FIELDSET 126
+#define HTML_IFRAME     127
+#define HTML_LABEL      128
+#define HTML_N_LABEL    129
+#define HTML_LEGEND     130
+#define HTML_N_LEGEND   131
+#define HTML_NOSCRIPT   132
+#define HTML_N_NOSCRIPT 133
+#define HTML_OBJECT     134
+#define HTML_OPTGROUP   135
+#define HTML_N_OPTGROUP 136
+#define HTML_PARAM      137
+#define HTML_SMALL      138
+#define HTML_N_SMALL    139
+
+   /* pseudo tag */
+#define HTML_SELECT_INT     160
+#define HTML_N_SELECT_INT   161
+#define HTML_OPTION_INT     162
+#define HTML_TEXTAREA_INT   163
+#define HTML_N_TEXTAREA_INT 164
+#define HTML_TABLE_ALT      165
+#define HTML_SYMBOL         166
+#define HTML_N_SYMBOL       167
+#define HTML_PRE_INT        168
+#define HTML_N_PRE_INT      169
+#define HTML_TITLE_ALT      170
+#define HTML_FORM_INT       171
+#define HTML_N_FORM_INT     172
+#define HTML_DL_COMPACT     173
+#define HTML_INPUT_ALT      174
+#define HTML_N_INPUT_ALT    175
+#define HTML_IMG_ALT        176
+#define HTML_N_IMG_ALT      177
+#define HTML_NOP	    178
+#define HTML_PRE_PLAIN	    179
+#define HTML_N_PRE_PLAIN    180
+#define HTML_INTERNAL       181
+#define HTML_N_INTERNAL     182
+#define HTML_DIV_INT        183
+#define HTML_N_DIV_INT      184
+
+#define MAX_HTMLTAG	    185
+
+/* Tag attribute */
+
+#define ATTR_UNKNOWN		0
+#define ATTR_ACCEPT		1
+#define ATTR_ACCEPT_CHARSET	2
+#define ATTR_ACTION		3
+#define ATTR_ALIGN		4
+#define ATTR_ALT		5
+#define ATTR_ARCHIVE		6
+#define ATTR_BACKGROUND		7
+#define ATTR_BORDER		8
+#define ATTR_CELLPADDING	9
+#define ATTR_CELLSPACING	10
+#define ATTR_CHARSET		11
+#define ATTR_CHECKED		12
+#define ATTR_COLS		13
+#define ATTR_COLSPAN		14
+#define ATTR_CONTENT		15
+#define ATTR_ENCTYPE		16
+#define ATTR_HEIGHT		17
+#define ATTR_HREF		18
+#define ATTR_HTTP_EQUIV		19
+#define ATTR_ID			20
+#define ATTR_LINK		21
+#define ATTR_MAXLENGTH		22
+#define ATTR_METHOD		23
+#define ATTR_MULTIPLE		24
+#define ATTR_NAME		25
+#define ATTR_NOWRAP		26
+#define ATTR_PROMPT		27
+#define ATTR_ROWS		28
+#define ATTR_ROWSPAN		29
+#define ATTR_SIZE		30
+#define ATTR_SRC		31
+#define ATTR_TARGET		32
+#define ATTR_TYPE		33
+#define ATTR_USEMAP		34
+#define ATTR_VALIGN		35
+#define ATTR_VALUE		36
+#define ATTR_VSPACE		37
+#define ATTR_WIDTH		38
+#define ATTR_COMPACT		39
+#define ATTR_START		40
+#define ATTR_SELECTED		41
+#define ATTR_LABEL		42
+#define ATTR_READONLY		43
+#define ATTR_SHAPE		44
+#define ATTR_COORDS		45
+#define ATTR_ISMAP		46
+#define ATTR_REL		47
+#define ATTR_REV		48
+#define ATTR_TITLE		49
+#define ATTR_ACCESSKEY		50
+
+/* Internal attribute */
+#define ATTR_XOFFSET		60
+#define ATTR_YOFFSET		61
+#define ATTR_TOP_MARGIN		62
+#define ATTR_BOTTOM_MARGIN	63
+#define ATTR_TID		64
+#define ATTR_FID		65
+#define ATTR_FOR_TABLE		66
+#define ATTR_FRAMENAME		67
+#define ATTR_HBORDER		68
+#define ATTR_HSEQ		69
+#define ATTR_NO_EFFECT		70
+#define ATTR_REFERER		71
+#define ATTR_SELECTNUMBER	72
+#define ATTR_TEXTAREANUMBER	73
+#define ATTR_PRE_INT		74
+
+#define MAX_TAGATTR		75
+
+/* HTML Tag Information Table */
+
+typedef struct html_tag_info {
+    char *name;
+    unsigned char *accept_attribute;
+    unsigned char max_attribute;
+    unsigned char flag;
+} TagInfo;
+
+#define TFLG_END	1
+#define TFLG_INT	2
+
+/* HTML Tag Attribute Information Table */
+
+typedef struct tag_attribute_info {
+    char *name;
+    unsigned char vtype;
+    unsigned char flag;
+} TagAttrInfo;
+
+#define AFLG_INT	1
+
+#define VTYPE_NONE	0
+#define VTYPE_STR	1
+#define VTYPE_NUMBER	2
+#define VTYPE_LENGTH	3
+#define VTYPE_ALIGN     4
+#define VTYPE_VALIGN    5
+#define VTYPE_ACTION    6
+#define VTYPE_ENCTYPE   7
+#define VTYPE_METHOD    8
+#define VTYPE_MLENGTH   9
+#define VTYPE_TYPE      10
+
+#define SHAPE_UNKNOWN	0
+#define SHAPE_DEFAULT	1
+#define SHAPE_RECT	2
+#define SHAPE_CIRCLE	3
+#define SHAPE_POLY	4
+
+extern TagInfo TagMAP[];
+extern TagAttrInfo AttrMAP[];
+
+struct environment {
+    unsigned char env;
+    int type;
+    int count;
+    char indent;
+};
+
+#define MAX_ENV_LEVEL    20
+#define MAX_INDENT_LEVEL 10
+
+#define INDENT_INCR IndentIncr
+
+#define SCM_UNKNOWN	255
+#define SCM_MISSING	254
+#define SCM_HTTP	0
+#define SCM_GOPHER	1
+#define SCM_FTP		2
+#define SCM_FTPDIR	3
+#define SCM_LOCAL	4
+#define SCM_LOCAL_CGI	5
+#define SCM_EXEC	6
+#define SCM_NNTP	7
+#define SCM_NNTP_GROUP	8
+#define SCM_NEWS	9
+#define SCM_NEWS_GROUP	10
+#define SCM_DATA	11
+#define SCM_MAILTO      12
+#ifdef USE_SSL
+#define SCM_HTTPS       13
+#endif				/* USE_SSL */
+
+#endif				/* _HTML_H */
+@
+
+
+1.30
+log
+@Support id attr on span etc
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.29 2007/05/23 12:01:43 inu Exp $ */
+d207 25
+d234 25
+a258 25
+#define HTML_SELECT_INT     120
+#define HTML_N_SELECT_INT   121
+#define HTML_OPTION_INT     122
+#define HTML_TEXTAREA_INT   123
+#define HTML_N_TEXTAREA_INT 124
+#define HTML_TABLE_ALT      125
+#define HTML_SYMBOL         126
+#define HTML_N_SYMBOL       127
+#define HTML_PRE_INT        128
+#define HTML_N_PRE_INT      129
+#define HTML_TITLE_ALT      130
+#define HTML_FORM_INT       131
+#define HTML_N_FORM_INT     132
+#define HTML_DL_COMPACT     133
+#define HTML_INPUT_ALT      134
+#define HTML_N_INPUT_ALT    135
+#define HTML_IMG_ALT        136
+#define HTML_N_IMG_ALT      137
+#define HTML_NOP	    138
+#define HTML_PRE_PLAIN	    139
+#define HTML_N_PRE_PLAIN    140
+#define HTML_INTERNAL       141
+#define HTML_N_INTERNAL     142
+#define HTML_DIV_INT        143
+#define HTML_N_DIV_INT      144
+d260 1
+a260 1
+#define MAX_HTMLTAG	    145
+@
+
+
+1.29
+log
+@change char to unsigned char for HTML_DL_COMPACT(133).
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.28 2007/04/19 12:00:38 inu Exp $ */
+d205 2
+@
+
+
+1.28
+log
+@avoid conflicts between input_alt and img_alt, and fix calculation of labeled line numbers when fold_line=1. [w3m-dev 04211]
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.27 2006/12/10 11:06:12 inu Exp $ */
+d352 1
+a352 1
+    char env;
+@
+
+
+1.27
+log
+@[w3m-dev 04185] display <em> and <i> elements with bold letters.
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.26 2006/05/29 12:54:26 inu Exp $ */
+d304 1
+d306 1
+a306 1
+#define MAX_TAGATTR		74
+@
+
+
+1.26
+log
+@[w3m-dev-en 01067] decode content-encoding in all situations.
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.25 2003/10/20 16:41:56 ukai Exp $ */
+d201 4
+d207 25
+a231 25
+#define HTML_SELECT_INT     110
+#define HTML_N_SELECT_INT   111
+#define HTML_OPTION_INT     112
+#define HTML_TEXTAREA_INT   113
+#define HTML_N_TEXTAREA_INT 114
+#define HTML_TABLE_ALT      115
+#define HTML_SYMBOL         116
+#define HTML_N_SYMBOL       117
+#define HTML_PRE_INT        118
+#define HTML_N_PRE_INT      119
+#define HTML_TITLE_ALT      120
+#define HTML_FORM_INT       121
+#define HTML_N_FORM_INT     122
+#define HTML_DL_COMPACT     123
+#define HTML_INPUT_ALT      124
+#define HTML_N_INPUT_ALT    125
+#define HTML_IMG_ALT        126
+#define HTML_N_IMG_ALT      127
+#define HTML_NOP	    128
+#define HTML_PRE_PLAIN	    129
+#define HTML_N_PRE_PLAIN    130
+#define HTML_INTERNAL       131
+#define HTML_N_INTERNAL     132
+#define HTML_DIV_INT        133
+#define HTML_N_DIV_INT      134
+d233 1
+a233 1
+#define MAX_HTMLTAG	    135
+@
+
+
+1.25
+log
+@#include <openssl/...>
+ suggested by ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+ [w3m-dev 03998] problem about pkg-config check for OpenSSL
+* html.h: #include <openssl/...>
+* istream.c: ditto
+* istream.h: ditto
+* url.c: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.24 2003/09/22 21:02:19 ukai Exp $ */
+d72 1
+@
+
+
+1.24
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.23 2003/04/18 16:47:18 ukai Exp $ */
+d5 3
+a7 3
+#include <bio.h>
+#include <x509.h>
+#include <ssl.h>
+@
+
+
+1.23
+log
+@[w3m-dev 03882] Re: Bug#189460: w3m: <q> tag is not recognized
+* file.c (HTMLtagproc1): add HTML_Q, HTML_N_Q
+* html.c (TagMAP): add "q", "/q"
+* html.h (HTML_Q): added
+	(HTML_N_Q): added
+* tagtable.tab: add q, /q
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.22 2003/01/15 16:11:43 ukai Exp $ */
+d208 2
+a209 2
+#define HTML_RULE           116
+#define HTML_N_RULE         117
+d355 1
+a355 1
+#define INDENT_INCR 4
+@
+
+
+1.22
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.21 2003/01/10 17:15:22 ukai Exp $ */
+d198 2
+d202 25
+a226 25
+#define HTML_SELECT_INT     108
+#define HTML_N_SELECT_INT   109
+#define HTML_OPTION_INT     110
+#define HTML_TEXTAREA_INT   111
+#define HTML_N_TEXTAREA_INT 112
+#define HTML_TABLE_ALT      113
+#define HTML_RULE           114
+#define HTML_N_RULE         115
+#define HTML_PRE_INT        116
+#define HTML_N_PRE_INT      117
+#define HTML_TITLE_ALT      118
+#define HTML_FORM_INT       119
+#define HTML_N_FORM_INT     120
+#define HTML_DL_COMPACT     121
+#define HTML_INPUT_ALT      122
+#define HTML_N_INPUT_ALT    123
+#define HTML_IMG_ALT        124
+#define HTML_N_IMG_ALT      125
+#define HTML_NOP	    126
+#define HTML_PRE_PLAIN	    127
+#define HTML_N_PRE_PLAIN    128
+#define HTML_INTERNAL       129
+#define HTML_N_INTERNAL     130
+#define HTML_DIV_INT        131
+#define HTML_N_DIV_INT      132
+d228 1
+a228 1
+#define MAX_HTMLTAG	    133
+@
+
+
+1.21
+log
+@fix compiler warnings
+* html.h (UFclose): value computed but not used
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.20 2003/01/10 17:06:23 ukai Exp $ */
+d18 1
+@
+
+
+1.20
+log
+@[w3m-dev 03632] cleanup (don't close connection of news server)
+* file.c (loadSomething): remove UFclose nntp:,news:
+	(loadFile): UFclose
+	(loadGeneralFile): always UFclose
+* html.h (UFclose): only reset when ISclose ==0
+* istream.c (ISclose): return int
+	(ISfileno): flag IST_UNCLOSE
+* istream.h (ISclose): return int
+	(IST_UNCLOSE): added
+* news.c (news_close): reset IST_UNCLOSE
+	(news_open): set IST_UNCLOSE
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.19 2003/01/08 17:24:12 ukai Exp $ */
+d17 1
+a17 1
+#define UFclose(f) (ISclose((f)->stream) == 0 && ((f)->stream = NULL))
+@
+
+
+1.19
+log
+@[w3m-dev 03616] Re: data: URL scheme
+* file.c (loadGeneralFile): check SCM_DATA
+	(loadImageBuffer): newBuffer()
+* html.h (SCM_DATA): added
+* indep.c (url_unquote): deleted
+	(Str_url_unquote): renamed from Str_form_unquote
+			+ is decoded is_form only
+* indep.h (url_unquote): deleted
+	(Str_url_unquote): added
+	(Str_form_unquote): define by Str_url_unquote
+* main.c (followA): file_unquote
+	(cmd_loadURL): file_unquote
+* url.c (DefaultPort): add for data:
+	(schemetable): add "data"
+	(DefaultFile): SCM_FTPDIR
+	(parseURL): scheme copied from current
+	(parseURL2): SCM_DATA
+		check SCM_FTP, SCM_FTPDIR
+	(_parsedURL2Str): add data in scheme_str
+		handle SCM_DATA
+		SCM_FTPDIR
+	(openURL): file_unquote
+		handle SCM_DATA
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.18 2003/01/06 15:36:59 ukai Exp $ */
+d17 1
+a17 1
+#define UFclose(f) (ISclose((f)->stream), (f)->stream = NULL)
+@
+
+
+1.18
+log
+@[w3m-dev 03610] Re: news:<newsgroup>
+* anchor.c (_put_anchor_news): check '<'
+	(reAnchorNewsheader): added
+* file.c (loadSomething): Subject: as buffername
+	(checkHeader): check buf->document_header
+	(loadGeneralFile): reAnchorNewsheader
+* html.h (SCM_NNTP_GROUP): added
+* main.c (main): delete USE_NNTP in switch (newbuf->real_scheme)
+	(chkNMIDBuffer): lowercase in url_like_pat
+* news.c (add_news_message): add scheme, group as arg
+	(openNewsStream): check SCM_NNTP_GROUP
+			check current_news.host
+	(readNewsgroup): rewrite to support nntp:,news: extension
+* proto.h (reAnchorNewsheader): added
+* url.c (DefaultPort): add 119 for nntp group
+	(parseURL2): rewrite to support nntp:,news: extension
+	(_parsedURL2Str): add for SCM_NNTP_GROUP
+	(openURL): rewrite to support nntp:,news: extension
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.17 2002/12/27 16:07:44 ukai Exp $ */
+d367 2
+a368 1
+#define SCM_MAILTO      11
+d370 1
+a370 1
+#define SCM_HTTPS       12
+@
+
+
+1.17
+log
+@[w3m-dev 03608] news:<newsgroup>
+* XMakefile (LSRCS): add news.c
+	(LOBJS): add news.o
+* file.c (loadSOmething): don't UFclose() for nntp/news
+	(readHeader): remove . at beginning of line for news
+		img link to file:
+	(loadGeneralFile): add SCM_NEWS_GROUP
+		don't UFclose() for nntp/news
+	(loadHTMLstream): . line check for news
+	(loadBuffer): . line check for news
+* fm.h (NNTP_server): added
+	(NNTP_mode): added
+	(MaxNewsMessage): added
+* html.h (SCM_NEWS_GROUP): added
+* main.c (main): NNTP_server or NNTPSERVER
+		NNTP_mode or NNTPMODE
+		add SCM_NEWS_GROUP
+	(followA): remove news:..@@.. check
+	(cmd_loadURL): remove news:...@@.. check
+	(w3m_exit): disconnectNews
+* proto.h (openNewsStream): added
+	(readNewsgroup): added
+	(disconnectNews): added
+* rc.c (CMT_NNTP_SERVER): added
+	(CMT_NNTP_MODE): added
+	(CMT_MAX_NEWS): added
+	(params9): add nntpserver, nntpmode, max_news
+* url.c (DefaultPort): add 119 for news group
+	(parseURL2): news:..@@... is SCM_NEWS_GROUP
+	(_parsedURL2Str): add news for SCM_NEWS_GROUP
+	(openURL): cleanup SCM_NEWS
+		add SCM_NEWS_GROUP
+* news.c: added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.16 2002/12/14 15:18:38 ukai Exp $ */
+d364 4
+a367 3
+#define SCM_NEWS	8
+#define SCM_NEWS_GROUP	9
+#define SCM_MAILTO      10
+d369 1
+a369 1
+#define SCM_HTTPS       11
+@
+
+
+1.16
+log
+@[w3m-dev 03568] Re: preserve timestamp
+* etc.c (USE_COOKIE): moved
+* file.c (utime.h): include
+	(setModtime): added
+	(loadGeneralFile): set f.modtime
+	(_doFileCopy): setModtime()
+	(doFileSave): setModtime()
+* ftp.c (getFtpModtime): added
+	(openFTP): pass URLFile, set modtime
+* html.h (URLFile): add modtime
+* proto.h (openFTP): arg URLFile *uf
+	(mymktime): always
+* url.c (init_stream): initialize modtime
+	(openFTPStream): pass URLFile
+	(openURL): openFTPStream
+From: Takahashi Youichirou <nikuq@@hk.airnet.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.15 2002/12/09 15:40:37 ukai Exp $ */
+d365 2
+a366 1
+#define SCM_MAILTO      9
+d368 1
+a368 1
+#define SCM_HTTPS       10
+@
+
+
+1.15
+log
+@[w3m-dev 03548] close anchor before <img align=...>
+* file.c (process_img): use div_int
+	(process_hr): use div_int
+	(process_idattr): don't close_anchor
+	(CLOSE_A): added
+	(HTMLtagproc1): </p> close anchor
+	  <dl>,<ul>,<ol>,<blockquote>,<li>,<dt>,<dd> close anchor
+	  <noframes> close anchor
+	  <pre> close anchor
+	  <center> close anchor
+	  <div> close anchor
+	  add DIV_INT
+	  <form> close anchor
+* html.c (TagMAP): add div_int
+* html.h (HTML_DIV_INT): added
+	(HTML_N_DIV_INT): added
+* tagtable.tab (div_int): added
+		(/div_int): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.14 2002/12/06 16:50:28 ukai Exp $ */
+d76 1
+@
+
+
+1.14
+log
+@[w3m-dev 03536] <del>, <s>
+* file.c (HTMLtagproc1): <s>..</s> is [S:...:S]
+	(HTMLtagproc0): <del> will delete <table>
+* fm.h (RB_S): added
+* html.c (TagMAP): <s>,</s>
+		move <internal>, </internal>
+* html.h (HTML_S): added
+	(HTML_N_S): added
+	(HTML_INTERNAL): renumed
+	(HTML_N_INTERNAL): ditto
+	(MAX_HTMLTAG): add 2
+* rc.c (CMT_DISP_INS_DEL): update
+* table.c (feed_table_tag): add HTML_S, HTML_N_S
+* table.h (TBLM_S): added
+	(TBLM_ANCHOR): renum
+* tagtable.tab: (strike, s): HTML_S
+	(/strike, /s): HTML_N_S
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.13 2002/12/05 16:29:08 ukai Exp $ */
+d221 2
+d224 1
+a224 1
+#define MAX_HTMLTAG	    131
+@
+
+
+1.13
+log
+@[w3m-dev 03529] Support of title, accesskey of anchor
+* anchor.c (putAnchor): arg title, key
+			initialize slave
+	(registerHref): arg title, key
+	(registerName): title = NULL, key = '\0'
+	(registerForm): title = NULL, key = '\0'
+	(_put_anchor_news): title = NULL, key = '\0'
+	(_put_anchor_all): title = NULL, key = '\0'
+	(addMultirowsImg): register title, accesskey
+	(addMultirowsForm): title = NULL, key = '\0'
+	(getAnchorText): added
+* display.c (displayBuffer): show title if any
+* file.c (set_breakpoint): use bcopy
+	(back_to_breakpoint): use bcopy
+	(flushline): s/anchor/anchor.url/
+		     s/anchor_hseq/anchor.hseq/
+		     s/anchor_target/anchor.target/
+		     add anchor.*
+	(close_effect0): s/anchor/anchor.url/
+			s/anchor_hseq/anchor.hseq/
+	(close_anchor): use bzero
+	(process_img): ATTR_TITLE,
+	(HTMLtagproc1): s/anchor/anchor.url/
+			target, referer, title, accesskey, hseq
+	(HTMLlineproc2body): ATTR_TITLE, ATTR_ACCESSKEY
+	(init_henv): use bzero
+* fm.h (Anchor): add title, accesskey, slave
+	(Breakpoint): use Anchor
+	(struct readbuffer): use Anchor
+* funcname.tab (ACCESSKEY): added
+	(LINK_MENU): added
+* html.c (ALST_A): add ATTR_TITLE, ATTR_ACCESSKEY
+	(ALST_IMG): add ATTR_TITLE
+	(ALST_IMG_ALT): add ATTR_TITLE
+	(AttrMAP): add accesskey, renum
+* html.h (ATTR_ACCESSKEY): added
+	(ATTR_*): renum 50->60
+* main.c (linkMn): added
+	(accessKey): added
+* menu.c (LinkMenu): deleted
+	(LinkV): deleted
+	(initLinkMenu): deleted
+	(lmGoURL): deleted
+	(popupMenu): delete initLinkMenu()
+	(initMenu): delete Link
+	(link_menu): added
+	(accesskey_menu): added
+* proto.h (linkMn): added
+	(link_menu): added
+	(accessKey): added
+	(accesskey_menu): added
+	(putAnchor): arg title, key
+	(registerHref): arg title, key
+	(registerImg): arg title
+	(getAnchorText): added
+* doc/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* doc-jp/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* scripts/w3mhelp.cgi.in (Hyperlink operation): add linkMn accessKey
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.12 2002/12/03 15:35:11 ukai Exp $ */
+d194 2
+a197 2
+#define HTML_INTERNAL       106
+#define HTML_N_INTERNAL     107
+d219 2
+d222 1
+a222 1
+#define MAX_HTMLTAG	    129
+@
+
+
+1.12
+log
+@[w3m-dev 03509] HTML parser
+* file.c (close_textarea): delete
+	(HTMLtagproc1): rewrite
+			delete HTML_EOL
+			move HTML_LISTING, HTML_N_LISTING
+			add HTML_PRE_PLAIN, HTML_N_PRE_PLAIN
+			add HTML_PLAINTEXT
+			end_tag
+	(HTMLlineproc0): s/str/line/
+			rewrite
+	(completeHTMLstream): </textarea> if necessary
+* fm.h (struct readbuffer): delete ignore_tag
+			add end_tag
+	(RB_XMPMODE): deleted
+	(RB_LSTMODE): deleted
+	(RB_SCRIPT): added
+	(RB_STYLE): added
+	(RB_*): renumber
+	(R_ST_EOL): added
+	(R_ST_*): renumber
+	(ST_IS_TAG): check R_ST_EOL
+* form.c (form_fputs_decode): remove <eol> handling
+* frame.c (newFrame): remove_space()
+	(CASE_TABLE_TAG): added
+	(createFrameFile): rewrite
+* html.c (TagMAP): delete eol
+		add pre_plain, /pre_plain
+* html.h (HTML_EOL): deleted
+	(HTML_PRE_PLAIN): added
+	(HTML_N_PRE_PLAIN): added
+* table.c (visible_length): rewrite
+	(visible_length_plain): added
+	(maximum_visible_length_plain): added
+	(do_refill): R_ST_EOL
+	(table_close_select): end_tag
+	(table_close_textarea): end_tag
+	(TAG_ACTION_PLAIN): added
+	(feed_table_tag): rewrite
+	(feed_table): rewrite
+* table.h (TBLM_*) reassign
+	(struct table_mode): delete ignore_tag
+			add end_tag
+* tagtable.tab (eol): deleted
+		(pre_plain): added
+		(/pre_plain): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.11 2002/12/02 17:27:39 ukai Exp $ */
+d274 1
+d277 14
+a290 14
+#define ATTR_XOFFSET		50
+#define ATTR_YOFFSET		51
+#define ATTR_TOP_MARGIN		52
+#define ATTR_BOTTOM_MARGIN	53
+#define ATTR_TID		54
+#define ATTR_FID		55
+#define ATTR_FOR_TABLE		56
+#define ATTR_FRAMENAME		57
+#define ATTR_HBORDER		58
+#define ATTR_HSEQ		59
+#define ATTR_NO_EFFECT		60
+#define ATTR_REFERER		61
+#define ATTR_SELECTNUMBER	62
+#define ATTR_TEXTAREANUMBER	63
+d292 1
+a292 1
+#define MAX_TAGATTR		64
+@
+
+
+1.11
+log
+@[w3m-dev 03501] link tag support
+* buffer.c (reshapeBuffer): initialize formlist, linklist,
+				maplist, hmarklist, imarklist
+* file.c (addLink): added
+	(HTMLlineproc2body): add HTML_LINK
+	(loadHTMLstream): use HTMLlineproc0 not in R_ST_NORMAL
+	(reloadBuffer): initialize linklist, maplist,
+			hmarklist, imarklist
+* fm.h (LINK_TYPE_NONE): added
+	(LINK_TYPE_REL): added
+	(LINK_TYPE_REV): added
+	(LinkList): added
+	(Buffer): add linklist
+* html.c (ALST_LINK): added
+	(TagMAP): add link
+	(AtrMAP): add rel, rev, title
+* html.h (HTML_LINK): added
+	(ATTR_REL): added
+	(ATTR_REV): added
+	(ATTR_TITLE): added
+* map.c (append_map_info): anchor
+	(append_link_info): added
+	(page_info_panel): append_link_info
+* menu.c (LinkMenu): added
+	(linkV): added
+	(initLinkMenu): added
+	(lmGoURL): added
+	(popupMenu): initLinkMenu()
+	(initMenu): w3mMenuList new 4
+			add "Link"
+* tagtable.tab (link): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.10 2002/11/15 15:19:45 ukai Exp $ */
+d216 3
+a218 2
+#define HTML_EOL            126
+#define HTML_NOP	    127
+d220 1
+a220 1
+#define MAX_HTMLTAG	    128
+@
+
+
+1.10
+log
+@[w3m-dev 03431] save file by background process
+* file.c (loadGeneralFile): use _doFileCopy()
+	(_doFileCopy): renamed from doFileCopy()
+			lock
+			fork & save
+	(doFileSave): lock
+			fork & save
+* fm.h (DownloadList): added
+	(FirstDL): added
+	(LastDL): added
+* form.c (struct internal_action): add download
+* funcname.tab (DOWNLOAD_LIST): added
+* html.h (URLFile): add url
+* main.c (dump_extra): add add_download_list
+	(main): add_download_list, ldDL()
+	(_quitfm): added
+	(quitfm): rewrite with _quitfm()
+	(qquitfm): ditto
+	(w3m_exit): stopDownload()
+	(addDownloadList): added
+	(checkDownloadList): added
+	(convert_size3): added
+	(DownloadListBuffer): added
+	(download_action): added
+	(stopDownload): added
+	(ldDL): added
+* proto.h (ldDL): added
+	(convert_size): added
+	(convert_size2): added
+	(doFileCopy): deleted
+	(_doFileCopy): added
+	(addDownloadList): added
+	(stopDownload): added
+	(checkDownloadList): added
+	(download_action): added
+* url.c (openURL): save url in uf
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.9 2002/10/10 16:59:33 ukai Exp $ */
+d193 1
+d270 3
+d275 14
+a288 15
+#define ATTR_XOFFSET		49
+#define ATTR_YOFFSET		50
+#define ATTR_TOP_MARGIN		51
+#define ATTR_BOTTOM_MARGIN	52
+#define ATTR_TID		53
+#define ATTR_FID		54
+#define ATTR_FOR_TABLE		55
+#define ATTR_FRAMENAME		56
+#define ATTR_HBORDER		57
+#define ATTR_HSEQ		58
+#define ATTR_NO_EFFECT		59
+#define ATTR_REFERER		60
+#define ATTR_SELECTNUMBER	61
+#define ATTR_TEXTAREANUMBER	62
+#define ATTR_TITLE		63
+@
+
+
+1.9
+log
+@ [w3m-dev 03339] Re: Debian Bug#164098 w3m: <sup> is not properly supported
+* file.c (HTMLtagproc1): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* html.c (TagMAP): sup, /sup, sub, /sub
+* html.c (HTML_SUP): added
+	(HTML_N_SUP): added
+	(HTML_SUB): added
+	(HTML_N_SUB): added
+* table.c (feed_table_tag): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* tagtable.tab (sup): added
+	(/sup): added
+	(sub): added
+	(/sub): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.8 2002/09/28 16:30:07 ukai Exp $ */
+d75 1
+@
+
+
+1.8
+log
+@Re: [w3m-dev 03320] Re: Passwords
+* etc.c (dir_under): same path is ok
+* file.c (loadGeneralFile): if missing, return NULL
+	ssl cert already checked
+* html.h (URLFILE): add ssl_certificate
+* istream.c (ssl_get_certificate): change args
+* istream.h (ssl_get_certificate): ditto
+* url.c (openSSLHandle): add p_cert
+	ssl certificate check here
+	(HTTPrequest): auth_cookie fix
+From: AIDA Shinra <aida-s@@jcom.home.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.7 2002/02/05 12:31:27 ukai Exp $ */
+d188 4
+a191 1
+
+@
+
+
+1.7
+log
+@[w3m-dev 02991] form support in w3m -halfdump foo.html|w3m -halfload
+* fm.h (DUMP_HALFEXTRA): deleted
+* proto.h (process_select): return Str
+* file.c (process_img): process_form() fix
+* file.c (process_input): process_form() fix
+* file.c (process_select): return Str
+			process_form() fix
+* file.c (process_textarea): process_form() fix
+* file.c (process_form): support -halfdump
+* file.c (HTMLtagproc1): delete case HTML_FORM_INT, HTML_N_FORM_INT
+			process_{form,select,textarea}() fix
+* file.c (HTMLlineproc2body): support -halfload
+		HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_FORM_INT, HTML_FORM_INT,
+		HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TITLE_ALT
+* file.c (print_internal_information): fix -halfdump
+* file.c (loadHTMLstream): no DUMP_HALFEXTRA
+* html.h: add HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT
+* html.c (ALST_TEXTAREA_INT): added
+* html.c (ALST_SELECT_INT): added
+* html.c: add <internal>, </internal>, <select_int>, </select_int>
+	<option_int>, <textarea_int>, </textarea_int>
+* main.c (MAIN): delete -halfdump_extra
+	dont output <pre> by -halfdump
+* table.c (feed_table_tag): process_{form,select}() fix
+	add case HTML_INTERNAL, HTML_N_INTERNAL,
+	    HTML_SELECT_INT, HTML_N_SELECT_INT,
+	    HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+* tagtable.tab: add internal, /internal, select_int, /select_int
+	option_int, textarea_int, /textarea_int
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.6 2002/01/31 17:54:51 ukai Exp $ */
+d72 3
+@
+
+
+1.6
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.5 2001/12/06 15:31:58 ukai Exp $ */
+d188 7
+@
+
+
+1.5
+log
+@[w3m-dev 02622]
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.4 2001/11/24 02:01:26 ukai Exp $ */
+d251 4
+a254 1
+#define ATTR_READONLY        43
+d257 4
+a260 2
+#define ATTR_TOP_MARGIN        51
+#define ATTR_BOTTOM_MARGIN      52
+d308 6
+@
+
+
+1.4
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+d183 2
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+a1 1
+/* $Id: html.h,v 1.4.2.6 2000/12/26 06:17:30 okabe Exp $ */
+d271 4
+a274 4
+    char 		*name;
+    unsigned char 	*accept_attribute;
+    unsigned char 	max_attribute;
+    unsigned char 	flag;
+d283 3
+a285 3
+    char 		*name;
+    unsigned char 	vtype;
+    unsigned char 	flag;
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d59 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d39 1
+d58 1
+d82 1
+d248 1
+d251 2
+d270 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

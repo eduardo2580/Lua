@@ -1,0 +1,148 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.1.1.1
+	release-0-5:1.1.1.1
+	release-0-4-2:1.1.1.1
+	release-0-4-1:1.1.1.1
+	release-0-4:1.1.1.1
+	release-0-4-rc3:1.1.1.1
+	release-0-4-rc2:1.1.1.1
+	release-0-4-rc1:1.1.1.1
+	release-0-3-2-2:1.1.1.1
+	release-0-3-2-1:1.1.1.1
+	branch-0-3-2:1.1.1.1.0.6
+	release-0-3-2:1.1.1.1
+	release-0-3-2-rc4:1.1.1.1
+	release-0-3-2-rc3:1.1.1.1
+	release-0-3-2-rc2:1.1.1.1
+	release-0-3-2-rc1:1.1.1.1
+	release-0-3-1:1.1.1.1
+	release-0-3:1.1.1.1
+	release-0-2-5-1:1.1.1.1
+	branch-0-2-5:1.1.1.1.0.4
+	release-0-2-5:1.1.1.1
+	release-0-2-4:1.1.1.1
+	release-0-2-3-2:1.1.1.1
+	release-0-2-3-1:1.1.1.1
+	release-0-2-3:1.1.1.1
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2006.04.07.15.22.07;	author inu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.38;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.38;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@rewind to 10 Feb 2006.
+@
+text
+@# A sample of ~/.w3m/menu  (submenu type)
+#
+# menu MENU_ID
+#  func  LABEL FUNCTION KEYS
+#  popup LABEL MENU_ID  KEYS
+#  nop   LABEL
+# end
+#
+# MENU_ID
+#  Main:   メインメニュー
+#  Select: バッファ選択メニュー
+
+menu Main
+ func	"戻る         (b)"	BACK		"b"
+ popup	"バッファ操作>(f)"	Buffer		"fF"
+ popup	"リンク操作  >(l)"	Link		"lL"
+ nop	"────────"
+ popup	"ブックマーク>(B)"	Bookmark	"B"
+ func	"ヘルプ       (h)"	HELP		"hH"
+ func	"オプション   (o)"	OPTIONS		"oO"
+ nop	"────────"
+ func	"終了         (q)"	QUIT		"qQ"
+end
+
+menu Buffer
+ popup	"バッファ選択 (s)"	Select		"s"
+ func	"ソースを表示 (v)"	VIEW		"vV"
+ func	"ソースを編集 (e)"	EDIT		"eE"
+ func	"ソースを保存 (S)"	SAVE		"S"
+ func	"再読み込み   (r)"	RELOAD		"rR"
+end
+
+menu Link
+ func	"リンクを表示 (a)"	GOTO_LINK	"a"
+ func	"リンクを保存 (A)"	SAVE_LINK	"A"
+ func	"画像を表示   (i)"	VIEW_IMAGE	"i"
+ func	"画像を保存   (I)"	SAVE_IMAGE	"I"
+ func	"フレーム表示 (f)"	FRAME		"fF"
+end
+
+menu Bookmark
+ func   "ブックマークを読み込む (b)"	BOOKMARK	"bB"
+ func   "ブックマークに追加     (a)"	ADD_BOOKMARK	"aA"
+end
+@
+
+
+1.2
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS FUNCTION_ARGUMENT
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

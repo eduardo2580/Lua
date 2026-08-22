@@ -1,0 +1,144 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1
+	release-0-4-2:1.1
+	release-0-4-1:1.1
+	release-0-4:1.1
+	release-0-4-rc3:1.1
+	release-0-4-rc2:1.1
+	release-0-4-rc1:1.1
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.2
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2002.04.09.14.45.58;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@[w3m-dev 03167] xface2xbm -> xface2xpm (current imlib can't handle XBM)
+* configure: s/XFACE2XBM/XFACE2XPM/
+* config.h.dist: ditto
+* file.c (xface2xpm): renamed from xface2xbm
+		modified for xpm
+	(readHeader): s/xface2xbm/xface2xpm/
+* scripts/Makefile (LIB_TARGETS): s/xface2xbm/xface2xpm/
+* scripts/xface2xpm.in: added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@#!@@PERL@@
+
+$USAGE = "xface2xpm [-t] [-fg <color>] [-bg <color>] [<file>]";
+
+# compface/uncompface
+#   ftp://metalab.unc.edu/pub/Linux/apps/graphics/convert/
+$UNCOMPFACE = "uncompface";
+
+$T = "c";
+$BG = "white";
+$FG = "black";
+while (@@ARGV) {
+	$_ = shift @@ARGV;
+	if (/^-h/) {
+		&usage(0);
+	} elsif (/^-t/) {
+		$T = "s";
+		$BG = "none";
+	} elsif (/^-bg/) {
+		@@ARGV || &usage(1);
+		$BG = shift @@ARGV;
+	} elsif (/^-fg/) {
+		@@ARGV || &usage(1);
+		$FG = shift @@ARGV;
+	} elsif (/^-./) {
+		&usage(1);
+	} else {
+		unshift(@@ARGV, $_);
+		last;
+	}
+}
+
+$xf = "";
+while(<>) {
+#	s/^X-Face://i if ($xf eq "");
+	$xf .= $_;
+}
+
+pipe(R, W2);
+pipe(R2, W);
+if (! fork()) {
+	close(R);
+	close(W);
+	open(STDIN, "<&R2");
+	open(STDOUT, ">&W2");
+	exec $UNCOMPFACE;
+	exit 1;
+}
+close(R2);
+close(W2);
+print W $xf;
+close(W);
+while(<R>) {
+	while(s/0x(..)(..)//) {
+		push(@@bm, hex($1), hex($2));
+	}
+}
+close(R);
+@@bm || exit 1;
+
+$W = 48;
+$H = @@bm * 8 / $W;	# must be 48
+print <<EOF;
+/* XPM */
+static char *xf[] = {
+/* columns rows colors chars-per-pixel */
+"$W $H 2 1",
+"  $T $BG",
+". c $FG",
+/* pixels */
+EOF
+while (@@bm) {
+	print "\"";
+	for (1..6) {
+		$x = shift @@bm;
+		for $i (1 .. 8) {
+			print ((($x >> (8-$i)) & 1) ? "." : " ");
+		}
+	}
+	print (@@bm ? "\",\n" : "\"\n");
+}
+print <<EOF;
+};
+EOF
+
+sub usage {
+	local($err) = @@_;
+	if ($err) {
+		print STDERR "$USAGE\n";
+	} else {
+		print "$USAGE\n";
+	}
+	exit $err;
+}
+@

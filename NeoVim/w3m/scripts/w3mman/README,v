@@ -1,0 +1,150 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.3
+	release-0-5:1.3
+	release-0-4-2:1.3
+	release-0-4-1:1.3
+	release-0-4:1.3
+	release-0-4-rc3:1.3
+	release-0-4-rc2:1.3
+	release-0-4-rc1:1.3
+	release-0-3-2-2:1.2
+	release-0-3-2-1:1.2
+	branch-0-3-2:1.2.0.4
+	release-0-3-2:1.2
+	release-0-3-2-rc4:1.2
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.2
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.12.18.16.48.02;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.21.09.21.59;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.15.00.32.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@[w3m-dev 03583] w3mman
+* scripts/w3mman/README: W3MMAN_W3M, W3MMAN_MAN
+* scripts/w3mman/w3mman.1.in: add ENVIRONMENT
+* scripts/w3mman/w3mman.in: $ENV{'W3MMAN_W3M'}, $ENV{'W3MMAN_MAN'}
+* scripts/w3mman/w3mman2html.cgi.in: $ENV{'W3MMAN_MAN'}
+				hyphenation
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@
+w3mman
+
+    他のマニュアルやヘッダファイルにリンクをはることができる
+    man コマンドの代替コマンドです。
+
+使用法
+
+    w3mman
+    w3mman <command>[(<section>)]
+    w3mman [<section>] <command>
+    w3mman -k <keyword>
+
+環境変数
+
+    W3MMAN_W3M
+        使用する w3m コマンドを指定します(デフォルトは w3m)
+    W3MMAN_MAN
+        使用する man コマンドを指定します(デフォルトは man)
+
+インストール
+
+    make install
+    必要なら PERL, MAN, LIBDIR を設定してください。
+    w3mman2html.cgi もインストールされます。
+
+================
+
+w3mman2html.cgi
+
+使用法
+
+    w3m file:///$LIB/w3mman2html.cgi
+    w3m file:///$LIB/w3mman2html.cgi?<command>[(<section>)]
+    w3m file:///$LIB/w3mman2html.cgi?man=<command>[&section=<section>]
+    w3m file:///$LIB/w3mman2html.cgi?keyword=<keyword>
+
+インストール
+
+    make install
+    必要なら PERL, MAN, LIBDIR を設定してください。
+    w3mman もインストールされます。
+
+================
+
+hlink.cgi
+
+    ヘッダファイルなどにリンクを張る
+
+インストール
+
+    /$LIB/ にコピー
+    w3mman2html.cgi で使用するならば $CGI2 に設定してください。
+
+@
+
+
+1.2
+log
+@[w3m-dev 02470]
+Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d14 7
+@
+
+
+1.1
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d17 1
+a17 1
+    必要なら PERL, MAN, W3M_LIBDIR を設定してください。
+d34 1
+a34 1
+    必要なら PERL, MAN, W3M_LIBDIR を設定してください。
+@
+

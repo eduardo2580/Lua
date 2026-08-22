@@ -1,0 +1,1654 @@
+head	1.47;
+access;
+symbols
+	release-0-5-3:1.44
+	release-0-5-2:1.42
+	release-0-5-1:1.39
+	release-0-5:1.33
+	release-0-4-2:1.11;
+locks; strict;
+comment	@# @;
+
+
+1.47
+date	2012.05.22.10.20.45;	author inu;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2012.05.22.10.16.34;	author inu;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2012.05.22.09.53.21;	author inu;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2010.12.15.10.50.24;	author htrb;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2007.05.29.12.01.04;	author inu;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2007.05.27.10.43.41;	author inu;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2004.05.10.17.45.06;	author ukai;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2004.04.26.17.04.48;	author ukai;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2004.04.26.17.00.38;	author ukai;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.04.09.17.18.49;	author ukai;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.04.04.16.47.20;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.03.21.18.45.05;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2004.03.21.18.36.19;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2004.03.21.16.40.41;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.03.21.15.09.57;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.03.21.14.03.41;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.12.08.16.15.18;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.10.10.16.33.13;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.10.05.16.14.02;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.09.29.16.39.31;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.09.29.16.37.13;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.09.29.16.34.09;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.09.28.16.13.26;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.09.26.20.58.51;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.09.26.20.45.53;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.09.25.18.09.00;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.09.25.16.39.16;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.09.25.04.36.35;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.09.25.03.35.48;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.09.24.18.35.06;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.09.23.18.42.25;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.09.22.23.12.56;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.09.22.22.53.52;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.09.22.21.27.42;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.09.22.21.02.15;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.07.26.17.16.24;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.04.04.16.00.23;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.28.10.19.16;	author inu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.03.28.10.17.17;	author inu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.03.19.16.18.32;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.13.15.29.44;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.12.18.27.04;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.12.17.29.00;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.12.17.20.43;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.10.18.30.31;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.09.19.40.06;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.47
+log
+@[w3m-dev 04451] add entity.h to "make clean" target.
+@
+text
+@#
+# Makefile
+# @@configure_input@@
+#
+@@SET_MAKE@@
+SHELL=@@SHELL@@
+PACKAGE = @@PACKAGE@@
+VERSION = @@VERSION@@
+DOMAIN = $(PACKAGE)
+prefix = @@prefix@@
+exec_prefix = @@exec_prefix@@
+datarootdir = @@datarootdir@@
+bindir = @@bindir@@
+datadir = @@datadir@@
+localedir = $(datadir)/locale
+libdir = @@libdir@@
+includedir = @@includedir@@
+infodir = @@infodir@@
+libexecdir = @@libexecdir@@
+localstatedir = @@localstatedir@@
+mandir = @@mandir@@
+oldincludedir = @@oldincludedir@@
+sbindir = @@sbindir@@
+sharedstatedir = @@sharedstatedir@@
+srcdir = @@srcdir@@
+sysconfdir = @@sysconfdir@@
+top_srcdir = @@top_srcdir@@
+top_builddir = .
+VPATH = $(top_srcdir):.
+
+CGIBIN_DIR = $(libexecdir)/$(PACKAGE)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(PACKAGE)
+HELP_DIR = @@HELP_DIR@@
+RC_DIR = @@RC_DIR@@
+ETC_DIR = $(sysconfdir)
+CONF_DIR = $(sysconfdir)/$(PACKAGE)
+
+CFLAGS = $(OPTS) -I. -I$(top_srcdir) @@CFLAGS@@ $(CPPFLAGS) $(DEFS)
+WCCFLAGS = @@WCCFLAGS@@
+CPPFLAGS = @@CPPFLAGS@@
+DEFS = @@DEFS@@ -DAUXBIN_DIR=\"$(AUXBIN_DIR)\" \
+	-DCGIBIN_DIR=\"$(CGIBIN_DIR)\" -DHELP_DIR=\"$(HELP_DIR)\" \
+	-DETC_DIR=\"$(ETC_DIR)\" -DCONF_DIR=\"$(CONF_DIR)\" \
+	-DRC_DIR=\"$(RC_DIR)\" \
+        -DLOCALEDIR=\"$(localedir)\"
+LDFLAGS = @@LDFLAGS@@
+LIBS = @@LIBS@@
+GC_LIBS = @@LIBGC@@
+EXT_LIBS = -L. -lindep @@LIBINTL@@ $(GC_LIBS)
+W3M_LIBS = @@W3M_LIBS@@
+WCTARGET = @@WCTARGET@@
+NLSTARGET = @@NLSTARGET@@
+
+MAKE_ARGS = PERL='$(PERL)' MKDIR='$(MKDIR)' \
+	BIN_DIR='$(bindir)' AUXBIN_DIR='$(AUXBIN_DIR)' \
+	CGIBIN_DIR='$(CGIBIN_DIR)' \
+	HELP_DIR='$(HELP_DIR)' MAN_DIR='$(mandir)' ETC_DIR='$(ETC_DIR)' \
+	CONF_DIR='$(CONF_DIR)' \
+	RC_DIR='$(RC_DIR)' DESTDIR='$(DESTDIR)' KEYBIND_SRC='$(KEYBIND_SRC)'
+
+IMGCFLAGS = @@IMGX11CFLAGS@@ @@IMGFBCFLAGS@@ @@IMGWINCFLAGS@@
+IMGLDFLAGS = @@IMGX11LDFLAGS@@ @@IMGFBLDFLAGS@@ @@IMGWINLDFLAGS@@
+
+CC0 = @@CC@@
+CXX = @@CXX@@
+IMGLINK = @@IMGLINK@@
+CC = @@POSUBST@@ $(CC0)
+CPP = @@CPP@@
+RANLIB=@@RANLIB@@
+AWK = @@AWK@@
+PERL = @@PERL@@
+MKDIR=mkdir -p
+MV=mv
+RM=rm
+AR=ar
+INSTALL=@@INSTALL@@
+INSTALL_PROGRAM=@@INSTALL_PROGRAM@@
+INSTALL_SCRIPT=@@INSTALL_SCRIPT@@
+INSTALL_DATA=@@INSTALL_DATA@@
+INSTALL_W3MIMGDISPLAY=@@INSTALL_W3MIMGDISPLAY@@
+
+HELP_FILE = @@HELP_FILE@@
+KEYBIND_SRC = @@KEYMAP_FILE@@.c
+KEYBIND_OBJ = @@KEYMAP_FILE@@.o
+
+VERSION=@@CURRENT_VERSION@@
+MODEL=@@W3M_TARGET@@-@@W3M_LANG@@
+
+SRCS=main.c file.c buffer.c display.c etc.c search.c linein.c table.c local.c \
+	form.c map.c frame.c rc.c menu.c mailcap.c image.c \
+	symbol.c entity.c terms.c url.c ftp.c mimehead.c regex.c news.c \
+	func.c cookie.c history.c backend.c $(KEYBIND_SRC)
+OBJS=main.o file.o buffer.o display.o etc.o search.o linein.o table.o local.o\
+	form.o map.o frame.o rc.o menu.o mailcap.o image.o \
+	symbol.o entity.o terms.o url.o ftp.o mimehead.o regex.o news.o \
+	func.o cookie.o history.o backend.o $(KEYBIND_OBJ)
+LSRCS=anchor.c parsetagx.c tagtable.c istream.c
+LOBJS=anchor.o parsetagx.o tagtable.o istream.o
+LLOBJS=version.o
+ALIBOBJS=Str.o indep.o regex.o textlist.o parsetag.o myctype.o hash.o
+ALIB=libindep.a
+ALLOBJS=$(OBJS) $(LOBJS) $(LLOBJS)
+
+EXT=@@EXEEXT@@
+
+TARGET=$(PACKAGE)$(EXT)
+BOOKMARKER=w3mbookmark$(EXT)
+HELPER=w3mhelperpanel$(EXT)
+INFLATE=inflate$(EXT)
+IMGDISPLAY=w3mimgdisplay$(EXT)
+MAN1_TARGET=$(PACKAGE).1
+MAN1=$(top_srcdir)/doc/w3m.1
+MAN1_JA=$(top_srcdir)/doc-jp/w3m.1
+
+LIB_TARGETS=$(BOOKMARKER) $(HELPER)
+AUXBIN_TARGETS=@@AUXBIN_TARGETS@@
+TARGETS=$(TARGET) $(LIB_TARGETS) $(AUXBIN_TARGETS)
+HELP_TARGET=w3mhelp.html
+HELP_ALLFILES=w3mhelp-w3m_en.html w3mhelp-w3m_ja.html \
+	w3mhelp-lynx_en.html w3mhelp-lynx_ja.html
+
+DEFUNS=$(top_srcdir)/main.c $(top_srcdir)/menu.c
+SCRIPTSUBDIRS= scripts
+SUBDIRS = $(SCRIPTSUBDIRS) w3mimg libwc po
+.PHONY: $(SUBDIRS)
+
+all: $(TARGETS) all-scripts $(NLSTARGET)
+
+$(TARGET): $(ALLOBJS) $(ALIB) $(WCTARGET)
+	$(CC) $(CFLAGS) -o $(TARGET) $(ALLOBJS) $(LDFLAGS) $(LIBS) $(EXT_LIBS) $(W3M_LIBS)
+
+$(ALIB): $(ALIBOBJS)
+	$(AR) rv $(ALIB) $(ALIBOBJS)
+	$(RANLIB) $(ALIB)
+
+$(OBJS) $(LOBJS): fm.h funcname1.h
+
+tagtable.c: tagtable.tab mktable$(EXT) html.h 
+	./mktable$(EXT) 100 $(srcdir)/tagtable.tab > $@@
+
+entity.h: entity.tab mktable$(EXT)
+	echo '/* $$I''d$$ */' > $@@
+	./mktable$(EXT) 100 $(srcdir)/entity.tab >> $@@
+
+indep.o: indep.c fm.h funcname1.h entity.h
+func.o: funcname.c functable.c funcname1.h
+keybind.o: funcname2.h
+keybind_lynx.o: funcname2.h
+parsetagx.o: html.c
+
+funcname.tab: $(DEFUNS)
+	(echo '#define DEFUN(x,y,z) x y';\
+	 sed -ne '/^DEFUN/{p;n;/^[ 	]/p;}' $(DEFUNS)) | $(CPP) - | \
+	 awk '$$1 ~ /^[_A-Za-z]/ { \
+	       for (i=2;i<=NF;i++) { print $$i, $$1} \
+	 }' > $@@.tmp
+	@@if cmp -s $@@.tmp $@@; then \
+		echo "$@@ unchanged"; \
+		rm -f $@@.tmp; \
+	else \
+		echo "$@@ updated"; \
+		mv $@@.tmp $@@; \
+	fi
+
+funcname.c: funcname.tab
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/funcname0.awk > $@@
+
+funcname1.h: funcname.tab
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/funcname1.awk > $@@
+
+funcname2.h: funcname.tab
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/funcname2.awk > $@@
+
+functable.c: funcname.tab mktable$(EXT)
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/functable.awk > functable.tab
+	./mktable$(EXT) 100 functable.tab > $@@
+	-rm -f functable.tab
+
+mktable$(EXT): mktable.o dummy.o Str.o hash.o myctype.o
+	$(CC) $(CFLAGS) -o mktable mktable.o dummy.o Str.o hash.o myctype.o $(LDFLAGS) $(LIBS) $(GC_LIBS)
+
+$(BOOKMARKER): w3mbookmark.o dummy.o $(ALIB)
+	$(CC) $(CFLAGS) -o $(BOOKMARKER) w3mbookmark.o dummy.o $(LDFLAGS) $(LIBS) $(EXT_LIBS)
+
+$(HELPER): w3mhelperpanel.o dummy.o $(ALIB)
+	$(CC) $(CFLAGS) -o $(HELPER) w3mhelperpanel.o dummy.o $(LDFLAGS) $(LIBS) $(EXT_LIBS)
+
+$(INFLATE): inflate.o $(ALIB)
+	$(CC) $(CFLAGS) -o $(INFLATE) inflate.o $(LDFLAGS) $(LIBS) -lz
+
+inflate.o: inflate.c
+	$(CC) $(CFLAGS) -o $@@ -c $(srcdir)/inflate.c
+
+libwc/libwc.a: libwc
+libwc:
+	(cd libwc && $(MAKE) CC='$(CC0)' OPTS='$(OPTS)')
+ 
+dummy.o: entity.c
+	$(CC) $(CFLAGS) -DDUMMY -c -o $@@ $?
+
+$(IMGDISPLAY): w3mimgdisplay.o $(ALIB) w3mimg/w3mimg.a
+	$(IMGLINK) $(CFLAGS) -o $(IMGDISPLAY) w3mimgdisplay.o w3mimg/w3mimg.a $(LDFLAGS) $(LIBS) $(IMGLDFLAGS)
+
+w3mimgdisplay.o: w3mimgdisplay.c w3mimg/w3mimg.h
+	$(CC) $(CFLAGS) $(IMGCFLAGS) -o $@@ -c $(srcdir)/w3mimgdisplay.c
+
+w3mimg/w3mimg.a: w3mimg
+w3mimg:
+	(cd w3mimg && $(MAKE) CC="$(CC0)" OPTS="$(OPTS)")
+
+po:
+	(cd $@@ && $(MAKE))
+
+install: install-core install-scripts install-po
+
+install-core: $(TARGETS)
+	-$(MKDIR) $(DESTDIR)$(bindir)
+	-$(MKDIR) $(DESTDIR)$(AUXBIN_DIR)
+	-$(MKDIR) $(DESTDIR)$(CGIBIN_DIR)
+	-$(MKDIR) $(DESTDIR)$(HELP_DIR)
+	-$(MKDIR) $(DESTDIR)$(mandir)/man1
+	-$(MKDIR) $(DESTDIR)$(mandir)/ja/man1
+	$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET)
+	$(INSTALL_DATA) $(HELP_FILE) $(DESTDIR)$(HELP_DIR)/$(HELP_TARGET)
+	$(INSTALL_DATA) $(MAN1) $(DESTDIR)$(mandir)/man1/$(MAN1_TARGET)
+	$(INSTALL_DATA) $(MAN1_JA) $(DESTDIR)$(mandir)/ja/man1/$(MAN1_TARGET)
+	targets="$(AUXBIN_TARGETS)"; for file in $$targets; \
+	do \
+		case $$file in \
+		$(IMGDISPLAY)) $(INSTALL_W3MIMGDISPLAY) $$file \
+			$(DESTDIR)$(AUXBIN_DIR)/$$file;; \
+		*) $(INSTALL_PROGRAM) $$file $(DESTDIR)$(AUXBIN_DIR)/$$file;; \
+		esac; \
+	done
+	for file in $(LIB_TARGETS); \
+	do \
+		$(INSTALL_PROGRAM) $$file $(DESTDIR)$(CGIBIN_DIR)/$$file; \
+	done
+
+install-helpfile:
+	-$(MKDIR) $(DESTDIR)$(HELP_DIR)
+	for file in $(HELP_ALLFILES); \
+	do \
+		$(INSTALL_DATA) $$file $(DESTDIR)$(HELP_DIR)/$$file; \
+	done
+
+install-po:
+	NLSTARGET="$(NLSTARGET)"; for subdir in $$NLSTARGET; \
+	do \
+	 (cd $$subdir && $(MAKE) install); \
+	done
+
+all-scripts:
+	for dir in $(SCRIPTSUBDIRS);	\
+	do	\
+		(cd $$dir && $(MAKE) $(MAKE_ARGS)); \
+	done
+
+install-scripts: all-scripts
+	topdir=`pwd`; \
+	for dir in $(SCRIPTSUBDIRS);	\
+	do	\
+		(cd $$dir && $(MAKE) $(MAKE_ARGS) install); \
+	done
+
+uninstall:
+	-$(RM) $(bindir)/$(TARGET)
+	-for file in $(AUXBIN_TARGETS); \
+	do \
+		$(RM) -f $(AUXBIN_DIR)/$$file; \
+	done
+	-for file in $(LIB_TARGETS); \
+	do \
+		$(RM) -f $(CGIBIN_DIR)/$$file; \
+	done
+	-for file in $(HELP_ALLFILES); \
+	do \
+		$(RM) -f $(HELP_DIR)/$$file; \
+	done
+	-$(RM) -f $(HELP_DIR)/$(HELP_TARGET)
+	-$(RM) -f $(mandir)/man1/$(MAN1_TARGET)
+	-$(RM) -f $(mandir)/ja/man1/$(MAN1_TARGET)
+	-for dir in $(SCRIPTSUBDIRS);	\
+	do	\
+		(cd $$dir && $(MAKE) $(MAKE_ARGS) uninstall); \
+	done
+
+clean: sweep
+	-$(RM) -f *.o *.a $(TARGETS) mktable$(EXT)
+	-$(RM) -f funcname.tab
+	-$(RM) -f entity.h funcname.c funcname1.h funcname2.h tagtable.c functable.c
+	-for dir in w3mimg libwc; \
+	do \
+		(cd $$dir && $(MAKE) clean RM="$(RM)"); \
+	done
+	-for dir in $(SCRIPTSUBDIRS);	\
+	do	\
+		(cd $$dir && $(MAKE) clean); \
+	done
+
+distclean: clean
+	for subdir in po scripts w3mimg libwc; \
+	do \
+		(cd $$subdir && $(MAKE) distclean); \
+	done
+	-$(RM) -f config.cache config.log config.status
+	-$(RM) -f w3mhelp-w3m_en.html w3mhelp-w3m_ja.html
+	-$(RM) -f w3mhelp-lynx_en.html w3mhelp-lynx_ja.html
+	-$(RM) -f version.c
+	-$(RM) -f posubst
+	-$(RM) -f config.h Makefile
+	-$(RM) -f *core
+
+sweep:
+	-$(RM) -f core *~ *.bak *.orig *.rej
+
+depend: 
+	makedepend $(CFLAGS) *.c
+
+dist:
+	cd ..; tar cvfz w3m-$(VERSION).tar.gz w3m
+
+bindist:
+	cd ..; tar cvfz w3m-$(VERSION)-$(MODEL).tar.gz w3m/w3m* w3m/doc* w3m/Bonus* w3m/README w3m/scripts 
+
+@
+
+
+1.46
+log
+@[w3m-dev 04452] delete words about Boehm GC.
+@
+text
+@d291 1
+a291 1
+	-$(RM) -f funcname.c funcname1.h funcname2.h tagtable.c functable.c
+@
+
+
+1.45
+log
+@[w3m-dev 04451] add entity.h to "make clean" target.
+@
+text
+@d291 1
+a291 1
+	-$(RM) -f entity.h funcname.c funcname1.h funcname2.h tagtable.c functable.c
+@
+
+
+1.44
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@d291 1
+a291 1
+	-$(RM) -f funcname.c funcname1.h funcname2.h tagtable.c functable.c
+@
+
+
+1.43
+log
+@[w3m-dev 04424] http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch
+@
+text
+@d61 2
+a62 2
+IMGCFLAGS = @@IMGX11CFLAGS@@ @@IMGFBCFLAGS@@
+IMGLDFLAGS = @@IMGX11LDFLAGS@@ @@IMGFBLDFLAGS@@
+d65 2
+d202 1
+a202 1
+	$(CC) $(CFLAGS) -o $(IMGDISPLAY) w3mimgdisplay.o w3mimg/w3mimg.a $(LDFLAGS) $(LIBS) $(IMGLDFLAGS)
+@
+
+
+1.42
+log
+@move 'gc' from $LIBS to $LIBGC. [w3m-dev 04259]
+@
+text
+@a29 1
+DESTDIR = 
+d48 2
+a49 1
+EXT_LIBS = -L. -lindep @@LIBINTL@@ @@LIBGC@@
+d139 5
+a143 1
+indep.o: indep.c fm.h funcname1.h
+d177 2
+a178 2
+mktable$(EXT): mktable.o dummy.o $(ALIB)
+	$(CC) $(CFLAGS) -o mktable mktable.o dummy.o $(LDFLAGS) $(LIBS) $(EXT_LIBS)
+@
+
+
+1.41
+log
+@add datarootdir for Autoconf 2.60 and later.
+@
+text
+@d48 2
+a49 1
+LIBS = -L. -lindep @@LIBINTL@@ @@LIBS@@
+d128 1
+a128 1
+	$(CC) $(CFLAGS) -o $(TARGET) $(ALLOBJS) $(LDFLAGS) $(LIBS) $(W3M_LIBS)
+d174 1
+a174 1
+	$(CC) $(CFLAGS) -o mktable mktable.o dummy.o $(LDFLAGS) $(LIBS)
+d177 1
+a177 1
+	$(CC) $(CFLAGS) -o $(BOOKMARKER) w3mbookmark.o dummy.o $(LDFLAGS) $(LIBS)
+d180 2
+a181 1
+	$(CC) $(CFLAGS) -o $(HELPER) w3mhelperpanel.o dummy.o $(LDFLAGS) $(LIBS)	
+@
+
+
+1.40
+log
+@based on [w3m-dev 04079]
+  SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+* Makefile.in: (libwc/libwc.a): always make in libwc subdir
+	(w3mimg/w3mimg.a): always make in w3mimg subdir
+@
+text
+@d12 1
+@
+
+
+1.39
+log
+@[w3m-dev 04068] install-sh problem
+ [w3m-dev 04069] install-sh problem 2
+* Makefile.in (MAKE_ARGS): delete INSTALL
+* install-sh: replace with X Consortium install-sh (from automake)
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d185 2
+a186 1
+libwc/libwc.a:
+d198 2
+a199 1
+w3mimg/w3mimg.a:
+@
+
+
+1.38
+log
+@[w3m-dev 04073] Re: run configure in another directory
+* Makefile.in (CFLAGS): include dir here
+	(DEFS): delete include dirs
+	(libwc/libwc.a): pass OPTS only
+	(w3mimg/w3mimg.a): pass OPTS only
+* libwc/Makefile.in (CFLAGS): fixed
+* w3mimg/Makefile.in (CFLAGS): added
+	(fb x11): pass OPTS only
+* w3mimg/fb/Makefile.in (CFLAGS): added
+* w3mimg/x11/Makefile.in (CFLAGS): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d52 1
+a52 1
+MAKE_ARGS = PERL='$(PERL)' MKDIR='$(MKDIR)' INSTALL='$(INSTALL)' \
+@
+
+
+1.37
+log
+@[w3m-dev 04063] about Makefile
+* Makefile.in (DEFS): use CGIBIN_DIR instead of LIB_DIR
+	(MAKE_ARGS): ditto
+	(distclean): rm -f
+* config.h.dist: use CGIBIN_DIR instead of LIB_DIR
+* indep.c (w3m_lib_dir): ditto
+* scripts/Makefile.in: ditto
+* scripts/multipart/Makefile.in: ditto
+* w3mimg/Makefile.in (clearn): remove w3mimg.a
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d38 1
+a38 1
+CFLAGS = $(OPTS) @@CFLAGS@@ $(CPPFLAGS) $(DEFS)
+d41 1
+a41 1
+DEFS = @@DEFS@@ -I. -I$(top_srcdir) -DAUXBIN_DIR=\"$(AUXBIN_DIR)\" \
+d186 1
+a186 1
+	(cd libwc && $(MAKE) CC='$(CC0)' TOP_CFLAGS='$(CFLAGS)')
+d198 1
+a198 1
+	(cd w3mimg && $(MAKE) CC="$(CC0)" CFLAGS="$(CFLAGS)")
+@
+
+
+1.36
+log
+@[w3m-dev 04049] w3m-cvs-1.914-misc.patch
+* Makefile.in (funcname.tab): dont modify when target is unchanged.
+	(CFLAGS): need $(CPPFLAGS)?
+* config.h.in: add HAVE_STDINT_H, HAVE_INTTYPES_H
+* configure.in: s/AC_CANONICAL_SYSTEM/AC_CANONICAL_HOST/
+	don't use AC_CYGWIN
+	don't use $CYGWIN, use $host_os *cygwin*
+	AC_DEFINE in AC_CHECK_HEADER (float.h, sys/select.h)
+	add stdint.h, inttypes.h
+* etc.c (find_auth_pass_entry): host is case insensitive
+* libwc/wc_types.h: use stdint.h or inttypes.h
+* main.c (MAIN); need GC_init()
+From: AIDA Shinra <shinra@@j10n.org>
+@
+text
+@d42 1
+a42 1
+	-DLIB_DIR=\"$(CGIBIN_DIR)\" -DHELP_DIR=\"$(HELP_DIR)\" \
+d54 1
+a54 1
+	LIB_DIR='$(CGIBIN_DIR)' \
+d295 6
+a300 6
+	-$(RM) config.cache config.log config.status
+	-$(RM) w3mhelp-w3m_en.html w3mhelp-w3m_ja.html
+	-$(RM) w3mhelp-lynx_en.html w3mhelp-lynx_ja.html
+	-$(RM) version.c
+	-$(RM) posubst
+	-$(RM) config.h Makefile
+@
+
+
+1.35
+log
+@revert the change
+@
+text
+@d38 1
+a38 1
+CFLAGS = $(OPTS) @@CFLAGS@@ $(DEFS)
+d148 8
+a155 1
+	 }' > $@@
+@
+
+
+1.34
+log
+@Makefile.in (po): need update-po
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d194 1
+a194 1
+	(cd $@@ && $(MAKE) && $(MAKE) update-po)
+@
+
+
+1.33
+log
+@* Makefile.in (distclean): distclean libwc
+@
+text
+@d194 1
+a194 1
+	(cd $@@ && $(MAKE))
+@
+
+
+1.32
+log
+@[w3m-dev 04045]
+* Makefile.in (DEFUNS): need $(top_srcdir)
+From: Akihiro Sagawa <sagawa@@sohgoh.net>
+@
+text
+@d284 1
+a284 1
+	for subdir in po scripts w3mimg; \
+@
+
+
+1.31
+log
+@* Makefile.in (install-po): fix for broken sh.
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d118 1
+a118 1
+DEFUNS=main.c menu.c
+@
+
+
+1.30
+log
+@[w3m-dev 04022] $^
+* Makefile.in (DEFUNS): added
+	funcname.tab: don't use $^
+* w3mimg/Makefile.in (w3mimg.a): don't use $^
+From: YONETANI Tomokazu <qhwt@@myrealbox.com>
+@
+text
+@d230 1
+a230 1
+	for subdir in $(NLSTARGET); \
+@
+
+
+1.29
+log
+@* scripts/Makefile.in (w3mhelp-funcname.pl): depends ../funcname.tab
+* Makefile.in (IMGOBJS): deleted
+	(indep.o): depends on fm.h funcname1.h
+	(IMGDISPLAY): depends on w3mimg/w3mimg.a
+	(w3mimg/w3mimg.a): renamed from w3mimg
+* acinclude.m4 (AC_W3M_IMAGE): modify IMBOBJS
+* w3mimg/Makefile.in (AR): added
+		(RANLIB): added
+		(IMGOBJS): added
+		(w3mimg.a): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+* [w3m-dev 03990] Re: post-m17n merge problem?
+* Makefile.in (MAN1): need $(top_srcdir)
+		(MAN1_JA): ditto
+		(LOBJS): depends on fm.h funcname1.h
+		(INFLATE): depends on $(ALIB)
+		(libwc/libwc.a): renamed from libwc
+		(IMGDISPLAY): depends on $(IMGOBJS) instead of w3mimg
+			  depends on $(ALIB)
+		(w3mimgdisplay.o): depends on w3mimg/w3mimg.h
+* acinclude.m4 (AC_W3M_M17N): WCTARGET is libwc/libwc.a
+* configure.in (HELP_DIR): expand ${prefix}
+From: qhwt@@myrealbox.com
+@
+text
+@d118 1
+d143 1
+a143 1
+funcname.tab: main.c menu.c
+d145 1
+a145 1
+	 sed -ne '/^DEFUN/{p;n;/^[ 	]/p;}' $^) | $(CPP) - | \
+@
+
+
+1.28
+log
+@fix problem reported on [w3m-dev 03981]
+  from Mamoru KOMACHI <usata@@sodan.ecc.u-tokyo.ac.jp>
+* configure.in: add AC_SUBST(HELP_DIR)
+* Makefile.in (HELP_DIR): use AC_SUBT(HELP_DIR)
+* scripts/Makefile.in: add PACKAGE, VERSION, DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add SUBDIRS
+		(install unstall): do $(SUBDIRS)
+* scripts/multipart/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+* scripts/w3mman/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add BIN_DIR, MAN1_DIR
+		LIB_TARGETS->CGIBIN_TARGETS
+		fix INSTALL_MAN
+@
+text
+@a98 1
+IMGOBJS=@@IMGOBJS@@
+d108 2
+a109 2
+MAN1=doc/w3m.1
+MAN1_JA=doc-jp/w3m.1
+d131 1
+a131 1
+$(OBJS): fm.h funcname1.h
+d136 1
+d171 1
+a171 1
+$(INFLATE): inflate.o
+d177 1
+a177 1
+libwc:
+d183 2
+a184 2
+$(IMGDISPLAY): w3mimgdisplay.o w3mimg
+	$(CC) $(CFLAGS) -o $(IMGDISPLAY) w3mimgdisplay.o $(IMGOBJS) $(LDFLAGS) $(LIBS) $(IMGLDFLAGS)
+d186 1
+a186 1
+w3mimgdisplay.o: w3mimgdisplay.c w3mimg
+d189 1
+a189 1
+w3mimg:
+@
+
+
+1.27
+log
+@distclean
+@
+text
+@d33 1
+a33 1
+HELP_DIR = $(datadir)/$(PACKAGE)
+@
+
+
+1.26
+log
+@distclean
+@
+text
+@d283 1
+a283 1
+	for subdir in po scripts; \
+@
+
+
+1.25
+log
+@Makefile.in (distclean): remove posubst
+@
+text
+@d283 4
+@
+
+
+1.24
+log
+@fix functable.c action
+@
+text
+@d287 1
+@
+
+
+1.23
+log
+@fix indent
+@
+text
+@d159 1
+a159 1
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/functable.awk > functable.ta	b
+@
+
+
+1.22
+log
+@* funcname.tab: generated from DEFUN
+* main.c menu.c: use DEFUN
+@
+text
+@d143 5
+a147 2
+	(echo '#define DEFUN(x,y,z) x y'; grep -h '^DEFUN' $^) | $(CPP) - | \
+	 awk '$$1 ~ /^[_A-Za-z]/ { for (i=2;i<=NF;i++) { print $$i, $$1} }' > $@@
+d159 1
+a159 1
+	sort funcname.tab | $(AWK) -f $(top_srcdir)/functable.awk > functable.tab
+d170 1
+a170 1
+	$(CC) $(CFLAGS) -o $(HELPER) w3mhelperpanel.o dummy.o $(LDFLAGS) $(LIBS)
+@
+
+
+1.21
+log
+@add posubst,  compile-time message l10n
+* Makefile.in: @@POSUBST@@
+* acinclude.m4(AC_W3M_M17N): add POSUBST, POLANG
+	--enable-messagel10n
+* configure.in (W3M_LANG): subst
+	(AM_GET_GNUTEXT): if messagel10n enabled, don't use NLS
+	(AC_OUTOUT): add posubst, chmod +x
+* menu.c: remove if LANG == JA messages
+* rc.c: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d64 1
+d142 4
+d147 1
+a147 1
+	sort $(srcdir)/funcname.tab | $(AWK) -f $(top_srcdir)/funcname0.awk > $@@
+d150 1
+a150 1
+	sort $(srcdir)/funcname.tab | $(AWK) -f $(top_srcdir)/funcname1.awk > $@@
+d153 1
+a153 1
+	sort $(srcdir)/funcname.tab | $(AWK) -f $(top_srcdir)/funcname2.awk > $@@
+d156 1
+a156 1
+	sort $(srcdir)/funcname.tab | $(AWK) -f $(top_srcdir)/functable.awk > functable.tab
+d268 1
+@
+
+
+1.20
+log
+@* remove ./intl
+* configure.in: external fo AM_GNU_GETTEXT
+* Makefile.in: remove intl, INTLTARGET
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d62 2
+a63 1
+CC = @@CC@@
+d170 1
+a170 1
+	(cd libwc && $(MAKE) CC='$(CC)' TOP_CFLAGS='$(CFLAGS)')
+d182 1
+a182 1
+	(cd w3mimg && $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)")
+@
+
+
+1.19
+log
+@add NLSTARGET
+@
+text
+@a49 1
+INTLTARGET = @@INTLTARGET@@
+d118 1
+a118 1
+SUBDIRS = $(SCRIPTSUBDIRS) w3mimg libwc intl po
+d121 1
+a121 1
+all: $(INTLTARGET) $(TARGETS) all-scripts $(NLSTARGET)
+d183 1
+a183 1
+intl po:
+@
+
+
+1.18
+log
+@fix [w3m-dev 03975] Re: gettextize
+* Makefile.in: add INTLTARGET, cleanup
+* configure.in: INTLTARGET=intl if USE_NLS
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d51 1
+d122 1
+a122 1
+all: $(INTLTARGET) $(TARGETS) all-scripts po
+d221 1
+a221 1
+	for subdir in po; \
+@
+
+
+1.17
+log
+@gettextize
+* Makefile.in: updated
+* menu.c: gettextize
+* rc.c: gettextize
+* intl/.cvsignore: added
+* po/.cvsignore: added
+* po/Makevars: added
+* po/Makevars.template: removed
+* po/POTFILES.in: updated
+* po/w3m.pot: created
+* po/ja.po: created
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d50 1
+a118 1
+
+d121 1
+a121 1
+all: $(TARGETS) all-scripts intl po
+d154 1
+a154 1
+mktable$(EXT): mktable.o dummy.o $(ALIB) $(GCTARGET)
+d157 1
+a157 1
+$(BOOKMARKER): w3mbookmark.o dummy.o $(ALIB) $(GCTARGET)
+d160 1
+a160 1
+$(HELPER): w3mhelperpanel.o dummy.o $(ALIB) $(GCTARGET)
+a161 1
+
+d220 1
+a220 1
+	for subdir in intl po; \
+@
+
+
+1.16
+log
+@gettextize initial modifications
+@
+text
+@d9 1
+d185 1
+a185 1
+	(cd $@@ && $(MAKE) top_builddir=.. subdir=$@@)
+d187 1
+a187 1
+install: install-core install-scripts
+d218 6
+@
+
+
+1.15
+log
+@fix top_srcdir
+@
+text
+@d7 2
+a8 1
+package=w3m
+d13 1
+d26 1
+d30 3
+a32 3
+CGIBIN_DIR = $(libexecdir)/$(package)/cgi-bin
+AUXBIN_DIR = $(libexecdir)/$(package)
+HELP_DIR = $(datadir)/$(package)
+d35 1
+a35 1
+CONF_DIR = $(sysconfdir)/$(package)
+d43 2
+a44 1
+	-DRC_DIR=\"$(RC_DIR)\"
+d46 1
+a46 1
+LIBS = -L. -lindep @@LIBS@@
+d99 1
+a99 1
+TARGET=$(package)$(EXT)
+d104 1
+a104 1
+MAN1_TARGET=$(package).1
+d116 1
+a116 1
+SUBDIRS = $(SCRIPTSUBDIRS) w3mimg libwc
+d120 1
+a120 1
+all: $(TARGETS) all-scripts
+d182 3
+@
+
+
+1.14
+log
+@more autoconfiscate
+@
+text
+@d111 2
+a112 2
+SCRIPTSUBDIRS= scripts scripts/multipart scripts/w3mman
+SUBDIRS = $(SCRIPTSUBDIRS)
+d114 1
+a114 1
+.PHONY: w3mimg libwc
+d215 1
+a215 1
+		(cd $(top_srcdir)/$$dir && $(MAKE) $(MAKE_ARGS)); \
+d222 1
+a222 1
+		(cd $(top_srcdir)/$$dir && $(MAKE) $(MAKE_ARGS) install); \
+d244 1
+a244 1
+		(cd $(top_srcdir)/$$dir && $(MAKE) $(MAKE_ARGS) uninstall); \
+@
+
+
+1.13
+log
+@fix build problem
+@
+text
+@d30 1
+a30 1
+RC_DIR = ~/.$(package)
+d114 2
+d164 2
+a165 5
+wctarget:
+	cd libwc; $(MAKE) \
+		CC='$(CC)' CFLAGS='$(WCCFLAGS) $(CFLAGS)' \
+		AR='$(AR)' \
+		RANLIB='$(RANLIB)'
+d170 1
+a170 1
+$(IMGDISPLAY): w3mimgdisplay.o $(IMGOBJS)
+d173 1
+a173 1
+w3mimgdisplay.o: w3mimgdisplay.c
+d176 2
+a177 34
+w3mimg/w3mimg.o: w3mimg/w3mimg.c
+	-@@$(MKDIR) w3mimg
+	-@@$(RM) -f $@@
+	cd $(top_srcdir)/w3mimg && \
+		$(CC) $(CFLAGS) $(IMGCFLAGS) -I.. -c w3mimg.c
+	-@@$(MV) $(top_srcdir)/w3mimg/w3mimg.o w3mimg/w3mimg.o
+
+w3mimg/x11/x11_w3mimg.o: w3mimg/x11/x11_w3mimg.c
+	-@@$(MKDIR) w3mimg/x11
+	-@@$(RM) -f $@@
+	cd $(top_srcdir)/w3mimg/x11 && \
+		$(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c x11_w3mimg.c
+	-@@$(MV) $(top_srcdir)/w3mimg/x11/x11_w3mimg.o w3mimg/x11/x11_w3mimg.o
+
+w3mimg/fb/fb_w3mimg.o: w3mimg/fb/fb_w3mimg.c
+	-@@$(MKDIR) w3mimg/fb
+	-@@$(RM) -f $@@
+	cd $(top_srcdir)/w3mimg/fb && \
+		$(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb_w3mimg.c
+	-@@$(MV) $(top_srcdir)/w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb_w3mimg.o
+
+w3mimg/fb/fb.o: w3mimg/fb/fb.c
+	-@@$(MKDIR) w3mimg/fb
+	-@@$(RM) -f $@@
+	cd $(top_srcdir)/w3mimg/fb && \
+		$(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb.c
+	-@@$(MV) $(top_srcdir)/w3mimg/fb/fb.o w3mimg/fb/fb.o
+
+w3mimg/fb/fb_img.o: w3mimg/fb/fb_img.c w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_imlib2.c
+	-@@$(MKDIR) w3mimg/fb
+	-@@$(RM) -f $@@
+	cd $(top_srcdir)/w3mimg/fb && \
+		$(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb_img.c
+	-@@$(MV) $(top_srcdir)/w3mimg/fb/fb_img.o w3mimg/fb/fb_img.o
+d250 4
+a253 1
+	-$(RM) -f w3mimg/*.o w3mimg/*/*.o 
+d256 1
+a256 1
+		(cd $(top_srcdir)/$$dir && $(MAKE) clean); \
+@
+
+
+1.12
+log
+@merge m17n patch
+add libwc
+@
+text
+@d169 1
+a169 1
+	$(CC) $(CFLAGS) -DDUMMY -o $@@ $?
+@
+
+
+1.11
+log
+@[w3m-dev 03945] Re: application/xhtml+xml support
+* Makefile.in (ETC_DIR): added
+	(CONF_DIR): added
+	(DEFS): add CONF_DIR
+	(MAKE_ARGS): add CONF_DIR
+* config.h.in (SYS_MAILCAP): use CONF_DIR
+	(SYS_URIMETHODMAP): use CONF_DIR
+* func.c (sys_current_keymap_file): added
+	(interpret_keymap): added
+	(initKeymap): use interpret_keymap
+	(interpret_mouse_action): added
+	(initMouseAction): use interpret_mouse_action
+* indep.c (w3m_conf_dir): added
+* indep.h (w3m_conf_dir): added
+* menu.c (interpret_menu): added
+	(initMenu): use interpret_menu
+* proto.h (confFile): added
+* rc.c (init_rc): read config file by interpret_rc
+	(confFile): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d35 1
+d44 1
+d79 1
+d83 1
+d85 2
+a86 4
+LSRCS=terms.c conv.c url.c anchor.c mimehead.c hash.c parsetagx.c \
+	tagtable.c istream.c ftp.c news.c
+LOBJS=terms.o conv.o url.o anchor.o mimehead.o hash.o parsetagx.o \
+	tagtable.o istream.o ftp.o news.o
+d88 1
+a88 1
+ALIBOBJS=Str.o indep.o regex.o textlist.o parsetag.o myctype.o entity.o hash.o
+d116 1
+a116 1
+$(TARGET): $(ALLOBJS) $(ALIB)
+d147 2
+a148 2
+mktable$(EXT): mktable.o hash.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o mktable mktable.o hash.o $(LDFLAGS) $(LIBS)
+d150 2
+a151 2
+$(BOOKMARKER): w3mbookmark.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o $(BOOKMARKER) w3mbookmark.o $(LDFLAGS) $(LIBS)
+d153 2
+a154 2
+$(HELPER): w3mhelperpanel.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o $(HELPER) w3mhelperpanel.o $(LDFLAGS) $(LIBS)
+d161 9
+@
+
+
+1.10
+log
+@[w3m-dev 03838] W3M_LIBS splitted from LIBS
+* Makefile.in (W3M_LIBS): added
+* acinclude.m4 (AC_W3M_TERMLIB): use W3M_LIB
+	(AC_W3M_SSL): ditto
+* configure.in (W3M_LIBS): added
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d31 2
+d38 2
+a39 1
+	-DETC_DIR=\"$(sysconfdir)\" -DRC_DIR=\"$(RC_DIR)\"
+d47 2
+a48 1
+	HELP_DIR='$(HELP_DIR)' MAN_DIR='$(mandir)' ETC_DIR='$(sysconfdir)' \
+@
+
+
+1.9
+log
+@'make distclean' removes core
+@
+text
+@d39 1
+d111 1
+a111 1
+	$(CC) $(CFLAGS) -o $(TARGET) $(ALLOBJS) $(LDFLAGS) $(LIBS)
+@
+
+
+1.8
+log
+@'make distclean' removes core
+@
+text
+@d279 1
+a279 1
+	-$(RM) -f core *.core
+@
+
+
+1.7
+log
+@[w3m-dev-en 00910] Re: autoconf: env MAKE not respected
+* Makefile.in (SET_MAKE): added
+	(SHELL): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d279 1
+@
+
+
+1.6
+log
+@[w3m-dev 03821] fix for pmake
+* Makefile.in: use $(srcdir)/... instead of $<
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d5 2
+@
+
+
+1.5
+log
+@[w3m-dev 03819] support cd build && ../configure
+* Makefile.in: add VPATH
+		add MV
+		use $(top_srcdir), $<, $@@
+* acinclude.m4 (AC_W3M_VERSION): use $srcdir
+* configure.in (AC_W3M_VERSION): move
+* mktable.c (main): basename
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d117 1
+a117 1
+	./mktable$(EXT) 100 $< > $@@
+d125 1
+a125 1
+	sort $< | $(AWK) -f $(top_srcdir)/funcname0.awk > $@@
+d128 1
+a128 1
+	sort $< | $(AWK) -f $(top_srcdir)/funcname1.awk > $@@
+d131 1
+a131 1
+	sort $< | $(AWK) -f $(top_srcdir)/funcname2.awk > $@@
+d134 1
+a134 1
+	sort $< | $(AWK) -f $(top_srcdir)/functable.awk > functable.tab
+d151 1
+a151 1
+	$(CC) $(CFLAGS) -o $@@ -c $<
+d157 1
+a157 1
+	$(CC) $(CFLAGS) $(IMGCFLAGS) -c $<
+@
+
+
+1.4
+log
+@* Makefile.in (distclean): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d22 1
+d52 1
+d116 2
+a117 2
+tagtable.c: html.h tagtable.tab mktable$(EXT)
+	./mktable$(EXT) 100 tagtable.tab > tagtable.c
+d125 1
+a125 1
+	sort funcname.tab | $(AWK) -f funcname0.awk > funcname.c
+d128 1
+a128 1
+	sort funcname.tab | $(AWK) -f funcname1.awk > funcname1.h
+d131 1
+a131 1
+	sort funcname.tab | $(AWK) -f funcname2.awk > funcname2.h
+d134 2
+a135 2
+	sort funcname.tab | $(AWK) -f functable.awk > functable.tab
+	./mktable$(EXT) 100 functable.tab > functable.c
+d151 1
+a151 1
+	$(CC) $(CFLAGS) -o inflate.o -c inflate.c
+d157 1
+a157 1
+	$(CC) $(CFLAGS) $(IMGCFLAGS) -c w3mimgdisplay.c
+d160 5
+a164 1
+	cd w3mimg && $(CC) $(CFLAGS) $(IMGCFLAGS) -I.. -c w3mimg.c
+d167 5
+a171 1
+	cd w3mimg/x11 && $(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c x11_w3mimg.c
+d174 5
+a178 1
+	cd w3mimg/fb && $(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb_w3mimg.c
+d181 5
+a185 1
+	cd w3mimg/fb && $(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb.c
+d188 5
+a192 1
+	cd w3mimg/fb && $(CC) $(CFLAGS) $(IMGCFLAGS) -I../.. -c fb_img.c
+d230 1
+a230 1
+		(cd $$dir; $(MAKE) $(MAKE_ARGS)); \
+d237 1
+a237 1
+		(cd $$dir; $(MAKE) $(MAKE_ARGS) install); \
+d259 1
+a259 1
+		(cd $$dir; $(MAKE) $(MAKE_ARGS) uninstall); \
+d268 1
+a268 1
+		(cd $$dir; $(MAKE) clean); \
+@
+
+
+1.3
+log
+@[w3m-dev 03818] fix autoconf
+* Makefile.in (CGIBIN_DIR): added
+	(AUXBIN_DIR): added
+	(HELP_DIR): added
+	(RC_DIR): added
+	(MAKE_ARGS): added
+	(TARGET): use $(package)
+	(MAN1_TARGET): ditto
+	(install): use $(*_DIR)
+* acinclude.m4 (AC_W3M_TERMLIB): added
+	(AC_W3M_GC): default search prefix /usr /usr/local $HOME
+		fix searches
+	(AC_W3M_SSL): fix bugs
+* config.h (RC_DIR): remove tailing /
+	(SYS_MAILCAP): use ETC_DIR
+	(SYS_MIMETYPES): ditto
+	(USER_MIMETYPES): homedir
+* configure.in: quote
+	(AC_W3M_TERMLIB): use
+* Bonus/oldconfigure.sh: rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d249 6
+@
+
+
+1.2
+log
+@* Makefile.in (MODEL): delete @@W3M_TARGET@@
+* configure.in: AC_SUBST(W3M_TARGET)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d24 5
+d31 3
+a33 1
+DEFS = @@DEFS@@ -I. -I$(top_srcdir) -DAUXBIN_DIR=\"$(libexecdir)\" -DLIB_DIR=\"$(libdir)\" -DHELP_DIR=\"$(datadir)\" -DETC_DIR=\"$(sysconfdir)\"
+d37 6
+d84 1
+a84 1
+TARGET=w3m$(EXT)
+d89 1
+a89 1
+MAN1_TARGET=w3m.1
+d176 3
+a178 3
+	-$(MKDIR) $(DESTDIR)$(libdir)
+	-$(MKDIR) $(DESTDIR)$(libexecdir)
+	-$(MKDIR) $(DESTDIR)$(datadir)
+d182 1
+a182 1
+	$(INSTALL_DATA) $(HELP_FILE) $(DESTDIR)$(datadir)/$(HELP_TARGET)
+d188 3
+a190 2
+		$(IMGDISPLAY)) $(INSTALL_W3MIMGDISPLAY) $$file $(DESTDIR)$(libexecdir)/$$file;; \
+		*) $(INSTALL_PROGRAM) $$file $(DESTDIR)$(libexecdir)/$$file;; \
+d195 1
+a195 1
+		$(INSTALL_PROGRAM) $$file $(DESTDIR)$(libdir)/$$file; \
+d199 1
+a199 1
+	-$(MKDIR) $(DESTDIR)$(datadir)
+d202 1
+a202 1
+		$(INSTALL_DATA) $$file $(DESTDIR)$(datadir)/$$file; \
+d208 1
+a208 1
+		(cd $$dir; $(MAKE) PERL='$(PERL)' BIN_DIR='$(bindir)' AUXBIN_DIR='$(libexecdir)' LIB_DIR='$(libdir)' HELP_DIR='$(datadir)' RC_DIR='$(sysconfdir)' KEYBIND_SRC='$(KEYBIND_SRC)');	\
+d215 1
+a215 1
+		(cd $$dir; $(MAKE) PERL='$(PERL)' MKDIR='$(MKDIR)' BIN_DIR='$(bindir)' AUXBIN_DIR='$(libexecdir)' LIB_DIR='$(libdir)' HELP_DIR='$(datadir)' MAN_DIR='$(mandir)' DESTDIR='$(DESTDIR)' INSTALL="$(INSTALL)" install); \
+d222 1
+a222 1
+		$(RM) -f $(libexecdir)/$$file; \
+d226 1
+a226 1
+		$(RM) -f $(libdir)/$$file; \
+d230 1
+a230 1
+		$(RM) -f $(datadir)/$$file; \
+d232 1
+a232 1
+	-$(RM) -f $(datadir)/$(HELP_TARGET)
+d237 1
+a237 1
+		(cd $$dir; $(MAKE) BIN_DIR='$(bindir)' LIB_DIR='$(libdir)' HELP_DIR='$(datadir)' MAN_DIR='$(mandir)' uninstall); \
+@
+
+
+1.1
+log
+@autoconficate
+* Makefile.in: added
+* acinclude.m4: added
+* aclocal.m4: added (generated from acinclude.m4 by aclocal)
+* configure.in: added
+* config.h.in: added
+* config.guess: added
+* config.sub: added
+* .cvsignore: add Makefile config.cache config.log config.status
+* configure: generated by autoconf
+* gc/: deleted
+* XMakefile: deleted
+* XXMakefile: deleted
+* NEWS: autoconficate
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@a48 1
+GCLIB=@@gclib@@
+d51 1
+a51 1
+MODEL=@@W3M_TARGET@@-@@W3M_MODEL@@-@@W3M_LANG@@
+@
+

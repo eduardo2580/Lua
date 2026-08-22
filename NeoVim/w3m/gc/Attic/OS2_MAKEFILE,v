@@ -1,0 +1,154 @@
+head	1.3;
+access;
+symbols
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.2
+	release-0-3-2-1:1.2
+	branch-0-3-2:1.2.0.6
+	release-0-3-2:1.2
+	release-0-3-2-rc4:1.2
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.4
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.2
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2003.03.09.19.43.06;	author ukai;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.49;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.49;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@remove gc
+@
+text
+@# Makefile for OS/2.  Assumes IBM's compiler, static linking, and a single thread.
+# Adding dynamic linking support seems easy, but takes a little bit of work.
+# Adding thread support may be nontrivial, since we haven't yet figured out how to
+# look at another thread's registers.
+
+# Significantly revised for GC version 4.4 by Mark Boulter (Jan 1994).
+
+OBJS= alloc.obj reclaim.obj allchblk.obj misc.obj mach_dep.obj os_dep.obj mark_rts.obj headers.obj mark.obj obj_map.obj blacklst.obj finalize.obj new_hblk.obj dbg_mlc.obj malloc.obj stubborn.obj typd_mlc.obj ptr_chck.obj mallocx.obj
+
+CORDOBJS= cord\cordbscs.obj cord\cordxtra.obj cord\cordprnt.obj
+
+CC= icc
+CFLAGS= /O /Q /DSILENT /DSMALL_CONFIG /DALL_INTERIOR_POINTERS
+# Use /Ti instead of /O for debugging
+# Setjmp_test may yield overly optimistic results when compiled
+# without optimization.
+
+all: $(OBJS) gctest.exe cord\cordtest.exe
+
+$(OBJS) test.obj: include\private\gc_priv.h include\private\gc_hdrs.h include\gc.h include\private\gcconfig.h
+
+## ERASE THE LIB FIRST - if it is already there then this command will fail
+## (make sure its there or erase will fail!)
+gc.lib: $(OBJS)
+        echo . > gc.lib
+        erase gc.lib
+        LIB gc.lib $(OBJS), gc.lst
+
+mach_dep.obj: mach_dep.c
+        $(CC) $(CFLAGS) /C mach_dep.c
+
+gctest.exe: test.obj gc.lib
+        $(CC) $(CFLAGS) /B"/STACK:524288" /Fegctest test.obj gc.lib
+
+cord\cordbscs.obj: cord\cordbscs.c include\cord.h include\private\cord_pos.h
+        $(CC) $(CFLAGS) /C /Focord\cordbscs cord\cordbscs.c
+
+cord\cordxtra.obj: cord\cordxtra.c include\cord.h include\private\cord_pos.h include\ec.h
+        $(CC) $(CFLAGS) /C /Focord\cordxtra cord\cordxtra.c
+
+cord\cordprnt.obj: cord\cordprnt.c include\cord.h include\private\cord_pos.h include\ec.h
+        $(CC) $(CFLAGS) /C /Focord\cordprnt cord\cordprnt.c
+
+cord\cordtest.exe: cord\cordtest.c include\cord.h include\private\cord_pos.h include\ec.h $(CORDOBJS) gc.lib
+        $(CC) $(CFLAGS) /B"/STACK:65536" /Fecord\cordtest cord\cordtest.c gc.lib $(CORDOBJS)
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d20 1
+a20 1
+$(OBJS) test.obj: gc_priv.h gc_hdrs.h gc.h
+d35 1
+a35 1
+cord\cordbscs.obj: cord\cordbscs.c cord\cord.h cord\private\cord_pos.h
+d38 1
+a38 1
+cord\cordxtra.obj: cord\cordxtra.c cord\cord.h cord\private\cord_pos.h cord\ec.h
+d41 1
+a41 1
+cord\cordprnt.obj: cord\cordprnt.c cord\cord.h cord\private\cord_pos.h cord\ec.h
+d44 1
+a44 1
+cord\cordtest.exe: cord\cordtest.c cord\cord.h cord\private\cord_pos.h cord\ec.h $(CORDOBJS) gc.lib
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

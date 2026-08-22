@@ -1,0 +1,2688 @@
+head	1.34;
+access;
+symbols
+	release-0-5-3:1.34
+	release-0-5-2:1.34
+	release-0-5-1:1.34
+	release-0-5:1.34
+	release-0-4-2:1.32
+	release-0-4-1:1.31
+	release-0-4:1.31
+	release-0-4-rc3:1.31
+	release-0-4-rc2:1.31
+	release-0-4-rc1:1.31
+	release-0-3-2-2:1.16.4.1
+	release-0-3-2-1:1.16.4.1
+	branch-0-3-2:1.16.0.4
+	release-0-3-2:1.16
+	release-0-3-2-rc4:1.16
+	release-0-3-2-rc3:1.16
+	release-0-3-2-rc2:1.16
+	release-0-3-2-rc1:1.16
+	release-0-3-1:1.16
+	release-0-3:1.12
+	release-0-2-5-1:1.9
+	branch-0-2-5:1.9.0.2
+	release-0-2-5:1.9
+	release-0-2-4:1.7
+	release-0-2-3-2:1.7
+	release-0-2-3-1:1.7
+	release-0-2-3:1.7
+	inu-0-2-2-rel-1-1:1.3.2.1
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.34
+date	2003.09.26.17.59.51;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.09.22.21.02.18;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.05.12.16.33.18;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.01.29.17.10.39;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.01.20.15.30.20;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.01.09.15.30.43;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.12.14.15.28.37;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.12.06.16.38.05;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.12.05.16.04.00;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.12.03.15.45.33;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.12.03.15.35.10;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.11.28.16.00.34;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.11.26.17.12.15;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.11.26.17.08.01;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.11.26.17.05.24;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.11.26.16.58.49;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.11.05.15.56.13;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.06.17.15.50.45;	author inu;	state Exp;
+branches
+	1.16.2.1
+	1.16.4.1;
+next	1.15;
+
+1.15
+date	2002.04.17.02.44.22;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.03.15.19.02.40;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.03.15.16.35.46;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.02.09.15.27.14;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.02.08.11.45.07;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.01.31.17.54.51;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.01.25.14.59.14;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.15.03.45.02;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.29.09.34.14;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.20.13.17.13;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.16.22.02.00;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.17;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.14.54;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.14.54;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.11.22.17.52.28;	author inu;	state Exp;
+branches;
+next	;
+
+1.16.2.1
+date	2002.11.26.06.55.16;	author ukai;	state Exp;
+branches;
+next	;
+
+1.16.4.1
+date	2002.11.26.07.11.22;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.34
+log
+@add comments
+@
+text
+@/* $Id: frame.c,v 1.33 2003/09/22 21:02:18 ukai Exp $ */
+#include "fm.h"
+#include "parsetagx.h"
+#include "myctype.h"
+#include <signal.h>
+#include <setjmp.h>
+
+static JMP_BUF AbortLoading;
+struct frameset *renderFrameSet = NULL;
+
+static MySignalHandler
+KeyAbort(SIGNAL_ARG)
+{
+    LONGJMP(AbortLoading, 1);
+}
+
+static int
+parseFrameSetLength(char *s, char ***ret)
+{
+    int i, len;
+    char *p, *q, **lv;
+
+    i = 1;
+
+    if (s)
+	for (p = s; (p = strchr(p, ',')); ++p)
+	    ++i;
+    else
+	s = "*";
+
+    lv = New_N(char *, i);
+
+    for (i = 0, p = s;; ++p) {
+	SKIP_BLANKS(p);
+	len = strtol(p, &q, 10);
+
+	switch (*q) {
+	case '%':
+	    lv[i++] = Sprintf("%d%%", len)->ptr;
+	    break;
+	case '*':
+	    lv[i++] = "*";
+	    break;
+	default:
+	    lv[i++] = Sprintf("%d", len)->ptr;
+	    break;
+	}
+
+	if (!(p = strchr(q, ',')))
+	    break;
+    }
+
+    *ret = lv;
+    return i;
+}
+
+struct frameset *
+newFrameSet(struct parsed_tag *tag)
+{
+    struct frameset *f;
+    int i;
+    char *cols = NULL, *rows = NULL;
+
+    f = New(struct frameset);
+    f->attr = F_FRAMESET;
+    f->name = NULL;
+    f->currentURL = NULL;
+    parsedtag_get_value(tag, ATTR_COLS, &cols);
+    parsedtag_get_value(tag, ATTR_ROWS, &rows);
+    f->col = parseFrameSetLength(cols, &f->width);
+    f->row = parseFrameSetLength(rows, &f->height);
+    f->i = 0;
+    i = f->row * f->col;
+    f->frame = New_N(union frameset_element, i);
+    do {
+	f->frame[--i].element = NULL;
+    } while (i);
+    return f;
+}
+
+struct frame_body *
+newFrame(struct parsed_tag *tag, Buffer *buf)
+{
+    struct frame_body *body;
+    char *p;
+
+    body = New(struct frame_body);
+    bzero((void *)body, sizeof(*body));
+    body->attr = F_UNLOADED;
+    body->flags = 0;
+    body->baseURL = baseURL(buf);
+    if (tag) {
+	if (parsedtag_get_value(tag, ATTR_SRC, &p))
+	    body->url = url_quote_conv(remove_space(p), buf->document_charset);
+	if (parsedtag_get_value(tag, ATTR_NAME, &p) && *p != '_')
+	    body->name = url_quote_conv(p, buf->document_charset);
+    }
+    return body;
+}
+
+static void
+unloadFrame(struct frame_body *b)
+{
+    b->attr = F_UNLOADED;
+}
+
+void
+deleteFrame(struct frame_body *b)
+{
+    if (b == NULL)
+	return;
+    unloadFrame(b);
+    bzero((void *)b, sizeof(*b));
+}
+
+void
+addFrameSetElement(struct frameset *f, union frameset_element element)
+{
+    int i;
+
+    if (f == NULL)
+	return;
+    i = f->i;
+    if (i >= f->col * f->row)
+	return;
+    f->frame[i] = element;
+    f->i++;
+}
+
+void
+deleteFrameSet(struct frameset *f)
+{
+    int i;
+
+    if (f == NULL)
+	return;
+    for (i = 0; i < f->col * f->row; i++) {
+	deleteFrameSetElement(f->frame[i]);
+    }
+    f->name = NULL;
+    f->currentURL = NULL;
+    return;
+}
+
+void
+deleteFrameSetElement(union frameset_element e)
+{
+    if (e.element == NULL)
+	return;
+    switch (e.element->attr) {
+    case F_UNLOADED:
+	break;
+    case F_BODY:
+	deleteFrame(e.body);
+	break;
+    case F_FRAMESET:
+	deleteFrameSet(e.set);
+	break;
+    default:
+	break;
+    }
+    return;
+}
+
+static struct frame_body *
+copyFrame(struct frame_body *ob)
+{
+    struct frame_body *rb;
+
+    rb = New(struct frame_body);
+    bcopy((const void *)ob, (void *)rb, sizeof(struct frame_body));
+    return rb;
+}
+
+struct frameset *
+copyFrameSet(struct frameset *of)
+{
+    struct frameset *rf;
+    int n;
+
+    rf = New(struct frameset);
+    n = of->col * of->row;
+    bcopy((const void *)of, (void *)rf, sizeof(struct frameset));
+    rf->width = New_N(char *, rf->col);
+    bcopy((const void *)of->width,
+	  (void *)rf->width, sizeof(char *) * rf->col);
+    rf->height = New_N(char *, rf->row);
+    bcopy((const void *)of->height,
+	  (void *)rf->height, sizeof(char *) * rf->row);
+    rf->frame = New_N(union frameset_element, n);
+    while (n) {
+	n--;
+	if (!of->frame[n].element)
+	    goto attr_default;
+	switch (of->frame[n].element->attr) {
+	case F_UNLOADED:
+	case F_BODY:
+	    rf->frame[n].body = copyFrame(of->frame[n].body);
+	    break;
+	case F_FRAMESET:
+	    rf->frame[n].set = copyFrameSet(of->frame[n].set);
+	    break;
+	default:
+	  attr_default:
+	    rf->frame[n].element = NULL;
+	    break;
+	}
+    }
+    return rf;
+}
+
+void
+flushFrameSet(struct frameset *fs)
+{
+    int n = fs->i;
+
+    while (n) {
+	n--;
+	if (!fs->frame[n].element)
+	    goto attr_default;
+	switch (fs->frame[n].element->attr) {
+	case F_UNLOADED:
+	case F_BODY:
+	    fs->frame[n].body->nameList = NULL;
+	    break;
+	case F_FRAMESET:
+	    flushFrameSet(fs->frame[n].set);
+	    break;
+	default:
+	  attr_default:
+	    /* nothing to do */
+	    break;
+	}
+    }
+}
+
+void
+pushFrameTree(struct frameset_queue **fqpp, struct frameset *fs, Buffer *buf)
+{
+    struct frameset_queue *rfq, *cfq = *fqpp;
+
+    if (!fs)
+	return;
+
+    rfq = New(struct frameset_queue);
+    rfq->linenumber = (buf
+		       && buf->currentLine) ? buf->currentLine->linenumber : 1;
+    rfq->top_linenumber = (buf && buf->topLine) ? buf->topLine->linenumber : 1;
+    rfq->pos = buf ? buf->pos : 0;
+    rfq->currentColumn = buf ? buf->currentColumn : 0;
+    rfq->formitem = buf ? buf->formitem : NULL;
+
+    rfq->back = cfq;
+    if (cfq) {
+	rfq->next = cfq->next;
+	if (cfq->next)
+	    cfq->next->back = rfq;
+	cfq->next = rfq;
+    }
+    else
+	rfq->next = cfq;
+    rfq->frameset = fs;
+    *fqpp = rfq;
+    return;
+}
+
+struct frameset *
+popFrameTree(struct frameset_queue **fqpp)
+{
+    struct frameset_queue *rfq = NULL, *cfq = *fqpp;
+    struct frameset *rfs = NULL;
+
+    if (!cfq)
+	return rfs;
+
+    rfs = cfq->frameset;
+    if (cfq->next) {
+	(rfq = cfq->next)->back = cfq->back;
+    }
+    if (cfq->back) {
+	(rfq = cfq->back)->next = cfq->next;
+    }
+    *fqpp = rfq;
+    bzero((void *)cfq, sizeof(struct frameset_queue));
+    return rfs;
+}
+
+void
+resetFrameElement(union frameset_element *f_element,
+		  Buffer *buf, char *referer, FormList *request)
+{
+    char *f_name;
+    struct frame_body *f_body;
+
+    f_name = f_element->element->name;
+    if (buf->frameset) {
+	/* frame cascade */
+	deleteFrameSetElement(*f_element);
+	f_element->set = buf->frameset;
+	f_element->set->currentURL = New(ParsedURL);
+	copyParsedURL(f_element->set->currentURL, &buf->currentURL);
+	buf->frameset = popFrameTree(&(buf->frameQ));
+	f_element->set->name = f_name;
+    }
+    else {
+	f_body = newFrame(NULL, buf);
+	f_body->attr = F_BODY;
+	f_body->name = f_name;
+	f_body->url = parsedURL2Str(&buf->currentURL)->ptr;
+	f_body->source = buf->sourcefile;
+	buf->sourcefile = NULL;
+	if (buf->mailcap_source) {
+	    f_body->source = buf->mailcap_source;
+	    buf->mailcap_source = NULL;
+	}
+	f_body->type = buf->type;
+	f_body->referer = referer;
+	f_body->request = request;
+	deleteFrameSetElement(*f_element);
+	f_element->body = f_body;
+    }
+}
+
+static struct frameset *
+frame_download_source(struct frame_body *b, ParsedURL *currentURL,
+		      ParsedURL *baseURL, int flag)
+{
+    Buffer *buf;
+    struct frameset *ret_frameset = NULL;
+    ParsedURL url;
+
+    if (b == NULL || b->url == NULL || b->url[0] == '\0')
+	return NULL;
+    if (b->baseURL)
+	baseURL = b->baseURL;
+    parseURL2(b->url, &url, currentURL);
+    switch (url.scheme) {
+    case SCM_LOCAL:
+#if 0
+	b->source = url.real_file;
+#endif
+	b->flags = 0;
+    default:
+	is_redisplay = TRUE;
+	w3m_dump |= DUMP_FRAME;
+	buf = loadGeneralFile(b->url,
+			      baseURL ? baseURL : currentURL,
+			      b->referer, flag | RG_FRAME_SRC, b->request);
+#ifdef USE_SSL
+	/* XXX certificate? */
+	if (buf && buf != NO_BUFFER)
+	    b->ssl_certificate = buf->ssl_certificate;
+#endif
+	w3m_dump &= ~DUMP_FRAME;
+	is_redisplay = FALSE;
+	break;
+    }
+
+    if (buf == NULL || buf == NO_BUFFER) {
+	b->source = NULL;
+	b->flags = (buf == NO_BUFFER) ? FB_NO_BUFFER : 0;
+	return NULL;
+    }
+    b->url = parsedURL2Str(&buf->currentURL)->ptr;
+    b->type = buf->type;
+    b->source = buf->sourcefile;
+    buf->sourcefile = NULL;
+    if (buf->mailcap_source) {
+	b->source = buf->mailcap_source;
+	buf->mailcap_source = NULL;
+    }
+    b->attr = F_BODY;
+    if (buf->frameset) {
+	ret_frameset = buf->frameset;
+	ret_frameset->name = b->name;
+	ret_frameset->currentURL = New(ParsedURL);
+	copyParsedURL(ret_frameset->currentURL, &buf->currentURL);
+	buf->frameset = popFrameTree(&(buf->frameQ));
+    }
+    discardBuffer(buf);
+    return ret_frameset;
+}
+
+#define CASE_TABLE_TAG \
+	case HTML_TR:\
+	case HTML_N_TR:\
+	case HTML_TD:\
+	case HTML_N_TD:\
+	case HTML_TH:\
+	case HTML_N_TH:\
+	case HTML_THEAD:\
+	case HTML_N_THEAD:\
+	case HTML_TBODY:\
+	case HTML_N_TBODY:\
+	case HTML_TFOOT:\
+	case HTML_N_TFOOT:\
+	case HTML_COLGROUP:\
+	case HTML_N_COLGROUP:\
+	case HTML_COL
+
+static int
+createFrameFile(struct frameset *f, FILE * f1, Buffer *current, int level,
+		int force_reload)
+{
+    int r, c, t_stack;
+    URLFile f2;
+#ifdef USE_M17N
+    wc_ces charset, doc_charset;
+#endif
+    char *d_target, *p_target, *s_target, *t_target;
+    ParsedURL *currentURL, base;
+    MySignalHandler(*volatile prevtrap) (SIGNAL_ARG) = NULL;
+    int flag;
+
+    if (f == NULL)
+	return -1;
+
+    if (level == 0) {
+	if (SETJMP(AbortLoading) != 0) {
+	    TRAP_OFF;
+	    return -1;
+	}
+	TRAP_ON;
+	f->name = "_top";
+    }
+
+    if (level > 7) {
+	fputs("Too many frameset tasked.\n", f1);
+	return -1;
+    }
+
+    if (level == 0) {
+	fprintf(f1, "<html><head><title>%s</title></head><body>\n",
+		html_quote(current->buffername));
+	fputs("<table hborder width=\"100%\">\n", f1);
+    }
+    else
+	fputs("<table hborder>\n", f1);
+
+    currentURL = f->currentURL ? f->currentURL : &current->currentURL;
+    for (r = 0; r < f->row; r++) {
+	fputs("<tr valign=top>\n", f1);
+	for (c = 0; c < f->col; c++) {
+	    union frameset_element frame;
+	    struct frameset *f_frameset;
+	    int i = c + r * f->col;
+	    char *p = "";
+	    int status = R_ST_NORMAL;
+	    Str tok = Strnew();
+	    int pre_mode = 0;
+	    int end_tag = 0;
+
+	    frame = f->frame[i];
+
+	    if (frame.element == NULL) {
+		fputs("<td>\n</td>\n", f1);
+		continue;
+	    }
+
+	    fputs("<td", f1);
+	    if (frame.element->name)
+		fprintf(f1, " id=\"_%s\"", html_quote(frame.element->name));
+	    if (!r)
+		fprintf(f1, " width=\"%s\"", f->width[c]);
+	    fputs(">\n", f1);
+
+	    flag = 0;
+	    if (force_reload) {
+		flag |= RG_NOCACHE;
+		if (frame.element->attr == F_BODY)
+		    unloadFrame(frame.body);
+	    }
+	    switch (frame.element->attr) {
+	    default:
+		/* FIXME: gettextize? */
+		fprintf(f1, "Frameset \"%s\" frame %d: type unrecognized",
+			html_quote(f->name), i + 1);
+		break;
+	    case F_UNLOADED:
+		if (!frame.body->name && f->name) {
+		    frame.body->name = Sprintf("%s_%d", f->name, i)->ptr;
+		}
+		fflush(f1);
+		f_frameset = frame_download_source(frame.body,
+						   currentURL,
+						   current->baseURL, flag);
+		if (f_frameset) {
+		    deleteFrame(frame.body);
+		    f->frame[i].set = frame.set = f_frameset;
+		    goto render_frameset;
+		}
+		/* fall through */
+	    case F_BODY:
+		init_stream(&f2, SCM_LOCAL, NULL);
+		if (frame.body->source) {
+		    fflush(f1);
+		    examineFile(frame.body->source, &f2);
+		}
+		if (f2.stream == NULL) {
+		    frame.body->attr = F_UNLOADED;
+		    if (frame.body->flags & FB_NO_BUFFER)
+			/* FIXME: gettextize? */
+			fprintf(f1, "Open %s with other method",
+				html_quote(frame.body->url));
+		    else if (frame.body->url)
+			/* FIXME: gettextize? */
+			fprintf(f1, "Can't open %s",
+				html_quote(frame.body->url));
+		    else
+			/* FIXME: gettextize? */
+			fprintf(f1,
+				"This frame (%s) contains no src attribute",
+				frame.body->name ? html_quote(frame.body->name)
+				: "(no name)");
+		    break;
+		}
+		parseURL2(frame.body->url, &base, currentURL);
+		p_target = f->name;
+		s_target = frame.body->name;
+		t_target = "_blank";
+		d_target = TargetSelf ? s_target : t_target;
+#ifdef USE_M17N
+		charset = WC_CES_US_ASCII;
+		if (current->document_charset != WC_CES_US_ASCII)
+		    doc_charset = current->document_charset;
+		else
+		    doc_charset = DocumentCharset;
+#endif
+		t_stack = 0;
+		if (frame.body->type &&
+		    !strcasecmp(frame.body->type, "text/plain")) {
+		    Str tmp;
+		    fprintf(f1, "<pre>\n");
+		    while ((tmp = StrmyUFgets(&f2))->length) {
+			tmp = convertLine(NULL, tmp, HTML_MODE, &charset,
+					  doc_charset);
+			fprintf(f1, "%s", html_quote(tmp->ptr));
+		    }
+		    fprintf(f1, "</pre>\n");
+		    UFclose(&f2);
+		    break;
+		}
+		do {
+		    int is_tag = FALSE;
+		    char *q;
+		    struct parsed_tag *tag;
+
+		    do {
+			if (*p == '\0') {
+			    Str tmp = StrmyUFgets(&f2);
+			    if (tmp->length == 0)
+				break;
+			    tmp = convertLine(NULL, tmp, HTML_MODE, &charset,
+					      doc_charset);
+			    p = tmp->ptr;
+			}
+			read_token(tok, &p, &status, 1, status != R_ST_NORMAL);
+		    } while (status != R_ST_NORMAL);
+
+		    if (tok->length == 0)
+			continue;
+
+		    if (tok->ptr[0] == '<') {
+			if (tok->ptr[1] &&
+			    REALLY_THE_BEGINNING_OF_A_TAG(tok->ptr))
+			    is_tag = TRUE;
+			else if (!(pre_mode & (RB_PLAIN | RB_INTXTA |
+					       RB_SCRIPT | RB_STYLE))) {
+			    p = Strnew_m_charp(tok->ptr + 1, p, NULL)->ptr;
+			    tok = Strnew_charp("&lt;");
+			}
+		    }
+		    if (is_tag) {
+			if (pre_mode & (RB_PLAIN | RB_INTXTA | RB_SCRIPT |
+					RB_STYLE)) {
+			    q = tok->ptr;
+			    if ((tag = parse_tag(&q, FALSE)) &&
+				tag->tagid == end_tag) {
+				if (pre_mode & RB_PLAIN) {
+				    fputs("</PRE_PLAIN>", f1);
+				    pre_mode = 0;
+				    end_tag = 0;
+				    goto token_end;
+				}
+				pre_mode = 0;
+				end_tag = 0;
+				goto proc_normal;
+			    }
+			    if (strncmp(tok->ptr, "<!--", 4) &&
+				(q = strchr(tok->ptr + 1, '<'))) {
+				tok = Strnew_charp_n(tok->ptr, q - tok->ptr);
+				p = Strnew_m_charp(q, p, NULL)->ptr;
+				status = R_ST_NORMAL;
+			    }
+			    is_tag = FALSE;
+			}
+			else if (pre_mode & RB_INSELECT) {
+			    q = tok->ptr;
+			    if ((tag = parse_tag(&q, FALSE))) {
+				if ((tag->tagid == end_tag) ||
+				    (tag->tagid == HTML_N_FORM)) {
+				    if (tag->tagid == HTML_N_FORM)
+					fputs("</SELECT>", f1);
+				    pre_mode = 0;
+				    end_tag = 0;
+				    goto proc_normal;
+				}
+				if (t_stack) {
+				    switch (tag->tagid) {
+				    case HTML_TABLE:
+				    case HTML_N_TABLE:
+				      CASE_TABLE_TAG:
+					fputs("</SELECT>", f1);
+					pre_mode = 0;
+					end_tag = 0;
+					goto proc_normal;
+				    }
+				}
+			    }
+			}
+		    }
+
+		  proc_normal:
+		    if (is_tag) {
+			char *q = tok->ptr;
+			int j, a_target = 0;
+			ParsedURL url;
+
+			if (!(tag = parse_tag(&q, FALSE)))
+			    goto token_end;
+
+			switch (tag->tagid) {
+			case HTML_TITLE:
+			    fputs("<!-- title:", f1);
+			    goto token_end;
+			case HTML_N_TITLE:
+			    fputs("-->", f1);
+			    goto token_end;
+			case HTML_BASE:
+			    /* "BASE" is prohibit tag */
+			    if (parsedtag_get_value(tag, ATTR_HREF, &q)) {
+				q = url_quote_conv(remove_space(q), charset);
+				parseURL(q, &base, NULL);
+			    }
+			    if (parsedtag_get_value(tag, ATTR_TARGET, &q)) {
+				if (!strcasecmp(q, "_self"))
+				    d_target = s_target;
+				else if (!strcasecmp(q, "_parent"))
+				    d_target = p_target;
+				else
+				    d_target = url_quote_conv(q, charset);
+			    }
+			    Strshrinkfirst(tok, 1);
+			    Strshrink(tok, 1);
+			    fprintf(f1, "<!-- %s -->", html_quote(tok->ptr));
+			    goto token_end;
+			case HTML_META:
+			    if (parsedtag_get_value(tag, ATTR_HTTP_EQUIV, &q)
+				&& !strcasecmp(q, "refresh")) {
+				if (parsedtag_get_value(tag, ATTR_CONTENT, &q)
+				    ) {
+				    Str s_tmp = NULL;
+				    int refresh_interval =
+					getMetaRefreshParam(q, &s_tmp);
+				    if (s_tmp) {
+					q = html_quote(s_tmp->ptr);
+					fprintf(f1,
+						"Refresh (%d sec) <a href=\"%s\">%s</a>\n",
+						refresh_interval, q, q);
+				    }
+				}
+			    }
+#ifdef USE_M17N
+			    if (UseContentCharset &&
+				parsedtag_get_value(tag, ATTR_HTTP_EQUIV, &q)
+				&& !strcasecmp(q, "Content-Type")
+				&& parsedtag_get_value(tag, ATTR_CONTENT, &q)
+				&& (q = strcasestr(q, "charset")) != NULL) {
+				q += 7;
+				SKIP_BLANKS(q);
+				if (*q == '=') {
+				    wc_ces c;
+				    q++;
+				    SKIP_BLANKS(q);
+				    if ((c = wc_guess_charset(q, 0)) != 0) {
+					doc_charset = c;
+					charset = WC_CES_US_ASCII;
+				    }
+				}
+			    }
+#endif
+			    /* fall thru, "META" is prohibit tag */
+			case HTML_HEAD:
+			case HTML_N_HEAD:
+			case HTML_BODY:
+			case HTML_N_BODY:
+			case HTML_DOCTYPE:
+			    /* prohibit_tags */
+			    Strshrinkfirst(tok, 1);
+			    Strshrink(tok, 1);
+			    fprintf(f1, "<!-- %s -->", html_quote(tok->ptr));
+			    goto token_end;
+			case HTML_TABLE:
+			    t_stack++;
+			    break;
+			case HTML_N_TABLE:
+			    t_stack--;
+			    if (t_stack < 0) {
+				t_stack = 0;
+				Strshrinkfirst(tok, 1);
+				Strshrink(tok, 1);
+				fprintf(f1,
+					"<!-- table stack underflow: %s -->",
+					html_quote(tok->ptr));
+				goto token_end;
+			    }
+			    break;
+			  CASE_TABLE_TAG:
+			    /* table_tags MUST be in table stack */
+			    if (!t_stack) {
+				Strshrinkfirst(tok, 1);
+				Strshrink(tok, 1);
+				fprintf(f1, "<!-- %s -->",
+					html_quote(tok->ptr));
+				goto token_end;
+
+			    }
+			    break;
+			case HTML_SELECT:
+			    pre_mode = RB_INSELECT;
+			    end_tag = HTML_N_SELECT;
+			    break;
+			case HTML_TEXTAREA:
+			    pre_mode = RB_INTXTA;
+			    end_tag = HTML_N_TEXTAREA;
+			    break;
+			case HTML_SCRIPT:
+			    pre_mode = RB_SCRIPT;
+			    end_tag = HTML_N_SCRIPT;
+			    break;
+			case HTML_STYLE:
+			    pre_mode = RB_STYLE;
+			    end_tag = HTML_N_STYLE;
+			    break;
+			case HTML_LISTING:
+			    pre_mode = RB_PLAIN;
+			    end_tag = HTML_N_LISTING;
+			    fputs("<PRE_PLAIN>", f1);
+			    goto token_end;
+			case HTML_XMP:
+			    pre_mode = RB_PLAIN;
+			    end_tag = HTML_N_XMP;
+			    fputs("<PRE_PLAIN>", f1);
+			    goto token_end;
+			case HTML_PLAINTEXT:
+			    pre_mode = RB_PLAIN;
+			    end_tag = MAX_HTMLTAG;
+			    fputs("<PRE_PLAIN>", f1);
+			    goto token_end;
+			default:
+			    break;
+			}
+			for (j = 0; j < TagMAP[tag->tagid].max_attribute; j++) {
+			    switch (tag->attrid[j]) {
+			    case ATTR_SRC:
+			    case ATTR_HREF:
+			    case ATTR_ACTION:
+				if (!tag->value[j])
+				    break;
+				tag->value[j] =
+				    url_quote_conv(remove_space(tag->value[j]),
+						   charset);
+				tag->need_reconstruct = TRUE;
+				parseURL2(tag->value[j], &url, &base);
+				if (url.scheme == SCM_UNKNOWN ||
+#ifndef USE_W3MMAILER
+				    url.scheme == SCM_MAILTO ||
+#endif
+				    url.scheme == SCM_MISSING)
+				    break;
+				a_target |= 1;
+				tag->value[j] = parsedURL2Str(&url)->ptr;
+				parsedtag_set_value(tag,
+						    ATTR_REFERER,
+						    parsedURL2Str(&base)->ptr);
+#ifdef USE_M17N
+				if (tag->attrid[j] == ATTR_ACTION &&
+				    charset != WC_CES_US_ASCII)
+				    parsedtag_set_value(tag,
+							ATTR_CHARSET,
+							wc_ces_to_charset
+							(charset));
+#endif
+				break;
+			    case ATTR_TARGET:
+				if (!tag->value[j])
+				    break;
+				a_target |= 2;
+				if (!strcasecmp(tag->value[j], "_self")) {
+				    parsedtag_set_value(tag,
+							ATTR_TARGET, s_target);
+				}
+				else if (!strcasecmp(tag->value[j], "_parent")) {
+				    parsedtag_set_value(tag,
+							ATTR_TARGET, p_target);
+				}
+				break;
+			    case ATTR_NAME:
+			    case ATTR_ID:
+				if (!tag->value[j])
+				    break;
+				parsedtag_set_value(tag,
+						    ATTR_FRAMENAME, s_target);
+				break;
+			    }
+			}
+			if (a_target == 1) {
+			    /* there is HREF attribute and no TARGET
+			     * attribute */
+			    parsedtag_set_value(tag, ATTR_TARGET, d_target);
+			}
+			if (parsedtag_need_reconstruct(tag))
+			    tok = parsedtag2str(tag);
+			Strfputs(tok, f1);
+		    }
+		    else {
+			if (pre_mode & RB_PLAIN)
+			    fprintf(f1, "%s", html_quote(tok->ptr));
+			else if (pre_mode & RB_INTXTA)
+			    fprintf(f1, "%s",
+				    html_quote(html_unquote(tok->ptr)));
+			else
+			    Strfputs(tok, f1);
+		    }
+		  token_end:
+		    Strclear(tok);
+		} while (*p != '\0' || !iseos(f2.stream));
+		if (pre_mode & RB_PLAIN)
+		    fputs("</PRE_PLAIN>\n", f1);
+		else if (pre_mode & RB_INTXTA)
+		    fputs("</TEXTAREA></FORM>\n", f1);
+		else if (pre_mode & RB_INSELECT)
+		    fputs("</SELECT></FORM>\n", f1);
+		else if (pre_mode & (RB_SCRIPT | RB_STYLE)) {
+		    if (status != R_ST_NORMAL)
+			fputs(correct_irrtag(status)->ptr, f1);
+		    if (pre_mode & RB_SCRIPT)
+			fputs("</SCRIPT>\n", f1);
+		    else if (pre_mode & RB_STYLE)
+			fputs("</STYLE>\n", f1);
+		}
+		while (t_stack--)
+		    fputs("</TABLE>\n", f1);
+		UFclose(&f2);
+		break;
+	    case F_FRAMESET:
+	      render_frameset:
+		if (!frame.set->name && f->name) {
+		    frame.set->name = Sprintf("%s_%d", f->name, i)->ptr;
+		}
+		createFrameFile(frame.set, f1, current, level + 1,
+				force_reload);
+		break;
+	    }
+	    fputs("</td>\n", f1);
+	}
+	fputs("</tr>\n", f1);
+    }
+
+    fputs("</table>\n", f1);
+    if (level == 0) {
+	fputs("</body></html>\n", f1);
+	TRAP_OFF;
+    }
+    return 0;
+}
+
+Buffer *
+renderFrame(Buffer *Cbuf, int force_reload)
+{
+    Str tmp;
+    FILE *f;
+    Buffer *buf;
+    int flag;
+    struct frameset *fset;
+#ifdef USE_M17N
+    wc_ces doc_charset = DocumentCharset;
+#endif
+
+    tmp = tmpfname(TMPF_FRAME, ".html");
+    f = fopen(tmp->ptr, "w");
+    if (f == NULL)
+	return NULL;
+    /* 
+     * if (Cbuf->frameQ != NULL) fset = Cbuf->frameQ->frameset; else */
+    fset = Cbuf->frameset;
+    if (fset == NULL || createFrameFile(fset, f, Cbuf, 0, force_reload) < 0)
+	return NULL;
+    fclose(f);
+    flag = RG_FRAME;
+    if ((Cbuf->currentURL).is_nocache)
+	flag |= RG_NOCACHE;
+    renderFrameSet = Cbuf->frameset;
+    flushFrameSet(renderFrameSet);
+#ifdef USE_M17N
+    DocumentCharset = InnerCharset;
+#endif
+    buf = loadGeneralFile(tmp->ptr, NULL, NULL, flag, NULL);
+#ifdef USE_M17N
+    DocumentCharset = doc_charset;
+#endif
+    renderFrameSet = NULL;
+    if (buf == NULL || buf == NO_BUFFER)
+	return NULL;
+    buf->sourcefile = tmp->ptr;
+#ifdef USE_M17N
+    buf->document_charset = Cbuf->document_charset;
+#endif
+    copyParsedURL(&buf->currentURL, &Cbuf->currentURL);
+    preFormUpdateBuffer(buf);
+    return buf;
+}
+
+union frameset_element *
+search_frame(struct frameset *fset, char *name)
+{
+    int i;
+    union frameset_element *e = NULL;
+
+    for (i = 0; i < fset->col * fset->row; i++) {
+	e = &(fset->frame[i]);
+	if (e->element != NULL) {
+	    if (e->element->name && !strcmp(e->element->name, name)) {
+		return e;
+	    }
+	    else if (e->element->attr == F_FRAMESET &&
+		     (e = search_frame(e->set, name))) {
+		return e;
+	    }
+	}
+    }
+    return NULL;
+}
+@
+
+
+1.33
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.32 2003/05/12 16:33:18 ukai Exp $ */
+d475 1
+d502 1
+d506 1
+d510 1
+@
+
+
+1.32
+log
+@[w3m-dev 03896] html_quote in textarea in frame
+* frame.c (createFrameFile): fix html_quote in textarea in frame
+From: Hironori SAKAMOTO <h-saka@@lsi.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.31 2003/01/29 17:10:39 ukai Exp $ */
+a7 6
+#ifdef KANJI_SYMBOLS
+#define RULE_WIDTH 2
+#else				/* not KANJI_SYMBOLS */
+#define RULE_WIDTH 1
+#endif				/* not KANJI_SYMBOLS */
+
+d94 1
+a94 1
+	    body->url = url_quote_conv(remove_space(p), buf->document_code);
+d96 1
+a96 1
+	    body->name = url_quote_conv(p, buf->document_code);
+d407 3
+a409 4
+    char code;
+#ifdef JP_CHARSET
+    char charset[2];
+#endif				/* JP_CHARSET */
+a440 3
+#ifdef JP_CHARSET
+    charset[1] = '\0';
+#endif
+d518 6
+a523 2
+#ifdef JP_CHARSET
+		code = DocumentCode;
+d531 2
+a532 1
+			tmp = convertLine(NULL, tmp, &code, HTML_MODE);
+d549 2
+a550 1
+			    tmp = convertLine(NULL, tmp, &code, HTML_MODE);
+d638 1
+a638 1
+				q = url_quote_conv(remove_space(q), code);
+d647 1
+a647 1
+				    d_target = url_quote_conv(q, code);
+d669 19
+d768 1
+a768 1
+						   code);
+d782 3
+a784 3
+#ifdef JP_CHARSET
+				if (code != '\0') {
+				    charset[0] = code;
+d786 3
+a788 2
+							ATTR_CHARSET, charset);
+				}
+d882 3
+d901 3
+d905 3
+d912 2
+a913 2
+#ifdef JP_CHARSET
+    buf->document_code = Cbuf->document_code;
+@
+
+
+1.31
+log
+@[w3m-dev 03708] Re: Don't stop loading image when moving to next page.
+* config.h.dist (lstat): define ifndef HAVE_LSTAT
+* configure (config.h) ditto
+* display.c (fmTerm): new loadImage
+	(save_current_buf): only ifdef USE_BUFINFO
+	(displayBuffer): new loadImage
+* etc.c (setup_child): TrapSignal
+* file.c (loadGeneralFile): TRAP_OFF, TRAP_ON
+	(loadHTMLstream): ditto
+	(loadGopherDir): ditto
+	(loadBuffer): ditto
+	(loadImageBuffer): ditto
+	(getNextPage): ditto
+	(save2tmp): ditto
+* fm.h (TrapSignal): added
+	(TRAP_ON): added
+	(TRAP_OFF): added
+* form.c (HAVE_LSTAT): deleted
+* frame.c (createFrameFile): TRAP_OFF, TRAP_ON
+* image.c (image_buffer): added
+	(deleteImage): new loadImage
+	(getAllImage): initialize image_buffer
+	(loadImage): rewrite
+* main.c (main): new loadImage
+	(checkDownloadList): remove ifdef HAVE_LSTAT
+* news.c (loadNwesgroup): TRAP_ON, TRAP_OFF
+* proto.h (loadImage): add buf arg
+* url.c (openSocket): TRAP_ON, TRAP_OFF
+	(check_no_proxy): TRAP_ON, TRAP_OFF
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.30 2003/01/20 15:30:20 ukai Exp $ */
+d807 1
+a807 1
+			if (pre_mode & (RB_PLAIN | RB_INTXTA))
+d809 3
+@
+
+
+1.30
+log
+@[w3m-dev 03660] Re: fputs -> Strfputs
+* Str.h (Strncmp_charp): paren
+	(Strncasecmp_charp): ditto
+	(Strinsert): ditto
+	(Strshrinkfirst): ditto
+* display.c (disp_err_message): added
+* file.c (loadGeneralFile): don't put function in macro arg
+	(saveBuffer): ditto
+* frame.c (createFrameFile): ditto
+* proto.h (disp_err_message): macro->function
+* table.c (pushdata): if data is NULL, use ""
+	(suspend_or_pushdata): if line is NULL, use ""
+* textlist.h (pushText): don't use (s) twice in a macro
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.29 2003/01/15 16:11:43 ukai Exp $ */
+d427 1
+a427 3
+	    if (fmInitialized)
+		term_raw();
+	    signal(SIGINT, prevtrap);
+d430 1
+a430 4
+	prevtrap = signal(SIGINT, KeyAbort);
+	if (fmInitialized)
+	    term_cbreak();
+
+d850 1
+a850 3
+	signal(SIGINT, prevtrap);
+	if (fmInitialized)
+	    term_raw();
+@
+
+
+1.29
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.28 2003/01/09 15:30:43 ukai Exp $ */
+d808 2
+a809 3
+			    Strfputs(parsedtag2str(tag), f1);
+			else
+			    Strfputs(tok, f1);
+@
+
+
+1.28
+log
+@[w3m-dev 03619] Re: Error occured while reset
+* file.c (process_img): check image.ext
+	(HTMLlineproc2body): check image.ext
+	(loadImageBuffer): url, ext is in URLFile
+* frame.c (unloadFrame): no need to push to fileToDelete
+	(copyFrame): no need to reset FB_TODELETE
+	(resetFrameElement): f_body->source, buf->sourcefile
+	(frame_download_source): buf->source
+			buf->sourcefile reset
+* frame.h (FB_NOCACHE): deleted
+	(FB_TODELETE): deleted
+* main.c (vmSrc): Currentbuf->sourcefile
+		need_reshape if images exist
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.27 2002/12/14 15:28:37 ukai Exp $ */
+d413 1
+d415 1
+a415 1
+    char code, ic, charset[2];
+d534 2
+a535 2
+		code = '\0';
+#endif				/* JP_CHARSET */
+d542 1
+a542 6
+#ifdef JP_CHARSET
+			if ((ic = checkShiftCode(tmp, code)) != '\0')
+			    tmp = conv_str(tmp, (code = ic), InnerCode);
+
+#endif				/* JP_CHARSET */
+			cleanup_line(tmp, HTML_MODE);
+d559 1
+a559 6
+#ifdef JP_CHARSET
+			    if ((ic = checkShiftCode(tmp, code)) != '\0')
+				tmp = conv_str(tmp, (code = ic), InnerCode);
+
+#endif				/* JP_CHARSET */
+			    cleanup_line(tmp, HTML_MODE);
+@
+
+
+1.27
+log
+@[w3m-dev 03570] meta tag in frame
+* frame.c (createFrameFile): fix meta equiv parse in frame
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.26 2002/12/06 16:38:05 ukai Exp $ */
+a109 2
+    if (b->source && b->flags & FB_TODELETE)
+	pushText(fileToDelete, b->source);
+a177 1
+    rb->flags &= ~FB_TODELETE;
+d316 2
+a319 1
+	    f_body->flags |= FB_TODELETE;
+a321 10
+	else if (buf->real_scheme == SCM_LOCAL) {
+	    f_body->source = buf->sourcefile;
+	}
+	else {
+	    Str tmp = tmpfname(TMPF_FRAME, NULL);
+	    rename(buf->sourcefile, tmp->ptr);
+	    f_body->source = tmp->ptr;
+	    f_body->flags |= FB_TODELETE;
+	    buf->sourcefile = NULL;
+	}
+a335 1
+    Str tmp;
+d371 1
+d373 1
+a373 1
+    b->type = buf->type;
+a375 1
+	b->flags |= FB_TODELETE;
+a376 12
+    }
+    else if ((buf->real_scheme != SCM_LOCAL)
+#ifdef USE_IMAGE
+	     || (activeImage && !useExtImageViewer &&
+		 buf->real_type && !strncasecmp(buf->real_type, "image/", 6))
+#endif
+	) {
+	tmp = tmpfname(TMPF_FRAME, NULL);
+	rename(buf->sourcefile, tmp->ptr);
+	b->source = tmp->ptr;
+	b->flags |= FB_TODELETE;
+	buf->sourcefile = NULL;
+@
+
+
+1.26
+log
+@[w3m-dev 03535] close anchor, quote <
+* file.c (HTMLtagproc1): close_anchor
+* frame.c (createFrameFile): quote <
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.25 2002/12/05 16:04:00 ukai Exp $ */
+d697 5
+a701 5
+			    parsedtag_get_value(tag, ATTR_HTTP_EQUIV, &q);
+			    if (q && !strcasecmp(q, "refresh")) {
+				parsedtag_get_value(tag, ATTR_CONTENT, &q);
+				if (q) {
+				    Str s_tmp;
+@
+
+
+1.25
+log
+@[w3m-dev 03527] fix frame.c
+* frame.c (createFrameFile): move need_reconstruct
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.24 2002/12/03 15:45:33 ukai Exp $ */
+d603 10
+a612 1
+			is_tag = TRUE;
+@
+
+
+1.24
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.23 2002/12/03 15:35:10 ukai Exp $ */
+d784 1
+a793 1
+				tag->need_reconstruct = TRUE;
+@
+
+
+1.23
+log
+@[w3m-dev 03509] HTML parser
+* file.c (close_textarea): delete
+	(HTMLtagproc1): rewrite
+			delete HTML_EOL
+			move HTML_LISTING, HTML_N_LISTING
+			add HTML_PRE_PLAIN, HTML_N_PRE_PLAIN
+			add HTML_PLAINTEXT
+			end_tag
+	(HTMLlineproc0): s/str/line/
+			rewrite
+	(completeHTMLstream): </textarea> if necessary
+* fm.h (struct readbuffer): delete ignore_tag
+			add end_tag
+	(RB_XMPMODE): deleted
+	(RB_LSTMODE): deleted
+	(RB_SCRIPT): added
+	(RB_STYLE): added
+	(RB_*): renumber
+	(R_ST_EOL): added
+	(R_ST_*): renumber
+	(ST_IS_TAG): check R_ST_EOL
+* form.c (form_fputs_decode): remove <eol> handling
+* frame.c (newFrame): remove_space()
+	(CASE_TABLE_TAG): added
+	(createFrameFile): rewrite
+* html.c (TagMAP): delete eol
+		add pre_plain, /pre_plain
+* html.h (HTML_EOL): deleted
+	(HTML_PRE_PLAIN): added
+	(HTML_N_PRE_PLAIN): added
+* table.c (visible_length): rewrite
+	(visible_length_plain): added
+	(maximum_visible_length_plain): added
+	(do_refill): R_ST_EOL
+	(table_close_select): end_tag
+	(table_close_textarea): end_tag
+	(TAG_ACTION_PLAIN): added
+	(feed_table_tag): rewrite
+	(feed_table): rewrite
+* table.h (TBLM_*) reassign
+	(struct table_mode): delete ignore_tag
+			add end_tag
+* tagtable.tab (eol): deleted
+		(pre_plain): added
+		(/pre_plain): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.22 2002/11/28 16:00:34 ukai Exp $ */
+d628 1
+a628 1
+                            q = tok->ptr;
+d642 1
+a642 1
+				    CASE_TABLE_TAG:
+d646 1
+a646 1
+				        goto proc_normal;
+d729 1
+a729 1
+			CASE_TABLE_TAG:
+@
+
+
+1.22
+log
+@[w3m-dev 03498] Re: parse <!-- ... --> in <script>
+* file.c (HTMLlineproc0): tag in textarea
+* frame.c (createFrameFile): fix comment processing in frame
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.21 2002/11/26 17:12:15 ukai Exp $ */
+d100 1
+a100 1
+	    body->url = url_quote_conv(p, buf->document_code);
+d415 17
+d487 1
+d489 2
+a490 1
+	    int status;
+d579 4
+a582 1
+		    status = R_ST_NORMAL;
+a585 2
+			    if (tmp->length == 0 && status != R_ST_NORMAL)
+				tmp = correct_irrtag(status);
+d596 1
+a596 6
+			if (status == R_ST_NORMAL)
+			    read_token(tok, &p, &status, 1, 0);
+			else if (ST_IS_COMMENT(status))
+			    read_token(tok, &p, &status, 0, 0);
+			else
+			    read_token(tok, &p, &status, 1, 1);
+d603 52
+a656 1
+			struct parsed_tag *tag;
+d672 1
+a672 1
+				q = url_quote_conv(q, code);
+d729 1
+a729 12
+			case HTML_THEAD:
+			case HTML_N_THEAD:
+			case HTML_TBODY:
+			case HTML_N_TBODY:
+			case HTML_TFOOT:
+			case HTML_N_TFOOT:
+			case HTML_TD:
+			case HTML_N_TD:
+			case HTML_TR:
+			case HTML_N_TR:
+			case HTML_TH:
+			case HTML_N_TH:
+d740 31
+d782 2
+a783 1
+				    url_quote_conv(tag->value[j], code);
+d838 4
+a841 1
+			Strfputs(tok, f1);
+d846 14
+@
+
+
+1.21
+log
+@q already html_quote()ed
+fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.20 2002/11/26 17:08:01 ukai Exp $ */
+d576 1
+a576 1
+			if (status == R_ST_NORMAL || ST_IS_COMMENT(status))
+d578 2
+@
+
+
+1.20
+log
+@frame.c (createFrameFile): html_quote()
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.19 2002/11/26 17:05:24 ukai Exp $ */
+d625 2
+a626 1
+				    int refresh_interval = getMetaRefreshParam(q, &s_tmp);
+d628 4
+a631 4
+				        q = html_quote(s_tmp->ptr);
+				        fprintf(f1, "Refresh (%d sec) <a href=\"%s\">%s</a>\n",
+						refresh_interval, 
+						html_quote(q), html_quote(q));
+@
+
+
+1.19
+log
+@[w3m-dev 03488] meta refresh in frame
+* file.c (getMetaRefreshParam): added
+	(HTMLtagproc1): use getMetaRefreshParam()
+* frame.c (createFrameFile): check meta refresh
+* proto.h (getMetaRefreshProgram): added
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.18 2002/11/26 16:58:49 ukai Exp $ */
+d617 1
+a617 1
+			    fprintf(f1, "<!-- %s -->", tok->ptr);
+d629 2
+a630 1
+						refresh_interval, q, q);
+@
+
+
+1.18
+log
+@w3m 0.3.2.1 security fix
+* frame.c (createFrameFile): html_quote()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.17 2002/11/05 15:56:13 ukai Exp $ */
+d602 1
+d615 19
+a633 1
+			    /* fall thru, "BASE" is prohibit tag */
+a637 1
+			case HTML_META:
+@
+
+
+1.17
+log
+@[w3m-dev 03373] setting form on loading
+* config.h.dist (PRE_FORM_FILE): added
+* configure (PRE_FORM_FILE): added
+* etc.c (openPasswdFile): define by openSecretFile()
+	(openSecretFile): renamed, not static
+* file.c (loadGeneralFile): preFOrmUpdateBuffer()
+* fm.h (Buffer): add submit
+	(pre_form_file): added
+* form.c (struct pre_form_item): added
+	(struct pre_form): added
+	(next_token): added
+	(PreForm): added
+	(add_pre_form): added
+	(add_pre_form_item): added
+	(loadPreForm): added
+	(preFormUpdateBuffer): added
+* frame.c (renderFrame): add preFormUpdateBuffer()
+* main.c (MAIN): buf->submit check
+* proto.h (preFormUpdateBuffer): added
+	(openSecretFile): added
+	(loadPreForm): added
+* rc.c (sync_with_option): add loadPreForm()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.16 2002/06/17 15:50:45 inu Exp $ */
+d522 1
+a522 1
+				frame.body->url);
+d524 2
+a525 1
+			fprintf(f1, "Can't open %s", frame.body->url);
+d529 2
+a530 2
+				frame.body->name ? frame.body->
+				name : "(no name)");
+d624 1
+a624 1
+			    fprintf(f1, "<!-- %s -->", tok->ptr);
+d637 1
+a637 1
+					tok->ptr);
+d657 2
+a658 1
+				fprintf(f1, "<!-- %s -->", tok->ptr);
+@
+
+
+1.16
+log
+@[w3m-dev 03214] strtoul() -> strtol() for SunOS4
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.15 2002/04/17 02:44:22 ukai Exp $ */
+d793 1
+@
+
+
+1.16.4.1
+log
+@w3m 0.3.2 branch: security fix
+* frame.c (createFrameFile): html_quote()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.16 2002/06/17 15:50:45 inu Exp $ */
+d522 1
+a522 1
+				html_quote(frame.body->url));
+d524 1
+a524 2
+			fprintf(f1, "Can't open %s",
+				html_quote(frame.body->url));
+d528 2
+a529 2
+				frame.body->name ? html_quote(frame.body->name)
+				: "(no name)");
+d623 1
+a623 1
+			    fprintf(f1, "<!-- %s -->", html_quote(tok->ptr));
+d636 1
+a636 1
+					html_quote(tok->ptr));
+d656 1
+a656 2
+				fprintf(f1, "<!-- %s -->",
+					html_quote(tok->ptr));
+@
+
+
+1.16.2.1
+log
+@w3m-0.3.2 branch: security fix
+* frame.c (createFrameFile): html_quote()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.16 2002/06/17 15:50:45 inu Exp $ */
+d522 1
+a522 1
+				html_quote(frame.body->url));
+d524 1
+a524 2
+			fprintf(f1, "Can't open %s",
+				html_quote(frame.body->url));
+d528 2
+a529 2
+				frame.body->name ? html_quote(frame.body->name)
+				: "(no name)");
+d623 1
+a623 1
+			    fprintf(f1, "<!-- %s -->", html_quote(tok->ptr));
+d636 1
+a636 1
+					html_quote(tok->ptr));
+d656 1
+a656 2
+				fprintf(f1, "<!-- %s -->",
+					html_quote(tok->ptr));
+@
+
+
+1.15
+log
+@[w3m-dev 03178] Parser of ``cols'' and ``rows''
+* frame.c (parseFrameSetLength): added
+	(newFrameSet): use parseFrameSetLength()
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.14 2002/03/15 19:02:40 ukai Exp $ */
+d41 1
+a41 1
+	len = strtoul(p, &q, 10);
+@
+
+
+1.14
+log
+@indent fix
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.13 2002/03/15 16:35:46 ukai Exp $ */
+d23 40
+d68 1
+a68 2
+    char *cols = NULL, *rows = NULL, *p, *q;
+    char *length[100];
+d76 3
+a78 66
+    i = 0;
+    if (cols) {
+	length[i] = p = cols;
+	while (*p != '\0')
+	    if (*p++ == ',') {
+		length[++i] = p;
+		if (i >= sizeof(length) / sizeof(length[0]) - 2)
+		    break;
+	    }
+	length[++i] = p + 1;
+    }
+    if (i > 1) {
+	f->col = i;
+	f->width = New_N(char *, i);
+	p = length[i];
+	do {
+	    i--;
+	    q = p - 2;
+	    p = length[i];
+	    switch (*q) {
+		Str tmp;
+	    case '%':
+		f->width[i] = allocStr(p, q - p + 1);
+		break;
+	    case '*':
+		f->width[i] = "*";
+		break;
+	    default:
+		tmp = Sprintf("%d", atoi(p));
+		f->width[i] = tmp->ptr;
+		break;
+	    }
+	} while (i);
+    }
+    else {
+	f->col = 1;
+	f->width = New_N(char *, 1);
+	f->width[0] = "*";
+    }
+    i = 0;
+    if (rows) {
+	length[i] = p = rows;
+	while (*p != '\0')
+	    if (*p++ == ',') {
+		length[++i] = p;
+		if (i >= sizeof(length) / sizeof(length[0]) - 2)
+		    break;
+	    }
+	length[++i] = p + 1;
+    }
+    if (i > 1) {
+	f->row = i;
+	f->height = New_N(char *, i);
+	p = length[i];
+	do {
+	    i--;
+	    q = p - 2;
+	    p = length[i];
+	    f->height[i] = allocStr(p, q - p + 1);
+	} while (i);
+    }
+    else {
+	f->row = 1;
+	f->height = New_N(char *, 1);
+	f->height[0] = "*";
+    }
+a79 1
+    f->i = 0;
+d82 1
+a82 2
+	i--;
+	f->frame[i].element = NULL;
+@
+
+
+1.13
+log
+@[w3m-dev 03132] Re: Reload image
+* file.c (loadGeneralFile): b->type = "text/html"
+* file.c (loadImageBuffer): comment out getImageSize()
+			image_flag = IMG_FLAG_AUTO
+* file.c (openGeneralPagerBuffer): buf->type = "text/html"
+* frame.c (resetFrameElement): if (buf->mailcap_source) ...
+* frame.c (frame_download_source): if (buf->mailcap_source) ...
+* main.c (vwSrc): #ifdef USE_IMAGE
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.12 2002/02/09 15:27:14 ukai Exp $ */
+d419 2
+a420 2
+	|| (activeImage && !useExtImageViewer &&
+	    buf->real_type && !strncasecmp(buf->real_type, "image/", 6))
+@
+
+
+1.12
+log
+@[w3m-dev 03034] check buf
+* frame.c (frame_download_source): buf->ssl_certificate can be used
+			only if buf != NULL && buf != NO_BUFFER
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.11 2002/02/08 11:45:07 ukai Exp $ */
+d345 6
+a350 1
+	if (buf->real_scheme == SCM_LOCAL) {
+d412 6
+a417 1
+    if ((buf->real_scheme != SCM_LOCAL)
+@
+
+
+1.11
+log
+@[w3m-dev 03022] SSL certificates of frame body
+* frame.h (frame_body): add ssl_certificate
+* frame.c (frame_download_source): save ssl_certificate
+* map.c (append_frame_info): display ssl_certificate of frame_body
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.10 2002/01/31 17:54:51 ukai Exp $ */
+d391 2
+a392 1
+	b->ssl_certificate = buf->ssl_certificate;
+@
+
+
+1.10
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.9 2002/01/25 14:59:14 ukai Exp $ */
+d389 4
+@
+
+
+1.9
+log
+@[w3m-dev 02908] document code of frame
+* frame.c (renderFrame): save document_code if JP_CHARSET
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.8 2002/01/15 03:45:02 ukai Exp $ */
+d388 1
+a388 1
+			      b->referer, flag, b->request);
+d402 6
+a407 1
+    if (buf->real_scheme != SCM_LOCAL) {
+@
+
+
+1.8
+log
+@[w3m-dev 02834] mailto: use external program
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.7 2001/11/29 09:34:14 ukai Exp $ */
+d795 3
+@
+
+
+1.7
+log
+@[w3m-dev 02584] code cleanup again
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.6 2001/11/24 02:01:26 ukai Exp $ */
+d680 4
+a683 2
+				if (url.scheme == SCM_MAILTO ||
+				    url.scheme == SCM_UNKNOWN ||
+@
+
+
+1.6
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.5 2001/11/20 13:17:13 ukai Exp $ */
+d432 1
+a432 1
+    MySignalHandler(*prevtrap) (SIGNAL_ARG) = NULL;
+@
+
+
+1.5
+log
+@fix possible buffer overrun
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.4 2001/11/16 22:02:00 ukai Exp $ */
+d43 2
+a44 1
+		if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+d82 2
+a83 1
+		if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+d120 1
+a120 1
+    bzero((void *) body, sizeof(*body));
+d147 1
+a147 1
+    bzero((void *) b, sizeof(*b));
+d205 1
+a205 1
+    bcopy((const void *) ob, (void *) rb, sizeof(struct frame_body));
+d218 1
+a218 1
+    bcopy((const void *) of, (void *) rf, sizeof(struct frameset));
+d220 2
+a221 3
+    bcopy((const void *) of->width,
+	  (void *) rf->width,
+	  sizeof(char *) * rf->col);
+d223 2
+a224 3
+    bcopy((const void *) of->height,
+	  (void *) rf->height,
+	  sizeof(char *) * rf->row);
+d250 1
+a250 1
+    int             n = fs->i;
+d273 1
+a273 3
+pushFrameTree(struct frameset_queue **fqpp,
+	      struct frameset *fs,
+             Buffer *buf)
+d281 2
+a282 1
+    rfq->linenumber = (buf && buf->currentLine) ? buf->currentLine->linenumber : 1;
+d319 1
+a319 1
+    bzero((void *) cfq, sizeof(struct frameset_queue));
+d325 1
+a325 3
+		  Buffer * buf,
+		  char *referer,
+		  FormList * request)
+d337 1
+a337 1
+       buf->frameset = popFrameTree(&(buf->frameQ));
+d355 1
+a355 1
+       f_body->type = buf->type;
+d364 2
+a365 2
+frame_download_source(struct frame_body *b, ParsedURL * currentURL,
+		      ParsedURL * baseURL, int flag)
+d379 1
+a379 1
+/*
+d381 1
+a381 1
+*/
+d385 1
+a385 1
+       w3m_dump |= DUMP_FRAME;
+d388 2
+a389 4
+			      b->referer,
+			      flag,
+			      b->request);
+       w3m_dump &= ~DUMP_FRAME;
+d415 1
+a415 1
+       buf->frameset = popFrameTree(&(buf->frameQ));
+d422 2
+a423 1
+createFrameFile(struct frameset *f, FILE * f1, Buffer * current, int level, int force_reload)
+d511 1
+a511 2
+						   current->baseURL,
+						   flag);
+d527 2
+a528 1
+			fprintf(f1, "Open %s with other method", frame.body->url);
+d532 4
+a535 2
+			fprintf(f1, "This frame (%s) contains no src attribute",
+			    frame.body->name ? frame.body->name : "(no name)");
+d547 5
+a551 5
+        if (frame.body->type &&
+               ! strcasecmp(frame.body->type, "text/plain")) {
+            Str tmp;
+            fprintf(f1, "<pre>\n");
+            while ((tmp = StrmyUFgets(&f2))->length) {
+d553 2
+a554 2
+               if ((ic = checkShiftCode(tmp, code)) != '\0')
+                tmp = conv_str(tmp, (code = ic), InnerCode);
+d556 8
+a563 8
+#endif                /* JP_CHARSET */
+               cleanup_line(tmp, HTML_MODE);
+               fprintf(f1, "%s", html_quote(tmp->ptr));
+            }
+            fprintf(f1, "</pre>\n");
+            UFclose(&f2);
+            break;
+        }
+d568 1
+a568 1
+ 			    Str tmp = StrmyUFgets(&f2);
+d641 1
+a641 1
+				    "<!-- table stack underflow: %s -->",
+d677 2
+a678 1
+				tag->value[j] = url_quote_conv(tag->value[j], code);
+d694 1
+a694 2
+							ATTR_CHARSET,
+							charset);
+d704 1
+a704 2
+							ATTR_TARGET,
+							s_target);
+d706 1
+a706 2
+				else if (!strcasecmp(tag->value[j],
+						     "_parent")) {
+d708 1
+a708 2
+							ATTR_TARGET,
+							p_target);
+d716 1
+a716 2
+						    ATTR_FRAMENAME,
+						    s_target);
+d723 1
+a723 3
+			    parsedtag_set_value(tag,
+						ATTR_TARGET,
+						d_target);
+d745 2
+a746 1
+		createFrameFile(frame.set, f1, current, level + 1, force_reload);
+d765 1
+a765 1
+renderFrame(Buffer * Cbuf, int force_reload)
+@
+
+
+1.4
+log
+@follow autoconf conventions, #include cleanups
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+d41 1
+a41 1
+	    if (*p++ == ',')
+d43 2
+d79 1
+a79 1
+	    if (*p++ == ',')
+d81 2
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.4.2.18 2001/01/22 12:47:07 okabe Exp $ */
+a6 3
+#ifdef __EMX__
+#include <strings.h>        /* for bzero() and bcopy() */
+#endif                /* __EMX__ */
+@
+
+
+1.3.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@d1 1
+a1 1
+/* $Id: frame.c,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+d44 1
+a44 1
+           if (*p++ == ',') {
+a45 2
+               if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+           }
+d80 1
+a80 1
+           if (*p++ == ',') {
+a81 2
+               if (i >= sizeof(length) / sizeof(length[0]) - 2) break;
+           }
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d429 1
+a429 1
+    InputStream f2;
+d511 1
+d523 6
+a528 3
+		f2 = NULL;
+		if (frame.body->source == NULL ||
+		    (f2 = openIS(frame.body->source)) == NULL) {
+d532 1
+a532 1
+            else if (frame.body->url)
+d534 3
+a536 3
+            else
+               fprintf(f1, "This frame (%s) contains no src attribute",
+                frame.body->name ? frame.body->name : "(no name)");
+d552 1
+a552 1
+            while ((tmp = StrmyISgets(f2))->length) {
+d562 1
+a562 1
+            ISclose(f2);
+d569 1
+a569 1
+ 			    Str tmp = StrmyISgets(f2);
+d742 1
+a742 1
+		} while (*p != '\0' || !iseos(f2));
+d745 1
+a745 1
+		ISclose(f2);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 3
+d111 1
+a111 1
+newFrame(struct parsed_tag *tag, ParsedURL * baseURL)
+d120 1
+a120 1
+    body->baseURL = baseURL;
+d122 2
+a123 1
+	parsedtag_get_value(tag, ATTR_SRC, &body->url);
+d125 1
+a125 1
+	    body->name = p;
+d274 1
+a274 2
+	      long linenumber,
+	      short pos)
+d282 5
+a286 2
+    rfq->linenumber = linenumber;
+    rfq->pos = pos;
+d303 1
+a303 3
+popFrameTree(struct frameset_queue **fqpp,
+	     long *linenumber,
+	     short *pos)
+a310 5
+    if (linenumber)
+	*linenumber = cfq->linenumber;
+    if (pos)
+	*pos = cfq->pos;
+
+d339 1
+a339 1
+	buf->frameset = popFrameTree(&(buf->frameQ), NULL, NULL);
+d343 1
+a343 1
+	f_body = newFrame(NULL, baseURL(buf));
+d357 1
+d381 3
+a383 1
+	b->source = url.file;
+d387 1
+d393 1
+d404 2
+d419 1
+a419 1
+	buf->frameset = popFrameTree(&(buf->frameQ), NULL, NULL);
+d462 1
+a462 1
+		htmlquote_str(current->buffername));
+d491 1
+a491 1
+		fprintf(f1, " id=\"_%s\"", htmlquote_str(frame.element->name));
+d505 1
+a505 1
+			htmlquote_str(f->name), i + 1);
+d528 1
+a528 1
+		    else
+d530 3
+d544 17
+d604 2
+a605 1
+			    if (parsedtag_get_value(tag, ATTR_HREF, &q))
+d607 1
+d614 1
+a614 1
+				    d_target = q;
+d674 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

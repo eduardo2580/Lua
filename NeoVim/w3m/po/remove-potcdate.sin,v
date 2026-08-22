@@ -1,0 +1,46 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2003.09.23.18.42.25;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@gettextize initial modifications
+@
+text
+@# Sed script that remove the POT-Creation-Date line in the header entry
+# from a POT file.
+#
+# The distinction between the first and the following occurrences of the
+# pattern is achieved by looking at the hold space.
+/^"POT-Creation-Date: .*"$/{
+x
+# Test if the hold space is empty.
+s/P/P/
+ta
+# Yes it was empty. First occurrence. Remove the line.
+g
+d
+bb
+:a
+# The hold space was nonempty. Following occurrences. Do nothing.
+x
+:b
+}
+@

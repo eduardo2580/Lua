@@ -1,0 +1,165 @@
+head	1.4;
+access;
+symbols
+	release-0-5-3:1.4
+	release-0-5-2:1.4
+	release-0-5-1:1.4
+	release-0-5:1.3
+	release-0-4-2:1.3
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.4
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1
+	release-0-3:1.1
+	release-0-2-5-1:1.1
+	branch-0-2-5:1.1.0.2
+	release-0-2-5:1.1
+	release-0-2-4:1.1
+	release-0-2-3-2:1.1
+	release-0-2-3-1:1.1
+	release-0-2-3:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2004.03.22.17.03.13;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.04.07.15.19.43;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.10.11.59.15;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.30.18.06.29;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* scripts/w3mhelp.cgi.in: use charset parramter
+* scripts/w3mhelp-funcdesc.en.pl.in: add charset
+* scripts/w3mhelp-funcdesc.ja.pl.in: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@# charset
+$charset = 'US-ASCII';
+
+# Buffer selection mode
+
+%buf_funcdesc = (
+ 'BUF:PREV', 'Select previous buffer',
+ 'BUF:NEXT', 'Select next buffer',
+ 'BUF:DELETE', 'Delete current buffer',
+ 'BUF:GO', 'Go to the selected buffer',
+);
+
+%lineedit_funcdesc = (
+ 'LINEEDIT:FORWARD', 'Move cursor forward',
+ 'LINEEDIT:BACK', 'Move cursor backward',
+ 'LINEEDIT:BS',  'Delete previous character',
+ 'LINEEDIT:DEL', 'Delete current character',
+ 'LINEEDIT:KILL_AFTER', 'Kill everything after cursor',
+ 'LINEEDIT:KILL_BEFORE', 'Kill everything before cursor',
+ 'LINEEDIT:TOP', 'Move to the top of line',
+ 'LINEEDIT:BOTTOM', 'Move to the bottom of line',
+ 'LINEEDIT:PREV', 'Fetch the previous string from the history list',
+ 'LINEEDIT:NEXT', 'Fetch the next string from the history list',
+ 'LINEEDIT:EDITOR', 'Edit with external editor',
+ 'LINEEDIT:COMPLETE', 'Complete filename',
+ 'LINEEDIT:ACCEPT', 'Accept',
+);
+
+%menu_funcdesc = (
+ 'MENU:SELECT', 'Select item',
+ 'MENU:CLOSE', 'Close menu',
+ 'MENU:CANCEL', 'Back',
+ 'MENU:DOWN', 'Move to next item',
+ 'MENU:UP', 'Move to previous item',
+ 'MENU:LINE_UP', 'Scroll up one item',
+ 'MENU:LINE_DOWN', 'Scroll down one item',
+ 'MENU:TOP', 'Go to top item',
+ 'MENU:LAST', 'Go to last item',
+ 'MENU:NEXT', 'Go to next page',
+ 'MENU:PREV', 'Go to previous page',
+ 'MENU:SEARCH_FORE', 'Search foreward',
+ 'MENU:SEARCH_BACK', 'Search backward',
+ 'MENU:SEARCH_NEXT', 'Search next regexp',
+ 'MENU:SEARCH_PREV', 'Search previous regexp',
+ 'MENU:SUSPEND', 'Suspend',
+);
+
+1;
+@
+
+
+1.3
+log
+@[w3m-dev 03844] w3mhelp.cgi update
+* scripts/w3mhelp-funcdesc.en.pl.in: add %menu_funcdesc
+* scripts/w3mhelp-funcdesc.ja.pl.in: add %menu_funcdesc
+			update %title
+* scripts/w3mhelp-funcname.pl.in: add %menu_funcname
+			add %menu_keyfunc
+* scripts/w3mhelp.cgi.in: modified for menu
+			link to keymap
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 2
+@
+
+
+1.2
+log
+@[w3m-dev 03401] w3mhelp.cgi
+* proto.h (tabMn): nulcmd ifndef USE_MENU
+* scripts/w3mhelp-funcdesc.en.pl.in: add LINEEDIT:EDITOR
+* scripts/w3mhelp-funcdesc.ja.pl.in: add LINEEDIT:EDITOR
+				Tab operation
+* scripts/w3mhelp-funcname.pl.in: add LINEEDIT:EDITOR C-o
+* scripts/w3mhelp.cgi.in: add tabA in Hyperlink operation
+			add tabURL, tabrURL in File/Stream operation
+			add Tab operation
+			add lineedit_editor in Line edit mode
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d27 19
+@
+
+
+1.1
+log
+@[w3m-dev 02601]
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d22 1
+d27 1
+a27 1
+1;@
+

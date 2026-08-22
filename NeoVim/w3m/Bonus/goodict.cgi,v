@@ -1,0 +1,106 @@
+head	1.2;
+access;
+symbols
+	release-0-5-3:1.2
+	release-0-5-2:1.2
+	release-0-5-1:1.2
+	release-0-5:1.2
+	release-0-4-2:1.2
+	release-0-4-1:1.1
+	release-0-4:1.1
+	release-0-4-rc3:1.1
+	release-0-4-rc2:1.1
+	release-0-4-rc1:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2003.04.12.14.28.56;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.28.16.36.49;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@[w3m-dev 03872] goodict.cgi
+* Bonus/goodict.cgi: adapt new goo dict web page
+From: NAKAJIMA Mikio <minakaji@@osaka.email.ne.jp>
+@
+text
+@#!/usr/bin/perl
+
+# ~/.w3m/urimethodmap
+# e:      file:/cgi-bin/goodict.cgi?%s
+# w:      file:/cgi-bin/goodict.cgi?%s
+# j:      file:/cgi-bin/goodict.cgi?%s
+
+use NKF;
+#$mode = 0; # substring
+$mode = 1;  # perfect match
+#$mode = 3; # search body text
+$url = "http://dictionary.goo.ne.jp";
+$_ = $ENV{"QUERY_STRING"};
+if (/^e:/) {
+    $kind = 'ej';
+} elsif (/^w:/) {
+    $kind = 'je';
+} elsif (/^j:/) {
+    $kind = 'jn';
+}
+s@@^[ewjs]:@@@@ && s@@^//@@@@ && s@@/$@@@@;
+if ($_) {
+	s/\+/ /g;
+	s/%([\da-f][\da-f])/pack('C', hex($1))/egi;
+	$_ = nkf("-e", $_);
+	s/[\000-\040\+:#?&%<>"\177-\377]/sprintf('%%%02X', unpack('C', $&))/eg;
+	$url .= "/search.php?MT=$_&kind=$kind&mode=$mode";
+} else {
+	$input = "w3m-control: GOTO_LINK";
+}
+print <<EOF;
+w3m-control: GOTO $url
+w3m-control: DELETE_PREVBUF
+w3m-control: SEARCH \\[
+w3m-control: MOVE_RIGHT
+${input}
+
+EOF
+@
+
+
+1.1
+log
+@[w3m-dev 03705] goodict.cgi (was: Re: google.cgi (was: Re: keymap key SEARCH string))
+* Bonus/goodict.cgi: added
+From: NAKAJIMA Mikio <minakaji@@osaka.email.ne.jp>
+@
+text
+@a6 1
+# s:      file:/cgi-bin/goodict.cgi?%s
+d9 3
+d15 1
+a15 1
+    $switch = 0;
+d17 1
+a17 1
+    $switch = 1;
+d19 1
+a19 3
+    $switch = 2;
+} elsif (/^s:/) {
+    $switch = 3;
+d27 1
+a27 1
+	$url .= "/cgi-bin/dict_search.cgi?MT=$_&sw=$switch";
+@
+

@@ -1,0 +1,6849 @@
+head	1.58;
+access;
+symbols
+	release-0-5-3:1.58
+	release-0-5-2:1.55
+	release-0-5-1:1.49
+	release-0-5:1.49
+	release-0-4-2:1.46
+	release-0-4-1:1.40
+	release-0-4:1.40
+	release-0-4-rc3:1.39
+	release-0-4-rc2:1.39
+	release-0-4-rc1:1.39
+	release-0-3-2-2:1.27.4.3
+	release-0-3-2-1:1.27.4.2
+	branch-0-3-2:1.27.0.4
+	release-0-3-2:1.27
+	release-0-3-2-rc4:1.27
+	release-0-3-2-rc3:1.26
+	release-0-3-2-rc2:1.25
+	release-0-3-2-rc1:1.25
+	release-0-3-1:1.24
+	release-0-3:1.21
+	release-0-2-5-1:1.18
+	branch-0-2-5:1.18.0.2
+	release-0-2-5:1.18
+	release-0-2-4:1.13
+	release-0-2-3-2:1.12
+	release-0-2-3-1:1.12
+	release-0-2-3:1.12
+	inu-0-2-2-rel-1-1:1.3
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.58
+date	2010.08.09.11.59.19;	author htrb;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2010.08.08.10.14.32;	author htrb;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2010.07.19.23.34.01;	author htrb;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2007.05.23.13.07.44;	author inu;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2007.05.23.12.26.56;	author inu;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2006.04.08.11.52.02;	author inu;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2006.04.07.13.35.35;	author inu;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2006.04.07.13.21.12;	author inu;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2004.01.09.15.46.49;	author ukai;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2003.09.24.18.49.00;	author ukai;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2003.09.22.21.02.21;	author ukai;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2003.07.13.16.13.29;	author ukai;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2003.05.14.16.02.41;	author ukai;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2003.05.14.16.01.32;	author ukai;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2003.05.13.17.20.33;	author ukai;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2003.05.13.17.09.58;	author ukai;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2003.05.13.17.08.20;	author ukai;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2003.02.20.15.39.22;	author ukai;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2003.01.23.18.01.08;	author ukai;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2003.01.20.15.30.21;	author ukai;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.12.17.16.17.30;	author ukai;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.12.06.16.50.41;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.12.04.17.00.53;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.12.03.15.49.56;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.12.03.15.45.34;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.12.03.15.35.11;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.11.25.16.39.53;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.11.15.16.00.33;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.11.05.16.43.10;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.11.05.15.45.53;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.10.30.17.03.28;	author ukai;	state Exp;
+branches
+	1.27.2.1
+	1.27.4.1;
+next	1.26;
+
+1.26
+date	2002.10.28.04.53.07;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.10.10.16.59.33;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.04.17.02.42.27;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.04.09.14.53.54;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.03.12.16.59.50;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.02.22.17.55.17;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.02.05.12.31.27;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.01.31.17.54.56;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.01.28.14.42.30;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.01.25.17.25.44;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.01.25.15.20.34;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.01.25.15.10.14;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.01.23.17.57.10;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.12.27.17.56.03;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.12.17.16.05.03;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.12.14.17.58.40;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.29.10.22.58;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.11.29.09.34.15;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.23.18.35.06;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.22.14.07.38;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.22.13.35.45;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.16.22.02.00;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.40;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.40;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.27.2.1
+date	2002.11.26.06.50.20;	author ukai;	state Exp;
+branches;
+next	1.27.2.2;
+
+1.27.2.2
+date	2002.11.26.06.52.42;	author ukai;	state Exp;
+branches;
+next	;
+
+1.27.4.1
+date	2002.11.26.07.09.09;	author ukai;	state Exp;
+branches;
+next	1.27.4.2;
+
+1.27.4.2
+date	2002.11.26.07.10.18;	author ukai;	state Exp;
+branches;
+next	1.27.4.3;
+
+1.27.4.3
+date	2002.12.05.16.49.45;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.58
+log
+@* [w3m-dev 04375] Re: "important" bugs from bugs.debian.org
+* table.c (feed_table_tag): don't show message when rowspan is greater than ATTR_ROWSPAN_MAX
+* [w3m-dev 04376] Re: "important" bugs from bugs.debian.org
+* table.c (feed_table_tag): fix indent
+@
+text
+@/* $Id: table.c,v 1.57 2010/08/08 10:14:32 htrb Exp $ */
+/* 
+ * HTML table
+ */
+#include <sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include "fm.h"
+#include "html.h"
+#include "parsetagx.h"
+#include "Str.h"
+#include "myctype.h"
+
+int symbol_width = 0;
+int symbol_width0 = 0;
+
+#define RULE_WIDTH symbol_width
+#define RULE(mode,n) (((mode) == BORDER_THICK) ? ((n) + 16) : (n))
+#define TK_VERTICALBAR(mode) RULE(mode,5)
+
+#define BORDERWIDTH     2
+#define BORDERHEIGHT    1
+#define NOBORDERWIDTH   1
+#define NOBORDERHEIGHT  0
+
+#define HTT_X   1
+#define HTT_Y   2
+#define HTT_ALIGN  0x30
+#define HTT_LEFT   0x00
+#define HTT_CENTER 0x10
+#define HTT_RIGHT  0x20
+#define HTT_TRSET  0x40
+#define HTT_VALIGN 0x700
+#define HTT_TOP    0x100
+#define HTT_MIDDLE 0x200
+#define HTT_BOTTOM 0x400
+#define HTT_VTRSET 0x800
+#ifdef NOWRAP
+#define HTT_NOWRAP  4
+#endif				/* NOWRAP */
+#define TAG_IS(s,tag,len) (strncasecmp(s,tag,len)==0&&(s[len] == '>' || IS_SPACE((int)s[len])))
+
+#ifndef max
+#define max(a,b)        ((a) > (b) ? (a) : (b))
+#endif				/* not max */
+#ifndef min
+#define min(a,b)        ((a) > (b) ? (b) : (a))
+#endif				/* not min */
+#ifndef abs
+#define abs(a)          ((a) >= 0. ? (a) : -(a))
+#endif				/* not abs */
+
+#define set_prevchar(x,y,n) Strcopy_charp_n((x),(y),(n))
+#define set_space_to_prevchar(x) Strcopy_charp_n((x)," ",1)
+
+#ifdef MATRIX
+#ifndef MESCHACH
+#include "matrix.c"
+#endif				/* not MESCHACH */
+#endif				/* MATRIX */
+
+#ifdef MATRIX
+int correct_table_matrix(struct table *, int, int, int, double);
+void set_table_matrix(struct table *, int);
+#endif				/* MATRIX */
+
+#ifdef MATRIX
+static double
+weight(int x)
+{
+
+    if (x < COLS)
+	return (double)x;
+    else
+	return COLS * (log((double)x / COLS) + 1.);
+}
+
+static double
+weight2(int a)
+{
+    return (double)a / COLS * 4 + 1.;
+}
+
+#define sigma_td(a)       (0.5*weight2(a))	/* <td width=...> */
+#define sigma_td_nw(a)    (32*weight2(a))	/* <td ...> */
+#define sigma_table(a)    (0.25*weight2(a))	/* <table width=...> */
+#define sigma_table_nw(a) (2*weight2(a))	/* <table...> */
+#else				/* not MATRIX */
+#define LOG_MIN 1.0
+static double
+weight3(int x)
+{
+    if (x < 0.1)
+	return 0.1;
+    if (x < LOG_MIN)
+	return (double)x;
+    else
+	return LOG_MIN * (log((double)x / LOG_MIN) + 1.);
+}
+#endif				/* not MATRIX */
+
+static int
+bsearch_2short(short e1, short *ent1, short e2, short *ent2, int base,
+	       short *indexarray, int nent)
+{
+    int n = nent;
+    int k = 0;
+
+    int e = e1 * base + e2;
+    while (n > 0) {
+	int nn = n / 2;
+	int idx = indexarray[k + nn];
+	int ne = ent1[idx] * base + ent2[idx];
+	if (ne == e) {
+	    k += nn;
+	    break;
+	}
+	else if (ne < e) {
+	    n -= nn + 1;
+	    k += nn + 1;
+	}
+	else {
+	    n = nn;
+	}
+    }
+    return k;
+}
+
+static int
+bsearch_double(double e, double *ent, short *indexarray, int nent)
+{
+    int n = nent;
+    int k = 0;
+
+    while (n > 0) {
+	int nn = n / 2;
+	int idx = indexarray[k + nn];
+	double ne = ent[idx];
+	if (ne == e) {
+	    k += nn;
+	    break;
+	}
+	else if (ne > e) {
+	    n -= nn + 1;
+	    k += nn + 1;
+	}
+	else {
+	    n = nn;
+	}
+    }
+    return k;
+}
+
+static int
+ceil_at_intervals(int x, int step)
+{
+    int mo = x % step;
+    if (mo > 0)
+	x += step - mo;
+    else if (mo < 0)
+	x -= mo;
+    return x;
+}
+
+static int
+floor_at_intervals(int x, int step)
+{
+    int mo = x % step;
+    if (mo > 0)
+	x -= mo;
+    else if (mo < 0)
+	x += step - mo;
+    return x;
+}
+
+#define round(x) ((int)floor((x)+0.5))
+
+#ifndef MATRIX
+static void
+dv2sv(double *dv, short *iv, int size)
+{
+    int i, k, iw;
+    short *indexarray;
+    double *edv;
+    double w = 0., x;
+
+    indexarray = NewAtom_N(short, size);
+    edv = NewAtom_N(double, size);
+    for (i = 0; i < size; i++) {
+	iv[i] = ceil(dv[i]);
+	edv[i] = (double)iv[i] - dv[i];
+    }
+
+    w = 0.;
+    for (k = 0; k < size; k++) {
+	x = edv[k];
+	w += x;
+	i = bsearch_double(x, edv, indexarray, k);
+	if (k > i) {
+	    int ii;
+	    for (ii = k; ii > i; ii--)
+		indexarray[ii] = indexarray[ii - 1];
+	}
+	indexarray[i] = k;
+    }
+    iw = min((int)(w + 0.5), size);
+    if (iw == 0)
+	return;
+    x = edv[(int)indexarray[iw - 1]];
+    for (i = 0; i < size; i++) {
+	k = indexarray[i];
+	if (i >= iw && abs(edv[k] - x) > 1e-6)
+	    break;
+	iv[k]--;
+    }
+}
+#endif
+
+static int
+table_colspan(struct table *t, int row, int col)
+{
+    int i;
+    for (i = col + 1; i <= t->maxcol && (t->tabattr[row][i] & HTT_X); i++) ;
+    return i - col;
+}
+
+static int
+table_rowspan(struct table *t, int row, int col)
+{
+    int i;
+    if (!t->tabattr[row])
+	return 0;
+    for (i = row + 1; i <= t->maxrow && t->tabattr[i] &&
+	 (t->tabattr[i][col] & HTT_Y); i++) ;
+    return i - row;
+}
+
+static int
+minimum_cellspacing(int border_mode)
+{
+    switch (border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+    case BORDER_NOWIN:
+	return RULE_WIDTH;
+    case BORDER_NONE:
+	return 1;
+    default:
+	/* not reached */
+	return 0;
+    }
+}
+
+static int
+table_border_width(struct table *t)
+{
+    switch (t->border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+	return t->maxcol * t->cellspacing + 2 * (RULE_WIDTH + t->cellpadding);
+    case BORDER_NOWIN:
+    case BORDER_NONE:
+	return t->maxcol * t->cellspacing;
+    default:
+	/* not reached */
+	return 0;
+    }
+}
+
+struct table *
+newTable()
+{
+    struct table *t;
+    int i, j;
+
+    t = New(struct table);
+    t->max_rowsize = MAXROW;
+    t->tabdata = New_N(GeneralList **, MAXROW);
+    t->tabattr = New_N(table_attr *, MAXROW);
+    t->tabheight = NewAtom_N(short, MAXROW);
+#ifdef ID_EXT
+    t->tabidvalue = New_N(Str *, MAXROW);
+    t->tridvalue = New_N(Str, MAXROW);
+#endif				/* ID_EXT */
+
+    for (i = 0; i < MAXROW; i++) {
+	t->tabdata[i] = NULL;
+	t->tabattr[i] = 0;
+	t->tabheight[i] = 0;
+#ifdef ID_EXT
+	t->tabidvalue[i] = NULL;
+	t->tridvalue[i] = NULL;
+#endif				/* ID_EXT */
+    }
+    for (j = 0; j < MAXCOL; j++) {
+	t->tabwidth[j] = 0;
+	t->minimum_width[j] = 0;
+	t->fixed_width[j] = 0;
+    }
+    t->cell.maxcell = -1;
+    t->cell.icell = -1;
+    t->ntable = 0;
+    t->tables_size = 0;
+    t->tables = NULL;
+#ifdef MATRIX
+    t->matrix = NULL;
+    t->vector = NULL;
+#endif				/* MATRIX */
+#if 0
+    t->tabcontentssize = 0;
+    t->indent = 0;
+    t->linfo.prev_ctype = PC_ASCII;
+    t->linfo.prev_spaces = -1;
+#endif
+    t->linfo.prevchar = Strnew_size(8);
+    set_prevchar(t->linfo.prevchar, "", 0);
+    t->trattr = 0;
+
+    t->caption = Strnew();
+    t->suspended_data = NULL;
+#ifdef ID_EXT
+    t->id = NULL;
+#endif
+    return t;
+}
+
+static void
+check_row(struct table *t, int row)
+{
+    int i, r;
+    GeneralList ***tabdata;
+    table_attr **tabattr;
+    short *tabheight;
+#ifdef ID_EXT
+    Str **tabidvalue;
+    Str *tridvalue;
+#endif				/* ID_EXT */
+
+    if (row >= t->max_rowsize) {
+	r = max(t->max_rowsize * 2, row + 1);
+	tabdata = New_N(GeneralList **, r);
+	tabattr = New_N(table_attr *, r);
+	tabheight = NewAtom_N(short, r);
+#ifdef ID_EXT
+	tabidvalue = New_N(Str *, r);
+	tridvalue = New_N(Str, r);
+#endif				/* ID_EXT */
+	for (i = 0; i < t->max_rowsize; i++) {
+	    tabdata[i] = t->tabdata[i];
+	    tabattr[i] = t->tabattr[i];
+	    tabheight[i] = t->tabheight[i];
+#ifdef ID_EXT
+	    tabidvalue[i] = t->tabidvalue[i];
+	    tridvalue[i] = t->tridvalue[i];
+#endif				/* ID_EXT */
+	}
+	for (; i < r; i++) {
+	    tabdata[i] = NULL;
+	    tabattr[i] = NULL;
+	    tabheight[i] = 0;
+#ifdef ID_EXT
+	    tabidvalue[i] = NULL;
+	    tridvalue[i] = NULL;
+#endif				/* ID_EXT */
+	}
+	t->tabdata = tabdata;
+	t->tabattr = tabattr;
+	t->tabheight = tabheight;
+#ifdef ID_EXT
+	t->tabidvalue = tabidvalue;
+	t->tridvalue = tridvalue;
+#endif				/* ID_EXT */
+	t->max_rowsize = r;
+    }
+
+    if (t->tabdata[row] == NULL) {
+	t->tabdata[row] = New_N(GeneralList *, MAXCOL);
+	t->tabattr[row] = NewAtom_N(table_attr, MAXCOL);
+#ifdef ID_EXT
+	t->tabidvalue[row] = New_N(Str, MAXCOL);
+#endif				/* ID_EXT */
+	for (i = 0; i < MAXCOL; i++) {
+	    t->tabdata[row][i] = NULL;
+	    t->tabattr[row][i] = 0;
+#ifdef ID_EXT
+	    t->tabidvalue[row][i] = NULL;
+#endif				/* ID_EXT */
+	}
+    }
+}
+
+void
+pushdata(struct table *t, int row, int col, char *data)
+{
+    check_row(t, row);
+    if (t->tabdata[row][col] == NULL)
+	t->tabdata[row][col] = newGeneralList();
+
+    pushText(t->tabdata[row][col], data ? data : "");
+}
+
+void
+suspend_or_pushdata(struct table *tbl, char *line)
+{
+    if (tbl->flag & TBL_IN_COL)
+	pushdata(tbl, tbl->row, tbl->col, line);
+    else {
+	if (!tbl->suspended_data)
+	    tbl->suspended_data = newTextList();
+	pushText(tbl->suspended_data, line ? line : "");
+    }
+}
+
+#ifdef USE_M17N
+#define PUSH_TAG(str,n) Strcat_charp_n(tagbuf, str, n)
+#else
+#define PUSH_TAG(str,n) Strcat_char(tagbuf, *str)
+#endif
+
+int visible_length_offset = 0;
+int
+visible_length(char *str)
+{
+    int len = 0, n, max_len = 0;
+    int status = R_ST_NORMAL;
+    int prev_status = status;
+    Str tagbuf = Strnew();
+    char *t, *r2;
+    int amp_len = 0;
+
+    t = str;
+    while (*str) {
+	prev_status = status;
+	if (next_status(*str, &status)) {
+#ifdef USE_M17N
+	    len += get_mcwidth(str);
+	    n = get_mclen(str);
+	}
+	else {
+	    n = 1;
+	}
+#else
+	    len++;
+	}
+#endif
+	if (status == R_ST_TAG0) {
+	    Strclear(tagbuf);
+	    PUSH_TAG(str, n);
+	}
+	else if (status == R_ST_TAG || status == R_ST_DQUOTE
+		 || status == R_ST_QUOTE || status == R_ST_EQL
+		 || status == R_ST_VALUE) {
+	    PUSH_TAG(str, n);
+	}
+	else if (status == R_ST_AMP) {
+	    if (prev_status == R_ST_NORMAL) {
+		Strclear(tagbuf);
+		len--;
+		amp_len = 0;
+	    }
+	    else {
+		PUSH_TAG(str, n);
+		amp_len++;
+	    }
+	}
+	else if (status == R_ST_NORMAL && prev_status == R_ST_AMP) {
+	    PUSH_TAG(str, n);
+	    r2 = tagbuf->ptr;
+	    t = getescapecmd(&r2);
+	    if (!*r2 && (*t == '\r' || *t == '\n')) {
+		if (len > max_len)
+		    max_len = len;
+		len = 0;
+	    }
+	    else
+		len += get_strwidth(t) + get_strwidth(r2);
+	}
+	else if (status == R_ST_NORMAL && ST_IS_REAL_TAG(prev_status)) {
+	    ;
+	}
+	else if (*str == '\t') {
+	    len--;
+	    do {
+		len++;
+	    } while ((visible_length_offset + len) % Tabstop != 0);
+	}
+	else if (*str == '\r' || *str == '\n') {
+	    len--;
+	    if (len > max_len)
+		max_len = len;
+	    len = 0;
+	}
+#ifdef USE_M17N
+	str += n;
+#else
+	str++;
+#endif
+    }
+    if (status == R_ST_AMP) {
+	r2 = tagbuf->ptr;
+	t = getescapecmd(&r2);
+	if (*t != '\r' && *t != '\n')
+	    len += get_strwidth(t) + get_strwidth(r2);
+    }
+    return len > max_len ? len : max_len;
+}
+
+int
+visible_length_plain(char *str)
+{
+    int len = 0, max_len = 0;
+
+    while (*str) {
+	if (*str == '\t') {
+	    do {
+		len++;
+	    } while ((visible_length_offset + len) % Tabstop != 0);
+	    str++;
+	}
+	else if (*str == '\r' || *str == '\n') {
+	    if (len > max_len)
+		max_len = len;
+	    len = 0;
+	    str++;
+	}
+	else {
+#ifdef USE_M17N
+	    len += get_mcwidth(str);
+	    str += get_mclen(str);
+#else
+	    len++;
+	    str++;
+#endif
+	}
+    }
+    return len > max_len ? len : max_len;
+}
+
+static int
+maximum_visible_length(char *str, int offset)
+{
+    visible_length_offset = offset;
+    return visible_length(str);
+}
+
+static int
+maximum_visible_length_plain(char *str, int offset)
+{
+    visible_length_offset = offset;
+    return visible_length_plain(str);
+}
+
+void
+align(TextLine *lbuf, int width, int mode)
+{
+    int i, l, l1, l2;
+    Str buf, line = lbuf->line;
+
+    if (line->length == 0) {
+	for (i = 0; i < width; i++)
+	    Strcat_char(line, ' ');
+	lbuf->pos = width;
+	return;
+    }
+    buf = Strnew();
+    l = width - lbuf->pos;
+    switch (mode) {
+    case ALIGN_CENTER:
+	l1 = l / 2;
+	l2 = l - l1;
+	for (i = 0; i < l1; i++)
+	    Strcat_char(buf, ' ');
+	Strcat(buf, line);
+	for (i = 0; i < l2; i++)
+	    Strcat_char(buf, ' ');
+	break;
+    case ALIGN_LEFT:
+	Strcat(buf, line);
+	for (i = 0; i < l; i++)
+	    Strcat_char(buf, ' ');
+	break;
+    case ALIGN_RIGHT:
+	for (i = 0; i < l; i++)
+	    Strcat_char(buf, ' ');
+	Strcat(buf, line);
+	break;
+    default:
+	return;
+    }
+    lbuf->line = buf;
+    if (lbuf->pos < width)
+	lbuf->pos = width;
+}
+
+void
+print_item(struct table *t, int row, int col, int width, Str buf)
+{
+    int alignment;
+    TextLine *lbuf;
+
+    if (t->tabdata[row])
+	lbuf = popTextLine(t->tabdata[row][col]);
+    else
+	lbuf = NULL;
+
+    if (lbuf != NULL) {
+	check_row(t, row);
+	alignment = ALIGN_CENTER;
+	if ((t->tabattr[row][col] & HTT_ALIGN) == HTT_LEFT)
+	    alignment = ALIGN_LEFT;
+	else if ((t->tabattr[row][col] & HTT_ALIGN) == HTT_RIGHT)
+	    alignment = ALIGN_RIGHT;
+	else if ((t->tabattr[row][col] & HTT_ALIGN) == HTT_CENTER)
+	    alignment = ALIGN_CENTER;
+	align(lbuf, width, alignment);
+	Strcat(buf, lbuf->line);
+    }
+    else {
+	lbuf = newTextLine(NULL, 0);
+	align(lbuf, width, ALIGN_CENTER);
+	Strcat(buf, lbuf->line);
+    }
+}
+
+
+#define T_TOP           0
+#define T_MIDDLE        1
+#define T_BOTTOM        2
+
+void
+print_sep(struct table *t, int row, int type, int maxcol, Str buf)
+{
+    int forbid;
+    int rule_mode;
+    int i, k, l, m;
+
+    if (row >= 0)
+	check_row(t, row);
+    check_row(t, row + 1);
+    if ((type == T_TOP || type == T_BOTTOM) && t->border_mode == BORDER_THICK) {
+	rule_mode = BORDER_THICK;
+    }
+    else {
+	rule_mode = BORDER_THIN;
+    }
+    forbid = 1;
+    if (type == T_TOP)
+	forbid |= 2;
+    else if (type == T_BOTTOM)
+	forbid |= 8;
+    else if (t->tabattr[row + 1][0] & HTT_Y) {
+	forbid |= 4;
+    }
+    if (t->border_mode != BORDER_NOWIN) {
+	push_symbol(buf, RULE(t->border_mode, forbid), symbol_width, 1);
+    }
+    for (i = 0; i <= maxcol; i++) {
+	forbid = 10;
+	if (type != T_BOTTOM && (t->tabattr[row + 1][i] & HTT_Y)) {
+	    if (t->tabattr[row + 1][i] & HTT_X) {
+		goto do_last_sep;
+	    }
+	    else {
+		for (k = row;
+		     k >= 0 && t->tabattr[k] && (t->tabattr[k][i] & HTT_Y);
+		     k--) ;
+		m = t->tabwidth[i] + 2 * t->cellpadding;
+		for (l = i + 1; l <= t->maxcol && (t->tabattr[row][l] & HTT_X);
+		     l++)
+		    m += t->tabwidth[l] + t->cellspacing;
+		print_item(t, k, i, m, buf);
+	    }
+	}
+	else {
+	    int w = t->tabwidth[i] + 2 * t->cellpadding;
+	    if (RULE_WIDTH == 2)
+		w = (w + 1) / RULE_WIDTH;
+	    push_symbol(buf, RULE(rule_mode, forbid), symbol_width, w);
+	}
+      do_last_sep:
+	if (i < maxcol) {
+	    forbid = 0;
+	    if (type == T_TOP)
+		forbid |= 2;
+	    else if (t->tabattr[row][i + 1] & HTT_X) {
+		forbid |= 2;
+	    }
+	    if (type == T_BOTTOM)
+		forbid |= 8;
+	    else {
+		if (t->tabattr[row + 1][i + 1] & HTT_X) {
+		    forbid |= 8;
+		}
+		if (t->tabattr[row + 1][i + 1] & HTT_Y) {
+		    forbid |= 4;
+		}
+		if (t->tabattr[row + 1][i] & HTT_Y) {
+		    forbid |= 1;
+		}
+	    }
+	    if (forbid != 15)	/* forbid==15 means 'no rule at all' */
+		push_symbol(buf, RULE(rule_mode, forbid), symbol_width, 1);
+	}
+    }
+    forbid = 4;
+    if (type == T_TOP)
+	forbid |= 2;
+    if (type == T_BOTTOM)
+	forbid |= 8;
+    if (t->tabattr[row + 1][maxcol] & HTT_Y) {
+	forbid |= 1;
+    }
+    if (t->border_mode != BORDER_NOWIN)
+	push_symbol(buf, RULE(t->border_mode, forbid), symbol_width, 1);
+}
+
+static int
+get_spec_cell_width(struct table *tbl, int row, int col)
+{
+    int i, w;
+
+    w = tbl->tabwidth[col];
+    for (i = col + 1; i <= tbl->maxcol; i++) {
+	check_row(tbl, row);
+	if (tbl->tabattr[row][i] & HTT_X)
+	    w += tbl->tabwidth[i] + tbl->cellspacing;
+	else
+	    break;
+    }
+    return w;
+}
+
+void
+do_refill(struct table *tbl, int row, int col, int maxlimit)
+{
+    TextList *orgdata;
+    TextListItem *l;
+    struct readbuffer obuf;
+    struct html_feed_environ h_env;
+    struct environment envs[MAX_ENV_LEVEL];
+    int colspan, icell;
+
+    if (tbl->tabdata[row] == NULL || tbl->tabdata[row][col] == NULL)
+	return;
+    orgdata = (TextList *)tbl->tabdata[row][col];
+    tbl->tabdata[row][col] = newGeneralList();
+
+    init_henv(&h_env, &obuf, envs, MAX_ENV_LEVEL,
+	      (TextLineList *)tbl->tabdata[row][col],
+	      get_spec_cell_width(tbl, row, col), 0);
+    obuf.flag |= RB_INTABLE;
+    if (h_env.limit > maxlimit)
+	h_env.limit = maxlimit;
+    if (tbl->border_mode != BORDER_NONE && tbl->vcellpadding > 0)
+	do_blankline(&h_env, &obuf, 0, 0, h_env.limit);
+    for (l = orgdata->first; l != NULL; l = l->next) {
+	if (TAG_IS(l->ptr, "<table_alt", 10)) {
+	    int id = -1;
+	    char *p = l->ptr;
+	    struct parsed_tag *tag;
+	    if ((tag = parse_tag(&p, TRUE)) != NULL)
+		parsedtag_get_value(tag, ATTR_TID, &id);
+	    if (id >= 0 && id < tbl->ntable) {
+		int alignment;
+		TextLineListItem *ti;
+		struct table *t = tbl->tables[id].ptr;
+		int limit = tbl->tables[id].indent + t->total_width;
+		tbl->tables[id].ptr = NULL;
+		save_fonteffect(&h_env, h_env.obuf);
+		flushline(&h_env, &obuf, 0, 2, h_env.limit);
+		if (t->vspace > 0 && !(obuf.flag & RB_IGNORE_P))
+		    do_blankline(&h_env, &obuf, 0, 0, h_env.limit);
+		if (RB_GET_ALIGN(h_env.obuf) == RB_CENTER)
+		    alignment = ALIGN_CENTER;
+		else if (RB_GET_ALIGN(h_env.obuf) == RB_RIGHT)
+		    alignment = ALIGN_RIGHT;
+		else
+		    alignment = ALIGN_LEFT;
+
+		if (alignment != ALIGN_LEFT) {
+		    for (ti = tbl->tables[id].buf->first;
+			 ti != NULL; ti = ti->next)
+			align(ti->ptr, h_env.limit, alignment);
+		}
+		appendTextLineList(h_env.buf, tbl->tables[id].buf);
+		if (h_env.maxlimit < limit)
+		    h_env.maxlimit = limit;
+		restore_fonteffect(&h_env, h_env.obuf);
+		obuf.flag &= ~RB_IGNORE_P;
+		h_env.blank_lines = 0;
+		if (t->vspace > 0) {
+		    do_blankline(&h_env, &obuf, 0, 0, h_env.limit);
+		    obuf.flag |= RB_IGNORE_P;
+		}
+	    }
+	}
+	else
+	    HTMLlineproc1(l->ptr, &h_env);
+    }
+    if (obuf.status != R_ST_NORMAL) {
+	obuf.status = R_ST_EOL;
+	HTMLlineproc1("\n", &h_env);
+    }
+    completeHTMLstream(&h_env, &obuf);
+    flushline(&h_env, &obuf, 0, 2, h_env.limit);
+    if (tbl->border_mode == BORDER_NONE) {
+	int rowspan = table_rowspan(tbl, row, col);
+	if (row + rowspan <= tbl->maxrow) {
+	    if (tbl->vcellpadding > 0 && !(obuf.flag & RB_IGNORE_P))
+		do_blankline(&h_env, &obuf, 0, 0, h_env.limit);
+	}
+	else {
+	    if (tbl->vspace > 0)
+		purgeline(&h_env);
+	}
+    }
+    else {
+	if (tbl->vcellpadding > 0) {
+	    if (!(obuf.flag & RB_IGNORE_P))
+		do_blankline(&h_env, &obuf, 0, 0, h_env.limit);
+	}
+	else
+	    purgeline(&h_env);
+    }
+    if ((colspan = table_colspan(tbl, row, col)) > 1) {
+	struct table_cell *cell = &tbl->cell;
+	int k;
+	k = bsearch_2short(colspan, cell->colspan, col, cell->col, MAXCOL,
+			   cell->index, cell->maxcell + 1);
+	icell = cell->index[k];
+	if (cell->minimum_width[icell] < h_env.maxlimit)
+	    cell->minimum_width[icell] = h_env.maxlimit;
+    }
+    else {
+	if (tbl->minimum_width[col] < h_env.maxlimit)
+	    tbl->minimum_width[col] = h_env.maxlimit;
+    }
+}
+
+static int
+table_rule_width(struct table *t)
+{
+    if (t->border_mode == BORDER_NONE)
+	return 1;
+    return RULE_WIDTH;
+}
+
+static void
+check_cell_width(short *tabwidth, short *cellwidth,
+		 short *col, short *colspan, short maxcell,
+		 short *indexarray, int space, int dir)
+{
+    int i, j, k, bcol, ecol;
+    int swidth, width;
+
+    for (k = 0; k <= maxcell; k++) {
+	j = indexarray[k];
+	if (cellwidth[j] <= 0)
+	    continue;
+	bcol = col[j];
+	ecol = bcol + colspan[j];
+	swidth = 0;
+	for (i = bcol; i < ecol; i++)
+	    swidth += tabwidth[i];
+
+	width = cellwidth[j] - (colspan[j] - 1) * space;
+	if (width > swidth) {
+	    int w = (width - swidth) / colspan[j];
+	    int r = (width - swidth) % colspan[j];
+	    for (i = bcol; i < ecol; i++)
+		tabwidth[i] += w;
+	    /* dir {0: horizontal, 1: vertical} */
+	    if (dir == 1 && r > 0)
+		r = colspan[j];
+	    for (i = 1; i <= r; i++)
+		tabwidth[ecol - i]++;
+	}
+    }
+}
+
+void
+check_minimum_width(struct table *t, short *tabwidth)
+{
+    int i;
+    struct table_cell *cell = &t->cell;
+
+    for (i = 0; i <= t->maxcol; i++) {
+	if (tabwidth[i] < t->minimum_width[i])
+	    tabwidth[i] = t->minimum_width[i];
+    }
+
+    check_cell_width(tabwidth, cell->minimum_width, cell->col, cell->colspan,
+		     cell->maxcell, cell->index, t->cellspacing, 0);
+}
+
+void
+check_maximum_width(struct table *t)
+{
+    struct table_cell *cell = &t->cell;
+#ifdef MATRIX
+    int i, j, bcol, ecol;
+    int swidth, width;
+
+    cell->necell = 0;
+    for (j = 0; j <= cell->maxcell; j++) {
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+	swidth = 0;
+	for (i = bcol; i < ecol; i++)
+	    swidth += t->tabwidth[i];
+
+	width = cell->width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	if (width > swidth) {
+	    cell->eindex[cell->necell] = j;
+	    cell->necell++;
+	}
+    }
+#else				/* not MATRIX */
+    check_cell_width(t->tabwidth, cell->width, cell->col, cell->colspan,
+		     cell->maxcell, cell->index, t->cellspacing, 0);
+    check_minimum_width(t, t->tabwidth);
+#endif				/* not MATRIX */
+}
+
+
+#ifdef MATRIX
+static void
+set_integered_width(struct table *t, double *dwidth, short *iwidth)
+{
+    int i, j, k, n, bcol, ecol, step;
+    short *indexarray;
+    char *fixed;
+    double *mod;
+    double sum = 0., x = 0.;
+    struct table_cell *cell = &t->cell;
+    int rulewidth = table_rule_width(t);
+
+    indexarray = NewAtom_N(short, t->maxcol + 1);
+    mod = NewAtom_N(double, t->maxcol + 1);
+    for (i = 0; i <= t->maxcol; i++) {
+	iwidth[i] = ceil_at_intervals(ceil(dwidth[i]), rulewidth);
+	mod[i] = (double)iwidth[i] - dwidth[i];
+    }
+
+    sum = 0.;
+    for (k = 0; k <= t->maxcol; k++) {
+	x = mod[k];
+	sum += x;
+	i = bsearch_double(x, mod, indexarray, k);
+	if (k > i) {
+	    int ii;
+	    for (ii = k; ii > i; ii--)
+		indexarray[ii] = indexarray[ii - 1];
+	}
+	indexarray[i] = k;
+    }
+
+    fixed = NewAtom_N(char, t->maxcol + 1);
+    bzero(fixed, t->maxcol + 1);
+    for (step = 0; step < 2; step++) {
+	for (i = 0; i <= t->maxcol; i += n) {
+	    int nn;
+	    char *idx;
+	    double nsum;
+	    if (sum < 0.5)
+		return;
+	    for (n = 0; i + n <= t->maxcol; n++) {
+		int ii = indexarray[i + n];
+		if (n == 0)
+		    x = mod[ii];
+		else if (fabs(mod[ii] - x) > 1e-6)
+		    break;
+	    }
+	    for (k = 0; k < n; k++) {
+		int ii = indexarray[i + k];
+		if (fixed[ii] < 2 &&
+		    iwidth[ii] - rulewidth < t->minimum_width[ii])
+		    fixed[ii] = 2;
+		if (fixed[ii] < 1 &&
+		    iwidth[ii] - rulewidth < t->tabwidth[ii] &&
+		    (double)rulewidth - mod[ii] > 0.5)
+		    fixed[ii] = 1;
+	    }
+	    idx = NewAtom_N(char, n);
+	    for (k = 0; k < cell->maxcell; k++) {
+		int kk, w, width, m;
+		j = cell->index[k];
+		bcol = cell->col[j];
+		ecol = bcol + cell->colspan[j];
+		m = 0;
+		for (kk = 0; kk < n; kk++) {
+		    int ii = indexarray[i + kk];
+		    if (ii >= bcol && ii < ecol) {
+			idx[m] = ii;
+			m++;
+		    }
+		}
+		if (m == 0)
+		    continue;
+		width = (cell->colspan[j] - 1) * t->cellspacing;
+		for (kk = bcol; kk < ecol; kk++)
+		    width += iwidth[kk];
+		w = 0;
+		for (kk = 0; kk < m; kk++) {
+		    if (fixed[(int)idx[kk]] < 2)
+			w += rulewidth;
+		}
+		if (width - w < cell->minimum_width[j]) {
+		    for (kk = 0; kk < m; kk++) {
+			if (fixed[(int)idx[kk]] < 2)
+			    fixed[(int)idx[kk]] = 2;
+		    }
+		}
+		w = 0;
+		for (kk = 0; kk < m; kk++) {
+		    if (fixed[(int)idx[kk]] < 1 &&
+			(double)rulewidth - mod[(int)idx[kk]] > 0.5)
+			w += rulewidth;
+		}
+		if (width - w < cell->width[j]) {
+		    for (kk = 0; kk < m; kk++) {
+			if (fixed[(int)idx[kk]] < 1 &&
+			    (double)rulewidth - mod[(int)idx[kk]] > 0.5)
+			    fixed[(int)idx[kk]] = 1;
+		    }
+		}
+	    }
+	    nn = 0;
+	    for (k = 0; k < n; k++) {
+		int ii = indexarray[i + k];
+		if (fixed[ii] <= step)
+		    nn++;
+	    }
+	    nsum = sum - (double)(nn * rulewidth);
+	    if (nsum < 0. && fabs(sum) <= fabs(nsum))
+		return;
+	    for (k = 0; k < n; k++) {
+		int ii = indexarray[i + k];
+		if (fixed[ii] <= step) {
+		    iwidth[ii] -= rulewidth;
+		    fixed[ii] = 3;
+		}
+	    }
+	    sum = nsum;
+	}
+    }
+}
+
+static double
+correlation_coefficient(double sxx, double syy, double sxy)
+{
+    double coe, tmp;
+    tmp = sxx * syy;
+    if (tmp < Tiny)
+	tmp = Tiny;
+    coe = sxy / sqrt(tmp);
+    if (coe > 1.)
+	return 1.;
+    if (coe < -1.)
+	return -1.;
+    return coe;
+}
+
+static double
+correlation_coefficient2(double sxx, double syy, double sxy)
+{
+    double coe, tmp;
+    tmp = (syy + sxx - 2 * sxy) * sxx;
+    if (tmp < Tiny)
+	tmp = Tiny;
+    coe = (sxx - sxy) / sqrt(tmp);
+    if (coe > 1.)
+	return 1.;
+    if (coe < -1.)
+	return -1.;
+    return coe;
+}
+
+static double
+recalc_width(double old, double swidth, int cwidth,
+	     double sxx, double syy, double sxy, int is_inclusive)
+{
+    double delta = swidth - (double)cwidth;
+    double rat = sxy / sxx,
+	coe = correlation_coefficient(sxx, syy, sxy), w, ww;
+    if (old < 0.)
+	old = 0.;
+    if (fabs(coe) < 1e-5)
+	return old;
+    w = rat * old;
+    ww = delta;
+    if (w > 0.) {
+	double wmin = 5e-3 * sqrt(syy * (1. - coe * coe));
+	if (swidth < 0.2 && cwidth > 0 && is_inclusive) {
+	    double coe1 = correlation_coefficient2(sxx, syy, sxy);
+	    if (coe > 0.9 || coe1 > 0.9)
+		return 0.;
+	}
+	if (wmin > 0.05)
+	    wmin = 0.05;
+	if (ww < 0.)
+	    ww = 0.;
+	ww += wmin;
+    }
+    else {
+	double wmin = 5e-3 * sqrt(syy) * fabs(coe);
+	if (rat > -0.001)
+	    return old;
+	if (wmin > 0.01)
+	    wmin = 0.01;
+	if (ww > 0.)
+	    ww = 0.;
+	ww -= wmin;
+    }
+    if (w > ww)
+	return ww / rat;
+    return old;
+}
+
+static int
+check_compressible_cell(struct table *t, MAT * minv,
+			double *newwidth, double *swidth, short *cwidth,
+			double totalwidth, double *Sxx,
+			int icol, int icell, double sxx, int corr)
+{
+    struct table_cell *cell = &t->cell;
+    int i, j, k, m, bcol, ecol, span;
+    double delta, owidth;
+    double dmax, dmin, sxy;
+    int rulewidth = table_rule_width(t);
+
+    if (sxx < 10.)
+	return corr;
+
+    if (icol >= 0) {
+	owidth = newwidth[icol];
+	delta = newwidth[icol] - (double)t->tabwidth[icol];
+	bcol = icol;
+	ecol = bcol + 1;
+    }
+    else if (icell >= 0) {
+	owidth = swidth[icell];
+	delta = swidth[icell] - (double)cwidth[icell];
+	bcol = cell->col[icell];
+	ecol = bcol + cell->colspan[icell];
+    }
+    else {
+	owidth = totalwidth;
+	delta = totalwidth;
+	bcol = 0;
+	ecol = t->maxcol + 1;
+    }
+
+    dmin = delta;
+    dmax = -1.;
+    for (k = 0; k <= cell->maxcell; k++) {
+	int bcol1, ecol1;
+	int is_inclusive = 0;
+	if (dmin <= 0.)
+	    goto _end;
+	j = cell->index[k];
+	if (j == icell)
+	    continue;
+	bcol1 = cell->col[j];
+	ecol1 = bcol1 + cell->colspan[j];
+	sxy = 0.;
+	for (m = bcol1; m < ecol1; m++) {
+	    for (i = bcol; i < ecol; i++)
+		sxy += m_entry(minv, i, m);
+	}
+	if (bcol1 >= bcol && ecol1 <= ecol) {
+	    is_inclusive = 1;
+	}
+	if (sxy > 0.)
+	    dmin = recalc_width(dmin, swidth[j], cwidth[j],
+				sxx, Sxx[j], sxy, is_inclusive);
+	else
+	    dmax = recalc_width(dmax, swidth[j], cwidth[j],
+				sxx, Sxx[j], sxy, is_inclusive);
+    }
+    for (m = 0; m <= t->maxcol; m++) {
+	int is_inclusive = 0;
+	if (dmin <= 0.)
+	    goto _end;
+	if (m == icol)
+	    continue;
+	sxy = 0.;
+	for (i = bcol; i < ecol; i++)
+	    sxy += m_entry(minv, i, m);
+	if (m >= bcol && m < ecol) {
+	    is_inclusive = 1;
+	}
+	if (sxy > 0.)
+	    dmin = recalc_width(dmin, newwidth[m], t->tabwidth[m],
+				sxx, m_entry(minv, m, m), sxy, is_inclusive);
+	else
+	    dmax = recalc_width(dmax, newwidth[m], t->tabwidth[m],
+				sxx, m_entry(minv, m, m), sxy, is_inclusive);
+    }
+  _end:
+    if (dmax > 0. && dmin > dmax)
+	dmin = dmax;
+    span = ecol - bcol;
+    if ((span == t->maxcol + 1 && dmin >= 0.) ||
+	(span != t->maxcol + 1 && dmin > rulewidth * 0.5)) {
+	int nwidth = ceil_at_intervals(round(owidth - dmin), rulewidth);
+	correct_table_matrix(t, bcol, ecol - bcol, nwidth, 1.);
+	corr++;
+    }
+    return corr;
+}
+
+#define MAX_ITERATION 10
+int
+check_table_width(struct table *t, double *newwidth, MAT * minv, int itr)
+{
+    int i, j, k, m, bcol, ecol;
+    int corr = 0;
+    struct table_cell *cell = &t->cell;
+#ifdef __GNUC__
+    short orgwidth[t->maxcol + 1], corwidth[t->maxcol + 1];
+    short cwidth[cell->maxcell + 1];
+    double swidth[cell->maxcell + 1];
+#else				/* __GNUC__ */
+    short orgwidth[MAXCOL], corwidth[MAXCOL];
+    short cwidth[MAXCELL];
+    double swidth[MAXCELL];
+#endif				/* __GNUC__ */
+    double twidth, sxy, *Sxx, stotal;
+
+    twidth = 0.;
+    stotal = 0.;
+    for (i = 0; i <= t->maxcol; i++) {
+	twidth += newwidth[i];
+	stotal += m_entry(minv, i, i);
+	for (m = 0; m < i; m++) {
+	    stotal += 2 * m_entry(minv, i, m);
+	}
+    }
+
+    Sxx = NewAtom_N(double, cell->maxcell + 1);
+    for (k = 0; k <= cell->maxcell; k++) {
+	j = cell->index[k];
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+	swidth[j] = 0.;
+	for (i = bcol; i < ecol; i++)
+	    swidth[j] += newwidth[i];
+	cwidth[j] = cell->width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	Sxx[j] = 0.;
+	for (i = bcol; i < ecol; i++) {
+	    Sxx[j] += m_entry(minv, i, i);
+	    for (m = bcol; m <= ecol; m++) {
+		if (m < i)
+		    Sxx[j] += 2 * m_entry(minv, i, m);
+	    }
+	}
+    }
+
+    /* compress table */
+    corr = check_compressible_cell(t, minv, newwidth, swidth,
+				   cwidth, twidth, Sxx, -1, -1, stotal, corr);
+    if (itr < MAX_ITERATION && corr > 0)
+	return corr;
+
+    /* compress multicolumn cell */
+    for (k = cell->maxcell; k >= 0; k--) {
+	j = cell->index[k];
+	corr = check_compressible_cell(t, minv, newwidth, swidth,
+				       cwidth, twidth, Sxx,
+				       -1, j, Sxx[j], corr);
+	if (itr < MAX_ITERATION && corr > 0)
+	    return corr;
+    }
+
+    /* compress single column cell */
+    for (i = 0; i <= t->maxcol; i++) {
+	corr = check_compressible_cell(t, minv, newwidth, swidth,
+				       cwidth, twidth, Sxx,
+				       i, -1, m_entry(minv, i, i), corr);
+	if (itr < MAX_ITERATION && corr > 0)
+	    return corr;
+    }
+
+
+    for (i = 0; i <= t->maxcol; i++)
+	corwidth[i] = orgwidth[i] = round(newwidth[i]);
+
+    check_minimum_width(t, corwidth);
+
+    for (i = 0; i <= t->maxcol; i++) {
+	double sx = sqrt(m_entry(minv, i, i));
+	if (sx < 0.1)
+	    continue;
+	if (orgwidth[i] < t->minimum_width[i] &&
+	    corwidth[i] == t->minimum_width[i]) {
+	    double w = (sx > 0.5) ? 0.5 : sx * 0.2;
+	    sxy = 0.;
+	    for (m = 0; m <= t->maxcol; m++) {
+		if (m == i)
+		    continue;
+		sxy += m_entry(minv, i, m);
+	    }
+	    if (sxy <= 0.) {
+		correct_table_matrix(t, i, 1, t->minimum_width[i], w);
+		corr++;
+	    }
+	}
+    }
+
+    for (k = 0; k <= cell->maxcell; k++) {
+	int nwidth = 0, mwidth;
+	double sx;
+
+	j = cell->index[k];
+	sx = sqrt(Sxx[j]);
+	if (sx < 0.1)
+	    continue;
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+	for (i = bcol; i < ecol; i++)
+	    nwidth += corwidth[i];
+	mwidth =
+	    cell->minimum_width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	if (mwidth > swidth[j] && mwidth == nwidth) {
+	    double w = (sx > 0.5) ? 0.5 : sx * 0.2;
+
+	    sxy = 0.;
+	    for (i = bcol; i < ecol; i++) {
+		for (m = 0; m <= t->maxcol; m++) {
+		    if (m >= bcol && m < ecol)
+			continue;
+		    sxy += m_entry(minv, i, m);
+		}
+	    }
+	    if (sxy <= 0.) {
+		correct_table_matrix(t, bcol, cell->colspan[j], mwidth, w);
+		corr++;
+	    }
+	}
+    }
+
+    if (itr >= MAX_ITERATION)
+	return 0;
+    else
+	return corr;
+}
+
+#else				/* not MATRIX */
+void
+set_table_width(struct table *t, short *newwidth, int maxwidth)
+{
+    int i, j, k, bcol, ecol;
+    struct table_cell *cell = &t->cell;
+    char *fixed;
+    int swidth, fwidth, width, nvar;
+    double s;
+    double *dwidth;
+    int try_again;
+
+    fixed = NewAtom_N(char, t->maxcol + 1);
+    bzero(fixed, t->maxcol + 1);
+    dwidth = NewAtom_N(double, t->maxcol + 1);
+
+    for (i = 0; i <= t->maxcol; i++) {
+	dwidth[i] = 0.0;
+	if (t->fixed_width[i] < 0) {
+	    t->fixed_width[i] = -t->fixed_width[i] * maxwidth / 100;
+	}
+	if (t->fixed_width[i] > 0) {
+	    newwidth[i] = t->fixed_width[i];
+	    fixed[i] = 1;
+	}
+	else
+	    newwidth[i] = 0;
+	if (newwidth[i] < t->minimum_width[i])
+	    newwidth[i] = t->minimum_width[i];
+    }
+
+    for (k = 0; k <= cell->maxcell; k++) {
+	j = cell->indexarray[k];
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+
+	if (cell->fixed_width[j] < 0)
+	    cell->fixed_width[j] = -cell->fixed_width[j] * maxwidth / 100;
+
+	swidth = 0;
+	fwidth = 0;
+	nvar = 0;
+	for (i = bcol; i < ecol; i++) {
+	    if (fixed[i]) {
+		fwidth += newwidth[i];
+	    }
+	    else {
+		swidth += newwidth[i];
+		nvar++;
+	    }
+	}
+	width = max(cell->fixed_width[j], cell->minimum_width[j])
+	    - (cell->colspan[j] - 1) * t->cellspacing;
+	if (nvar > 0 && width > fwidth + swidth) {
+	    s = 0.;
+	    for (i = bcol; i < ecol; i++) {
+		if (!fixed[i])
+		    s += weight3(t->tabwidth[i]);
+	    }
+	    for (i = bcol; i < ecol; i++) {
+		if (!fixed[i])
+		    dwidth[i] = (width - fwidth) * weight3(t->tabwidth[i]) / s;
+		else
+		    dwidth[i] = (double)newwidth[i];
+	    }
+	    dv2sv(dwidth, newwidth, cell->colspan[j]);
+	    if (cell->fixed_width[j] > 0) {
+		for (i = bcol; i < ecol; i++)
+		    fixed[i] = 1;
+	    }
+	}
+    }
+
+    do {
+	nvar = 0;
+	swidth = 0;
+	fwidth = 0;
+	for (i = 0; i <= t->maxcol; i++) {
+	    if (fixed[i]) {
+		fwidth += newwidth[i];
+	    }
+	    else {
+		swidth += newwidth[i];
+		nvar++;
+	    }
+	}
+	width = maxwidth - t->maxcol * t->cellspacing;
+	if (nvar == 0 || width <= fwidth + swidth)
+	    break;
+
+	s = 0.;
+	for (i = 0; i <= t->maxcol; i++) {
+	    if (!fixed[i])
+		s += weight3(t->tabwidth[i]);
+	}
+	for (i = 0; i <= t->maxcol; i++) {
+	    if (!fixed[i])
+		dwidth[i] = (width - fwidth) * weight3(t->tabwidth[i]) / s;
+	    else
+		dwidth[i] = (double)newwidth[i];
+	}
+	dv2sv(dwidth, newwidth, t->maxcol + 1);
+
+	try_again = 0;
+	for (i = 0; i <= t->maxcol; i++) {
+	    if (!fixed[i]) {
+		if (newwidth[i] > t->tabwidth[i]) {
+		    newwidth[i] = t->tabwidth[i];
+		    fixed[i] = 1;
+		    try_again = 1;
+		}
+		else if (newwidth[i] < t->minimum_width[i]) {
+		    newwidth[i] = t->minimum_width[i];
+		    fixed[i] = 1;
+		    try_again = 1;
+		}
+	    }
+	}
+    } while (try_again);
+}
+#endif				/* not MATRIX */
+
+void
+check_table_height(struct table *t)
+{
+    int i, j, k;
+    struct {
+	short *row;
+	short *rowspan;
+	short *indexarray;
+	short maxcell;
+	short size;
+	short *height;
+    } cell;
+    int space = 0;
+
+    cell.size = 0;
+    cell.maxcell = -1;
+
+    for (j = 0; j <= t->maxrow; j++) {
+	if (!t->tabattr[j])
+	    continue;
+	for (i = 0; i <= t->maxcol; i++) {
+	    int t_dep, rowspan;
+	    if (t->tabattr[j][i] & (HTT_X | HTT_Y))
+		continue;
+
+	    if (t->tabdata[j][i] == NULL)
+		t_dep = 0;
+	    else
+		t_dep = t->tabdata[j][i]->nitem;
+
+	    rowspan = table_rowspan(t, j, i);
+	    if (rowspan > 1) {
+		int c = cell.maxcell + 1;
+		k = bsearch_2short(rowspan, cell.rowspan,
+				   j, cell.row, t->maxrow + 1, cell.indexarray,
+				   c);
+		if (k <= cell.maxcell) {
+		    int idx = cell.indexarray[k];
+		    if (cell.row[idx] == j && cell.rowspan[idx] == rowspan)
+			c = idx;
+		}
+		if (c >= MAXROWCELL)
+		    continue;
+		if (c >= cell.size) {
+		    if (cell.size == 0) {
+			cell.size = max(MAXCELL, c + 1);
+			cell.row = NewAtom_N(short, cell.size);
+			cell.rowspan = NewAtom_N(short, cell.size);
+			cell.indexarray = NewAtom_N(short, cell.size);
+			cell.height = NewAtom_N(short, cell.size);
+		    }
+		    else {
+			cell.size = max(cell.size + MAXCELL, c + 1);
+			cell.row = New_Reuse(short, cell.row, cell.size);
+			cell.rowspan = New_Reuse(short, cell.rowspan,
+						 cell.size);
+			cell.indexarray = New_Reuse(short, cell.indexarray,
+						    cell.size);
+			cell.height = New_Reuse(short, cell.height, cell.size);
+		    }
+		}
+		if (c > cell.maxcell) {
+		    cell.maxcell++;
+		    cell.row[cell.maxcell] = j;
+		    cell.rowspan[cell.maxcell] = rowspan;
+		    cell.height[cell.maxcell] = 0;
+		    if (cell.maxcell > k) {
+			int ii;
+			for (ii = cell.maxcell; ii > k; ii--)
+			    cell.indexarray[ii] = cell.indexarray[ii - 1];
+		    }
+		    cell.indexarray[k] = cell.maxcell;
+		}
+
+		if (cell.height[c] < t_dep)
+		    cell.height[c] = t_dep;
+		continue;
+	    }
+	    if (t->tabheight[j] < t_dep)
+		t->tabheight[j] = t_dep;
+	}
+    }
+
+    switch (t->border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+    case BORDER_NOWIN:
+	space = 1;
+	break;
+    case BORDER_NONE:
+	space = 0;
+    }
+    check_cell_width(t->tabheight, cell.height, cell.row, cell.rowspan,
+		     cell.maxcell, cell.indexarray, space, 1);
+}
+
+#define CHECK_MINIMUM	1
+#define CHECK_FIXED	2
+
+int
+get_table_width(struct table *t, short *orgwidth, short *cellwidth, int flag)
+{
+#ifdef __GNUC__
+    short newwidth[t->maxcol + 1];
+#else				/* not __GNUC__ */
+    short newwidth[MAXCOL];
+#endif				/* not __GNUC__ */
+    int i;
+    int swidth;
+    struct table_cell *cell = &t->cell;
+    int rulewidth = table_rule_width(t);
+
+    for (i = 0; i <= t->maxcol; i++)
+	newwidth[i] = max(orgwidth[i], 0);
+
+    if (flag & CHECK_FIXED) {
+#ifdef __GNUC__
+	short ccellwidth[cell->maxcell + 1];
+#else				/* not __GNUC__ */
+	short ccellwidth[MAXCELL];
+#endif				/* not __GNUC__ */
+	for (i = 0; i <= t->maxcol; i++) {
+	    if (newwidth[i] < t->fixed_width[i])
+		newwidth[i] = t->fixed_width[i];
+	}
+	for (i = 0; i <= cell->maxcell; i++) {
+	    ccellwidth[i] = cellwidth[i];
+	    if (ccellwidth[i] < cell->fixed_width[i])
+		ccellwidth[i] = cell->fixed_width[i];
+	}
+	check_cell_width(newwidth, ccellwidth, cell->col, cell->colspan,
+			 cell->maxcell, cell->index, t->cellspacing, 0);
+    }
+    else {
+	check_cell_width(newwidth, cellwidth, cell->col, cell->colspan,
+			 cell->maxcell, cell->index, t->cellspacing, 0);
+    }
+    if (flag & CHECK_MINIMUM)
+	check_minimum_width(t, newwidth);
+
+    swidth = 0;
+    for (i = 0; i <= t->maxcol; i++) {
+	swidth += ceil_at_intervals(newwidth[i], rulewidth);
+    }
+    swidth += table_border_width(t);
+    return swidth;
+}
+
+#define minimum_table_width(t)\
+(get_table_width(t,t->minimum_width,t->cell.minimum_width,0))
+#define maximum_table_width(t)\
+  (get_table_width(t,t->tabwidth,t->cell.width,CHECK_FIXED))
+#define fixed_table_width(t)\
+  (get_table_width(t,t->fixed_width,t->cell.fixed_width,CHECK_MINIMUM))
+
+void
+renderCoTable(struct table *tbl, int maxlimit)
+{
+    struct readbuffer obuf;
+    struct html_feed_environ h_env;
+    struct environment envs[MAX_ENV_LEVEL];
+    struct table *t;
+    int i, col, row;
+    int indent, maxwidth;
+
+    for (i = 0; i < tbl->ntable; i++) {
+	t = tbl->tables[i].ptr;
+	col = tbl->tables[i].col;
+	row = tbl->tables[i].row;
+	indent = tbl->tables[i].indent;
+
+	init_henv(&h_env, &obuf, envs, MAX_ENV_LEVEL, tbl->tables[i].buf,
+		  get_spec_cell_width(tbl, row, col), indent);
+	check_row(tbl, row);
+	if (h_env.limit > maxlimit)
+	    h_env.limit = maxlimit;
+	if (t->total_width == 0)
+	    maxwidth = h_env.limit - indent;
+	else if (t->total_width > 0)
+	    maxwidth = t->total_width;
+	else
+	    maxwidth = t->total_width = -t->total_width * h_env.limit / 100;
+	renderTable(t, maxwidth, &h_env);
+    }
+}
+
+static void
+make_caption(struct table *t, struct html_feed_environ *h_env)
+{
+    struct html_feed_environ henv;
+    struct readbuffer obuf;
+    struct environment envs[MAX_ENV_LEVEL];
+    int limit;
+
+    if (t->caption->length <= 0)
+	return;
+
+    if (t->total_width > 0)
+	limit = t->total_width;
+    else
+	limit = h_env->limit;
+    init_henv(&henv, &obuf, envs, MAX_ENV_LEVEL, newTextLineList(),
+	      limit, h_env->envs[h_env->envc].indent);
+    HTMLlineproc1("<center>", &henv);
+    HTMLlineproc0(t->caption->ptr, &henv, FALSE);
+    HTMLlineproc1("</center>", &henv);
+
+    if (t->total_width < henv.maxlimit)
+	t->total_width = henv.maxlimit;
+    limit = h_env->limit;
+    h_env->limit = t->total_width;
+    HTMLlineproc1("<center>", h_env);
+    HTMLlineproc0(t->caption->ptr, h_env, FALSE);
+    HTMLlineproc1("</center>", h_env);
+    h_env->limit = limit;
+}
+
+void
+renderTable(struct table *t, int max_width, struct html_feed_environ *h_env)
+{
+    int i, j, w, r, h;
+    Str renderbuf;
+    short new_tabwidth[MAXCOL];
+#ifdef MATRIX
+    int itr;
+    VEC *newwidth;
+    MAT *mat, *minv;
+    PERM *pivot;
+#endif				/* MATRIX */
+    int width;
+    int rulewidth;
+    Str vrulea = NULL, vruleb = NULL, vrulec = NULL;
+#ifdef ID_EXT
+    Str idtag;
+#endif				/* ID_EXT */
+
+    t->total_height = 0;
+    if (t->maxcol < 0) {
+	make_caption(t, h_env);
+	return;
+    }
+
+    if (t->sloppy_width > max_width)
+	max_width = t->sloppy_width;
+
+    rulewidth = table_rule_width(t);
+
+    max_width -= table_border_width(t);
+
+    if (rulewidth > 1)
+	max_width = floor_at_intervals(max_width, rulewidth);
+
+    if (max_width < rulewidth)
+	max_width = rulewidth;
+
+    check_maximum_width(t);
+
+#ifdef MATRIX
+    if (t->maxcol == 0) {
+	if (t->tabwidth[0] > max_width)
+	    t->tabwidth[0] = max_width;
+	if (t->total_width > 0)
+	    t->tabwidth[0] = max_width;
+	else if (t->fixed_width[0] > 0)
+	    t->tabwidth[0] = t->fixed_width[0];
+	if (t->tabwidth[0] < t->minimum_width[0])
+	    t->tabwidth[0] = t->minimum_width[0];
+    }
+    else {
+	set_table_matrix(t, max_width);
+
+	itr = 0;
+	mat = m_get(t->maxcol + 1, t->maxcol + 1);
+	pivot = px_get(t->maxcol + 1);
+	newwidth = v_get(t->maxcol + 1);
+	minv = m_get(t->maxcol + 1, t->maxcol + 1);
+	do {
+	    m_copy(t->matrix, mat);
+	    LUfactor(mat, pivot);
+	    LUsolve(mat, pivot, t->vector, newwidth);
+	    LUinverse(mat, pivot, minv);
+#ifdef TABLE_DEBUG
+	    set_integered_width(t, newwidth->ve, new_tabwidth);
+	    fprintf(stderr, "itr=%d\n", itr);
+	    fprintf(stderr, "max_width=%d\n", max_width);
+	    fprintf(stderr, "minimum : ");
+	    for (i = 0; i <= t->maxcol; i++)
+		fprintf(stderr, "%2d ", t->minimum_width[i]);
+	    fprintf(stderr, "\nfixed : ");
+	    for (i = 0; i <= t->maxcol; i++)
+		fprintf(stderr, "%2d ", t->fixed_width[i]);
+	    fprintf(stderr, "\ndecided : ");
+	    for (i = 0; i <= t->maxcol; i++)
+		fprintf(stderr, "%2d ", new_tabwidth[i]);
+	    fprintf(stderr, "\n");
+#endif				/* TABLE_DEBUG */
+	    itr++;
+
+	} while (check_table_width(t, newwidth->ve, minv, itr));
+	set_integered_width(t, newwidth->ve, new_tabwidth);
+	check_minimum_width(t, new_tabwidth);
+	v_free(newwidth);
+	px_free(pivot);
+	m_free(mat);
+	m_free(minv);
+	m_free(t->matrix);
+	v_free(t->vector);
+	for (i = 0; i <= t->maxcol; i++) {
+	    t->tabwidth[i] = new_tabwidth[i];
+	}
+    }
+#else				/* not MATRIX */
+    set_table_width(t, new_tabwidth, max_width);
+    for (i = 0; i <= t->maxcol; i++) {
+	t->tabwidth[i] = new_tabwidth[i];
+    }
+#endif				/* not MATRIX */
+
+    check_minimum_width(t, t->tabwidth);
+    for (i = 0; i <= t->maxcol; i++)
+	t->tabwidth[i] = ceil_at_intervals(t->tabwidth[i], rulewidth);
+
+    renderCoTable(t, h_env->limit);
+
+    for (i = 0; i <= t->maxcol; i++) {
+	for (j = 0; j <= t->maxrow; j++) {
+	    check_row(t, j);
+	    if (t->tabattr[j][i] & HTT_Y)
+		continue;
+	    do_refill(t, j, i, h_env->limit);
+	}
+    }
+
+    check_minimum_width(t, t->tabwidth);
+    t->total_width = 0;
+    for (i = 0; i <= t->maxcol; i++) {
+	t->tabwidth[i] = ceil_at_intervals(t->tabwidth[i], rulewidth);
+	t->total_width += t->tabwidth[i];
+    }
+
+    t->total_width += table_border_width(t);
+
+    check_table_height(t);
+
+    for (i = 0; i <= t->maxcol; i++) {
+	for (j = 0; j <= t->maxrow; j++) {
+	    TextLineList *l;
+	    int k;
+	    if ((t->tabattr[j][i] & HTT_Y) ||
+		(t->tabattr[j][i] & HTT_TOP) || (t->tabdata[j][i] == NULL))
+		continue;
+	    h = t->tabheight[j];
+	    for (k = j + 1; k <= t->maxrow; k++) {
+		if (!(t->tabattr[k][i] & HTT_Y))
+		    break;
+		h += t->tabheight[k];
+		switch (t->border_mode) {
+		case BORDER_THIN:
+		case BORDER_THICK:
+		case BORDER_NOWIN:
+		    h += 1;
+		    break;
+		}
+	    }
+	    h -= t->tabdata[j][i]->nitem;
+	    if (t->tabattr[j][i] & HTT_MIDDLE)
+		h /= 2;
+	    if (h <= 0)
+		continue;
+	    l = newTextLineList();
+	    for (k = 0; k < h; k++)
+		pushTextLine(l, newTextLine(NULL, 0));
+	    t->tabdata[j][i] = appendGeneralList((GeneralList *)l,
+						 t->tabdata[j][i]);
+	}
+    }
+
+    /* table output */
+    width = t->total_width;
+
+    make_caption(t, h_env);
+
+    HTMLlineproc1("<pre for_table>", h_env);
+#ifdef ID_EXT
+    if (t->id != NULL) {
+	idtag = Sprintf("<_id id=\"%s\">", html_quote((t->id)->ptr));
+	HTMLlineproc1(idtag->ptr, h_env);
+    }
+#endif				/* ID_EXT */
+    switch (t->border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+	renderbuf = Strnew();
+	print_sep(t, -1, T_TOP, t->maxcol, renderbuf);
+	push_render_image(renderbuf, width, t->total_width, h_env);
+	t->total_height += 1;
+	break;
+    }
+    vruleb = Strnew();
+    switch (t->border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+	vrulea = Strnew();
+	vrulec = Strnew();
+	push_symbol(vrulea, TK_VERTICALBAR(t->border_mode), symbol_width, 1);
+	for (i = 0; i < t->cellpadding; i++) {
+	    Strcat_char(vrulea, ' ');
+	    Strcat_char(vruleb, ' ');
+	    Strcat_char(vrulec, ' ');
+	}
+	push_symbol(vrulec, TK_VERTICALBAR(t->border_mode), symbol_width, 1);
+    case BORDER_NOWIN:
+	push_symbol(vruleb, TK_VERTICALBAR(BORDER_THIN), symbol_width, 1);
+	for (i = 0; i < t->cellpadding; i++)
+	    Strcat_char(vruleb, ' ');
+	break;
+    case BORDER_NONE:
+	for (i = 0; i < t->cellspacing; i++)
+	    Strcat_char(vruleb, ' ');
+    }
+
+    for (r = 0; r <= t->maxrow; r++) {
+	for (h = 0; h < t->tabheight[r]; h++) {
+	    renderbuf = Strnew();
+	    if (t->border_mode == BORDER_THIN
+		|| t->border_mode == BORDER_THICK)
+		Strcat(renderbuf, vrulea);
+#ifdef ID_EXT
+	    if (t->tridvalue[r] != NULL && h == 0) {
+		idtag = Sprintf("<_id id=\"%s\">",
+				html_quote((t->tridvalue[r])->ptr));
+		Strcat(renderbuf, idtag);
+	    }
+#endif				/* ID_EXT */
+	    for (i = 0; i <= t->maxcol; i++) {
+		check_row(t, r);
+#ifdef ID_EXT
+		if (t->tabidvalue[r][i] != NULL && h == 0) {
+		    idtag = Sprintf("<_id id=\"%s\">",
+				    html_quote((t->tabidvalue[r][i])->ptr));
+		    Strcat(renderbuf, idtag);
+		}
+#endif				/* ID_EXT */
+		if (!(t->tabattr[r][i] & HTT_X)) {
+		    w = t->tabwidth[i];
+		    for (j = i + 1;
+			 j <= t->maxcol && (t->tabattr[r][j] & HTT_X); j++)
+			w += t->tabwidth[j] + t->cellspacing;
+		    if (t->tabattr[r][i] & HTT_Y) {
+			for (j = r - 1; j >= 0 && t->tabattr[j]
+			     && (t->tabattr[j][i] & HTT_Y); j--) ;
+			print_item(t, j, i, w, renderbuf);
+		    }
+		    else
+			print_item(t, r, i, w, renderbuf);
+		}
+		if (i < t->maxcol && !(t->tabattr[r][i + 1] & HTT_X))
+		    Strcat(renderbuf, vruleb);
+	    }
+	    switch (t->border_mode) {
+	    case BORDER_THIN:
+	    case BORDER_THICK:
+		Strcat(renderbuf, vrulec);
+		t->total_height += 1;
+		break;
+	    }
+	    push_render_image(renderbuf, width, t->total_width, h_env);
+	}
+	if (r < t->maxrow && t->border_mode != BORDER_NONE) {
+	    renderbuf = Strnew();
+	    print_sep(t, r, T_MIDDLE, t->maxcol, renderbuf);
+	    push_render_image(renderbuf, width, t->total_width, h_env);
+	}
+	t->total_height += t->tabheight[r];
+    }
+    switch (t->border_mode) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+	renderbuf = Strnew();
+	print_sep(t, t->maxrow, T_BOTTOM, t->maxcol, renderbuf);
+	push_render_image(renderbuf, width, t->total_width, h_env);
+	t->total_height += 1;
+	break;
+    }
+    if (t->total_height == 0) {
+       renderbuf = Strnew_charp(" ");
+	t->total_height++;
+	t->total_width = 1;
+	push_render_image(renderbuf, 1, t->total_width, h_env);
+    }
+    HTMLlineproc1("</pre>", h_env);
+}
+
+#ifdef TABLE_NO_COMPACT
+#define THR_PADDING 2
+#else
+#define THR_PADDING 4
+#endif
+
+struct table *
+begin_table(int border, int spacing, int padding, int vspace)
+{
+    struct table *t;
+    int mincell = minimum_cellspacing(border);
+    int rcellspacing;
+    int mincell_pixels = round(mincell * pixel_per_char);
+    int ppc = round(pixel_per_char);
+
+    t = newTable();
+    t->row = t->col = -1;
+    t->maxcol = -1;
+    t->maxrow = -1;
+    t->border_mode = border;
+    t->flag = 0;
+    if (border == BORDER_NOWIN)
+	t->flag |= TBL_EXPAND_OK;
+
+    rcellspacing = spacing + 2 * padding;
+    switch (border) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+    case BORDER_NOWIN:
+	t->cellpadding = padding - (mincell_pixels - 4) / 2;
+	break;
+    case BORDER_NONE:
+	t->cellpadding = rcellspacing - mincell_pixels;
+    }
+    if (t->cellpadding >= ppc)
+	t->cellpadding /= ppc;
+    else if (t->cellpadding > 0)
+	t->cellpadding = 1;
+    else
+	t->cellpadding = 0;
+
+    switch (border) {
+    case BORDER_THIN:
+    case BORDER_THICK:
+    case BORDER_NOWIN:
+	t->cellspacing = 2 * t->cellpadding + mincell;
+	break;
+    case BORDER_NONE:
+	t->cellspacing = t->cellpadding + mincell;
+    }
+
+    if (border == BORDER_NONE) {
+	if (rcellspacing / 2 + vspace <= 1)
+	    t->vspace = 0;
+	else
+	    t->vspace = 1;
+    }
+    else {
+	if (vspace < ppc)
+	    t->vspace = 0;
+	else
+	    t->vspace = 1;
+    }
+
+    if (border == BORDER_NONE) {
+	if (rcellspacing <= THR_PADDING)
+	    t->vcellpadding = 0;
+	else
+	    t->vcellpadding = 1;
+    }
+    else {
+	if (padding < 2 * ppc - 2)
+	    t->vcellpadding = 0;
+	else
+	    t->vcellpadding = 1;
+    }
+
+    return t;
+}
+
+void
+end_table(struct table *tbl)
+{
+    struct table_cell *cell = &tbl->cell;
+    int i, rulewidth = table_rule_width(tbl);
+    if (rulewidth > 1) {
+	if (tbl->total_width > 0)
+	    tbl->total_width = ceil_at_intervals(tbl->total_width, rulewidth);
+	for (i = 0; i <= tbl->maxcol; i++) {
+	    tbl->minimum_width[i] =
+		ceil_at_intervals(tbl->minimum_width[i], rulewidth);
+	    tbl->tabwidth[i] = ceil_at_intervals(tbl->tabwidth[i], rulewidth);
+	    if (tbl->fixed_width[i] > 0)
+		tbl->fixed_width[i] =
+		    ceil_at_intervals(tbl->fixed_width[i], rulewidth);
+	}
+	for (i = 0; i <= cell->maxcell; i++) {
+	    cell->minimum_width[i] =
+		ceil_at_intervals(cell->minimum_width[i], rulewidth);
+	    cell->width[i] = ceil_at_intervals(cell->width[i], rulewidth);
+	    if (cell->fixed_width[i] > 0)
+		cell->fixed_width[i] =
+		    ceil_at_intervals(cell->fixed_width[i], rulewidth);
+	}
+    }
+    tbl->sloppy_width = fixed_table_width(tbl);
+    if (tbl->total_width > tbl->sloppy_width)
+	tbl->sloppy_width = tbl->total_width;
+}
+
+static void
+check_minimum0(struct table *t, int min)
+{
+    int i, w, ww;
+    struct table_cell *cell;
+
+    if (t->col < 0)
+	return;
+    if (t->tabwidth[t->col] < 0)
+	return;
+    check_row(t, t->row);
+    w = table_colspan(t, t->row, t->col);
+    min += t->indent;
+    if (w == 1)
+	ww = min;
+    else {
+	cell = &t->cell;
+	ww = 0;
+	if (cell->icell >= 0 && cell->minimum_width[cell->icell] < min)
+	    cell->minimum_width[cell->icell] = min;
+    }
+    for (i = t->col;
+	 i <= t->maxcol && (i == t->col || (t->tabattr[t->row][i] & HTT_X));
+	 i++) {
+	if (t->minimum_width[i] < ww)
+	    t->minimum_width[i] = ww;
+    }
+}
+
+static int
+setwidth0(struct table *t, struct table_mode *mode)
+{
+    int w;
+    int width = t->tabcontentssize;
+    struct table_cell *cell = &t->cell;
+
+    if (t->col < 0)
+	return -1;
+    if (t->tabwidth[t->col] < 0)
+	return -1;
+    check_row(t, t->row);
+    if (t->linfo.prev_spaces > 0)
+	width -= t->linfo.prev_spaces;
+    w = table_colspan(t, t->row, t->col);
+    if (w == 1) {
+	if (t->tabwidth[t->col] < width)
+	    t->tabwidth[t->col] = width;
+    }
+    else if (cell->icell >= 0) {
+	if (cell->width[cell->icell] < width)
+	    cell->width[cell->icell] = width;
+    }
+    return width;
+}
+
+static void
+setwidth(struct table *t, struct table_mode *mode)
+{
+    int width = setwidth0(t, mode);
+    if (width < 0)
+	return;
+#ifdef NOWRAP
+    if (t->tabattr[t->row][t->col] & HTT_NOWRAP)
+	check_minimum0(t, width);
+#endif				/* NOWRAP */
+    if (mode->pre_mode & (TBLM_NOBR | TBLM_PRE | TBLM_PRE_INT) &&
+	mode->nobr_offset >= 0)
+	check_minimum0(t, width - mode->nobr_offset);
+}
+
+static void
+addcontentssize(struct table *t, int width)
+{
+
+    if (t->col < 0)
+	return;
+    if (t->tabwidth[t->col] < 0)
+	return;
+    check_row(t, t->row);
+    t->tabcontentssize += width;
+}
+
+static void table_close_anchor0(struct table *tbl, struct table_mode *mode);
+
+static void
+clearcontentssize(struct table *t, struct table_mode *mode)
+{
+    table_close_anchor0(t, mode);
+    mode->nobr_offset = 0;
+    t->linfo.prev_spaces = -1;
+    set_space_to_prevchar(t->linfo.prevchar);
+    t->linfo.prev_ctype = PC_ASCII;
+    t->linfo.length = 0;
+    t->tabcontentssize = 0;
+}
+
+static void
+begin_cell(struct table *t, struct table_mode *mode)
+{
+    clearcontentssize(t, mode);
+    mode->indent_level = 0;
+    mode->nobr_level = 0;
+    mode->pre_mode = 0;
+    t->indent = 0;
+    t->flag |= TBL_IN_COL;
+
+    if (t->suspended_data) {
+	check_row(t, t->row);
+	if (t->tabdata[t->row][t->col] == NULL)
+	    t->tabdata[t->row][t->col] = newGeneralList();
+	appendGeneralList(t->tabdata[t->row][t->col],
+			  (GeneralList *)t->suspended_data);
+	t->suspended_data = NULL;
+    }
+}
+
+void
+check_rowcol(struct table *tbl, struct table_mode *mode)
+{
+    int row = tbl->row, col = tbl->col;
+
+    if (!(tbl->flag & TBL_IN_ROW)) {
+	tbl->flag |= TBL_IN_ROW;
+	tbl->row++;
+	if (tbl->row > tbl->maxrow)
+	    tbl->maxrow = tbl->row;
+	tbl->col = -1;
+    }
+    if (tbl->row == -1)
+	tbl->row = 0;
+    if (tbl->col == -1)
+	tbl->col = 0;
+
+    for (;; tbl->row++) {
+	check_row(tbl, tbl->row);
+	for (; tbl->col < MAXCOL &&
+	     tbl->tabattr[tbl->row][tbl->col] & (HTT_X | HTT_Y); tbl->col++) ;
+	if (tbl->col < MAXCOL)
+	    break;
+	tbl->col = 0;
+    }
+    if (tbl->row > tbl->maxrow)
+	tbl->maxrow = tbl->row;
+    if (tbl->col > tbl->maxcol)
+	tbl->maxcol = tbl->col;
+
+    if (tbl->row != row || tbl->col != col)
+	begin_cell(tbl, mode);
+    tbl->flag |= TBL_IN_COL;
+}
+
+int
+skip_space(struct table *t, char *line, struct table_linfo *linfo,
+	   int checkminimum)
+{
+    int skip = 0, s = linfo->prev_spaces;
+    Lineprop ctype, prev_ctype = linfo->prev_ctype;
+    Str prevchar = linfo->prevchar;
+    int w = linfo->length;
+    int min = 1;
+
+    if (*line == '<' && line[strlen(line) - 1] == '>') {
+	if (checkminimum)
+	    check_minimum0(t, visible_length(line));
+	return 0;
+    }
+
+    while (*line) {
+	char *save = line, *c = line;
+	int ec, len, wlen, plen;
+	ctype = get_mctype(line);
+	len = get_mcwidth(line);
+	wlen = plen = get_mclen(line);
+
+	if (min < w)
+	    min = w;
+	if (ctype == PC_ASCII && IS_SPACE(*c)) {
+	    w = 0;
+	    s++;
+	}
+	else {
+	    if (*c == '&') {
+		ec = getescapechar(&line);
+		if (ec >= 0) {
+		    c = conv_entity(ec);
+		    ctype = get_mctype(c);
+		    len = get_strwidth(c);
+		    wlen = line - save;
+		    plen = get_mclen(c);
+		}
+	    }
+	    if (prevchar->length && is_boundary((unsigned char *)prevchar->ptr,
+						(unsigned char *)c)) {
+		w = len;
+	    }
+	    else {
+		w += len;
+	    }
+	    if (s > 0) {
+#ifdef USE_M17N
+		if (ctype == PC_KANJI1 && prev_ctype == PC_KANJI1)
+		    skip += s;
+		else
+#endif
+		    skip += s - 1;
+	    }
+	    s = 0;
+	    prev_ctype = ctype;
+	}
+	set_prevchar(prevchar, c, plen);
+	line = save + wlen;
+    }
+    if (s > 1) {
+	skip += s - 1;
+	linfo->prev_spaces = 1;
+    }
+    else {
+	linfo->prev_spaces = s;
+    }
+    linfo->prev_ctype = prev_ctype;
+    linfo->prevchar = prevchar;
+
+    if (checkminimum) {
+	if (min < w)
+	    min = w;
+	linfo->length = w;
+	check_minimum0(t, min);
+    }
+    return skip;
+}
+
+static void
+feed_table_inline_tag(struct table *tbl,
+		      char *line, struct table_mode *mode, int width)
+{
+    check_rowcol(tbl, mode);
+    pushdata(tbl, tbl->row, tbl->col, line);
+    if (width >= 0) {
+	check_minimum0(tbl, width);
+	addcontentssize(tbl, width);
+	setwidth(tbl, mode);
+    }
+}
+
+static void
+feed_table_block_tag(struct table *tbl,
+		     char *line, struct table_mode *mode, int indent, int cmd)
+{
+    int offset;
+    if (mode->indent_level <= 0 && indent == -1)
+	return;
+    setwidth(tbl, mode);
+    feed_table_inline_tag(tbl, line, mode, -1);
+    clearcontentssize(tbl, mode);
+    if (indent == 1) {
+	mode->indent_level++;
+	if (mode->indent_level <= MAX_INDENT_LEVEL)
+	    tbl->indent += INDENT_INCR;
+    }
+    else if (indent == -1) {
+	mode->indent_level--;
+	if (mode->indent_level < MAX_INDENT_LEVEL)
+	    tbl->indent -= INDENT_INCR;
+    }
+    offset = tbl->indent;
+    if (cmd == HTML_DT) {
+	if (mode->indent_level > 0 && mode->indent_level <= MAX_INDENT_LEVEL)
+	    offset -= INDENT_INCR;
+    }
+    if (tbl->indent > 0) {
+	check_minimum0(tbl, 0);
+	addcontentssize(tbl, offset);
+    }
+}
+
+static void
+table_close_select(struct table *tbl, struct table_mode *mode, int width)
+{
+    Str tmp = process_n_select();
+    mode->pre_mode &= ~TBLM_INSELECT;
+    mode->end_tag = 0;
+    feed_table1(tbl, tmp, mode, width);
+}
+
+static void
+table_close_textarea(struct table *tbl, struct table_mode *mode, int width)
+{
+    Str tmp = process_n_textarea();
+    mode->pre_mode &= ~TBLM_INTXTA;
+    mode->end_tag = 0;
+    feed_table1(tbl, tmp, mode, width);
+}
+
+static void
+table_close_anchor0(struct table *tbl, struct table_mode *mode)
+{
+    if (!(mode->pre_mode & TBLM_ANCHOR))
+	return;
+    mode->pre_mode &= ~TBLM_ANCHOR;
+    if (tbl->tabcontentssize == mode->anchor_offset) {
+	check_minimum0(tbl, 1);
+	addcontentssize(tbl, 1);
+	setwidth(tbl, mode);
+    }
+    else if (tbl->linfo.prev_spaces > 0 &&
+	     tbl->tabcontentssize - 1 == mode->anchor_offset) {
+	if (tbl->linfo.prev_spaces > 0)
+	    tbl->linfo.prev_spaces = -1;
+    }
+}
+
+#define TAG_ACTION_NONE 0
+#define TAG_ACTION_FEED 1
+#define TAG_ACTION_TABLE 2
+#define TAG_ACTION_N_TABLE 3
+#define TAG_ACTION_PLAIN 4
+
+#define CASE_TABLE_TAG \
+	case HTML_TABLE:\
+	case HTML_N_TABLE:\
+	case HTML_TR:\
+	case HTML_N_TR:\
+	case HTML_TD:\
+	case HTML_N_TD:\
+	case HTML_TH:\
+	case HTML_N_TH:\
+	case HTML_THEAD:\
+	case HTML_N_THEAD:\
+	case HTML_TBODY:\
+	case HTML_N_TBODY:\
+	case HTML_TFOOT:\
+	case HTML_N_TFOOT:\
+	case HTML_COLGROUP:\
+	case HTML_N_COLGROUP:\
+	case HTML_COL
+
+#define ATTR_ROWSPAN_MAX 32766
+
+static int
+feed_table_tag(struct table *tbl, char *line, struct table_mode *mode,
+	       int width, struct parsed_tag *tag)
+{
+    int cmd;
+#ifdef ID_EXT
+    char *p;
+#endif
+    struct table_cell *cell = &tbl->cell;
+    int colspan, rowspan;
+    int col, prev_col;
+    int i, j, k, v, v0, w, id;
+    Str tok, tmp, anchor;
+    table_attr align, valign;
+
+    cmd = tag->tagid;
+
+    if (mode->pre_mode & TBLM_PLAIN) {
+	if (mode->end_tag == cmd) {
+	    mode->pre_mode &= ~TBLM_PLAIN;
+	    mode->end_tag = 0;
+	    feed_table_block_tag(tbl, line, mode, 0, cmd);
+	    return TAG_ACTION_NONE;
+	}
+	return TAG_ACTION_PLAIN;
+    }
+    if (mode->pre_mode & TBLM_INTXTA) {
+	switch (cmd) {
+	CASE_TABLE_TAG:
+	case HTML_N_TEXTAREA:
+	    table_close_textarea(tbl, mode, width);
+	    if (cmd == HTML_N_TEXTAREA)
+		return TAG_ACTION_NONE;
+	    break;
+	default:
+	    return TAG_ACTION_FEED;
+	}
+    }
+    if (mode->pre_mode & TBLM_SCRIPT) {
+	if (mode->end_tag == cmd) {
+	    mode->pre_mode &= ~TBLM_SCRIPT;
+	    mode->end_tag = 0;
+	    return TAG_ACTION_NONE;
+	}
+	return TAG_ACTION_PLAIN;
+    }
+    if (mode->pre_mode & TBLM_STYLE) {
+	if (mode->end_tag == cmd) {
+	    mode->pre_mode &= ~TBLM_STYLE;
+	    mode->end_tag = 0;
+	    return TAG_ACTION_NONE;
+	}
+	return TAG_ACTION_PLAIN;
+    }
+    /* failsafe: a tag other than <option></option>and </select> in *
+     * <select> environment is regarded as the end of <select>. */
+    if (mode->pre_mode & TBLM_INSELECT) {
+	switch (cmd) {
+	  CASE_TABLE_TAG:
+	case HTML_N_FORM:
+	case HTML_N_SELECT:	/* mode->end_tag */
+	    table_close_select(tbl, mode, width);
+	    if (cmd == HTML_N_SELECT)
+		return TAG_ACTION_NONE;
+	    break;
+	default:
+	    return TAG_ACTION_FEED;
+	}
+    }
+    if (mode->caption) {
+	switch (cmd) {
+	  CASE_TABLE_TAG:
+	case HTML_N_CAPTION:
+	    mode->caption = 0;
+	    if (cmd == HTML_N_CAPTION)
+		return TAG_ACTION_NONE;
+	    break;
+	default:
+	    return TAG_ACTION_FEED;
+	}
+    }
+
+    if (mode->pre_mode & TBLM_PRE) {
+	switch (cmd) {
+	case HTML_NOBR:
+	case HTML_N_NOBR:
+	case HTML_PRE_INT:
+	case HTML_N_PRE_INT:
+	    return TAG_ACTION_NONE;
+	}
+    }
+
+    switch (cmd) {
+    case HTML_TABLE:
+	check_rowcol(tbl, mode);
+	return TAG_ACTION_TABLE;
+    case HTML_N_TABLE:
+	if (tbl->suspended_data)
+	    check_rowcol(tbl, mode);
+	return TAG_ACTION_N_TABLE;
+    case HTML_TR:
+	if (tbl->col >= 0 && tbl->tabcontentssize > 0)
+	    setwidth(tbl, mode);
+	tbl->col = -1;
+	tbl->row++;
+	tbl->flag |= TBL_IN_ROW;
+	tbl->flag &= ~TBL_IN_COL;
+	align = 0;
+	valign = 0;
+	if (parsedtag_get_value(tag, ATTR_ALIGN, &i)) {
+	    switch (i) {
+	    case ALIGN_LEFT:
+		align = (HTT_LEFT | HTT_TRSET);
+		break;
+	    case ALIGN_RIGHT:
+		align = (HTT_RIGHT | HTT_TRSET);
+		break;
+	    case ALIGN_CENTER:
+		align = (HTT_CENTER | HTT_TRSET);
+		break;
+	    }
+	}
+	if (parsedtag_get_value(tag, ATTR_VALIGN, &i)) {
+	    switch (i) {
+	    case VALIGN_TOP:
+		valign = (HTT_TOP | HTT_VTRSET);
+		break;
+	    case VALIGN_MIDDLE:
+		valign = (HTT_MIDDLE | HTT_VTRSET);
+		break;
+	    case VALIGN_BOTTOM:
+		valign = (HTT_BOTTOM | HTT_VTRSET);
+		break;
+	    }
+	}
+#ifdef ID_EXT
+	if (parsedtag_get_value(tag, ATTR_ID, &p))
+	    tbl->tridvalue[tbl->row] = Strnew_charp(p);
+#endif				/* ID_EXT */
+	tbl->trattr = align | valign;
+	break;
+    case HTML_TH:
+    case HTML_TD:
+	prev_col = tbl->col;
+	if (tbl->col >= 0 && tbl->tabcontentssize > 0)
+	    setwidth(tbl, mode);
+	if (tbl->row == -1) {
+	    /* for broken HTML... */
+	    tbl->row = -1;
+	    tbl->col = -1;
+	    tbl->maxrow = tbl->row;
+	}
+	if (tbl->col == -1) {
+	    if (!(tbl->flag & TBL_IN_ROW)) {
+		tbl->row++;
+		tbl->flag |= TBL_IN_ROW;
+	    }
+	    if (tbl->row > tbl->maxrow)
+		tbl->maxrow = tbl->row;
+	}
+	tbl->col++;
+	check_row(tbl, tbl->row);
+	while (tbl->tabattr[tbl->row][tbl->col]) {
+	    tbl->col++;
+	}
+	if (tbl->col > MAXCOL - 1) {
+	    tbl->col = prev_col;
+	    return TAG_ACTION_NONE;
+	}
+	if (tbl->col > tbl->maxcol) {
+	    tbl->maxcol = tbl->col;
+	}
+	colspan = rowspan = 1;
+	if (tbl->trattr & HTT_TRSET)
+	    align = (tbl->trattr & HTT_ALIGN);
+	else if (cmd == HTML_TH)
+	    align = HTT_CENTER;
+	else
+	    align = HTT_LEFT;
+	if (tbl->trattr & HTT_VTRSET)
+	    valign = (tbl->trattr & HTT_VALIGN);
+	else
+	    valign = HTT_MIDDLE;
+	if (parsedtag_get_value(tag, ATTR_ROWSPAN, &rowspan)) {
+	    if(rowspan > ATTR_ROWSPAN_MAX) {
+		rowspan = ATTR_ROWSPAN_MAX;
+	    }
+	    if ((tbl->row + rowspan) >= tbl->max_rowsize)
+		check_row(tbl, tbl->row + rowspan);
+	}
+	if (parsedtag_get_value(tag, ATTR_COLSPAN, &colspan)) {
+	    if ((tbl->col + colspan) >= MAXCOL) {
+		/* Can't expand column */
+		colspan = MAXCOL - tbl->col;
+	    }
+	}
+	if (parsedtag_get_value(tag, ATTR_ALIGN, &i)) {
+	    switch (i) {
+	    case ALIGN_LEFT:
+		align = HTT_LEFT;
+		break;
+	    case ALIGN_RIGHT:
+		align = HTT_RIGHT;
+		break;
+	    case ALIGN_CENTER:
+		align = HTT_CENTER;
+		break;
+	    }
+	}
+	if (parsedtag_get_value(tag, ATTR_VALIGN, &i)) {
+	    switch (i) {
+	    case VALIGN_TOP:
+		valign = HTT_TOP;
+		break;
+	    case VALIGN_MIDDLE:
+		valign = HTT_MIDDLE;
+		break;
+	    case VALIGN_BOTTOM:
+		valign = HTT_BOTTOM;
+		break;
+	    }
+	}
+#ifdef NOWRAP
+	if (parsedtag_exists(tag, ATTR_NOWRAP))
+	    tbl->tabattr[tbl->row][tbl->col] |= HTT_NOWRAP;
+#endif				/* NOWRAP */
+	v = 0;
+	if (parsedtag_get_value(tag, ATTR_WIDTH, &v)) {
+#ifdef TABLE_EXPAND
+	    if (v > 0) {
+		if (tbl->real_width > 0)
+		    v = -(v * 100) / (tbl->real_width * pixel_per_char);
+		else
+		    v = (int)(v / pixel_per_char);
+	    }
+#else
+	    v = RELATIVE_WIDTH(v);
+#endif				/* not TABLE_EXPAND */
+	}
+#ifdef ID_EXT
+	if (parsedtag_get_value(tag, ATTR_ID, &p))
+	    tbl->tabidvalue[tbl->row][tbl->col] = Strnew_charp(p);
+#endif				/* ID_EXT */
+#ifdef NOWRAP
+	if (v != 0) {
+	    /* NOWRAP and WIDTH= conflicts each other */
+	    tbl->tabattr[tbl->row][tbl->col] &= ~HTT_NOWRAP;
+	}
+#endif				/* NOWRAP */
+	tbl->tabattr[tbl->row][tbl->col] &= ~(HTT_ALIGN | HTT_VALIGN);
+	tbl->tabattr[tbl->row][tbl->col] |= (align | valign);
+	if (colspan > 1) {
+	    col = tbl->col;
+
+	    cell->icell = cell->maxcell + 1;
+	    k = bsearch_2short(colspan, cell->colspan, col, cell->col, MAXCOL,
+			       cell->index, cell->icell);
+	    if (k <= cell->maxcell) {
+		i = cell->index[k];
+		if (cell->col[i] == col && cell->colspan[i] == colspan)
+		    cell->icell = i;
+	    }
+	    if (cell->icell > cell->maxcell && cell->icell < MAXCELL) {
+		cell->maxcell++;
+		cell->col[cell->maxcell] = col;
+		cell->colspan[cell->maxcell] = colspan;
+		cell->width[cell->maxcell] = 0;
+		cell->minimum_width[cell->maxcell] = 0;
+		cell->fixed_width[cell->maxcell] = 0;
+		if (cell->maxcell > k) {
+		    int ii;
+		    for (ii = cell->maxcell; ii > k; ii--)
+			cell->index[ii] = cell->index[ii - 1];
+		}
+		cell->index[k] = cell->maxcell;
+	    }
+	    if (cell->icell > cell->maxcell)
+		cell->icell = -1;
+	}
+	if (v != 0) {
+	    if (colspan == 1) {
+		v0 = tbl->fixed_width[tbl->col];
+		if (v0 == 0 || (v0 > 0 && v > v0) || (v0 < 0 && v < v0)) {
+#ifdef FEED_TABLE_DEBUG
+		    fprintf(stderr, "width(%d) = %d\n", tbl->col, v);
+#endif				/* TABLE_DEBUG */
+		    tbl->fixed_width[tbl->col] = v;
+		}
+	    }
+	    else if (cell->icell >= 0) {
+		v0 = cell->fixed_width[cell->icell];
+		if (v0 == 0 || (v0 > 0 && v > v0) || (v0 < 0 && v < v0))
+		    cell->fixed_width[cell->icell] = v;
+	    }
+	}
+	for (i = 0; i < rowspan; i++) {
+	    check_row(tbl, tbl->row + i);
+	    for (j = 0; j < colspan; j++) {
+#if 0
+		tbl->tabattr[tbl->row + i][tbl->col + j] &= ~(HTT_X | HTT_Y);
+#endif
+		if (!(tbl->tabattr[tbl->row + i][tbl->col + j] &
+		      (HTT_X | HTT_Y))) {
+		    tbl->tabattr[tbl->row + i][tbl->col + j] |=
+			((i > 0) ? HTT_Y : 0) | ((j > 0) ? HTT_X : 0);
+		}
+		if (tbl->col + j > tbl->maxcol) {
+		    tbl->maxcol = tbl->col + j;
+		}
+	    }
+	    if (tbl->row + i > tbl->maxrow) {
+		tbl->maxrow = tbl->row + i;
+	    }
+	}
+	begin_cell(tbl, mode);
+	break;
+    case HTML_N_TR:
+	setwidth(tbl, mode);
+	tbl->col = -1;
+	tbl->flag &= ~(TBL_IN_ROW | TBL_IN_COL);
+	return TAG_ACTION_NONE;
+    case HTML_N_TH:
+    case HTML_N_TD:
+	setwidth(tbl, mode);
+	tbl->flag &= ~TBL_IN_COL;
+#ifdef FEED_TABLE_DEBUG
+	{
+	    TextListItem *it;
+	    int i = tbl->col, j = tbl->row;
+	    fprintf(stderr, "(a) row,col: %d, %d\n", j, i);
+	    if (tbl->tabdata[j] && tbl->tabdata[j][i]) {
+		for (it = ((TextList *)tbl->tabdata[j][i])->first;
+		     it; it = it->next)
+		    fprintf(stderr, "  [%s] \n", it->ptr);
+	    }
+	}
+#endif
+	return TAG_ACTION_NONE;
+    case HTML_P:
+    case HTML_BR:
+    case HTML_CENTER:
+    case HTML_N_CENTER:
+    case HTML_DIV:
+    case HTML_N_DIV:
+	if (!(tbl->flag & TBL_IN_ROW))
+	    break;
+    case HTML_DT:
+    case HTML_DD:
+    case HTML_H:
+    case HTML_N_H:
+    case HTML_LI:
+    case HTML_PRE:
+    case HTML_N_PRE:
+    case HTML_HR:
+    case HTML_LISTING:
+    case HTML_XMP:
+    case HTML_PLAINTEXT:
+    case HTML_PRE_PLAIN:
+    case HTML_N_PRE_PLAIN:
+	feed_table_block_tag(tbl, line, mode, 0, cmd);
+	switch (cmd) {
+	case HTML_PRE:
+	case HTML_PRE_PLAIN:
+	    mode->pre_mode |= TBLM_PRE;
+	    break;
+	case HTML_N_PRE:
+	case HTML_N_PRE_PLAIN:
+	    mode->pre_mode &= ~TBLM_PRE;
+	    break;
+	case HTML_LISTING:
+	    mode->pre_mode |= TBLM_PLAIN;
+	    mode->end_tag = HTML_N_LISTING;
+	    break;
+	case HTML_XMP:
+	    mode->pre_mode |= TBLM_PLAIN;
+	    mode->end_tag = HTML_N_XMP;
+	    break;
+	case HTML_PLAINTEXT:
+	    mode->pre_mode |= TBLM_PLAIN;
+	    mode->end_tag = MAX_HTMLTAG;
+	    break;
+	}
+	break;
+    case HTML_DL:
+    case HTML_BLQ:
+    case HTML_OL:
+    case HTML_UL:
+	feed_table_block_tag(tbl, line, mode, 1, cmd);
+	break;
+    case HTML_N_DL:
+    case HTML_N_BLQ:
+    case HTML_N_OL:
+    case HTML_N_UL:
+	feed_table_block_tag(tbl, line, mode, -1, cmd);
+	break;
+    case HTML_NOBR:
+    case HTML_WBR:
+	if (!(tbl->flag & TBL_IN_ROW))
+	    break;
+    case HTML_PRE_INT:
+	feed_table_inline_tag(tbl, line, mode, -1);
+	switch (cmd) {
+	case HTML_NOBR:
+	    mode->nobr_level++;
+	    if (mode->pre_mode & TBLM_NOBR)
+		return TAG_ACTION_NONE;
+	    mode->pre_mode |= TBLM_NOBR;
+	    break;
+	case HTML_PRE_INT:
+	    if (mode->pre_mode & TBLM_PRE_INT)
+		return TAG_ACTION_NONE;
+	    mode->pre_mode |= TBLM_PRE_INT;
+	    tbl->linfo.prev_spaces = 0;
+	    break;
+	}
+	mode->nobr_offset = -1;
+	if (tbl->linfo.length > 0) {
+	    check_minimum0(tbl, tbl->linfo.length);
+	    tbl->linfo.length = 0;
+	}
+	break;
+    case HTML_N_NOBR:
+	if (!(tbl->flag & TBL_IN_ROW))
+	    break;
+	feed_table_inline_tag(tbl, line, mode, -1);
+	if (mode->nobr_level > 0)
+	    mode->nobr_level--;
+	if (mode->nobr_level == 0)
+	    mode->pre_mode &= ~TBLM_NOBR;
+	break;
+    case HTML_N_PRE_INT:
+	feed_table_inline_tag(tbl, line, mode, -1);
+	mode->pre_mode &= ~TBLM_PRE_INT;
+	break;
+    case HTML_IMG:
+	check_rowcol(tbl, mode);
+	w = tbl->fixed_width[tbl->col];
+	if (w < 0) {
+	    if (tbl->total_width > 0)
+		w = -tbl->total_width * w / 100;
+	    else if (width > 0)
+		w = -width * w / 100;
+	    else
+		w = 0;
+	}
+	else if (w == 0) {
+	    if (tbl->total_width > 0)
+		w = tbl->total_width;
+	    else if (width > 0)
+		w = width;
+	}
+	tok = process_img(tag, w);
+	feed_table1(tbl, tok, mode, width);
+	break;
+    case HTML_FORM:
+	feed_table_block_tag(tbl, "", mode, 0, cmd);
+	tmp = process_form(tag);
+	if (tmp)
+	    feed_table1(tbl, tmp, mode, width);
+	break;
+    case HTML_N_FORM:
+	feed_table_block_tag(tbl, "", mode, 0, cmd);
+	process_n_form();
+	break;
+    case HTML_INPUT:
+	tmp = process_input(tag);
+	feed_table1(tbl, tmp, mode, width);
+	break;
+    case HTML_SELECT:
+	tmp = process_select(tag);
+	if (tmp)
+	    feed_table1(tbl, tmp, mode, width);
+	mode->pre_mode |= TBLM_INSELECT;
+	mode->end_tag = HTML_N_SELECT;
+	break;
+    case HTML_N_SELECT:
+    case HTML_OPTION:
+	/* nothing */
+	break;
+    case HTML_TEXTAREA:
+	w = 0;
+	check_rowcol(tbl, mode);
+	if (tbl->col + 1 <= tbl->maxcol &&
+	    tbl->tabattr[tbl->row][tbl->col + 1] & HTT_X) {
+	    if (cell->icell >= 0 && cell->fixed_width[cell->icell] > 0)
+		w = cell->fixed_width[cell->icell];
+	}
+	else {
+	    if (tbl->fixed_width[tbl->col] > 0)
+		w = tbl->fixed_width[tbl->col];
+	}
+	tmp = process_textarea(tag, w);
+	if (tmp)
+	    feed_table1(tbl, tmp, mode, width);
+	mode->pre_mode |= TBLM_INTXTA;
+	mode->end_tag = HTML_N_TEXTAREA;
+	break;
+    case HTML_A:
+	table_close_anchor0(tbl, mode);
+	anchor = NULL;
+	i = 0;
+	parsedtag_get_value(tag, ATTR_HREF, &anchor);
+	parsedtag_get_value(tag, ATTR_HSEQ, &i);
+	if (anchor) {
+	    check_rowcol(tbl, mode);
+	    if (i == 0) {
+		Str tmp = process_anchor(tag, line);
+    		if (displayLinkNumber)
+		{
+			Str t = getLinkNumberStr(-1);
+			feed_table_inline_tag(tbl, NULL, mode, t->length);
+			Strcat(tmp, t);
+		}
+		pushdata(tbl, tbl->row, tbl->col, tmp->ptr);
+	    }
+	    else
+		pushdata(tbl, tbl->row, tbl->col, line);
+	    if (i >= 0) {
+		mode->pre_mode |= TBLM_ANCHOR;
+		mode->anchor_offset = tbl->tabcontentssize;
+	    }
+	}
+	else
+	    suspend_or_pushdata(tbl, line);
+	break;
+    case HTML_DEL:
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    mode->pre_mode |= TBLM_DEL;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 5);	/* [DEL: */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
+	break;
+    case HTML_N_DEL:
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    mode->pre_mode &= ~TBLM_DEL;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 5);	/* :DEL] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
+	break;
+    case HTML_S:
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    mode->pre_mode |= TBLM_S;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 3);	/* [S: */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
+	break;
+    case HTML_N_S:
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    mode->pre_mode &= ~TBLM_S;
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 3);	/* :S] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
+	break;
+    case HTML_INS:
+    case HTML_N_INS:
+	switch (displayInsDel) {
+	case DISPLAY_INS_DEL_SIMPLE:
+	    break;
+	case DISPLAY_INS_DEL_NORMAL:
+	    feed_table_inline_tag(tbl, line, mode, 5);	/* [INS:, :INS] */
+	    break;
+	case DISPLAY_INS_DEL_FONTIFY:
+	    feed_table_inline_tag(tbl, line, mode, -1);
+	    break;
+	}
+	break;
+    case HTML_SUP:
+    case HTML_SUB:
+    case HTML_N_SUB:
+	if (!(mode->pre_mode & (TBLM_DEL | TBLM_S)))
+	    feed_table_inline_tag(tbl, line, mode, 1);	/* ^, [, ] */
+	break;
+    case HTML_N_SUP:
+	break;
+    case HTML_TABLE_ALT:
+	id = -1;
+	w = 0;
+	parsedtag_get_value(tag, ATTR_TID, &id);
+	if (id >= 0 && id < tbl->ntable) {
+	    struct table *tbl1 = tbl->tables[id].ptr;
+	    feed_table_block_tag(tbl, line, mode, 0, cmd);
+	    addcontentssize(tbl, maximum_table_width(tbl1));
+	    check_minimum0(tbl, tbl1->sloppy_width);
+#ifdef TABLE_EXPAND
+	    w = tbl1->total_width;
+	    v = 0;
+	    colspan = table_colspan(tbl, tbl->row, tbl->col);
+	    if (colspan > 1) {
+		if (cell->icell >= 0)
+		    v = cell->fixed_width[cell->icell];
+	    }
+	    else
+		v = tbl->fixed_width[tbl->col];
+	    if (v < 0 && tbl->real_width > 0 && tbl1->real_width > 0)
+		w = -(tbl1->real_width * 100) / tbl->real_width;
+	    else
+		w = tbl1->real_width;
+	    if (w > 0)
+		check_minimum0(tbl, w);
+	    else if (w < 0 && v < w) {
+		if (colspan > 1) {
+		    if (cell->icell >= 0)
+			cell->fixed_width[cell->icell] = w;
+		}
+		else
+		    tbl->fixed_width[tbl->col] = w;
+	    }
+#endif
+	    setwidth0(tbl, mode);
+	    clearcontentssize(tbl, mode);
+	}
+	break;
+    case HTML_CAPTION:
+	mode->caption = 1;
+	break;
+    case HTML_N_CAPTION:
+    case HTML_THEAD:
+    case HTML_N_THEAD:
+    case HTML_TBODY:
+    case HTML_N_TBODY:
+    case HTML_TFOOT:
+    case HTML_N_TFOOT:
+    case HTML_COLGROUP:
+    case HTML_N_COLGROUP:
+    case HTML_COL:
+	break;
+    case HTML_SCRIPT:
+	mode->pre_mode |= TBLM_SCRIPT;
+	mode->end_tag = HTML_N_SCRIPT;
+	break;
+    case HTML_STYLE:
+	mode->pre_mode |= TBLM_STYLE;
+	mode->end_tag = HTML_N_STYLE;
+	break;
+    case HTML_N_A:
+	table_close_anchor0(tbl, mode);
+    case HTML_FONT:
+    case HTML_N_FONT:
+    case HTML_NOP:
+	suspend_or_pushdata(tbl, line);
+	break;
+    case HTML_INTERNAL:
+    case HTML_N_INTERNAL:
+    case HTML_FORM_INT:
+    case HTML_N_FORM_INT:
+    case HTML_INPUT_ALT:
+    case HTML_N_INPUT_ALT:
+    case HTML_SELECT_INT:
+    case HTML_N_SELECT_INT:
+    case HTML_OPTION_INT:
+    case HTML_TEXTAREA_INT:
+    case HTML_N_TEXTAREA_INT:
+    case HTML_IMG_ALT:
+    case HTML_SYMBOL:
+    case HTML_N_SYMBOL:
+    default:
+	/* unknown tag: put into table */
+	return TAG_ACTION_FEED;
+    }
+    return TAG_ACTION_NONE;
+}
+
+
+int
+feed_table(struct table *tbl, char *line, struct table_mode *mode,
+	   int width, int internal)
+{
+    int i;
+    char *p;
+    Str tmp;
+    struct table_linfo *linfo = &tbl->linfo;
+
+    if (*line == '<' && line[1] && REALLY_THE_BEGINNING_OF_A_TAG(line)) {
+	struct parsed_tag *tag;
+	p = line;
+	tag = parse_tag(&p, internal);
+	if (tag) {
+	    switch (feed_table_tag(tbl, line, mode, width, tag)) {
+	    case TAG_ACTION_NONE:
+		return -1;
+	    case TAG_ACTION_N_TABLE:
+		return 0;
+	    case TAG_ACTION_TABLE:
+		return 1;
+	    case TAG_ACTION_PLAIN:
+		break;
+	    case TAG_ACTION_FEED:
+	    default:
+		if (parsedtag_need_reconstruct(tag))
+		    line = parsedtag2str(tag)->ptr;
+	    }
+	}
+	else {
+	    if (!(mode->pre_mode & (TBLM_PLAIN | TBLM_INTXTA | TBLM_INSELECT |
+				    TBLM_SCRIPT | TBLM_STYLE)))
+		return -1;
+	}
+    }
+    else {
+	if (mode->pre_mode & (TBLM_DEL | TBLM_S))
+	    return -1;
+    }
+    if (mode->caption) {
+	Strcat_charp(tbl->caption, line);
+	return -1;
+    }
+    if (mode->pre_mode & TBLM_SCRIPT)
+	return -1;
+    if (mode->pre_mode & TBLM_STYLE)
+	return -1;
+    if (mode->pre_mode & TBLM_INTXTA) {
+	feed_textarea(line);
+	return -1;
+    }
+    if (mode->pre_mode & TBLM_INSELECT) {
+	feed_select(line);
+	return -1;
+    }
+    if (!(mode->pre_mode & TBLM_PLAIN) &&
+	!(*line == '<' && line[strlen(line) - 1] == '>') &&
+	strchr(line, '&') != NULL) {
+	tmp = Strnew();
+	for (p = line; *p;) {
+	    char *q, *r;
+	    if (*p == '&') {
+		if (!strncasecmp(p, "&amp;", 5) ||
+		    !strncasecmp(p, "&gt;", 4) || !strncasecmp(p, "&lt;", 4)) {
+		    /* do not convert */
+		    Strcat_char(tmp, *p);
+		    p++;
+		}
+		else {
+		    int ec;
+		    q = p;
+		    switch (ec = getescapechar(&p)) {
+		    case '<':
+			Strcat_charp(tmp, "&lt;");
+			break;
+		    case '>':
+			Strcat_charp(tmp, "&gt;");
+			break;
+		    case '&':
+			Strcat_charp(tmp, "&amp;");
+			break;
+		    case '\r':
+			Strcat_char(tmp, '\n');
+			break;
+		    default:
+			r = conv_entity(ec);
+			if (r != NULL && strlen(r) == 1 &&
+			    ec == (unsigned char)*r) {
+			    Strcat_char(tmp, *r);
+			    break;
+			}
+		    case -1:
+			Strcat_char(tmp, *q);
+			p = q + 1;
+			break;
+		    }
+		}
+	    }
+	    else {
+		Strcat_char(tmp, *p);
+		p++;
+	    }
+	}
+	line = tmp->ptr;
+    }
+    if (!(mode->pre_mode & (TBLM_SPECIAL & ~TBLM_NOBR))) {
+	if (!(tbl->flag & TBL_IN_COL) || linfo->prev_spaces != 0)
+	    while (IS_SPACE(*line))
+		line++;
+	if (*line == '\0')
+	    return -1;
+	check_rowcol(tbl, mode);
+	if (mode->pre_mode & TBLM_NOBR && mode->nobr_offset < 0)
+	    mode->nobr_offset = tbl->tabcontentssize;
+
+	/* count of number of spaces skipped in normal mode */
+	i = skip_space(tbl, line, linfo, !(mode->pre_mode & TBLM_NOBR));
+	addcontentssize(tbl, visible_length(line) - i);
+	setwidth(tbl, mode);
+	pushdata(tbl, tbl->row, tbl->col, line);
+    }
+    else if (mode->pre_mode & TBLM_PRE_INT) {
+	check_rowcol(tbl, mode);
+	if (mode->nobr_offset < 0)
+	    mode->nobr_offset = tbl->tabcontentssize;
+	addcontentssize(tbl, maximum_visible_length(line, tbl->tabcontentssize));
+	setwidth(tbl, mode);
+	pushdata(tbl, tbl->row, tbl->col, line);
+    }
+    else {
+	/* <pre> mode or something like it */
+	check_rowcol(tbl, mode);
+	while (*line) {
+	    int nl = FALSE;
+	    if ((p = strchr(line, '\r')) || (p = strchr(line, '\n'))) {
+		if (*p == '\r' && p[1] == '\n')
+		    p++;
+		if (p[1]) {
+		    p++;
+		    tmp = Strnew_charp_n(line, p - line);
+		    line = p;
+		    p = tmp->ptr;
+		}
+		else {
+		    p = line;
+		    line = "";
+		}
+		nl = TRUE;
+	    }
+	    else {
+		p = line;
+		line = "";
+	    }
+	    if (mode->pre_mode & TBLM_PLAIN)
+		i = maximum_visible_length_plain(p, tbl->tabcontentssize);
+	    else
+		i = maximum_visible_length(p, tbl->tabcontentssize);
+	    addcontentssize(tbl, i);
+	    setwidth(tbl, mode);
+	    if (nl)
+		clearcontentssize(tbl, mode);
+	    pushdata(tbl, tbl->row, tbl->col, p);
+	}
+    }
+    return -1;
+}
+
+void
+feed_table1(struct table *tbl, Str tok, struct table_mode *mode, int width)
+{
+    Str tokbuf;
+    int status;
+    char *line;
+    if (!tok)
+	return;
+    tokbuf = Strnew();
+    status = R_ST_NORMAL;
+    line = tok->ptr;
+    while (read_token
+	   (tokbuf, &line, &status, mode->pre_mode & TBLM_PREMODE, 0))
+	feed_table(tbl, tokbuf->ptr, mode, width, TRUE);
+}
+
+void
+pushTable(struct table *tbl, struct table *tbl1)
+{
+    int col;
+    int row;
+
+    col = tbl->col;
+    row = tbl->row;
+
+    if (tbl->ntable >= tbl->tables_size) {
+	struct table_in *tmp;
+	tbl->tables_size += MAX_TABLE_N;
+	tmp = New_N(struct table_in, tbl->tables_size);
+	if (tbl->tables)
+	    bcopy(tbl->tables, tmp, tbl->ntable * sizeof(struct table_in));
+	tbl->tables = tmp;
+    }
+
+    tbl->tables[tbl->ntable].ptr = tbl1;
+    tbl->tables[tbl->ntable].col = col;
+    tbl->tables[tbl->ntable].row = row;
+    tbl->tables[tbl->ntable].indent = tbl->indent;
+    tbl->tables[tbl->ntable].buf = newTextLineList();
+    check_row(tbl, row);
+    if (col + 1 <= tbl->maxcol && tbl->tabattr[row][col + 1] & HTT_X)
+	tbl->tables[tbl->ntable].cell = tbl->cell.icell;
+    else
+	tbl->tables[tbl->ntable].cell = -1;
+    tbl->ntable++;
+}
+
+#ifdef MATRIX
+int
+correct_table_matrix(struct table *t, int col, int cspan, int a, double b)
+{
+    int i, j;
+    int ecol = col + cspan;
+    double w = 1. / (b * b);
+
+    for (i = col; i < ecol; i++) {
+	v_add_val(t->vector, i, w * a);
+	for (j = i; j < ecol; j++) {
+	    m_add_val(t->matrix, i, j, w);
+	    m_set_val(t->matrix, j, i, m_entry(t->matrix, i, j));
+	}
+    }
+    return i;
+}
+
+static void
+correct_table_matrix2(struct table *t, int col, int cspan, double s, double b)
+{
+    int i, j;
+    int ecol = col + cspan;
+    int size = t->maxcol + 1;
+    double w = 1. / (b * b);
+    double ss;
+
+    for (i = 0; i < size; i++) {
+	for (j = i; j < size; j++) {
+	    if (i >= col && i < ecol && j >= col && j < ecol)
+		ss = (1. - s) * (1. - s);
+	    else if ((i >= col && i < ecol) || (j >= col && j < ecol))
+		ss = -(1. - s) * s;
+	    else
+		ss = s * s;
+	    m_add_val(t->matrix, i, j, w * ss);
+	}
+    }
+}
+
+static void
+correct_table_matrix3(struct table *t, int col, char *flags, double s,
+		      double b)
+{
+    int i, j;
+    double ss;
+    int size = t->maxcol + 1;
+    double w = 1. / (b * b);
+    int flg = (flags[col] == 0);
+
+    for (i = 0; i < size; i++) {
+	if (!((flg && flags[i] == 0) || (!flg && flags[i] != 0)))
+	    continue;
+	for (j = i; j < size; j++) {
+	    if (!((flg && flags[j] == 0) || (!flg && flags[j] != 0)))
+		continue;
+	    if (i == col && j == col)
+		ss = (1. - s) * (1. - s);
+	    else if (i == col || j == col)
+		ss = -(1. - s) * s;
+	    else
+		ss = s * s;
+	    m_add_val(t->matrix, i, j, w * ss);
+	}
+    }
+}
+
+static void
+correct_table_matrix4(struct table *t, int col, int cspan, char *flags,
+		      double s, double b)
+{
+    int i, j;
+    double ss;
+    int ecol = col + cspan;
+    int size = t->maxcol + 1;
+    double w = 1. / (b * b);
+
+    for (i = 0; i < size; i++) {
+	if (flags[i] && !(i >= col && i < ecol))
+	    continue;
+	for (j = i; j < size; j++) {
+	    if (flags[j] && !(j >= col && j < ecol))
+		continue;
+	    if (i >= col && i < ecol && j >= col && j < ecol)
+		ss = (1. - s) * (1. - s);
+	    else if ((i >= col && i < ecol) || (j >= col && j < ecol))
+		ss = -(1. - s) * s;
+	    else
+		ss = s * s;
+	    m_add_val(t->matrix, i, j, w * ss);
+	}
+    }
+}
+
+static void
+set_table_matrix0(struct table *t, int maxwidth)
+{
+    int size = t->maxcol + 1;
+    int i, j, k, bcol, ecol;
+    int width;
+    double w0, w1, w, s, b;
+#ifdef __GNUC__
+    double we[size];
+    char expand[size];
+#else				/* not __GNUC__ */
+    double we[MAXCOL];
+    char expand[MAXCOL];
+#endif				/* not __GNUC__ */
+    struct table_cell *cell = &t->cell;
+
+    w0 = 0.;
+    for (i = 0; i < size; i++) {
+	we[i] = weight(t->tabwidth[i]);
+	w0 += we[i];
+    }
+    if (w0 <= 0.)
+	w0 = 1.;
+
+    if (cell->necell == 0) {
+	for (i = 0; i < size; i++) {
+	    s = we[i] / w0;
+	    b = sigma_td_nw((int)(s * maxwidth));
+	    correct_table_matrix2(t, i, 1, s, b);
+	}
+	return;
+    }
+
+    bzero(expand, size);
+
+    for (k = 0; k < cell->necell; k++) {
+	j = cell->eindex[k];
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+	width = cell->width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	w1 = 0.;
+	for (i = bcol; i < ecol; i++) {
+	    w1 += t->tabwidth[i] + 0.1;
+	    expand[i]++;
+	}
+	for (i = bcol; i < ecol; i++) {
+	    w = weight(width * (t->tabwidth[i] + 0.1) / w1);
+	    if (w > we[i])
+		we[i] = w;
+	}
+    }
+
+    w0 = 0.;
+    w1 = 0.;
+    for (i = 0; i < size; i++) {
+	w0 += we[i];
+	if (expand[i] == 0)
+	    w1 += we[i];
+    }
+    if (w0 <= 0.)
+	w0 = 1.;
+
+    for (k = 0; k < cell->necell; k++) {
+	j = cell->eindex[k];
+	bcol = cell->col[j];
+	width = cell->width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	w = weight(width);
+	s = w / (w1 + w);
+	b = sigma_td_nw((int)(s * maxwidth));
+	correct_table_matrix4(t, bcol, cell->colspan[j], expand, s, b);
+    }
+
+    for (i = 0; i < size; i++) {
+	if (expand[i] == 0) {
+	    s = we[i] / max(w1, 1.);
+	    b = sigma_td_nw((int)(s * maxwidth));
+	}
+	else {
+	    s = we[i] / max(w0 - w1, 1.);
+	    b = sigma_td_nw(maxwidth);
+	}
+	correct_table_matrix3(t, i, expand, s, b);
+    }
+}
+
+void
+check_relative_width(struct table *t, int maxwidth)
+{
+    int i;
+    double rel_total = 0;
+    int size = t->maxcol + 1;
+    double *rcolwidth = New_N(double, size);
+    struct table_cell *cell = &t->cell;
+    int n_leftcol = 0;
+
+    for (i = 0; i < size; i++)
+	rcolwidth[i] = 0;
+
+    for (i = 0; i < size; i++) {
+	if (t->fixed_width[i] < 0)
+	    rcolwidth[i] = -(double)t->fixed_width[i] / 100.0;
+	else if (t->fixed_width[i] > 0)
+	    rcolwidth[i] = (double)t->fixed_width[i] / maxwidth;
+	else
+	    n_leftcol++;
+    }
+    for (i = 0; i <= cell->maxcell; i++) {
+	if (cell->fixed_width[i] < 0) {
+	    double w = -(double)cell->fixed_width[i] / 100.0;
+	    double r;
+	    int j, k;
+	    int n_leftcell = 0;
+	    k = cell->col[i];
+	    r = 0.0;
+	    for (j = 0; j < cell->colspan[i]; j++) {
+		if (rcolwidth[j + k] > 0)
+		    r += rcolwidth[j + k];
+		else
+		    n_leftcell++;
+	    }
+	    if (n_leftcell == 0) {
+		/* w must be identical to r */
+		if (w != r)
+		    cell->fixed_width[i] = -100 * r;
+	    }
+	    else {
+		if (w <= r) {
+		    /* make room for the left(width-unspecified) cell */
+		    /* the next formula is an estimation of required width */
+		    w = r * cell->colspan[i] / (cell->colspan[i] - n_leftcell);
+		    cell->fixed_width[i] = -100 * w;
+		}
+		for (j = 0; j < cell->colspan[i]; j++) {
+		    if (rcolwidth[j + k] == 0)
+			rcolwidth[j + k] = (w - r) / n_leftcell;
+		}
+	    }
+	}
+	else if (cell->fixed_width[i] > 0) {
+	    /* todo */
+	}
+    }
+    /* sanity check */
+    for (i = 0; i < size; i++)
+	rel_total += rcolwidth[i];
+
+    if ((n_leftcol == 0 && rel_total < 0.9) || 1.1 < rel_total) {
+	for (i = 0; i < size; i++) {
+	    rcolwidth[i] /= rel_total;
+	}
+	for (i = 0; i < size; i++) {
+	    if (t->fixed_width[i] < 0)
+		t->fixed_width[i] = -rcolwidth[i] * 100;
+	}
+	for (i = 0; i <= cell->maxcell; i++) {
+	    if (cell->fixed_width[i] < 0) {
+		double r;
+		int j, k;
+		k = cell->col[i];
+		r = 0.0;
+		for (j = 0; j < cell->colspan[i]; j++)
+		    r += rcolwidth[j + k];
+		cell->fixed_width[i] = -r * 100;
+	    }
+	}
+    }
+}
+
+void
+set_table_matrix(struct table *t, int width)
+{
+    int size = t->maxcol + 1;
+    int i, j;
+    double b, s;
+    int a;
+    struct table_cell *cell = &t->cell;
+
+    if (size < 1)
+	return;
+
+    t->matrix = m_get(size, size);
+    t->vector = v_get(size);
+    for (i = 0; i < size; i++) {
+	for (j = i; j < size; j++)
+	    m_set_val(t->matrix, i, j, 0.);
+	v_set_val(t->vector, i, 0.);
+    }
+
+    check_relative_width(t, width);
+
+    for (i = 0; i < size; i++) {
+	if (t->fixed_width[i] > 0) {
+	    a = max(t->fixed_width[i], t->minimum_width[i]);
+	    b = sigma_td(a);
+	    correct_table_matrix(t, i, 1, a, b);
+	}
+	else if (t->fixed_width[i] < 0) {
+	    s = -(double)t->fixed_width[i] / 100.;
+	    b = sigma_td((int)(s * width));
+	    correct_table_matrix2(t, i, 1, s, b);
+	}
+    }
+
+    for (j = 0; j <= cell->maxcell; j++) {
+	if (cell->fixed_width[j] > 0) {
+	    a = max(cell->fixed_width[j], cell->minimum_width[j]);
+	    b = sigma_td(a);
+	    correct_table_matrix(t, cell->col[j], cell->colspan[j], a, b);
+	}
+	else if (cell->fixed_width[j] < 0) {
+	    s = -(double)cell->fixed_width[j] / 100.;
+	    b = sigma_td((int)(s * width));
+	    correct_table_matrix2(t, cell->col[j], cell->colspan[j], s, b);
+	}
+    }
+
+    set_table_matrix0(t, width);
+
+    if (t->total_width > 0) {
+	b = sigma_table(width);
+    }
+    else {
+	b = sigma_table_nw(width);
+    }
+    correct_table_matrix(t, 0, size, width, b);
+}
+#endif				/* MATRIX */
+
+/* Local Variables:    */
+/* c-basic-offset: 4   */
+/* tab-width: 8        */
+/* End:                */
+@
+
+
+1.57
+log
+@https://bugs.launchpad.net/ubuntu/+source/w3m/+bug/131993
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.56 2010/07/19 23:34:01 htrb Exp $ */
+d2597 3
+a2599 5
+        if(rowspan > ATTR_ROWSPAN_MAX)
+        {
+            fprintf(stderr, "  Table Rowspan too large. Limiting to %d.\n", ATTR_ROWSPAN_MAX);
+            rowspan = ATTR_ROWSPAN_MAX;
+        }
+@
+
+
+1.56
+log
+@* [w3m-dev 04321] Re: w3m's bugs from bugs.debian.org
+* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329862#20
+* table.c (feed_table_tag): check displayLinkNumber.
+* proto.h: add getLinkNumberStr().
+* main.c (do_dump): check displayLinkNumber.
+* fm.h: add global variable displayLinkNumber.
+* file.c
+(getLinkNumberStr): added.
+(process_input, process_select, HTMLtagproc1): check displayLinkNumber.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.55 2007/05/23 13:07:44 inu Exp $ */
+d2411 2
+d2597 5
+@
+
+
+1.55
+log
+@[w3m-dev 04236] expand display_ins_del to select a type of fontify.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.54 2007/05/23 12:26:56 inu Exp $ */
+d2915 6
+@
+
+
+1.54
+log
+@[w3m-dev 03923] avoid extra blanks in pre in table.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.53 2006/04/08 11:52:02 inu Exp $ */
+d2928 5
+a2932 1
+	if (displayInsDel)
+d2934 5
+a2938 2
+	else
+	    mode->pre_mode |= TBLM_DEL;
+d2941 5
+a2945 1
+	if (displayInsDel)
+d2947 5
+a2951 2
+	else
+	    mode->pre_mode &= ~TBLM_DEL;
+d2954 5
+a2958 1
+	if (displayInsDel)
+d2960 5
+a2964 2
+	else
+	    mode->pre_mode |= TBLM_S;
+d2967 5
+a2971 1
+	if (displayInsDel)
+d2973 5
+a2977 2
+	else
+	    mode->pre_mode &= ~TBLM_S;
+d2981 4
+a2984 1
+	if (displayInsDel)
+d2986 5
+@
+
+
+1.53
+log
+@close textarea when table related tags are found.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.52 2006/04/07 13:35:35 inu Exp $ */
+d540 2
+a541 2
+int
+maximum_visible_length(char *str)
+d543 2
+a544 17
+    int maxlen, len;
+
+    visible_length_offset = 0;
+    maxlen = visible_length(str);
+
+    if (!strchr(str, '\t'))
+	return maxlen;
+
+    for (visible_length_offset = 1; visible_length_offset < Tabstop;
+	 visible_length_offset++) {
+	len = visible_length(str);
+	if (maxlen < len) {
+	    maxlen = len;
+	    break;
+	}
+    }
+    return maxlen;
+d547 2
+a548 2
+int
+maximum_visible_length_plain(char *str)
+d550 2
+a551 17
+    int maxlen, len;
+
+    visible_length_offset = 0;
+    maxlen = visible_length_plain(str);
+
+    if (!strchr(str, '\t'))
+	return maxlen;
+
+    for (visible_length_offset = 1; visible_length_offset < Tabstop;
+	 visible_length_offset++) {
+	len = visible_length_plain(str);
+	if (maxlen < len) {
+	    maxlen = len;
+	    break;
+	}
+    }
+    return maxlen;
+d3178 1
+a3178 1
+	addcontentssize(tbl, maximum_visible_length(line));
+d3207 1
+a3207 1
+		i = maximum_visible_length_plain(p);
+d3209 1
+a3209 1
+		i = maximum_visible_length(p);
+@
+
+
+1.52
+log
+@Use Strnew_charp(" ") instead of the wrong Strnew(" ").
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.51 2006/04/07 13:21:12 inu Exp $ */
+d2468 3
+a2470 1
+	if (mode->end_tag == cmd) {
+d2472 5
+a2476 1
+	    return TAG_ACTION_NONE;
+a2477 1
+	return TAG_ACTION_FEED;
+@
+
+
+1.51
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.49 2004/01/09 15:46:49 ukai Exp $ */
+d1987 1
+a1987 1
+	renderbuf = Strnew(" ");
+@
+
+
+1.50
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d1987 1
+a1987 1
+	renderbuf = Strnew_charp(" ");
+d2468 1
+a2468 3
+	switch (cmd) {
+	CASE_TABLE_TAG:
+	case HTML_N_TEXTAREA:
+d2470 1
+a2470 5
+	    if (cmd == HTML_N_TEXTAREA)
+		return TAG_ACTION_NONE;
+	    break;
+	default:
+	    return TAG_ACTION_FEED;
+d2472 1
+@
+
+
+1.49
+log
+@[w3m-dev 04030] PUSH_TAG macro
+* table.c (PUSH_TAG): fixed problem in --disable-m17n
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.48 2003/09/24 18:49:00 ukai Exp $ */
+d1987 1
+a1987 1
+	renderbuf = Strnew(" ");
+d2468 3
+a2470 1
+	if (mode->end_tag == cmd) {
+d2472 5
+a2476 1
+	    return TAG_ACTION_NONE;
+a2477 1
+	return TAG_ACTION_FEED;
+@
+
+
+1.48
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.47 2003/09/22 21:02:21 ukai Exp $ */
+d415 1
+a415 1
+#ifndef USE_M17N
+@
+
+
+1.47
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.46 2003/07/13 16:13:29 ukai Exp $ */
+d2493 2
+a2494 2
+    switch (cmd) {
+      CASE_TABLE_TAG:
+d2511 1
+a2511 1
+	    return TAG_ACTION_NONE;
+d3104 2
+a3105 2
+		line = parsedtag2str(tag)->ptr;
+	}
+d3231 1
+a3231 1
+	if (mode->pre_mode & TBLM_PLAIN)
+d3233 1
+a3233 1
+	else
+d3235 2
+a3236 2
+	addcontentssize(tbl, i);
+	setwidth(tbl, mode);
+@
+
+
+1.46
+log
+@[w3m-dev 03937] <center> in <table>
+* table.c (feed_table_tag): fix <center>,</center>,<div>,</div>,
+			<p>,<br>,<nobr>,</nobr>,<wbr>
+		check_rowcol() for <img>
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.45 2003/05/14 16:02:41 ukai Exp $ */
+d15 2
+a16 19
+#ifdef KANJI_SYMBOLS
+static char *rule[] =
+    { "ил", "из", "ии", "иг", "ий", "ив", "ид", "07", "ик", "иж", "иб", "0B",
+    "ие", "0D", "0E", "  "
+};
+static char *ruleB[] =
+    { "00", "и╖", "и╕", "ио", "и╣", "ин", "ип", "07", "и║", "и▒", "им", "0B",
+    "и░", "0D", "0E", "  "
+};
+#define TN_VERTICALBAR "ив"
+#define HORIZONTALBAR "им"
+#define RULE_WIDTH 2
+#else				/* not KANJI_SYMBOLS */
+char alt_rule[] = {
+    '+', '|', '-', '+', '|', '|', '+', ' ', '-', '+', '-', ' ', '+', ' ', ' ',
+    ' '
+};
+#if defined(__EMX__)&&!defined(JP_CHARSET)
+extern int CodePage;
+d18 3
+a20 42
+static char *_rule[] =
+#else
+static char *rule[] =
+#endif
+{
+    "<_RULE TYPE=0>+</_RULE>",
+    "<_RULE TYPE=1>|</_RULE>",
+    "<_RULE TYPE=2>-</_RULE>",
+    "<_RULE TYPE=3>+</_RULE>",
+    "<_RULE TYPE=4>|</_RULE>",
+    "<_RULE TYPE=5>|</_RULE>",
+    "<_RULE TYPE=6>+</_RULE>",
+    "<_RULE TYPE=7> </_RULE>",
+    "<_RULE TYPE=8>-</_RULE>",
+    "<_RULE TYPE=9>+</_RULE>",
+    "<_RULE TYPE=10>-</_RULE>",
+    "<_RULE TYPE=11> </_RULE>",
+    "<_RULE TYPE=12>+</_RULE>",
+    "<_RULE TYPE=13> </_RULE>",
+    "<_RULE TYPE=14> </_RULE>",
+    "<_RULE TYPE=15> </_RULE>"
+};
+#if defined(__EMX__)&&!defined(JP_CHARSET)
+static char **ruleB = _rule, **rule = _rule;
+static char *rule850[] = {
+    "\305", "\303", "\302", "\332", "\264", "\263", "\277", "07",
+    "\301", "\300", "\304", "0B", "\331", "0D", "0E", " "
+};
+static char *ruleB850[] = {
+    "\316", "\314", "\313", "\311" "\271", "\272", "\273", "07",
+    "\312", "\310", "\315", "0B", "\274", "0D", "0E", " "
+};
+#else				/* not __EMX__ or JP_CHARSET */
+static char **ruleB = rule;
+#endif				/* not __EMX__ or JP_CHARSET */
+
+#define TN_VERTICALBAR "<_RULE TYPE=5>|</_RULE>"
+#define RULE_WIDTH 1
+#endif				/* not KANJI_SYMBOLS */
+
+#define RULE(mode) (((mode)==BORDER_THICK)?ruleB:rule)
+#define TK_VERTICALBAR(mode) (RULE(mode)[5])
+d54 3
+a314 1
+    t->linfo.prevchar = ' ';
+d316 2
+d415 6
+d425 1
+a425 1
+    int len = 0, max_len = 0;
+d435 12
+a446 1
+	len += next_status(*str, &status);
+d449 1
+a449 1
+	    Strcat_char(tagbuf, *str);
+d454 1
+a454 1
+	    Strcat_char(tagbuf, *str);
+d463 1
+a463 1
+		Strcat_char(tagbuf, *str);
+d468 1
+a468 1
+	    Strcat_char(tagbuf, *str);
+d477 1
+a477 1
+		len += strlen(t) + strlen(r2);
+d494 3
+d498 1
+d504 1
+a504 1
+	    len += strlen(t) + strlen(r2);
+d519 1
+d525 1
+d527 5
+a531 1
+	else
+d533 3
+a535 1
+	str++;
+d665 2
+a666 2
+    char **rulep;
+    int i, j, k, l, m;
+a667 6
+#if defined(__EMX__)&&!defined(JP_CHARSET)
+    if (CodePage == 850) {
+	ruleB = ruleB850;
+	rule = rule850;
+    }
+#endif
+d672 1
+a672 1
+	rulep = ruleB;
+d675 1
+a675 1
+	rulep = rule;
+d685 3
+a687 2
+    if (t->border_mode != BORDER_NOWIN)
+	Strcat_charp(buf, RULE(t->border_mode)[forbid]);
+d706 4
+a709 4
+	    for (j = 0; j < t->tabwidth[i] + 2 * t->cellpadding;
+		 j += RULE_WIDTH) {
+		Strcat_charp(buf, rulep[forbid]);
+	    }
+d733 1
+a733 1
+		Strcat_charp(buf, rulep[forbid]);
+d745 1
+a745 1
+	Strcat_charp(buf, RULE(t->border_mode)[forbid]);
+d1906 1
+a1906 1
+	Strcat_charp(vrulea, TK_VERTICALBAR(t->border_mode));
+d1912 1
+a1912 1
+	Strcat_charp(vrulec, TK_VERTICALBAR(t->border_mode));
+d1914 1
+a1914 5
+#if defined(__EMX__)&&!defined(JP_CHARSET)
+	Strcat_charp(vruleb, CodePage == 850 ? "\263" : TN_VERTICALBAR);
+#else
+	Strcat_charp(vruleb, TN_VERTICALBAR);
+#endif
+d2195 1
+a2195 1
+    t->linfo.prevchar = ' ';
+d2262 1
+a2262 1
+    int prevchar = linfo->prevchar;
+d2273 2
+a2274 2
+	char *save = line;
+	int ec = '\0', len, wlen, c;
+d2276 3
+a2278 2
+	wlen = len = get_mclen(ctype);
+	c = mctowc(line, ctype);
+d2281 1
+a2281 1
+	if (ctype == PC_ASCII && IS_SPACE(c)) {
+d2286 1
+a2286 1
+	    if (c == '&') {
+d2289 3
+a2291 3
+		    c = ec;
+		    ctype = IS_CNTRL(ec) ? PC_CTRL : PC_ASCII;
+		    len = strlen(conv_entity(ec));
+d2293 1
+d2296 2
+a2297 1
+	    if (prevchar && is_boundary(prevchar, c)) {
+d2304 2
+a2305 2
+#ifdef JP_CHARSET
+		if (ctype == PC_KANJI && prev_ctype == PC_KANJI)
+d2308 1
+a2308 1
+#endif				/* JP_CHARSET */
+d2314 1
+a2314 1
+	prevchar = c;
+d2493 2
+a2494 2
+	switch (cmd) {
+	  CASE_TABLE_TAG:
+d2511 1
+a2511 1
+		return TAG_ACTION_NONE;
+d3068 2
+a3069 2
+    case HTML_RULE:
+    case HTML_N_RULE:
+d3104 2
+a3105 2
+		    line = parsedtag2str(tag)->ptr;
+	    }
+d3231 1
+a3231 1
+	    if (mode->pre_mode & TBLM_PLAIN)
+d3233 1
+a3233 1
+	    else
+d3235 2
+a3236 2
+	    addcontentssize(tbl, i);
+	    setwidth(tbl, mode);
+@
+
+
+1.45
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.44 2003/05/14 16:01:32 ukai Exp $ */
+a2801 2
+    case HTML_DT:
+    case HTML_DD:
+d2806 4
+a2856 1
+    case HTML_PRE_INT:
+d2859 3
+d2884 2
+d2897 1
+@
+
+
+1.44
+log
+@[w3m-dev 03902] Re: table rendering
+* table.c (check_relative_width): check n_leftcell
+			check w <= r
+From: Akinori Ito <aito@@fw.ipsj.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.43 2003/05/13 17:20:33 ukai Exp $ */
+d3531 1
+a3531 1
+		    cell->fixed_width[i] = -100*r;
+d3537 2
+a3538 2
+		    w = r*cell->colspan[i]/(cell->colspan[i]-n_leftcell);
+		    cell->fixed_width[i] = -100*w;
+@
+
+
+1.43
+log
+@[w3m-dev 03900] Re: table rendering
+* table.c (check_relative_width): j loop starts from 0
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.42 2003/05/13 17:09:58 ukai Exp $ */
+d3528 4
+a3531 2
+	    if (w < r || (w == r && n_leftcell > 0)) {
+		cell->fixed_width[i] = -100 * r;
+d3534 6
+@
+
+
+1.42
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.41 2003/05/13 17:08:20 ukai Exp $ */
+d3522 1
+a3522 1
+	    for (j = 1; j < cell->colspan[i]; j++) {
+d3532 1
+a3532 1
+		for (j = 1; j < cell->colspan[i]; j++) {
+d3560 1
+a3560 1
+		for (j = 1; j < cell->colspan[i]; j++)
+@
+
+
+1.41
+log
+@[w3m-dev 03898] Re: table rendering
+* table.c (check_relative_width): added
+	(set_table_matrix): use check_relative_width
+From: Akinori Ito <aito@@fw.ipsj.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.40 2003/02/20 15:39:22 ukai Exp $ */
+d3494 1
+a3494 1
+check_relative_width(struct table *t,int maxwidth)
+d3498 2
+a3499 2
+    int size = t->maxcol+1;
+    double *rcolwidth = New_N(double,size);
+d3508 1
+a3508 1
+	    rcolwidth[i] = -(double)t->fixed_width[i]/100.0;
+d3510 1
+a3510 1
+	    rcolwidth[i] = (double)t->fixed_width[i]/maxwidth;
+d3516 1
+a3516 1
+	    double w = -(double)cell->fixed_width[i]/100.0;
+d3518 1
+a3518 1
+	    int j,k;
+d3523 2
+a3524 2
+		if (rcolwidth[j+k] > 0)
+		    r += rcolwidth[j+k];
+d3529 1
+a3529 1
+		cell->fixed_width[i] = -100*r;
+d3533 2
+a3534 2
+		    if (rcolwidth[j+k] == 0)
+			 rcolwidth[j+k] = (w-r)/n_leftcell;
+d3552 1
+a3552 1
+		t->fixed_width[i] = -rcolwidth[i]*100;
+d3557 1
+a3557 1
+		int j,k;
+d3561 2
+a3562 2
+		    r += rcolwidth[j+k];
+		cell->fixed_width[i] = -r*100;
+d3588 1
+a3588 1
+    check_relative_width(t,width);
+@
+
+
+1.40
+log
+@[w3m-dev 03761] eliminate compiler warnings
+* ftp.c (ftp_login): Str tmp
+* table.c (feed_table_tag): p is used ifdef ID_EXT
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.39 2003/01/23 18:01:08 ukai Exp $ */
+d3494 75
+d3587 2
+@
+
+
+1.39
+log
+@* etc.c (next_status): after = is R_ST_VALUE
+		R_ST_VALUE > => R_ST_NORMAL
+		R_ST_VALUE SP => R_ST_TAG
+	(read_token): R_ST_VALUE
+	(correct_irrtag): R_ST_VALUE
+* rm.h (R_ST_VALUE): added
+	(ST_IS_REAL_TAG): rewrite
+	(ST_IS_COMMENT): deleted
+	(ST_IS_TAG): deleted
+* parsetagx.c (parse_tag): skip too long tagname
+			skip too long attrname
+			if attrvalue has quote char, need reconstruct
+			if unknown attr, need reconstruct
+* table.c (visible_length): R_ST_VALUE
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.38 2003/01/20 15:30:21 ukai Exp $ */
+d2475 1
+d2477 1
+@
+
+
+1.38
+log
+@[w3m-dev 03660] Re: fputs -> Strfputs
+* Str.h (Strncmp_charp): paren
+	(Strncasecmp_charp): ditto
+	(Strinsert): ditto
+	(Strshrinkfirst): ditto
+* display.c (disp_err_message): added
+* file.c (loadGeneralFile): don't put function in macro arg
+	(saveBuffer): ditto
+* frame.c (createFrameFile): ditto
+* proto.h (disp_err_message): macro->function
+* table.c (pushdata): if data is NULL, use ""
+	(suspend_or_pushdata): if line is NULL, use ""
+* textlist.h (pushText): don't use (s) twice in a macro
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.37 2002/12/17 16:17:30 ukai Exp $ */
+d487 2
+a488 1
+		 || status == R_ST_QUOTE || status == R_ST_EQL) {
+@
+
+
+1.37
+log
+@[w3m-dev 03577] incorrect table width
+* table.c (dv2sv): fix move direction
+	(set_integered_width): ditto
+	(check_table_height): ditto
+	(feed_table_tag): ditto
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.36 2002/12/06 16:50:41 ukai Exp $ */
+d452 1
+a452 1
+    pushText(t->tabdata[row][col], data);
+d463 1
+a463 1
+	pushText(tbl->suspended_data, line);
+@
+
+
+1.36
+log
+@[w3m-dev 03536] <del>, <s>
+* file.c (HTMLtagproc1): <s>..</s> is [S:...:S]
+	(HTMLtagproc0): <del> will delete <table>
+* fm.h (RB_S): added
+* html.c (TagMAP): <s>,</s>
+		move <internal>, </internal>
+* html.h (HTML_S): added
+	(HTML_N_S): added
+	(HTML_INTERNAL): renumed
+	(HTML_N_INTERNAL): ditto
+	(MAX_HTMLTAG): add 2
+* rc.c (CMT_DISP_INS_DEL): update
+* table.c (feed_table_tag): add HTML_S, HTML_N_S
+* table.h (TBLM_S): added
+	(TBLM_ANCHOR): renum
+* tagtable.tab: (strike, s): HTML_S
+	(/strike, /s): HTML_N_S
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.35 2002/12/04 17:00:53 ukai Exp $ */
+d255 2
+a256 2
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+d1010 2
+a1011 2
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+d1597 2
+a1598 2
+			for (ii = k; ii < cell.maxcell; ii++)
+			    cell.indexarray[ii + 1] = cell.indexarray[ii];
+d2730 2
+a2731 2
+		    for (ii = k; ii < cell->maxcell; ii++)
+			cell->index[ii + 1] = cell->index[ii];
+@
+
+
+1.35
+log
+@[w3m-dev 03523] Re: del/ins
+* file.c (HTMLtagproc1): check displayInsDel, RB_DEL
+* fm.h (RB_DEL): added
+	(displayInsDel): added
+* rc.c (CMT_DISP_INS_DEL): added
+	(display_ins_del): added
+* table.c (feed_table_tag): check displayInsDel, TBLM_DEL
+* table.h (TBLM_DEL): added
+	(TBLM_ANCHOR): renum
+	(struct table_mode): unsigned int pre_mode
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.34 2002/12/03 15:49:56 ukai Exp $ */
+d2983 12
+d3003 1
+a3003 1
+	if (!(mode->pre_mode & TBLM_DEL))
+d3133 1
+a3133 1
+	if (mode->pre_mode & TBLM_DEL)
+@
+
+
+1.34
+log
+@[w3m-dev 03512] Re: HTML parser
+* table.c (feed_table_tag): HTML_N_SELECT, HTML_N_CAPTION
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.33 2002/12/03 15:45:34 ukai Exp $ */
+d2972 5
+d2978 5
+d2985 3
+a2988 1
+    case HTML_N_SUP:
+d2991 4
+a2994 1
+	feed_table_inline_tag(tbl, line, mode, 5);
+d3119 4
+@
+
+
+1.33
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.32 2002/12/03 15:35:11 ukai Exp $ */
+d2524 2
+d2536 2
+d2927 1
+d3022 1
+@
+
+
+1.32
+log
+@[w3m-dev 03509] HTML parser
+* file.c (close_textarea): delete
+	(HTMLtagproc1): rewrite
+			delete HTML_EOL
+			move HTML_LISTING, HTML_N_LISTING
+			add HTML_PRE_PLAIN, HTML_N_PRE_PLAIN
+			add HTML_PLAINTEXT
+			end_tag
+	(HTMLlineproc0): s/str/line/
+			rewrite
+	(completeHTMLstream): </textarea> if necessary
+* fm.h (struct readbuffer): delete ignore_tag
+			add end_tag
+	(RB_XMPMODE): deleted
+	(RB_LSTMODE): deleted
+	(RB_SCRIPT): added
+	(RB_STYLE): added
+	(RB_*): renumber
+	(R_ST_EOL): added
+	(R_ST_*): renumber
+	(ST_IS_TAG): check R_ST_EOL
+* form.c (form_fputs_decode): remove <eol> handling
+* frame.c (newFrame): remove_space()
+	(CASE_TABLE_TAG): added
+	(createFrameFile): rewrite
+* html.c (TagMAP): delete eol
+		add pre_plain, /pre_plain
+* html.h (HTML_EOL): deleted
+	(HTML_PRE_PLAIN): added
+	(HTML_N_PRE_PLAIN): added
+* table.c (visible_length): rewrite
+	(visible_length_plain): added
+	(maximum_visible_length_plain): added
+	(do_refill): R_ST_EOL
+	(table_close_select): end_tag
+	(table_close_textarea): end_tag
+	(TAG_ACTION_PLAIN): added
+	(feed_table_tag): rewrite
+	(feed_table): rewrite
+* table.h (TBLM_*) reassign
+	(struct table_mode): delete ignore_tag
+			add end_tag
+* tagtable.tab (eol): deleted
+		(pre_plain): added
+		(/pre_plain): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.31 2002/11/25 16:39:53 ukai Exp $ */
+d2520 1
+a2520 1
+	CASE_TABLE_TAG:
+d2531 1
+a2531 1
+	CASE_TABLE_TAG:
+d3214 1
+a3214 1
+	        i = maximum_visible_length_plain(p);
+d3216 1
+a3216 1
+	        i = maximum_visible_length(p);
+@
+
+
+1.31
+log
+@[w3m-dev 03476] Re: Bug#170506: w3m: Unable to use mozilla bugzilla
+* file.c (HTMLtagproc1): initialize ignore_tag in table_mode
+	(HTMLtagproc0): check table_level
+* table.c (feed_table_tag): set mode->ignore_tag
+* table.h (struct table_mode): add ignore_tag
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.30 2002/11/15 16:00:33 ukai Exp $ */
+d493 1
+a497 1
+		len++;
+d505 4
+a508 3
+	    len += strlen(t) - 1 - amp_len;
+	    if (*r2 != '\0') {
+		str -= strlen(r2);
+d510 2
+d522 2
+a523 1
+	else if (*str == '\n' || *str == '\r') {
+a527 2
+	else if (*str == '\n' || *str == '\r')
+	    len = 0;
+d533 21
+a553 3
+	len += strlen(t) - 1 - amp_len;
+	if (*r2 != '\0') {
+	    len += strlen(r2);
+d555 3
+d584 22
+d858 4
+d2413 1
+d2422 1
+d2448 1
+d2484 12
+a2495 4
+    if (mode->pre_mode & TBLM_IGNORE) {
+	switch (cmd) {
+	case HTML_N_STYLE:
+	    mode->pre_mode &= ~TBLM_STYLE;
+d2497 5
+a2501 1
+	case HTML_N_SCRIPT:
+d2503 1
+d2505 7
+a2511 1
+	default:
+d2514 1
+d2516 7
+a2522 10
+
+    switch (cmd) {
+      CASE_TABLE_TAG:
+	if (mode->caption)
+	    mode->caption = 0;
+	if (mode->pre_mode & (TBLM_IGNORE | TBLM_XMP | TBLM_LST))
+	    mode->pre_mode &= ~(TBLM_IGNORE | TBLM_XMP | TBLM_LST);
+	if (mode->pre_mode & TBLM_INTXTA)
+	    table_close_textarea(tbl, mode, width);
+	if (mode->pre_mode & TBLM_INSELECT)
+d2524 4
+a2528 1
+
+d2531 1
+d2534 1
+a2534 1
+	    return TAG_ACTION_NONE;
+a2539 12
+    /* failsafe: a tag other than <option></option>and </select> in *
+     * <select> environment is regarded as the end of <select>. */
+    if (mode->pre_mode & TBLM_INSELECT && cmd == HTML_N_FORM) {
+	table_close_select(tbl, mode, width);
+    }
+
+    if ((mode->pre_mode & TBLM_INSELECT && cmd != HTML_N_SELECT) ||
+	(mode->pre_mode & TBLM_INTXTA && cmd != HTML_N_TEXTAREA) ||
+	(mode->pre_mode & TBLM_XMP && cmd != HTML_N_XMP) ||
+	(mode->pre_mode & TBLM_LST && cmd != HTML_N_LISTING))
+	return TAG_ACTION_FEED;
+
+d2806 1
+a2807 1
+    case HTML_N_LISTING:
+a2808 1
+    case HTML_N_XMP:
+d2810 2
+d2815 1
+d2819 1
+d2823 2
+a2824 4
+	    mode->pre_mode |= TBLM_LST;
+	    break;
+	case HTML_N_LISTING:
+	    mode->pre_mode &= ~TBLM_LST;
+d2827 2
+a2828 4
+	    mode->pre_mode |= TBLM_XMP;
+	    break;
+	case HTML_N_XMP:
+	    mode->pre_mode &= ~TBLM_XMP;
+d2831 2
+a2832 1
+	    mode->pre_mode |= TBLM_PLAINTEXT;
+d2921 1
+a2921 3
+	break;
+    case HTML_N_SELECT:
+	table_close_select(tbl, mode, width);
+d2942 1
+a2942 3
+	break;
+    case HTML_N_TEXTAREA:
+	table_close_textarea(tbl, mode, width);
+d3029 1
+a3029 1
+	mode->ignore_tag = Strnew_charp("</script>");
+d3033 1
+a3033 1
+	mode->ignore_tag = Strnew_charp("</style>");
+a3053 1
+    case HTML_EOL:
+d3073 1
+a3073 2
+    if (*line == '<') {
+	int action;
+d3078 2
+a3079 2
+	    action = feed_table_tag(tbl, line, mode, width, tag);
+	    if (action == TAG_ACTION_NONE)
+d3081 1
+a3081 1
+	    else if (action == TAG_ACTION_N_TABLE)
+d3083 1
+a3083 1
+	    else if (action == TAG_ACTION_TABLE) {
+d3085 6
+a3091 2
+	    else if (parsedtag_need_reconstruct(tag))
+		line = parsedtag2str(tag)->ptr;
+d3094 2
+a3095 1
+	    if (!(mode->pre_mode & TBLM_PLAIN))
+d3103 3
+a3105 1
+    if (mode->pre_mode & TBLM_IGNORE)
+d3165 1
+a3165 1
+    if (!(mode->pre_mode & TBLM_SPECIAL)) {
+d3179 9
+d3192 28
+a3219 11
+	if (mode->pre_mode & TBLM_PRE_INT && mode->nobr_offset < 0)
+	    mode->nobr_offset = tbl->tabcontentssize;
+	if (mode->pre_mode & TBLM_PLAIN)
+	    i = strlen(line);
+	else
+	    i = maximum_visible_length(line);
+	addcontentssize(tbl, i);
+	setwidth(tbl, mode);
+	if (!(mode->pre_mode & TBLM_PRE_INT)) {
+	    p = line + strlen(line) - 1;
+	    if (*p == '\r' || *p == '\n')
+d3221 1
+a3223 1
+    pushdata(tbl, tbl->row, tbl->col, line);
+@
+
+
+1.30
+log
+@[w3m-dev 03438] Re: segmentation fault by large complex table.
+* table.c (check_table_height): check MAXROWCELL
+* table.h (MAXROWCELL): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.29 2002/11/05 16:43:10 ukai Exp $ */
+d2972 1
+d2976 1
+@
+
+
+1.29
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.28 2002/11/05 15:45:53 ukai Exp $ */
+d1521 2
+@
+
+
+1.28
+log
+@[w3m-dev 03371] segmentation fault by large complex table.
+* table.c (bsearch_2short): indexarry char to short
+	(bsearch_double): ditto
+	(dv2sv): ditto
+	(table_rule_width): ditto
+	(set_integrated_width): ditto
+	(check_table_height): ditto
+	(feed_table_tag): ditto
+* table.h (struct table_cell): index, eindex char to short
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27 2002/10/30 17:03:28 ukai Exp $ */
+d1545 1
+a1545 1
+	    		int ii;
+d2662 1
+a2662 1
+	    	    int ii;
+@
+
+
+1.27
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.26 2002/10/28 04:53:07 ukai Exp $ */
+d158 1
+a158 1
+	       char *indexarray, int nent)
+d184 1
+a184 1
+bsearch_double(double e, double *ent, char *indexarray, int nent)
+d237 1
+a237 1
+    char *indexarray;
+d241 1
+a241 1
+    indexarray = NewAtom_N(char, size);
+d253 5
+a257 2
+	if (k > i)
+	    bcopy(indexarray + i, indexarray + i + 1, k - i);
+d860 1
+a860 1
+		 char *indexarray, int space, int dir)
+d940 2
+a941 1
+    char *indexarray, *fixed;
+d947 1
+a947 1
+    indexarray = NewAtom_N(char, t->maxcol + 1);
+d959 5
+a963 2
+	if (k > i)
+	    bcopy(indexarray + i, indexarray + i + 1, k - i);
+d1487 1
+a1487 1
+	char *indexarray;
+d1526 1
+a1526 1
+			cell.indexarray = NewAtom_N(char, cell.size);
+d1534 1
+a1534 1
+			cell.indexarray = New_Reuse(char, cell.indexarray,
+d1544 5
+a1548 3
+		    if (cell.maxcell > k)
+			bcopy(cell.indexarray + k, cell.indexarray + k + 1,
+			      cell.maxcell - k);
+d2661 5
+a2665 3
+		if (cell->maxcell > k)
+		    bcopy(cell->index + k, cell->index + k + 1,
+			  cell->maxcell - k);
+@
+
+
+1.27.4.1
+log
+@w3m 0.3.2 branch: backport from trunk
+* [w3m-dev 03371] segmentation fault by large complex table.
+* table.c (bsearch_2short): indexarry char to short
+	(bsearch_double): ditto
+	(dv2sv): ditto
+	(table_rule_width): ditto
+	(set_integrated_width): ditto
+	(check_table_height): ditto
+	(feed_table_tag): ditto
+* table.h (struct table_cell): index, eindex char to short
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27 2002/10/30 17:03:28 ukai Exp $ */
+d158 1
+a158 1
+	       short *indexarray, int nent)
+d184 1
+a184 1
+bsearch_double(double e, double *ent, short *indexarray, int nent)
+d237 1
+a237 1
+    short *indexarray;
+d241 1
+a241 1
+    indexarray = NewAtom_N(short, size);
+d253 2
+a254 5
+	if (k > i) {
+	    int ii;
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+	}
+d857 1
+a857 1
+		 short *indexarray, int space, int dir)
+d937 1
+a937 2
+    short *indexarray;
+    char *fixed;
+d943 1
+a943 1
+    indexarray = NewAtom_N(short, t->maxcol + 1);
+d955 2
+a956 5
+	if (k > i) {
+	    int ii;
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+	}
+d1480 1
+a1480 1
+	short *indexarray;
+d1519 1
+a1519 1
+			cell.indexarray = NewAtom_N(short, cell.size);
+d1527 1
+a1527 1
+			cell.indexarray = New_Reuse(short, cell.indexarray,
+d1537 3
+a1539 5
+		    if (cell.maxcell > k) {
+	    		int ii;
+			for (ii = k; ii < cell.maxcell; ii++)
+			    cell.indexarray[ii + 1] = cell.indexarray[ii];
+		    }
+d2652 3
+a2654 5
+		if (cell->maxcell > k) {
+	    	    int ii;
+		    for (ii = k; ii < cell->maxcell; ii++)
+			cell->index[ii + 1] = cell->index[ii];
+		}
+@
+
+
+1.27.4.2
+log
+@w3m 0.3.2 branch: backport from trunk
+* [w3m-dev 03438] Re: segmentation fault by large complex table.
+* table.c (check_table_height): check MAXROWCELL
+* table.h (MAXROWCELL): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27.4.1 2002/11/26 07:09:09 ukai Exp $ */
+a1520 2
+		if (c >= MAXROWCELL)
+		    continue;
+@
+
+
+1.27.4.3
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27.4.2 2002/11/26 07:10:18 ukai Exp $ */
+d1547 1
+a1547 1
+			int ii;
+d2664 1
+a2664 1
+		    int ii;
+@
+
+
+1.27.2.1
+log
+@w3m-0.3.2 branch: backport from trunk
+* [w3m-dev 03371] segmentation fault by large complex table.
+* table.c (bsearch_2short): indexarry char to short
+	(bsearch_double): ditto
+	(dv2sv): ditto
+	(table_rule_width): ditto
+	(set_integrated_width): ditto
+	(check_table_height): ditto
+	(feed_table_tag): ditto
+* table.h (struct table_cell): index, eindex char to short
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27 2002/10/30 17:03:28 ukai Exp $ */
+d158 1
+a158 1
+	       short *indexarray, int nent)
+d184 1
+a184 1
+bsearch_double(double e, double *ent, short *indexarray, int nent)
+d237 1
+a237 1
+    short *indexarray;
+d241 1
+a241 1
+    indexarray = NewAtom_N(short, size);
+d253 2
+a254 5
+	if (k > i) {
+	    int ii;
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+	}
+d857 1
+a857 1
+		 short *indexarray, int space, int dir)
+d937 1
+a937 2
+    short *indexarray;
+    char *fixed;
+d943 1
+a943 1
+    indexarray = NewAtom_N(short, t->maxcol + 1);
+d955 2
+a956 5
+	if (k > i) {
+	    int ii;
+	    for (ii = i; ii < k; ii++)
+		indexarray[ii + 1] = indexarray[ii];
+	}
+d1480 1
+a1480 1
+	short *indexarray;
+d1519 1
+a1519 1
+			cell.indexarray = NewAtom_N(short, cell.size);
+d1527 1
+a1527 1
+			cell.indexarray = New_Reuse(short, cell.indexarray,
+d1537 3
+a1539 5
+		    if (cell.maxcell > k) {
+	    		int ii;
+			for (ii = k; ii < cell.maxcell; ii++)
+			    cell.indexarray[ii + 1] = cell.indexarray[ii];
+		    }
+d2652 3
+a2654 5
+		if (cell->maxcell > k) {
+	    	    int ii;
+		    for (ii = k; ii < cell->maxcell; ii++)
+			cell->index[ii + 1] = cell->index[ii];
+		}
+@
+
+
+1.27.2.2
+log
+@w3m-0.3.2 branch: backport from trunk
+* [w3m-dev 03438] Re: segmentation fault by large complex table.
+* table.c (check_table_height): check MAXROWCELL
+* table.h (MAXROWCELL): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.27.2.1 2002/11/26 06:50:20 ukai Exp $ */
+a1520 2
+		if (c >= MAXROWCELL)
+		    continue;
+@
+
+
+1.26
+log
+@[w3m-dev 03351] w3m core dump
+* table.c (feed_table_tag): fix rendering problem (maybe security hole?)
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.25 2002/10/10 16:59:33 ukai Exp $ */
+d2682 2
+a2683 2
+		if (! (tbl->tabattr[tbl->row + i][tbl->col + j] &
+			(HTT_X | HTT_Y))) {
+@
+
+
+1.25
+log
+@ [w3m-dev 03339] Re: Debian Bug#164098 w3m: <sup> is not properly supported
+* file.c (HTMLtagproc1): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* html.c (TagMAP): sup, /sup, sub, /sub
+* html.c (HTML_SUP): added
+	(HTML_N_SUP): added
+	(HTML_SUB): added
+	(HTML_N_SUB): added
+* table.c (feed_table_tag): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* tagtable.tab (sup): added
+	(/sup): added
+	(sub): added
+	(/sub): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.24 2002/04/17 02:42:27 ukai Exp $ */
+d2682 5
+a2686 4
+		if (tbl->tabattr[tbl->row + i][tbl->col + j] & (HTT_X | HTT_Y))
+		    break;
+		tbl->tabattr[tbl->row + i][tbl->col + j] |=
+		    ((i > 0) ? HTT_Y : 0) | ((j > 0) ? HTT_X : 0);
+@
+
+
+1.24
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.23 2002/04/09 14:53:54 ukai Exp $ */
+d2899 4
+@
+
+
+1.23
+log
+@[w3m-dev 03169] Can't calculate table height if number of cells > 20.
+* table.c (check_table_height): change row, rowspan, indexarray, height
+		from array to pointer
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.22 2002/03/12 16:59:50 ukai Exp $ */
+d1521 2
+a1522 1
+		    } else {
+@
+
+
+1.22
+log
+@[w3m-dev 03116] Re: aligned block in <td align="center">
+* file.c (flushline): align if align="align"
+* fm.h (RB_LEFT): change value
+	       (RB_ALIGN): include RB_LEFT
+	       (RB_INTABLE): added
+* table.c (do_refill): obuf.flag |= RB_INTABLE
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.21 2002/02/22 17:55:17 ukai Exp $ */
+d1478 3
+a1480 3
+	short row[MAXCELL];
+	short rowspan[MAXCELL];
+	char indexarray[MAXCELL];
+d1482 2
+a1483 1
+	short height[MAXCELL];
+d1487 1
+d1514 15
+a1528 10
+		if (c < MAXCELL) {
+		    if (c > cell.maxcell) {
+			cell.maxcell++;
+			cell.row[cell.maxcell] = j;
+			cell.rowspan[cell.maxcell] = rowspan;
+			cell.height[cell.maxcell] = 0;
+			if (cell.maxcell > k)
+			    bcopy(cell.indexarray + k, cell.indexarray + k + 1,
+				  cell.maxcell - k);
+			cell.indexarray[k] = cell.maxcell;
+d1530 11
+d1542 2
+a1543 3
+		    if (cell.height[c] < t_dep)
+			cell.height[c] = t_dep;
+		}
+@
+
+
+1.21
+log
+@[w3m-dev 03059] table + hborder + rowspan + valign=bottom
+* table.c (renderTable): add case BORDER_NOWIN:
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.20 2002/02/05 12:31:27 ukai Exp $ */
+d761 1
+@
+
+
+1.20
+log
+@[w3m-dev 02991] form support in w3m -halfdump foo.html|w3m -halfload
+* fm.h (DUMP_HALFEXTRA): deleted
+* proto.h (process_select): return Str
+* file.c (process_img): process_form() fix
+* file.c (process_input): process_form() fix
+* file.c (process_select): return Str
+			process_form() fix
+* file.c (process_textarea): process_form() fix
+* file.c (process_form): support -halfdump
+* file.c (HTMLtagproc1): delete case HTML_FORM_INT, HTML_N_FORM_INT
+			process_{form,select,textarea}() fix
+* file.c (HTMLlineproc2body): support -halfload
+		HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_FORM_INT, HTML_FORM_INT,
+		HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TITLE_ALT
+* file.c (print_internal_information): fix -halfdump
+* file.c (loadHTMLstream): no DUMP_HALFEXTRA
+* html.h: add HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT
+* html.c (ALST_TEXTAREA_INT): added
+* html.c (ALST_SELECT_INT): added
+* html.c: add <internal>, </internal>, <select_int>, </select_int>
+	<option_int>, <textarea_int>, </textarea_int>
+* main.c (MAIN): delete -halfdump_extra
+	dont output <pre> by -halfdump
+* table.c (feed_table_tag): process_{form,select}() fix
+	add case HTML_INTERNAL, HTML_N_INTERNAL,
+	    HTML_SELECT_INT, HTML_N_SELECT_INT,
+	    HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+* tagtable.tab: add internal, /internal, select_int, /select_int
+	option_int, textarea_int, /textarea_int
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.19 2002/01/31 17:54:56 ukai Exp $ */
+d1809 1
+@
+
+
+1.19
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.18 2002/01/28 14:42:30 ukai Exp $ */
+d2809 3
+a2811 1
+	process_form(tag);
+d2822 3
+a2824 1
+	process_select(tag);
+d2846 2
+a2847 1
+	feed_table1(tbl, tmp, mode, width);
+d2945 2
+d2951 5
+@
+
+
+1.18
+log
+@[w3m-dev 02919] wrong table width calculation
+* table.c (set_table_matrix0): refine width calculation
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.17 2002/01/25 17:25:44 ukai Exp $ */
+d2789 16
+a2804 1
+	tok = process_img(tag);
+@
+
+
+1.17
+log
+@[w3m-dev 02913] wrong table width calculation
+* table.c (set_table_matrix0): refine width calculation
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.16 2002/01/25 15:20:34 ukai Exp $ */
+d3219 1
+a3219 1
+    double w0, w1, w, e, s, b;
+d3252 2
+d3255 1
+a3257 11
+    }
+
+    for (k = 0; k < cell->necell; k++) {
+	j = cell->eindex[k];
+	bcol = cell->col[j];
+	ecol = bcol + cell->colspan[j];
+	width = cell->width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+	e = 0.;
+	for (i = bcol; i < ecol; i++) {
+	    e += expand[i];
+	}
+d3259 1
+a3259 1
+	    w = weight(width * expand[i] / e);
+a3280 3
+#if 0
+	b = sigma_td_nw((int)(s * maxwidth * cell->colspan[j]));
+#else
+a3281 1
+#endif
+@
+
+
+1.16
+log
+@[w3m-dev 02875] rendering a table with inconsistent colspan,rowspan
+* table.c (feed_table_tag): don't clear HTT_X|HTT_Y,
+	instead, if set these flags, break the loop
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.15 2002/01/25 15:10:14 ukai Exp $ */
+d3218 2
+a3219 2
+    int width, a;
+    double w0, w1, w, s, b;
+d3257 17
+d3275 2
+a3276 1
+    for (i = 0; i < size; i++)
+d3279 3
+d3289 5
+a3293 2
+	a = (int)(s * maxwidth);
+	b = sigma_td_nw(a);
+@
+
+
+1.15
+log
+@[w3m-dev 02909] wrong table width calculation (sf.net Bug#506949)
+* table.c (correct_table_matrix4): added
+* table.c (set_table_matrix0): use correct_table_matrix4()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.14 2002/01/23 17:57:10 ukai Exp $ */
+d2659 1
+d2661 3
+@
+
+
+1.14
+log
+@[w3m-dev 02896] fid attr value should be in sequence
+* table.c (feed_table_tag): s/line/""/ for HTML_FORM,HTML_N_FORM
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.13 2001/12/27 17:56:03 ukai Exp $ */
+d3183 27
+d3214 1
+a3214 1
+    int swidth, width, a;
+a3247 1
+	swidth = 0;
+a3248 1
+	    swidth += t->tabwidth[i];
+d3251 10
+d3263 1
+a3263 4
+	w1 = 0.;
+	for (i = bcol; i < ecol; i++)
+	    w1 += we[i];
+	s = w / (w0 + w - w1);
+d3266 1
+a3266 1
+	correct_table_matrix2(t, bcol, cell->colspan[j], s, b);
+a3268 4
+    w1 = 0.;
+    for (i = 0; i < size; i++)
+	if (expand[i] == 0)
+	    w1 += we[i];
+@
+
+
+1.13
+log
+@[w3m-dev 02769] <form>..</form> as block element
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.12 2001/12/17 16:05:03 ukai Exp $ */
+d2789 1
+a2789 1
+	feed_table_block_tag(tbl, line, mode, 0, cmd);
+d2793 1
+a2793 1
+	feed_table_block_tag(tbl, line, mode, 0, cmd);
+@
+
+
+1.12
+log
+@[w3m-dev 02670]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.11 2001/12/14 17:58:40 ukai Exp $ */
+d2789 1
+d2793 1
+@
+
+
+1.11
+log
+@[w3m-dev 02663] fix prevA() cause loop
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.10 2001/11/29 10:22:58 ukai Exp $ */
+a539 3
+    char *p;
+
+    for (p = str; *p && *p != '\t'; p++) ;
+d544 1
+a544 1
+    if (*p == '\0')
+d779 1
+a779 1
+		flushline(&h_env, &obuf, 0, 1, h_env.limit);
+@
+
+
+1.10
+log
+@[w3m-dev 02586] code cleanup again
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.9 2001/11/29 09:34:15 ukai Exp $ */
+d782 1
+a782 1
+		flushline(&h_env, &obuf, 0, 0, h_env.limit);
+d2850 1
+a2850 1
+	    suspend_or_pushdata(tbl, Strnew_m_charp(line, ANSP, NULL)->ptr);
+@
+
+
+1.9
+log
+@[w3m-dev 02584] code cleanup again
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.8 2001/11/24 02:01:26 ukai Exp $ */
+d158 1
+a158 1
+	       char *index, int nent)
+d166 1
+a166 1
+	int idx = index[k + nn];
+d184 1
+a184 1
+bsearch_double(double e, double *ent, char *index, int nent)
+d191 1
+a191 1
+	int idx = index[k + nn];
+d237 1
+a237 1
+    char *index;
+d241 1
+a241 1
+    index = NewAtom_N(char, size);
+d252 1
+a252 1
+	i = bsearch_double(x, edv, index, k);
+d254 2
+a255 2
+	    bcopy(index + i, index + i + 1, k - i);
+	index[i] = k;
+d260 1
+a260 1
+    x = edv[(int)index[iw - 1]];
+d262 1
+a262 1
+	k = index[i];
+d859 1
+a859 1
+		 char *index, int space, int dir)
+d865 1
+a865 1
+	j = index[k];
+d939 1
+a939 1
+    char *index, *fixed;
+d945 1
+a945 1
+    index = NewAtom_N(char, t->maxcol + 1);
+d956 1
+a956 1
+	i = bsearch_double(x, mod, index, k);
+d958 2
+a959 2
+	    bcopy(index + i, index + i + 1, k - i);
+	index[i] = k;
+d972 1
+a972 1
+		int ii = index[i + n];
+d979 1
+a979 1
+		int ii = index[i + k];
+d996 1
+a996 1
+		    int ii = index[i + kk];
+d1034 1
+a1034 1
+		int ii = index[i + k];
+d1042 1
+a1042 1
+		int ii = index[i + k];
+d1385 1
+a1385 1
+	j = cell->index[k];
+d1482 1
+a1482 1
+	char index[MAXCELL];
+d1507 2
+a1508 1
+				   j, cell.row, t->maxrow + 1, cell.index, c);
+d1510 1
+a1510 1
+		    int idx = cell.index[k];
+d1521 1
+a1521 1
+			    bcopy(cell.index + k, cell.index + k + 1,
+d1523 1
+a1523 1
+			cell.index[k] = cell.maxcell;
+d1546 1
+a1546 1
+		     cell.maxcell, cell.index, space, 1);
+@
+
+
+1.8
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.7 2001/11/23 18:35:06 ukai Exp $ */
+d473 1
+a473 1
+    int amp_len;
+d941 1
+a941 1
+    double sum = 0., x;
+d1486 1
+a1486 1
+    int space;
+d1683 1
+a1683 1
+    Str vrulea, vruleb, vrulec;
+@
+
+
+1.7
+log
+@[w3m-dev 02523]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+fix problem of anchor tag with name attribute only
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.6 2001/11/22 14:07:38 ukai Exp $ */
+d17 3
+a19 1
+{"ил", "из", "ии", "иг", "ий", "ив", "ид", "07", "ик", "иж", "иб", "0B", "ие", "0D", "0E", "  "};
+d21 3
+a23 1
+{"00", "и╖", "и╕", "ио", "и╣", "ин", "ип", "07", "и║", "и▒", "им", "0B", "и░", "0D", "0E", "  "};
+d29 3
+a31 1
+'+', '|', '-', '+', '|', '|', '+', ' ', '-', '+', '-', ' ', '+', ' ', ' ', ' '};
+d33 1
+a33 1
+extern int	CodePage;
+d35 1
+a35 1
+static char    *_rule[] =
+d37 1
+a37 1
+static char    *rule[] =
+d58 1
+a58 1
+static char   **ruleB = _rule, **rule = _rule;
+d60 3
+a62 2
+    "\305",  "\303",	"\302",  "\332",  "\264",  "\263" , "\277",  "07",
+    "\301",  "\300",	"\304",  "0B", "\331",  "0D", "0E", " " };
+d64 5
+a68 4
+    "\316",  "\314",	"\313",  "\311"   "\271",  "\272",	"\273",  "07",
+    "\312",  "\310",	"\315",  "0B", "\274",  "0D", "0E", " " };
+#else  /* not __EMX__ or JP_CHARSET */
+static char   **ruleB = rule;
+d127 1
+a127 1
+	return (double) x;
+d129 1
+a129 1
+	return COLS * (log((double) x / COLS) + 1.);
+d135 1
+a135 1
+    return (double) a / COLS * 4 + 1.;
+d150 1
+a150 1
+	return (double) x;
+d152 1
+a152 1
+	return LOG_MIN * (log((double) x / LOG_MIN) + 1.);
+d158 1
+a158 1
+	    char *index, int nent)
+d245 1
+a245 1
+	edv[i] = (double) iv[i] - dv[i];
+d257 1
+a257 1
+    iw = min((int) (w + 0.5), size);
+d260 1
+a260 1
+    x = edv[(int) index[iw - 1]];
+d274 1
+a274 1
+    for (i = col + 1; i <= t->maxcol && (t->tabattr[row][i] & HTT_X); i++);
+d285 1
+a285 1
+	 (t->tabattr[i][col] & HTT_Y); i++);
+d463 1
+a463 1
+	
+d483 2
+a484 1
+	else if (status == R_ST_TAG || status == R_ST_DQUOTE || status == R_ST_QUOTE || status == R_ST_EQL) {
+d516 7
+a522 6
+        else if (*str == '\n' || *str == '\r') {
+            if (len > max_len) max_len = len;
+            len = 0;
+        }
+       else if (*str == '\n' || *str == '\r')
+           len = 0;
+d542 1
+a542 1
+    for (p = str; *p && *p != '\t'; p++);
+d604 1
+a604 3
+print_item(struct table *t,
+	   int row, int col, int width,
+	   Str buf)
+d639 1
+a639 3
+print_sep(struct table *t,
+	  int row, int type, int maxcol,
+	  Str buf)
+d646 1
+a646 1
+    if(CodePage==850){
+d648 1
+a648 1
+	rule  = rule850;
+d677 3
+a679 1
+		for (k = row; k >= 0 && t->tabattr[k] && (t->tabattr[k][i] & HTT_Y); k--);
+d681 2
+a682 1
+		for (l = i + 1; l <= t->maxcol && (t->tabattr[row][l] & HTT_X); l++)
+d688 2
+a689 1
+	    for (j = 0; j < t->tabwidth[i] + 2 * t->cellpadding; j += RULE_WIDTH) {
+d756 1
+a756 2
+    if (tbl->tabdata[row] == NULL ||
+	tbl->tabdata[row][col] == NULL)
+d794 1
+a794 2
+			 ti != NULL;
+			 ti = ti->next)
+d949 1
+a949 1
+	mod[i] = (double) iwidth[i] - dwidth[i];
+d985 1
+a985 1
+		    (double) rulewidth - mod[ii] > 0.5)
+d1009 1
+a1009 1
+		    if (fixed[(int) idx[kk]] < 2)
+d1014 2
+a1015 2
+			if (fixed[(int) idx[kk]] < 2)
+			    fixed[(int) idx[kk]] = 2;
+d1020 2
+a1021 2
+		    if (fixed[(int) idx[kk]] < 1 &&
+			(double) rulewidth - mod[(int) idx[kk]] > 0.5)
+d1026 3
+a1028 3
+			if (fixed[(int) idx[kk]] < 1 &&
+			    (double) rulewidth - mod[(int) idx[kk]] > 0.5)
+			    fixed[(int) idx[kk]] = 1;
+d1038 1
+a1038 1
+	    nsum = sum - (double) (nn * rulewidth);
+d1072 1
+a1072 1
+    tmp = (syy + sxx - 2*sxy) * sxx;
+d1085 1
+a1085 2
+	     double sxx, double syy, double sxy,
+	     int is_inclusive)
+d1087 1
+a1087 1
+    double delta = swidth - (double) cwidth;
+d1089 1
+a1089 2
+	   coe = correlation_coefficient(sxx, syy, sxy),
+	   w, ww;
+d1141 1
+a1141 1
+	delta = newwidth[icol] - (double) t->tabwidth[icol];
+d1147 1
+a1147 1
+	delta = swidth[icell] - (double) cwidth[icell];
+d1180 1
+a1180 2
+				sxx, Sxx[j], sxy,
+				is_inclusive);
+d1183 1
+a1183 2
+				sxx, Sxx[j], sxy,
+				is_inclusive);
+d1199 1
+a1199 2
+				sxx, m_entry(minv, m, m), sxy,
+				is_inclusive);
+d1202 1
+a1202 2
+				sxx, m_entry(minv, m, m), sxy,
+				is_inclusive);
+d1204 1
+a1204 1
+ _end:
+d1266 1
+a1266 2
+				   cwidth, twidth, Sxx, 
+				   -1, -1, stotal, corr);
+d1274 1
+a1274 1
+				       cwidth, twidth, Sxx, 
+d1283 1
+a1283 1
+				       cwidth, twidth, Sxx, 
+d1327 2
+a1328 1
+	mwidth = cell->minimum_width[j] - (cell->colspan[j] - 1) * t->cellspacing;
+d1416 1
+a1416 1
+		    dwidth[i] = (double) newwidth[i];
+d1452 1
+a1452 1
+		dwidth[i] = (double) newwidth[i];
+d1507 1
+a1507 2
+				j, cell.row, t->maxrow + 1,
+				cell.index, c);
+d1510 1
+a1510 2
+		    if (cell.row[idx] == j &&
+			cell.rowspan[idx] == rowspan)
+d1513 11
+a1523 10
+        if (c < MAXCELL) {
+            if (c > cell.maxcell) {
+               cell.maxcell++;
+               cell.row[cell.maxcell] = j;
+               cell.rowspan[cell.maxcell] = rowspan;
+               cell.height[cell.maxcell] = 0;
+               if (cell.maxcell > k)
+                   bcopy(cell.index + k, cell.index + k + 1, cell.maxcell - k);
+               cell.index[k] = cell.maxcell;
+            }
+d1525 2
+a1526 2
+            if (cell.height[c] < t_dep)
+               cell.height[c] = t_dep;
+d1528 1
+a1528 1
+        continue;
+d1552 1
+a1552 2
+get_table_width(struct table *t, short *orgwidth, short *cellwidth,
+		int flag)
+d1633 1
+a1633 2
+	    maxwidth = t->total_width =
+		-t->total_width * h_env.limit / 100;
+d1650 1
+a1650 1
+       limit = t->total_width;
+d1652 1
+a1652 1
+       limit = h_env->limit;
+d1654 1
+a1654 1
+             limit, h_env->envs[h_env->envc].indent);
+d1660 1
+a1660 1
+       t->total_width = henv.maxlimit;
+d1670 1
+a1670 3
+renderTable(struct table *t,
+	    int max_width,
+	    struct html_feed_environ *h_env)
+d1698 1
+a1698 1
+    
+d1703 1
+a1703 1
+	
+d1801 1
+a1801 2
+		(t->tabattr[j][i] & HTT_TOP) ||
+		(t->tabdata[j][i] == NULL))
+d1845 1
+a1845 1
+       push_render_image(renderbuf, width, t->total_width, h_env);
+d1864 1
+a1864 1
+	Strcat_charp(vruleb, CodePage==850?"\263":TN_VERTICALBAR);
+d1879 2
+a1880 1
+	    if (t->border_mode == BORDER_THIN || t->border_mode == BORDER_THICK)
+d1901 1
+a1901 2
+			 j <= t->maxcol && (t->tabattr[r][j] & HTT_X);
+			 j++)
+d1904 2
+a1905 3
+			for (j = r - 1;
+			     j >= 0 && t->tabattr[j] && (t->tabattr[j][i] & HTT_Y);
+			     j--);
+d1921 1
+a1921 1
+           push_render_image(renderbuf, width, t->total_width, h_env);
+d1926 1
+a1926 1
+           push_render_image(renderbuf, width, t->total_width, h_env);
+d1935 1
+a1935 1
+       push_render_image(renderbuf, width, t->total_width, h_env);
+d1943 1
+a1943 1
+       push_render_image(renderbuf, 1, t->total_width, h_env);
+d2024 1
+a2024 1
+    
+d2035 1
+a2035 2
+	    tbl->total_width =
+		ceil_at_intervals(tbl->total_width, rulewidth);
+d2039 1
+a2039 2
+	    tbl->tabwidth[i] =
+		ceil_at_intervals(tbl->tabwidth[i], rulewidth);
+d2047 1
+a2047 2
+	    cell->width[i] =
+		ceil_at_intervals(cell->width[i], rulewidth);
+d2080 1
+a2080 1
+      i <= t->maxcol && (i == t->col || (t->tabattr[t->row][i] & HTT_X));
+d2173 1
+a2173 1
+    
+d2194 1
+a2194 2
+	     tbl->tabattr[tbl->row][tbl->col] & (HTT_X | HTT_Y);
+	     tbl->col++);
+d2288 1
+a2288 3
+		      char *line,
+		      struct table_mode *mode,
+		      int width)
+d2293 1
+a2293 1
+ 	check_minimum0(tbl, width);
+d2301 1
+a2301 4
+		     char *line,
+		     struct table_mode *mode,
+		     int indent,
+		     int cmd)
+d2359 1
+a2359 1
+	if(tbl->linfo.prev_spaces > 0)
+d2389 2
+a2390 1
+feed_table_tag(struct table *tbl, char *line, struct table_mode *mode, int width, struct parsed_tag *tag)
+d2417 2
+a2418 2
+    CASE_TABLE_TAG:
+	if (mode->caption) 
+d2420 2
+a2421 2
+	if (mode->pre_mode & (TBLM_IGNORE|TBLM_XMP|TBLM_LST))
+	    mode->pre_mode &= ~(TBLM_IGNORE|TBLM_XMP|TBLM_LST);
+d2444 1
+a2444 2
+    if (
+	(mode->pre_mode & TBLM_INSELECT && cmd != HTML_N_SELECT) ||
+d2449 1
+a2449 1
+	
+d2484 1
+a2484 1
+		break;    
+d2596 1
+a2596 1
+		    v = - (v * 100) / (tbl->real_width * pixel_per_char);
+d2621 1
+a2621 1
+			    cell->index, cell->icell);
+d2624 1
+a2624 2
+		if (cell->col[i] == col &&
+		    cell->colspan[i] == colspan)
+d2635 2
+a2636 1
+		    bcopy(cell->index + k, cell->index + k + 1, cell->maxcell - k);
+d2734 3
+a2736 3
+       case HTML_PLAINTEXT:
+           mode->pre_mode |= TBLM_PLAINTEXT;
+           break;
+d2877 1
+a2877 1
+		w = - (tbl1->real_width * 100) / tbl->real_width;
+d2990 1
+a2990 2
+		    !strncasecmp(p, "&gt;", 4) ||
+		    !strncasecmp(p, "&lt;", 4)) {
+d2998 24
+a3021 24
+            switch (ec = getescapechar(&p)) {
+            case '<':
+               Strcat_charp(tmp, "&lt;");
+               break;
+            case '>':
+               Strcat_charp(tmp, "&gt;");
+               break;
+            case '&':
+               Strcat_charp(tmp, "&amp;");
+               break;
+            case '\r':
+               Strcat_char(tmp, '\n');
+               break;
+            default:
+               r = conv_entity(ec);
+               if (r != NULL && strlen(r) == 1 &&
+                   ec == (unsigned char)*r) {
+                   Strcat_char(tmp, *r);
+                   break;
+               }
+            case -1:
+                   Strcat_char(tmp, *q);
+                   p = q + 1;
+                   break;
+d3079 3
+a3081 2
+    while (read_token(tokbuf, &line, &status, mode->pre_mode & TBLM_PREMODE, 0))
+	    feed_table(tbl, tokbuf->ptr, mode, width, TRUE);
+d3108 1
+a3108 2
+    if (col + 1 <= tbl->maxcol &&
+	tbl->tabattr[row][col + 1] & HTT_X)
+d3156 2
+a3157 1
+correct_table_matrix3(struct table *t, int col, char *flags, double s, double b)
+d3209 1
+a3209 1
+	    b = sigma_td_nw((int) (s * maxwidth));
+d3232 1
+a3232 1
+	a = (int) (s * maxwidth);
+d3244 1
+a3244 1
+	    b = sigma_td_nw((int) (s * maxwidth));
+d3281 2
+a3282 2
+	    s = -(double) t->fixed_width[i] / 100.;
+	    b = sigma_td((int) (s * width));
+d3291 1
+a3291 2
+	    correct_table_matrix(t, cell->col[j],
+				 cell->colspan[j], a, b);
+d3294 3
+a3296 4
+	    s = -(double) cell->fixed_width[j] / 100.;
+	    b = sigma_td((int) (s * width));
+	    correct_table_matrix2(t, cell->col[j],
+				  cell->colspan[j], s, b);
+@
+
+
+1.6
+log
+@[w3m-dev 02506]
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.5 2001/11/22 13:35:45 ukai Exp $ */
+d2863 1
+a2863 1
+	    suspend_or_pushdata(tbl, line);
+@
+
+
+1.5
+log
+@[w3m-dev 02498]
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.4 2001/11/16 22:02:00 ukai Exp $ */
+a3111 3
+#ifdef __CYGWIN__
+	    bcopy((const char *) tbl->tables, (char *) tmp, (size_t) tbl->ntable * sizeof(struct table_in));
+#else				/* not __CYGWIN__ */
+a3112 1
+#endif				/* not __CYGWIN__ */
+@
+
+
+1.4
+log
+@follow autoconf conventions, #include cleanups
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+d3015 1
+a3015 1
+               Strcat_charp(tmp, "<");
+d3018 1
+a3018 1
+               Strcat_charp(tmp, ">");
+d3021 1
+a3021 1
+               Strcat_charp(tmp, "&");
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+a1 1
+/* $Id: table.c,v 1.9.2.31 2000/12/25 12:15:38 okabe Exp $ */
+a8 4
+#ifdef __EMX__
+#include <strings.h>
+#endif				/* __EMX__ */
+
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d28 2
+a34 2
+char alt_rule[] = {
+'+', '|', '-', '+', '|', '|', '+', ' ', '-', '+', '-', ' ', '+', ' ', ' ', ' '};
+d38 16
+a53 16
+    "<_RULE>\200</_RULE>",
+    "<_RULE>\201</_RULE>",
+    "<_RULE>\202</_RULE>",
+    "<_RULE>\203</_RULE>",
+    "<_RULE>\204</_RULE>",
+    "<_RULE>\205</_RULE>",
+    "<_RULE>\206</_RULE>",
+    "<_RULE>\207</_RULE>",
+    "<_RULE>\210</_RULE>",
+    "<_RULE>\211</_RULE>",
+    "<_RULE>\212</_RULE>",
+    "<_RULE>\213</_RULE>",
+    "<_RULE>\214</_RULE>",
+    "<_RULE>\215</_RULE>",
+    "<_RULE>\216</_RULE>",
+    "<_RULE>\217</_RULE>"
+d67 1
+a67 1
+#define TN_VERTICALBAR "<_RULE>\205</_RULE>"
+d389 1
+a389 1
+	tabheight = New_N(short, r);
+d464 1
+a464 1
+    int len = 0;
+d511 6
+d527 1
+a527 1
+    return len;
+d1517 13
+a1529 13
+		if (c > cell.maxcell && c < MAXCELL) {
+		    cell.maxcell++;
+		    cell.row[cell.maxcell] = j;
+		    cell.rowspan[cell.maxcell] = rowspan;
+		    cell.height[cell.maxcell] = 0;
+		    if (cell.maxcell > k)
+			bcopy(cell.index + k, cell.index + k + 1, cell.maxcell - k);
+		    cell.index[k] = cell.maxcell;
+		}
+		if (c <= cell.maxcell && c >= 0 &&
+		    cell.height[c] < t_dep) {
+		    cell.height[c] = t_dep;
+		    continue;
+d1531 1
+d1649 1
+a1649 2
+    TextLineList *tl;
+    Str tmp;
+d1654 4
+a1657 3
+    if (t->total_width <= 0)
+	t->total_width = h_env->limit;
+
+d1659 1
+a1659 1
+	      t->total_width, h_env->envs[h_env->envc].indent);
+d1664 8
+a1671 12
+    tl = henv.buf;
+
+    if (tl->nitem > 0) {
+	TextLineListItem *ti;
+	tmp = Strnew_charp("<pre for_table>");
+	for (ti = tl->first; ti != NULL; ti = ti->next) {
+	    Strcat(tmp, ti->ptr->line);
+	    Strcat_char(tmp, '\n');
+	}
+	Strcat_charp(tmp, "</pre>");
+	HTMLlineproc1(tmp->ptr, h_env);
+    }
+d1680 1
+a1680 1
+    Str renderbuf = Strnew();
+d1688 1
+d1837 2
+d1844 1
+a1844 1
+	idtag = Sprintf("<_id id=\"%s\">", htmlquote_str((t->id)->ptr));
+d1853 1
+a1853 1
+	push_render_image(renderbuf, t->total_width, h_env);
+d1892 1
+a1892 1
+				htmlquote_str((t->tridvalue[r])->ptr));
+d1901 1
+a1901 1
+				    htmlquote_str((t->tabidvalue[r][i])->ptr));
+d1930 1
+a1930 1
+	    push_render_image(renderbuf, t->total_width, h_env);
+d1935 1
+a1935 1
+	    push_render_image(renderbuf, t->total_width, h_env);
+d1944 1
+a1944 1
+	push_render_image(renderbuf, t->total_width, h_env);
+d1952 1
+a1952 1
+	push_render_image(renderbuf, t->total_width, h_env);
+d2253 1
+a2253 1
+		if (ec) {
+d2256 1
+a2256 1
+		    len = strlen(conv_latin1(ec));
+d2420 13
+a2454 11
+    if (mode->pre_mode & TBLM_IGNORE) {
+	switch (cmd) {
+	case HTML_N_STYLE:
+	    mode->pre_mode &= ~TBLM_STYLE;
+	case HTML_N_SCRIPT:
+	    mode->pre_mode &= ~TBLM_SCRIPT;
+	default:
+	    return TAG_ACTION_NONE;
+	}
+    }
+
+d2731 1
+d2752 3
+a2807 1
+#ifdef NEW_FORM
+a2813 15
+#else				/* not NEW_FORM */
+    case HTML_FORM:
+    case HTML_N_FORM:
+	feed_table_block_tag(tbl, "<br>", mode, 0, HTML_BR);
+	if (line[1] == '/') {
+	    tok = Strnew_charp("</form_int ");
+	    Strcat_charp(tok, line + 6);
+	}
+	else {
+	    tok = Strnew_charp("<form_int ");
+	    Strcat_charp(tok, line + 5);
+	}
+	pushdata(tbl, tbl->row, tbl->col, tok->ptr);
+	break;
+#endif				/* not NEW_FORM */
+d3017 24
+a3040 9
+		    ec = getescapechar(&p);
+		    r = conv_latin1(ec);
+		    if (r != NULL && strlen(r) == 1 &&
+			ec == (unsigned char)*r) {
+			Strcat_char(tmp, *r);
+		    }
+		    else {
+			Strcat_char(tmp, *q);
+			p = q + 1;
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

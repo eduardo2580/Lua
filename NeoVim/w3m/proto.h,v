@@ -1,0 +1,5069 @@
+head	1.104;
+access;
+symbols
+	release-0-5-3:1.104
+	release-0-5-2:1.101
+	release-0-5-1:1.99
+	release-0-5:1.97
+	release-0-4-2:1.95
+	release-0-4-1:1.91
+	release-0-4:1.91
+	release-0-4-rc3:1.91
+	release-0-4-rc2:1.90
+	release-0-4-rc1:1.90
+	release-0-3-2-2:1.48
+	release-0-3-2-1:1.48
+	branch-0-3-2:1.48.0.2
+	release-0-3-2:1.48
+	release-0-3-2-rc4:1.48
+	release-0-3-2-rc3:1.47
+	release-0-3-2-rc2:1.47
+	release-0-3-2-rc1:1.47
+	release-0-3-1:1.44
+	release-0-3:1.37
+	release-0-2-5-1:1.32
+	branch-0-2-5:1.32.0.2
+	release-0-2-5:1.32
+	release-0-2-4:1.22
+	release-0-2-3-2:1.17
+	release-0-2-3-1:1.17
+	release-0-2-3:1.17
+	inu-0-2-2-rel-1-1:1.3.2.1
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.104
+date	2010.07.25.09.55.05;	author htrb;	state Exp;
+branches;
+next	1.103;
+
+1.103
+date	2010.07.19.23.34.01;	author htrb;	state Exp;
+branches;
+next	1.102;
+
+1.102
+date	2010.07.18.14.10.09;	author htrb;	state Exp;
+branches;
+next	1.101;
+
+1.101
+date	2006.04.07.13.21.12;	author inu;	state Exp;
+branches;
+next	1.100;
+
+1.100
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.99;
+
+1.99
+date	2004.04.16.18.47.19;	author ukai;	state Exp;
+branches;
+next	1.98;
+
+1.98
+date	2004.03.23.16.44.02;	author ukai;	state Exp;
+branches;
+next	1.97;
+
+1.97
+date	2003.10.05.18.52.51;	author ukai;	state Exp;
+branches;
+next	1.96;
+
+1.96
+date	2003.09.22.21.02.20;	author ukai;	state Exp;
+branches;
+next	1.95;
+
+1.95
+date	2003.07.26.17.16.24;	author ukai;	state Exp;
+branches;
+next	1.94;
+
+1.94
+date	2003.07.22.17.33.16;	author ukai;	state Exp;
+branches;
+next	1.93;
+
+1.93
+date	2003.07.22.17.24.49;	author ukai;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2003.04.08.16.01.40;	author ukai;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2003.02.18.15.43.25;	author ukai;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2003.02.06.17.21.44;	author ukai;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2003.02.06.17.15.13;	author ukai;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2003.02.05.16.44.00;	author ukai;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2003.01.30.16.39.40;	author ukai;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2003.01.29.17.38.15;	author ukai;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2003.01.29.17.10.51;	author ukai;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2003.01.23.18.37.21;	author ukai;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2003.01.22.16.10.28;	author ukai;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2003.01.20.15.54.11;	author ukai;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2003.01.20.15.30.20;	author ukai;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2003.01.17.16.57.20;	author ukai;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2003.01.15.17.13.22;	author ukai;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2003.01.11.15.54.09;	author ukai;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2003.01.06.15.37.00;	author ukai;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.12.27.16.07.44;	author ukai;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.12.24.17.28.49;	author ukai;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.12.18.16.20.54;	author ukai;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.12.14.15.18.38;	author ukai;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.12.13.02.19.01;	author ukai;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.12.12.23.55.30;	author ukai;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.12.11.15.07.53;	author ukai;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.12.10.15.51.15;	author ukai;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.12.09.15.51.09;	author ukai;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.12.05.16.29.10;	author ukai;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.12.04.16.45.41;	author ukai;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.12.03.16.01.44;	author ukai;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.11.26.17.05.25;	author ukai;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.11.25.16.57.17;	author ukai;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.11.24.16.02.22;	author ukai;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.11.22.15.49.44;	author ukai;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.11.22.15.43.14;	author ukai;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.11.21.16.31.36;	author ukai;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.11.21.16.15.58;	author ukai;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.11.19.17.40.34;	author ukai;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.11.15.15.19.46;	author ukai;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.11.10.11.59.15;	author ukai;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.11.09.21.55.24;	author ukai;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.11.05.17.10.07;	author ukai;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.11.05.16.03.14;	author ukai;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.11.05.15.56.14;	author ukai;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.10.30.15.39.41;	author ukai;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.09.24.16.35.02;	author ukai;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.09.05.15.43.22;	author ukai;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.08.20.17.49.39;	author ukai;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.06.09.16.09.25;	author ukai;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.06.01.17.09.05;	author ukai;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.06.01.16.50.16;	author ukai;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.04.24.18.29.35;	author ukai;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.03.19.16.06.52;	author ukai;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.03.15.18.33.32;	author ukai;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.03.14.15.41.54;	author ukai;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.03.05.16.58.09;	author ukai;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.02.19.15.50.18;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.02.05.12.31.27;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.01.31.18.28.24;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.01.31.17.54.56;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.01.31.03.55.35;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.01.30.15.08.48;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.01.29.19.08.50;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.01.22.16.59.11;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.01.21.17.57.28;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.01.17.11.06.45;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.01.16.16.49.54;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.01.16.15.37.07;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.01.14.15.59.17;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.01.11.20.05.58;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.12.26.18.29.33;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.12.26.18.17.57;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.12.25.18.15.00;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.12.25.13.43.51;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.12.25.12.41.08;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.12.10.17.02.44;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.12.10.15.42.38;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.12.10.15.04.09;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.12.09.13.59.04;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.12.04.16.33.08;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.12.03.18.17.51;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.11.30.09.54.22;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.11.29.09.34.15;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.11.27.18.29.24;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.11.23.19.00.47;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.21.19.24.35;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.20.08.20.56;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.20.04.11.16;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches
+	1.3.2.1;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.28;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.28;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.3.2.1
+date	2001.11.22.17.52.28;	author inu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.104
+log
+@* merge ambiguous width patch
+* http://www.j10n.org/files/w3m-cvs-1.914-ambwidth.patch
+@
+text
+@/* $Id: proto.h,v 1.103 2010/07/19 23:34:01 htrb Exp $ */
+/* 
+ *   This file was automatically generated by version 1.7 of cextract.
+ *   Manual editing not recommended.
+ *
+ *   Created: Wed Feb 10 12:47:03 1999
+ */
+extern int main(int argc, char **argv, char **envp);
+extern void nulcmd(void);
+extern void pushEvent(int cmd, void *data);
+extern MySignalHandler intTrap(SIGNAL_ARG);
+extern void pgFore(void);
+extern void pgBack(void);
+extern void lup1(void);
+extern void ldown1(void);
+extern void ctrCsrV(void);
+extern void ctrCsrH(void);
+extern void rdrwSc(void);
+extern void srchfor(void);
+extern void isrchfor(void);
+extern void srchbak(void);
+extern void isrchbak(void);
+extern void srchnxt(void);
+extern void srchprv(void);
+extern void shiftl(void);
+extern void shiftr(void);
+extern void col1R(void);
+extern void col1L(void);
+extern void setEnv(void);
+extern void pipeBuf(void);
+extern void pipesh(void);
+extern void readsh(void);
+extern void execsh(void);
+extern void ldfile(void);
+extern void ldhelp(void);
+extern void movL(void);
+extern void movL1(void);
+extern void movD(void);
+extern void movD1(void);
+extern void movU(void);
+extern void movU1(void);
+extern void movR(void);
+extern void movR1(void);
+extern void movLW(void);
+extern void movRW(void);
+extern void qquitfm(void);
+extern void quitfm(void);
+extern void selBuf(void);
+extern void susp(void);
+extern void goLine(void);
+extern void goLineF(void);
+extern void goLineL(void);
+extern void linbeg(void);
+extern void linend(void);
+extern void editBf(void);
+extern void editScr(void);
+extern void followA(void);
+extern void bufferA(void);
+extern void followI(void);
+extern void submitForm(void);
+extern void followForm(void);
+extern void topA(void);
+extern void lastA(void);
+extern void onA(void);
+
+extern void nextA(void);
+extern void prevA(void);
+extern void nextVA(void);
+extern void prevVA(void);
+extern void nextL(void);
+extern void nextLU(void);
+extern void nextR(void);
+extern void nextRD(void);
+extern void nextD(void);
+extern void nextU(void);
+extern void nextBf(void);
+extern void prevBf(void);
+extern void backBf(void);
+extern void deletePrevBuf(void);
+extern void goURL(void);
+extern void gorURL(void);
+extern void ldBmark(void);
+extern void adBmark(void);
+extern void ldOpt(void);
+extern void setOpt(void);
+extern void pginfo(void);
+extern void msgs(void);
+extern void svA(void);
+extern void svI(void);
+extern void svBuf(void);
+extern void svSrc(void);
+extern void peekURL(void);
+extern void peekIMG(void);
+extern void curURL(void);
+extern void vwSrc(void);
+extern void reload(void);
+extern void reshape(void);
+extern void chkURL(void);
+extern void chkURLBuffer(Buffer *buf);
+extern void chkWORD(void);
+#ifdef USE_NNTP
+extern void chkNMID(void);
+extern void chkNMIDBuffer(Buffer *buf);
+#else
+#define chkNMID nulcmd
+#endif
+extern void rFrame(void);
+extern void extbrz(void);
+extern void linkbrz(void);
+extern void curlno(void);
+extern void execCmd(void);
+#ifdef USE_IMAGE
+extern void dispI(void);
+extern void stopI(void);
+#else
+#define dispI nulcmd
+#define stopI nulcmd
+#endif
+#ifdef USE_ALARM
+extern void setAlarm(void);
+extern AlarmEvent *setAlarmEvent(AlarmEvent * event, int sec, short status,
+				 int cmd, void *data);
+#else
+#define setAlarm nulcmd
+#endif
+extern void reinit(void);
+extern void defKey(void);
+extern void newT(void);
+extern void closeT(void);
+extern void nextT(void);
+extern void prevT(void);
+extern void tabA(void);
+extern void tabURL(void);
+extern void tabrURL(void);
+extern void tabR(void);
+extern void tabL(void);
+extern void ldDL(void);
+extern void linkLst(void);
+#ifdef USE_MENU
+extern void linkMn(void);
+extern LinkList *link_menu(Buffer *buf);
+extern void accessKey(void);
+extern Anchor *accesskey_menu(Buffer *buf);
+extern void listMn(void);
+extern void movlistMn(void);
+extern Anchor *list_menu(Buffer *buf);
+#else
+#define linkMn nulcmd
+#define accessKey nulcmd
+#define listMn nulcmd
+#define movlistMn nulcmd
+#endif
+extern void undoPos(void);
+extern void redoPos(void);
+
+extern int currentLn(Buffer *buf);
+extern void tmpClearBuffer(Buffer *buf);
+extern char *filename_extension(char *patch, int is_url);
+#ifdef USE_EXTERNAL_URI_LOADER
+extern void initURIMethods();
+extern Str searchURIMethods(ParsedURL *pu);
+extern void chkExternalURIBuffer(Buffer *buf);
+#endif
+extern ParsedURL *schemeToProxy(int scheme);
+extern void examineFile(char *path, URLFile *uf);
+extern char *acceptableEncoding();
+extern int dir_exist(char *path);
+extern int is_html_type(char *type);
+#ifdef USE_M17N
+extern char **get_symbol(wc_ces charset, int *width);
+extern char **set_symbol(int width);
+extern Str convertLine(URLFile *uf, Str line, int mode, wc_ces * charset,
+		       wc_ces doc_charset);
+#else
+extern char **get_symbol(void);
+extern Str convertLine0(URLFile *uf, Str line, int mode);
+#define convertLine(uf,line,mode,charset,dcharset) convertLine0(uf,line,mode)
+#endif
+extern void push_symbol(Str str, char symbol, int width, int n);
+#ifdef USE_UNICODE
+extern void update_utf8_symbol(void);
+#endif
+extern Buffer *loadFile(char *path);
+extern Buffer *loadGeneralFile(char *path, ParsedURL *current, char *referer,
+			       int flag, FormList *request);
+extern int is_boundary(unsigned char *, unsigned char *);
+extern int is_blank_line(char *line, int indent);
+extern void push_render_image(Str str, int width, int limit,
+			      struct html_feed_environ *h_env);
+extern void flushline(struct html_feed_environ *h_env, struct readbuffer *obuf,
+		      int indent, int force, int width);
+extern void do_blankline(struct html_feed_environ *h_env,
+			 struct readbuffer *obuf, int indent, int indent_incr,
+			 int width);
+extern void purgeline(struct html_feed_environ *h_env);
+extern void save_fonteffect(struct html_feed_environ *h_env,
+			    struct readbuffer *obuf);
+extern void restore_fonteffect(struct html_feed_environ *h_env,
+			       struct readbuffer *obuf);
+#ifdef USE_IMAGE
+extern void deleteImage(Buffer *buf);
+extern void getAllImage(Buffer *buf);
+extern void loadImage(Buffer *buf, int flag);
+extern ImageCache *getImage(Image * image, ParsedURL *current, int flag);
+extern int getImageSize(ImageCache * cache);
+#endif
+extern Str process_img(struct parsed_tag *tag, int width);
+extern Str process_anchor(struct parsed_tag *tag, char *tagbuf);
+extern Str process_input(struct parsed_tag *tag);
+extern Str process_select(struct parsed_tag *tag);
+extern Str process_n_select(void);
+extern void feed_select(char *str);
+extern void process_option(void);
+extern Str process_textarea(struct parsed_tag *tag, int width);
+extern Str process_n_textarea(void);
+extern void feed_textarea(char *str);
+extern Str process_form(struct parsed_tag *tag);
+extern Str process_n_form(void);
+extern int getMetaRefreshParam(char *q, Str *refresh_uri);
+extern int HTMLtagproc1(struct parsed_tag *tag,
+			struct html_feed_environ *h_env);
+extern void HTMLlineproc2(Buffer *buf, TextLineList *tl);
+extern void HTMLlineproc0(char *istr, struct html_feed_environ *h_env,
+			  int internal);
+#define HTMLlineproc1(x,y) HTMLlineproc0(x,y,TRUE)
+extern Buffer *loadHTMLBuffer(URLFile *f, Buffer *newBuf);
+extern char *convert_size(clen_t size, int usefloat);
+extern char *convert_size2(clen_t size1, clen_t size2, int usefloat);
+extern void showProgress(clen_t * linelen, clen_t * trbyte);
+extern void init_henv(struct html_feed_environ *, struct readbuffer *,
+		      struct environment *, int, TextLineList *, int, int);
+extern void completeHTMLstream(struct html_feed_environ *,
+			       struct readbuffer *);
+extern void loadHTMLstream(URLFile *f, Buffer *newBuf, FILE * src,
+			   int internal);
+extern Buffer *loadHTMLString(Str page);
+#ifdef USE_GOPHER
+extern Str loadGopherDir(URLFile *uf, ParsedURL *pu, wc_ces * charset);
+#endif				/* USE_GOPHER */
+extern Buffer *loadBuffer(URLFile *uf, Buffer *newBuf);
+#ifdef USE_IMAGE
+extern Buffer *loadImageBuffer(URLFile *uf, Buffer *newBuf);
+#endif
+extern void saveBuffer(Buffer *buf, FILE * f, int cont);
+extern void saveBufferBody(Buffer *buf, FILE * f, int cont);
+extern Buffer *getshell(char *cmd);
+extern Buffer *getpipe(char *cmd);
+extern Buffer *openPagerBuffer(InputStream stream, Buffer *buf);
+extern Buffer *openGeneralPagerBuffer(InputStream stream);
+extern Line *getNextPage(Buffer *buf, int plen);
+extern int save2tmp(URLFile uf, char *tmpf);
+extern int doExternal(URLFile uf, char *path, char *type, Buffer **bufp,
+		      Buffer *defaultbuf);
+extern int _doFileCopy(char *tmpf, char *defstr, int download);
+#define doFileCopy(tmpf, defstr) _doFileCopy(tmpf, defstr, FALSE);
+extern int doFileMove(char *tmpf, char *defstr);
+extern int doFileSave(URLFile uf, char *defstr);
+extern int checkCopyFile(char *path1, char *path2);
+extern int checkSaveFile(InputStream stream, char *path);
+extern int checkOverWrite(char *path);
+extern char *inputAnswer(char *prompt);
+extern int matchattr(char *p, char *attr, int len, Str *value);
+extern void readHeader(URLFile *uf, Buffer *newBuf, int thru, ParsedURL *pu);
+extern char *checkHeader(Buffer *buf, char *field);
+extern TabBuffer *newTab(void);
+extern void calcTabPos(void);
+extern TabBuffer *deleteTab(TabBuffer * tab);
+extern void addDownloadList(pid_t pid, char *url, char *save, char *lock,
+			    clen_t size);
+extern void stopDownload(void);
+extern int checkDownloadList(void);
+extern void download_action(struct parsed_tagarg *arg);
+extern Buffer *newBuffer(int width);
+extern Buffer *nullBuffer(void);
+extern void clearBuffer(Buffer *buf);
+extern void discardBuffer(Buffer *buf);
+extern Buffer *namedBuffer(Buffer *first, char *name);
+extern Buffer *deleteBuffer(Buffer *first, Buffer *delbuf);
+extern Buffer *replaceBuffer(Buffer *first, Buffer *delbuf, Buffer *newbuf);
+extern Buffer *nthBuffer(Buffer *firstbuf, int n);
+extern void gotoRealLine(Buffer *buf, int n);
+extern void gotoLine(Buffer *buf, int n);
+extern Buffer *selectBuffer(Buffer *firstbuf, Buffer *currentbuf,
+			    char *selectchar);
+extern void reshapeBuffer(Buffer *buf);
+extern void copyBuffer(Buffer *a, Buffer *b);
+extern Buffer *prevBuffer(Buffer *first, Buffer *buf);
+extern int writeBufferCache(Buffer *buf);
+extern int readBufferCache(Buffer *buf);
+extern void fmTerm(void);
+extern void fmInit(void);
+extern void displayBuffer(Buffer *buf, int mode);
+extern void addChar(char c, Lineprop mode);
+#ifdef USE_M17N
+extern void addMChar(char *c, Lineprop mode, size_t len);
+#endif
+extern void record_err_message(char *s);
+extern Buffer *message_list_panel(void);
+extern void message(char *s, int return_x, int return_y);
+extern void disp_err_message(char *s, int redraw_current);
+extern void disp_message_nsec(char *s, int redraw_current, int sec, int purge,
+			      int mouse);
+extern void disp_message(char *s, int redraw_current);
+#ifdef USE_MOUSE
+extern void disp_message_nomouse(char *s, int redraw_current);
+#else
+#define disp_message_nomouse disp_message
+#endif
+extern void set_delayed_message(char *s);
+extern void cursorUp0(Buffer *buf, int n);
+extern void cursorUp(Buffer *buf, int n);
+extern void cursorDown0(Buffer *buf, int n);
+extern void cursorDown(Buffer *buf, int n);
+extern void cursorUpDown(Buffer *buf, int n);
+extern void cursorRight(Buffer *buf, int n);
+extern void cursorLeft(Buffer *buf, int n);
+extern void cursorHome(Buffer *buf);
+extern void arrangeCursor(Buffer *buf);
+extern void arrangeLine(Buffer *buf);
+extern void cursorXY(Buffer *buf, int x, int y);
+extern void restorePosition(Buffer *buf, Buffer *orig);
+extern int columnSkip(Buffer *buf, int offset);
+extern int columnPos(Line *line, int column);
+extern int columnLen(Line *line, int column);
+extern Line *lineSkip(Buffer *buf, Line *line, int offset, int last);
+extern Line *currentLineSkip(Buffer *buf, Line *line, int offset, int last);
+extern int gethtmlcmd(char **s);
+#ifndef USE_ANSI_COLOR
+#define checkType(a,b,c) _checkType(a,b)
+#endif
+extern Str checkType(Str s, Lineprop **oprop, Linecolor **ocolor);
+extern int calcPosition(char *l, Lineprop *pr, int len, int pos, int bpos,
+			int mode);
+extern char *lastFileName(char *path);
+extern char *mybasename(char *s);
+extern char *mydirname(char *s);
+extern int next_status(char c, int *status);
+extern int read_token(Str buf, char **instr, int *status, int pre, int append);
+extern Str correct_irrtag(int status);
+#ifdef USE_MIGEMO
+extern void init_migemo(void);
+#endif
+#ifdef USE_M17N
+extern char *conv_search_string(char *str, wc_ces f_ces);
+#else
+#define conv_search_string(str, f_ces)	str
+#endif
+extern int forwardSearch(Buffer *buf, char *str);
+extern int backwardSearch(Buffer *buf, char *str);
+extern void pcmap(void);
+extern void escmap(void);
+extern void escbmap(void);
+extern void escdmap(char c);
+extern void multimap(void);
+extern char *inputLineHistSearch(char *prompt, char *def_str, int flag,
+				 Hist *hist, int (*incfunc) (int ch, Str buf,
+							     Lineprop *prop));
+extern Str unescape_spaces(Str s);
+#ifdef USE_HISTORY
+extern Buffer *historyBuffer(Hist *hist);
+extern void loadHistory(Hist *hist);
+extern void saveHistory(Hist *hist, size_t size);
+extern void ldHist(void);
+#else				/* not USE_HISTORY */
+#define ldHist nulcmd
+#endif				/* not USE_HISTORY */
+extern double log_like(int x);
+extern struct table *newTable(void);
+extern void pushdata(struct table *t, int row, int col, char *data);
+extern int visible_length(char *str);
+extern void align(TextLine *lbuf, int width, int mode);
+extern void print_item(struct table *t, int row, int col, int width, Str buf);
+extern void print_sep(struct table *t, int row, int type, int maxcol, Str buf);
+extern void do_refill(struct table *tbl, int row, int col, int maxlimit);
+extern void renderTable(struct table *t, int max_width,
+			struct html_feed_environ *h_env);
+extern struct table *begin_table(int border, int spacing, int padding,
+				 int vspace);
+extern void end_table(struct table *tbl);
+extern void check_rowcol(struct table *tbl, struct table_mode *mode);
+extern int minimum_length(char *line);
+extern int feed_table(struct table *tbl, char *line, struct table_mode *mode,
+		      int width, int internal);
+extern void feed_table1(struct table *tbl, Str tok, struct table_mode *mode,
+			int width);
+extern void pushTable(struct table *, struct table *);
+extern struct form_list *newFormList(char *action, char *method, char *charset,
+				     char *enctype, char *target, char *name,
+				     struct form_list *_next);
+extern struct form_item_list *formList_addInput(struct form_list *fl,
+						struct parsed_tag *tag);
+extern char *form2str(FormItemList *fi);
+extern int formtype(char *typestr);
+extern void formRecheckRadio(Anchor *a, Buffer *buf, FormItemList *form);
+extern void formResetBuffer(Buffer *buf, AnchorList *formitem);
+extern void formUpdateBuffer(Anchor *a, Buffer *buf, FormItemList *form);
+extern void preFormUpdateBuffer(Buffer *buf);
+extern Str textfieldrep(Str s, int width);
+extern void input_textarea(FormItemList *fi);
+extern void do_internal(char *action, char *data);
+extern void form_write_data(FILE * f, char *boundary, char *name, char *value);
+extern void form_write_from_file(FILE * f, char *boundary, char *name,
+				 char *filename, char *file);
+extern MapList *searchMapList(Buffer *buf, char *name);
+extern void follow_map(struct parsed_tagarg *arg);
+#if defined(MENU_MAP) || defined(USE_IMAGE)
+extern MapArea *follow_map_menu(Buffer *buf, char *name, Anchor *a_img, int x,
+				int y);
+#endif
+#ifndef MENU_MAP
+extern Buffer *follow_map_panel(Buffer *buf, char *name);
+#endif
+#ifdef USE_IMAGE
+extern int getMapXY(Buffer *buf, Anchor *a, int *x, int *y);
+extern MapArea *retrieveCurrentMapArea(Buffer *buf);
+#endif
+extern Anchor *retrieveCurrentMap(Buffer *buf);
+extern MapArea *newMapArea(char *url, char *target, char *alt, char *shape,
+			   char *coords);
+extern Buffer *page_info_panel(Buffer *buf);
+extern struct frame_body *newFrame(struct parsed_tag *tag, Buffer *buf);
+extern struct frameset *newFrameSet(struct parsed_tag *tag);
+extern void addFrameSetElement(struct frameset *f,
+			       union frameset_element element);
+extern void deleteFrame(struct frame_body *b);
+extern void deleteFrameSet(struct frameset *f);
+extern void deleteFrameSetElement(union frameset_element e);
+extern struct frameset *copyFrameSet(struct frameset *of);
+extern void pushFrameTree(struct frameset_queue **fqpp, struct frameset *fs,
+			  Buffer *buf);
+extern struct frameset *popFrameTree(struct frameset_queue **fqpp);
+extern void resetFrameElement(union frameset_element *f_element, Buffer *buf,
+			      char *referer, FormList *request);
+extern Buffer *renderFrame(Buffer *Cbuf, int force_reload);
+extern union frameset_element *search_frame(struct frameset *fset, char *name);
+extern int set_tty(void);
+extern void set_cc(int spec, int val);
+extern void close_tty(void);
+extern char *ttyname_tty(void);
+extern void reset_tty(void);
+extern MySignalHandler reset_exit(SIGNAL_ARG);
+extern MySignalHandler error_dump(SIGNAL_ARG);
+extern void set_int(void);
+extern void getTCstr(void);
+extern void setlinescols(void);
+extern void setupscreen(void);
+extern pid_t open_pipe_rw(FILE ** fr, FILE ** fw);
+extern int initscr(void);
+extern void move(int line, int column);
+#ifdef USE_M17N
+extern void addmch(char *p, size_t len);
+#endif
+extern void addch(char c);
+extern void wrap(void);
+extern void touch_line(void);
+extern void standout(void);
+extern void standend(void);
+extern void bold(void);
+extern void boldend(void);
+extern void underline(void);
+extern void underlineend(void);
+extern void graphstart(void);
+extern void graphend(void);
+extern int graph_ok(void);
+#ifdef USE_COLOR
+extern void setfcolor(int color);
+#ifdef USE_BG_COLOR
+extern void setbcolor(int color);
+#endif				/* USE_BG_COLOR */
+#endif				/* USE_COLOR */
+extern void refresh(void);
+extern void clear(void);
+#ifdef USE_RAW_SCROLL
+extern void scroll(int);
+extern void rscroll(int);
+#endif
+#if 0
+extern void need_clrtoeol(void);
+#endif
+extern void clrtoeol(void);
+extern void clrtoeolx(void);
+extern void clrtobot(void);
+extern void clrtobotx(void);
+extern void no_clrtoeol(void);
+extern void addstr(char *s);
+extern void addnstr(char *s, int n);
+extern void addnstr_sup(char *s, int n);
+extern void crmode(void);
+extern void nocrmode(void);
+extern void term_echo(void);
+extern void term_noecho(void);
+extern void term_raw(void);
+extern void term_cooked(void);
+extern void term_cbreak(void);
+extern void term_title(char *s);
+extern void flush_tty(void);
+extern void toggle_stand(void);
+extern char getch(void);
+extern void bell(void);
+extern int sleep_till_anykey(int sec, int purge);
+#ifdef USE_IMAGE
+extern void touch_cursor();
+#endif
+extern void initMimeTypes();
+extern void free_ssl_ctx();
+extern ParsedURL *baseURL(Buffer *buf);
+extern int openSocket(char *hostname, char *remoteport_name,
+		      unsigned short remoteport_num);
+extern void parseURL(char *url, ParsedURL *p_url, ParsedURL *current);
+extern void copyParsedURL(ParsedURL *p, ParsedURL *q);
+extern void parseURL2(char *url, ParsedURL *pu, ParsedURL *current);
+extern Str parsedURL2Str(ParsedURL *pu);
+extern int getURLScheme(char **url);
+extern void init_stream(URLFile *uf, int scheme, InputStream stream);
+Str HTTPrequestMethod(HRequest *hr);
+Str HTTPrequestURI(ParsedURL *pu, HRequest *hr);
+extern URLFile openURL(char *url, ParsedURL *pu, ParsedURL *current,
+		       URLOption *option, FormList *request,
+		       TextList *extra_header, URLFile *ouf,
+		       HRequest *hr, unsigned char *status);
+extern int mailcapMatch(struct mailcap *mcap, char *type);
+extern struct mailcap *searchMailcap(struct mailcap *table, char *type);
+extern void initMailcap();
+extern char *acceptableMimeTypes();
+extern struct mailcap *searchExtViewer(char *type);
+extern Str unquote_mailcap(char *qstr, char *type, char *name, char *attr,
+			   int *mc_stat);
+extern char *guessContentType(char *filename);
+extern TextList *make_domain_list(char *domain_list);
+extern int check_no_proxy(char *domain);
+extern InputStream openFTPStream(ParsedURL *pu, URLFile *uf);
+#ifdef USE_M17N
+extern Str loadFTPDir(ParsedURL *pu, wc_ces * charset);
+#else
+extern Str loadFTPDir0(ParsedURL *pu);
+#define loadFTPDir(pu,charset)	loadFTPDir0(pu)
+#endif
+extern void closeFTP(void);
+extern void disconnectFTP(void);
+#ifdef USE_NNTP
+extern InputStream openNewsStream(ParsedURL *pu);
+#ifdef USE_M17N
+extern Str loadNewsgroup(ParsedURL *pu, wc_ces * charset);
+#else
+extern Str loadNewsgroup0(ParsedURL *pu);
+#define loadNewsgroup(pu,charset) loadNewsgroup0(pu)
+#endif
+extern void closeNews(void);
+extern void disconnectNews(void);
+#endif
+extern AnchorList *putAnchor(AnchorList *al, char *url, char *target,
+			     Anchor **anchor_return, char *referer,
+			     char *title, unsigned char key, int line,
+			     int pos);
+extern Anchor *registerHref(Buffer *buf, char *url, char *target,
+			    char *referer, char *title, unsigned char key,
+			    int line, int pos);
+extern Anchor *registerName(Buffer *buf, char *url, int line, int pos);
+extern Anchor *registerImg(Buffer *buf, char *url, char *title, int line,
+			   int pos);
+extern Anchor *registerForm(Buffer *buf, FormList *flist,
+			    struct parsed_tag *tag, int line, int pos);
+extern int onAnchor(Anchor *a, int line, int pos);
+extern Anchor *retrieveAnchor(AnchorList *al, int line, int pos);
+extern Anchor *retrieveCurrentAnchor(Buffer *buf);
+extern Anchor *retrieveCurrentImg(Buffer *buf);
+extern Anchor *retrieveCurrentForm(Buffer *buf);
+extern Anchor *searchAnchor(AnchorList *al, char *str);
+extern Anchor *searchURLLabel(Buffer *buf, char *url);
+extern void reAnchorWord(Buffer *buf, Line *l, int spos, int epos);
+extern char *reAnchor(Buffer *buf, char *re);
+#ifdef USE_NNTP
+extern char *reAnchorNews(Buffer *buf, char *re);
+extern char *reAnchorNewsheader(Buffer *buf);
+#endif				/* USE_NNTP */
+extern void addMultirowsForm(Buffer *buf, AnchorList *al);
+extern Anchor *closest_next_anchor(AnchorList *a, Anchor *an, int x, int y);
+extern Anchor *closest_prev_anchor(AnchorList *a, Anchor *an, int x, int y);
+#ifdef USE_IMAGE
+void addMultirowsImg(Buffer *buf, AnchorList *al);
+#endif
+extern HmarkerList *putHmarker(HmarkerList *ml, int line, int pos, int seq);
+extern void shiftAnchorPosition(AnchorList *a, HmarkerList *hl, int line,
+				int pos, int shift);
+extern char *getAnchorText(Buffer *buf, AnchorList *al, Anchor *a);
+extern Buffer *link_list_panel(Buffer *buf);
+
+extern Str decodeB(char **ww);
+extern Str decodeQ(char **ww);
+extern Str decodeQP(char **ww);
+extern Str decodeU(char **ww);
+#ifdef USE_M17N
+extern Str decodeWord(char **ow, wc_ces * charset);
+extern Str decodeMIME(Str orgstr, wc_ces * charset);
+#else
+extern Str decodeWord0(char **ow);
+extern Str decodeMIME0(Str orgstr);
+#define decodeWord(ow,charset) decodeWord0(ow)
+#define decodeMIME(orgstr,charset) decodeMIME0(orgstr)
+#endif
+extern Str encodeB(char *a);
+extern int set_param_option(char *option);
+extern char *get_param_option(char *name);
+extern void init_rc(void);
+extern Buffer *load_option_panel(void);
+extern void panel_set_option(struct parsed_tagarg *);
+extern void sync_with_option(void);
+extern char *rcFile(char *base);
+extern char *etcFile(char *base);
+extern char *confFile(char *base);
+extern char *auxbinFile(char *base);
+extern char *libFile(char *base);
+extern char *helpFile(char *base);
+extern Str localCookie(void);
+extern Str loadLocalDir(char *dirname);
+extern void set_environ(char *var, char *value);
+extern FILE *localcgi_post(char *, char *, FormList *, char *);
+#define localcgi_get(u, q, r) localcgi_post((u), (q), NULL, (r))
+extern FILE *openSecretFile(char *fname);
+extern void loadPasswd(void);
+extern void loadPreForm(void);
+extern int find_auth_user_passwd(ParsedURL *pu, char *realm,
+				 Str *uname, Str *pwd, int is_proxy);
+extern void add_auth_user_passwd(ParsedURL *pu, char *realm,
+				 Str uname, Str pwd, int is_proxy);
+extern void invalidate_auth_user_passwd(ParsedURL *pu, char *realm,
+					Str uname, Str pwd, int is_proxy);
+extern char *last_modified(Buffer *buf);
+extern Str romanNumeral(int n);
+extern Str romanAlphabet(int n);
+extern void setup_child(int child, int i, int f);
+extern void myExec(char *command);
+extern void mySystem(char *command, int background);
+extern Str myExtCommand(char *cmd, char *arg, int redirect);
+extern Str myEditor(char *cmd, char *file, int line);
+extern char *file_to_url(char *file);
+#ifdef USE_M17N
+extern char *url_unquote_conv(char *url, wc_ces charset);
+#else
+extern char *url_unquote_conv0(char *url);
+#define url_unquote_conv(url, charset) url_unquote_conv0(url)
+#endif
+extern char *expandName(char *name);
+extern Str tmpfname(int type, char *ext);
+extern time_t mymktime(char *timestr);
+extern void (*mySignal(int signal_number, void (*action) (int))) (int);
+#ifdef USE_COOKIE
+extern char *FQDN(char *host);
+extern Str find_cookie(ParsedURL *pu);
+extern int add_cookie(ParsedURL *pu, Str name, Str value, time_t expires,
+		      Str domain, Str path, int flag, Str comment, int version,
+		      Str port, Str commentURL);
+extern void save_cookies(void);
+extern void load_cookies(void);
+extern void initCookie(void);
+extern void cooLst(void);
+extern Buffer *cookie_list_panel(void);
+extern void set_cookie_flag(struct parsed_tagarg *arg);
+extern int check_cookie_accept_domain(char *domain);
+#else				/* not USE_COOKIE */
+#define cooLst nulcmd
+#endif				/* not USE_COOKIE */
+#ifdef USE_M17N
+extern void docCSet(void);
+extern void defCSet(void);
+extern void change_charset(struct parsed_tagarg *arg);
+#else
+#define docCSet nulcmd
+#define defCSet nulcmd
+#endif
+
+#ifdef USE_MARK
+extern void _mark(void);
+extern void nextMk(void);
+extern void prevMk(void);
+extern void reMark(void);
+#else				/* not USE_MARK */
+#define _mark  nulcmd
+#define nextMk nulcmd
+#define prevMk nulcmd
+#define reMark nulcmd
+#endif				/* not USE_MARK */
+
+#ifdef USE_MOUSE
+extern void mouse(void);
+extern void mouse_init(void);
+extern void mouse_end(void);
+extern void mouse_active(void);
+extern void mouse_inactive(void);
+extern void msToggle(void);
+extern void movMs(void);
+#ifdef USE_MENU
+extern void menuMs(void);
+#else
+#define menuMs nulcmd
+#endif
+extern void tabMs(void);
+extern void closeTMs(void);
+#else				/* not USE_MOUSE */
+#define mouse nulcmd
+#define msToggle nulcmd
+#define movMs nulcmd
+#define menuMs nulcmd
+#define tabMs nulcmd
+#define closeTMs nulcmd
+#endif				/* not USE_MOUSE */
+
+#ifdef USE_IMAGE
+extern void initImage(void);
+extern void termImage(void);
+extern void addImage(ImageCache * cache, int x, int y, int sx, int sy, int w,
+		     int h);
+extern void drawImage(void);
+extern void clearImage(void);
+#endif
+
+extern char *searchKeyData(void);
+
+extern void setKeymap(char *p, int lineno, int verbose);
+extern void initKeymap(int force);
+extern int getFuncList(char *id);
+extern int getKey(char *s);
+extern char *getKeyData(int key);
+extern char *getWord(char **str);
+extern char *getQWord(char **str);
+#ifdef USE_MOUSE
+extern void initMouseAction(void);
+#endif
+
+#ifdef USE_MENU
+extern void new_menu(Menu *menu, MenuItem *item);
+extern void geom_menu(Menu *menu, int x, int y, int mselect);
+extern void draw_all_menu(Menu *menu);
+extern void draw_menu(Menu *menu);
+extern void draw_menu_item(Menu *menu, int mselect);
+extern int select_menu(Menu *menu, int mselect);
+extern void goto_menu(Menu *menu, int mselect, int down);
+extern void up_menu(Menu *menu, int n);
+extern void down_menu(Menu *menu, int n);
+extern int action_menu(Menu *menu);
+extern void popup_menu(Menu *parent, Menu *menu);
+extern void guess_menu_xy(Menu *menu, int width, int *x, int *y);
+extern void new_option_menu(Menu *menu, char **label, int *variable,
+			    void (*func) ());
+
+extern int setMenuItem(MenuItem *item, char *type, char *line);
+extern int addMenuList(MenuList **list, char *id);
+extern int getMenuN(MenuList *list, char *id);
+
+extern void popupMenu(int x, int y, Menu *menu);
+extern void mainMenu(int x, int y);
+extern void mainMn(void);
+extern void selMn(void);
+extern void tabMn(void);
+extern void optionMenu(int x, int y, char **label, int *variable, int initial,
+		       void (*func) ());
+extern void initMenu(void);
+#else				/* not USE_MENU */
+#define mainMn nulcmd
+#define selMn selBuf
+#define tabMn nulcmd
+#endif				/* not USE_MENU */
+
+#ifdef USE_DICT
+extern void dictword(void);
+extern void dictwordat(void);
+#else				/* not USE_DICT */
+#define dictword nulcmd
+#define dictwordat nulcmd
+#endif				/* not USE_DICT */
+#if 0
+extern void reloadBuffer(Buffer *buf);
+#endif
+extern char *guess_save_name(Buffer *buf, char *file);
+
+extern void wrapToggle(void);
+#ifdef USE_BUFINFO
+extern void saveBufferInfo(void);
+#endif
+
+extern Str getLinkNumberStr(int correction);
+
+extern void dispVer(void);
+
+#ifdef USE_INCLUDED_SRAND48
+void srand48(long);
+long lrand48(void);
+#endif
+
+#include "indep.h"
+@
+
+
+1.103
+log
+@* [w3m-dev 04321] Re: w3m's bugs from bugs.debian.org
+* http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=329862#20
+* table.c (feed_table_tag): check displayLinkNumber.
+* proto.h: add getLinkNumberStr().
+* main.c (do_dump): check displayLinkNumber.
+* fm.h: add global variable displayLinkNumber.
+* file.c
+(getLinkNumberStr): added.
+(process_input, process_select, HTMLtagproc1): check displayLinkNumber.
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.102 2010/07/18 14:10:09 htrb Exp $ */
+d180 3
+@
+
+
+1.102
+log
+@http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=242599#21
+* file.c
+(is_html_type): added.
+(examineFile, loadGeneralFile, _saveBuffer)
+(openGeneralPagerBuffer, reloadBuffer): use is_html_type() instead of strcasecmp().
+(loadGeneralFile): set f.guess_tupe
+* display.c
+(displayBuffer): use is_html_type() instead of strcasecmp().
+* buffer.c
+(reshapeBuffer): use is_html_type() instead of strcasecmp().
+* backend.c
+(internal_get): use is_html_type() instead of strcasecmp().
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.101 2006/04/07 13:21:12 inu Exp $ */
+d778 2
+@
+
+
+1.101
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.99 2004/04/16 18:47:19 ukai Exp $ */
+d168 1
+@
+
+
+1.100
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@a139 1
+extern void interpretAsMenu(void);
+a147 1
+#define interpretAsMenu nulcmd
+a494 3
+#ifdef USE_REMOTE
+char getch_select(int fd, int *num);
+#endif
+@
+
+
+1.99
+log
+@[w3m-dev 04064] authentication
+ closes: Bug#:244029: w3m: HTTP basic authentication annoyance
+* fm.h (auth_cookie): deleted
+* proto.h (find_auth_cookie): deleted
+	(add_auth_cookie): deleted
+	(add_auth_user_passwd): added
+	(invalidate_auth_user_passwd): added
+* etc.c (auth_pass): add bad flag
+		delete file
+	(dir_under): deleted
+	(add_auth_pass_entry): add override flag
+		no need to check file
+	(find_auth_pass_entry): delete file
+		check bad flag
+		check uname
+	(find_auth_user_passwd): find by pu->user
+	(add_auth_user_passwd): added
+	(invalidate_auth_user_passwd): added
+	(parsePasswd): add no override
+		ignore file
+	(find_auth): deleted
+	(find_auth_cookie): deleted
+	(dump_auth_cookie): deleted
+	(add_auth_cookie): deleted
+* file.c (getAuthCookie): add *uname, *pwd
+		rewrite
+	(loadGeneralFile): delete ss, add uname, pwd
+		use add_auth_user_passwd instead of add_auth_cookie
+* url.c (HTTPrequest): don't authorization here
+		it should be done in getAuthCookie in loadGeneralFile
+		through extra_header
+* ftp.c (openFTPStream): add uname
+		use find_auth_user_passwd instead of find_auth_cookie
+		use add_auth_user_passwd instead of add_auth_cookie
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.98 2004/03/23 16:44:02 ukai Exp $ */
+d140 1
+d149 1
+d497 3
+@
+
+
+1.98
+log
+@fix search problem on different charset page than display charset
+* proto.h (conv_search_string): added
+* search.c (migemostr): use conv_search_string
+	(conv_search_string): added
+* main.c (srchcore): use conv_search_string
+	(reMark): ditto
+* menu.c (menu_search_forward): ditto
+	(menu_search_backward): ditto
+	(menu_search_next_previous): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.97 2003/10/05 18:52:51 ukai Exp $ */
+d620 4
+a623 3
+extern Str find_auth_cookie(char *host, int port, char *file, char *realm);
+extern void add_auth_cookie(char *host, int port, char *file, char *realm,
+			    Str cookie);
+@
+
+
+1.97
+log
+@fix build error --disbable-m17n
+* config.h.in: undef USE_M17N, USE_UNICODE
+* etc.c (url_unquote_conv): USE_M17N
+* file.c (convertLine): USE_M17N
+	(loadHTMLStream): fix ifdef USE_IMAGE->USE_M17N
+	(loadBuffer): fix USE_M17N
+	(getNextPage): fix USE_M17N
+* fm.h (USE_M17N): don't define USE_M17N in case LANG == JA
+		(this should be done by configure)
+	(wc_ces): dummy typedef
+	(wc_Str_conv): fix non-m17n macro args
+	(wc_Str_conv_strict): ditto
+* ftp.c (loadFTPDir): fix undefined USE_M17N
+* mimehead.c (decodeWord): ditto
+	(decodeMIME): ditto
+* news.c (loadNewsgroup): ditto
+* proto.h (convertLine): ditto
+	(loadGopherDir): ditto
+	(loadFTPDir): ditto
+	(loadNewsgroup): ditto
+	(decodeWord): ditto
+	(decodeMIME): ditto
+	(url_unquote_conv): ditto
+* terms.c (SETCH): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.96 2003/09/22 21:02:20 ukai Exp $ */
+d339 5
+@
+
+
+1.96
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.95 2003/07/26 17:16:24 ukai Exp $ */
+d171 2
+a173 1
+#define convertLine(a,b,c,d,e) _convertLine(a,b,c)
+d175 2
+a177 2
+extern Str convertLine(URLFile *uf, Str line, int mode, wc_ces * charset,
+		       wc_ces doc_charset);
+a233 3
+#ifndef USE_M17N
+#define loadGopherDir(a,b,c) _loadGopherDir(a,b)
+#endif
+d523 5
+a527 2
+#ifndef USE_M17N
+#define loadFTPDir(a,b) _loadFTPDir(a)
+a528 1
+extern Str loadFTPDir(ParsedURL *pu, wc_ces * charset);
+d533 5
+a537 2
+#ifndef USE_M17N
+#define loadNewsgroup(a,b) _loadNewsgroup(a)
+a538 1
+extern Str loadNewsgroup(ParsedURL *pu, wc_ces * charset);
+d583 1
+a583 4
+#ifndef USE_M17N
+#define decodeWord(a,b) _decodeWord(a)
+#define decodeMIME(a,b) _decodeMIME(a)
+#endif
+d586 6
+d627 5
+a631 2
+#ifndef USE_M17N
+#define url_unquote_conv(a,b) _url_unquote_conv(a)
+a632 1
+extern char *url_unquote_conv(char *url, wc_ces charset);
+@
+
+
+1.95
+log
+@[w3m-dev 03945] Re: application/xhtml+xml support
+* Makefile.in (ETC_DIR): added
+	(CONF_DIR): added
+	(DEFS): add CONF_DIR
+	(MAKE_ARGS): add CONF_DIR
+* config.h.in (SYS_MAILCAP): use CONF_DIR
+	(SYS_URIMETHODMAP): use CONF_DIR
+* func.c (sys_current_keymap_file): added
+	(interpret_keymap): added
+	(initKeymap): use interpret_keymap
+	(interpret_mouse_action): added
+	(initMouseAction): use interpret_mouse_action
+* indep.c (w3m_conf_dir): added
+* indep.h (w3m_conf_dir): added
+* menu.c (interpret_menu): added
+	(initMenu): use interpret_menu
+* proto.h (confFile): added
+* rc.c (init_rc): read config file by interpret_rc
+	(confFile): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.94 2003/07/22 17:33:16 ukai Exp $ */
+d168 10
+a177 1
+extern Str convertLine(URLFile *uf, Str line, char *code, int mode);
+d181 1
+a181 1
+extern int is_boundary(int, int);
+d233 4
+a236 1
+extern Str loadGopherDir(URLFile *uf, ParsedURL *pu, char *code);
+d292 3
+a441 5
+extern int write1(char c);
+extern void endline(void);
+extern void switch_ascii(FILE * f);
+extern void switch_wchar(FILE * f);
+extern void putchars(unsigned char c1, unsigned char c2, FILE * f);
+d443 3
+a496 12
+#ifdef JP_CHARSET
+extern char *GetSICode(char key);
+extern char *GetSOCode(char key);
+extern Str conv_str(Str is, char fc, char tc);
+extern Str conv(char *is, char fc, char tc);
+extern char checkShiftCode(Str buf, unsigned char hint);
+extern char str_to_code(char *str);
+extern char *code_to_str(char code);
+extern void put_sjis(Str os, unsigned char ub, unsigned char lb);
+#else
+#define conv_str(is, fc, tc) (is)
+#endif				/* JP_CHARSET */
+d525 4
+a528 1
+extern Str loadFTPDir(ParsedURL *pu, char *code);
+d533 4
+a536 1
+extern Str loadNewsgroup(ParsedURL *pu, char *code);
+d572 2
+d581 6
+a586 2
+extern Str decodeWord(char **ow);
+extern Str decodeMIME(char *orgstr);
+d622 2
+a623 2
+#ifndef JP_CHARSET
+#define url_unquote_conv(x,y) _url_unquote_conv(x)
+d625 1
+a625 1
+extern char *url_unquote_conv(char *url, char code);
+d646 8
+@
+
+
+1.94
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.93 2003/07/22 17:24:49 ukai Exp $ */
+d583 1
+@
+
+
+1.93
+log
+@[w3m-dev 03939] next/prev visited link
+* funcname.tab (NEXT_VISITED): added
+	(PREV_VISITED): added
+* main.c (_nextA): added
+	(_prevA): added
+	(nextVA): added
+	(prevVA): added
+* proto.h (nextVA): added
+	(prevVA): added
+* doc/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* doc-jp/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* NEWS: func: NEXT_VISITED, PREV_VISITED
+From: Yoshinobu Sakane <sakane@@d4.bsd.nes.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.92 2003/04/08 16:01:40 ukai Exp $ */
+d121 1
+a121 1
+extern AlarmEvent *setAlarmEvent(AlarmEvent *event, int sec, short status,
+d215 1
+a215 1
+extern void showProgress(clen_t *linelen, clen_t *trbyte);
+d253 1
+a253 1
+extern TabBuffer *deleteTab(TabBuffer *tab);
+d425 1
+a425 1
+extern pid_t open_pipe_rw(FILE **fr, FILE **fw);
+d615 1
+a615 1
+extern void (*mySignal(int signal_number, void (*action)(int)))(int);
+@
+
+
+1.92
+log
+@[w3m] local cookie string is too easy to guess.
+* fm.h (Local_cookie): deleted
+* local.c (Local_cookie): static
+	(writeLocalCookie): localCookie()
+	(setLocalCookie): deleted
+	(localCookie): added
+* main.c (main): delete srand48(), setLocalCookie()
+	(adBmark): s/Local_cookie/localCookie()/
+* proto.h (setLocalCookie): deleted
+	(localCookie): added
+* rc.c (load_option_panel): s/Local_cookie/localCookie()/
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.91 2003/02/18 15:43:25 ukai Exp $ */
+d68 2
+@
+
+
+1.91
+log
+@[w3m-dev 03758] Re: SVR4 signal behavior
+* etc.c (reset_signals): use mySignal()
+	(setup_child): ditto
+	(myExec): ditto
+	(mySignal): added, use sigaction if available
+* fm.h (TRAP_ON): use mySignal
+	(TRAP_OFF): ditto
+* istream.c (ISclose): ditto
+* main.c (sig_chld): ditto
+	(main): ditto
+	(do_dump): ditto
+	(resize_hook): ditto
+	(resize_handler): ditto
+	(srchcore): ditto
+	(readsh): ditto
+	(SigAlarm): ditto
+* proto.h (mySignal): added
+* terms.c (error_dump): use mySignal()
+	(set_int): ditto
+	(mouse_init): ditto
+From: Atsushi YOKOYAMA <yoko-a@@cmh.fuchu.toshiba.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.90 2003/02/06 17:21:44 ukai Exp $ */
+d584 1
+a584 1
+extern void setLocalCookie(void);
+@
+
+
+1.90
+log
+@[w3m-dev 03735] Re: make error of checkType arg
+* etc.c (checkType): delete USE_ANSI_COLOR
+* file.c (addnewline): macro for USE_ANSI_COLOR
+	(readHeader): rewrite of USE_ANSI_COLOR
+	(HTMLlineproc2body): ditto
+	(addnewline2): ditto
+	(addnewline): ditto
+	(loadBuffer): ditto
+	(getNextPage): ditto
+* proto.h (checkType): macro for USE_ANSI_COLOR
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.89 2003/02/06 17:15:13 ukai Exp $ */
+d613 1
+@
+
+
+1.89
+log
+@[w3m-dev 03732] Re: scroll() is slow ?
+* configure (use_raw_scroll): added
+	(config.h) use_raw_scroll
+* config.h.dist (USE_RAW_SCROLL): added
+* display.c (displayBuffer): ifdef USE_RAW_SCROLL
+* proto.h (scroll): ifdef USE_RAW_SCROLL
+	(rscroll): ditto
+	(need_clrtoeol): if 0
+	(terms.c): if 0 need_clrtoeol
+	(scroll_raw): ifdef USE_RAW_SCROLL
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.88 2003/02/05 16:44:00 ukai Exp $ */
+d309 2
+a310 3
+extern Str checkType(Str s, Lineprop **oprop
+#ifdef USE_ANSI_COLOR
+		     , Linecolor **ocolor
+d312 1
+a312 1
+		     );
+@
+
+
+1.88
+log
+@[w3m-dev 03730] display decoded URL
+* anchor.c (link_list_panel): support DecodeURL
+* display.c (make_lastline_link): support DecodeURL
+* etc.c (url_unquote_conv): added
+* fm.h (DecodeURL): added
+* history.c (historyBuffer): support DecodeURL
+* indep.c (QUOTE_MAP): added
+	(HTML_QUOTE_MAP): added
+	(html_quote_char): deleted
+	(url_quote): use is_url_quote
+	(file_quote): use is_file_quote
+	(is_url_safe): deleted
+	(Str_form_quote): use is_url_unsafe
+	(Str_url_unquote): add safe args
+	(is_shell_safe): delete
+	(shell_quote): use is_shell_unsafe
+* indep.h (QUOTE_MAP): added
+	(HTML_QUOTE_MAP): added
+	(HTML_QUOTE_MASK): added
+	(SHELL_UNSAFE_MASK): added
+	(URL_QUOTE_MASK): added
+	(FILE_QUOTE_MASK): added
+	(URL_UNSAFE_MASK): added
+	(GET_QUOTE_TYPE): added
+	(is_html_quote): added
+	(is_shell_unsafe): added
+	(is_url_quote): added
+	(is_file_quote): added
+	(is_url_unsafe): added
+	(html_quote_char): added
+	(html_quote_char): deleted
+	(Str_url_unquote): added safe
+	(form_unquote): Str_url_unquote changes
+* linein.c (_prev): support DecodeURL
+	(_next): ditto
+* main.c (goURL0): support DecodeURL
+	(_peekURL): ditto
+	(curURL): ditto
+* map.c (follow_map_panel): support DecodeURL
+	(append_map_info): ditto
+	(append_link_info): ditto
+	(append_frame_info): ditto
+	(page_info_panel): ditto
+* menu.c (initSelectMenu): delete SCM_LOCAL_CGI
+		support DecodeURL
+	(initSelTabMenu): delete SCM_LOCAL_CGI
+		support DecodeURL
+	(link_menu): support DecodeURL
+* parsetagx.c (parse_tag): is_html_quote
+* proto.h (url_unquote_conv): added
+* rc.c (CMT_DECODE_URL): added
+	(params1): add decode_url
+* url.c (openURL): Str_url_unquote non safe
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.87 2003/01/30 16:39:40 ukai Exp $ */
+d452 1
+d455 2
+d458 1
+@
+
+
+1.87
+log
+@[w3m-dev 03718] Too slow when loading big file with fold_line=1
+* etc.c (nextColumn): added
+	(calcPosition): use New_N
+			rewrite with nextColumn
+	(columnLen): added
+* file.c (addnewline): rewrite with columnLen
+* proto.h (columnLen): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.86 2003/01/29 17:38:15 ukai Exp $ */
+d603 4
+@
+
+
+1.86
+log
+@[w3m-dev 03709] Re: view source, edit source
+* display.c (displayBuffer): INIT_BUFFER_WIDTH
+* file.c (_saveBuffer): added
+	(saveBuffer): use _saveBuffer
+	(saveBufferBody): added
+* main.c (vmSrc): saveBufferBody
+* proto.h (saveBufferBody): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.85 2003/01/29 17:10:51 ukai Exp $ */
+d305 1
+@
+
+
+1.85
+log
+@[w3m-dev 03708] Re: Don't stop loading image when moving to next page.
+* config.h.dist (lstat): define ifndef HAVE_LSTAT
+* configure (config.h) ditto
+* display.c (fmTerm): new loadImage
+	(save_current_buf): only ifdef USE_BUFINFO
+	(displayBuffer): new loadImage
+* etc.c (setup_child): TrapSignal
+* file.c (loadGeneralFile): TRAP_OFF, TRAP_ON
+	(loadHTMLstream): ditto
+	(loadGopherDir): ditto
+	(loadBuffer): ditto
+	(loadImageBuffer): ditto
+	(getNextPage): ditto
+	(save2tmp): ditto
+* fm.h (TrapSignal): added
+	(TRAP_ON): added
+	(TRAP_OFF): added
+* form.c (HAVE_LSTAT): deleted
+* frame.c (createFrameFile): TRAP_OFF, TRAP_ON
+* image.c (image_buffer): added
+	(deleteImage): new loadImage
+	(getAllImage): initialize image_buffer
+	(loadImage): rewrite
+* main.c (main): new loadImage
+	(checkDownloadList): remove ifdef HAVE_LSTAT
+* news.c (loadNwesgroup): TRAP_ON, TRAP_OFF
+* proto.h (loadImage): add buf arg
+* url.c (openSocket): TRAP_ON, TRAP_OFF
+	(check_no_proxy): TRAP_ON, TRAP_OFF
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.84 2003/01/23 18:37:21 ukai Exp $ */
+d229 1
+@
+
+
+1.84
+log
+@[w3m-dev 03667] fold patch
+* anchor.c (reAnchorPos): rewrite
+	(reAnchorWord): delete reseq_anchor()
+	(reAnchorAny): use l->size
+			delete reseq_anchor()
+* backend.c (internal_get): pass TRUE to saveBuffer
+* buffer.c (newBuffer): delete n->linelen
+	(reshapeBuffer): rewrite
+* display.c (displayBuffer): FoldLine
+	(redrawLine): l->bpos
+	(cursorUp0): added
+	(cursorUp): rewrite
+	(cursorDown0): added
+	(cursowDown): rewrite
+	(cursorRight): check l->next
+			l->bwidth
+	(cursorLeft): l->prev && l->bpos
+			l->bwidth
+	(arrangeCursor): buf->currentLine->bwidth
+		buf->cursorX
+* etc.c (checkType): **oporp
+			rewrite
+	(calcPosition): realColumn allocated by New_reuse
+* file.c (addnewline): add nlines arg
+	(propBuffer): deleted
+	(colorBuffer): deleted
+	(readHeader): propBuffer
+		FOLD_BUFFER_WIDTH
+	(HTMLlineproc2body): rewrite
+	(addnewline2): added
+	(addnewline): rewrite
+	(loadBuffer): propBuffer, colorBuffer
+	(saveBuffer): cont arg
+	(getNextPage): rewrite
+* fm.h (LINELEN): 256
+	(FNLEN): deleted
+	(Line): add size, bpos, bwidth
+	(Buffer): delete linelen
+	(INIT_BUFFER_WIDTH): check showLineNum
+	(FOLD_BUFFER_WIDTH): added
+	(FoldLine): added
+* funcname.tab (RESHAPE): added
+* main.c (do_dump): pass FALSE to saveBuffer
+	(nscroll): rewrite
+	(clear_mark): l->size
+	(shiftvisualpos): rewrite
+	(pipeBuf): pass TRUE to saveBuffer
+	(linebeg): check line->prev && line->bpos
+	(linend): check line->next, line->next->bpos
+	(editScr): pass TRUE to saveBuffer
+	(svBuf): pass TRUE to saveBuffer
+	(vmSrc): pass TRUE to saveBuffer
+	(reshape): added
+	(curlno): rewrite
+* mimehead.c (LINELEN): deleted
+* proto.h (reshape): added
+	(saveBuffer): add cont arg
+	(cursorUp0): added
+	(cursorDown0): added
+	(checkType): change type oprop, ocolor, delete check_color, len
+* rc.c (CMT_FOLD_LINE): added
+	(params1): add fold_line
+	(sync_with_option): check PagerMax
+* search.c (set_mark): l->size
+	(forwardSearch): rewrite
+	(backwardSearch): rewrite
+* doc/README.func (RESHAPE): added
+* doc-jp/README.func (RESHAPE): added
+* scripts/w3mhelp.cgi.in (Buffer operation): add reshape
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.83 2003/01/22 16:10:28 ukai Exp $ */
+d187 1
+a187 1
+extern void loadImage(int flag);
+@
+
+
+1.83
+log
+@[w3m-dev 03676] cleanup for pipe
+* etc.c (open_pipe_rw): added
+* file.c (uncompress_stream): rewrite using open_pipe_rw
+* image.c (openImgdisplay): rewrite using open_pipe_rw
+* local.c (localcgi_popen_rw): deleted
+	(localcgi_post): rewrite using open_pipe_rw
+* proto.h (open_pipe_rw): added
+* search.c (migemor): initialized to NULL
+	(migemow): initialized to NULL
+	(migemo_pid): initialized to 0
+	(open_migemo): rewrite using open_pipe_rw
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.82 2003/01/20 15:54:11 ukai Exp $ */
+d95 1
+d228 1
+a228 1
+extern void saveBuffer(Buffer *buf, FILE * f);
+d290 1
+d292 1
+d307 1
+a307 1
+extern Str checkType(Str s, Lineprop *oprop,
+d309 1
+a309 1
+		     Linecolor *ocolor, int *check_color,
+d311 1
+a311 1
+		     int len);
+@
+
+
+1.82
+log
+@* map.c (follow_map_menu): if USE_IMAGE or MENU_MAP
+* proto.h (follow_map_menu): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.81 2003/01/20 15:30:20 ukai Exp $ */
+d419 1
+@
+
+
+1.81
+log
+@[w3m-dev 03660] Re: fputs -> Strfputs
+* Str.h (Strncmp_charp): paren
+	(Strncasecmp_charp): ditto
+	(Strinsert): ditto
+	(Strshrinkfirst): ditto
+* display.c (disp_err_message): added
+* file.c (loadGeneralFile): don't put function in macro arg
+	(saveBuffer): ditto
+* frame.c (createFrameFile): ditto
+* proto.h (disp_err_message): macro->function
+* table.c (pushdata): if data is NULL, use ""
+	(suspend_or_pushdata): if line is NULL, use ""
+* textlist.h (pushText): don't use (s) twice in a macro
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.80 2003/01/17 16:57:20 ukai Exp $ */
+d378 1
+d381 1
+@
+
+
+1.80
+log
+@[w3m-dev 03646] setup child process, local CGI
+* etc.c (reset_signals): static
+			don't ignore SIGUSR1
+	(close_all_fds_except): static
+			DEV_NULL_PATH
+	(setup_child): added
+	(myExec): rewrite
+	(mySystem): rewrite
+* file.c (readHeader): check image_source
+	(loadGeneralFile): check image_source
+	(doExternal): use setup_child
+	(_doFileCopy): use setup_child
+	(doFileSave): use setup_child
+	(uncompress_stream): check image_source
+			use setup_child
+* image.c (getCharSize): no need stderr redirect
+	(openImgdisplay): use setup_child
+	(loadImage): use setup_child
+	(getImageSize): no need stderr redirect
+* local.c (writeLocalCookie): check Local_cookie_file
+	(localcgi_popen_rw): added
+	(localcgi_popen_r): deleted
+	(localcgi_post): rewrite
+	(localcgi_get): deleted
+* proto.h (localcgi_get): defined by localcgi_post
+	(reset_signals): deleted
+	(close_all_fds_except): deleted
+	(close_all_fds): deleted
+	(setup_child): added
+* search.c (open_migemo): use setup_child, myExec
+* w3mimgdisplay.c (main): use DEV_NULL_PATH
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.79 2003/01/15 17:13:22 ukai Exp $ */
+d279 1
+a279 1
+#define disp_err_message(s, f) (record_err_message((s)), disp_message((s), (f)))
+@
+
+
+1.79
+log
+@[w3m-dev 03644] Re: Other user can see local cookie.
+* cookie.c (save_cookies): return if no_rc_dir
+* etc.c (tmpf_base): add cookie
+	(tmpfname): use tmp_dir instead of rc_dir
+* file.c (loadGeneralFile): cookie is not passed via URL
+* fm.h (TMPF_COOKIE): incl
+	(MAX_TMPF_TYPE): incl
+	(no_rc_dir): added
+	(tmp_dir): added
+	(config_file): added
+* local.c (Local_cookie_file): added
+	(writeLocalCookie): added
+	(setLocalCookie): dont set environment LOCAL_COOKIE
+	(localcgi_post): writeLocalCookie
+	(localcgi_get): writeLocalCookie
+* main.c (config_filename): deleted
+	(cmd_loadURL): arg FormList
+	(main): rewrite config_file, rc
+	(ldhelp): no cookie in URL
+	(cmd_loadURL): arg FormList
+	(goURL0): cmd_loadURL change
+	(cmd_loadBuffer): cmd_loadURL change
+	(adBmark): cookie is posted
+	(follow_map): cmd_loadURL change
+	(linkMn): cmd_loadURL change
+	(reinit): init_rc change
+* proto.h (create_option_search_table): deleted
+	(init_rc): no args
+* rc.c (create_option_search_table): static
+	(init_rc): no args
+		rewrite
+	(optionpanel_src1): rewrite
+	(load_option_panel): html_quote
+	(panel_set_option): no_rc_dir
+* w3mbookmark.c: rewrite
+* w3mhelperpanel.c: rewrite
+* scripts/dirlist.cgi.in: rewrite
+* scripts/w3mhelp.cgi.in: rewrite
+* scripts/w3mmail.cgi.in: rewrite
+* scripts/multipart/multipart.cgi.in: rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.78 2003/01/15 16:11:43 ukai Exp $ */
+d577 1
+a577 1
+extern FILE *localcgi_get(char *, char *, char *);
+d589 1
+a589 4
+extern void reset_signals(void);
+extern void close_all_fds_except(int i, int f);
+#define close_all_fds(i) close_all_fds_except(i, -1)
+#ifdef HAVE_SETPGRP
+a590 1
+#endif
+@
+
+
+1.78
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.77 2003/01/11 15:54:09 ukai Exp $ */
+d564 1
+a564 2
+extern void create_option_search_table();
+extern void init_rc(char *config_filename);
+@
+
+
+1.77
+log
+@[w3m-dev 03633] Re: cleanup (don't close connection of news server)
+* file.c (FTPhalfclose): deleted
+	(loadGeneralFile): closeFTP when doFileSave is done
+	(_doFileCopy): return int
+	(doFileMove): return int
+	(doFileSave): return int
+* ftp.c: rewrite
+* main.c (w3m_exit): disconnectFTP
+* proto.h (_doFileCopy): return int
+	(doFileMove): return int
+	(doFileSave): return int
+	(openFTP): deleted
+	(openFTPStream): return InputStream
+	(closeFTP): no arg
+	(Ftpfclose): disconnectFTP
+* url.c (openFTPstream): deleted
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.76 2003/01/06 15:37:00 ukai Exp $ */
+d221 1
+a221 1
+extern Buffer *loadGopherDir(URLFile *uf, Buffer *newBuf);
+d480 2
+d511 1
+a511 1
+extern Str readFTPDir(ParsedURL *pu);
+d516 2
+a517 1
+extern Str readNewsgroup(ParsedURL *pu);
+d575 1
+a575 1
+extern Buffer *dirBuffer(char *dirname);
+d591 2
+a592 1
+extern void close_all_fds(int i);
+@
+
+
+1.76
+log
+@[w3m-dev 03610] Re: news:<newsgroup>
+* anchor.c (_put_anchor_news): check '<'
+	(reAnchorNewsheader): added
+* file.c (loadSomething): Subject: as buffername
+	(checkHeader): check buf->document_header
+	(loadGeneralFile): reAnchorNewsheader
+* html.h (SCM_NNTP_GROUP): added
+* main.c (main): delete USE_NNTP in switch (newbuf->real_scheme)
+	(chkNMIDBuffer): lowercase in url_like_pat
+* news.c (add_news_message): add scheme, group as arg
+	(openNewsStream): check SCM_NNTP_GROUP
+			check current_news.host
+	(readNewsgroup): rewrite to support nntp:,news: extension
+* proto.h (reAnchorNewsheader): added
+* url.c (DefaultPort): add 119 for nntp group
+	(parseURL2): rewrite to support nntp:,news: extension
+	(_parsedURL2Str): add for SCM_NNTP_GROUP
+	(openURL): rewrite to support nntp:,news: extension
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.75 2002/12/27 16:07:44 ukai Exp $ */
+d236 1
+a236 1
+extern void _doFileCopy(char *tmpf, char *defstr, int download);
+d238 2
+a239 2
+extern void doFileMove(char *tmpf, char *defstr);
+extern void doFileSave(URLFile uf, char *defstr);
+d508 1
+a508 1
+extern FILE *openFTP(ParsedURL *pu, URLFile *uf);
+d510 2
+a511 2
+extern void closeFTP(FILE * f);
+extern int Ftpfclose(FILE * f);
+@
+
+
+1.75
+log
+@[w3m-dev 03608] news:<newsgroup>
+* XMakefile (LSRCS): add news.c
+	(LOBJS): add news.o
+* file.c (loadSOmething): don't UFclose() for nntp/news
+	(readHeader): remove . at beginning of line for news
+		img link to file:
+	(loadGeneralFile): add SCM_NEWS_GROUP
+		don't UFclose() for nntp/news
+	(loadHTMLstream): . line check for news
+	(loadBuffer): . line check for news
+* fm.h (NNTP_server): added
+	(NNTP_mode): added
+	(MaxNewsMessage): added
+* html.h (SCM_NEWS_GROUP): added
+* main.c (main): NNTP_server or NNTPSERVER
+		NNTP_mode or NNTPMODE
+		add SCM_NEWS_GROUP
+	(followA): remove news:..@@.. check
+	(cmd_loadURL): remove news:...@@.. check
+	(w3m_exit): disconnectNews
+* proto.h (openNewsStream): added
+	(readNewsgroup): added
+	(disconnectNews): added
+* rc.c (CMT_NNTP_SERVER): added
+	(CMT_NNTP_MODE): added
+	(CMT_MAX_NEWS): added
+	(params9): add nntpserver, nntpmode, max_news
+* url.c (DefaultPort): add 119 for news group
+	(parseURL2): news:..@@... is SCM_NEWS_GROUP
+	(_parsedURL2Str): add news for SCM_NEWS_GROUP
+	(openURL): cleanup SCM_NEWS
+		add SCM_NEWS_GROUP
+* news.c: added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.74 2002/12/24 17:28:49 ukai Exp $ */
+d540 1
+@
+
+
+1.74
+log
+@[w3m-dev 03597] Re: meta refresh
+* main.c (Event): next, linked list
+	(N_EVENT_QUEUE): deleted
+	(eventQueue): deleted
+	(n_event_queue): deleted
+	(CurrentEvent): added
+	(main): event processing, add CurrentEvent linked list
+	(pushEvent): add Event to CurrentEvent
+	(SigAlarm): Currentbuf->event
+* proto.h (pushEvent): rename args
+From: Hiroaki Shimotsu <shim@@d5.bs1.fc.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.73 2002/12/18 16:20:54 ukai Exp $ */
+d512 5
+@
+
+
+1.73
+log
+@[w3m-dev 03578] meta refresh
+* file.c (getMetaRefreshParam): do nothing if refresh_interval < 0
+	(HTMLtagproc1): rewrite refresh
+	(HTMLlineproc2body): add HTML_META
+* fm.h (BP_RELOAD): deleted
+	(Buffer): add event
+	(AL_IMPLICIT_DONE): deleted
+	(AL_ONCE): deleted
+	(AL_RESTORE): deleted
+	(AlarmEvent): added
+* main.c (AlarmEvent): deleted
+	(PrevAlarm): deleted
+	(DefaultAlarm): added
+	(CurrentAlarm): point to DefaultAlarm
+	(main): CurrentKeyData, CurrentCmdData
+		handle Currentbuf->event
+	(SigAlarm): CurrentAlarm is pointer
+	(copyAlarmEvent): deleted
+	(setAlarm): setAlarmEvent pass &DefaultAlarm
+	(setAlarmEvent): arg event
+	(ldDL): no BP_RELOAD
+* proto.h (setAlarmEvent): arg event
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.72 2002/12/14 15:18:38 ukai Exp $ */
+d10 1
+a10 1
+extern void pushEvent(int event, void *user_data);
+@
+
+
+1.72
+log
+@[w3m-dev 03568] Re: preserve timestamp
+* etc.c (USE_COOKIE): moved
+* file.c (utime.h): include
+	(setModtime): added
+	(loadGeneralFile): set f.modtime
+	(_doFileCopy): setModtime()
+	(doFileSave): setModtime()
+* ftp.c (getFtpModtime): added
+	(openFTP): pass URLFile, set modtime
+* html.h (URLFile): add modtime
+* proto.h (openFTP): arg URLFile *uf
+	(mymktime): always
+* url.c (init_stream): initialize modtime
+	(openFTPStream): pass URLFile
+	(openURL): openFTPStream
+From: Takahashi Youichirou <nikuq@@hk.airnet.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.71 2002/12/13 02:19:01 ukai Exp $ */
+d118 2
+a119 1
+extern void setAlarmEvent(int sec, short status, int cmd, void *data);
+@
+
+
+1.71
+log
+@[w3m-dev 03564] clean up displayBuffer()
+* display.c (delayed_msg): static
+	(drawAnchorCursor): static
+	(redrawBuffer): define
+	(redrawNLine): static
+	(redrawLine): static
+	(redrawLineRegion): static
+	(do_effects): static
+	(do_color): static
+	(make_lastline_link): added
+	(make_lastline_message): added
+	(displayBuffer): rewrite with make_lastline_message()
+	(drawAnchorCursor0): added
+	(drawAnchorCursor): added
+* main.c (main): remove onA()
+	(keyPressEventProc): remove onA()
+	(disp_srchresult): static
+		disp_message TRUE
+	(isrch): remove onA()
+	(srch): displayBuffer
+		remove onA()
+	(srch_nxtprv): remove onA()
+	(pipeBuf): disp_message TRUE
+	(pipesh): disp_message TRUE
+	(readsh): disp_message TRUE
+	(_mark): dispBuffer
+	(_followForm): break, always dispBuffer
+	(drawAnchorCursor0): deleted
+	(drawAnchorCursor): deleted
+	(onA): deleted
+	(anchorMn): delete onA()
+	(svBuf): displayBuffer B_NORMAL
+	(reload): disp_err_message TRUE
+		displayBuffer
+	(rFrame): displayBuffer
+	(invoke_browser): displayBuffer
+	(extbrz): disp_err_message TRUE
+	(process_mouse): onA -> displayBuffer
+	(movMs): delete onA()
+	(menuMs): onA -> displayBuffer
+	(closeTMs): disp_message TRUE
+	(wrapToggle): disp_message TRUE
+	(execdict): disp_message TRUE
+	(SigAlarm): displayBuffer, delete onA
+	(reinit): displayBuffer
+* map.c (getCurrentMapLabel): deleted
+	(retrieveCurrentMapArea): added
+* proto.h (redrawBuffer): deleted
+	(redrawNLine): deleted
+	(redrawLine): deleted
+	(redrawLineRegion): deleted
+	(do_effects): deleted
+	(do_color): deleted
+	(message_list): deleted
+	(getCurrentMapLabel): deleted
+	(retrieveCurrentMapArea): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.70 2002/12/12 23:55:30 ukai Exp $ */
+d507 1
+a507 1
+extern FILE *openFTP(ParsedURL *pu);
+d591 1
+a592 1
+extern time_t mymktime(char *timestr);
+@
+
+
+1.70
+log
+@[w3m-dev 03562] #undef BUFINFO
+* config.h.dist (BUFINFO): undef
+* configure (use_bufinfo): n
+* main.c (saveBufferInfo): ifdef USE_BUFINFO
+* proto.h (reloadBuffer): if 0
+	(saveBufferInfo): ifdef USE_BUFINFO
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.69 2002/12/11 15:07:53 ukai Exp $ */
+a273 8
+extern void redrawBuffer(Buffer *buf);
+extern void redrawNLine(Buffer *buf, int n);
+extern Line *redrawLine(Buffer *buf, Line *l, int i);
+extern int redrawLineRegion(Buffer *buf, Line *l, int i, int bpos, int epos);
+extern void do_effects(Lineprop m);
+#ifdef USE_ANSI_COLOR
+extern void do_color(Linecolor c);
+#endif
+a274 1
+extern GeneralList *message_list;
+d384 1
+a384 1
+extern Str getCurrentMapLabel(Buffer *buf);
+@
+
+
+1.69
+log
+@[w3m-dev 03559] Re: use select instead of signal for loading images
+* fm.h (Buffer): add image_loaded
+* image.c (W3M_SIGIMG): deleted
+	(image_lock): deleted
+	(need_load_image): deleted
+	(load_image_handler): deleted
+	(load_image_next): deleted
+	(getAllImage): check image_loaded
+	(loadImage): delete image_lock
+		delete IMG_FLAG_NEXT
+* main.c (main): check image_loaded
+* proto.h (sleep_till_anykey): return int
+* terms.c (sleep_till_anykey): return int
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.68 2002/12/10 15:51:15 ukai Exp $ */
+d717 1
+a717 1
+
+d719 1
+a719 1
+
+d723 1
+d725 1
+@
+
+
+1.68
+log
+@[w3m-dev 03553] Undo/Redo
+* fm.h (Buffer): add undo
+	(BufferPos): added
+* funcname.tab (REDO): added
+		(UNDO): added
+* main.c (save_buffer_position): added
+	(main): save_buffer_position
+	(resetPos): added
+	(undoPos): added
+	(redoPos): added
+* proto.h (undoPos): added
+	(redoPos): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.67 2002/12/09 15:51:09 ukai Exp $ */
+d475 1
+a475 1
+extern void sleep_till_anykey(int sec, int purge);
+@
+
+
+1.67
+log
+@[w3m-dev 03549] link list
+* anchor.c (addMultirowsImg): add a->slave
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* funcname.tab (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* main.c (anchorMn): added
+	(accessKey): use anchorMn()
+	(listMn): added
+	(movlistMn): added
+	(linkLst): added
+* map.c (searchMapList): not static
+* menu.c (accesskey_menu): pass AnchorList to getAnchorText()
+	(lmKeys): added
+	(lmKeys2): added
+	(nlmKeys): added
+	(nlmKeys2): added
+	(lmGoto): added
+	(lmSelect): added
+	(list_menu): added
+* proto.h (linkLst): added
+	(listMn): added
+	(movlistMn): added
+	(list_menu): added
+	(searchMapList): added
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* doc/README.func (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* doc-jp/README.func (LINK_MENU): fix message
+	(LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* scripts/w3mhelp.cgi.in (Page/Cursor motion): add movlistMn
+	(Hyperlink operation): add linkLst linkMn
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.66 2002/12/05 16:29:10 ukai Exp $ */
+d149 2
+@
+
+
+1.66
+log
+@[w3m-dev 03529] Support of title, accesskey of anchor
+* anchor.c (putAnchor): arg title, key
+			initialize slave
+	(registerHref): arg title, key
+	(registerName): title = NULL, key = '\0'
+	(registerForm): title = NULL, key = '\0'
+	(_put_anchor_news): title = NULL, key = '\0'
+	(_put_anchor_all): title = NULL, key = '\0'
+	(addMultirowsImg): register title, accesskey
+	(addMultirowsForm): title = NULL, key = '\0'
+	(getAnchorText): added
+* display.c (displayBuffer): show title if any
+* file.c (set_breakpoint): use bcopy
+	(back_to_breakpoint): use bcopy
+	(flushline): s/anchor/anchor.url/
+		     s/anchor_hseq/anchor.hseq/
+		     s/anchor_target/anchor.target/
+		     add anchor.*
+	(close_effect0): s/anchor/anchor.url/
+			s/anchor_hseq/anchor.hseq/
+	(close_anchor): use bzero
+	(process_img): ATTR_TITLE,
+	(HTMLtagproc1): s/anchor/anchor.url/
+			target, referer, title, accesskey, hseq
+	(HTMLlineproc2body): ATTR_TITLE, ATTR_ACCESSKEY
+	(init_henv): use bzero
+* fm.h (Anchor): add title, accesskey, slave
+	(Breakpoint): use Anchor
+	(struct readbuffer): use Anchor
+* funcname.tab (ACCESSKEY): added
+	(LINK_MENU): added
+* html.c (ALST_A): add ATTR_TITLE, ATTR_ACCESSKEY
+	(ALST_IMG): add ATTR_TITLE
+	(ALST_IMG_ALT): add ATTR_TITLE
+	(AttrMAP): add accesskey, renum
+* html.h (ATTR_ACCESSKEY): added
+	(ATTR_*): renum 50->60
+* main.c (linkMn): added
+	(accessKey): added
+* menu.c (LinkMenu): deleted
+	(LinkV): deleted
+	(initLinkMenu): deleted
+	(lmGoURL): deleted
+	(popupMenu): delete initLinkMenu()
+	(initMenu): delete Link
+	(link_menu): added
+	(accesskey_menu): added
+* proto.h (linkMn): added
+	(link_menu): added
+	(accessKey): added
+	(accesskey_menu): added
+	(putAnchor): arg title, key
+	(registerHref): arg title, key
+	(registerImg): arg title
+	(getAnchorText): added
+* doc/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* doc-jp/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* scripts/w3mhelp.cgi.in (Hyperlink operation): add linkMn accessKey
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.65 2002/12/04 16:45:41 ukai Exp $ */
+d134 1
+d140 3
+d146 2
+d382 1
+d549 3
+a551 1
+extern char *getAnchorText(Buffer *buf, Anchor *a);
+@
+
+
+1.65
+log
+@[w3m-dev 03521] sync option
+* display.c (redrawNLine): calcTabPos()
+* func.c (initKeymap): return if keymap_initialized
+* main.c (calcTabPos): no more static
+	(main): move sync_with_option, initCookie, setLocalCookie
+		move backend
+		move initKeymap, initMouseAction, initMenu
+		remove calcTabPos
+		add displayBuffer
+	(numTab): static
+	(deleteTab): delete calcTabPos
+	(moveTab): delete calcTabPos
+* proto.h (calcTabPos): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.64 2002/12/03 16:01:44 ukai Exp $ */
+d134 9
+d512 2
+a513 1
+			     Anchor **anchor_return, char *referer, int line,
+d516 2
+a517 1
+			    char *referer, int line, int pos);
+d519 2
+a520 1
+extern Anchor *registerImg(Buffer *buf, char *url, int line, int pos);
+d542 1
+@
+
+
+1.64
+log
+@[w3m-dev 03515] 2 stroke keybinding
+* func.c (setKeymap): add map
+			K_MULTI support
+	(getKey2): added
+	(getKey): rewrite to use getKey2()
+* func.h (K_MULTI): added
+	(MULTI_KEY): added
+* funcname.tab (MULTIMAP): added
+* main.c (escKeyProc): added
+	(escmap): rewrite to use escKeyProc()
+	(escbmap): rewrite to use escKeyProc()
+	(escdmap): rewrite to use escKeyProc()
+	(multimap): added
+* proto.h (multimap): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.63 2002/11/26 17:05:25 ukai Exp $ */
+d230 1
+@
+
+
+1.63
+log
+@[w3m-dev 03488] meta refresh in frame
+* file.c (getMetaRefreshParam): added
+	(HTMLtagproc1): use getMetaRefreshParam()
+* frame.c (createFrameFile): check meta refresh
+* proto.h (getMetaRefreshProgram): added
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.62 2002/11/25 16:57:17 ukai Exp $ */
+d316 1
+@
+
+
+1.62
+log
+@[w3m-dev 03478] mouse action configuration
+* display.c (displayBuffer): mouse_menu -> mouse_action.menu_str
+			mouse_action.lastline_str
+		(redrawNLine): mouse_menu -> mouse_action.menu_str
+* fm.h (MouseMenuMap): deleted
+	(MouseActionMap): added
+	(MouseAction): added
+	(mouse_action): added
+* func.c (default_mouse_action): added
+	(setMouseAction0): added
+	(setMouseAction1): added
+	(setMouseAction2): added
+	(initMouseMenu): deleted
+	(initMouseAction): added
+* funcname.tab (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+* main.c (main): initMouseMenu() -> initMouseAction()
+		mouse_menu -> mouse_action
+	(posTab): mouse_menu -> mouse_action
+		check y > LastTab->y
+	(mouse_menu_action): deleted
+	(do_mouse_action): added
+	(process_mouse): mouse_menu -> mouse_action
+		do_mouse_action()
+	(movMs): added
+	(menuMs): added
+	(tabMs): added
+	(closeTMs): added
+	(reinit): initMouseMenu() -> initMouseAction()
+		resource: MOUSE_MENU -> MOUSE
+	(calcTabPos): mouse_menu -> mouse_action
+* menu.c (mainMn): mouse_menu -> mouse_action
+	(selMn): mouse_menu -> mouse_action
+	(tabMn): mouse_menu -> mouse_action
+	(initMenu): add SelectTag to w3mMenuList
+* proto.h (movMs): added
+	(menuMs): added
+	(tabMs): added
+	(closeTMs): added
+	(initMouseMenu): deleted
+	(initMouseAction): added
+* rc.c (sync_with_option): initMouseMenu() -> initMouseAction()
+* doc/README.func (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+* doc-jp/README.func (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.61 2002/11/24 16:02:22 ukai Exp $ */
+d184 1
+@
+
+
+1.61
+log
+@[w3m-dev 03471] Re: SETPGRP()
+* configure: SETPGRP() always defined
+* proto.h (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+* etc.c (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+	(mySystem): #ifndef -> #ifdef
+* file.c (_doFileCopy): delete #ifdef HAVE_SETPGRP
+	(doFileSave): ditto
+* image.c (openImgdisplay): delete #ifdef HAVE_SETPGRP
+			use close_all_fds()
+* search.c (open_migemo): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.60 2002/11/22 15:49:44 ukai Exp $ */
+d610 8
+d621 4
+d646 1
+a646 1
+extern void initMouseMenu(void);
+@
+
+
+1.60
+log
+@[w3m-dev 03459] background download when external viewer
+* etc.c (myExec): added
+	(mySystem): rewrite to use myExec()
+* file.c (doExternal): run background if BackgroundExtViewer
+* proto.h (myExec): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.59 2002/11/22 15:43:14 ukai Exp $ */
+d563 2
+d566 1
+@
+
+
+1.59
+log
+@[w3m-dev 03458] Re: mouse menu
+* display.c (displayBuffer): nTab2 -> nTab, mouse_menu
+* fm.h (nTab2): deleted
+	(MouseMenuMap): added
+	(MouseMenu): added
+	(LIMIT_MOUSE_MENU): added
+* func.c (initMouseMenu): delete mouse_menu_map initialization
+		conv_from_system
+		mouse_menu->width
+* main.c (main): mouse_menu->in_action = FALSE
+	(posTab): check mouse_menu
+	(mouse_menu_action): add y arg
+		mouse_menu_width check
+	(process_mouse): nTab2 -> nTab, mouse_menu
+	(nTabLine): deleted
+	(calcTabPos): check mouse_menu
+* menu.c (mainMn): x, y
+	(selMn): mouse_menu check
+	(tabMn): mosue_menu check
+* proto.h (nTabLine): deleted
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.58 2002/11/21 16:31:36 ukai Exp $ */
+d563 1
+@
+
+
+1.58
+log
+@[w3m-dev 03455] mouse menu
+* configure (config.h): MOUSE_FILE
+* display.c (displayBuffer): nTab -> nTab2, N_TAB -> nTabLine()
+	(redrawNLine): nTab -> nTab2, N_TAB -> nTabLine()
+			mouse_menu support
+* fm.h (nTab2): added
+	(N_TAB): deleted
+	(NO_TABBUFFER): added
+	(struct _MouseMenu): added
+	(mouse_menu_map): added
+	(mouse_menu): added
+* func.c (initMouseMenu): added
+* main.c (main): initMouseMenu()
+	(posTab): mouse_menu support
+	(mouse_menu_action): added
+	(process_mouse): mouse_menu support
+	(reinit): initMouseMenu()
+	(nTabLine): added
+	(moveTab): check NO_TABBUFFER
+* proto.h (nTabLine): added
+	(initMouseMenu): added
+* rc.c (sync_with_option): initMouseMenu()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.57 2002/11/21 16:15:58 ukai Exp $ */
+a227 1
+extern int nTabLine(void);
+@
+
+
+1.57
+log
+@[w3m-dev 03454] next / previous buffer
+* funcname.tab (NEXT): added
+		(PREV): added
+* main.c (nextBf): added
+	(prevBf): added
+* proto.h (nextBf): added
+	(prevBf): added
+* doc/README.func (NEXT): added
+		(PREV): added
+* doc-jp/README.func (NEXT): added
+		(PREV): added
+* scripts/w3mhelp.cgi.in (Buffer operation): nextBf prevBf
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.56 2002/11/19 17:40:34 ukai Exp $ */
+d228 1
+d630 3
+@
+
+
+1.56
+log
+@[w3m-dev 03452] image map
+* display.c (displayBuffer): use getCurrentMapLabel()
+* fm.h (MapArea): delete ifdef MENU_MAP
+	(image_map_list): added
+* main.c (followA): don't call retrieveCurrentImg() ifdef USE_IMAGE
+	use retrieveCurrentMap() ifndef USE_IMAGE
+	(_followForm): indent
+	(drawAnchorCursor0): add AnchorList
+	(drawAnchorCuror): pass AnchorList to drawAnchorCursor0
+	(follow_map): follow_map_panel
+* map.c (searchMapList): added
+	(nearestMapArea): n, min default value to -1
+	(searchMapArea): added
+	(getCurrentMapLabel): added
+	(getMapXY): moved
+	(retrieveCurrentMap): added
+	(follow_map_menu): parsed_tagarg -> name
+			rewrite to search map list/area
+	(follow_map_panel): parsed_tagarg -> name
+			rewrite to search map list/area
+	(newMapArea): delete ifdef MENU_MAP
+	(append_map_info): added
+	(page_info_panel): append_map_info
+* proto.h (follow_map_menu): parsed_tagarg -> name
+	(follow_map_panel): parsed_tagarg -> name
+	(getCurrentMapLabel): added
+	(retrieveCurrentMap): added
+* rc.c (CMT_IMAGE_MAP_LIST): added
+	(image_map_list): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.55 2002/11/15 15:19:46 ukai Exp $ */
+d74 2
+@
+
+
+1.55
+log
+@[w3m-dev 03431] save file by background process
+* file.c (loadGeneralFile): use _doFileCopy()
+	(_doFileCopy): renamed from doFileCopy()
+			lock
+			fork & save
+	(doFileSave): lock
+			fork & save
+* fm.h (DownloadList): added
+	(FirstDL): added
+	(LastDL): added
+* form.c (struct internal_action): add download
+* funcname.tab (DOWNLOAD_LIST): added
+* html.h (URLFile): add url
+* main.c (dump_extra): add add_download_list
+	(main): add_download_list, ldDL()
+	(_quitfm): added
+	(quitfm): rewrite with _quitfm()
+	(qquitfm): ditto
+	(w3m_exit): stopDownload()
+	(addDownloadList): added
+	(checkDownloadList): added
+	(convert_size3): added
+	(DownloadListBuffer): added
+	(download_action): added
+	(stopDownload): added
+	(ldDL): added
+* proto.h (ldDL): added
+	(convert_size): added
+	(convert_size2): added
+	(doFileCopy): deleted
+	(_doFileCopy): added
+	(addDownloadList): added
+	(stopDownload): added
+	(checkDownloadList): added
+	(download_action): added
+* url.c (openURL): save url in uf
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.54 2002/11/10 11:59:15 ukai Exp $ */
+d363 4
+a366 5
+#ifdef MENU_MAP
+extern MapArea *follow_map_menu(Buffer *buf, struct parsed_tagarg *arg,
+				Anchor *a_img, int x, int y);
+#else
+extern Buffer *follow_map_panel(Buffer *buf, struct parsed_tagarg *arg);
+d370 1
+d372 1
+@
+
+
+1.54
+log
+@[w3m-dev 03401] w3mhelp.cgi
+* proto.h (tabMn): nulcmd ifndef USE_MENU
+* scripts/w3mhelp-funcdesc.en.pl.in: add LINEEDIT:EDITOR
+* scripts/w3mhelp-funcdesc.ja.pl.in: add LINEEDIT:EDITOR
+				Tab operation
+* scripts/w3mhelp-funcname.pl.in: add LINEEDIT:EDITOR C-o
+* scripts/w3mhelp.cgi.in: add tabA in Hyperlink operation
+			add tabURL, tabrURL in File/Stream operation
+			add Tab operation
+			add lineedit_editor in Line edit mode
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.53 2002/11/09 21:55:24 ukai Exp $ */
+d131 1
+d189 2
+d215 2
+a216 1
+extern void doFileCopy(char *tmpf, char *defstr);
+d228 5
+@
+
+
+1.53
+log
+@[w3m-dev 03398] auxbindir
+* XMakefile: EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* config.h.dist: add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+* configure: add -auxbindir
+		add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+		EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* file.c (compression_decoder): libfile_p -> auxbin_p
+	(check_command): libfile_p -> auxbin_p
+			use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(acceptableEncoding): libfile_p -> auxbin_p
+	(xface2xpm): use auxbinFile() instead of libFile()
+	(uncompress_stream): libfile_p -> auxbin_p
+			use auxbinFile() instead of libFile()
+* image.c (getCharSize): use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(openImgdisplay): use w3m_auxbin_dir() instead of w3m_lib_dir()
+* indep.c (w3m_auxbin_dir): added
+* indep.h (w3m_auxbin_dir): added
+* proto.h (auxbinFile): added
+* rc.c (auxbinFile): added
+	(libFile): #if 0, no longer used
+	(helpFile): used only #ifndef USE_HELP_CGI
+* NEWS: separate auxbindir and libdir (local-CGI, file:///$LIB/)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.52 2002/11/06 03:50:49 ukai Exp $ */
+d649 1
+@
+
+
+1.52
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.51 2002/11/05 17:10:07 ukai Exp $ */
+d531 1
+@
+
+
+1.51
+log
+@[w3m-dev 03372] tab browser
+* display.c (displayBuffer): add ny
+			rootY offset by tab
+			tab line
+	(cursorDown): offset rootY
+	(arrangeCursor): offset rootY
+* etc.c (columnSkip): offset rootY
+	(lineSkip): offset rootY
+	(currentLineSkip): offset rootY
+* file.c (HTMLlineproc2body): ATTR_TARGET
+* fm.h (MapArea): add target
+	(Buffer): add rootY
+	(TabBuffer): added
+	(Currentbuf): comment out
+	(Firstbuf): comment out
+	(CurrentTab): added
+	(FirstTab): added
+	(LastTab): added
+	(open_tab_blank): added
+	(close_tab_back): added
+	(nTab): added
+	(TabCols): added
+	(N_TAB): added
+	(Currentbuf): CurrentTab->currentBuffer
+	(Firstbuf): CurrentTab->firstBuffer
+* funcname.tab (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* html.c (ALST_AREA): add ATTR_TARGET
+* image.c (showImageProgress): offset rootY
+* main.c (_newT): added
+	(followTab): added
+	(moveTab): added
+	(check_target): added
+	(MAIN): init tab related values
+		buf => tab
+	(nscroll): offset rootY
+	(pgFore): offset rootY
+	(pgBack): offset rootY
+	(ctrCsrV): offset rootY
+	(_movD): offset rootY
+	(_movU): offset rootY
+	(_goLine): offset rootY
+	(_mark): offset rootY
+	(followA): check target
+	(_followForm): offset rootY
+	(drawAnchorCursor0): offset rootY
+	(drawAnchorCursor): offset rootY
+	(backBf): check close_tab_back
+	(follow_map): rewrite for tab, check target
+	(posTab): added
+	(process_mouse): tab operation
+			offset rootY
+	(deleteFiles): for all buffers in all tabs
+	(newTab): added
+	(newT): added
+	(numTab): added
+	(deleteTab): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(followTab): added
+	(tabA): added
+	(tabURL0): added
+	(tabURL): added
+	(tabrURL): added
+	(moveTab): added
+	(tabR): added
+	(tabL): added
+* map.c (follow_map_menu): return MapArea
+	(newMapArea): add target args
+* menu.c (SelTabMenu): added
+	(SelTabV): added
+	(initSelTabMenu): added
+	(smChTab): added
+	(smDelTab): added
+	(MainMenuItem): add Select Tab
+				on New Tab
+	(popupMenu): add initSelTabMenu()
+			offset rootY
+	(mainMn): offset rootY
+	(selMn): offset rootY
+	(initSelectMenu): offset rootY
+	(tabMn): added
+* proto.h (newT): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(tabA): added
+	(tabURL): added
+	(tabrURL): added
+	(tabR): added
+	(tabL): added
+	(newTab): added
+	(deleteTab): added
+	(follow_map_menu): return MapArea
+	(newMapArea): add target arg
+	(tabMn): added
+* rc.c (CMT_OPEN_TAB_BLANK): added
+	(CMT_CLOSE_TAB_BACK): added
+	(open_tab_blank): added
+	(close_tab_back): added
+* doc/README.func (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* doc-jp/README.func: ditto doc/README.func
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.50 2002/11/05 16:03:14 ukai Exp $ */
+d384 1
+@
+
+
+1.50
+log
+@* etc.c (PASS_IS_READABLE_MSG): deleted
+	(FILE_IS_READABLE_MSG): added
+	(openPasswdFile): deleted
+	(openSecretFile): delete error_msg arg
+	(loadPasswd): use openSecretFile()
+* form.c (next_token): delete unused static decl
+	(FILE_IS_READABLE_MSG): deleted
+	(loadPreForm): no need pass error_msg
+* proto.h (openSecretFile): delete error_msg arg
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.49 2002/11/05 15:56:14 ukai Exp $ */
+d122 10
+d222 2
+d355 2
+a356 2
+extern char *follow_map_menu(Buffer *buf, struct parsed_tagarg *arg,
+			     Anchor *a_img, int x, int y);
+d363 2
+a364 1
+extern MapArea *newMapArea(char *url, char *alt, char *shape, char *coords);
+d640 1
+@
+
+
+1.49
+log
+@[w3m-dev 03373] setting form on loading
+* config.h.dist (PRE_FORM_FILE): added
+* configure (PRE_FORM_FILE): added
+* etc.c (openPasswdFile): define by openSecretFile()
+	(openSecretFile): renamed, not static
+* file.c (loadGeneralFile): preFOrmUpdateBuffer()
+* fm.h (Buffer): add submit
+	(pre_form_file): added
+* form.c (struct pre_form_item): added
+	(struct pre_form): added
+	(next_token): added
+	(PreForm): added
+	(add_pre_form): added
+	(add_pre_form_item): added
+	(loadPreForm): added
+	(preFormUpdateBuffer): added
+* frame.c (renderFrame): add preFormUpdateBuffer()
+* main.c (MAIN): buf->submit check
+* proto.h (preFormUpdateBuffer): added
+	(openSecretFile): added
+	(loadPreForm): added
+* rc.c (sync_with_option): add loadPreForm()
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.48 2002/10/30 15:39:41 ukai Exp $ */
+d524 1
+a524 1
+extern FILE *openSecretFile(char *fname, char *error_msg);
+@
+
+
+1.48
+log
+@[w3m-dev 03359] support for http://user:pass@@www.url.com
+* etc.c (find_auth_user_passwd): use ParsedURL for args
+	use user and passwd if these are defined in ParsedURL
+* file.c (getAuthCookie): change find_auth_user_passwd()
+* proto.h (find_auth_user_passwd): change prototype
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.47 2002/09/24 16:35:02 ukai Exp $ */
+d334 1
+d524 1
+d526 1
+@
+
+
+1.47
+log
+@[w3m-dev 03318] Re: Passwords
+* etc.c (struct auth_path): added
+	(passwords): added
+	(dir_under): added
+	(add_auth_pass_entry): added
+	(find_auth_pass_entry): added
+	(find_auth_user_passwd): added
+	(loadPasswd): added
+	(find_auth): dir_under()
+	(add_auth_cookie): check file
+* file.c (find_auth_user_passwd): removed
+	(getAuthCookie): use delText()
+			check proxy
+	(get_auth_cookie): removed
+	(loadGeneralFile): auth_pu
+* proto.h (schemeToProxy): added
+	(get_auth_cookie): removed
+	(loadPasswd): added
+	(find_auth_user_passwd): added
+* rc.c (sync_with_option): loadPasswd()
+* textlist.c (delValue): added
+* textlist.h (delValue): added
+	(delText): added
+* url.c (HTTPrequest): seen_www_auth
+	(schemeToProxy): added
+From: AIDA Shinra <aida-s@@jcom.home.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.46 2002/09/05 15:43:22 ukai Exp $ */
+d524 1
+a524 1
+extern int find_auth_user_passwd(char *host, int port, char *file, char *realm,
+@
+
+
+1.46
+log
+@[w3m-dev 03292] Re: load file at cursor
+* anchor.c (reAnchorPos): added
+	(reAnchorWord): added
+	(reAnchorAny): rewrite to use reAnchorPos()
+* funcname.tab (MARK_WORD): added
+* keybind.c (;) MARK_WORD
+* main.c (getCurWord): added
+	(chkWORD): added
+	(is_wordchar): added
+	(getCurWord): added
+	(GetWord): rewrite to use getCurWord()
+* proto.h (chkWORD): added
+	(reAnchorWord): added
+* doc/README.func: add MARK_WORD
+* doc/keymap.default: add MARK_WORD
+* doc-jp/README.func: add MARK_WORD
+* doc-jp/keymap.default: add MARK_WORD
+* NEWS: add MARK_WORD
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.45 2002/08/20 17:49:39 ukai Exp $ */
+d130 1
+a135 3
+extern void get_auth_cookie(char *auth_header,
+			    TextList *extra_header, ParsedURL *pu,
+			    HRequest *hr, FormList *request);
+d523 3
+@
+
+
+1.45
+log
+@Debian Bug#157098: wrong file presentation on large files
+	  from "Eduard Bloch" <blade@@debian.org>
+* configure (clen_t): added
+		(HAVE_STRTOLL): added
+		(HAVE_STRTOQ): added
+		(HAVE_ATOLL): added
+		(HAVE_ATOQ): added
+* config.h.dist: ditto
+* file.c (current_content_length): s/int/clen_t/
+	(loadGeneralFile): s/atoi/strtoclen/
+	(convert_size): s/int/clen_t/
+	(convert_size2): s/int/clen_t/
+	(showProgress): s/int/clen_t/
+	(loadHTMLstream): s/int/clen_t/ linelen, trbyte
+	(loadBuffer): ditto
+	(getNextPage): s/int/clen_t/ linelen
+	(save2tmp): s/int/clen_t/ linelen, trbye
+	(_MoveFile): s/int/clen_t/ linelen, trbye
+* fm.h (_Buffer): s/int/clen_t/ linelen, trbye
+* ftp.c (size_int2str): s/long/clen_t/
+	(ex_ftpdir_name_size_date): s/long/clen_t/
+* indep.c (strtoclen): added
+* indep.h (strtoclen): added
+* proto.h (showProgress): s/int/clen_t/
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.44 2002/06/09 16:09:25 ukai Exp $ */
+d95 1
+d490 1
+@
+
+
+1.44
+log
+@[w3m-dev-en 00751] Re: tab completion weirdness in w3m 0.3
+* main.c (svBuf): unescape spaces when input is filename
+* proto.h (unescape_spaces): added
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.43 2002/06/01 17:09:05 ukai Exp $ */
+d179 1
+a179 1
+extern void showProgress(int *linelen, int *trbyte);
+@
+
+
+1.43
+log
+@[w3m-dev-en 00748] PATCH: Reinitialize w3m while running
+* funcname.tab (INIT_MAILCAP): deleted
+	(REINIT): added
+* main.c (config_filename): added
+	(reinit): added
+* proto.h (reinit): added
+* rc.c (rc_initialized): deleted
+* w3mhelperpanel.c (editMailcap): use REINIT MAILCAP
+From: Tushar Samant <scribble@@pobox.com>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.42 2002/06/01 16:50:16 ukai Exp $ */
+d296 1
+@
+
+
+1.42
+log
+@[w3m-dev 03200] Re: New configuration option ``keymap_file'' and new command ``DEFINE_KEY''
+* fm.h: add <sts/stat.h>, unistd.h>
+* fm.h (keymap_file): added
+* func.c (keymap_initialized): added
+	(current_keymap_file): added
+	(setKeymap): added
+	(initKeymap): rewrite to use setKeymap()
+* funcname.tab (DEFINE_KEY): added
+* main.c (MAIN): initKeymap(TRUE)
+	(defKey): added
+* proto.h (defKey): added
+	(setKeymap): added
+	(initKeymap): add force param
+* rc.c (CMT_KEYMAP_FILE): added
+	(params3): add keymap_file
+	(sync_with_option): add initKeymap(FALSE)
+* doc/README.func (DEFINE_KEY): added
+* doc-jp/README.func: (DEFINE_KEY): added
+* scripts/w3mhelp.cgi.in: add defKey
+* NEWS:
+	func: DEFINE_KEY
+	rc: keymap_file
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.41 2002/04/24 18:29:35 ukai Exp $ */
+d119 1
+@
+
+
+1.41
+log
+@[w3m-dev-en 00730] Re: Patch for a more flexible dictionary lookup
+* NEWS: rc: use_dictcommand, dictcommand
+* main.c (execdict): use url_quote_conv() instead of cURLcode()
+* proto.h (cURLcode): deleted
+* doc-jp/README.dict: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+[w3m-dev-en 00729] Re: Patch for a more flexible dictionary lookup
+* config.h.dist (DICT): define
+* configure (use_dict): default y
+* fm.h (DICTCMD): deleted
+	(UseDictCommand): added
+	(DictCommand): added
+* main.c (execdict): rewrite to use DictCommand, loadGeneralFile()
+* rc.c (CMT_USE_DICTCOMMAND): added
+	(CMT_DICTCOMMAND): added
+	(params1): use_dictcommand, dictcommand added
+* doc/README.dict: updated
+From:  Tushar Samant <scribble@@pobox.com>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.40 2002/03/19 16:06:52 ukai Exp $ */
+d119 1
+d587 2
+a588 1
+extern void initKeymap(void);
+@
+
+
+1.40
+log
+@[w3m-dev 03136] Add COMMAND to execute multiple commands
+* fm.h (CurrentMenuData): deleted
+	(CurrentCmdData): added
+* func.c (getKey): check next char of ^
+	(getWord): get word until ';'
+	(getQWord): rewrite using Str
+* funcname.tab (COMMAND): added
+* main.c (MAIN): delete CurrentMenuData
+		initialize CurrentCmdData
+	(searchKeyData): use CurrentCmdData
+	(execCmd): added
+	(SigAlarm): delete CurrentMenuData, use CurrentCmdData
+* menu.c (action_menu): delete CurrentMenuData, use CurrentCmdData
+* proto.h (execCmd): added
+* doc/README.func (ALARM): capitalize
+		(COMMAND): added
+* doc-jp/README.func (COMMAND): added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.39 2002/03/15 18:33:32 ukai Exp $ */
+a561 5
+#ifdef JP_CHARSET
+extern char *cURLcode(char *url, char code);
+#else
+#define cURLcode(url,buf) (url)
+#endif
+@
+
+
+1.39
+log
+@-title support
+  modified [w3m-dev-en 00710] contrib: unofficial "xterm title" patch, updated for w3m-0.3
+  by Moritz Barsnick <barsnick@@gmx.net>
+* NEWS: -title
+* fm.h (displayTitleTerm): added
+* proto.h (term_title): added
+* main.c (fusage): add -title
+	(MAIN): add -title
+	(quitfm): term_title("")
+* display.c (displayBuffer): term_title()
+* terms.c (title_str): added
+	(TERM_INFO): added
+	(term_info): modified from mouse_term_info
+	(term_info_list): modified from xterm_mouse_term
+			add "screen"
+	(set_tty): check displayTitleTerm
+	(term_title): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.38 2002/03/14 15:41:54 ukai Exp $ */
+d105 1
+@
+
+
+1.38
+log
+@* proto.h (readHeader): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.37 2002/03/05 16:58:09 ukai Exp $ */
+d419 1
+@
+
+
+1.37
+log
+@[w3m-dev 03084] A temporary file remains when pipe + 'v'
+* proto.h (saveBufferDelNum): deleted
+* file.c (saveBufferDelNum): deleted
+* file.c (saveBuffer): saveBufferDelNum() renamed
+* main.c (vwSrc): tmpfname() recorded as fileToDelete
+		use saveBuffer() instead of saveBufferDelNum()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.36 2002/02/19 15:50:18 ukai Exp $ */
+d208 1
+@
+
+
+1.36
+log
+@[w3m-dev 03057] Re: Bug#134350: w3m: Forgets (http auth) login information upon reload (or almost anything else)
+* etc.c (find_auth): add `file'
+		check file as well
+* etc.c (find_auth_cookie): add `file'
+* etc.c (add_auth_cookie): add `file'
+* file.c (AuthBasicCred): add "Basic "
+* file.c (AuthDigestCred): add "Digest "
+* file.c (getAuthCookie): if h_auth == NULL, get recorded cookie
+* file.c (get_auth_cookie): get recorded cookie
+* file.c (loadGeneralFile): don't clear add_auth_cookie_flag
+			by redirection
+	add_auth_cookie if authorization is required and passed
+* fm.h (auth_cookie): add file
+* ftp.c (openFTP): follow change auth_cookie
+* proto.h (get_auth_cookie): added
+* proto.h (find_auth_cookie): add `file'
+* proto.h (add_auth_cookie): add `file'
+* url.c (openURL): get_auth_cookie
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.35 2002/02/05 12:31:27 ukai Exp $ */
+a191 1
+extern void saveBufferDelNum(Buffer *buf, FILE * f, int del);
+@
+
+
+1.35
+log
+@[w3m-dev 02991] form support in w3m -halfdump foo.html|w3m -halfload
+* fm.h (DUMP_HALFEXTRA): deleted
+* proto.h (process_select): return Str
+* file.c (process_img): process_form() fix
+* file.c (process_input): process_form() fix
+* file.c (process_select): return Str
+			process_form() fix
+* file.c (process_textarea): process_form() fix
+* file.c (process_form): support -halfdump
+* file.c (HTMLtagproc1): delete case HTML_FORM_INT, HTML_N_FORM_INT
+			process_{form,select,textarea}() fix
+* file.c (HTMLlineproc2body): support -halfload
+		HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_FORM_INT, HTML_FORM_INT,
+		HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TITLE_ALT
+* file.c (print_internal_information): fix -halfdump
+* file.c (loadHTMLstream): no DUMP_HALFEXTRA
+* html.h: add HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT
+* html.c (ALST_TEXTAREA_INT): added
+* html.c (ALST_SELECT_INT): added
+* html.c: add <internal>, </internal>, <select_int>, </select_int>
+	<option_int>, <textarea_int>, </textarea_int>
+* main.c (MAIN): delete -halfdump_extra
+	dont output <pre> by -halfdump
+* table.c (feed_table_tag): process_{form,select}() fix
+	add case HTML_INTERNAL, HTML_N_INTERNAL,
+	    HTML_SELECT_INT, HTML_N_SELECT_INT,
+	    HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+* tagtable.tab: add internal, /internal, select_int, /select_int
+	option_int, textarea_int, /textarea_int
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.34 2002/01/31 18:28:24 ukai Exp $ */
+d131 3
+d518 3
+a520 2
+extern Str find_auth_cookie(char *host, int port, char *realm);
+extern void add_auth_cookie(char *host, int port, char *realm, Str cookie);
+@
+
+
+1.34
+log
+@gcc -Wall -Werror safe
+* anchor.c (addMultirowsImg): unused variable: fi
+* display.c (redrawLineImage): unused variable: ncol
+* file.c (process_img): uninitialized variables: r2, ni, w0, i0, ismap
+		unused variable: url, ext
+* file.c (loadHTMLstream): need volatile image_flag
+* image.c (image_index): int
+* image.c (getCharSize): need prototype
+* image.c (getImage): uninitialized variable: key
+		return NULL
+* map.c (follow_map_menu): used only USE_IMAGE: px, py, map
+* map.c (newMapArea): used only USE_IMAGE: p, i, max
+* proto.h (addMultirowsImg): added
+* w3mimgdisplay.c (main): format string fix
+* w3mimgdisplay.c (DrawImage): need (Pixmap) cast
+
+* inflate.c: indent
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.33 2002/01/31 17:54:56 ukai Exp $ */
+d157 1
+a157 1
+extern void process_select(struct parsed_tag *tag);
+@
+
+
+1.33
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.32 2002/01/31 03:55:35 ukai Exp $ */
+d488 3
+@
+
+
+1.32
+log
+@[w3m-dev 02946] toggle migemo
+* fm.h (migemo_active): added
+* proto.h (inputLineHistSearch): add arg `prop' to incrfunc()
+* linein.c (inputLineHistSearch): ditto
+* main.c (isrch): ditto
+* main.c (dispincsrch): ditto
+			C-\ toggle migemo
+			underline when migemo is active
+* search.c (migemo_active): deleted
+* search.c (migemo_running): added
+* search.c (init_migemo): migemo_running
+* search.c (migemostr): ditto
+* search.c (forwardSearch): migemo_active > 0
+* search.c (backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.31 2002/01/30 15:08:48 ukai Exp $ */
+d105 7
+d147 8
+a154 1
+extern Str process_img(struct parsed_tag *tag);
+d185 3
+d336 2
+a337 2
+extern char *follow_map_menu(Buffer *buf, struct parsed_tagarg *arg, int x,
+			     int y);
+d341 4
+d421 3
+d553 5
+d570 9
+@
+
+
+1.31
+log
+@[w3m-dev 02933] segmentation fault when w3m -dump https:
+* file.c (readHeader): use inputAnswer()
+* file.c (getAuthCookie): remove term_cbreak()
+* file.c (checkOverWrite): use inputAnswer()
+* file.c (inputAnswer): added
+* istream.c (ssl_get_certificate): use inputAnswer()
+* main.c (qquitfm): change prompt
+* proto.h (inputAnswer): added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.30 2002/01/29 19:08:50 ukai Exp $ */
+d271 2
+a272 1
+				 Hist *hist, int (*incfunc) (int ch, Str buf));
+@
+
+
+1.30
+log
+@[w3m-dev 02928] RFC2617: HTTP Digest authentication
+* NEWS: RFC2617: HTTP Digest authentication
+* config.h.dist (USE_DIGEST_AUTH): added
+* configure (use_digest_auth): added, enabled when openssl found
+				(because it used openssl/md5.h)
+* file.c (auth_param): added
+* file.c (http_auth): added
+* file.c (extract_auth_val): added
+* file.c (qstr_unquote): added
+* file.c (extract_auth_param): added
+* file.c (get_auth_param): added
+* file.c (AuthBasicCred): added
+* file.c (digest_hex): added
+* file.c (AuthDigestCred): added
+* file.c (basic_auth_param): added
+* file.c (digest_auth_param): added
+* file.c (www_auth): added
+* file.c (findAuthentication): added
+* file.c (getAuthCookie): rewrite, use http_auth
+* file.c (loadGeneralFile): HRequest hr
+* file.c (loadGeneralFile): use findAuthentication, new getAuthCookie
+* proto.h (HTTPrequestMethod): added
+* proto.h (HTTPrequestURI): added
+* proto.h (openURL): add `hr' arg
+* url.c (HTTPrequestMethod): added
+* url.c (HTTPrequestURI): added
+* url.c (HTTPrequest): use HTTPrequestMethod and HTTPrequestURI
+* url.c (openURL): add `hr' arg
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.29 2002/01/22 16:59:11 ukai Exp $ */
+d187 1
+@
+
+
+1.29
+log
+@[w3m-dev 02885] Re: goURL
+* funcname.tab (GOTO_RELATIVE): added
+* main.c (goURL0): renamed from goURL
+  don't add http:// here, if base URL is NULL, cmd_loadURL() will add http:// when necessary
+* main.c (goURL): go to URL with current URL
+* main.c (gorURL): go to relative URL
+* proto.h (gorURL): added
+* doc/README.func (GOTO_RELATIVE): added
+* doc-jp/README.func (GOTO_RELATIVE): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.28 2002/01/21 17:57:28 ukai Exp $ */
+d419 2
+d424 1
+a424 1
+		       unsigned char *status);
+@
+
+
+1.28
+log
+@[w3m-dev 02879] reset signals
+* etc.c (reset_signals): added
+* etc.c (mySystem): use reset_signals()
+* file.c (uncompress_stream): use reset_signals()
+* proto.h (reset_signals): added
+* search.c (init_migemo): kill by SIGKILL
+* search.c (open_migemo): use reset_signals()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.27 2002/01/17 11:06:45 ukai Exp $ */
+d77 1
+@
+
+
+1.27
+log
+@[w3m-dev 02867] mark URL for external URIs
+* main.c (chkURLBuffer): chkExternalURIBuffer()
+* proto.h (chkExternalURIBuffer): added
+* url.c (chkExternalURIBuffer): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.26 2002/01/16 16:49:54 ukai Exp $ */
+d488 1
+@
+
+
+1.26
+log
+@[w3m-dev 02859]
+* config.h.dist (DEF_MIGEMO_COMMAND): added
+* configure (DEF_MIGEMO_COMMAND): added
+* fm.h (migemo_command): initial value is DEF_MIGEMO_COMMAND
+* main.c (migemostr): remove here, move search.c
+* main.c (srchcore): dont migemostr() here
+* proto.h (init_migemo): added
+* rc.c (sync_with_option): init_migemo()
+* search.c (init_migemo): added
+* search.c (open_migemo): added
+* search.c (migemostr): communicate background migemo
+* search.c (forwardSearch): if regexCompile for migemostr failed,
+		try original str
+* search.c (backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.25 2002/01/16 15:37:07 ukai Exp $ */
+d116 1
+@
+
+
+1.25
+log
+@[w3m-dev 02854] highlight for incremental search
+* display.c (EFFECT_MARK_START): added
+* display.c (EFFECT_MARK_END): added
+* display.c (EFFECT_MARK_START_C): added
+* display.c (EFFECT_MARK_END_C): added
+* display.c (EFFECT_MARK_START_M): added
+* display.c (EFFECT_MARK_END_M): added
+* display.c: define_effect for MARK_{START,END}
+* display.c (mark_mode): added
+* display.c (redrawLine): if mark_mode
+* display.c (do_effects): do_effect2(PE_MARK, ...)
+* display.c (do_effects): do_effect1(PE_MARK, ...)
+* fm.h (P_EFFECT): changed to 0x01ff
+* fm.h (PE_MARK): moved
+* fm.h (mark_color): added
+* linein.c (inputLineHistSearch): incrfunc(int ch, Str str)
+* main.c (clear_mark): added
+* main.c (dispincsrch): remove arg `x', `y'
+* main.c (dispincsrch): move SAVE_BUFPOSITION()
+* main.c (srch): if (result & SR_FOUND) clear_mark()
+* main.c (cmd_mark): PE_MARK
+* main.c (nextMk): s/PM_MARK/PE_MARK/
+* main.c (prevMk): s/PM_MARK/PE_MARK/
+* proto.h (inputLineHistSearch): change prototype incfunc()
+* rc.c (CMT_MARK_COLOR): added
+* rc.c (params2): add "mark_color"
+* search.c (set_mark): added
+* search.c (forwardSearch): use set_mark()
+* search.c (backwardSearch): use set_mark()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.24 2002/01/14 15:59:17 ukai Exp $ */
+d258 3
+@
+
+
+1.24
+log
+@[w3m-dev 02832] external URI loader support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.23 2002/01/11 20:05:58 ukai Exp $ */
+d265 1
+a265 3
+				 Hist *hist,
+				 int (*incfunc) (int ch, Str buf, short *x,
+						 short *y));
+@
+
+
+1.23
+log
+@[w3m-dev 02822] Print FTP directory list for -dump_extra option
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.22 2001/12/26 18:29:33 ukai Exp $ */
+d113 4
+@
+
+
+1.22
+log
+@[w3m-dev 02749] cleanup code for editor,mailer,extbrowser
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.21 2001/12/26 18:17:57 ukai Exp $ */
+d427 1
+@
+
+
+1.21
+log
+@[w3m-dev 02748] cleanup code for restoring cursor position
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.20 2001/12/25 18:15:00 ukai Exp $ */
+d482 2
+@
+
+
+1.20
+log
+@[w3m-dev 02732] fix Debian Bug#126381 - Passwords entered for HTTPS are used for HTTP
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.19 2001/12/25 13:43:51 ukai Exp $ */
+d93 1
+d96 1
+d235 1
+@
+
+
+1.19
+log
+@[w3m-dev 02726] incremental search
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.18 2001/12/25 12:41:08 ukai Exp $ */
+d473 2
+a474 2
+extern Str find_auth_cookie(char *host, char *realm);
+extern void add_auth_cookie(char *host, char *realm, Str cookie);
+@
+
+
+1.18
+log
+@[w3m-dev 02723] cleanup resizing
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.17 2001/12/10 17:02:44 ukai Exp $ */
+d20 1
+d22 1
+d257 4
+a260 1
+extern char *inputLineHist(char *prompt, char *def_str, int flag, Hist *hist);
+@
+
+
+1.17
+log
+@[w3m-dev 02651] search keymap using hash
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.16 2001/12/10 15:42:38 ukai Exp $ */
+a11 1
+extern MySignalHandler resize_hook(SIGNAL_ARG);
+@
+
+
+1.16
+log
+@[w3m-dev 02647]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.15 2001/12/10 15:04:09 ukai Exp $ */
+d523 1
+a523 2
+extern int countFuncList(FuncList *list);
+extern int getFuncList(char *id, FuncList *list, int nlist);
+d525 1
+a525 2
+extern void addKeyList(KeyList *list, int key, char *data);
+extern KeyListItem *searchKeyList(KeyList *list, int key);
+@
+
+
+1.15
+log
+@[w3m-dev 02647]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.14 2001/12/09 13:59:04 ukai Exp $ */
+a231 1
+extern int arg_is(char *str, char *tag);
+@
+
+
+1.14
+log
+@[w3m-dev 02646]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.13 2001/12/04 16:33:08 ukai Exp $ */
+a237 1
+extern char *getAnchor(char *arg, char **arg_return);
+@
+
+
+1.13
+log
+@[w3m-dev 02616]
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.12 2001/12/03 18:17:51 ukai Exp $ */
+d237 1
+a237 1
+extern int gethtmlcmd(char **s, int *status);
+@
+
+
+1.12
+log
+@[w3m-dev 02609]
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.11 2001/11/30 09:54:22 ukai Exp $ */
+d222 1
+@
+
+
+1.11
+log
+@[w3m-dev 02592] Accept: and AcceptEncoding:
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.10 2001/11/29 09:34:15 ukai Exp $ */
+a409 4
+extern char *guessContentType(char *filename);
+extern TextList *make_domain_list(char *domain_list);
+extern int check_no_proxy(char *domain);
+extern char *filename_extension(char *path, int is_url);
+@
+
+
+1.10
+log
+@[w3m-dev 02584] code cleanup again
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.9 2001/11/27 18:29:24 ukai Exp $ */
+d111 1
+d395 1
+a414 1
+extern struct mailcap *loadMailcap(char *filename);
+d417 1
+a581 1
+extern char *get_os2_dft(const char *, char *);
+@
+
+
+1.9
+log
+@[w3m-dev 02574] sysconfdir
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.8 2001/11/24 02:01:26 ukai Exp $ */
+d418 1
+a418 1
+			   int *stat);
+d459 1
+a459 1
+extern void init_rc(char *config_file);
+d536 1
+a536 1
+extern void geom_menu(Menu *menu, int x, int y, int select);
+d539 3
+a541 3
+extern void draw_menu_item(Menu *menu, int select);
+extern int select_menu(Menu *menu, int select);
+extern void goto_menu(Menu *menu, int select, int down);
+@
+
+
+1.8
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.7 2001/11/23 19:00:47 ukai Exp $ */
+d464 1
+@
+
+
+1.7
+log
+@[w3m-dev 02526] new configure
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.6 2001/11/21 19:24:35 ukai Exp $ */
+d107 2
+a108 2
+extern int currentLn(Buffer * buf);
+extern void tmpClearBuffer(Buffer * buf);
+d112 1
+a112 1
+extern Str convertLine(URLFile * uf, Str line, char *code, int mode);
+d114 2
+a115 1
+extern Buffer *loadGeneralFile(char *path, ParsedURL * current, char *referer, int flag, FormList * request);
+d118 7
+a124 3
+extern void push_render_image(Str str, int width, int limit, struct html_feed_environ *h_env);
+extern void flushline(struct html_feed_environ *h_env, struct readbuffer *obuf, int indent, int force, int width);
+extern void do_blankline(struct html_feed_environ *h_env, struct readbuffer *obuf, int indent, int indent_incr, int width);
+d142 5
+a146 3
+extern int HTMLtagproc1(struct parsed_tag *tag, struct html_feed_environ *h_env);
+extern void HTMLlineproc2(Buffer * buf, TextLineList * tl);
+extern void HTMLlineproc0(char *istr, struct html_feed_environ *h_env, int internal);
+d148 1
+a148 1
+extern Buffer *loadHTMLBuffer(URLFile * f, Buffer * newBuf);
+d152 4
+a155 2
+extern void completeHTMLstream(struct html_feed_environ *, struct readbuffer *);
+extern void loadHTMLstream(URLFile * f, Buffer * newBuf, FILE * src, int internal);
+d158 1
+a158 1
+extern Buffer *loadGopherDir(URLFile * uf, Buffer * newBuf);
+d160 3
+a162 3
+extern Buffer *loadBuffer(URLFile * uf, Buffer * newBuf);
+extern void saveBuffer(Buffer * buf, FILE * f);
+extern void saveBufferDelNum(Buffer * buf, FILE * f, int del);
+d165 1
+a165 1
+extern Buffer *openPagerBuffer(InputStream stream, Buffer * buf);
+d167 1
+a167 1
+extern Line *getNextPage(Buffer * buf, int plen);
+d169 2
+a170 1
+extern int doExternal(URLFile uf, char *path, char *type, Buffer **bufp, Buffer *defaultbuf);
+d178 1
+a178 1
+extern char *checkHeader(Buffer * buf, char *field);
+d181 13
+a193 12
+extern void clearBuffer(Buffer * buf);
+extern void discardBuffer(Buffer * buf);
+extern Buffer *namedBuffer(Buffer * first, char *name);
+extern Buffer *deleteBuffer(Buffer * first, Buffer * delbuf);
+extern Buffer *replaceBuffer(Buffer * first, Buffer * delbuf, Buffer * newbuf);
+extern Buffer *nthBuffer(Buffer * firstbuf, int n);
+extern void gotoRealLine(Buffer * buf, int n);
+extern void gotoLine(Buffer * buf, int n);
+extern Buffer *selectBuffer(Buffer * firstbuf, Buffer * currentbuf, char *selectchar);
+extern void reshapeBuffer(Buffer * buf);
+extern void copyBuffer(Buffer * a, Buffer * b);
+extern Buffer *prevBuffer(Buffer * first, Buffer * buf);
+d198 5
+a202 5
+extern void displayBuffer(Buffer * buf, int mode);
+extern void redrawBuffer(Buffer * buf);
+extern void redrawNLine(Buffer * buf, int n);
+extern Line *redrawLine(Buffer * buf, Line * l, int i);
+extern int redrawLineRegion(Buffer * buf, Line * l, int i, int bpos, int epos);
+d213 2
+a214 1
+extern void disp_message_nsec(char *s, int redraw_current, int sec, int purge, int mouse);
+d221 9
+a229 9
+extern void cursorUp(Buffer * buf, int n);
+extern void cursorDown(Buffer * buf, int n);
+extern void cursorUpDown(Buffer * buf, int n);
+extern void cursorRight(Buffer * buf, int n);
+extern void cursorLeft(Buffer * buf, int n);
+extern void cursorHome(Buffer * buf);
+extern void arrangeCursor(Buffer * buf);
+extern void arrangeLine(Buffer * buf);
+extern void cursorXY(Buffer * buf, int x, int y);
+d231 4
+a234 4
+extern int columnSkip(Buffer * buf, int offset);
+extern int columnPos(Line * line, int column);
+extern Line *lineSkip(Buffer * buf, Line * line, int offset, int last);
+extern Line *currentLineSkip(Buffer * buf, Line * line, int offset, int last);
+d237 1
+a237 1
+extern Str checkType(Str s, Lineprop * oprop,
+d239 1
+a239 1
+		     Linecolor * ocolor, int * check_color,
+d242 2
+a243 1
+extern int calcPosition(char *l, Lineprop *pr, int len, int pos, int bpos, int mode);
+d250 3
+a252 3
+extern int forwardSearch(Buffer * buf, char *str);
+extern int backwardSearch(Buffer * buf, char *str);
+extern void	pcmap ( void );
+d256 1
+a256 1
+extern char *inputLineHist(char *prompt, char *def_str, int flag, Hist * hist);
+d273 5
+a277 3
+extern void renderTable(struct table *t, int max_width, struct html_feed_environ *h_env);
+extern struct table *begin_table(int border, int spacing, int padding, int vspace);
+extern void end_table(struct table * tbl);
+d280 4
+a283 2
+extern int feed_table(struct table *tbl, char *line, struct table_mode *mode, int width, int internal);
+extern void feed_table1(struct table *tbl, Str tok, struct table_mode *mode, int width);
+d285 6
+a290 3
+extern struct form_list *newFormList(char *action, char *method, char *charset, char *enctype, char *target, char *name, struct form_list *_next);
+extern struct form_item_list *formList_addInput(struct form_list *fl, struct parsed_tag *tag);
+extern char *form2str(FormItemList * fi);
+d292 3
+a294 3
+extern void formRecheckRadio(Anchor * a, Buffer * buf, FormItemList * form);
+extern void formResetBuffer(Buffer * buf, AnchorList * formitem);
+extern void formUpdateBuffer(Anchor * a, Buffer * buf, FormItemList * form);
+d296 1
+a296 1
+extern void input_textarea(FormItemList * fi);
+d299 2
+a300 1
+extern void form_write_from_file(FILE * f, char *boundary, char *name, char *filename, char *file);
+d303 2
+a304 1
+extern char *follow_map_menu(Buffer * buf, struct parsed_tagarg *arg, int x, int y);
+d306 1
+a306 1
+extern Buffer *follow_map_panel(Buffer * buf, struct parsed_tagarg *arg);
+d308 1
+a308 1
+extern Buffer *page_info_panel(Buffer * buf);
+d311 2
+a312 1
+extern void addFrameSetElement(struct frameset *f, union frameset_element element);
+d317 2
+a318 1
+extern void pushFrameTree(struct frameset_queue **fqpp, struct frameset *fs, Buffer *buf);
+d320 3
+a322 2
+extern void resetFrameElement(union frameset_element *f_element, Buffer * buf, char *referer, FormList * request);
+extern Buffer *renderFrame(Buffer * Cbuf, int force_reload);
+d395 7
+a401 6
+extern ParsedURL *baseURL(Buffer * buf);
+extern int openSocket(char *hostname, char *remoteport_name, unsigned short remoteport_num);
+extern void parseURL(char *url, ParsedURL * p_url, ParsedURL * current);
+extern void copyParsedURL(ParsedURL * p, ParsedURL * q);
+extern void parseURL2(char *url, ParsedURL * pu, ParsedURL * current);
+extern Str parsedURL2Str(ParsedURL * pu);
+d404 4
+a407 1
+extern URLFile openURL(char *url, ParsedURL * pu, ParsedURL * current, URLOption * option, FormList * request, TextList * extra_header, URLFile * ouf, unsigned char *status);
+d409 1
+a409 1
+extern TextList* make_domain_list(char *domain_list);
+d417 2
+a418 1
+extern Str unquote_mailcap(char *qstr, char *type, char *name, char *attr, int *stat);
+d422 1
+a422 1
+extern FILE *openFTP(ParsedURL * pu);
+d425 17
+a441 13
+extern AnchorList * putAnchor(AnchorList * al, char *url, char *target, Anchor ** anchor_return, char *referer, int line, int pos);
+extern Anchor *registerHref(Buffer * buf, char *url, char *target, char *referer, int line, int pos);
+extern Anchor *registerName(Buffer * buf, char *url, int line, int pos);
+extern Anchor *registerImg(Buffer * buf, char *url, int line, int pos);
+extern Anchor *registerForm(Buffer * buf, FormList * flist, struct parsed_tag *tag, int line, int pos);
+extern int onAnchor(Anchor * a, int line, int pos);
+extern Anchor *retrieveAnchor(AnchorList * al, int line, int pos);
+extern Anchor *retrieveCurrentAnchor(Buffer * buf);
+extern Anchor *retrieveCurrentImg(Buffer * buf);
+extern Anchor *retrieveCurrentForm(Buffer * buf);
+extern Anchor *searchAnchor(AnchorList * al, char *str);
+extern Anchor *searchURLLabel(Buffer * buf, char *url);
+extern char *reAnchor(Buffer * buf, char *re);
+d443 1
+a443 1
+extern char *reAnchorNews(Buffer * buf, char *re);
+d446 3
+a448 3
+extern Anchor *closest_next_anchor(AnchorList * a, Anchor * an, int x, int y);
+extern Anchor *closest_prev_anchor(AnchorList * a, Anchor * an, int x, int y);
+extern HmarkerList *putHmarker(HmarkerList * ml, int line, int pos, int seq);
+d469 2
+a470 2
+extern FILE *localcgi_post(char *, char *, FormList *, char*);
+extern FILE *localcgi_get(char *, char *, char*);
+d473 1
+a473 1
+extern char *last_modified(Buffer * buf);
+d483 3
+a485 3
+extern Str find_cookie(ParsedURL * pu);
+extern int add_cookie(ParsedURL * pu, Str name, Str value, time_t expires,
+		Str domain, Str path, int flag, Str comment, int version,
+d525 2
+a526 2
+extern int countFuncList(FuncList * list);
+extern int getFuncList(char *id, FuncList * list, int nlist);
+d534 18
+a551 17
+extern void new_menu(Menu * menu, MenuItem * item);
+extern void geom_menu(Menu * menu, int x, int y, int select);
+extern void draw_all_menu(Menu * menu);
+extern void draw_menu(Menu * menu);
+extern void draw_menu_item(Menu * menu, int select);
+extern int select_menu(Menu * menu, int select);
+extern void goto_menu(Menu * menu, int select, int down);
+extern void up_menu(Menu * menu, int n);
+extern void down_menu(Menu * menu, int n);
+extern int action_menu(Menu * menu);
+extern void popup_menu(Menu * parent, Menu * menu);
+extern void guess_menu_xy(Menu * menu, int width, int *x, int *y);
+extern void new_option_menu(Menu * menu, char **label, int *variable, void (*func) ());
+
+extern int setMenuItem(MenuItem * item, char *type, char *line);
+extern int addMenuList(MenuList ** list, char *id);
+extern int getMenuN(MenuList * list, char *id);
+d557 2
+a558 1
+extern void optionMenu(int x, int y, char **label, int *variable, int initial, void (*func) ());
+d573 1
+a573 1
+extern void reloadBuffer(Buffer * buf);
+d579 1
+a579 1
+extern char*get_os2_dft(const char*,char*);
+@
+
+
+1.6
+log
+@[w3m-dev 02481] Re: #ifdef cleanup
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.5 2001/11/20 08:20:56 ukai Exp $ */
+d529 1
+a529 1
+#ifdef DICT
+d532 1
+a532 1
+#else				/* not DICT */
+d535 1
+a535 1
+#endif				/* not DICT */
+@
+
+
+1.5
+log
+@[w3m-dev 02449] reimplemented meta refresh support
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.4 2001/11/20 04:11:16 ukai Exp $ */
+d193 1
+a193 1
+#ifdef ANSI_COLOR
+d204 1
+a204 1
+#ifdef MOUSE
+d226 1
+a226 1
+#ifdef ANSI_COLOR
+d328 1
+a328 1
+#ifdef COLOR
+d330 1
+a330 1
+#ifdef BG_COLOR
+d332 2
+a333 2
+#endif				/* BG_COLOR */
+#endif				/* COLOR */
+d476 1
+a476 1
+#ifdef MOUSE
+d483 1
+a483 1
+#else				/* not MOUSE */
+d486 1
+a486 1
+#endif				/* not MOUSE */
+d499 1
+a499 1
+#ifdef MENU
+d524 1
+a524 1
+#else				/* not MENU */
+d527 1
+a527 1
+#endif				/* not MENU */
+@
+
+
+1.4
+log
+@remove gcc warnings
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+d103 1
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.6.2.32 2001/01/04 17:13:41 okabe Exp $ */
+d368 1
+d378 4
+a387 1
+extern char *guessContentTypeFromTable(struct table2 *table, char *filename);
+d433 1
+@
+
+
+1.3.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@d1 1
+a1 1
+/* $Id: proto.h,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+a102 1
+extern void setAlarmEvent(int sec, short status, int cmd, void *data);
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d101 5
+d429 1
+a429 1
+extern FILE *localcgi_post(char *, FormList *, char*);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d28 2
+d36 1
+d38 1
+d40 1
+d42 1
+d59 1
+d67 6
+d79 1
+d111 1
+a111 1
+extern void push_render_image(Str str, int width, struct html_feed_environ *h_env);
+a128 1
+#ifdef NEW_FORM
+a130 1
+#endif				/* NEW_FORM */
+d161 2
+a180 1
+extern void deleteFiles(void);
+d203 2
+a204 2
+extern void cursorUp(Buffer * buf);
+extern void cursorDown(Buffer * buf);
+d206 2
+a207 2
+extern void cursorRight(Buffer * buf);
+extern void cursorLeft(Buffer * buf);
+d262 1
+a262 1
+extern struct form_list *newFormList(char *action, char *method, char *charset, char *enctype, char *target, struct form_list *_next);
+d266 1
+a266 1
+extern void form_recheck_radio(FormItemList * fi, void *data, void (*update_hook) (FormItemList *, void *));
+d273 1
+a273 1
+extern void form_write_form_file(FILE * f, char *boundary, char *name, char *file);
+d281 1
+a281 1
+extern struct frame_body *newFrame(struct parsed_tag *tag, ParsedURL * baseURL);
+d288 2
+a289 2
+extern void pushFrameTree(struct frameset_queue **fqpp, struct frameset *fs, long linenumber, short pos);
+extern struct frameset *popFrameTree(struct frameset_queue **fqpp, long *linenumber, short *pos);
+d377 1
+a377 1
+extern Str unquote_mailcap(char *qstr, char *type, char *name, int *stat);
+d401 1
+d408 1
+d413 1
+d418 1
+a430 1
+extern Str quoteShell(char *command);
+d432 1
+d510 1
+d515 1
+d528 1
+a528 1
+extern char *guess_save_name(char *file);
+d533 8
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

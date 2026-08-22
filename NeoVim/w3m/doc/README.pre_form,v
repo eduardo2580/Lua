@@ -1,0 +1,125 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.3
+	release-0-5:1.3
+	release-0-4-2:1.3
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2003.05.12.16.24.53;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.10.16.51.12;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.11.05.16.37.36;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@[w3m-dev 03895] type=image support of pre_form
+* form.c (loadPreFOrm): add image
+	(preFormUpdateBuffer): add FORM_INPUT_IMAGE
+* doc/README.pre_form: update
+* doc-jp/README.pre_form: ditto
+From: Hironori SAKAMOTO <h-saka@@lsi.nec.co.jp>
+@
+text
+@pre_form: Feature to configure form parameters when opening specific site.
+
+It would be convinient for sites where you often visit, but it may introduce
+some security issues.  Be careful to use this feature, especially `submit'
+params described below.
+
+Default configuration file for pre_form is ~/.w3m/pre_form.
+
+Syntax as follows:
+
+url       <url>|/<re-url>/
+form      [<name>] <action>
+text      <name>  <value>
+file      <name>  <value>
+password  <name>  <value>
+checkbox  <name>  <value>  [<checked>]
+radio     <name>  <value>
+section   <name>  <value>
+submit   [<name> [<value>]]
+image    [<name> [<value>]]
+textarea  <name>
+<value>
+   :
+/textarea
+
+If <action> is set, form which has matched <action> attributes
+will be configured by this pre_form.
+
+The line begining with text, file, passwd, select, textarea means that
+it will set value to <value> in input, select or textarea element which 
+name  attribute matches with <name>.
+
+The line beginning with checkbox, radio means that it will check
+input element which name and value attribute matches with <name> and <value>
+respectively.  If <checked> is 0, no, or off, disable check of the checkbox.
+
+The line beginning with submit or image means that it will submit input
+element which name attribute matches with <name> (and value attribute
+matches with <value>), or submit last <input type=submit> element if no
+<name> specified.
+
+You quote \, ' (single-quote) or " (double quote) as you do in shell.
+
+
+
+@
+
+
+1.2
+log
+@* doc/README.pre_form: update
+* doc-jp/README.pre_form: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d19 2
+a20 1
+submit   [<name>]
+d37 4
+a40 3
+The line beginning with submit means that it will submit input element which
+name attribute matches with <name>, or submit last <input type=submit> 
+element if no <name> specified.
+@
+
+
+1.1
+log
+@* doc-jp/README.pre_form: added [w3m-dev 03373]
+* doc/README.pre_form: brief translation
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d11 2
+a12 1
+url       <url>  [<action>]
+@
+

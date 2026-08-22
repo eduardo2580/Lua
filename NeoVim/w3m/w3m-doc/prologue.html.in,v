@@ -1,0 +1,229 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.3
+	release-0-5:1.3
+	release-0-4-2:1.3
+	release-0-4-1:1.3
+	release-0-4:1.3
+	release-0-4-rc3:1.3
+	release-0-4-rc2:1.3
+	release-0-4-rc1:1.3
+	release-0-3-2-2:1.3
+	release-0-3-2-1:1.3
+	branch-0-3-2:1.3.0.2
+	release-0-3-2:1.3
+	release-0-3-2-rc4:1.3
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.2
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2002.10.29.14.28.30;	author inu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.27.03.54.49;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.18.52;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.18.52;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Add some platforms.
+@
+text
+@<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+@@include define.wd
+@@include contain.wd
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<TITLE>PROLOGUE&nbsp;- $B$O$8$a$K(B -</title>
+</HEAD>
+
+<BODY>
+
+<H1><A NAME="index">$B$O$8$a$K(B</A></H1>
+
+<UL>
+	<LI><A HREF="#summary">w3m $B$H$O(B</A>
+	<LI><A HREF="#glossary">$BMQ8l$N@@bL@@(B</A>
+	<LI><A HREF="#disclaimer">$BCm0U;v9`(B</A>
+	<LI><A HREF="@@DOC.copyright@@">$BCx:n8"!"%i%$%;%s%9(B</A>
+	<LI><A HREF="#confirmation">$BF0:n3NG'(B OS</A>
+</UL>
+
+<DIV>
+<A HREF="@@DOC.index@@">$B%H%C%W%Z%$%8$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="summary">w3m $B$H$O(B</A></H2>
+<!-- w3m $B$H$O(B -->
+<DIV>
+<P>$B!!(Bw3m $B$O!"(BWorld Wide Web $B$KBP1~$7$?%F%-%9%H%Y!<%9$N%Z!<%8%c$G$9!#(Bkterm $B$J$I$N%-%c%i%/%?C<Kv>e$G!"%m!<%+%k%U%!%$%k$r8+$?$j!"(BWWW $B$NFbMF$r8+$?$j$9$k$3$H$,$G$-$^$9!#(B<BR>
+<P>$B!!(Bw3m $B$O!"(Bfm $B$H$$$&%Z!<%8%c$r%Y!<%9$H$7$F:n$i$l$^$7$?!#(Bfm $B$K$D$$$F$N>\:Y$O!"(B<A HREF="@@README.fm@@">README.fm</A> $B$r$*FI$_$/$@@$5$$!#(Bw3m $B$N%Z!<%8%c$H$7$F$N4pK\E*$JFCD'$O!"(Bfm $B$H$[$H$s$IF1$8$G$9!#(B<BR>
+<P>$B!!(Bw3m $BFH<+$NFCD'$H$7$F$O!"<!$N$h$&$J$b$N$,$"$j$^$9!#(B<BR>
+<P><UL>
+   <LI>WWW $BBP1~$J$N$G!"(BHTML $B$NJ8>O$rFI$s$G$$$k;~$K$O!"$=$NCf$N%j%s%/$rC)$C$?$j2hA|$r8+$k;v$,$G$-$k!#(B
+   <LI>Internet message $BI=<($N$?$a$N%b!<%I$,$"$k!#$3$N;~!"(BContent-Type: $B$,(B text/html $B$N>l9g$O!"<+F0E*$K(B HTML $B$NJ8=q$H$7$FI=<($9$k!#$^$?!"<+NO$G(B MIME header $B$N%G%3!<%I$r$9$k!#(B
+   <LI>$B8+$F$$$k(B plain text $BJ8=qCf$K(B URL $BI=5-$,$"$C$?>l9g!"$=$NItJ,$+$i%j%s%/$r$?$I$k;v$,$G$-$k!#(B
+   </UL>
+<BR>
+<A HREF="#index">$B$3$N%Z%$%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="glossary">$BMQ8l$N@@bL@@(B</A></H2>
+<!-- $B@@bL@@$NET9g>e$KI,MW$JMQ8l@@bL@@(B -->
+<DIV>
+<A HREF="#index">$B$3$N%Z%$%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="disclaimer">$BCm0U;v9`(B</A></H2>
+<!-- $BCm0U;v9`(B -->
+<DIV>
+<P>$B$3$N%=%U%H%&%'%"$K$h$C$FMxMQ<T$^$?$OBh;0<T$,2?$i$+$NHo32$r<u$1$?>l9g!":n<T$O$=$N@@UG$$r0l@@Z$*$$$^$;$s!#$3$N;v$r>5Bz$9$k8B$j$K$*$$$F!"$3$N%=%U%H%&%'%"$O!"C/$G$b:n<T$KCG$j$J$/MxMQ!&2~JQ!&G[I[$G$-$^$9!#(B<BR>
+<P>
+<A HREF="#index">$B$3$N%Z%$%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2>$BCx:n8"!"%i%$%;%s%9(B</H2>
+<DIV>
+<P>$B!!(B<A HREF="@@DOC.copyright@@">$BCx:n8"!"%i%$%;%s%9(B</A>$B$r;2>H$/$@@$5$$!#(B
+</DIV>
+<DIV>
+<A HREF="#index">$B$3$N%Z%$%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="confirmation">$BF0:n3NG'(BOS</A></H2>
+<!-- $BF0:n3NG'(BOS -->
+<DIV>
+<P>$B!!8=:_!"F0:n$,3NG'$5$l$F$$$k(B OS $B$O0J2<$NDL$j$G$9!#(B
+<BLOCKQUOTE>
+    <TABLE BORDER="0">
+    <TR><TD ALIGN="left">SunOS4.1.x</TD>
+    <TR><TD ALIGN="left">HP-UX 9.x, 10.x</TD>
+    <TR><TD ALIGN="left">Soraris2.5.x</TD>
+    <TR><TD ALIGN="left">Linux 2.0.30</TD>
+    <TR><TD ALIGN="left">FreeBSD 2.2.8, 3.1, 3.2, 4.6</TD>
+    <TR><TD ALIGN="left">NetBSD/macppc, m68k</TD>
+    <TR><TD ALIGN="left">EWS4800 Release12.2 Rev.A</TD>
+    <TR><TD ALIGN="left">Digital UNIX: v3.2D, v4.0D</TD>
+    <TR><TD ALIGN="left">IRIX 5.3, IRIX 6.5</TD>
+    <TR><TD ALIGN="left">OS/2 with emx</TD>
+    <TR><TD ALIGN="left">Windows 9x/NT with Cygwin32 b20.1</TD>
+    <TR><TD ALIGN="left">MS-DOS with DJGPP and WATT32 packet drive</TD>
+    <TR><TD ALIGN="left">MacOS X Server</TD>
+    <TR><TD ALIGN="left">MacOS X 10.1, 10.2</TD>
+    </TABLE>
+</BLOCKQUOTE>
+<A HREF="#index">$B$3$N%Z%$%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<A HREF="@@DOC.index@@">$B%H%C%W%Z%$%8$KLa$k(B</A>
+
+</BODY>
+</HTML>
+@
+
+
+1.2
+log
+@
+2001-11-27  aito@@fw.ipsj.or.jp
+	* Error correction on doc-jp/FAQ.html
+
+2001-11-27  sakane@@d4.bsd.nes.nec.co.jp (Yoshinobu Sakane)
+	* w3m-doc update.
+@
+text
+@d80 1
+a80 1
+    <TR><TD ALIGN="left">FreeBSD 2.2.8, 3.1, 3.2</TD>
+d89 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d9 1
+a9 1
+<TITLE>PROLOGUE&nbsp;-$B$O$8$a$K(B-</title>
+d17 1
+a17 1
+	<LI><A HREF="#summary">w3m$B$H$O(B</A>
+d21 1
+a21 1
+	<LI><A HREF="#confirmation">$BF0:n3NG'(BOS</A>
+d29 2
+a30 2
+<H2><A NAME="summary">w3m$B$H$O(B</A></H2>
+<!-- w3m$B$H$O(B -->
+d32 9
+d45 2
+a46 2
+<H2><A NAME="glossary">$BMQ8l@@bL@@(B</A></H2>
+<!-- $BMQ8l@@bL@@(B -->
+d55 2
+d63 1
+a63 1
+  <A HREF="@@DOC.copyright@@">$BCx:n8"!"%i%$%;%s%9(B</A>$B$r;2>H$/$@@$5$$!#(B
+d73 18
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

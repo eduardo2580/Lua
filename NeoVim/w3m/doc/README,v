@@ -1,0 +1,829 @@
+head	1.26;
+access;
+symbols
+	release-0-5-3:1.26
+	release-0-5-2:1.25
+	release-0-5-1:1.24
+	release-0-5:1.23
+	release-0-4-2:1.22
+	release-0-4-1:1.19
+	release-0-4:1.18
+	release-0-4-rc3:1.16
+	release-0-4-rc2:1.16
+	release-0-4-rc1:1.16
+	release-0-3-2-2:1.16.2.2
+	release-0-3-2-1:1.16.2.1
+	branch-0-3-2:1.16.0.2
+	release-0-3-2:1.16
+	release-0-3-2-rc4:1.15
+	release-0-3-2-rc3:1.14
+	release-0-3-2-rc2:1.14
+	release-0-3-2-rc1:1.14
+	release-0-3-1:1.13
+	release-0-3:1.11
+	release-0-2-5-1:1.10.2.1
+	branch-0-2-5:1.10.0.2
+	release-0-2-5:1.10
+	release-0-2-4:1.8
+	release-0-2-3-2:1.6
+	release-0-2-3-1:1.5
+	release-0-2-3:1.3
+	inu-0-2-2-rel-1-1:1.2.2.1
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.26
+date	2011.01.15.07.52.48;	author inu;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2007.05.31.12.17.05;	author inu;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.04.28.18.19.25;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.03.21.16.50.36;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.09.22.18.11.17;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.05.13.17.17.53;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.04.08.16.20.01;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.03.06.17.36.31;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.02.23.16.37.13;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.02.20.15.49.59;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.11.04.17.14.18;	author ukai;	state Exp;
+branches
+	1.16.2.1;
+next	1.15;
+
+1.15
+date	2002.10.29.14.28.30;	author inu;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.07.19.14.35.36;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.07.15.17.33.44;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.07.11.15.36.46;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.03.05.17.17.46;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.01.31.15.00.58;	author ukai;	state Exp;
+branches
+	1.10.2.1;
+next	1.9;
+
+1.9
+date	2002.01.18.13.09.07;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.07.13.27.22;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.12.21.21.51.12;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.12.21.19.33.29;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.20.12.39.53;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.12.20.11.11.49;	author inu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.21.04.29.14;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.14;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.11.22.17.52.28;	author inu;	state Exp;
+branches;
+next	;
+
+1.10.2.1
+date	2002.02.04.16.26.29;	author ukai;	state Exp;
+branches;
+next	;
+
+1.16.2.1
+date	2002.11.26.16.28.59;	author ukai;	state Exp;
+branches;
+next	1.16.2.2;
+
+1.16.2.2
+date	2002.12.05.16.48.31;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.26
+log
+@w3m 0.5.3 release
+@
+text
+@	w3m: WWW wo Miru Tool  version 0.5.3	Jan 15, 2011
+		(C) Copyright Akinori ITO
+			      Hironori SAKAMOTO
+			      Fumitoshi UKAI
+
+1. Introduction
+
+     w3m is a pager with WWW capability. It IS a pager, but it can be
+used as a text-mode WWW browser.
+
+     The features of w3m are as follows:
+
+* When reading HTML document, you can follow links and view images
+  (using external image viewer).
+* It has 'internet message mode', which determines the type of document
+  from header. If the Content-Type: field of the document is text/html,
+  that document is displayed as HTML document.
+* You can change URL description like 'http://hogege.net' in plain text
+  into link to that URL.
+
+Current problems are:
+
+* Online manuals are poor.
+
+w3m is known to work on these platforms.
+
+      SunOS 4.1.x
+      HP-UX 9.x, 10.x
+      Solaris 2.5.x, 2.6, 8, 9
+      Linux 2.0.*/2.2.*/2.4.*/2.6.*
+      FreeBSD 2.2.8, 3.1, 3.2, 4.6
+      NetBSD/macppc, m68k
+      EWS4800 Rel.12.2 Rev.A
+      Digital UNIX: v3.2D, v4.0D
+      IRIX 5.3, IRIX 6.5
+      OS/2 with emx
+      Windows 9x/NT with Cygwin b20.1, 1.1.x, 1.3.x
+      MS-DOS with DJGPP and WATT32 packet driver
+      MacOS X Server
+      MacOS X 10.1, 10.2, 10.3, 10.4
+
+2. Installation
+
+Follow these instructions to install w3m.  
+
+ - You need latest version of GC library (at least 6.1?).
+   You can get GC library from 
+   http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
+
+   Note: if you're using GC library 6.1, you should install gc.h 
+   to PREFIX/include:
+	# cp gc-6.1/include/gc.h PREFIX/include
+
+ - Run configure.
+   % ./configure
+
+ - do make
+   % make
+
+ - do make install
+   # make install
+
+MACHINE/OS specific notices:
+
+HP-UX
+	If you want to use HP C compiler, answer
+
+		Input your favorite C-compiler.
+		(Default: cc) cc -Aa -D_HPUX_SOURCE
+
+	If you use just 'cc' without options, you can't compile w3m.
+	If you are using gcc, no option is needed. 
+
+OS/2
+	You can compile w3m using emx. First you have to do
+	is to compile GC library with
+
+		cd gc
+		make -f EMX_MAKEFILE
+
+	then compile w3m. I heard that OS/2 console can't 
+	display color, you had better compile w3m without
+	color capability.
+
+Windows
+	To compile w3m on MS-Windows, you have to use Cygwin with
+	development tools.
+	Read README.cygwin for more details.
+
+3. Copyright
+
+  (C) Copyright 1994-2002 by Akinori Ito
+  (C) Copyright 2002-2011 by Akinori Ito, Hironori Sakamoto, Fumitoshi Ukai
+
+4. License
+
+  Use, modification and redistribution of this software is hereby granted, 
+  provided that this entire copyright notice is included on any copies of 
+  this software and applications and derivations thereof.
+
+  This software is provided on an "as is" basis, without warranty of any
+  kind, either expressed or implied, as to any matter including, but not
+  limited to warranty of fitness of purpose, or merchantability, or
+  results obtained from use of this software.
+
+5. Author
+
+Initial author:
+	Akinori Ito
+	Faculty of Engineering, Tohoku University
+	aito@@fw.ipsj.or.jp
+
+Current Maintainer
+	Dai Sato
+	Tohoku University Hospital
+	satodai@@w3m.jp
+
+Feel free to send your opinion to the w3m mailing-lists.
+	w3m-dev@@sic.med.tohoku.ac.jp (Japanese)
+	w3m-dev-en@@sic.med.tohoku.ac.jp (English)
+	http://w3m.sourceforge.net/
+@
+
+
+1.25
+log
+@w3m 0.5.2 release
+@
+text
+@d1 1
+a1 1
+	w3m: WWW wo Miru Tool  version 0.5.2	May 31, 2007
+d93 1
+a93 1
+  (C) Copyright 2002-2007 by Akinori Ito, Hironori Sakamoto, Fumitoshi Ukai
+@
+
+
+1.24
+log
+@w3m 0.5.1
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+* configure.in: version 0.5.1
+* po/w3m.pot, ja.po: update-po
+@
+text
+@d1 1
+a1 1
+	w3m: WWW wo Miru Tool  version 0.5.1	April 29, 2004
+d40 1
+a40 1
+      MacOS X 10.1, 10.2
+d93 1
+a93 1
+  (C) Copyright 2002-2004 by Akinori Ito, Hironori Sakamoto, Fumitoshi Ukai
+d110 1
+a110 1
+	Faculty of Engineering, Yamagata University
+d114 3
+a116 3
+	Fumitoshi UKAI
+	Debian Project
+	ukai@@debian.or.jp
+d119 2
+a120 2
+	w3m-dev@@mi.med.tohoku.ac.jp (Japanese)
+	w3m-dev-en@@mi.med.tohoku.ac.jp (English)
+@
+
+
+1.23
+log
+@w3m 0.5
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+	w3m: WWW wo Miru Tool  version 0.5	March 22, 2004
+@
+
+
+1.22
+log
+@* w3m 0.4.2
+* version.c.in: update
+* doc/README: version 0.4.2, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 4
+a4 2
+	w3m: WWW wo Miru Tool  version 0.4.2
+		(C) Copyright by Akinori ITO	Sept 23, 2003
+d30 1
+a30 1
+      Linux 2.0.*/2.2.*/2.4.*
+d92 2
+a93 1
+  (C) Copyright 1994-2002 by Akinori Ito.
+d113 5
+@
+
+
+1.21
+log
+@[w3m-dev 03899] minor fixes
+* acinclude.m4: fix s/SSLCFLAGS/SSL_CFLAGS/
+* doc/README: update, fix typo
+* doc-jp/FAQ.html: update, fix URL
+* doc-jp/README: update
+* doc-jp/README.SSL: update
+* doc-jp/README.cookie: update
+* doc-jp/README.img: update URL
+* doc-jp/README.migemo: update
+* doc-jp/STORY.html: fix URL
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.4.1
+		(C) Copyright by Akinori ITO	Mar 7, 2003
+@
+
+
+1.20
+log
+@[w3m-dev 03864] doc/README
+* doc/README doc-jp/README: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d25 1
+a25 1
+      SunOS4.1.x
+d27 1
+a27 1
+      Solaris2.5.x
+d35 1
+a35 1
+      Windows 9x/NT with Cygwin32 b20.1
+d45 1
+a45 1
+   You can get GC libbrary from 
+@
+
+
+1.19
+log
+@w3m 0.4.1
+* version.c.in: update
+* doc/README: version 0.4.1, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d28 1
+a28 1
+      Linux 2.0.30
+d42 1
+a42 1
+Follow these instructions to install w3m.
+d44 16
+a59 3
+2.1 Run configure. The script will ask you a few questions. Answer them.
+2.2 do make
+2.3 do make install
+a91 3
+  Hans J. Boehm, Alan J. Demers, Xerox Corp. and Silicon Graphics
+  have the copyright of the GC library comes with w3m package.
+
+a102 1
+
+d105 1
+a105 2
+Feel free to send your opinion to the author.
+
+d109 4
+@
+
+
+1.18
+log
+@w3m 0.4
+* version.c.in: update
+* doc/README: version 0.4, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.4
+		(C) Copyright by Akinori ITO	Feb 24, 2002
+@
+
+
+1.17
+log
+@* doc/README: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.3.2
+		(C) Copyright by Akinori ITO	Nov 5, 2002
+@
+
+
+1.16
+log
+@w3m 0.3.2
+@
+text
+@d73 1
+a73 2
+	You can get it from http://sourceware.cygnus.com/cygwin/ .
+	
+@
+
+
+1.16.2.1
+log
+@w3m 0.3.2.1
+* version.c.in: update
+* doc/README: version 0.3.2.1, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.3.2.1
+		(C) Copyright by Akinori ITO	Nov 27, 2002
+@
+
+
+1.16.2.2
+log
+@w3m 0.3.2.2
+* version.c.in: update
+* doc/README: version 0.3.2.2, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.3.2.2
+		(C) Copyright by Akinori ITO	Dec 6, 2002
+@
+
+
+1.15
+log
+@Add some platforms.
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.3.1
+		(C) Copyright by Akinori ITO	July 16, 2002
+@
+
+
+1.14
+log
+@w3m-img already merged
+@
+text
+@d29 1
+a29 1
+      FreeBSD 2.2.8, 3.1, 3.2
+d38 1
+@
+
+
+1.13
+log
+@w3m 0.3.1
+@
+text
+@a20 1
+* It can't show images inline. (See w3m-img info on the w3m homepage)
+@
+
+
+1.12
+log
+@[w3m-dev 03255] update cygwin info
+* doc-jp/README: update
+* doc/README: update
+* doc-jp/README.cygwin: deleted
+* doc/README.cygwin: deleted
+From: WATANABE Katsuyuki <katsuyuki_1.watanabe@@toppan.co.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.3
+		(C) Copyright by Akinori ITO	March 6, 2002
+@
+
+
+1.11
+log
+@w3m 0.3
+* version.c.in: update
+* doc/README: version 0.3, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d71 4
+a74 1
+	See README.cygwin.
+@
+
+
+1.10
+log
+@w3m 0.2.5
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.5
+		(C) Copyright by Akinori ITO	January 31, 2002
+@
+
+
+1.10.2.1
+log
+@w3m 0.2.5.1 - backport from w3m/0.2.5+cvs-1.299
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.5.1
+		(C) Copyright by Akinori ITO	February 5, 2002
+@
+
+
+1.9
+log
+@[w3m-dev 02873] delete "decode MIME-body" in doc{,-jp}/README
+* doc-jp/README: delete "decode MIME-body"
+* doc/README: ditto
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.4
+		(C) Copyright by Akinori ITO	January 7, 2002
+@
+
+
+1.8
+log
+@w3m 0.2.4
+@
+text
+@a21 1
+* It doesn't decode MIME-body of the document.
+@
+
+
+1.7
+log
+@[w3m-dev 02682]
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.3.2
+		(C) Copyright by Akinori ITO	December 21, 2001
+d76 1
+a76 1
+  (C) Copyright 1994-2001 by Akinori Ito.
+@
+
+
+1.6
+log
+@w3m 0.2.3.2 - security fix in w3m/scripts
+@
+text
+@a73 4
+MS-DOS
+	See README.dj.
+
+
+@
+
+
+1.5
+log
+@w3m 0.2.3.1
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.3.1
+		(C) Copyright by Akinori ITO	December 20, 2001
+@
+
+
+1.4
+log
+@
+changed for w3m-0.2.3
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version 0.2.3
+		(C) Copyright by Akinori ITO	November 21, 2001
+@
+
+
+1.3
+log
+@
+2001-11-21  Akinori Ito <aito@@fw.ipsj.or.jp>
+
+	* Homepage URLs and author's mail addresses in the documents
+	  are changed.
+@
+text
+@d1 1
+a1 1
+	w3m: WWW wo Miru Tool  version 0.2.2
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d1 2
+a2 2
+	w3m: WWW wo Miru Tool  version beta-990323
+		(C) Copyright by Akinori ITO	March 23, 1999
+d21 1
+a21 3
+* Resize behaviour is incomplete.
+* It can't show images inline. (It seems to be impossible as far as using
+  xterm)
+d80 1
+a80 1
+  (C) Copyright 1994-1999 by Akinori Ito.
+d103 2
+a104 2
+	aito@@ei5sun.yz.yamagata-u.ac.jp
+	http://ei5nazha.yz.yamagata-u.ac.jp/
+@
+
+
+1.2.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@d1 2
+a2 2
+       w3m: WWW wo Miru Tool  version 0.2.2
+        (C) Copyright by Akinori ITO     November 21, 2001
+d21 3
+a23 1
+* It can't show images inline. (See w3m-img info on the w3m homepage)
+d82 1
+a82 1
+  (C) Copyright 1994-2001 by Akinori Ito.
+d105 2
+a106 2
+       aito@@fw.ipsj.or.jp
+       http://w3m.sourceforge.net/
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d21 1
+a21 1
+* Resize behaviour is imcomplete.
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

@@ -1,0 +1,2568 @@
+head	1.37;
+access;
+symbols
+	release-0-5-3:1.37
+	release-0-5-2:1.36
+	release-0-5-1:1.36
+	release-0-5:1.36
+	release-0-4-2:1.36
+	release-0-4-1:1.34
+	release-0-4:1.33
+	release-0-4-rc3:1.33
+	release-0-4-rc2:1.33
+	release-0-4-rc1:1.32
+	release-0-3-2-2:1.11
+	release-0-3-2-1:1.11
+	branch-0-3-2:1.11.0.2
+	release-0-3-2:1.11
+	release-0-3-2-rc4:1.11
+	release-0-3-2-rc3:1.11
+	release-0-3-2-rc2:1.11
+	release-0-3-2-rc1:1.11
+	release-0-3-1:1.9
+	release-0-3:1.7;
+locks; strict;
+comment	@ * @;
+
+
+1.37
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2003.07.07.15.49.03;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2003.07.07.15.48.16;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2003.02.24.16.27.36;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.02.13.12.54.37;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.01.29.17.31.22;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.01.29.17.26.52;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.01.29.17.10.40;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.01.28.16.46.54;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.01.28.16.45.19;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.01.22.16.10.28;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.01.17.16.57.19;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.01.10.16.42.46;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.12.11.15.08.47;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.12.11.15.07.53;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.11.27.16.46.34;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.11.24.16.02.22;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.11.15.15.57.16;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.11.15.15.56.36;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.11.15.15.51.24;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.11.09.21.55.24;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.06.15.05.35;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.11.06.03.19.31;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.11.05.17.10.05;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.07.29.15.25.37;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.07.22.16.27.31;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.04.17.02.36.45;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.03.06.03.32.11;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.02.14.03.50.03;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.02.09.15.24.58;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.02.08.14.29.52;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.02.04.15.18.42;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.02.03.06.38.49;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.01.31.18.28.24;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.01.31.17.54.51;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.37
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@/* $Id: image.c,v 1.36 2003/07/07 15:49:03 ukai Exp $ */
+
+#include "fm.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <signal.h>
+#include <errno.h>
+#include <unistd.h>
+#ifdef HAVE_WAITPID
+#include <sys/wait.h>
+#endif
+
+#ifdef USE_IMAGE
+
+static int image_index = 0;
+
+/* display image */
+
+typedef struct _termialImage {
+    ImageCache *cache;
+    short x;
+    short y;
+    short sx;
+    short sy;
+    short width;
+    short height;
+} TerminalImage;
+
+static TerminalImage *terminal_image = NULL;
+static int n_terminal_image = 0;
+static int max_terminal_image = 0;
+static FILE *Imgdisplay_rf = NULL, *Imgdisplay_wf = NULL;
+static pid_t Imgdisplay_pid = 0;
+static int openImgdisplay();
+static void closeImgdisplay();
+int getCharSize();
+
+void
+initImage()
+{
+    if (activeImage)
+	return;
+    if (getCharSize())
+	activeImage = TRUE;
+}
+
+int
+getCharSize()
+{
+    FILE *f;
+    Str tmp;
+    int w = 0, h = 0;
+
+    set_environ("W3M_TTY", ttyname_tty());
+    tmp = Strnew();
+    if (!strchr(Imgdisplay, '/'))
+	Strcat_m_charp(tmp, w3m_auxbin_dir(), "/", NULL);
+    Strcat_m_charp(tmp, Imgdisplay, " -test 2>/dev/null", NULL);
+    f = popen(tmp->ptr, "r");
+    if (!f)
+	return FALSE;
+    while (fscanf(f, "%d %d", &w, &h) < 0) {
+	if (feof(f))
+	    break;
+    }
+    pclose(f);
+
+    if (!(w > 0 && h > 0))
+	return FALSE;
+    if (!set_pixel_per_char)
+	pixel_per_char = (int)(1.0 * w / COLS + 0.5);
+    if (!set_pixel_per_line)
+	pixel_per_line = (int)(1.0 * h / LINES + 0.5);
+    return TRUE;
+}
+
+void
+termImage()
+{
+    if (!activeImage)
+	return;
+    clearImage();
+    if (Imgdisplay_wf) {
+	fputs("2;\n", Imgdisplay_wf);	/* ClearImage() */
+	fflush(Imgdisplay_wf);
+    }
+    closeImgdisplay();
+}
+
+static int
+openImgdisplay()
+{
+    Imgdisplay_pid = open_pipe_rw(&Imgdisplay_rf, &Imgdisplay_wf);
+    if (Imgdisplay_pid < 0)
+	goto err0;
+    if (Imgdisplay_pid == 0) {
+	/* child */
+	char *cmd;
+	setup_child(FALSE, 2, -1);
+	if (!strchr(Imgdisplay, '/'))
+	    cmd = Strnew_m_charp(w3m_auxbin_dir(), "/", Imgdisplay, NULL)->ptr;
+	else
+	    cmd = Imgdisplay;
+	myExec(cmd);
+	/* XXX: ifdef __EMX__, use start /f ? */
+    }
+    activeImage = TRUE;
+    return TRUE;
+  err0:
+    Imgdisplay_pid = 0;
+    activeImage = FALSE;
+    return FALSE;
+}
+
+static void
+closeImgdisplay()
+{
+    if (Imgdisplay_wf)
+	fclose(Imgdisplay_wf);
+    if (Imgdisplay_rf) {
+	/* sync with the child */
+	getc(Imgdisplay_rf); /* EOF expected */
+	fclose(Imgdisplay_rf);
+    }
+    if (Imgdisplay_pid)
+	kill(Imgdisplay_pid, SIGKILL);
+    Imgdisplay_rf = NULL;
+    Imgdisplay_wf = NULL;
+    Imgdisplay_pid = 0;
+}
+
+void
+addImage(ImageCache * cache, int x, int y, int sx, int sy, int w, int h)
+{
+    TerminalImage *i;
+
+    if (!activeImage)
+	return;
+    if (n_terminal_image >= max_terminal_image) {
+	max_terminal_image = max_terminal_image ? (2 * max_terminal_image) : 8;
+	terminal_image = New_Reuse(TerminalImage, terminal_image,
+				   max_terminal_image);
+    }
+    i = &terminal_image[n_terminal_image];
+    i->cache = cache;
+    i->x = x;
+    i->y = y;
+    i->sx = sx;
+    i->sy = sy;
+    i->width = w;
+    i->height = h;
+    n_terminal_image++;
+}
+
+static void
+syncImage(void)
+{
+    fputs("3;\n", Imgdisplay_wf);	/* XSync() */
+    fputs("4;\n", Imgdisplay_wf);	/* put '\n' */
+    while (fflush(Imgdisplay_wf) != 0) {
+	if (ferror(Imgdisplay_wf))
+	    goto err;
+    }
+    if (!fgetc(Imgdisplay_rf))
+	goto err;
+    return;
+  err:
+    closeImgdisplay();
+    image_index += MAX_IMAGE;
+    n_terminal_image = 0;
+}
+
+void
+drawImage()
+{
+    static char buf[64];
+    int j, draw = FALSE;
+    TerminalImage *i;
+
+    if (!activeImage)
+	return;
+    if (!n_terminal_image)
+	return;
+    for (j = 0; j < n_terminal_image; j++) {
+	i = &terminal_image[j];
+	if (!(i->cache->loaded & IMG_FLAG_LOADED &&
+	      i->width > 0 && i->height > 0))
+	    continue;
+	if (!(Imgdisplay_rf && Imgdisplay_wf)) {
+	    if (!openImgdisplay())
+		return;
+	}
+	if (i->cache->index > 0) {
+	    i->cache->index *= -1;
+	    fputs("0;", Imgdisplay_wf);	/* DrawImage() */
+	}
+	else
+	    fputs("1;", Imgdisplay_wf);	/* DrawImage(redraw) */
+	sprintf(buf, "%d;%d;%d;%d;%d;%d;%d;%d;%d;",
+		(-i->cache->index - 1) % MAX_IMAGE + 1, i->x, i->y,
+		(i->cache->width > 0) ? i->cache->width : 0,
+		(i->cache->height > 0) ? i->cache->height : 0,
+		i->sx, i->sy, i->width, i->height);
+	fputs(buf, Imgdisplay_wf);
+	fputs(i->cache->file, Imgdisplay_wf);
+	fputs("\n", Imgdisplay_wf);
+	draw = TRUE;
+    }
+    if (!draw)
+	return;
+    syncImage();
+    touch_cursor();
+    refresh();
+}
+
+void
+clearImage()
+{
+    static char buf[64];
+    int j;
+    TerminalImage *i;
+
+    if (!activeImage)
+	return;
+    if (!n_terminal_image)
+	return;
+    if (!Imgdisplay_wf) {
+	n_terminal_image = 0;
+	return;
+    }
+    for (j = 0; j < n_terminal_image; j++) {
+	i = &terminal_image[j];
+	if (!(i->cache->loaded & IMG_FLAG_LOADED &&
+	      i->width > 0 && i->height > 0))
+	    continue;
+	sprintf(buf, "6;%d;%d;%d;%d\n", i->x, i->y, i->width, i->height);
+	fputs(buf, Imgdisplay_wf);
+    }
+    syncImage();
+    n_terminal_image = 0;
+}
+
+/* load image */
+
+#ifndef MAX_LOAD_IMAGE
+#define MAX_LOAD_IMAGE 8
+#endif
+static int n_load_image = 0;
+static Hash_sv *image_hash = NULL;
+static Hash_sv *image_file = NULL;
+static GeneralList *image_list = NULL;
+static ImageCache **image_cache = NULL;
+static Buffer *image_buffer = NULL;
+
+void
+deleteImage(Buffer *buf)
+{
+    AnchorList *al;
+    Anchor *a;
+    int i;
+
+    if (!buf)
+	return;
+    al = buf->img;
+    if (!al)
+	return;
+    for (i = 0, a = al->anchors; i < al->nanchor; i++, a++) {
+	if (a->image && a->image->cache &&
+	    a->image->cache->loaded != IMG_FLAG_UNLOADED &&
+	    !(a->image->cache->loaded & IMG_FLAG_DONT_REMOVE) &&
+	    a->image->cache->index < 0)
+	    unlink(a->image->cache->file);
+    }
+    loadImage(NULL, IMG_FLAG_STOP);
+}
+
+void
+getAllImage(Buffer *buf)
+{
+    AnchorList *al;
+    Anchor *a;
+    ParsedURL *current;
+    int i;
+
+    image_buffer = buf;
+    if (!buf)
+	return;
+    buf->image_loaded = TRUE;
+    al = buf->img;
+    if (!al)
+	return;
+    current = baseURL(buf);
+    for (i = 0, a = al->anchors; i < al->nanchor; i++, a++) {
+	if (a->image) {
+	    a->image->cache = getImage(a->image, current, buf->image_flag);
+	    if (a->image->cache &&
+		a->image->cache->loaded == IMG_FLAG_UNLOADED)
+		buf->image_loaded = FALSE;
+	}
+    }
+}
+
+void
+showImageProgress(Buffer *buf)
+{
+    AnchorList *al;
+    Anchor *a;
+    int i, l, n;
+
+    if (!buf)
+	return;
+    al = buf->img;
+    if (!al)
+	return;
+    for (i = 0, l = 0, n = 0, a = al->anchors; i < al->nanchor; i++, a++) {
+	if (a->image && a->hseq >= 0) {
+	    n++;
+	    if (a->image->cache && a->image->cache->loaded & IMG_FLAG_LOADED)
+		l++;
+	}
+    }
+    if (n) {
+	message(Sprintf("%d/%d images loaded", l, n)->ptr,
+		buf->cursorX + buf->rootX, buf->cursorY + buf->rootY);
+	refresh();
+    }
+}
+
+void
+loadImage(Buffer *buf, int flag)
+{
+    ImageCache *cache;
+    struct stat st;
+    int i, draw = FALSE;
+    /* int wait_st; */
+
+    if (maxLoadImage > MAX_LOAD_IMAGE)
+	maxLoadImage = MAX_LOAD_IMAGE;
+    else if (maxLoadImage < 1)
+	maxLoadImage = 1;
+    if (n_load_image == 0)
+	n_load_image = maxLoadImage;
+    if (!image_cache) {
+	image_cache = New_N(ImageCache *, MAX_LOAD_IMAGE);
+	bzero(image_cache, sizeof(ImageCache *) * MAX_LOAD_IMAGE);
+    }
+    for (i = 0; i < n_load_image; i++) {
+	cache = image_cache[i];
+	if (!cache)
+	    continue;
+	if (lstat(cache->touch, &st))
+	    continue;
+	if (cache->pid) {
+	    kill(cache->pid, SIGKILL);
+	    /*
+	     * #ifdef HAVE_WAITPID
+	     * waitpid(cache->pid, &wait_st, 0);
+	     * #else
+	     * wait(&wait_st);
+	     * #endif
+	     */
+	    cache->pid = 0;
+	}
+	if (!stat(cache->file, &st)) {
+	    cache->loaded = IMG_FLAG_LOADED;
+	    if (getImageSize(cache)) {
+		if (image_buffer)
+		    image_buffer->need_reshape = TRUE;
+	    }
+	    draw = TRUE;
+	}
+	else
+	    cache->loaded = IMG_FLAG_ERROR;
+	unlink(cache->touch);
+	image_cache[i] = NULL;
+    }
+
+    for (i = (buf != image_buffer) ? 0 : maxLoadImage; i < n_load_image; i++) {
+	cache = image_cache[i];
+	if (!cache)
+	    continue;
+	if (cache->pid) {
+	    kill(cache->pid, SIGKILL);
+	    /*
+	     * #ifdef HAVE_WAITPID
+	     * waitpid(cache->pid, &wait_st, 0);
+	     * #else
+	     * wait(&wait_st);
+	     * #endif
+	     */
+	    cache->pid = 0;
+	}
+	unlink(cache->touch);
+	image_cache[i] = NULL;
+    }
+
+    if (flag == IMG_FLAG_STOP) {
+	image_list = NULL;
+	image_file = NULL;
+	n_load_image = maxLoadImage;
+	image_buffer = NULL;
+	return;
+    }
+
+    if (draw && image_buffer) {
+	drawImage();
+	showImageProgress(image_buffer);
+    }
+
+    image_buffer = buf;
+
+    if (!image_list)
+	return;
+    for (i = 0; i < n_load_image; i++) {
+	if (image_cache[i])
+	    continue;
+	while (1) {
+	    cache = (ImageCache *) popValue(image_list);
+	    if (!cache) {
+		for (i = 0; i < n_load_image; i++) {
+		    if (image_cache[i])
+			return;
+		}
+		image_list = NULL;
+		image_file = NULL;
+		if (image_buffer)
+		    displayBuffer(image_buffer, B_NORMAL);
+		return;
+	    }
+	    if (cache->loaded == IMG_FLAG_UNLOADED)
+		break;
+	}
+	image_cache[i] = cache;
+
+	flush_tty();
+	if ((cache->pid = fork()) == 0) {
+	    Buffer *b;
+	    /*
+	     * setup_child(TRUE, 0, -1);
+	     */
+	    setup_child(FALSE, 0, -1);
+	    image_source = cache->file;
+	    b = loadGeneralFile(cache->url, cache->current, NULL, 0, NULL);
+	    if (!b || !b->real_type || strncasecmp(b->real_type, "image/", 6))
+		unlink(cache->file);
+#if defined(HAVE_SYMLINK) && defined(HAVE_LSTAT)
+	    symlink(cache->file, cache->touch);
+#else
+	    {
+		FILE *f = fopen(cache->touch, "w");
+		if (f)
+		    fclose(f);
+	    }
+#endif
+	    exit(0);
+	}
+	else if (cache->pid < 0) {
+	    cache->pid = 0;
+	    return;
+	}
+    }
+}
+
+ImageCache *
+getImage(Image * image, ParsedURL *current, int flag)
+{
+    Str key = NULL;
+    ImageCache *cache;
+
+    if (!activeImage)
+	return NULL;
+    if (!image_hash)
+	image_hash = newHash_sv(100);
+    if (image->cache)
+	cache = image->cache;
+    else {
+	key = Sprintf("%d;%d;%s", image->width, image->height, image->url);
+	cache = (ImageCache *) getHash_sv(image_hash, key->ptr, NULL);
+    }
+    if (cache && cache->index && abs(cache->index) <= image_index - MAX_IMAGE) {
+	struct stat st;
+	if (stat(cache->file, &st))
+	    cache->loaded = IMG_FLAG_UNLOADED;
+	cache->index = 0;
+    }
+
+    if (!cache) {
+	if (flag == IMG_FLAG_SKIP)
+	    return NULL;
+
+	cache = New(ImageCache);
+	cache->url = image->url;
+	cache->current = current;
+	cache->file = tmpfname(TMPF_DFL, image->ext)->ptr;
+	cache->touch = tmpfname(TMPF_DFL, NULL)->ptr;
+	cache->pid = 0;
+	cache->index = 0;
+	cache->loaded = IMG_FLAG_UNLOADED;
+	cache->width = image->width;
+	cache->height = image->height;
+	putHash_sv(image_hash, key->ptr, (void *)cache);
+    }
+    if (flag != IMG_FLAG_SKIP) {
+	if (cache->loaded == IMG_FLAG_UNLOADED) {
+	    if (!image_file)
+		image_file = newHash_sv(100);
+	    if (!getHash_sv(image_file, cache->file, NULL)) {
+		putHash_sv(image_file, cache->file, (void *)cache);
+		if (!image_list)
+		    image_list = newGeneralList();
+		pushValue(image_list, (void *)cache);
+	    }
+	}
+	if (!cache->index)
+	    cache->index = ++image_index;
+    }
+    if (cache->loaded & IMG_FLAG_LOADED)
+	getImageSize(cache);
+    return cache;
+}
+
+int
+getImageSize(ImageCache * cache)
+{
+    Str tmp;
+    FILE *f;
+    int w = 0, h = 0;
+
+    if (!activeImage)
+	return FALSE;
+    if (!cache || !(cache->loaded & IMG_FLAG_LOADED) ||
+	(cache->width > 0 && cache->height > 0))
+	return FALSE;
+    tmp = Strnew();
+    if (!strchr(Imgdisplay, '/'))
+	Strcat_m_charp(tmp, w3m_auxbin_dir(), "/", NULL);
+    Strcat_m_charp(tmp, Imgdisplay, " -size ", shell_quote(cache->file), NULL);
+    f = popen(tmp->ptr, "r");
+    if (!f)
+	return FALSE;
+    while (fscanf(f, "%d %d", &w, &h) < 0) {
+	if (feof(f))
+	    break;
+    }
+    pclose(f);
+
+    if (!(w > 0 && h > 0))
+	return FALSE;
+    w = (int)(w * image_scale / 100 + 0.5);
+    if (w == 0)
+	w = 1;
+    h = (int)(h * image_scale / 100 + 0.5);
+    if (h == 0)
+	h = 1;
+    if (cache->width < 0 && cache->height < 0) {
+	cache->width = (w > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : w;
+	cache->height = (h > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : h;
+    }
+    else if (cache->width < 0) {
+	int tmp = (int)((double)cache->height * w / h + 0.5);
+	cache->width = (tmp > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : tmp;
+    }
+    else if (cache->height < 0) {
+	int tmp = (int)((double)cache->width * h / w + 0.5);
+	cache->height = (tmp > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE : tmp;
+    }
+    if (cache->width == 0)
+	cache->width = 1;
+    if (cache->height == 0)
+	cache->height = 1;
+    tmp = Sprintf("%d;%d;%s", cache->width, cache->height, cache->url);
+    putHash_sv(image_hash, tmp->ptr, (void *)cache);
+    return TRUE;
+}
+#endif
+@
+
+
+1.36
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.35 2003/07/07 15:48:16 ukai Exp $ */
+a117 2
+    if (Imgdisplay_rf)
+	fclose(Imgdisplay_rf);
+d120 5
+@
+
+
+1.35
+log
+@[w3m-dev 03929] clear image
+* image.c (syncImage): added
+	(drawImage): rewrite using syncImage()
+	(clearImage): use clear image command (6)
+* w3mimgdisplay.c: change protocol
+	2 => terminate drawing
+	6 => clear image
+	(main): '2' calls TermImage()
+		'6' calls ClearImage()
+		TermImage() when exit
+	(TermImage): renamed from ClearImage
+	(ClearImage): rewritten to call w_op->clear()
+* w3mimg.h/w3mimg.h (w3mimg_op): add clear()
+* w3mimg/fb/fb.c (fb_clear): added
+* w3mimg/fb/fb.h (fb_clear): added
+* w3mimg/fb/fb_img.c (fb_image_clear): added
+* w3mimg/fb/fb_w3mimg.c (w3mfb_clear): added
+	(w3mimg_fbopen): initialize wop->clear
+* w3mimg/x11/x11_w3mimg.c (x11_clear): added
+	(w3mimg_x11open): initialize wop->clear
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.34 2003/02/24 16:27:36 ukai Exp $ */
+d231 1
+a231 1
+	    i->width > 0 && i->height > 0))
+@
+
+
+1.34
+log
+@[w3m-dev-en 00891] Re: w3m 0.4 has been released!
+* image.c (getCharSize): set W3M_TTY here, before Imgdisplay invoke
+	(openImgdisplay): no need setting W3M_TTY here
+From: Hironori SAKAMOTO <h-saka@@lsi.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.33 2003/02/13 12:54:37 ukai Exp $ */
+d152 18
+a189 4
+	if (!draw) {
+	    fputs("3;\n", Imgdisplay_wf);	/* XSync() */
+	    draw = TRUE;
+	}
+d204 1
+a204 7
+	fputs("4;\n", Imgdisplay_wf);	/* put '\n' */
+	while (fflush(Imgdisplay_wf) != 0) {
+	    if (ferror(Imgdisplay_wf))
+		goto err;
+	}
+	if (!fgetc(Imgdisplay_rf))
+	    goto err;
+d208 1
+a208 20
+    fputs("3;\n", Imgdisplay_wf);	/* XSync() */
+    fputs("4;\n", Imgdisplay_wf);	/* put '\n' */
+    while (fflush(Imgdisplay_wf) != 0) {
+	if (ferror(Imgdisplay_wf))
+	    goto err;
+    }
+    if (!fgetc(Imgdisplay_rf))
+	goto err;
+    /*
+     * touch_line();
+     * touch_column(CurColumn);
+     * #ifdef JP_CHARSET
+     * if (CurColumn > 0 &&
+     * CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR2)
+     * touch_column(CurColumn - 1);
+     * else if (CurColumn < COLS - 1 &&
+     * CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR1)
+     * touch_column(CurColumn + 1);
+     * #endif
+     */
+a210 4
+    return;
+  err:
+    closeImgdisplay();
+    image_index += MAX_IMAGE;
+d216 4
+d222 15
+@
+
+
+1.33
+log
+@[w3m-dev 03742] Re: Bug##180814: w3m: Missing w3mimgdisplay message at startup
+* image.c (getCharSize): stderr redirect to omit /bin/sh error message
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.32 2003/01/29 17:31:22 ukai Exp $ */
+d54 1
+a99 1
+	set_environ("W3M_TTY", ttyname_tty());
+@
+
+
+1.32
+log
+@wait_st is not used
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.31 2003/01/29 17:26:52 ukai Exp $ */
+d57 1
+a57 1
+    Strcat_m_charp(tmp, Imgdisplay, " -test", NULL);
+@
+
+
+1.31
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.30 2003/01/29 17:10:40 ukai Exp $ */
+d327 2
+a328 1
+    int wait_st, i, draw = FALSE;
+@
+
+
+1.30
+log
+@[w3m-dev 03708] Re: Don't stop loading image when moving to next page.
+* config.h.dist (lstat): define ifndef HAVE_LSTAT
+* configure (config.h) ditto
+* display.c (fmTerm): new loadImage
+	(save_current_buf): only ifdef USE_BUFINFO
+	(displayBuffer): new loadImage
+* etc.c (setup_child): TrapSignal
+* file.c (loadGeneralFile): TRAP_OFF, TRAP_ON
+	(loadHTMLstream): ditto
+	(loadGopherDir): ditto
+	(loadBuffer): ditto
+	(loadImageBuffer): ditto
+	(getNextPage): ditto
+	(save2tmp): ditto
+* fm.h (TrapSignal): added
+	(TRAP_ON): added
+	(TRAP_OFF): added
+* form.c (HAVE_LSTAT): deleted
+* frame.c (createFrameFile): TRAP_OFF, TRAP_ON
+* image.c (image_buffer): added
+	(deleteImage): new loadImage
+	(getAllImage): initialize image_buffer
+	(loadImage): rewrite
+* main.c (main): new loadImage
+	(checkDownloadList): remove ifdef HAVE_LSTAT
+* news.c (loadNwesgroup): TRAP_ON, TRAP_OFF
+* proto.h (loadImage): add buf arg
+* url.c (openSocket): TRAP_ON, TRAP_OFF
+	(check_no_proxy): TRAP_ON, TRAP_OFF
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.29 2003/01/28 16:46:54 ukai Exp $ */
+d347 7
+a353 7
+/*
+#ifdef HAVE_WAITPID
+	    waitpid(cache->pid, &wait_st, 0);
+#else
+	    wait(&wait_st);
+#endif
+*/
+d376 7
+a382 7
+/*
+#ifdef HAVE_WAITPID
+	    waitpid(cache->pid, &wait_st, 0);
+#else
+	    wait(&wait_st);
+#endif
+*/
+d430 3
+a432 3
+/*
+	    setup_child(TRUE, 0, -1);
+*/
+@
+
+
+1.29
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.28 2003/01/28 16:45:19 ukai Exp $ */
+d246 1
+d267 1
+a267 1
+    loadImage(IMG_FLAG_STOP);
+d278 1
+d323 1
+a323 1
+loadImage(int flag)
+d327 1
+a327 1
+    int wait_st, i;
+d339 30
+d370 7
+a376 11
+    if (flag == IMG_FLAG_STOP || flag == IMG_FLAG_START) {
+	if (flag == IMG_FLAG_STOP)
+	    i = 0;
+	else
+	    i = maxLoadImage;
+	for (; i < n_load_image; i++) {
+	    cache = image_cache[i];
+	    if (!cache)
+		continue;
+	    if (cache->pid) {
+		kill(cache->pid, SIGKILL);
+d378 1
+a378 1
+		waitpid(cache->pid, &wait_st, 0);
+d380 1
+a380 1
+		wait(&wait_st);
+d382 2
+a383 4
+		cache->pid = 0;
+	    }
+	    unlink(cache->touch);
+	    image_cache[i] = NULL;
+d385 5
+d393 1
+d397 3
+a399 38
+    {
+	int draw = FALSE;
+	for (i = 0; i < n_load_image; i++) {
+	    cache = image_cache[i];
+	    if (!cache)
+		continue;
+#ifdef HAVE_LSTAT
+	    if (lstat(cache->touch, &st))
+#else
+	    if (stat(cache->touch, &st))
+#endif
+		continue;
+	    if (cache->pid) {
+		kill(cache->pid, SIGKILL);
+#ifdef HAVE_WAITPID
+		waitpid(cache->pid, &wait_st, 0);
+#else
+		wait(&wait_st);
+#endif
+		cache->pid = 0;
+	    }
+	    if (!stat(cache->file, &st)) {
+		cache->loaded = IMG_FLAG_LOADED;
+		if (getImageSize(cache)) {
+		    if (CurrentTab && Currentbuf)
+			Currentbuf->need_reshape = TRUE;
+		}
+		draw = TRUE;
+	    }
+	    else
+		cache->loaded = IMG_FLAG_ERROR;
+	    unlink(cache->touch);
+	    image_cache[i] = NULL;
+	}
+	if (draw && CurrentTab && Currentbuf) {
+	    drawImage();
+	    showImageProgress(Currentbuf);
+	}
+d402 2
+d418 2
+a419 2
+		if (CurrentTab && Currentbuf)
+		    displayBuffer(Currentbuf, B_NORMAL);
+d430 1
+d432 2
+@
+
+
+1.28
+log
+@[w3m-dev 03707] Don't stop loading image when moving to next page.
+* display.c (save_current_buf): required when defined USE_IMAGE
+	(displayBuffer): stop only buffer changed
+* image.c (loadImage): IMG_FLAG_START load from maxLoadImage
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.27 2003/01/22 16:10:28 ukai Exp $ */
+d343 1
+a343 1
+	for ( ; i < n_load_image; i++) {
+@
+
+
+1.27
+log
+@[w3m-dev 03676] cleanup for pipe
+* etc.c (open_pipe_rw): added
+* file.c (uncompress_stream): rewrite using open_pipe_rw
+* image.c (openImgdisplay): rewrite using open_pipe_rw
+* local.c (localcgi_popen_rw): deleted
+	(localcgi_post): rewrite using open_pipe_rw
+* proto.h (open_pipe_rw): added
+* search.c (migemor): initialized to NULL
+	(migemow): initialized to NULL
+	(migemo_pid): initialized to 0
+	(open_migemo): rewrite using open_pipe_rw
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.26 2003/01/17 16:57:19 ukai Exp $ */
+d338 6
+a343 2
+    if (flag == IMG_FLAG_STOP) {
+	for (i = 0; i < n_load_image; i++) {
+@
+
+
+1.26
+log
+@[w3m-dev 03646] setup child process, local CGI
+* etc.c (reset_signals): static
+			don't ignore SIGUSR1
+	(close_all_fds_except): static
+			DEV_NULL_PATH
+	(setup_child): added
+	(myExec): rewrite
+	(mySystem): rewrite
+* file.c (readHeader): check image_source
+	(loadGeneralFile): check image_source
+	(doExternal): use setup_child
+	(_doFileCopy): use setup_child
+	(doFileSave): use setup_child
+	(uncompress_stream): check image_source
+			use setup_child
+* image.c (getCharSize): no need stderr redirect
+	(openImgdisplay): use setup_child
+	(loadImage): use setup_child
+	(getImageSize): no need stderr redirect
+* local.c (writeLocalCookie): check Local_cookie_file
+	(localcgi_popen_rw): added
+	(localcgi_popen_r): deleted
+	(localcgi_post): rewrite
+	(localcgi_get): deleted
+* proto.h (localcgi_get): defined by localcgi_post
+	(reset_signals): deleted
+	(close_all_fds_except): deleted
+	(close_all_fds): deleted
+	(setup_child): added
+* search.c (open_migemo): use setup_child, myExec
+* w3mimgdisplay.c (main): use DEV_NULL_PATH
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.25 2003/01/15 16:11:43 ukai Exp $ */
+d92 2
+a93 4
+    int fdr[2], fdw[2];
+    char *cmd;
+
+    if (pipe(fdr) < 0)
+a94 7
+    if (pipe(fdw) < 0)
+	goto err1;
+
+    flush_tty();
+    Imgdisplay_pid = fork();
+    if (Imgdisplay_pid < 0)
+	goto err2;
+d97 1
+a97 4
+	close(fdr[0]);
+	close(fdw[1]);
+	dup2(fdw[0], 0);
+	dup2(fdr[1], 1);
+a106 4
+    close(fdr[1]);
+    close(fdw[0]);
+    Imgdisplay_rf = fdopen(fdr[0], "r");
+    Imgdisplay_wf = fdopen(fdw[1], "w");
+a108 6
+  err2:
+    close(fdw[0]);
+    close(fdw[1]);
+  err1:
+    close(fdr[0]);
+    close(fdr[1]);
+a109 2
+    Imgdisplay_rf = NULL;
+    Imgdisplay_wf = NULL;
+@
+
+
+1.25
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.24 2003/01/10 16:42:46 ukai Exp $ */
+d57 1
+a57 1
+    Strcat_m_charp(tmp, Imgdisplay, " -test 2> /dev/null", NULL);
+a105 5
+	reset_signals();
+	signal(SIGINT, SIG_IGN);
+	set_environ("W3M_TTY", ttyname_tty());
+	SETPGRP();
+	close_tty();
+d110 2
+a111 1
+	close_all_fds(2);
+d116 2
+a117 3
+	execl("/bin/sh", "sh", "-c", cmd, NULL);
+	/* XXX: ifndef HAVE_SETPGRP, use start /f ? */
+	exit(1);
+d451 1
+a451 6
+	    reset_signals();
+	    signal(SIGINT, SIG_IGN);
+	    close_tty();
+	    close_all_fds(2);
+	    QuietMessage = TRUE;
+	    fmInitialized = FALSE;
+d547 1
+a547 2
+    Strcat_m_charp(tmp, Imgdisplay, " -size ", shell_quote(cache->file),
+		   " 2> /dev/null", NULL);
+@
+
+
+1.24
+log
+@[w3m-dev 03629] delete tmp file
+* etc.c (tempfname): always file to delete
+* file.c (xface2xpm): no need fileToDelete
+	(readHeader): ditto
+	(loadGeneralFile): ditto
+	(loadHTMLBuffer): ditto
+	(loadHTMLString): ditto
+	(loadGopherDir): ditto
+	(loadImageBuffer): ditto
+	(doExternal): rewrite
+	(doFileSave): no need fileToDelete
+	(uncompress_stream): ditto
+* fm.h (CurrentPid): added
+* image.c (getImage): cache->touch to delete
+* local.c (setLocalCookie): use CurrentPid
+	(localcgi_post): fileToDelete
+* main.c (main): CurrentPid
+	(pipeBuf): no need fileToDelete
+	(query_from_followform): CurrentPid
+	(vmSrc): no need fileToDelete
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.23 2002/12/11 15:08:47 ukai Exp $ */
+d459 1
+@
+
+
+1.23
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.22 2002/12/11 15:07:53 ukai Exp $ */
+a520 2
+	pushText(fileToDelete, cache->file);
+	pushText(fileToDelete, cache->touch);
+@
+
+
+1.22
+log
+@[w3m-dev 03559] Re: use select instead of signal for loading images
+* fm.h (Buffer): add image_loaded
+* image.c (W3M_SIGIMG): deleted
+	(image_lock): deleted
+	(need_load_image): deleted
+	(load_image_handler): deleted
+	(load_image_next): deleted
+	(getAllImage): check image_loaded
+	(loadImage): delete image_lock
+		delete IMG_FLAG_NEXT
+* main.c (main): check image_loaded
+* proto.h (sleep_till_anykey): return int
+* terms.c (sleep_till_anykey): return int
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.21 2002/11/27 16:46:34 ukai Exp $ */
+d318 1
+a318 1
+	   	buf->image_loaded = FALSE;
+@
+
+
+1.21
+log
+@[w3m-dev 03497] incorrect image size
+	* image.c (getImageSize): invoke w3mimgdiplay -size instead of "5;..."
+	* w3mimgdisplay.c (defined_size): added
+			(main): if defined_size get_image_size()
+			(GetOption): -size
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.20 2002/11/24 16:02:22 ukai Exp $ */
+a14 4
+#ifndef W3M_SIGIMG
+#define W3M_SIGIMG (SIGUSR1)
+#endif
+
+a274 19
+static char *image_lock = NULL;
+static int need_load_image = FALSE;
+
+static MySignalHandler
+load_image_handler(SIGNAL_ARG)
+{
+    need_load_image = TRUE;
+    signal(W3M_SIGIMG, load_image_handler);
+    SIGNAL_RETURN;
+}
+
+static MySignalHandler
+load_image_next(SIGNAL_ARG)
+{
+    need_load_image = TRUE;
+    signal(W3M_SIGIMG, load_image_handler);
+    loadImage(IMG_FLAG_NEXT);
+    SIGNAL_RETURN;
+}
+d308 1
+d314 1
+a314 1
+	if (a->image)
+d316 4
+a385 3
+	if (image_lock)
+	    unlink(image_lock);
+	need_load_image = FALSE;
+d390 1
+a390 1
+    if (need_load_image) {
+d414 1
+a414 1
+		    if (flag == IMG_FLAG_NEXT && CurrentTab && Currentbuf)
+d424 1
+a424 1
+	if (flag == IMG_FLAG_NEXT && draw)
+a425 1
+	if (CurrentTab && Currentbuf)
+d427 1
+a429 5
+    if (image_lock)
+	unlink(image_lock);
+    need_load_image = FALSE;
+    signal(W3M_SIGIMG, load_image_handler);
+
+d440 1
+a440 1
+			goto load_image_end;
+a452 5
+	if (!image_lock) {
+	    image_lock = tmpfname(TMPF_DFL, ".lock")->ptr;
+	    pushText(fileToDelete, image_lock);
+	}
+
+a455 3
+#if !(defined(HAVE_SYMLINK) && defined(HAVE_LSTAT))
+	    FILE *f;
+#endif
+a466 3
+	    if (lstat(image_lock, &st)) {
+		if (symlink(cache->file, image_lock))
+		    exit(0);
+d468 5
+a472 8
+	    f = fopen(cache->touch, "w");
+	    if (f)
+		fclose(f);
+	    if (stat(image_lock, &st)) {
+		f = fopen(image_lock, "w");
+		if (!f)
+		    exit(0);
+		fclose(f);
+a473 2
+		kill(getppid(), W3M_SIGIMG);
+	    }
+a480 3
+  load_image_end:
+    if (flag == IMG_FLAG_NEXT)
+	signal(W3M_SIGIMG, load_image_next);
+@
+
+
+1.20
+log
+@[w3m-dev 03471] Re: SETPGRP()
+* configure: SETPGRP() always defined
+* proto.h (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+* etc.c (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+	(mySystem): #ifndef -> #ifdef
+* file.c (_doFileCopy): delete #ifdef HAVE_SETPGRP
+	(doFileSave): ditto
+* image.c (openImgdisplay): delete #ifdef HAVE_SETPGRP
+			use close_all_fds()
+* search.c (open_migemo): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.19 2002/11/15 15:57:16 ukai Exp $ */
+d592 1
+d601 10
+a610 14
+    if (!(Imgdisplay_rf && Imgdisplay_wf)) {
+	if (!openImgdisplay())
+	    return FALSE;
+    }
+    fputs("5;", Imgdisplay_wf);	/* Get Size */
+    fputs(cache->file, Imgdisplay_wf);
+    fputs("\n", Imgdisplay_wf);
+    fflush(Imgdisplay_wf);
+    {
+	char buf[1024];
+	fgets(buf, sizeof(buf), Imgdisplay_rf);
+	if (sscanf(buf, "%d %d", &w, &h) != 2) {
+	    return FALSE;
+	}
+d612 1
+@
+
+
+1.19
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.18 2002/11/15 15:56:36 ukai Exp $ */
+a109 1
+	int i;
+a112 1
+#ifdef HAVE_SETPGRP
+a113 1
+#endif
+d119 1
+a119 7
+	dup2(open("/dev/null", O_WRONLY), 2);
+#ifndef FOPEN_MAX
+#define FOPEN_MAX 1024		/* XXX */
+#endif
+	/* close all other file descriptors (socket, ...) */
+	for (i = 3; i < FOPEN_MAX; i++)
+	    close(i);
+d125 1
+@
+
+
+1.18
+log
+@[w3m-dev 03436] Check image size
+* file.c (process_img): check w > MAX_IMAGE_SIZE
+	(HTMLlineproc2body): check w,h > MAX_IMAGE_SIZE
+* fm.h (MAX_IMAGE_SIZE): added
+* image.c (getImageSize): check w,h,width,height > MAX_IMAGE_SIZE
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.17 2002/11/15 15:51:24 ukai Exp $ */
+d633 2
+a634 2
+	cache->width = (w > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: w;
+	cache->height = (h > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: h;
+d637 2
+a638 2
+        int tmp = (int)((double)cache->height * w / h + 0.5);
+	cache->width = (tmp > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: tmp;
+d641 2
+a642 2
+        int tmp = (int)((double)cache->width * h / w + 0.5);
+	cache->height = (tmp > MAX_IMAGE_SIZE) ? MAX_IMAGE_SIZE: tmp;
+@
+
+
+1.17
+log
+@[w3m-dev 03435] save image with SAVE
+* buffer.c (discardBuffer): check image
+* file.c (loadImageBuffer): add st
+		IMG_FLAG_DONE_REMOVE
+		s/sourcefile/mailcap_source/
+* fm.h (IMG_FLAG_DONT_REMOVE): added
+* image.c (drawImage): & IMG_FLAG_LOADED
+	(deleteImage): & IMG_FLAG_DONT_REMOVE
+	(showImageProgress): & IMG_FLAG_LOADED
+	(getImage): & IMG_FLAG_LOADED
+	(getImageSize): & IMG_FLAG_LOADED
+* main.c (vmSrc): delete ifdef USE_IMAGE
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.16 2002/11/09 21:55:24 ukai Exp $ */
+d633 2
+a634 2
+	cache->width = w;
+	cache->height = h;
+d637 2
+a638 1
+	cache->width = (int)((double)cache->height * w / h + 0.5);
+d641 2
+a642 1
+	cache->height = (int)((double)cache->width * h / w + 0.5);
+@
+
+
+1.16
+log
+@[w3m-dev 03398] auxbindir
+* XMakefile: EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* config.h.dist: add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+* configure: add -auxbindir
+		add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+		EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* file.c (compression_decoder): libfile_p -> auxbin_p
+	(check_command): libfile_p -> auxbin_p
+			use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(acceptableEncoding): libfile_p -> auxbin_p
+	(xface2xpm): use auxbinFile() instead of libFile()
+	(uncompress_stream): libfile_p -> auxbin_p
+			use auxbinFile() instead of libFile()
+* image.c (getCharSize): use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(openImgdisplay): use w3m_auxbin_dir() instead of w3m_lib_dir()
+* indep.c (w3m_auxbin_dir): added
+* indep.h (w3m_auxbin_dir): added
+* proto.h (auxbinFile): added
+* rc.c (auxbinFile): added
+	(libFile): #if 0, no longer used
+	(helpFile): used only #ifndef USE_HELP_CGI
+* NEWS: separate auxbindir and libdir (local-CGI, file:///$LIB/)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.15 2002/11/06 15:05:35 ukai Exp $ */
+d206 1
+a206 1
+	if (!(i->cache->loaded == IMG_FLAG_LOADED &&
+d322 1
+d364 1
+a364 1
+	    if (a->image->cache && a->image->cache->loaded == IMG_FLAG_LOADED)
+d591 1
+a591 1
+    if (cache->loaded == IMG_FLAG_LOADED)
+d604 1
+a604 1
+    if (!cache || cache->loaded != IMG_FLAG_LOADED ||
+@
+
+
+1.15
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.14 2002/11/06 03:50:49 ukai Exp $ */
+d60 1
+a60 1
+	Strcat_m_charp(tmp, w3m_lib_dir(), "/", NULL);
+d130 1
+a130 1
+	    cmd = Strnew_m_charp(w3m_lib_dir(), "/", Imgdisplay, NULL)->ptr;
+@
+
+
+1.14
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.13 2002/11/06 03:19:31 ukai Exp $ */
+d124 1
+a124 1
+#define FOPEN_MAX 1024	/* XXX */
+@
+
+
+1.13
+log
+@[w3m-dev 03375] NULL check of CurrentTab
+* display.c (disp_message_nsec): check CurrentTab
+* file.c (doExternal): check CurrentTab
+* image.c (loadImage): check CurrentTab
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.12 2002/11/05 17:10:05 ukai Exp $ */
+d110 1
+d113 1
+d122 7
+a128 1
+	close(2);
+@
+
+
+1.12
+log
+@[w3m-dev 03372] tab browser
+* display.c (displayBuffer): add ny
+			rootY offset by tab
+			tab line
+	(cursorDown): offset rootY
+	(arrangeCursor): offset rootY
+* etc.c (columnSkip): offset rootY
+	(lineSkip): offset rootY
+	(currentLineSkip): offset rootY
+* file.c (HTMLlineproc2body): ATTR_TARGET
+* fm.h (MapArea): add target
+	(Buffer): add rootY
+	(TabBuffer): added
+	(Currentbuf): comment out
+	(Firstbuf): comment out
+	(CurrentTab): added
+	(FirstTab): added
+	(LastTab): added
+	(open_tab_blank): added
+	(close_tab_back): added
+	(nTab): added
+	(TabCols): added
+	(N_TAB): added
+	(Currentbuf): CurrentTab->currentBuffer
+	(Firstbuf): CurrentTab->firstBuffer
+* funcname.tab (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* html.c (ALST_AREA): add ATTR_TARGET
+* image.c (showImageProgress): offset rootY
+* main.c (_newT): added
+	(followTab): added
+	(moveTab): added
+	(check_target): added
+	(MAIN): init tab related values
+		buf => tab
+	(nscroll): offset rootY
+	(pgFore): offset rootY
+	(pgBack): offset rootY
+	(ctrCsrV): offset rootY
+	(_movD): offset rootY
+	(_movU): offset rootY
+	(_goLine): offset rootY
+	(_mark): offset rootY
+	(followA): check target
+	(_followForm): offset rootY
+	(drawAnchorCursor0): offset rootY
+	(drawAnchorCursor): offset rootY
+	(backBf): check close_tab_back
+	(follow_map): rewrite for tab, check target
+	(posTab): added
+	(process_mouse): tab operation
+			offset rootY
+	(deleteFiles): for all buffers in all tabs
+	(newTab): added
+	(newT): added
+	(numTab): added
+	(deleteTab): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(followTab): added
+	(tabA): added
+	(tabURL0): added
+	(tabURL): added
+	(tabrURL): added
+	(moveTab): added
+	(tabR): added
+	(tabL): added
+* map.c (follow_map_menu): return MapArea
+	(newMapArea): add target args
+* menu.c (SelTabMenu): added
+	(SelTabV): added
+	(initSelTabMenu): added
+	(smChTab): added
+	(smDelTab): added
+	(MainMenuItem): add Select Tab
+				on New Tab
+	(popupMenu): add initSelTabMenu()
+			offset rootY
+	(mainMn): offset rootY
+	(selMn): offset rootY
+	(initSelectMenu): offset rootY
+	(tabMn): added
+* proto.h (newT): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(tabA): added
+	(tabURL): added
+	(tabrURL): added
+	(tabR): added
+	(tabL): added
+	(newTab): added
+	(deleteTab): added
+	(follow_map_menu): return MapArea
+	(newMapArea): add target arg
+	(tabMn): added
+* rc.c (CMT_OPEN_TAB_BLANK): added
+	(CMT_CLOSE_TAB_BACK): added
+	(open_tab_blank): added
+	(close_tab_back): added
+* doc/README.func (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* doc-jp/README.func: ditto doc/README.func
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.11 2002/07/29 15:25:37 ukai Exp $ */
+d434 1
+a434 1
+		    if (flag == IMG_FLAG_NEXT && Currentbuf)
+d446 1
+a446 1
+	if (Currentbuf)
+d469 1
+a469 1
+		if (Currentbuf)
+@
+
+
+1.11
+log
+@[w3m-dev 03282] Re: w3m-img for framebuffer update
+* w3mimg/fb/fb.c (fb_image_new): ignore no image
+				calloc multiple images
+		(fb_image_fill): added
+		(fb_image_draw): width, height fix
+		(fb_image_rotate): fix typo
+		(fb_image_copy): added
+		(fb_frame_new): added
+		(fb_freme_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb.h (FB_IMAGE): add num, id, delay
+		(fb_frame_new): added
+		(fb_frame_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb_gdkpixbuf.c (get_image_size): animation support
+		(fb_image_load): animation support
+		(draw): add bg, x, y, w, h args
+* w3mimg/fb/fb_img.h (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_imlib2.c (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): animation support
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.10 2002/07/22 16:27:31 ukai Exp $ */
+d361 1
+a361 1
+		buf->cursorX + buf->rootX, buf->cursorY);
+@
+
+
+1.10
+log
+@[w3m-dev 03280] w3m-img without w3mimgsize
+* fm.h (Imagesize): deleted
+* image.c (getImageSize): rewrite to use w3mimgdisplay
+	instead of w3mimgsize
+* rc.c (params1): remove imgsize, merged to imgdisplay
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.9 2002/04/17 02:36:45 ukai Exp $ */
+d600 2
+a601 2
+      if (!openImgdisplay())
+	return FALSE;
+d608 5
+a612 5
+      char buf[1024];
+      fgets(buf, sizeof(buf), Imgdisplay_rf);
+      if(sscanf(buf, "%d %d", &w, &h) != 2) {
+	return FALSE;
+      }
+@
+
+
+1.9
+log
+@[w3m-dev 03177] SIGUSR1 --> W3M_SIGIMG in image.c
+* image.c (W3M_SIGIMG): added
+	(load_image_handler): s/SIGUSR1/W3M_SIGIMG/
+	(load_image_next): ditto
+	(loadImage): ditto
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.8 2002/03/06 03:32:11 ukai Exp $ */
+a590 1
+    FILE *f;
+d599 12
+a610 6
+    if (!strchr(Imgsize, '/'))
+	Strcat_m_charp(tmp, w3m_lib_dir(), "/", NULL);
+    Strcat_m_charp(tmp, Imgsize, " ", shell_quote(cache->file),
+		   " 2> /dev/null", NULL);
+    f = popen(tmp->ptr, "r");
+    if (!f)
+d612 1
+a612 3
+    while (fscanf(f, "%d %d", &w, &h) < 0) {
+	if (feof(f))
+	    break;
+a613 1
+    pclose(f);
+@
+
+
+1.8
+log
+@* version.c.in: 0.3+cvs
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.7 2002/02/14 03:50:03 ukai Exp $ */
+d15 4
+d286 1
+a286 1
+    signal(SIGUSR1, load_image_handler);
+d294 1
+a294 1
+    signal(SIGUSR1, load_image_handler);
+d453 1
+a453 1
+    signal(SIGUSR1, load_image_handler);
+d513 1
+a513 1
+		kill(getppid(), SIGUSR1);
+d524 1
+a524 1
+	signal(SIGUSR1, load_image_next);
+@
+
+
+1.7
+log
+@[w3m-dev 03055] LIB_DIR -> w3m_lib_dir()
+* image.c (getCharSize): s/LIB_DIR/w3m_lib_dir()/
+* image.c (openImgdisplay): ditto
+* image.c (getImageSize): ditto
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.6 2002/02/09 15:24:58 ukai Exp $ */
+d109 1
+a109 1
+	setpgrp();
+@
+
+
+1.6
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.5 2002/02/08 14:29:52 ukai Exp $ */
+d56 1
+a56 1
+	Strcat_m_charp(tmp, LIB_DIR, "/", NULL);
+d118 1
+a118 1
+	    cmd = Strnew_m_charp(LIB_DIR, "/", Imgdisplay, NULL)->ptr;
+d597 1
+a597 1
+	Strcat_m_charp(tmp, LIB_DIR, "/", NULL);
+@
+
+
+1.5
+log
+@[w3m-dev 03025] fix image loading on EWS4800
+* image.c (loadImage): exit if symlink failed
+			exit if fopen failed
+From: Yoshinobu Sakane <sakane@@d4.bsd.nes.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.4 2002/02/04 15:18:42 ukai Exp $ */
+d498 1
+a498 1
+			exit(0);
+d506 1
+a506 1
+			exit(0);
+@
+
+
+1.4
+log
+@[w3m-dev 02984] inline image improvements and cleanups
+* config.h.dist (HAVE_SYMLINK) added
+* config.h.dist (HAVE_LSTAT): added
+* configure: symlink() check
+* configure: lstat() check
+* fm.h (maxLoadImage): added
+* form.c (form_write_from_file): s/HAVE_READLINK/HAVE_LSTAT/
+* image.c: include <sys/stat.h>
+* image.c (MAX_LOAD_IMAGE): default 8
+* image.c (max_load_image): deleted
+* image.c (n_load_image): added
+* image.c (showImageProgress): added
+* image.c (loadImage): check load image count
+			s/HAVE_READLINK/HAVE_LSTAT/ (HAVE_SYMLINK)
+			showImageProgress
+* local.c: include <sys/stat.h>
+		s/HAVE_READLINK/HAVE_LSTAT/
+* rc.c (CMT_MAX_LOAD_IMAGE): added
+* rc.c (max_load_image): added
+* doc/README.img: update
+* doc-jp/README.img: update
+
+* file.c (process_img): pre_int fix
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.3 2002/02/03 06:38:49 ukai Exp $ */
+d497 2
+a498 1
+		symlink(cache->file, image_lock);
+d505 3
+a507 2
+		if (f)
+		    fclose(f);
+@
+
+
+1.3
+log
+@[w3m-dev 02967] parallel image downloading
+* fm.h (ImageCache): add touch, pid
+* image.c (getCharSize): retry fscanf
+* image.c (drawImage): retry fflush
+* image.c (MAX_LOAD_IMAGE): added, default 4
+* image.c (image_cache): change to ImageCache**
+* image.c (image_lock): added
+* image.c (load_image_handler): signal SIGUSR1
+* image.c (load_image_next): signal SIGUSR1
+* image.c (loadImage): parallel image downloading
+* image.c (getImage): initialize touch, pid
+* image.c (getImageSize): return value is TRUE or FALSE
+		retry fscanf
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.2 2002/01/31 18:28:24 ukai Exp $ */
+d5 1
+d268 1
+a268 1
+#define MAX_LOAD_IMAGE 4
+d270 1
+a270 1
+static int max_load_image = MAX_LOAD_IMAGE;
+d337 26
+d369 6
+d376 2
+a377 2
+	image_cache = New_N(ImageCache *, max_load_image);
+	bzero(image_cache, sizeof(ImageCache *) * max_load_image);
+d379 1
+d381 1
+a381 1
+	for (i = 0; i < max_load_image; i++) {
+d402 1
+d408 1
+a408 1
+	for (i = 0; i < max_load_image; i++) {
+d412 1
+a412 1
+#ifdef HAVE_READLINK
+d442 2
+d453 1
+a453 1
+    for (i = 0; i < max_load_image; i++) {
+d459 1
+a459 1
+		for (i = 0; i < max_load_image; i++) {
+d465 1
+a465 1
+		if (Currentbuf && Currentbuf->need_reshape)
+d482 1
+a482 1
+#ifndef HAVE_READLINK
+d494 1
+a494 1
+#ifdef HAVE_READLINK
+@
+
+
+1.2
+log
+@gcc -Wall -Werror safe
+* anchor.c (addMultirowsImg): unused variable: fi
+* display.c (redrawLineImage): unused variable: ncol
+* file.c (process_img): uninitialized variables: r2, ni, w0, i0, ismap
+		unused variable: url, ext
+* file.c (loadHTMLstream): need volatile image_flag
+* image.c (image_index): int
+* image.c (getCharSize): need prototype
+* image.c (getImage): uninitialized variable: key
+		return NULL
+* map.c (follow_map_menu): used only USE_IMAGE: px, py, map
+* map.c (newMapArea): used only USE_IMAGE: p, i, max
+* proto.h (addMultirowsImg): added
+* w3mimgdisplay.c (main): format string fix
+* w3mimgdisplay.c (DrawImage): need (Pixmap) cast
+
+* inflate.c: indent
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.1 2002/01/31 17:54:51 ukai Exp $ */
+d60 4
+a63 1
+    fscanf(f, "%d %d", &w, &h);
+d65 1
+d219 2
+a220 6
+      again:
+	if (fflush(Imgdisplay_wf) != 0) {
+	    switch (errno) {
+	    case EINTR:
+		goto again;
+	    default:
+a221 1
+	    }
+d230 2
+a231 6
+  again2:
+    if (fflush(Imgdisplay_wf) != 0) {
+	switch (errno) {
+	case EINTR:
+	    goto again2;
+	default:
+a232 1
+	}
+d266 4
+d273 2
+a274 2
+static ImageCache *image_cache = NULL;
+static pid_t image_pid = 0;
+d281 1
+d289 1
+d338 3
+a340 1
+    int wait_st;
+d342 4
+d347 6
+a352 2
+	if (image_pid) {
+	    kill(image_pid, SIGKILL);
+d354 1
+a354 1
+	    waitpid(image_pid, &wait_st, 0);
+d356 1
+a356 1
+	    wait(&wait_st);
+d358 4
+a361 1
+	    image_pid = 0;
+a362 1
+	image_cache = NULL;
+d365 2
+d371 14
+a384 3
+    if (flag == IMG_FLAG_NEXT && need_load_image) {
+	struct stat st;
+	if (image_pid) {
+d386 1
+a386 1
+	    waitpid(image_pid, &wait_st, 0);
+d388 1
+a388 1
+	    wait(&wait_st);
+d390 9
+a398 7
+	    image_pid = 0;
+	}
+	if (!stat(image_cache->file, &st)) {
+	    image_cache->loaded = IMG_FLAG_LOADED;
+	    if (getImageSize(image_cache)) {
+		if (Currentbuf)
+		    Currentbuf->need_reshape = TRUE;
+d400 4
+d405 2
+a406 5
+	else {
+	    image_cache->loaded = IMG_FLAG_ERROR;
+	}
+	image_cache = NULL;
+	drawImage();
+d409 2
+d412 1
+a412 4
+    if (flag == IMG_FLAG_START)
+	signal(SIGUSR1, load_image_handler);
+    else
+	signal(SIGUSR1, load_image_next);
+a413 4
+    if (image_cache)
+	return;
+
+    image_pid = 0;
+d416 18
+a433 6
+    while (1) {
+	image_cache = (ImageCache *) popValue(image_list);
+	if (!image_cache) {
+	    if (Currentbuf && Currentbuf->need_reshape)
+		displayBuffer(Currentbuf, B_NORMAL);
+	    return;
+d435 1
+a435 3
+	if (image_cache->loaded == IMG_FLAG_UNLOADED)
+	    break;
+    }
+d437 4
+a440 3
+    flush_tty();
+    if ((image_pid = fork()) == 0) {
+	Buffer *b;
+d442 36
+a477 12
+	reset_signals();
+	signal(SIGINT, SIG_IGN);
+	close_tty();
+	QuietMessage = TRUE;
+	fmInitialized = FALSE;
+	image_source = image_cache->file;
+	b = loadGeneralFile(image_cache->url, image_cache->current, NULL, 0,
+			    NULL);
+	if (!b || !b->real_type || strncasecmp(b->real_type, "image/", 6))
+	    unlink(image_cache->file);
+	kill(getppid(), SIGUSR1);
+	exit(0);
+d479 3
+d515 2
+d523 1
+d552 1
+a552 1
+	return 0;
+d555 1
+a555 1
+	return 0;
+d563 5
+a567 2
+	return 0;
+    fscanf(f, "%d %d", &w, &h);
+d571 1
+a571 1
+	return 0;
+d594 1
+a594 1
+    return 1;
+@
+
+
+1.1
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: image.c,v 1.1.2.2 2002/01/27 16:37:08 h-saka Exp $ */
+d14 1
+a14 1
+static image_index = 0;
+d35 1
+d64 1
+a64 1
+    if (! set_pixel_per_char)
+d66 1
+a66 1
+    if (! set_pixel_per_line)
+d215 1
+a215 1
+  again:
+d229 1
+a229 1
+    fputs("3;\n", Imgdisplay_wf);       /* XSync() */
+d242 12
+a253 12
+/*
+    touch_line();
+    touch_column(CurColumn);
+#ifdef JP_CHARSET
+    if (CurColumn > 0 &&
+	CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR2)
+	touch_column(CurColumn - 1);
+    else if (CurColumn < COLS - 1 &&
+	     CHMODE(ScreenImage[CurLine]->lineprop[CurColumn]) == C_WCHAR1)
+	touch_column(CurColumn + 1);
+#endif
+*/
+d426 1
+a426 1
+    Str key;
+d430 1
+a430 1
+	return;
+d495 2
+a496 2
+    Strcat_m_charp(tmp, Imgsize, " ", shell_quote(cache->file), " 2> /dev/null",
+		   NULL);
+@
+

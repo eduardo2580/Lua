@@ -1,0 +1,234 @@
+head	1.3;
+access;
+symbols
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2001.11.20.15.09.47;	author ukai;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.17;	author a-ito;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.11.08.05.14.10;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.14.10;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.11.22.17.52.28;	author inu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@[w3m-dev 02455] some suggestion
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@SRCS=main.c file.c buffer.c display.c etc.c search.c linein.c table.c local.c \
+	form.c map.c frame.c rc.c menu.c mailcap.c\
+	func.c cookie.c history.c backend.c $(KEYBIND_SRC)
+OBJS=main.o file.o buffer.o display.o etc.o search.o linein.o table.o local.o\
+	form.o map.o frame.o rc.o menu.o mailcap.o\
+	func.o cookie.o history.o backend.o $(KEYBIND_OBJ)
+LSRCS=terms.c conv.c url.c ftp.c anchor.c mimehead.c parsetagx.c\
+	tagtable.c istream.c
+LOBJS=terms.o conv.o url.o ftp.o anchor.o mimehead.o parsetagx.o\
+	tagtable.o istream.o
+LLOBJS=version.o
+ALIBOBJS=Str.o indep.o regex.o textlist.o parsetag.o myctype.o entity.o hash.o
+ALIB=libindep.a
+ALLOBJS=$(OBJS) $(LOBJS) $(LLOBJS)
+
+TARGET=w3m$(EXT)
+BOOKMARKER=w3mbookmark$(EXT)
+HELPER=w3mhelperpanel$(EXT)
+INFLATE=inflate$(EXT)
+TARGETS=$(TARGET) $(EXT_TARGETS)
+
+INCLUDES=-I.
+
+DEFS=$(INCLUDES) # -DDEBUG
+CFLAGS=$(MYCFLAGS) $(DEFS) 
+LIBS=-L. -lindep $(GCLIB) $(MATHLIB) $(LOCAL_LIBRARIES) $(SYS_LIBRARIES)
+INSTALL=sh install.sh
+INSTALL2=sh ../install.sh
+AR=ar
+
+all: $(TARGETS)
+
+$(TARGET): $(ALLOBJS) $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o $(TARGET) $(ALLOBJS) $(LIBS)
+
+$(ALIB): $(ALIBOBJS)
+	$(AR) rv $(ALIB) $(ALIBOBJS)
+	$(RANLIB) $(ALIB)
+
+$(OBJS): fm.h funcname1.h
+
+tagtable.c: html.h tagtable.tab mktable$(EXT)
+	./mktable 100 tagtable.tab > tagtable.c
+
+# entity.h: html.h entity.tab mktable$(EXT)
+#	./mktable 100 entity.tab > entity.h
+
+func.o: funcname.c
+keybind.o: funcname2.h
+keybind_lynx.o: funcname2.h
+parsetagx.o: html.c
+
+funcname.c: funcname.tab
+	sort funcname.tab | awk -f funcname0.awk > funcname.c
+
+funcname1.h: funcname.tab
+	awk -f funcname1.awk funcname.tab > funcname1.h
+
+funcname2.h: funcname.tab
+	awk -f funcname2.awk funcname.tab > funcname2.h
+
+mktable$(EXT): mktable.o hash.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o mktable$(EXT) mktable.o hash.o  $(LIBS)
+
+$(BOOKMARKER): w3mbookmark.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o $(BOOKMARKER) w3mbookmark.o  $(LIBS)
+
+$(HELPER): w3mhelperpanel.o $(ALIB) $(GCTARGET)
+	$(CC) $(CFLAGS) -o $(HELPER) w3mhelperpanel.o  $(LIBS)
+
+$(INFLATE): inflate.o
+	$(CC) $(CFLAGS) $(Z_CFLAGS) -o $(INFLATE) inflate.o $(ZLIB)
+
+inflate.o: inflate.c
+	$(CC) $(CFLAGS) $(Z_CFLAGS) -c inflate.c
+
+gc/gc.a:
+	cd gc; make CC='$(CC)' CFLAGS='$(GCCFLAGS) $(GC_CFLAGS)' SPECIALCFLAGS='-I./\$(srcdir)/include $(GC_CFLAGS)'
+
+install: $(TARGETS)
+	-$(MKDIR) $(DESTDIR)$(BIN_DIR)
+	-$(MKDIR) $(DESTDIR)$(HELP_DIR)
+	-$(MKDIR) $(DESTDIR)$(LIB_DIR)
+	$(INSTALL) -m 755 $(TARGET) $(DESTDIR)$(BIN_DIR)/$(TARGET)
+	$(INSTALL) -m 644 w3mhelp-w3m_en.html $(DESTDIR)$(HELP_DIR)/w3mhelp-w3m_en.html
+	$(INSTALL) -m 644 w3mhelp-w3m_ja.html $(DESTDIR)$(HELP_DIR)/w3mhelp-w3m_ja.html
+	$(INSTALL) -m 644 w3mhelp-lynx_en.html $(DESTDIR)$(HELP_DIR)/w3mhelp-lynx_en.html
+	$(INSTALL) -m 644 w3mhelp-lynx_ja.html $(DESTDIR)$(HELP_DIR)/w3mhelp-lynx_ja.html
+	$(INSTALL) -m 644 $(HELP_FILE) $(DESTDIR)$(HELP_DIR)/w3mhelp.html
+	for d in $(EXT_TARGETS); do $(INSTALL) -m 755 $$d $(DESTDIR)$(LIB_DIR)/$$d; done
+	(cd scripts; for i in *.cgi; do $(INSTALL2) -m 755 $$i $(DESTDIR)$(LIB_DIR)/$$i; done)
+
+uninstall:
+	-$(RM) $(BIN_DIR)/$(TARGET)
+	-$(RM) $(HELP_DIR)/w3mhelp-lynx_en.html
+	-$(RM) $(HELP_DIR)/w3mhelp-lynx_ja.html
+	-$(RM) $(HELP_DIR)/w3mhelp-w3m_en.html 
+	-$(RM) $(HELP_DIR)/w3mhelp-w3m_ja.html 
+	-$(RM) $(HELP_DIR)/w3mhelp.html
+	-$(RM) $(LIB_DIR)/$(BOOKMARKER)
+	-$(RM) $(LIB_DIR)/$(HELPER)
+	-$(RM) $(LIB_DIR)/$(INFLATE)
+
+clean: sweep
+	rm -f *.o *.a $(TARGETS) mktable$(EXT)
+
+sweep:
+	-rm -f core *~ *.bak *.orig *.rej
+
+depend: 
+	makedepend $(CFLAGS) *.c
+
+dist:
+	cd ..; mv w3m w3m-$(VERSION); tar cvfz w3m-$(VERSION).tar.gz w3m-$(VERSION); mv w3m-$(VERSION) w3m
+
+bindist:
+	cd ..; mv w3m w3m-$(VERSION); tar cvfz w3m-$(VERSION)-$(MODEL).tar.gz w3m-$(VERSION)/{w3m*,doc*,Bonus*,README,scripts}; mv w3m-$(VERSION) w3m
+
+# DO NOT DELETE
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@@
+
+
+1.2.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+	func.c cookie.c history.c $(KEYBIND_SRC)
+d6 2
+a7 2
+	func.o cookie.o history.o $(KEYBIND_OBJ)
+LSRCS=terms.c conv.c url.c ftp.c anchor.c mimehead.c hash.c parsetagx.c\
+d9 1
+a9 1
+LOBJS=terms.o conv.o url.o ftp.o anchor.o mimehead.o hash.o parsetagx.o\
+d12 1
+a12 1
+ALIBOBJS=Str.o indep.o regex.o textlist.o parsetag.o myctype.o
+d19 2
+a20 1
+TARGETS=$(TARGET) $(BOOKMARKER) $(HELPER)
+d45 3
+d54 1
+a54 1
+	awk -f funcname0.awk funcname.tab > funcname.c
+d71 6
+d78 1
+a78 1
+	cd gc; make CC='$(CC)' CFLAGS='$(GCCFLAGS)'
+d90 1
+a90 1
+	for d in $(BOOKMARKER) $(HELPER); do $(INSTALL) -m 755 $$d $(DESTDIR)$(LIB_DIR)/$$d; done
+d100 3
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

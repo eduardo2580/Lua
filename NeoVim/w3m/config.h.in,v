@@ -1,0 +1,807 @@
+head	1.21;
+access;
+symbols
+	release-0-5-3:1.21
+	release-0-5-2:1.19
+	release-0-5-1:1.12
+	release-0-5:1.11
+	release-0-4-2:1.6;
+locks; strict;
+comment	@# @;
+
+
+1.21
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2010.08.10.10.16.57;	author htrb;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2007.05.23.15.06.05;	author inu;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2006.04.07.13.21.11;	author inu;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2006.04.05.14.18.53;	author inu;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2005.02.26.17.06.44;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.10.13.16.52.50;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2004.08.04.17.32.27;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2004.07.15.16.32.38;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2004.04.04.16.47.20;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.10.22.18.44.31;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.10.05.18.52.51;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.09.25.16.56.09;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.09.23.18.42.25;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.09.22.21.02.17;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.07.26.17.16.24;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.04.06.16.27.54;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.12.17.20.45;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.10.17.33.30;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.10.16.04.17;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.09.19.40.07;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.21
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@#ifndef CONFIG_H_SEEN
+#define CONFIG_H_SEEN
+/*
+ * Configuration for w3m
+ */
+#define JA 0
+#define EN 1
+
+/* Name of package */
+#undef PACKAGE
+
+#define HELP_FILE    "w3mhelp.html"
+#define HELP_CGI     "w3mhelp"
+#define W3MCONFIG    "w3mconfig"
+#define IMGDISPLAY   "w3mimgdisplay"
+#define XFACE2XPM    "xface2xpm"
+
+#define BOOKMARK     "bookmark.html"
+#define CONFIG_FILE  "config"
+#define KEYMAP_FILE  "keymap"
+#define MENU_FILE    "menu"
+#define MOUSE_FILE   "mouse"
+#define COOKIE_FILE  "cookie"
+#define HISTORY_FILE "history"
+
+#define PASSWD_FILE	RC_DIR "/passwd"
+#define PRE_FORM_FILE	RC_DIR "/pre_form"
+#define USER_MAILCAP	RC_DIR "/mailcap"
+#define SYS_MAILCAP	CONF_DIR "/mailcap"
+#define USER_MIMETYPES	"~/.mime.types"
+#define SYS_MIMETYPES	ETC_DIR "/mime.types"
+#define USER_URIMETHODMAP	RC_DIR "/urimethodmap"
+#define SYS_URIMETHODMAP	CONF_DIR "/urimethodmap"
+
+#define DEF_SAVE_FILE "index.html"
+
+/* User Configuration */
+#define DISPLAY_CHARSET @@DISPLAY_CHARSET@@
+#define SYSTEM_CHARSET @@SYSTEM_CHARSET@@
+#define DOCUMENT_CHARSET @@DOCUMENT_CHARSET@@
+#undef USE_M17N
+#undef USE_UNICODE
+#define W3M_LANG @@W3M_LANG@@
+#define LANG W3M_LANG
+
+/* Define to 1 if translation of program messages to the user's
+   native language is requested. */
+#undef ENABLE_NLS
+
+#undef USE_COLOR
+#undef USE_ANSI_COLOR
+#undef USE_BG_COLOR
+#undef USE_MIGEMO
+#define USE_MARK
+#undef USE_MOUSE
+#undef USE_GPM
+#undef USE_SYSMOUSE
+#undef USE_MENU
+#undef USE_COOKIE
+#undef USE_DIGEST_AUTH
+#undef USE_SSL
+#undef USE_SSL_VERIFY
+#undef USE_HELP_CGI
+#undef USE_EXTERNAL_URI_LOADER
+#undef USE_W3MMAILER
+#undef USE_NNTP
+#undef USE_GOPHER
+#undef USE_ALARM
+#undef USE_IMAGE
+#undef USE_W3MIMG_X11
+#undef USE_W3MIMG_FB
+#undef USE_W3MIMG_WIN
+#undef W3MIMGDISPLAY_SETUID
+#undef USE_IMLIB
+#undef USE_GDKPIXBUF
+#undef USE_GTK2
+#undef USE_IMLIB2
+#undef USE_XFACE
+#undef USE_DICT
+#undef USE_HISTORY
+#undef FORMAT_NICE
+#define ID_EXT
+#undef CLEAR_BUF
+#undef INET6
+#undef HAVE_SOCKLEN_T
+#undef HAVE_OLD_SS_FAMILY
+#define USE_EGD
+#define ENABLE_REMOVE_TRAILINGSPACES
+#undef MENU_THIN_FRAME
+#undef USE_RAW_SCROLL
+#undef TABLE_EXPAND
+#undef TABLE_NO_COMPACT
+#define NOWRAP
+#define MATRIX
+
+#define DEF_EDITOR "@@DEF_EDITOR@@"
+#define DEF_MAILER "@@DEF_MAILER@@
+#define DEF_EXT_BROWSER "@@DEF_EXT_BROWSER@@"
+
+/* fallback viewer. mailcap override these configuration */
+#define DEF_IMAGE_VIEWER	"display"
+#define DEF_AUDIO_PLAYER	"showaudio"
+
+/* for USE_MIGEMO */
+#define DEF_MIGEMO_COMMAND	"@@DEF_MIGEMO_COMMAND@@"
+
+#undef USE_BINMODE_STREAM
+#undef HAVE_TERMIOS_H
+#undef HAVE_TERMIO_H
+#undef HAVE_SGTTY_H
+#undef HAVE_DIRENT_H
+#undef HAVE_LOCALE_H
+#undef HAVE_STDINT_H
+#undef HAVE_INTTYPES_H
+#define SIZEOF_LONG_LONG 8
+#if SIZEOF_LONG_LONG > 0
+typedef long long clen_t;
+#else
+typedef long clen_t;
+#endif
+#undef HAVE_STRTOLL
+#undef HAVE_STROQ
+#undef HAVE_ATOLL
+#undef HAVE_ATOQ
+#undef HAVE_STRCASECMP
+#undef HAVE_STRCASESTR
+#undef HAVE_STRCHR
+#undef HAVE_STRERROR
+#undef HAVE_SYS_ERRLIST
+#undef HAVE_BCOPY
+#undef HAVE_WAITPID
+#undef HAVE_WAIT3
+#undef HAVE_STRFTIME
+#undef HAVE_GETCWD
+#undef HAVE_GETWD
+#undef HAVE_SYMLINK
+#undef HAVE_READLINK
+#undef HAVE_LSTAT
+#undef HAVE_SETENV
+#undef HAVE_PUTENV
+#undef HAVE_SRAND48
+#undef HAVE_SRANDOM
+#undef HAVE_GETPASSPHRASE
+#undef HAVE_CHDIR
+#undef HAVE_SETPGRP
+#undef HAVE_SETLOCALE
+#undef HAVE_LANGINFO_CODESET
+
+#undef SETPGRP_VOID
+#ifdef HAVE_SETPGRP
+#ifdef SETPGRP_VOID
+#define SETPGRP() setpgrp()
+#else
+#define SETPGRP() setpgrp(0,0)
+#endif
+#else /* no HAVE_SETPGRP; OS/2 EMX */
+#define SETPGRP() setpgid(0, 0)
+#endif
+#undef HAVE_FLOAT_H
+#undef HAVE_SYS_SELECT_H
+
+#undef HAVE_SIGSETJMP
+
+#define RETSIGTYPE @@RETSIGTYPE@@
+typedef RETSIGTYPE MySignalHandler;
+#define SIGNAL_ARG int _dummy	/* XXX */
+#define SIGNAL_ARGLIST 0	/* XXX */
+#define SIGNAL_RETURN @@SIGNAL_RETURN@@
+
+#ifdef HAVE_SIGSETJMP
+#ifdef __MINGW32_VERSION
+# define SETJMP(env) setjmp(env)
+# define LONGJMP(env,val) longjmp(env, val)
+# define JMP_BUF jmp_buf
+#else
+# define SETJMP(env) sigsetjmp(env,1)
+# define LONGJMP(env,val) siglongjmp(env,val)
+# define JMP_BUF sigjmp_buf
+#endif /* __MINGW32_VERSION */
+#else
+# define SETJMP(env) setjmp(env)
+# define LONGJMP(env,val) longjmp(env)
+# define JMP_BUF jmp_buf
+#endif
+
+#ifndef HAVE_SRAND48
+#ifdef HAVE_SRANDOM
+#define srand48 srandom
+#define lrand48 random
+#else /* HAVE_SRANDOM */
+#define USE_INCLUDED_SRAND48
+#endif /* HAVE_SRANDOM */
+#endif
+
+#ifndef HAVE_LSTAT
+#define lstat stat
+#endif
+
+#if defined( __CYGWIN32__ ) && !defined( __CYGWIN__ )
+#define __CYGWIN__
+#endif
+
+#if defined( __CYGWIN__ ) || defined( __EMX__ )
+#define SUPPORT_DOS_DRIVE_PREFIX 1
+#endif
+
+#if defined( __CYGWIN__ )
+#define SUPPORT_NETBIOS_SHARE 1
+#define SUPPORT_WIN9X_CONSOLE_MBCS 1
+#endif
+
+#if defined(__DJGPP__)
+#define DEFAULT_TERM	"dosansi"
+#else
+#define DEFAULT_TERM	0	/* XXX */
+#endif
+
+#if defined(__EMX__) /* use $extension? */
+#define GUNZIP_CMDNAME  "gzip"
+#define BUNZIP2_CMDNAME "bzip2"
+#define INFLATE_CMDNAME  "inflate.exe"
+#define W3MBOOKMARK_CMDNAME	"w3mbookmark.exe"
+#define W3MHELPERPANEL_CMDNAME	"w3mhelperpanel.exe"
+#define DEV_NULL_PATH	"nul"
+#define DEV_TTY_PATH	"con"
+#define CGI_EXTENSION	".cmd"
+#define USE_PATH_ENVVAR
+#else
+#define GUNZIP_CMDNAME  "gunzip"
+#define BUNZIP2_CMDNAME "bunzip2"
+#define INFLATE_CMDNAME	"inflate"
+#define W3MBOOKMARK_CMDNAME	"w3mbookmark"
+#define W3MHELPERPANEL_CMDNAME	"w3mhelperpanel"
+#define DEV_NULL_PATH	"/dev/null"
+#define DEV_TTY_PATH	"/dev/tty"
+#define CGI_EXTENSION	".cgi"
+#endif
+
+#define PATH_SEPARATOR	':'
+#define GUNZIP_NAME  "gunzip"
+#define BUNZIP2_NAME "bunzip2"
+#define INFLATE_NAME "inflate"
+
+#ifdef __MINGW32_VERSION
+#define SIGKILL SIGTERM
+#define S_IXGRP 0
+#define S_IXOTH 0
+#define S_IRWXG 0
+#define S_IRWXO 0
+#endif /* __MINGW32_VERSION */
+
+#endif /* CONFIG_H_SEEN */
+@
+
+
+1.20
+log
+@[w3m-dev 04379] check socklen_t
+@
+text
+@d72 1
+@
+
+
+1.19
+log
+@[w3m-dev 04155] fix for minpw.
+@
+text
+@d84 1
+@
+
+
+1.18
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d169 5
+d177 1
+d242 8
+@
+
+
+1.17
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@a55 1
+#undef USE_REMOTE
+a145 2
+#undef HAVE_SO_PEERCRED
+#undef HAVE_GETPEEREID
+a168 5
+#ifdef __MINGW32_VERSION
+# define SETJMP(env) setjmp(env)
+# define LONGJMP(env,val) longjmp(env, val)
+# define JMP_BUF jmp_buf
+#else
+a171 1
+#endif /* __MINGW32_VERSION */
+a235 8
+#ifdef __MINGW32_VERSION
+#define SIGKILL SIGTERM
+#define S_IXGRP 0
+#define S_IXOTH 0
+#define S_IRWXG 0
+#define S_IRWXO 0
+#endif /* __MINGW32_VERSION */
+
+@
+
+
+1.16
+log
+@[w3m-dev 04143] Patch for OS/2
+* config.h.in: ifdef HAVE_SETPGRP
+* configure.in: define USE_BINMODE_STREAM for *os2-emx*
+* islang.c: ULONG -> unsigned long
+* main.c: ULONG -> unsigned long
+@
+text
+@d56 1
+d147 2
+d172 5
+d180 1
+d245 8
+@
+
+
+1.15
+log
+@Bug#276246: w3m's locale parsing should at least see '@@euro' modifier
+* config.h (HAVE_LANGINFO_CODESET): added
+* configure.in (AM_LANGINFO_CODESET): added
+* libwc/charset.c: #include <langinfo.h>
+       (wc_charset_to_ces): use nl_langinfo(CODESET)
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d148 1
+d154 3
+a156 1
+
+@
+
+
+1.14
+log
+@[w3m-dev 04096] w3m-img gtk2
+* acinclude.m4 (AC_W3M_IMAGE): add USE_GTK2
+	add --with-imagelib=gtk2
+* aclocal.m4 config.guess config.sub configure: regen
+* config.h.in: add USE_GTK2
+* w3mimg/fb/fb_gdkpixbuf.c: support USE_GTK2
+* w3mimg/fb/fb_img.h: add fb_image_init()
+* w3mimg/fb/fb_imlib2.h: fb_image_init() stub
+* w3mimg/fb/fb_w3mimg.c: call fb_image_init()
+* w3mimg/x11/x11_w3mimg.c: support USE_GTK2
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d145 1
+@
+
+
+1.13
+log
+@[w3m-dev 04092] remove __CYGWIN__ && LANG == JA
+* remove condition LANG == JA && __CYGWIN__
+* cygwin_mouse_btn_swapped enabled when before 1.5.x
+From: WATANABE Katsuyuki <knabe@@sannet.ne.jp>
+@
+text
+@d75 1
+@
+
+
+1.12
+log
+@[w3m-dev 04049] w3m-cvs-1.914-misc.patch
+* Makefile.in (funcname.tab): dont modify when target is unchanged.
+	(CFLAGS): need $(CPPFLAGS)?
+* config.h.in: add HAVE_STDINT_H, HAVE_INTTYPES_H
+* configure.in: s/AC_CANONICAL_SYSTEM/AC_CANONICAL_HOST/
+	don't use AC_CYGWIN
+	don't use $CYGWIN, use $host_os *cygwin*
+	AC_DEFINE in AC_CHECK_HEADER (float.h, sys/select.h)
+	add stdint.h, inttypes.h
+* etc.c (find_auth_pass_entry): host is case insensitive
+* libwc/wc_types.h: use stdint.h or inttypes.h
+* main.c (MAIN); need GC_init()
+From: AIDA Shinra <shinra@@j10n.org>
+@
+text
+@a195 1
+#if LANG == JA
+a197 1
+#endif
+@
+
+
+1.11
+log
+@[w3m-dev 04010] support for deprecated __ss_family
+* acinclude.m4 (AC_W3M_IPv6): check __ss_family
+* config.h.in: add HAVE_OLD_SS_FAMILY
+* ftp.c (ftp_pasv): ifdef HAVE_OLD_SS_FAMILY
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d110 2
+@
+
+
+1.10
+log
+@fix build error --disbable-m17n
+* config.h.in: undef USE_M17N, USE_UNICODE
+* etc.c (url_unquote_conv): USE_M17N
+* file.c (convertLine): USE_M17N
+	(loadHTMLStream): fix ifdef USE_IMAGE->USE_M17N
+	(loadBuffer): fix USE_M17N
+	(getNextPage): fix USE_M17N
+* fm.h (USE_M17N): don't define USE_M17N in case LANG == JA
+		(this should be done by configure)
+	(wc_ces): dummy typedef
+	(wc_Str_conv): fix non-m17n macro args
+	(wc_Str_conv_strict): ditto
+* ftp.c (loadFTPDir): fix undefined USE_M17N
+* mimehead.c (decodeWord): ditto
+	(decodeMIME): ditto
+* news.c (loadNewsgroup): ditto
+* proto.h (convertLine): ditto
+	(loadGopherDir): ditto
+	(loadFTPDir): ditto
+	(loadNewsgroup): ditto
+	(decodeWord): ditto
+	(decodeMIME): ditto
+	(url_unquote_conv): ditto
+* terms.c (SETCH): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d83 1
+@
+
+
+1.9
+log
+@check header locale.h
+check func setlocale
+no need to output intl/Makefile
+@
+text
+@d41 2
+a42 2
+#define USE_M17N
+#define USE_UNICODE
+@
+
+
+1.8
+log
+@gettextize initial modifications
+@
+text
+@d108 1
+@
+
+
+1.7
+log
+@merge m17n patch
+add libwc
+@
+text
+@d9 3
+d45 5
+d139 1
+@
+
+
+1.6
+log
+@[w3m-dev 03945] Re: application/xhtml+xml support
+* Makefile.in (ETC_DIR): added
+	(CONF_DIR): added
+	(DEFS): add CONF_DIR
+	(MAKE_ARGS): add CONF_DIR
+* config.h.in (SYS_MAILCAP): use CONF_DIR
+	(SYS_URIMETHODMAP): use CONF_DIR
+* func.c (sys_current_keymap_file): added
+	(interpret_keymap): added
+	(initKeymap): use interpret_keymap
+	(interpret_mouse_action): added
+	(initMouseAction): use interpret_mouse_action
+* indep.c (w3m_conf_dir): added
+* indep.h (w3m_conf_dir): added
+* menu.c (interpret_menu): added
+	(initMenu): use interpret_menu
+* proto.h (confFile): added
+* rc.c (init_rc): read config file by interpret_rc
+	(confFile): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d35 5
+a39 2
+#define DISPLAY_CODE '@@DISPLAY_CODE@@'
+#define SYSTEM_CODE '@@SYSTEM_CODE@@'
+a41 1
+#undef KANJI_SYMBOLS
+@
+
+
+1.5
+log
+@[w3m-dev 03843] cleanup macros
+* config.h.dist config.h.in etc.c file.c fm.h ftp.c linein.c
+   main.c rc.c:
+   delete EMACS_LIKE_LINEEDIT, VI_PREC_NUM, LABEL_TOPLINE,
+	NEXTPAGE_TOPLINE, FTPPASS_HOSTNAMEGEN
+   use_mark default FALSE
+   emacs_like_lineedit default FALSE
+   vi_prec_num default FALSE
+   add UseHistory, use_history
+* NEWS: rc: use_history
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@a14 1
+#define RC_DIR       "~/.w3m"
+d26 1
+a26 1
+#define SYS_MAILCAP	ETC_DIR "mailcap"
+d28 1
+a28 1
+#define SYS_MIMETYPES	ETC_DIR "mime.types"
+d30 1
+a30 1
+#define SYS_URIMETHODMAP	ETC_DIR "/urimethodmap"
+@
+
+
+1.4
+log
+@[w3m-dev 03818] fix autoconf
+* Makefile.in (CGIBIN_DIR): added
+	(AUXBIN_DIR): added
+	(HELP_DIR): added
+	(RC_DIR): added
+	(MAKE_ARGS): added
+	(TARGET): use $(package)
+	(MAN1_TARGET): ditto
+	(install): use $(*_DIR)
+* acinclude.m4 (AC_W3M_TERMLIB): added
+	(AC_W3M_GC): default search prefix /usr /usr/local $HOME
+		fix searches
+	(AC_W3M_SSL): fix bugs
+* config.h (RC_DIR): remove tailing /
+	(SYS_MAILCAP): use ETC_DIR
+	(SYS_MIMETYPES): ditto
+	(USER_MIMETYPES): homedir
+* configure.in: quote
+	(AC_W3M_TERMLIB): use
+* Bonus/oldconfigure.sh: rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@a44 2
+#define EMACS_LIKE_LINEEDIT
+#define VI_PREC_NUM
+a45 2
+#define LABEL_TOPLINE
+#define NEXTPAGE_TOPLINE
+a53 1
+#define FTPPASS_HOSTNAMEGEN
+a67 1
+#define SHOW_PARAMS
+a69 1
+#define VIEW_UNSEENOBJECTS
+@
+
+
+1.3
+log
+@[w3m-dev 03804] fix autoconf
+* config.h.in (EAMCS_LIKE_LINEEDIT): define
+	(VI_PREC_NUM): define
+	(USE_MARK): define
+	(LABEL_TOPLINE): define
+	(NEXTPAGE_TOPLINE): define
+	(FTPPASS_HOSTNAMEGEN): define
+	(SHOW_PARAMS): define
+	(VIEW_UNSEENOBJECTS): define
+	(ID_EXT): define
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d15 1
+a15 1
+#define RC_DIR       "~/.w3m/"
+d27 3
+a29 3
+#define SYS_MAILCAP	"/etc/mailcap"
+#define USER_MIMETYPES	RC_DIR "~/.mime.types"
+#define SYS_MIMETYPES	"/etc/mime.types"
+@
+
+
+1.2
+log
+@[w3m-dev 03801] fix autoconf
+* acinclude.m4 (AC_W3M_BG_COLOR): fix typo
+	(AC_W3M_KANJI_SYMBOLS): check enable_japanese != 'no'
+	(AC_W3M_KEYMAP): needs {}
+	(AC_W3M_EXTLIBS): don't modify libdir, use extlibdir
+	(AC_W3M_SSL): missing x
+	(AC_W3M_IMAGE): add AC_DEFINE(USE_IMAGE)
+* config.h.in: s/USE_KANJI_SYMBOLS/KANJI_SYMBOLS/
+	add SIZEOF_LONG_LONG
+	don't use //, use /* */
+* configure.in: add AC_CHECK_SIZEOF(long long, 0)
+From: Yuji Abe <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d45 5
+a49 5
+#undef EMACS_LIKE_LINEEDIT
+#undef VI_PREC_NUM
+#undef USE_MARK
+#undef LABEL_TOPLINE
+#undef NEXTPAGE_TOPLINE
+d58 1
+a58 1
+#undef FTPPASS_HOSTNAMEGEN
+d73 1
+a73 1
+#undef SHOW_PARAMS
+d76 1
+a76 1
+#undef VIEW_UNSEENOBJECTS
+d78 1
+a78 1
+#undef ID_EXT
+@
+
+
+1.1
+log
+@autoconficate
+* Makefile.in: added
+* acinclude.m4: added
+* aclocal.m4: added (generated from acinclude.m4 by aclocal)
+* configure.in: added
+* config.h.in: added
+* config.guess: added
+* config.sub: added
+* .cvsignore: add Makefile config.cache config.log config.status
+* configure: generated by autoconf
+* gc/: deleted
+* XMakefile: deleted
+* XXMakefile: deleted
+* NEWS: autoconficate
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d40 1
+a40 1
+#undef USE_KANJI_SYMBOLS
+d106 2
+d109 3
+d152 2
+a153 2
+#define SIGNAL_ARG int _dummy	// XXX
+#define SIGNAL_ARGLIST 0	// XXX
+@
+

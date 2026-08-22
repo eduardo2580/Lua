@@ -1,0 +1,43 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2003.09.22.21.02.22;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge m17n patch
+add libwc
+@
+text
+@char *graph_symbol[] = {
+    "n",  "t",  "w",  "l",  "u",  "x",  "k",  "",
+    "v",  "m",  "q",  "",   "j",  "",   "",   "",
+    "n",  "t",  "w",  "l",  "u",  "x",  "k",  "",
+    "v",  "m",  "q",  "",   "j",  "",   "",   "",
+};
+
+#ifdef USE_M17N
+char *graph2_symbol[] = {
+    "qn", " t", "qw", " l", "qu", " x", "qk", "",
+    "qv", " m", "qq", "",   "qj", "",   "",   "",
+    "qn", " t", "qw", " l", "qu", " x", "qk", "",
+    "qv", " m", "qq", "",   "qj", "",   "",   "",
+};
+#endif
+@

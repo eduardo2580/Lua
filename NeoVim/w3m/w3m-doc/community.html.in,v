@@ -1,0 +1,151 @@
+head	1.2;
+access;
+symbols
+	release-0-5-3:1.2
+	release-0-5-2:1.2
+	release-0-5-1:1.2
+	release-0-5:1.2
+	release-0-4-2:1.2
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.2
+	release-0-3-2-1:1.2
+	branch-0-3-2:1.2.0.4
+	release-0-3-2:1.2
+	release-0-3-2-rc4:1.2
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.2
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.27.03.54.49;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.18.53;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.18.53;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@
+2001-11-27  aito@@fw.ipsj.or.jp
+	* Error correction on doc-jp/FAQ.html
+
+2001-11-27  sakane@@d4.bsd.nes.nec.co.jp (Yoshinobu Sakane)
+	* w3m-doc update.
+@
+text
+@<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+@@include define.wd
+@@include contain.wd
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
+<TITLE>W3M&nbsp;COMMUNITY&nbsp;- w3m $B%3%_%e%K%F%#(B -</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1><A NAME="index">w3m $B%3%_%e%K%F%#(B</A></H1>
+<DIV>
+<!-- w3m$B%3%_%e%K%F%#$K4X$7$F(B -->
+</DIV>
+	<UL>
+        <LI><A HREF="#ML">$B%a!<%j%s%0%j%9%H(B</A>
+        <LI><A HREF="#links">$B4XO"(B Web</A>
+	</UL>
+
+<DIV>
+<A HREF="@@DOC.index@@">$B%H%C%W%Z%$%8$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="ML">$B%a!<%j%s%0%j%9%H(B</A></H2>
+<!-- w3m-dev, w3m-dev-en ML$B$N>R2p(B -->
+<DIV>
+<P>w3m $B3+H/<TMQ%a!<%j%s%0%j%9%H(B
+</DIV>
+<DIV>
+<A HREF="#index">$B$3$N%Z!<%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<H2><A NAME="links">$B4XO"(B Web</A></H2>
+<!-- w3m$B$K4X78$7$F$$$k(BWeb -->
+<DIV>
+<A HREF="#index">$B$3$N%Z!<%8$N@@hF,$KLa$k(B</A>
+</DIV>
+<HR>
+
+<A HREF="@@DOC.index@@">$B%H%C%W%Z%$%8$KLa$k(B</A>
+
+</BODY>
+</HTML>
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d9 1
+a9 1
+<TITLE>W3M&nbsp;COMMUNITY&nbsp;-w3m$B%3%_%e%K%F%#(B-</TITLE>
+d14 1
+a14 1
+<H1><A NAME="index">w3m$B%3%_%e%K%F%#(B</A></H1>
+d20 1
+a20 1
+        <LI><A HREF="#links">$B4XO"(BWeb</A>
+d31 3
+d38 1
+a38 1
+<H2><A NAME="links">$B4XO"(BWeb</A><H2>
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

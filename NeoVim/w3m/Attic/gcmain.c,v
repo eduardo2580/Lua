@@ -1,0 +1,127 @@
+head	1.3;
+access;
+symbols
+	release-0-3-2-2:1.2
+	release-0-3-2-1:1.2
+	branch-0-3-2:1.2.0.4
+	release-0-3-2:1.2
+	release-0-3-2-rc4:1.2
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.2
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2002.11.12.12.41.57;	author ukai;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.20.17.49.23;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.14.56;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.14.56;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@[w3m-dev 03415] fix a build issue for 64bit arch
+* gcmain.c: deleted
+* main.c: no need gcmain.c
+	s/MAIN/main/
+* mktable.c: ditto
+* w3mbookmark.c: ditto
+* w3mhelperpanel.c: ditto
+From: Akira TAGOH <at@@gclab.org>
+@
+text
+@/* $Id: gcmain.c,v 1.2 2001/11/20 17:49:23 ukai Exp $ */
+#ifndef GC_MAIN
+#define GC_MAIN
+
+#if defined(AIX) || defined(linux)
+/* to cope with Boehm GC... */
+
+#define MAIN real_main
+
+#if defined(DEBIAN)
+#include "gc/private/gc_priv.h"
+#else
+#include "private/gc_priv.h"
+#endif
+int real_main(int, char **, char **);
+
+int
+main(int argc, char **argv, char **envp)
+{
+    int dummy;
+    GC_stackbottom = (ptr_t) (&dummy);
+    return (real_main(argc, argv, envp));
+}
+#else
+#define MAIN main
+#endif
+
+#endif
+@
+
+
+1.2
+log
+@add rcsids
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

@@ -1,0 +1,2421 @@
+head	1.33;
+access;
+symbols
+	release-0-5-3:1.32
+	release-0-5-2:1.30
+	release-0-5-1:1.28
+	release-0-5:1.28
+	release-0-4-2:1.25
+	release-0-4-1:1.22
+	release-0-4:1.22
+	release-0-4-rc3:1.22
+	release-0-4-rc2:1.22
+	release-0-4-rc1:1.22
+	release-0-3-2-2:1.14
+	release-0-3-2-1:1.14
+	branch-0-3-2:1.14.0.2
+	release-0-3-2:1.14
+	release-0-3-2-rc4:1.14
+	release-0-3-2-rc3:1.14
+	release-0-3-2-rc2:1.14
+	release-0-3-2-rc1:1.14
+	release-0-3-1:1.12
+	release-0-3:1.12
+	release-0-2-5-1:1.7
+	branch-0-2-5:1.7.0.2
+	release-0-2-5:1.7
+	release-0-2-4:1.7
+	release-0-2-3-2:1.7
+	release-0-2-3-1:1.7
+	release-0-2-3:1.7
+	inu-0-2-2-rel-1-1:1.3
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.33
+date	2012.05.22.09.45.56;	author inu;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2010.08.14.01.29.40;	author htrb;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2010.08.12.08.56.14;	author htrb;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2007.04.19.12.00.38;	author inu;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2006.12.10.11.06.12;	author inu;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.09.26.20.48.21;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.09.24.18.48.59;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.09.22.21.02.18;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.08.11.17.33.08;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.06.18.16.18.43;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.04.18.16.47.18;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.12.09.15.40.36;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.12.08.14.23.44;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.12.06.16.50.19;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.12.05.16.29.07;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.12.03.15.35.10;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.12.02.17.55.49;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.12.02.17.27.38;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.05.17.10.05;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.10.16.18.11.15;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.10.10.16.59.33;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.02.28.16.15.41;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.02.25.15.55.39;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.02.07.14.16.00;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.02.05.12.31.27;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.31.17.54.51;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.12.06.15.31.58;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.27.18.23.33;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.20.17.49.23;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.17;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.55;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.55;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.33
+log
+@parse META CHARSET
+@
+text
+@/* $Id: html.c,v 1.32 2010/08/14 01:29:40 htrb Exp $ */
+#include "html.h"
+
+/* Define HTML Tag Infomation Table */
+
+#define ATTR_CORE	ATTR_ID
+#define MAXA_CORE	1
+unsigned char ALST_A[] = {
+    ATTR_NAME, ATTR_HREF, ATTR_REL, ATTR_CHARSET, ATTR_TARGET, ATTR_HSEQ,
+    ATTR_REFERER,
+    ATTR_FRAMENAME, ATTR_TITLE, ATTR_ACCESSKEY, ATTR_CORE
+};
+#define MAXA_A		MAXA_CORE + 10
+unsigned char ALST_P[] = { ATTR_ALIGN, ATTR_CORE };
+#define MAXA_P		MAXA_CORE + 1
+unsigned char ALST_UL[] = { ATTR_START, ATTR_TYPE, ATTR_CORE };
+#define MAXA_UL		MAXA_CORE + 2
+unsigned char ALST_LI[] = { ATTR_TYPE, ATTR_VALUE, ATTR_CORE };
+#define MAXA_LI		MAXA_CORE + 2
+unsigned char ALST_HR[] = { ATTR_WIDTH, ATTR_ALIGN, ATTR_CORE };
+#define MAXA_HR		MAXA_CORE + 2
+unsigned char ALST_LINK[] = { ATTR_HREF, ATTR_HSEQ, ATTR_REL, ATTR_REV,
+    ATTR_TITLE, ATTR_TYPE, ATTR_CORE
+};
+#define MAXA_LINK	MAXA_CORE + sizeof ALST_LINK/sizeof ALST_LINK[0] - 1
+unsigned char ALST_DL[] = { ATTR_COMPACT, ATTR_CORE };
+#define MAXA_DL		MAXA_CORE + 1
+unsigned char ALST_PRE[] = { ATTR_FOR_TABLE, ATTR_CORE };
+#define MAXA_PRE	MAXA_CORE + 1
+unsigned char ALST_IMG[] =
+    { ATTR_SRC, ATTR_ALT, ATTR_WIDTH, ATTR_HEIGHT, ATTR_ALIGN, ATTR_USEMAP,
+    ATTR_ISMAP, ATTR_TITLE, ATTR_PRE_INT, ATTR_CORE
+};
+#define MAXA_IMG	MAXA_CORE + 9
+unsigned char ALST_TABLE[] =
+    { ATTR_BORDER, ATTR_WIDTH, ATTR_HBORDER, ATTR_CELLSPACING,
+    ATTR_CELLPADDING, ATTR_VSPACE, ATTR_CORE
+};
+#define MAXA_TABLE	MAXA_CORE + 6
+unsigned char ALST_META[] = { ATTR_HTTP_EQUIV, ATTR_CONTENT, ATTR_CHARSET, ATTR_CORE };
+#define MAXA_META	MAXA_CORE + 3
+unsigned char ALST_FRAME[] = { ATTR_SRC, ATTR_NAME, ATTR_CORE };
+#define MAXA_FRAME	MAXA_CORE + 2
+unsigned char ALST_FRAMESET[] = { ATTR_COLS, ATTR_ROWS, ATTR_CORE };
+#define MAXA_FRAMESET	MAXA_CORE + 2
+unsigned char ALST_NOFRAMES[] = { ATTR_CORE };
+#define MAXA_NOFRAMES	MAXA_CORE
+unsigned char ALST_FORM[] =
+    { ATTR_METHOD, ATTR_ACTION, ATTR_CHARSET, ATTR_ACCEPT_CHARSET,
+    ATTR_ENCTYPE, ATTR_TARGET, ATTR_NAME, ATTR_CORE
+};
+#define MAXA_FORM       MAXA_CORE + 7
+unsigned char ALST_INPUT[] =
+    { ATTR_TYPE, ATTR_VALUE, ATTR_NAME, ATTR_CHECKED, ATTR_ACCEPT, ATTR_SIZE,
+    ATTR_MAXLENGTH, ATTR_ALT, ATTR_READONLY, ATTR_SRC, ATTR_WIDTH, ATTR_HEIGHT,
+    ATTR_CORE
+};
+#define MAXA_INPUT      MAXA_CORE + 12
+unsigned char ALST_TEXTAREA[] =
+    { ATTR_COLS, ATTR_ROWS, ATTR_NAME, ATTR_READONLY, ATTR_CORE };
+#define MAXA_TEXTAREA   MAXA_CORE + 4
+unsigned char ALST_SELECT[] = { ATTR_NAME, ATTR_MULTIPLE, ATTR_CORE };
+#define MAXA_SELECT	MAXA_CORE + 2
+unsigned char ALST_OPTION[] =
+    { ATTR_VALUE, ATTR_LABEL, ATTR_SELECTED, ATTR_CORE };
+#define MAXA_OPTION	MAXA_CORE + 3
+unsigned char ALST_ISINDEX[] = { ATTR_ACTION, ATTR_PROMPT, ATTR_CORE };
+#define MAXA_ISINDEX	MAXA_CORE + 2
+unsigned char ALST_MAP[] = { ATTR_NAME, ATTR_CORE };
+#define MAXA_MAP	MAXA_CORE + 1
+unsigned char ALST_AREA[] =
+    { ATTR_HREF, ATTR_TARGET, ATTR_ALT, ATTR_SHAPE, ATTR_COORDS, ATTR_CORE };
+#define MAXA_AREA	MAXA_CORE + 5
+unsigned char ALST_BASE[] = { ATTR_HREF, ATTR_TARGET, ATTR_CORE };
+#define MAXA_BASE	MAXA_CORE + 2
+unsigned char ALST_BODY[] = { ATTR_BACKGROUND, ATTR_CORE };
+#define MAXA_BODY	MAXA_CORE + 1
+unsigned char ALST_TR[] = { ATTR_ALIGN, ATTR_VALIGN, ATTR_CORE };
+#define MAXA_TR		MAXA_CORE + 2
+unsigned char ALST_TD[] =
+    { ATTR_COLSPAN, ATTR_ROWSPAN, ATTR_ALIGN, ATTR_VALIGN, ATTR_WIDTH,
+    ATTR_NOWRAP, ATTR_CORE
+};
+#define MAXA_TD		MAXA_CORE + 6
+unsigned char ALST_BGSOUND[] = { ATTR_SRC, ATTR_CORE };
+#define MAX_BGSOUND	MAXA_CORE + 1
+unsigned char ALST_APPLET[] = { ATTR_ARCHIVE, ATTR_CORE };
+#define MAX_APPLET	MAXA_CORE + 1
+unsigned char ALST_EMBED[] = { ATTR_SRC, ATTR_CORE };
+#define MAX_EMBED	MAXA_CORE + 1
+
+unsigned char ALST_TEXTAREA_INT[] = { ATTR_TEXTAREANUMBER };
+#define MAXA_TEXTAREA_INT 1
+unsigned char ALST_SELECT_INT[] = { ATTR_SELECTNUMBER };
+#define MAXA_SELECT_INT	1
+unsigned char ALST_TABLE_ALT[] = { ATTR_TID };
+#define MAXA_TABLE_ALT	1
+unsigned char ALST_SYMBOL[] = { ATTR_TYPE };
+#define MAXA_SYMBOL	1
+unsigned char ALST_TITLE_ALT[] = { ATTR_TITLE };
+#define MAXA_TITLE_ALT	1
+unsigned char ALST_FORM_INT[] =
+    { ATTR_METHOD, ATTR_ACTION, ATTR_CHARSET, ATTR_ACCEPT_CHARSET,
+    ATTR_ENCTYPE, ATTR_TARGET, ATTR_NAME, ATTR_FID
+};
+#define MAXA_FORM_INT  8
+unsigned char ALST_INPUT_ALT[] =
+    { ATTR_HSEQ, ATTR_FID, ATTR_NO_EFFECT, ATTR_TYPE, ATTR_NAME, ATTR_VALUE,
+    ATTR_CHECKED, ATTR_ACCEPT, ATTR_SIZE, ATTR_MAXLENGTH, ATTR_READONLY,
+    ATTR_TEXTAREANUMBER,
+    ATTR_SELECTNUMBER, ATTR_ROWS, ATTR_TOP_MARGIN, ATTR_BOTTOM_MARGIN
+};
+#define MAXA_INPUT_ALT  16
+unsigned char ALST_IMG_ALT[] =
+    { ATTR_SRC, ATTR_WIDTH, ATTR_HEIGHT, ATTR_USEMAP, ATTR_ISMAP, ATTR_HSEQ,
+    ATTR_XOFFSET, ATTR_YOFFSET, ATTR_TOP_MARGIN, ATTR_BOTTOM_MARGIN,
+    ATTR_TITLE
+};
+#define MAXA_IMG_ALT  11
+unsigned char ALST_NOP[] = { ATTR_CORE };
+#define MAXA_NOP	MAXA_CORE
+
+TagInfo TagMAP[MAX_HTMLTAG] = {
+    {NULL, NULL, 0, 0},		/*   0 HTML_UNKNOWN    */
+    {"a", ALST_A, MAXA_A, 0},	/*   1 HTML_A          */
+    {"/a", NULL, 0, TFLG_END},	/*   2 HTML_N_A        */
+    {"h", ALST_P, MAXA_P, 0},	/*   3 HTML_H          */
+    {"/h", NULL, 0, TFLG_END},	/*   4 HTML_N_H        */
+    {"p", ALST_P, MAXA_P, 0},	/*   5 HTML_P          */
+    {"br", ALST_NOP, MAXA_NOP, 0},		/*   6 HTML_BR         */
+    {"b", ALST_NOP, MAXA_NOP, 0},	/*   7 HTML_B          */
+    {"/b", NULL, 0, TFLG_END},	/*   8 HTML_N_B        */
+    {"ul", ALST_UL, MAXA_UL, 0},	/*   9 HTML_UL         */
+    {"/ul", NULL, 0, TFLG_END},	/*  10 HTML_N_UL       */
+    {"li", ALST_LI, MAXA_LI, 0},	/*  11 HTML_LI         */
+    {"ol", ALST_UL, MAXA_UL, 0},	/*  12 HTML_OL         */
+    {"/ol", NULL, 0, TFLG_END},	/*  13 HTML_N_OL       */
+    {"title", ALST_NOP, MAXA_NOP, 0},	/*  14 HTML_TITLE      */
+    {"/title", NULL, 0, TFLG_END},	/*  15 HTML_N_TITLE    */
+    {"hr", ALST_HR, MAXA_HR, 0},	/*  16 HTML_HR         */
+    {"dl", ALST_DL, MAXA_DL, 0},	/*  17 HTML_DL         */
+    {"/dl", NULL, 0, TFLG_END},	/*  18 HTML_N_DL       */
+    {"dt", ALST_NOP, MAXA_NOP, 0},	/*  19 HTML_DT         */
+    {"dd", ALST_NOP, MAXA_NOP, 0},	/*  20 HTML_DD         */
+    {"pre", ALST_PRE, MAXA_PRE, 0},	/*  21 HTML_PRE        */
+    {"/pre", NULL, 0, TFLG_END},	/*  22 HTML_N_PRE      */
+    {"blockquote", ALST_NOP, MAXA_NOP, 0},	/*  23 HTML_BLQ        */
+    {"/blockquote", NULL, 0, TFLG_END},	/*  24 HTML_N_BLQ      */
+    {"img", ALST_IMG, MAXA_IMG, 0},	/*  25 HTML_IMG        */
+    {"listing", ALST_NOP, MAXA_NOP, 0},	/*  26 HTML_LISTING    */
+    {"/listing", NULL, 0, TFLG_END},	/*  27 HTML_N_LISTING  */
+    {"xmp", ALST_NOP, MAXA_NOP, 0},	/*  28 HTML_XMP        */
+    {"/xmp", NULL, 0, TFLG_END},	/*  29 HTML_N_XMP      */
+    {"plaintext", ALST_NOP, MAXA_NOP, 0},	/*  30 HTML_PLAINTEXT  */
+    {"table", ALST_TABLE, MAXA_TABLE, 0},	/*  31 HTML_TABLE      */
+    {"/table", NULL, 0, TFLG_END},	/*  32 HTML_N_TABLE    */
+    {"meta", ALST_META, MAXA_META, 0},	/*  33 HTML_META       */
+    {"/p", NULL, 0, TFLG_END},	/*  34 HTML_N_P        */
+    {"frame", ALST_FRAME, MAXA_FRAME, 0},	/*  35 HTML_FRAME      */
+    {"frameset", ALST_FRAMESET, MAXA_FRAMESET, 0},	/*  36 HTML_FRAMESET   */
+    {"/frameset", NULL, 0, TFLG_END},	/*  37 HTML_N_FRAMESET */
+    {"center", ALST_NOP, MAXA_NOP, 0},	/*  38 HTML_CENTER     */
+    {"/center", NULL, 0, TFLG_END},	/*  39 HTML_N_CENTER   */
+    {"font", ALST_NOP, MAXA_NOP, 0},	/*  40 HTML_FONT       */
+    {"/font", NULL, 0, TFLG_END},	/*  41 HTML_N_FONT     */
+    {"form", ALST_FORM, MAXA_FORM, 0},	/*  42 HTML_FORM       */
+    {"/form", NULL, 0, TFLG_END},	/*  43 HTML_N_FORM     */
+    {"input", ALST_INPUT, MAXA_INPUT, 0},	/*  44 HTML_INPUT      */
+    {"textarea", ALST_TEXTAREA, MAXA_TEXTAREA, 0},	/*  45 HTML_TEXTAREA   */
+    {"/textarea", NULL, 0, TFLG_END},	/*  46 HTML_N_TEXTAREA */
+    {"select", ALST_SELECT, MAXA_SELECT, 0},	/*  47 HTML_SELECT     */
+    {"/select", NULL, 0, TFLG_END},	/*  48 HTML_N_SELECT   */
+    {"option", ALST_OPTION, MAXA_OPTION, 0},	/*  49 HTML_OPTION     */
+    {"nobr", ALST_NOP, MAXA_NOP, 0},	/*  50 HTML_NOBR       */
+    {"/nobr", NULL, 0, TFLG_END},	/*  51 HTML_N_NOBR     */
+    {"div", ALST_P, MAXA_P, 0},	/*  52 HTML_DIV        */
+    {"/div", NULL, 0, TFLG_END},	/*  53 HTML_N_DIV      */
+    {"isindex", ALST_ISINDEX, MAXA_ISINDEX, 0},	/*  54 HTML_ISINDEX    */
+    {"map", ALST_MAP, MAXA_MAP, 0},	/*  55 HTML_MAP        */
+    {"/map", NULL, 0, TFLG_END},	/*  56 HTML_N_MAP      */
+    {"area", ALST_AREA, MAXA_AREA, 0},	/*  57 HTML_AREA       */
+    {"script", ALST_NOP, MAXA_NOP, 0},	/*  58 HTML_SCRIPT     */
+    {"/script", NULL, 0, TFLG_END},	/*  59 HTML_N_SCRIPT   */
+    {"base", ALST_BASE, MAXA_BASE, 0},	/*  60 HTML_BASE       */
+    {"del", ALST_NOP, MAXA_NOP, 0},	/*  61 HTML_DEL        */
+    {"/del", NULL, 0, TFLG_END},	/*  62 HTML_N_DEL      */
+    {"ins", ALST_NOP, MAXA_NOP, 0},	/*  63 HTML_INS        */
+    {"/ins", NULL, 0, TFLG_END},	/*  64 HTML_N_INS      */
+    {"u", ALST_NOP, MAXA_NOP, 0},		/*  65 HTML_U          */
+    {"/u", NULL, 0, TFLG_END},	/*  66 HTML_N_U        */
+    {"style", ALST_NOP, MAXA_NOP, 0},	/*  67 HTML_STYLE      */
+    {"/style", NULL, 0, TFLG_END},	/*  68 HTML_N_STYLE    */
+    {"wbr", ALST_NOP, MAXA_NOP, 0},	/*  69 HTML_WBR        */
+    {"em", ALST_NOP, MAXA_NOP, 0},		/*  70 HTML_EM         */
+    {"/em", NULL, 0, TFLG_END},	/*  71 HTML_N_EM       */
+    {"body", ALST_BODY, MAXA_BODY, 0},	/*  72 HTML_BODY       */
+    {"/body", NULL, 0, TFLG_END},	/*  73 HTML_N_BODY     */
+    {"tr", ALST_TR, MAXA_TR, 0},	/*  74 HTML_TR         */
+    {"/tr", NULL, 0, TFLG_END},	/*  75 HTML_N_TR       */
+    {"td", ALST_TD, MAXA_TD, 0},	/*  76 HTML_TD         */
+    {"/td", NULL, 0, TFLG_END},	/*  77 HTML_N_TD       */
+    {"caption", ALST_NOP, MAXA_NOP, 0},	/*  78 HTML_CAPTION    */
+    {"/caption", NULL, 0, TFLG_END},	/*  79 HTML_N_CAPTION  */
+    {"th", ALST_TD, MAXA_TD, 0},	/*  80 HTML_TH         */
+    {"/th", NULL, 0, TFLG_END},	/*  81 HTML_N_TH       */
+    {"thead", ALST_NOP, MAXA_NOP, 0},	/*  82 HTML_THEAD      */
+    {"/thead", NULL, 0, TFLG_END},	/*  83 HTML_N_THEAD    */
+    {"tbody", ALST_NOP, MAXA_NOP, 0},	/*  84 HTML_TBODY      */
+    {"/tbody", NULL, 0, TFLG_END},	/*  85 HTML_N_TBODY    */
+    {"tfoot", ALST_NOP, MAXA_NOP, 0},	/*  86 HTML_TFOOT      */
+    {"/tfoot", NULL, 0, TFLG_END},	/*  87 HTML_N_TFOOT    */
+    {"colgroup", ALST_NOP, MAXA_NOP, 0},	/*  88 HTML_COLGROUP   */
+    {"/colgroup", NULL, 0, TFLG_END},	/*  89 HTML_N_COLGROUP */
+    {"col", ALST_NOP, MAXA_NOP, 0},	/*  90 HTML_COL        */
+    {"bgsound", ALST_BGSOUND, MAX_BGSOUND, 0},	/*  91 HTML_BGSOUND    */
+    {"applet", ALST_APPLET, MAX_APPLET, 0},	/*  92 HTML_APPLET     */
+    {"embed", ALST_EMBED, MAX_EMBED, 0},	/*  93 HTML_EMBED      */
+    {"/option", NULL, 0, TFLG_END},	/*  94 HTML_N_OPTION   */
+    {"head", ALST_NOP, MAXA_NOP, 0},	/*  95 HTML_HEAD       */
+    {"/head", NULL, 0, TFLG_END},	/*  96 HTML_N_HEAD     */
+    {"doctype", ALST_NOP, MAXA_NOP, 0},	/*  97 HTML_DOCTYPE    */
+    {"noframes", ALST_NOFRAMES, MAXA_NOFRAMES, 0},	/*  98 HTML_NOFRAMES   */
+    {"/noframes", NULL, 0, TFLG_END},	/*  99 HTML_N_NOFRAMES */
+
+    {"sup", ALST_NOP, MAXA_NOP, 0},	/* 100 HTML_SUP       */
+    {"/sup", NULL, 0, 0},	/* 101 HTML_N_SUP       */
+    /* FIXME: Should /sup and /sub have TFLG_END ? */
+    {"sub", ALST_NOP, MAXA_NOP, 0},	/* 102 HTML_SUB       */
+    {"/sub", NULL, 0, 0},	/* 103 HTML_N_SUB       */
+    {"link", ALST_LINK, MAXA_LINK, 0},	/*  104 HTML_LINK      */
+    {"s", ALST_NOP, MAXA_NOP, 0},		/*  105 HTML_S        */
+    {"/s", NULL, 0, TFLG_END},	/*  106 HTML_N_S      */
+    {"q", ALST_NOP, MAXA_NOP, 0},		/*  107 HTML_Q */
+    {"/q", NULL, 0, TFLG_END},	/*  108 HTML_N_Q */
+    {"i", ALST_NOP, MAXA_NOP, 0},	/*  109 HTML_I */
+    {"/i", NULL, 0, TFLG_END},	/*  110 HTML_N_I */
+    {"strong", ALST_NOP, MAXA_NOP, 0},	/* 111 HTML_STRONG */
+    {"/strong", NULL, 0, TFLG_END},	/* 112 HTML_N_STRONG */
+    {"span", ALST_NOP, MAXA_NOP, 0},	/* 113 HTML_SPAN       */
+    {"/span", NULL, 0, TFLG_END},	/* 114 HTML_N_SPAN     */
+    {"abbr", ALST_NOP, MAXA_NOP, 0},		/* 115 HTML_ABBR */
+    {"/abbr", NULL, 0, TFLG_END},	/* 116 HTML_N_ABBR */
+    {"acronym", ALST_NOP, MAXA_NOP, 0},		/* 117 HTML_ACRONYM */
+    {"/acronym", NULL, 0, TFLG_END},	/* 118 HTML_N_ACRONYM */
+    {"basefont", ALST_NOP, MAXA_NOP, 0},	        /* 119 HTML_BASEFONT */
+    {"bdo", ALST_NOP, MAXA_NOP, 0}, 		/* 120 HTML_BDO */
+    {"/bdo", NULL, 0, TFLG_END},	/* 121 HTML_N_BDO */
+    {"big", ALST_NOP, MAXA_NOP, 0},		/* 122 HTML_BIG */
+    {"/big", NULL, 0, TFLG_END},	/* 123 HTML_N_BIG */
+    {"button", ALST_NOP, MAXA_NOP, 0},		/* 124 HTML_BUTTON */
+    {"fieldset", ALST_NOP, MAXA_NOP, 0},	        /* 125 HTML_FIELDSET */
+    {"/fieldset", NULL, 0, TFLG_END},	/* 126 HTML_N_FIELDSET */
+    {"iframe", ALST_NOP, MAXA_NOP, 0},		/* 127 HTML_IFRAME */
+    {"label", ALST_NOP, MAXA_NOP, 0}, 		/* 128 HTML_LABEL */
+    {"/label", NULL, 0, TFLG_END},	/* 129 HTML_N_LABEL */
+    {"legend", ALST_NOP, MAXA_NOP, 0},		/* 130 HTML_LEGEND */
+    {"/legend", NULL, 0, TFLG_END},	/* 131 HTML_N_LEGEND */
+    {"noscript", ALST_NOP, MAXA_NOP, 0},	        /* 132 HTML_NOSCRIPT */
+    {"/noscript", NULL, 0, TFLG_END},	/* 133 HTML_N_NOSCRIPT */
+    {"object", ALST_NOP, MAXA_NOP, 0},		/* 134 HTML_OBJECT */
+    {"optgroup", ALST_NOP, MAXA_NOP, 0},	        /* 135 HTML_OPTGROUP */
+    {"/optgroup", NULL, 0, TFLG_END},	/* 136 HTML_N_OPTGROUP */
+    {"param", ALST_NOP, MAXA_NOP, 0},		/* 137 HTML_PARAM */
+    {"small", ALST_NOP, MAXA_NOP, 0}, 		/* 138 HTML_SMALL */
+    {"/small", NULL, 0, TFLG_END},	/* 139 HTML_N_SMALL */
+
+    {NULL, NULL, 0, 0},		/* 140 Undefined */
+    {NULL, NULL, 0, 0},		/* 141 Undefined */
+    {NULL, NULL, 0, 0},		/* 142 Undefined */
+    {NULL, NULL, 0, 0},		/* 143 Undefined */
+    {NULL, NULL, 0, 0},		/* 144 Undefined */
+    {NULL, NULL, 0, 0},		/* 145 Undefined */
+    {NULL, NULL, 0, 0},		/* 146 Undefined */
+    {NULL, NULL, 0, 0},		/* 147 Undefined */
+    {NULL, NULL, 0, 0},		/* 148 Undefined */
+    {NULL, NULL, 0, 0},		/* 149 Undefined */
+    {NULL, NULL, 0, 0},		/* 150 Undefined */
+    {NULL, NULL, 0, 0},		/* 151 Undefined */
+    {NULL, NULL, 0, 0},		/* 152 Undefined */
+    {NULL, NULL, 0, 0},		/* 153 Undefined */
+    {NULL, NULL, 0, 0},		/* 154 Undefined */
+    {NULL, NULL, 0, 0},		/* 155 Undefined */
+    {NULL, NULL, 0, 0},		/* 156 Undefined */
+    {NULL, NULL, 0, 0},		/* 157 Undefined */
+    {NULL, NULL, 0, 0},		/* 158 Undefined */
+    {NULL, NULL, 0, 0},		/* 159 Undefined */
+
+    /* pseudo tag */
+    {"select_int", ALST_SELECT_INT, MAXA_SELECT_INT, TFLG_INT},	/* 160 HTML_SELECT_INT   */
+    {"/select_int", NULL, 0, TFLG_INT | TFLG_END},	/* 161 HTML_N_SELECT_INT */
+    {"option_int", ALST_OPTION, MAXA_OPTION, TFLG_INT},	/* 162 HTML_OPTION_INT   */
+    {"textarea_int", ALST_TEXTAREA_INT, MAXA_TEXTAREA_INT, TFLG_INT},	/* 163 HTML_TEXTAREA_INT   */
+    {"/textarea_int", NULL, 0, TFLG_INT | TFLG_END},	/* 164 HTML_N_TEXTAREA_INT */
+    {"table_alt", ALST_TABLE_ALT, MAXA_TABLE_ALT, TFLG_INT},	/* 165 HTML_TABLE_ALT   */
+    {"symbol", ALST_SYMBOL, MAXA_SYMBOL, TFLG_INT},	/* 166 HTML_SYMBOL */
+    {"/symbol", NULL, 0, TFLG_INT | TFLG_END},	/* 167 HTML_N_SYMBOL      */
+    {"pre_int", NULL, 0, TFLG_INT},	/* 168 HTML_PRE_INT     */
+    {"/pre_int", NULL, 0, TFLG_INT | TFLG_END},	/* 169 HTML_N_PRE_INT   */
+    {"title_alt", ALST_TITLE_ALT, MAXA_TITLE_ALT, TFLG_INT},	/* 170 HTML_TITLE_ALT   */
+    {"form_int", ALST_FORM_INT, MAXA_FORM_INT, TFLG_INT},	/* 171 HTML_FORM_INT    */
+    {"/form_int", NULL, 0, TFLG_INT | TFLG_END},	/* 172 HTML_N_FORM_INT  */
+    {"dl_compact", NULL, 0, TFLG_INT},	/* 173 HTML_DL_COMPACT  */
+    {"input_alt", ALST_INPUT_ALT, MAXA_INPUT_ALT, TFLG_INT},	/* 174 HTML_INPUT_ALT   */
+    {"/input_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 175 HTML_N_INPUT_ALT */
+    {"img_alt", ALST_IMG_ALT, MAXA_IMG_ALT, TFLG_INT},	/* 176 HTML_IMG_ALT     */
+    {"/img_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 177 HTML_N_IMG_ALT   */
+    {" ", ALST_NOP, MAXA_NOP, TFLG_INT},	/* 178 HTML_NOP         */
+    {"pre_plain", NULL, 0, TFLG_INT},	/* 179 HTML_PRE_PLAIN         */
+    {"/pre_plain", NULL, 0, TFLG_INT | TFLG_END},	/* 180 HTML_N_PRE_PLAIN         */
+    {"internal", NULL, 0, TFLG_INT},	/* 181 HTML_INTERNAL   */
+    {"/internal", NULL, 0, TFLG_INT | TFLG_END},	/* 182 HTML_N_INTERNAL   */
+    {"div_int", ALST_P, MAXA_P, TFLG_INT},	/*  183 HTML_DIV_INT    */
+    {"/div_int", NULL, 0, TFLG_INT | TFLG_END},	/*  184 HTML_N_DIV_INT  */
+};
+
+TagAttrInfo AttrMAP[MAX_TAGATTR] = {
+    {NULL, VTYPE_NONE, 0},	/*  0 ATTR_UNKNOWN        */
+    {"accept", VTYPE_NONE, 0},	/*  1 ATTR_ACCEPT         */
+    {"accept-charset", VTYPE_STR, 0},	/*  2 ATTR_ACCEPT_CHARSET */
+    {"action", VTYPE_ACTION, 0},	/*  3 ATTR_ACTION         */
+    {"align", VTYPE_ALIGN, 0},	/*  4 ATTR_ALIGN          */
+    {"alt", VTYPE_STR, 0},	/*  5 ATTR_ALT            */
+    {"archive", VTYPE_STR, 0},	/*  6 ATTR_ARCHIVE        */
+    {"background", VTYPE_STR, 0},	/*  7 ATTR_BACKGROUND     */
+    {"border", VTYPE_NUMBER, 0},	/*  8 ATTR_BORDER         */
+    {"cellpadding", VTYPE_NUMBER, 0},	/*  9 ATTR_CELLPADDING    */
+    {"cellspacing", VTYPE_NUMBER, 0},	/* 10 ATTR_CELLSPACING    */
+    {"charset", VTYPE_STR, 0},	/* 11 ATTR_CHARSET        */
+    {"checked", VTYPE_NONE, 0},	/* 12 ATTR_CHECKED        */
+    {"cols", VTYPE_MLENGTH, 0},	/* 13 ATTR_COLS           */
+    {"colspan", VTYPE_NUMBER, 0},	/* 14 ATTR_COLSPAN        */
+    {"content", VTYPE_STR, 0},	/* 15 ATTR_CONTENT        */
+    {"enctype", VTYPE_ENCTYPE, 0},	/* 16 ATTR_ENCTYPE        */
+    {"height", VTYPE_LENGTH, 0},	/* 17 ATTR_HEIGHT         */
+    {"href", VTYPE_STR, 0},	/* 18 ATTR_HREF           */
+    {"http-equiv", VTYPE_STR, 0},	/* 19 ATTR_HTTP_EQUIV     */
+    {"id", VTYPE_STR, 0},	/* 20 ATTR_ID             */
+    {"link", VTYPE_STR, 0},	/* 21 ATTR_LINK           */
+    {"maxlength", VTYPE_NUMBER, 0},	/* 22 ATTR_MAXLENGTH      */
+    {"method", VTYPE_METHOD, 0},	/* 23 ATTR_METHOD         */
+    {"multiple", VTYPE_NONE, 0},	/* 24 ATTR_MULTIPLE       */
+    {"name", VTYPE_STR, 0},	/* 25 ATTR_NAME           */
+    {"nowrap", VTYPE_NONE, 0},	/* 26 ATTR_NOWRAP         */
+    {"prompt", VTYPE_STR, 0},	/* 27 ATTR_PROMPT         */
+    {"rows", VTYPE_MLENGTH, 0},	/* 28 ATTR_ROWS           */
+    {"rowspan", VTYPE_NUMBER, 0},	/* 29 ATTR_ROWSPAN        */
+    {"size", VTYPE_NUMBER, 0},	/* 30 ATTR_SIZE           */
+    {"src", VTYPE_STR, 0},	/* 31 ATTR_SRC            */
+    {"target", VTYPE_STR, 0},	/* 32 ATTR_TARGET         */
+    {"type", VTYPE_TYPE, 0},	/* 33 ATTR_TYPE           */
+    {"usemap", VTYPE_STR, 0},	/* 34 ATTR_USEMAP         */
+    {"valign", VTYPE_VALIGN, 0},	/* 35 ATTR_VALIGN         */
+    {"value", VTYPE_STR, 0},	/* 36 ATTR_VALUE          */
+    {"vspace", VTYPE_NUMBER, 0},	/* 37 ATTR_VSPACE         */
+    {"width", VTYPE_LENGTH, 0},	/* 38 ATTR_WIDTH          */
+    {"compact", VTYPE_NONE, 0},	/* 39 ATTR_COMPACT        */
+    {"start", VTYPE_NUMBER, 0},	/* 40 ATTR_START          */
+    {"selected", VTYPE_NONE, 0},	/* 41 ATTR_SELECTED       */
+    {"label", VTYPE_STR, 0},	/* 42 ATTR_LABEL          */
+    {"readonly", VTYPE_NONE, 0},	/* 43 ATTR_READONLY       */
+    {"shape", VTYPE_STR, 0},	/* 44 ATTR_SHAPE          */
+    {"coords", VTYPE_STR, 0},	/* 45 ATTR_COORDS         */
+    {"ismap", VTYPE_NONE, 0},	/* 46 ATTR_ISMAP          */
+    {"rel", VTYPE_STR, 0},	/* 47 ATTR_REL            */
+    {"rev", VTYPE_STR, 0},	/* 48 ATTR_REV            */
+    {"title", VTYPE_STR, 0},	/* 49 ATTR_TITLE          */
+    {"accesskey", VTYPE_STR, 0},	/* 50 ATTR_ACCESSKEY          */
+    {NULL, VTYPE_NONE, 0},	/* 51 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 52 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 53 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 54 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 55 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 56 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 57 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 58 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 59 Undefined           */
+
+    /* Internal attribute */
+    {"xoffset", VTYPE_NUMBER, AFLG_INT},	/* 60 ATTR_XOFFSET        */
+    {"yoffset", VTYPE_NUMBER, AFLG_INT},	/* 61 ATTR_YOFFSET        */
+    {"top_margin", VTYPE_NUMBER, AFLG_INT},	/* 62 ATTR_TOP_MARGIN,    */
+    {"bottom_margin", VTYPE_NUMBER, AFLG_INT},	/* 63 ATTR_BOTTOM_MARGIN, */
+    {"tid", VTYPE_NUMBER, AFLG_INT},	/* 64 ATTR_TID            */
+    {"fid", VTYPE_NUMBER, AFLG_INT},	/* 65 ATTR_FID            */
+    {"for_table", VTYPE_NONE, AFLG_INT},	/* 66 ATTR_FOR_TABLE      */
+    {"framename", VTYPE_STR, AFLG_INT},	/* 67 ATTR_FRAMENAME      */
+    {"hborder", VTYPE_NONE, 0},	/* 68 ATTR_HBORDER        */
+    {"hseq", VTYPE_NUMBER, AFLG_INT},	/* 69 ATTR_HSEQ           */
+    {"no_effect", VTYPE_NONE, AFLG_INT},	/* 70 ATTR_NO_EFFECT      */
+    {"referer", VTYPE_STR, AFLG_INT},	/* 71 ATTR_REFERER        */
+    {"selectnumber", VTYPE_NUMBER, AFLG_INT},	/* 72 ATTR_SELECTNUMBER   */
+    {"textareanumber", VTYPE_NUMBER, AFLG_INT},	/* 73 ATTR_TEXTAREANUMBER */
+    {"pre_int", VTYPE_NONE, AFLG_INT},	/* 74 ATTR_PRE_INT      */
+};
+@
+
+
+1.32
+log
+@All elements have the id attribute.
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.31 2010/08/12 08:56:14 htrb Exp $ */
+d40 2
+a41 2
+unsigned char ALST_META[] = { ATTR_HTTP_EQUIV, ATTR_CONTENT, ATTR_CORE };
+#define MAXA_META	MAXA_CORE + 2
+@
+
+
+1.31
+log
+@Support id attr on span etc
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.30 2007/04/19 12:00:38 inu Exp $ */
+d130 2
+a131 2
+    {"br", ALST_NOP, MAXA_CORE, 0},		/*   6 HTML_BR         */
+    {"b", ALST_NOP, MAXA_CORE, 0},	/*   7 HTML_B          */
+d138 1
+a138 1
+    {"title", NULL, 0, 0},	/*  14 HTML_TITLE      */
+d150 1
+a150 1
+    {"listing", ALST_NOP, MAXA_CORE, 0},	/*  26 HTML_LISTING    */
+d152 1
+a152 1
+    {"xmp", NULL, 0, 0},	/*  28 HTML_XMP        */
+d154 1
+a154 1
+    {"plaintext", NULL, 0, 0},	/*  30 HTML_PLAINTEXT  */
+d162 1
+a162 1
+    {"center", ALST_NOP, MAXA_CORE, 0},	/*  38 HTML_CENTER     */
+d164 1
+a164 1
+    {"font", ALST_NOP, MAXA_CORE, 0},	/*  40 HTML_FONT       */
+d174 1
+a174 1
+    {"nobr", ALST_NOP, MAXA_CORE, 0},	/*  50 HTML_NOBR       */
+d182 1
+a182 1
+    {"script", NULL, 0, 0},	/*  58 HTML_SCRIPT     */
+d185 1
+a185 1
+    {"del", ALST_NOP, MAXA_CORE, 0},	/*  61 HTML_DEL        */
+d187 1
+a187 1
+    {"ins", ALST_NOP, MAXA_CORE, 0},	/*  63 HTML_INS        */
+d189 1
+a189 1
+    {"u", ALST_NOP, MAXA_CORE, 0},		/*  65 HTML_U          */
+d191 1
+a191 1
+    {"style", NULL, 0, 0},	/*  67 HTML_STYLE      */
+d193 2
+a194 2
+    {"wbr", NULL, 0, 0},	/*  69 HTML_WBR        */
+    {"em", ALST_NOP, MAXA_CORE, 0},		/*  70 HTML_EM         */
+d206 1
+a206 1
+    {"thead", NULL, 0, 0},	/*  82 HTML_THEAD      */
+d208 1
+a208 1
+    {"tbody", NULL, 0, 0},	/*  84 HTML_TBODY      */
+d210 1
+a210 1
+    {"tfoot", NULL, 0, 0},	/*  86 HTML_TFOOT      */
+d212 1
+a212 1
+    {"colgroup", NULL, 0, 0},	/*  88 HTML_COLGROUP   */
+d214 1
+a214 1
+    {"col", NULL, 0, 0},	/*  90 HTML_COL        */
+d219 1
+a219 1
+    {"head", NULL, 0, 0},	/*  95 HTML_HEAD       */
+d221 1
+a221 1
+    {"doctype", NULL, 0, 0},	/*  97 HTML_DOCTYPE    */
+d225 1
+a225 1
+    {"sup", ALST_NOP, MAXA_CORE, 0},	/* 100 HTML_SUP       */
+d228 1
+a228 1
+    {"sub", ALST_NOP, MAXA_CORE, 0},	/* 102 HTML_SUB       */
+d231 1
+a231 1
+    {"s", ALST_NOP, MAXA_CORE, 0},		/*  105 HTML_S        */
+d233 1
+a233 1
+    {"q", ALST_NOP, MAXA_CORE, 0},		/*  107 HTML_Q */
+d235 1
+a235 1
+    {"i", ALST_NOP, MAXA_CORE, 0},	/*  109 HTML_I */
+d237 1
+a237 1
+    {"strong", ALST_NOP, MAXA_CORE, 0},	/* 111 HTML_STRONG */
+d239 1
+a239 1
+    {"span", ALST_NOP, MAXA_CORE, 0},	/* 113 HTML_SPAN       */
+d241 46
+a286 5
+    {NULL, NULL, 0, 0},		/* 115 Undefined       */
+    {NULL, NULL, 0, 0},		/* 116 Undefined       */
+    {NULL, NULL, 0, 0},		/* 117 Undefined       */
+    {NULL, NULL, 0, 0},		/* 118 Undefined       */
+    {NULL, NULL, 0, 0},		/* 119 Undefined       */
+d289 25
+a313 25
+    {"select_int", ALST_SELECT_INT, MAXA_SELECT_INT, TFLG_INT},	/* 120 HTML_SELECT_INT   */
+    {"/select_int", NULL, 0, TFLG_INT | TFLG_END},	/* 121 HTML_N_SELECT_INT */
+    {"option_int", ALST_OPTION, MAXA_OPTION, TFLG_INT},	/* 122 HTML_OPTION_INT   */
+    {"textarea_int", ALST_TEXTAREA_INT, MAXA_TEXTAREA_INT, TFLG_INT},	/* 123 HTML_TEXTAREA_INT   */
+    {"/textarea_int", NULL, 0, TFLG_INT | TFLG_END},	/* 124 HTML_N_TEXTAREA_INT */
+    {"table_alt", ALST_TABLE_ALT, MAXA_TABLE_ALT, TFLG_INT},	/* 125 HTML_TABLE_ALT   */
+    {"symbol", ALST_SYMBOL, MAXA_SYMBOL, TFLG_INT},	/* 126 HTML_SYMBOL */
+    {"/symbol", NULL, 0, TFLG_INT | TFLG_END},	/* 127 HTML_N_SYMBOL      */
+    {"pre_int", NULL, 0, TFLG_INT},	/* 128 HTML_PRE_INT     */
+    {"/pre_int", NULL, 0, TFLG_INT | TFLG_END},	/* 129 HTML_N_PRE_INT   */
+    {"title_alt", ALST_TITLE_ALT, MAXA_TITLE_ALT, TFLG_INT},	/* 130 HTML_TITLE_ALT   */
+    {"form_int", ALST_FORM_INT, MAXA_FORM_INT, TFLG_INT},	/* 131 HTML_FORM_INT    */
+    {"/form_int", NULL, 0, TFLG_INT | TFLG_END},	/* 132 HTML_N_FORM_INT  */
+    {"dl_compact", NULL, 0, TFLG_INT},	/* 133 HTML_DL_COMPACT  */
+    {"input_alt", ALST_INPUT_ALT, MAXA_INPUT_ALT, TFLG_INT},	/* 134 HTML_INPUT_ALT   */
+    {"/input_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 135 HTML_N_INPUT_ALT */
+    {"img_alt", ALST_IMG_ALT, MAXA_IMG_ALT, TFLG_INT},	/* 136 HTML_IMG_ALT     */
+    {"/img_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 137 HTML_N_IMG_ALT   */
+    {" ", ALST_NOP, MAXA_NOP, TFLG_INT},	/* 138 HTML_NOP         */
+    {"pre_plain", NULL, 0, TFLG_INT},	/* 139 HTML_PRE_PLAIN         */
+    {"/pre_plain", NULL, 0, TFLG_INT | TFLG_END},	/* 140 HTML_N_PRE_PLAIN         */
+    {"internal", NULL, 0, TFLG_INT},	/* 141 HTML_INTERNAL   */
+    {"/internal", NULL, 0, TFLG_INT | TFLG_END},	/* 142 HTML_N_INTERNAL   */
+    {"div_int", ALST_P, MAXA_P, TFLG_INT},	/*  143 HTML_DIV_INT    */
+    {"/div_int", NULL, 0, TFLG_INT | TFLG_END},	/*  144 HTML_N_DIV_INT  */
+@
+
+
+1.30
+log
+@avoid conflicts between input_alt and img_alt, and fix calculation of labeled line numbers when fold_line=1. [w3m-dev 04211]
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.29 2006/12/10 11:06:12 inu Exp $ */
+d130 2
+a131 2
+    {"br", NULL, 0, 0},		/*   6 HTML_BR         */
+    {"b", NULL, 0, 0},		/*   7 HTML_B          */
+d150 1
+a150 1
+    {"listing", NULL, 0, 0},	/*  26 HTML_LISTING    */
+d162 1
+a162 1
+    {"center", NULL, 0, 0},	/*  38 HTML_CENTER     */
+d164 1
+a164 1
+    {"font", NULL, 0, 0},	/*  40 HTML_FONT       */
+d174 1
+a174 1
+    {"nobr", NULL, 0, 0},	/*  50 HTML_NOBR       */
+d185 1
+a185 1
+    {"del", NULL, 0, 0},	/*  61 HTML_DEL        */
+d187 1
+a187 1
+    {"ins", NULL, 0, 0},	/*  63 HTML_INS        */
+d189 1
+a189 1
+    {"u", NULL, 0, 0},		/*  65 HTML_U          */
+d194 1
+a194 1
+    {"em", NULL, 0, 0},		/*  70 HTML_EM         */
+d225 1
+a225 1
+    {"sup", NULL, 0, 0},	/* 100 HTML_SUP       */
+d227 2
+a228 1
+    {"sub", NULL, 0, 0},	/* 102 HTML_SUB       */
+d231 1
+a231 1
+    {"s", NULL, 0, 0},		/*  105 HTML_S        */
+d233 1
+a233 1
+    {"q", NULL, 0, 0},		/*  107 HTML_Q */
+d235 1
+a235 1
+    {"i", NULL, 0, 0},		/*  109 HTML_I */
+d237 1
+a237 1
+    {"strong", NULL, 0, 0},		/* 111 HTML_STRONG */
+d239 2
+a240 2
+    {NULL, NULL, 0, 0},		/* 113 Undefined       */
+    {NULL, NULL, 0, 0},		/* 114 Undefined       */
+@
+
+
+1.29
+log
+@[w3m-dev 04185] display <em> and <i> elements with bold letters.
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.28 2003/09/26 20:48:21 ukai Exp $ */
+d32 1
+a32 1
+    ATTR_ISMAP, ATTR_TITLE, ATTR_CORE
+d34 1
+a34 1
+#define MAXA_IMG	MAXA_CORE + 8
+d351 1
+@
+
+
+1.28
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.27 2003/09/24 18:48:59 ukai Exp $ */
+d234 11
+a244 1
+    {NULL, NULL, 0, 0},		/* 109 Undefined       */
+d247 25
+a271 25
+    {"select_int", ALST_SELECT_INT, MAXA_SELECT_INT, TFLG_INT},	/* 110 HTML_SELECT_INT   */
+    {"/select_int", NULL, 0, TFLG_INT | TFLG_END},	/* 111 HTML_N_SELECT_INT */
+    {"option_int", ALST_OPTION, MAXA_OPTION, TFLG_INT},	/* 112 HTML_OPTION_INT   */
+    {"textarea_int", ALST_TEXTAREA_INT, MAXA_TEXTAREA_INT, TFLG_INT},	/* 113 HTML_TEXTAREA_INT   */
+    {"/textarea_int", NULL, 0, TFLG_INT | TFLG_END},	/* 114 HTML_N_TEXTAREA_INT */
+    {"table_alt", ALST_TABLE_ALT, MAXA_TABLE_ALT, TFLG_INT},	/* 115 HTML_TABLE_ALT   */
+    {"symbol", ALST_SYMBOL, MAXA_SYMBOL, TFLG_INT},	/* 116 HTML_SYMBOL */
+    {"/symbol", NULL, 0, TFLG_INT | TFLG_END},	/* 117 HTML_N_SYMBOL      */
+    {"pre_int", NULL, 0, TFLG_INT},	/* 118 HTML_PRE_INT     */
+    {"/pre_int", NULL, 0, TFLG_INT | TFLG_END},	/* 119 HTML_N_PRE_INT   */
+    {"title_alt", ALST_TITLE_ALT, MAXA_TITLE_ALT, TFLG_INT},	/* 120 HTML_TITLE_ALT   */
+    {"form_int", ALST_FORM_INT, MAXA_FORM_INT, TFLG_INT},	/* 121 HTML_FORM_INT    */
+    {"/form_int", NULL, 0, TFLG_INT | TFLG_END},	/* 122 HTML_N_FORM_INT  */
+    {"dl_compact", NULL, 0, TFLG_INT},	/* 123 HTML_DL_COMPACT  */
+    {"input_alt", ALST_INPUT_ALT, MAXA_INPUT_ALT, TFLG_INT},	/* 124 HTML_INPUT_ALT   */
+    {"/input_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 125 HTML_N_INPUT_ALT */
+    {"img_alt", ALST_IMG_ALT, MAXA_IMG_ALT, TFLG_INT},	/* 126 HTML_IMG_ALT     */
+    {"/img_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 127 HTML_N_IMG_ALT   */
+    {" ", ALST_NOP, MAXA_NOP, TFLG_INT},	/* 128 HTML_NOP         */
+    {"pre_plain", NULL, 0, TFLG_INT},	/* 129 HTML_PRE_PLAIN         */
+    {"/pre_plain", NULL, 0, TFLG_INT | TFLG_END},	/* 130 HTML_N_PRE_PLAIN         */
+    {"internal", NULL, 0, TFLG_INT},	/* 131 HTML_INTERNAL   */
+    {"/internal", NULL, 0, TFLG_INT | TFLG_END},	/* 132 HTML_N_INTERNAL   */
+    {"div_int", ALST_P, MAXA_P, TFLG_INT},	/*  133 HTML_DIV_INT    */
+    {"/div_int", NULL, 0, TFLG_INT | TFLG_END},	/*  134 HTML_N_DIV_INT  */
+@
+
+
+1.27
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.26 2003/09/22 21:02:18 ukai Exp $ */
+d10 1
+a10 1
+	ATTR_REFERER,
+@
+
+
+1.26
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.25 2003/08/11 17:33:08 ukai Exp $ */
+d9 2
+a10 1
+    ATTR_NAME, ATTR_HREF, ATTR_REL, ATTR_CHARSET, ATTR_TARGET, ATTR_HSEQ, ATTR_REFERER,
+@
+
+
+1.25
+log
+@[w3m-dev 03950] rel attribute of anchor tag
+* html.c (ALST_A): add ATTR_REL
+	(MAXA_A): +1
+From: TSUCHIYA Masatoshi <tsuchiya@@pine.kuee.kyoto-u.ac.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.24 2003/06/18 16:18:43 ukai Exp $ */
+d97 2
+a98 2
+unsigned char ALST_RULE[] = { ATTR_TYPE };
+#define MAXA_RULE       1
+d242 2
+a243 2
+    {"rule", ALST_RULE, MAXA_RULE, TFLG_INT},	/* 116 HTML_RULE        */
+    {"/rule", NULL, 0, TFLG_INT | TFLG_END},	/* 117 HTML_N_RULE      */
+@
+
+
+1.24
+log
+@[w3m-dev 03916] Re: charset attribute of anchor tag
+ requested by TSUCHIYA Masatoshi <tsuchiya@@pine.kuee.kyoto-u.ac.jp>
+ for emacs-w3m
+* html.c (ALST_A): add ATTR_CHARSET
+	(MAXA_A): +1
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.23 2003/04/18 16:47:18 ukai Exp $ */
+d9 1
+a9 1
+    ATTR_NAME, ATTR_HREF, ATTR_CHARSET, ATTR_TARGET, ATTR_HSEQ, ATTR_REFERER,
+d12 1
+a12 1
+#define MAXA_A		MAXA_CORE + 9
+@
+
+
+1.23
+log
+@[w3m-dev 03882] Re: Bug#189460: w3m: <q> tag is not recognized
+* file.c (HTMLtagproc1): add HTML_Q, HTML_N_Q
+* html.c (TagMAP): add "q", "/q"
+* html.h (HTML_Q): added
+	(HTML_N_Q): added
+* tagtable.tab: add q, /q
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.22 2002/12/09 15:40:36 ukai Exp $ */
+d9 1
+a9 1
+    ATTR_NAME, ATTR_HREF, ATTR_TARGET, ATTR_HSEQ, ATTR_REFERER,
+d12 1
+a12 1
+#define MAXA_A		MAXA_CORE + 8
+@
+
+
+1.22
+log
+@[w3m-dev 03548] close anchor before <img align=...>
+* file.c (process_img): use div_int
+	(process_hr): use div_int
+	(process_idattr): don't close_anchor
+	(CLOSE_A): added
+	(HTMLtagproc1): </p> close anchor
+	  <dl>,<ul>,<ol>,<blockquote>,<li>,<dt>,<dd> close anchor
+	  <noframes> close anchor
+	  <pre> close anchor
+	  <center> close anchor
+	  <div> close anchor
+	  add DIV_INT
+	  <form> close anchor
+* html.c (TagMAP): add div_int
+* html.h (HTML_DIV_INT): added
+	(HTML_N_DIV_INT): added
+* tagtable.tab (div_int): added
+		(/div_int): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.21 2002/12/08 14:23:44 ukai Exp $ */
+d231 3
+a233 1
+    {NULL, NULL, 0, 0},		/* 107 Undefined       */
+d236 25
+a260 25
+    {"select_int", ALST_SELECT_INT, MAXA_SELECT_INT, TFLG_INT},	/* 108 HTML_SELECT_INT   */
+    {"/select_int", NULL, 0, TFLG_INT | TFLG_END},	/* 109 HTML_N_SELECT_INT */
+    {"option_int", ALST_OPTION, MAXA_OPTION, TFLG_INT},	/* 110 HTML_OPTION_INT   */
+    {"textarea_int", ALST_TEXTAREA_INT, MAXA_TEXTAREA_INT, TFLG_INT},	/* 111 HTML_TEXTAREA_INT   */
+    {"/textarea_int", NULL, 0, TFLG_INT | TFLG_END},	/* 112 HTML_N_TEXTAREA_INT */
+    {"table_alt", ALST_TABLE_ALT, MAXA_TABLE_ALT, TFLG_INT},	/* 113 HTML_TABLE_ALT   */
+    {"rule", ALST_RULE, MAXA_RULE, TFLG_INT},	/* 114 HTML_RULE        */
+    {"/rule", NULL, 0, TFLG_INT | TFLG_END},	/* 115 HTML_N_RULE      */
+    {"pre_int", NULL, 0, TFLG_INT},	/* 116 HTML_PRE_INT     */
+    {"/pre_int", NULL, 0, TFLG_INT | TFLG_END},	/* 117 HTML_N_PRE_INT   */
+    {"title_alt", ALST_TITLE_ALT, MAXA_TITLE_ALT, TFLG_INT},	/* 118 HTML_TITLE_ALT   */
+    {"form_int", ALST_FORM_INT, MAXA_FORM_INT, TFLG_INT},	/* 119 HTML_FORM_INT    */
+    {"/form_int", NULL, 0, TFLG_INT | TFLG_END},	/* 120 HTML_N_FORM_INT  */
+    {"dl_compact", NULL, 0, TFLG_INT},	/* 121 HTML_DL_COMPACT  */
+    {"input_alt", ALST_INPUT_ALT, MAXA_INPUT_ALT, TFLG_INT},	/* 122 HTML_INPUT_ALT   */
+    {"/input_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 123 HTML_N_INPUT_ALT */
+    {"img_alt", ALST_IMG_ALT, MAXA_IMG_ALT, TFLG_INT},	/* 124 HTML_IMG_ALT     */
+    {"/img_alt", NULL, 0, TFLG_INT | TFLG_END},	/* 125 HTML_N_IMG_ALT   */
+    {" ", ALST_NOP, MAXA_NOP, TFLG_INT},	/* 126 HTML_NOP         */
+    {"pre_plain", NULL, 0, TFLG_INT},	/* 127 HTML_PRE_PLAIN         */
+    {"/pre_plain", NULL, 0, TFLG_INT | TFLG_END},	/* 128 HTML_N_PRE_PLAIN         */
+    {"internal", NULL, 0, TFLG_INT},	/* 129 HTML_INTERNAL   */
+    {"/internal", NULL, 0, TFLG_INT | TFLG_END},	/* 130 HTML_N_INTERNAL   */
+    {"div_int", ALST_P, MAXA_P, TFLG_INT},	/*  131 HTML_DIV_INT    */
+    {"/div_int", NULL, 0, TFLG_INT | TFLG_END},	/*  132 HTML_N_DIV_INT  */
+@
+
+
+1.21
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.20 2002/12/06 16:50:19 ukai Exp $ */
+d257 2
+@
+
+
+1.20
+log
+@[w3m-dev 03536] <del>, <s>
+* file.c (HTMLtagproc1): <s>..</s> is [S:...:S]
+	(HTMLtagproc0): <del> will delete <table>
+* fm.h (RB_S): added
+* html.c (TagMAP): <s>,</s>
+		move <internal>, </internal>
+* html.h (HTML_S): added
+	(HTML_N_S): added
+	(HTML_INTERNAL): renumed
+	(HTML_N_INTERNAL): ditto
+	(MAX_HTMLTAG): add 2
+* rc.c (CMT_DISP_INS_DEL): update
+* table.c (feed_table_tag): add HTML_S, HTML_N_S
+* table.h (TBLM_S): added
+	(TBLM_ANCHOR): renum
+* tagtable.tab: (strike, s): HTML_S
+	(/strike, /s): HTML_N_S
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.19 2002/12/05 16:29:07 ukai Exp $ */
+d229 1
+a229 1
+    {"s", NULL, 0, 0},	/*  105 HTML_S        */
+@
+
+
+1.19
+log
+@[w3m-dev 03529] Support of title, accesskey of anchor
+* anchor.c (putAnchor): arg title, key
+			initialize slave
+	(registerHref): arg title, key
+	(registerName): title = NULL, key = '\0'
+	(registerForm): title = NULL, key = '\0'
+	(_put_anchor_news): title = NULL, key = '\0'
+	(_put_anchor_all): title = NULL, key = '\0'
+	(addMultirowsImg): register title, accesskey
+	(addMultirowsForm): title = NULL, key = '\0'
+	(getAnchorText): added
+* display.c (displayBuffer): show title if any
+* file.c (set_breakpoint): use bcopy
+	(back_to_breakpoint): use bcopy
+	(flushline): s/anchor/anchor.url/
+		     s/anchor_hseq/anchor.hseq/
+		     s/anchor_target/anchor.target/
+		     add anchor.*
+	(close_effect0): s/anchor/anchor.url/
+			s/anchor_hseq/anchor.hseq/
+	(close_anchor): use bzero
+	(process_img): ATTR_TITLE,
+	(HTMLtagproc1): s/anchor/anchor.url/
+			target, referer, title, accesskey, hseq
+	(HTMLlineproc2body): ATTR_TITLE, ATTR_ACCESSKEY
+	(init_henv): use bzero
+* fm.h (Anchor): add title, accesskey, slave
+	(Breakpoint): use Anchor
+	(struct readbuffer): use Anchor
+* funcname.tab (ACCESSKEY): added
+	(LINK_MENU): added
+* html.c (ALST_A): add ATTR_TITLE, ATTR_ACCESSKEY
+	(ALST_IMG): add ATTR_TITLE
+	(ALST_IMG_ALT): add ATTR_TITLE
+	(AttrMAP): add accesskey, renum
+* html.h (ATTR_ACCESSKEY): added
+	(ATTR_*): renum 50->60
+* main.c (linkMn): added
+	(accessKey): added
+* menu.c (LinkMenu): deleted
+	(LinkV): deleted
+	(initLinkMenu): deleted
+	(lmGoURL): deleted
+	(popupMenu): delete initLinkMenu()
+	(initMenu): delete Link
+	(link_menu): added
+	(accesskey_menu): added
+* proto.h (linkMn): added
+	(link_menu): added
+	(accessKey): added
+	(accesskey_menu): added
+	(putAnchor): arg title, key
+	(registerHref): arg title, key
+	(registerImg): arg title
+	(getAnchorText): added
+* doc/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* doc-jp/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* scripts/w3mhelp.cgi.in (Hyperlink operation): add linkMn accessKey
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.18 2002/12/03 15:35:10 ukai Exp $ */
+d229 3
+a231 1
+    {NULL, NULL, 0, 0},		/* 105 Undefined       */
+a233 2
+    {"internal", NULL, 0, TFLG_INT},	/* 106 HTML_INTERNAL   */
+    {"/internal", NULL, 0, TFLG_INT | TFLG_END},	/* 107 HTML_N_INTERNAL   */
+d255 2
+@
+
+
+1.18
+log
+@[w3m-dev 03509] HTML parser
+* file.c (close_textarea): delete
+	(HTMLtagproc1): rewrite
+			delete HTML_EOL
+			move HTML_LISTING, HTML_N_LISTING
+			add HTML_PRE_PLAIN, HTML_N_PRE_PLAIN
+			add HTML_PLAINTEXT
+			end_tag
+	(HTMLlineproc0): s/str/line/
+			rewrite
+	(completeHTMLstream): </textarea> if necessary
+* fm.h (struct readbuffer): delete ignore_tag
+			add end_tag
+	(RB_XMPMODE): deleted
+	(RB_LSTMODE): deleted
+	(RB_SCRIPT): added
+	(RB_STYLE): added
+	(RB_*): renumber
+	(R_ST_EOL): added
+	(R_ST_*): renumber
+	(ST_IS_TAG): check R_ST_EOL
+* form.c (form_fputs_decode): remove <eol> handling
+* frame.c (newFrame): remove_space()
+	(CASE_TABLE_TAG): added
+	(createFrameFile): rewrite
+* html.c (TagMAP): delete eol
+		add pre_plain, /pre_plain
+* html.h (HTML_EOL): deleted
+	(HTML_PRE_PLAIN): added
+	(HTML_N_PRE_PLAIN): added
+* table.c (visible_length): rewrite
+	(visible_length_plain): added
+	(maximum_visible_length_plain): added
+	(do_refill): R_ST_EOL
+	(table_close_select): end_tag
+	(table_close_textarea): end_tag
+	(TAG_ACTION_PLAIN): added
+	(feed_table_tag): rewrite
+	(feed_table): rewrite
+* table.h (TBLM_*) reassign
+	(struct table_mode): delete ignore_tag
+			add end_tag
+* tagtable.tab (eol): deleted
+		(pre_plain): added
+		(/pre_plain): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.17 2002/12/02 17:55:49 ukai Exp $ */
+d10 1
+a10 1
+    ATTR_FRAMENAME, ATTR_CORE
+d12 1
+a12 1
+#define MAXA_A		MAXA_CORE + 6
+d31 1
+a31 1
+    ATTR_ISMAP, ATTR_CORE
+d33 1
+a33 1
+#define MAXA_IMG	MAXA_CORE + 7
+d115 2
+a116 1
+    ATTR_XOFFSET, ATTR_YOFFSET, ATTR_TOP_MARGIN, ATTR_BOTTOM_MARGIN
+d118 1
+a118 1
+#define MAXA_IMG_ALT  10
+d308 10
+d320 14
+a333 14
+    {"xoffset", VTYPE_NUMBER, AFLG_INT},	/* 50 ATTR_XOFFSET        */
+    {"yoffset", VTYPE_NUMBER, AFLG_INT},	/* 51 ATTR_YOFFSET        */
+    {"top_margin", VTYPE_NUMBER, AFLG_INT},	/* 52 ATTR_TOP_MARGIN,    */
+    {"bottom_margin", VTYPE_NUMBER, AFLG_INT},	/* 53 ATTR_BOTTOM_MARGIN, */
+    {"tid", VTYPE_NUMBER, AFLG_INT},	/* 54 ATTR_TID            */
+    {"fid", VTYPE_NUMBER, AFLG_INT},	/* 55 ATTR_FID            */
+    {"for_table", VTYPE_NONE, AFLG_INT},	/* 56 ATTR_FOR_TABLE      */
+    {"framename", VTYPE_STR, AFLG_INT},	/* 57 ATTR_FRAMENAME      */
+    {"hborder", VTYPE_NONE, 0},	/* 58 ATTR_HBORDER        */
+    {"hseq", VTYPE_NUMBER, AFLG_INT},	/* 59 ATTR_HSEQ           */
+    {"no_effect", VTYPE_NONE, AFLG_INT},	/* 60 ATTR_NO_EFFECT      */
+    {"referer", VTYPE_STR, AFLG_INT},	/* 61 ATTR_REFERER        */
+    {"selectnumber", VTYPE_NUMBER, AFLG_INT},	/* 62 ATTR_SELECTNUMBER   */
+    {"textareanumber", VTYPE_NUMBER, AFLG_INT},	/* 63 ATTR_TEXTAREANUMBER */
+@
+
+
+1.17
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.16 2002/12/02 17:27:38 ukai Exp $ */
+d251 3
+a253 2
+    {"eol", NULL, 0, TFLG_INT},	/* 126 HTML_EOL         */
+    {" ", ALST_NOP, MAXA_NOP, TFLG_INT},	/* 127 HTML_NOP         */
+@
+
+
+1.16
+log
+@[w3m-dev 03501] link tag support
+* buffer.c (reshapeBuffer): initialize formlist, linklist,
+				maplist, hmarklist, imarklist
+* file.c (addLink): added
+	(HTMLlineproc2body): add HTML_LINK
+	(loadHTMLstream): use HTMLlineproc0 not in R_ST_NORMAL
+	(reloadBuffer): initialize linklist, maplist,
+			hmarklist, imarklist
+* fm.h (LINK_TYPE_NONE): added
+	(LINK_TYPE_REL): added
+	(LINK_TYPE_REV): added
+	(LinkList): added
+	(Buffer): add linklist
+* html.c (ALST_LINK): added
+	(TagMAP): add link
+	(AtrMAP): add rel, rev, title
+* html.h (HTML_LINK): added
+	(ATTR_REL): added
+	(ATTR_REV): added
+	(ATTR_TITLE): added
+* map.c (append_map_info): anchor
+	(append_link_info): added
+	(page_info_panel): append_link_info
+* menu.c (LinkMenu): added
+	(linkV): added
+	(initLinkMenu): added
+	(lmGoURL): added
+	(popupMenu): initLinkMenu()
+	(initMenu): w3mMenuList new 4
+			add "Link"
+* tagtable.tab (link): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.15 2002/11/05 17:10:05 ukai Exp $ */
+d22 2
+a23 1
+    ATTR_TITLE, ATTR_TYPE, ATTR_CORE };
+d227 1
+a227 1
+    {"link", ALST_LINK, MAXA_LINK, 0},  /*  104 HTML_LINK      */
+@
+
+
+1.15
+log
+@[w3m-dev 03372] tab browser
+* display.c (displayBuffer): add ny
+			rootY offset by tab
+			tab line
+	(cursorDown): offset rootY
+	(arrangeCursor): offset rootY
+* etc.c (columnSkip): offset rootY
+	(lineSkip): offset rootY
+	(currentLineSkip): offset rootY
+* file.c (HTMLlineproc2body): ATTR_TARGET
+* fm.h (MapArea): add target
+	(Buffer): add rootY
+	(TabBuffer): added
+	(Currentbuf): comment out
+	(Firstbuf): comment out
+	(CurrentTab): added
+	(FirstTab): added
+	(LastTab): added
+	(open_tab_blank): added
+	(close_tab_back): added
+	(nTab): added
+	(TabCols): added
+	(N_TAB): added
+	(Currentbuf): CurrentTab->currentBuffer
+	(Firstbuf): CurrentTab->firstBuffer
+* funcname.tab (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* html.c (ALST_AREA): add ATTR_TARGET
+* image.c (showImageProgress): offset rootY
+* main.c (_newT): added
+	(followTab): added
+	(moveTab): added
+	(check_target): added
+	(MAIN): init tab related values
+		buf => tab
+	(nscroll): offset rootY
+	(pgFore): offset rootY
+	(pgBack): offset rootY
+	(ctrCsrV): offset rootY
+	(_movD): offset rootY
+	(_movU): offset rootY
+	(_goLine): offset rootY
+	(_mark): offset rootY
+	(followA): check target
+	(_followForm): offset rootY
+	(drawAnchorCursor0): offset rootY
+	(drawAnchorCursor): offset rootY
+	(backBf): check close_tab_back
+	(follow_map): rewrite for tab, check target
+	(posTab): added
+	(process_mouse): tab operation
+			offset rootY
+	(deleteFiles): for all buffers in all tabs
+	(newTab): added
+	(newT): added
+	(numTab): added
+	(deleteTab): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(followTab): added
+	(tabA): added
+	(tabURL0): added
+	(tabURL): added
+	(tabrURL): added
+	(moveTab): added
+	(tabR): added
+	(tabL): added
+* map.c (follow_map_menu): return MapArea
+	(newMapArea): add target args
+* menu.c (SelTabMenu): added
+	(SelTabV): added
+	(initSelTabMenu): added
+	(smChTab): added
+	(smDelTab): added
+	(MainMenuItem): add Select Tab
+				on New Tab
+	(popupMenu): add initSelTabMenu()
+			offset rootY
+	(mainMn): offset rootY
+	(selMn): offset rootY
+	(initSelectMenu): offset rootY
+	(tabMn): added
+* proto.h (newT): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(tabA): added
+	(tabURL): added
+	(tabrURL): added
+	(tabR): added
+	(tabL): added
+	(newTab): added
+	(deleteTab): added
+	(follow_map_menu): return MapArea
+	(newMapArea): add target arg
+	(tabMn): added
+* rc.c (CMT_OPEN_TAB_BLANK): added
+	(CMT_CLOSE_TAB_BACK): added
+	(open_tab_blank): added
+	(close_tab_back): added
+* doc/README.func (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* doc-jp/README.func: ditto doc/README.func
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.14 2002/10/16 18:11:15 ukai Exp $ */
+d21 3
+d226 1
+a226 1
+    {NULL, NULL, 0, 0},		/* 104 Undefined       */
+d302 3
+a304 3
+
+    {NULL, VTYPE_NONE, 0},	/* 47 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 48 Undefined           */
+d307 14
+a320 15
+    {"xoffset", VTYPE_NUMBER, AFLG_INT},	/* 49 ATTR_XOFFSET        */
+    {"yoffset", VTYPE_NUMBER, AFLG_INT},	/* 50 ATTR_YOFFSET        */
+    {"top_margin", VTYPE_NUMBER, AFLG_INT},	/* 51 ATTR_TOP_MARGIN,    */
+    {"bottom_margin", VTYPE_NUMBER, AFLG_INT},	/* 52 ATTR_BOTTOM_MARGIN, */
+    {"tid", VTYPE_NUMBER, AFLG_INT},	/* 53 ATTR_TID            */
+    {"fid", VTYPE_NUMBER, AFLG_INT},	/* 54 ATTR_FID            */
+    {"for_table", VTYPE_NONE, AFLG_INT},	/* 55 ATTR_FOR_TABLE      */
+    {"framename", VTYPE_STR, AFLG_INT},	/* 56 ATTR_FRAMENAME      */
+    {"hborder", VTYPE_NONE, 0},	/* 57 ATTR_HBORDER        */
+    {"hseq", VTYPE_NUMBER, AFLG_INT},	/* 58 ATTR_HSEQ           */
+    {"no_effect", VTYPE_NONE, AFLG_INT},	/* 59 ATTR_NO_EFFECT      */
+    {"referer", VTYPE_STR, AFLG_INT},	/* 60 ATTR_REFERER        */
+    {"selectnumber", VTYPE_NUMBER, AFLG_INT},	/* 61 ATTR_SELECTNUMBER   */
+    {"textareanumber", VTYPE_NUMBER, AFLG_INT},	/* 62 ATTR_TEXTAREANUMBER */
+    {"title", VTYPE_STR, AFLG_INT},	/* 63 ATTR_TITLE          */
+@
+
+
+1.14
+log
+@[w3m-dev 03341] white space is needed to close an empty-element tag
+* parsetagx.c (parse_tag): extract tagname until '/'
+From: Daiki Ueno <ueno@@unixuser.org>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.13 2002/10/10 16:59:33 ukai Exp $ */
+d67 2
+a68 2
+    { ATTR_HREF, ATTR_ALT, ATTR_SHAPE, ATTR_COORDS, ATTR_CORE };
+#define MAXA_AREA	MAXA_CORE + 4
+@
+
+
+1.13
+log
+@ [w3m-dev 03339] Re: Debian Bug#164098 w3m: <sup> is not properly supported
+* file.c (HTMLtagproc1): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* html.c (TagMAP): sup, /sup, sub, /sub
+* html.c (HTML_SUP): added
+	(HTML_N_SUP): added
+	(HTML_SUB): added
+	(HTML_N_SUB): added
+* table.c (feed_table_tag): HTML_SUP, HTML_N_SUP, HTML_SUB, HTML_N_SUB
+* tagtable.tab (sup): added
+	(/sup): added
+	(sub): added
+	(/sub): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.12 2002/02/28 16:15:41 ukai Exp $ */
+d219 4
+a222 4
+    {"sup", NULL, 0, 0},		/* 100 HTML_SUP       */
+    {"/sup", NULL, 0, 0},		/* 101 HTML_N_SUP       */
+    {"sub", NULL, 0, 0},		/* 102 HTML_SUB       */
+    {"/sub", NULL, 0, 0},		/* 103 HTML_N_SUB       */
+@
+
+
+1.12
+log
+@[w3m-dev 03072] Proxy-Authorization (Re:  Re: https through proxy)
+* file.c (loadGeneralFile) delete Proxy-Authorization set here
+* fm.h (HR_FLAG_PROXY): added
+* main.c (MAIN): need "Basic " for proxy_auth_cookie
+* url.c (HTTPrequest): add seen_proxy_auth
+	if proxy and no Proxy-Authorization: header seen and
+	has proxy_auth_cookie, use it
+* url.c (openURL): hr->flag |= HR_FLAG_PROXY
+
+* file.c (loadGeneralFile) comment indent fix
+* html.c (TagMAP): ditto
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.11 2002/02/25 15:55:39 ukai Exp $ */
+d219 4
+a222 4
+    {NULL, NULL, 0, 0},		/* 100 Undefined       */
+    {NULL, NULL, 0, 0},		/* 101 Undefined       */
+    {NULL, NULL, 0, 0},		/* 102 Undefined       */
+    {NULL, NULL, 0, 0},		/* 103 Undefined       */
+@
+
+
+1.11
+log
+@[w3m-dev-en 00691] Re: w3m 0.2.5.1 fails to recognize '<dt id="XXX">'
+* html.c: ATTR_CORE for dt, dd, blockquote, caption
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.10 2002/02/07 14:16:00 ukai Exp $ */
+d137 2
+a138 2
+    {"dt", ALST_NOP, MAXA_NOP, 0},		/*  19 HTML_DT         */
+    {"dd", ALST_NOP, MAXA_NOP, 0},		/*  20 HTML_DD         */
+@
+
+
+1.10
+log
+@[w3m-dev 03006] fix form order in table
+* file.c (process_form): static
+		fix form index order
+		method should be quoted
+* file.c (process_form): added
+* file.c (HTMLlineproc2body): add form_id
+* html.c (ALST_FORM_INT): added
+* html.c (form_int): update
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.9 2002/02/05 12:31:27 ukai Exp $ */
+d137 2
+a138 2
+    {"dt", NULL, 0, 0},		/*  19 HTML_DT         */
+    {"dd", NULL, 0, 0},		/*  20 HTML_DD         */
+d141 1
+a141 1
+    {"blockquote", NULL, 0, 0},	/*  23 HTML_BLQ        */
+d196 1
+a196 1
+    {"caption", NULL, 0, 0},	/*  78 HTML_CAPTION    */
+@
+
+
+1.9
+log
+@[w3m-dev 02991] form support in w3m -halfdump foo.html|w3m -halfload
+* fm.h (DUMP_HALFEXTRA): deleted
+* proto.h (process_select): return Str
+* file.c (process_img): process_form() fix
+* file.c (process_input): process_form() fix
+* file.c (process_select): return Str
+			process_form() fix
+* file.c (process_textarea): process_form() fix
+* file.c (process_form): support -halfdump
+* file.c (HTMLtagproc1): delete case HTML_FORM_INT, HTML_N_FORM_INT
+			process_{form,select,textarea}() fix
+* file.c (HTMLlineproc2body): support -halfload
+		HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_FORM_INT, HTML_FORM_INT,
+		HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TITLE_ALT
+* file.c (print_internal_information): fix -halfdump
+* file.c (loadHTMLstream): no DUMP_HALFEXTRA
+* html.h: add HTML_INTERNAL, HTML_N_INTERNAL,
+		HTML_SELECT_INT, HTML_N_SELECT_INT,
+		HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT
+* html.c (ALST_TEXTAREA_INT): added
+* html.c (ALST_SELECT_INT): added
+* html.c: add <internal>, </internal>, <select_int>, </select_int>
+	<option_int>, <textarea_int>, </textarea_int>
+* main.c (MAIN): delete -halfdump_extra
+	dont output <pre> by -halfdump
+* table.c (feed_table_tag): process_{form,select}() fix
+	add case HTML_INTERNAL, HTML_N_INTERNAL,
+	    HTML_SELECT_INT, HTML_N_SELECT_INT,
+	    HTML_OPTION_INT, HTML_TEXTAREA_INT, HTML_N_TEXTAREA_INT,
+* tagtable.tab: add internal, /internal, select_int, /select_int
+	option_int, textarea_int, /textarea_int
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.8 2002/01/31 17:54:51 ukai Exp $ */
+d97 5
+d240 1
+a240 1
+    {"form_int", ALST_FORM, MAXA_FORM, TFLG_INT},	/* 119 HTML_FORM_INT    */
+@
+
+
+1.8
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.7 2001/12/06 15:31:58 ukai Exp $ */
+d87 4
+a219 7
+    {NULL, NULL, 0, 0},		/* 106 Undefined       */
+    {NULL, NULL, 0, 0},		/* 107 Undefined       */
+    {NULL, NULL, 0, 0},		/* 108 Undefined       */
+    {NULL, NULL, 0, 0},		/* 109 Undefined       */
+    {NULL, NULL, 0, 0},		/* 110 Undefined       */
+    {NULL, NULL, 0, 0},		/* 111 Undefined       */
+    {NULL, NULL, 0, 0},		/* 112 Undefined       */
+d222 7
+@
+
+
+1.7
+log
+@[w3m-dev 02622]
+From: Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.6 2001/11/27 18:23:33 ukai Exp $ */
+d26 4
+a29 2
+    { ATTR_SRC, ATTR_ALT, ATTR_WIDTH, ATTR_HEIGHT, ATTR_USEMAP, ATTR_CORE };
+#define MAXA_IMG	MAXA_CORE + 5
+d66 3
+a68 2
+unsigned char ALST_AREA[] = { ATTR_HREF, ATTR_ALT, ATTR_CORE };
+#define MAXA_AREA	MAXA_CORE + 2
+d100 5
+a104 2
+unsigned char ALST_IMG_ALT[] = { ATTR_SRC };
+#define MAXA_IMG_ALT	1
+d287 3
+a290 3
+    {NULL, VTYPE_NONE, 0},	/* 44 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 45 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 46 Undefined           */
+a292 2
+    {NULL, VTYPE_NONE, 0},	/* 49 Undefined           */
+    {NULL, VTYPE_NONE, 0},	/* 50 Undefined           */
+d295 2
+@
+
+
+1.6
+log
+@[w3m-dev 02578]
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+<input type="image">
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.5 2001/11/24 02:01:26 ukai Exp $ */
+d39 2
+d201 2
+a203 2
+    {NULL, NULL, 0, 0},		/*  98 Undefined       */
+    {NULL, NULL, 0, 0},		/*  99 Undefined       */
+@
+
+
+1.5
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: html.c,v 1.4 2001/11/20 17:49:23 ukai Exp $ */
+d46 2
+a47 1
+    ATTR_MAXLENGTH, ATTR_ALT, ATTR_READONLY, ATTR_CORE
+d49 1
+a49 1
+#define MAXA_INPUT      MAXA_CORE + 9
+@
+
+
+1.4
+log
+@add rcsids
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d8 4
+a11 2
+unsigned char ALST_A[] =
+{ATTR_NAME,ATTR_HREF,ATTR_TARGET,ATTR_HSEQ,ATTR_REFERER,ATTR_FRAMENAME,ATTR_CORE};
+d13 1
+a13 1
+unsigned char ALST_P[] = {ATTR_ALIGN,ATTR_CORE};
+d15 1
+a15 1
+unsigned char ALST_UL[] = {ATTR_START,ATTR_TYPE,ATTR_CORE};
+d17 1
+a17 1
+unsigned char ALST_LI[] = {ATTR_TYPE,ATTR_VALUE,ATTR_CORE};
+d19 1
+a19 1
+unsigned char ALST_HR[] = {ATTR_WIDTH,ATTR_ALIGN,ATTR_CORE};
+d21 1
+a21 1
+unsigned char ALST_DL[] = {ATTR_COMPACT,ATTR_CORE};
+d23 1
+a23 1
+unsigned char ALST_PRE[] = {ATTR_FOR_TABLE,ATTR_CORE};
+d26 1
+a26 1
+{ATTR_SRC,ATTR_ALT,ATTR_WIDTH,ATTR_HEIGHT,ATTR_USEMAP,ATTR_CORE};
+d29 3
+a31 1
+{ATTR_BORDER,ATTR_WIDTH,ATTR_HBORDER,ATTR_CELLSPACING,ATTR_CELLPADDING,ATTR_VSPACE,ATTR_CORE};
+d33 1
+a33 1
+unsigned char ALST_META[] = {ATTR_HTTP_EQUIV,ATTR_CONTENT,ATTR_CORE};
+d35 1
+a35 1
+unsigned char ALST_FRAME[] = {ATTR_SRC,ATTR_NAME,ATTR_CORE};
+d37 1
+a37 1
+unsigned char ALST_FRAMESET[] = {ATTR_COLS,ATTR_ROWS,ATTR_CORE};
+d40 3
+a42 1
+{ATTR_METHOD,ATTR_ACTION,ATTR_CHARSET,ATTR_ACCEPT_CHARSET,ATTR_ENCTYPE,ATTR_TARGET,ATTR_NAME,ATTR_CORE};
+d45 3
+a47 1
+{ATTR_TYPE,ATTR_VALUE,ATTR_NAME,ATTR_CHECKED,ATTR_ACCEPT,ATTR_SIZE,ATTR_MAXLENGTH,ATTR_ALT,ATTR_READONLY,ATTR_CORE};
+d49 2
+a50 1
+unsigned char ALST_TEXTAREA[] = {ATTR_COLS,ATTR_ROWS,ATTR_NAME,ATTR_READONLY,ATTR_CORE};
+d52 1
+a52 1
+unsigned char ALST_SELECT[] = {ATTR_NAME,ATTR_MULTIPLE,ATTR_CORE};
+d54 2
+a55 1
+unsigned char ALST_OPTION[] = {ATTR_VALUE,ATTR_LABEL,ATTR_SELECTED,ATTR_CORE};
+d57 1
+a57 1
+unsigned char ALST_ISINDEX[] = {ATTR_ACTION,ATTR_PROMPT,ATTR_CORE};
+d59 1
+a59 1
+unsigned char ALST_MAP[] = {ATTR_NAME,ATTR_CORE};
+d61 1
+a61 1
+unsigned char ALST_AREA[] = {ATTR_HREF,ATTR_ALT,ATTR_CORE};
+d63 1
+a63 1
+unsigned char ALST_BASE[] = {ATTR_HREF,ATTR_TARGET,ATTR_CORE};
+d65 1
+a65 1
+unsigned char ALST_BODY[] = {ATTR_BACKGROUND,ATTR_CORE};
+d67 1
+a67 1
+unsigned char ALST_TR[] = {ATTR_ALIGN,ATTR_VALIGN,ATTR_CORE};
+d70 3
+a72 1
+{ATTR_COLSPAN,ATTR_ROWSPAN,ATTR_ALIGN,ATTR_VALIGN,ATTR_WIDTH,ATTR_NOWRAP,ATTR_CORE};
+d74 1
+a74 1
+unsigned char ALST_BGSOUND[] = {ATTR_SRC,ATTR_CORE};
+d76 1
+a76 1
+unsigned char ALST_APPLET[] = {ATTR_ARCHIVE,ATTR_CORE};
+d78 1
+a78 1
+unsigned char ALST_EMBED[] = {ATTR_SRC,ATTR_CORE};
+d81 1
+a81 1
+unsigned char ALST_TABLE_ALT[] = {ATTR_TID};
+d83 1
+a83 1
+unsigned char ALST_RULE[] = {ATTR_TYPE};
+d85 1
+a85 1
+unsigned char ALST_TITLE_ALT[] = {ATTR_TITLE};
+d88 5
+a92 1
+{ATTR_HSEQ,ATTR_FID,ATTR_NO_EFFECT,ATTR_TYPE,ATTR_NAME,ATTR_VALUE,ATTR_CHECKED,ATTR_ACCEPT,ATTR_SIZE,ATTR_MAXLENGTH,ATTR_READONLY,ATTR_TEXTAREANUMBER,ATTR_SELECTNUMBER,ATTR_ROWS,ATTR_TOP_MARGIN,ATTR_BOTTOM_MARGIN};
+d94 1
+a94 1
+unsigned char ALST_IMG_ALT[] = {ATTR_SRC};
+d96 1
+a96 1
+unsigned char ALST_NOP[] = {ATTR_CORE};
+d99 115
+a213 116
+TagInfo TagMAP[MAX_HTMLTAG] =
+{
+    {NULL,          NULL,          0,             0},        /*   0 HTML_UNKNOWN    */
+    {"a",           ALST_A,        MAXA_A,        0},        /*   1 HTML_A          */
+    {"/a",          NULL,          0,             TFLG_END}, /*   2 HTML_N_A        */
+    {"h",           ALST_P,        MAXA_P,        0},        /*   3 HTML_H          */
+    {"/h",          NULL,          0,             TFLG_END}, /*   4 HTML_N_H        */
+    {"p",           ALST_P,        MAXA_P,        0},        /*   5 HTML_P          */
+    {"br",          NULL,          0,             0},        /*   6 HTML_BR         */
+    {"b",           NULL,          0,             0},        /*   7 HTML_B          */
+    {"/b",          NULL,          0,             TFLG_END}, /*   8 HTML_N_B        */
+    {"ul",          ALST_UL,       MAXA_UL,       0},        /*   9 HTML_UL         */
+    {"/ul",         NULL,          0,             TFLG_END}, /*  10 HTML_N_UL       */
+    {"li",          ALST_LI,       MAXA_LI,       0},        /*  11 HTML_LI         */
+    {"ol",          ALST_UL,       MAXA_UL,       0},        /*  12 HTML_OL         */
+    {"/ol",         NULL,          0,             TFLG_END}, /*  13 HTML_N_OL       */
+    {"title",       NULL,          0,             0},        /*  14 HTML_TITLE      */
+    {"/title",      NULL,          0,             TFLG_END}, /*  15 HTML_N_TITLE    */
+    {"hr",          ALST_HR,       MAXA_HR,       0},        /*  16 HTML_HR         */
+    {"dl",          ALST_DL,       MAXA_DL,       0},        /*  17 HTML_DL         */
+    {"/dl",         NULL,          0,             TFLG_END}, /*  18 HTML_N_DL       */
+    {"dt",          NULL,          0,             0},        /*  19 HTML_DT         */
+    {"dd",          NULL,          0,             0},        /*  20 HTML_DD         */
+    {"pre",         ALST_PRE,      MAXA_PRE,      0},        /*  21 HTML_PRE        */
+    {"/pre",        NULL,          0,             TFLG_END}, /*  22 HTML_N_PRE      */
+    {"blockquote",  NULL,          0,             0},        /*  23 HTML_BLQ        */
+    {"/blockquote", NULL,          0,             TFLG_END}, /*  24 HTML_N_BLQ      */
+    {"img",         ALST_IMG,      MAXA_IMG,      0},        /*  25 HTML_IMG        */
+    {"listing",     NULL,          0,             0},        /*  26 HTML_LISTING    */
+    {"/listing",    NULL,          0,             TFLG_END}, /*  27 HTML_N_LISTING  */
+    {"xmp",         NULL,          0,             0},        /*  28 HTML_XMP        */
+    {"/xmp",        NULL,          0,             TFLG_END}, /*  29 HTML_N_XMP      */
+    {"plaintext",   NULL,          0,             0},        /*  30 HTML_PLAINTEXT  */
+    {"table",       ALST_TABLE,    MAXA_TABLE,    0},        /*  31 HTML_TABLE      */
+    {"/table",      NULL,          0,             TFLG_END}, /*  32 HTML_N_TABLE    */
+    {"meta",        ALST_META,     MAXA_META,     0},        /*  33 HTML_META       */
+    {"/p",          NULL,          0,             TFLG_END}, /*  34 HTML_N_P        */
+    {"frame",       ALST_FRAME,    MAXA_FRAME,    0},        /*  35 HTML_FRAME      */
+    {"frameset",    ALST_FRAMESET, MAXA_FRAMESET, 0},        /*  36 HTML_FRAMESET   */
+    {"/frameset",   NULL,          0,             TFLG_END}, /*  37 HTML_N_FRAMESET */
+    {"center",      NULL,          0,             0},        /*  38 HTML_CENTER     */
+    {"/center",     NULL,          0,             TFLG_END}, /*  39 HTML_N_CENTER   */
+    {"font",        NULL,          0,             0},        /*  40 HTML_FONT       */
+    {"/font",       NULL,          0,             TFLG_END}, /*  41 HTML_N_FONT     */
+    {"form",        ALST_FORM,     MAXA_FORM,     0},        /*  42 HTML_FORM       */
+    {"/form",       NULL,          0,             TFLG_END}, /*  43 HTML_N_FORM     */
+    {"input",       ALST_INPUT,    MAXA_INPUT,    0},        /*  44 HTML_INPUT      */
+    {"textarea",    ALST_TEXTAREA, MAXA_TEXTAREA, 0},        /*  45 HTML_TEXTAREA   */
+    {"/textarea",   NULL,          0,             TFLG_END}, /*  46 HTML_N_TEXTAREA */
+    {"select",      ALST_SELECT,   MAXA_SELECT,   0},        /*  47 HTML_SELECT     */
+    {"/select",     NULL,          0,             TFLG_END}, /*  48 HTML_N_SELECT   */
+    {"option",      ALST_OPTION,   MAXA_OPTION,   0},        /*  49 HTML_OPTION     */
+    {"nobr",        NULL,          0,             0},        /*  50 HTML_NOBR       */
+    {"/nobr",       NULL,          0,             TFLG_END}, /*  51 HTML_N_NOBR     */
+    {"div",         ALST_P,        MAXA_P,        0},        /*  52 HTML_DIV        */
+    {"/div",        NULL,          0,             TFLG_END}, /*  53 HTML_N_DIV      */
+    {"isindex",     ALST_ISINDEX,  MAXA_ISINDEX,  0},        /*  54 HTML_ISINDEX    */
+    {"map",         ALST_MAP,      MAXA_MAP,      0},        /*  55 HTML_MAP        */
+    {"/map",        NULL,          0,             TFLG_END}, /*  56 HTML_N_MAP      */
+    {"area",        ALST_AREA,     MAXA_AREA,     0},        /*  57 HTML_AREA       */
+    {"script",      NULL,          0,             0},        /*  58 HTML_SCRIPT     */
+    {"/script",     NULL,          0,             TFLG_END}, /*  59 HTML_N_SCRIPT   */
+    {"base",        ALST_BASE,     MAXA_BASE,     0},        /*  60 HTML_BASE       */
+    {"del",         NULL,          0,             0},        /*  61 HTML_DEL        */
+    {"/del",        NULL,          0,             TFLG_END}, /*  62 HTML_N_DEL      */
+    {"ins",         NULL,          0,             0},        /*  63 HTML_INS        */
+    {"/ins",        NULL,          0,             TFLG_END}, /*  64 HTML_N_INS      */
+    {"u",           NULL,          0,             0},        /*  65 HTML_U          */
+    {"/u",          NULL,          0,             TFLG_END}, /*  66 HTML_N_U        */
+    {"style",       NULL,          0,             0},        /*  67 HTML_STYLE      */
+    {"/style",      NULL,          0,             TFLG_END}, /*  68 HTML_N_STYLE    */
+    {"wbr",         NULL,          0,             0},        /*  69 HTML_WBR        */
+    {"em",          NULL,          0,             0},        /*  70 HTML_EM         */
+    {"/em",         NULL,          0,             TFLG_END}, /*  71 HTML_N_EM       */
+    {"body",        ALST_BODY,     MAXA_BODY,     0},        /*  72 HTML_BODY       */
+    {"/body",       NULL,          0,             TFLG_END}, /*  73 HTML_N_BODY     */
+    {"tr",          ALST_TR,       MAXA_TR,       0},        /*  74 HTML_TR         */
+    {"/tr",         NULL,          0,             TFLG_END}, /*  75 HTML_N_TR       */
+    {"td",          ALST_TD,       MAXA_TD,       0},        /*  76 HTML_TD         */
+    {"/td",         NULL,          0,             TFLG_END}, /*  77 HTML_N_TD       */
+    {"caption",     NULL,          0,             0},        /*  78 HTML_CAPTION    */
+    {"/caption",    NULL,          0,             TFLG_END}, /*  79 HTML_N_CAPTION  */
+    {"th",          ALST_TD,       MAXA_TD,       0},        /*  80 HTML_TH         */
+    {"/th",         NULL,          0,             TFLG_END}, /*  81 HTML_N_TH       */
+    {"thead",       NULL,          0,             0},        /*  82 HTML_THEAD      */
+    {"/thead",      NULL,          0,             TFLG_END}, /*  83 HTML_N_THEAD    */
+    {"tbody",       NULL,          0,             0},        /*  84 HTML_TBODY      */
+    {"/tbody",      NULL,          0,             TFLG_END}, /*  85 HTML_N_TBODY    */
+    {"tfoot",       NULL,          0,             0},        /*  86 HTML_TFOOT      */
+    {"/tfoot",      NULL,          0,             TFLG_END}, /*  87 HTML_N_TFOOT    */
+    {"colgroup",    NULL,          0,             0},        /*  88 HTML_COLGROUP   */
+    {"/colgroup",   NULL,          0,             TFLG_END}, /*  89 HTML_N_COLGROUP */
+    {"col",         NULL,          0,             0},        /*  90 HTML_COL        */
+    {"bgsound",     ALST_BGSOUND,  MAX_BGSOUND,   0},        /*  91 HTML_BGSOUND    */
+    {"applet",      ALST_APPLET,   MAX_APPLET,    0},        /*  92 HTML_APPLET     */
+    {"embed",       ALST_EMBED,    MAX_EMBED,     0},        /*  93 HTML_EMBED      */
+    {"/option",     NULL,          0,             TFLG_END}, /*  94 HTML_N_OPTION   */
+    {"head",        NULL,          0,             0},        /*  95 HTML_HEAD       */
+    {"/head",       NULL,          0,             TFLG_END}, /*  96 HTML_N_HEAD     */
+    {"doctype",     NULL,          0,             0},        /*  97 HTML_DOCTYPE    */
+                    				       	  
+    {NULL,          NULL,          0,             0},        /*  98 Undefined       */
+    {NULL,          NULL,          0,             0},        /*  99 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 100 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 101 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 102 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 103 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 104 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 105 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 106 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 107 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 108 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 109 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 110 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 111 Undefined       */
+    {NULL,          NULL,          0,             0},        /* 112 Undefined       */
+d216 15
+a230 15
+    {"table_alt",   ALST_TABLE_ALT,MAXA_TABLE_ALT,TFLG_INT}, /* 113 HTML_TABLE_ALT   */
+    {"rule",        ALST_RULE,     MAXA_RULE,     TFLG_INT}, /* 114 HTML_RULE        */
+    {"/rule",       NULL,          0,    TFLG_INT|TFLG_END}, /* 115 HTML_N_RULE      */
+    {"pre_int",     NULL,          0,             TFLG_INT}, /* 116 HTML_PRE_INT     */
+    {"/pre_int",    NULL,          0,    TFLG_INT|TFLG_END}, /* 117 HTML_N_PRE_INT   */
+    {"title_alt",   ALST_TITLE_ALT,MAXA_TITLE_ALT,TFLG_INT}, /* 118 HTML_TITLE_ALT   */
+    {"form_int",    ALST_FORM,     MAXA_FORM,     TFLG_INT}, /* 119 HTML_FORM_INT    */
+    {"/form_int",   NULL,          0,    TFLG_INT|TFLG_END}, /* 120 HTML_N_FORM_INT  */
+    {"dl_compact",  NULL,          0,             TFLG_INT}, /* 121 HTML_DL_COMPACT  */
+    {"input_alt",   ALST_INPUT_ALT,MAXA_INPUT_ALT,TFLG_INT}, /* 122 HTML_INPUT_ALT   */
+    {"/input_alt",  NULL,          0,    TFLG_INT|TFLG_END}, /* 123 HTML_N_INPUT_ALT */
+    {"img_alt",     ALST_IMG_ALT,  MAXA_IMG_ALT,  TFLG_INT}, /* 124 HTML_IMG_ALT     */
+    {"/img_alt",    NULL,          0,    TFLG_INT|TFLG_END}, /* 125 HTML_N_IMG_ALT   */
+    {"eol",         NULL,          0,             TFLG_INT}, /* 126 HTML_EOL         */
+    {" ",           ALST_NOP,      MAXA_NOP,      TFLG_INT}, /* 127 HTML_NOP         */
+d232 69
+a300 70
+    
+TagAttrInfo AttrMAP[MAX_TAGATTR] =
+{
+    {NULL            ,	VTYPE_NONE,    0},        /*  0 ATTR_UNKNOWN        */
+    {"accept"        ,	VTYPE_NONE,    0},        /*  1 ATTR_ACCEPT         */
+    {"accept-charset",	VTYPE_STR,     0},        /*  2 ATTR_ACCEPT_CHARSET */
+    {"action"        ,	VTYPE_ACTION,  0},        /*  3 ATTR_ACTION         */
+    {"align"         ,	VTYPE_ALIGN,   0},        /*  4 ATTR_ALIGN          */
+    {"alt"           ,	VTYPE_STR,     0},        /*  5 ATTR_ALT            */
+    {"archive"       ,	VTYPE_STR,     0},        /*  6 ATTR_ARCHIVE        */
+    {"background"    ,	VTYPE_STR,     0},        /*  7 ATTR_BACKGROUND     */
+    {"border"        ,	VTYPE_NUMBER,  0},        /*  8 ATTR_BORDER         */
+    {"cellpadding"   ,	VTYPE_NUMBER,  0},        /*  9 ATTR_CELLPADDING    */
+    {"cellspacing"   ,	VTYPE_NUMBER,  0},        /* 10 ATTR_CELLSPACING    */
+    {"charset"       ,	VTYPE_STR,     0},        /* 11 ATTR_CHARSET        */
+    {"checked"       ,	VTYPE_NONE,    0},        /* 12 ATTR_CHECKED        */
+    {"cols"          ,	VTYPE_MLENGTH, 0},        /* 13 ATTR_COLS           */
+    {"colspan"       ,	VTYPE_NUMBER,  0},        /* 14 ATTR_COLSPAN        */
+    {"content"       ,	VTYPE_STR,     0},        /* 15 ATTR_CONTENT        */
+    {"enctype"       ,	VTYPE_ENCTYPE, 0},        /* 16 ATTR_ENCTYPE        */
+    {"height"        ,	VTYPE_LENGTH,  0},        /* 17 ATTR_HEIGHT         */
+    {"href"          ,	VTYPE_STR,     0},        /* 18 ATTR_HREF           */
+    {"http-equiv"    ,	VTYPE_STR,     0},        /* 19 ATTR_HTTP_EQUIV     */
+    {"id"            ,	VTYPE_STR,     0},        /* 20 ATTR_ID             */
+    {"link"          ,	VTYPE_STR,     0},        /* 21 ATTR_LINK           */
+    {"maxlength"     ,	VTYPE_NUMBER,  0},        /* 22 ATTR_MAXLENGTH      */
+    {"method"        ,	VTYPE_METHOD,  0},        /* 23 ATTR_METHOD         */
+    {"multiple"      ,	VTYPE_NONE,    0},        /* 24 ATTR_MULTIPLE       */
+    {"name"          ,	VTYPE_STR,     0},        /* 25 ATTR_NAME           */
+    {"nowrap"        ,	VTYPE_NONE,    0},        /* 26 ATTR_NOWRAP         */
+    {"prompt"        ,	VTYPE_STR,     0},        /* 27 ATTR_PROMPT         */
+    {"rows"          ,	VTYPE_MLENGTH, 0},        /* 28 ATTR_ROWS           */
+    {"rowspan"       ,	VTYPE_NUMBER,  0},        /* 29 ATTR_ROWSPAN        */
+    {"size"          ,	VTYPE_NUMBER,  0},        /* 30 ATTR_SIZE           */
+    {"src"           ,	VTYPE_STR,     0},        /* 31 ATTR_SRC            */
+    {"target"        ,	VTYPE_STR,     0},        /* 32 ATTR_TARGET         */
+    {"type"          ,	VTYPE_TYPE,    0},        /* 33 ATTR_TYPE           */
+    {"usemap"        ,	VTYPE_STR,     0},        /* 34 ATTR_USEMAP         */
+    {"valign"        ,	VTYPE_VALIGN,  0},        /* 35 ATTR_VALIGN         */
+    {"value"         ,	VTYPE_STR,     0},        /* 36 ATTR_VALUE          */
+    {"vspace"        ,	VTYPE_NUMBER,  0},        /* 37 ATTR_VSPACE         */
+    {"width"         ,	VTYPE_LENGTH,  0},        /* 38 ATTR_WIDTH          */
+    {"compact"       ,	VTYPE_NONE,    0},        /* 39 ATTR_COMPACT        */
+    {"start"         ,	VTYPE_NUMBER,  0},        /* 40 ATTR_START          */
+    {"selected"      ,	VTYPE_NONE,    0},        /* 41 ATTR_SELECTED       */
+    {"label"         ,	VTYPE_STR,     0},        /* 42 ATTR_LABEL          */
+    {"readonly"      ,       VTYPE_NONE,    0},        /* 43 ATTR_READONLY       */
+                                       		   
+    {NULL            ,	VTYPE_NONE,    0},        /* 44 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 45 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 46 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 47 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 48 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 49 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 50 Undefined           */
+                                                           		   
+    /* Internal attribute */                               		   
+    {"top_margin"    ,	VTYPE_NUMBER,  AFLG_INT}, /* 51 ATTR_TOP_MARGIN,    */
+    {"bottom_margin" ,	VTYPE_NUMBER,  AFLG_INT}, /* 52 ATTR_BOTTOM_MARGIN, */
+    {"tid"           ,	VTYPE_NUMBER,  AFLG_INT}, /* 53 ATTR_TID            */
+    {"fid"           ,	VTYPE_NUMBER,  AFLG_INT}, /* 54 ATTR_FID            */
+    {"for_table"     ,	VTYPE_NONE,    AFLG_INT}, /* 55 ATTR_FOR_TABLE      */
+    {"framename"     ,	VTYPE_STR,     AFLG_INT}, /* 56 ATTR_FRAMENAME      */
+    {"hborder"       ,	VTYPE_NONE,    0},        /* 57 ATTR_HBORDER        */
+    {"hseq"          ,	VTYPE_NUMBER,  AFLG_INT}, /* 58 ATTR_HSEQ           */
+    {"no_effect"     ,	VTYPE_NONE,    AFLG_INT}, /* 59 ATTR_NO_EFFECT      */
+    {"referer"       ,	VTYPE_STR,     AFLG_INT}, /* 60 ATTR_REFERER        */
+    {"selectnumber"  ,	VTYPE_NUMBER,  AFLG_INT}, /* 61 ATTR_SELECTNUMBER   */
+    {"textareanumber",	VTYPE_NUMBER,  AFLG_INT}, /* 62 ATTR_TEXTAREANUMBER */
+    {"title"         ,	VTYPE_STR,     AFLG_INT}, /* 63 ATTR_TITLE          */
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d208 1
+a208 1
+    {"dl_compat",   NULL,          0,             TFLG_INT}, /* 121 HTML_DL_COMPACT  */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d35 2
+a36 2
+{ATTR_METHOD,ATTR_ACTION,ATTR_CHARSET,ATTR_ACCEPT_CHARSET,ATTR_ENCTYPE,ATTR_TARGET,ATTR_CORE};
+#define MAXA_FORM	MAXA_CORE + 6
+d38 4
+a41 4
+{ATTR_TYPE,ATTR_VALUE,ATTR_NAME,ATTR_CHECKED,ATTR_ACCEPT,ATTR_SIZE,ATTR_MAXLENGTH,ATTR_ALT,ATTR_CORE};
+#define MAXA_INPUT	MAXA_CORE + 8
+unsigned char ALST_TEXTAREA[] = {ATTR_COLS,ATTR_ROWS,ATTR_NAME,ATTR_CORE};
+#define MAXA_TEXTAREA	MAXA_CORE + 3
+d70 2
+d75 2
+a76 2
+{ATTR_HSEQ,ATTR_FID,ATTR_NO_EFFECT,ATTR_TYPE,ATTR_NAME,ATTR_VALUE,ATTR_CHECKED,ATTR_ACCEPT,ATTR_SIZE,ATTR_MAXLENGTH,ATTR_TEXTAREANUMBER,ATTR_SELECTNUMBER,ATTR_ROWS};
+#define MAXA_INPUT_ALT	13
+d84 114
+a197 114
+    {NULL,          0,             0},           /*   0 HTML_UNKNOWN    */
+    {ALST_A,        MAXA_A,        0},           /*   1 HTML_A          */
+    {NULL,          0,             TFLG_END},    /*   2 HTML_N_A        */
+    {ALST_P,        MAXA_P,        0},           /*   3 HTML_H          */
+    {NULL,          0,             TFLG_END},    /*   4 HTML_N_H        */
+    {ALST_P,        MAXA_P,        0},           /*   5 HTML_P          */
+    {NULL,          0,             0},           /*   6 HTML_BR         */
+    {NULL,          0,             0},           /*   7 HTML_B          */
+    {NULL,          0,             TFLG_END},    /*   8 HTML_N_B        */
+    {ALST_UL,       MAXA_UL,       0},           /*   9 HTML_UL         */
+    {NULL,          0,             TFLG_END},    /*  10 HTML_N_UL       */
+    {ALST_LI,       MAXA_LI,       0},           /*  11 HTML_LI         */
+    {ALST_UL,       MAXA_UL,       0},           /*  12 HTML_OL         */
+    {NULL,          0,             TFLG_END},    /*  13 HTML_N_OL       */
+    {NULL,          0,             0},           /*  14 HTML_TITLE      */
+    {NULL,          0,             TFLG_END},    /*  15 HTML_N_TITLE    */
+    {ALST_HR,       MAXA_HR,       0},           /*  16 HTML_HR         */
+    {ALST_DL,       MAXA_DL,       0},           /*  17 HTML_DL         */
+    {NULL,          0,             TFLG_END},    /*  18 HTML_N_DL       */
+    {NULL,          0,             0},           /*  19 HTML_DT         */
+    {NULL,          0,             0},           /*  20 HTML_DD         */
+    {ALST_PRE,      MAXA_PRE,      0},           /*  21 HTML_PRE        */
+    {NULL,          0,             TFLG_END},    /*  22 HTML_N_PRE      */
+    {NULL,          0,             0},           /*  23 HTML_BLQ        */
+    {NULL,          0,             TFLG_END},    /*  24 HTML_N_BLQ      */
+    {ALST_IMG,      MAXA_IMG,      0},           /*  25 HTML_IMG        */
+    {NULL,          0,             0},           /*  26 HTML_LISTING    */
+    {NULL,          0,             TFLG_END},    /*  27 HTML_N_LISTING  */
+    {NULL,          0,             0},           /*  28 HTML_XMP        */
+    {NULL,          0,             TFLG_END},    /*  29 HTML_N_XMP      */
+    {NULL,          0,             0},           /*  30 HTML_PLAINTEXT  */
+    {ALST_TABLE,    MAXA_TABLE,    0},           /*  31 HTML_TABLE      */
+    {NULL,          0,             TFLG_END},    /*  32 HTML_N_TABLE    */
+    {ALST_META,     MAXA_META,     0},           /*  33 HTML_META       */
+    {NULL,          0,             TFLG_END},    /*  34 HTML_N_P        */
+    {ALST_FRAME,    MAXA_FRAME,    0},           /*  35 HTML_FRAME      */
+    {ALST_FRAMESET, MAXA_FRAMESET, 0},           /*  36 HTML_FRAMESET   */
+    {NULL,          0,             TFLG_END},    /*  37 HTML_N_FRAMESET */
+    {NULL,          0,             0},           /*  38 HTML_CENTER     */
+    {NULL,          0,             TFLG_END},    /*  39 HTML_N_CENTER   */
+    {NULL,          0,             0},           /*  40 HTML_FONT       */
+    {NULL,          0,             TFLG_END},    /*  41 HTML_N_FONT     */
+    {ALST_FORM,     MAXA_FORM,     0},           /*  42 HTML_FORM       */
+    {NULL,          0,             TFLG_END},    /*  43 HTML_N_FORM     */
+    {ALST_INPUT,    MAXA_INPUT,    0},           /*  44 HTML_INPUT      */
+    {ALST_TEXTAREA, MAXA_TEXTAREA, 0},           /*  45 HTML_TEXTAREA   */
+    {NULL,          0,             TFLG_END},    /*  46 HTML_N_TEXTAREA */
+    {ALST_SELECT,   MAXA_SELECT,   0},           /*  47 HTML_SELECT     */
+    {NULL,          0,             TFLG_END},    /*  48 HTML_N_SELECT   */
+    {ALST_OPTION,   MAXA_OPTION,   0},           /*  49 HTML_OPTION     */
+    {NULL,          0,             0},           /*  50 HTML_NOBR       */
+    {NULL,          0,             TFLG_END},    /*  51 HTML_N_NOBR     */
+    {ALST_P,        MAXA_P,        0},           /*  52 HTML_DIV        */
+    {NULL,          0,             TFLG_END},    /*  53 HTML_N_DIV      */
+    {ALST_ISINDEX,  MAXA_ISINDEX,  0},           /*  54 HTML_ISINDEX    */
+    {ALST_MAP,      MAXA_MAP,      0},           /*  55 HTML_MAP        */
+    {NULL,          0,             TFLG_END},    /*  56 HTML_N_MAP      */
+    {ALST_AREA,     MAXA_AREA,     0},           /*  57 HTML_AREA       */
+    {NULL,          0,             0},           /*  58 HTML_SCRIPT     */
+    {NULL,          0,             TFLG_END},    /*  59 HTML_N_SCRIPT   */
+    {ALST_BASE,     MAXA_BASE,     0},           /*  60 HTML_BASE       */
+    {NULL,          0,             0},           /*  61 HTML_DEL        */
+    {NULL,          0,             TFLG_END},    /*  62 HTML_N_DEL      */
+    {NULL,          0,             0},           /*  63 HTML_INS        */
+    {NULL,          0,             TFLG_END},    /*  64 HTML_N_INS      */
+    {NULL,          0,             0},           /*  65 HTML_U          */
+    {NULL,          0,             TFLG_END},    /*  66 HTML_N_U        */
+    {NULL,          0,             0},           /*  67 HTML_STYLE      */
+    {NULL,          0,             TFLG_END},    /*  68 HTML_N_STYLE    */
+    {NULL,          0,             0},           /*  69 HTML_WBR        */
+    {NULL,          0,             0},           /*  70 HTML_EM         */
+    {NULL,          0,             TFLG_END},    /*  71 HTML_N_EM       */
+    {ALST_BODY,     MAXA_BODY,     0},           /*  72 HTML_BODY       */
+    {NULL,          0,             TFLG_END},    /*  73 HTML_N_BODY     */
+    {ALST_TR,       MAXA_TR,       0},           /*  74 HTML_TR         */
+    {NULL,          0,             TFLG_END},    /*  75 HTML_N_TR       */
+    {ALST_TD,       MAXA_TD,       0},           /*  76 HTML_TD         */
+    {NULL,          0,             TFLG_END},    /*  77 HTML_N_TD       */
+    {NULL,          0,             0},           /*  78 HTML_CAPTION    */
+    {NULL,          0,             TFLG_END},    /*  79 HTML_N_CAPTION  */
+    {ALST_TD,       MAXA_TD,       0},           /*  80 HTML_TH         */
+    {NULL,          0,             TFLG_END},    /*  81 HTML_N_TH       */
+    {NULL,          0,             0},           /*  82 HTML_THEAD      */
+    {NULL,          0,             TFLG_END},    /*  83 HTML_N_THEAD    */
+    {NULL,          0,             0},           /*  84 HTML_TBODY      */
+    {NULL,          0,             TFLG_END},    /*  85 HTML_N_TBODY    */
+    {NULL,          0,             0},           /*  86 HTML_TFOOT      */
+    {NULL,          0,             TFLG_END},    /*  87 HTML_N_TFOOT    */
+    {NULL,          0,             0},           /*  88 HTML_COLGROUP   */
+    {NULL,          0,             TFLG_END},    /*  89 HTML_N_COLGROUP */
+    {NULL,          0,             0},           /*  90 HTML_COL        */
+    {ALST_BGSOUND,  MAX_BGSOUND,   0},           /*  91 HTML_BGSOUND    */
+    {ALST_APPLET,   MAX_APPLET,    0},           /*  92 HTML_APPLET     */
+    {ALST_EMBED,    MAX_EMBED,     0},           /*  93 HTML_EMBED      */
+    {NULL,          0,             TFLG_END},    /*  94 HTML_N_OPTION   */
+    {NULL,          0,             0},           /*  95 HTML_HEAD       */
+    {NULL,          0,             TFLG_END},    /*  96 HTML_N_HEAD     */
+    {NULL,          0,             0},           /*  97 HTML_DOCTYPE    */
+                    				       		    
+    {NULL,          0,             0},           /*  98 Undefined       */
+    {NULL,          0,             0},           /*  99 Undefined       */
+    {NULL,          0,             0},           /* 100 Undefined       */
+    {NULL,          0,             0},           /* 101 Undefined       */
+    {NULL,          0,             0},           /* 102 Undefined       */
+    {NULL,          0,             0},           /* 103 Undefined       */
+    {NULL,          0,             0},           /* 104 Undefined       */
+    {NULL,          0,             0},           /* 105 Undefined       */
+    {NULL,          0,             0},           /* 106 Undefined       */
+    {NULL,          0,             0},           /* 107 Undefined       */
+    {NULL,          0,             0},           /* 108 Undefined       */
+    {NULL,          0,             0},           /* 109 Undefined       */
+    {NULL,          0,             0},           /* 110 Undefined       */
+    {NULL,          0,             0},           /* 111 Undefined       */
+    {NULL,          0,             0},           /* 112 Undefined       */
+d200 15
+a214 15
+    {ALST_TABLE_ALT,MAXA_TABLE_ALT,TFLG_INT},    /* 113 HTML_TABLE_ALT   */
+    {NULL,          0,             TFLG_INT},    /* 114 HTML_RULE        */
+    {NULL,          0,    TFLG_INT|TFLG_END},    /* 115 HTML_N_RULE      */
+    {NULL,          0,             TFLG_INT},    /* 116 HTML_PRE_INT     */
+    {NULL,          0,    TFLG_INT|TFLG_END},    /* 117 HTML_N_PRE_INT   */
+    {ALST_TITLE_ALT,MAXA_TITLE_ALT,TFLG_INT},    /* 118 HTML_TITLE_ALT   */
+    {ALST_FORM,     MAXA_FORM,     TFLG_INT},    /* 119 HTML_FORM_INT    */
+    {NULL,          0,    TFLG_INT|TFLG_END},    /* 120 HTML_N_FORM_INT  */
+    {NULL,          0,             TFLG_INT},    /* 121 HTML_DL_COMPACT  */
+    {ALST_INPUT_ALT,MAXA_INPUT_ALT,TFLG_INT},    /* 122 HTML_INPUT_ALT   */
+    {NULL,          0,    TFLG_INT|TFLG_END},    /* 123 HTML_N_INPUT_ALT */
+    {ALST_IMG_ALT,  MAXA_IMG_ALT,  TFLG_INT},    /* 124 HTML_IMG_ALT     */
+    {NULL,          0,    TFLG_INT|TFLG_END},    /* 125 HTML_N_IMG_ALT   */
+    {NULL,          0,             TFLG_INT},    /* 126 HTML_EOL         */
+    {ALST_NOP,      MAXA_NOP,      TFLG_INT},    /* 127 HTML_NOP         */
+d262 1
+a263 1
+    {NULL            ,	VTYPE_NONE,    0},        /* 43 Undefined           */
+a270 2
+    {NULL            ,	VTYPE_NONE,    0},        /* 51 Undefined           */
+    {NULL            ,	VTYPE_NONE,    0},        /* 52 Undefined           */
+d273 2
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

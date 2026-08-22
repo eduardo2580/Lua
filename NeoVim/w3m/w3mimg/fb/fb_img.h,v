@@ -1,0 +1,317 @@
+head	1.9;
+access;
+symbols
+	release-0-5-3:1.9
+	release-0-5-2:1.9
+	release-0-5-1:1.8
+	release-0-5:1.8
+	release-0-4-2:1.8
+	release-0-4-1:1.6
+	release-0-4:1.6
+	release-0-4-rc3:1.6
+	release-0-4-rc2:1.6
+	release-0-4-rc1:1.6
+	release-0-3-2-2:1.6
+	release-0-3-2-1:1.6
+	branch-0-3-2:1.6.0.2
+	release-0-3-2:1.6
+	release-0-3-2-rc4:1.6
+	release-0-3-2-rc3:1.6
+	release-0-3-2-rc2:1.6
+	release-0-3-2-rc1:1.6;
+locks; strict;
+comment	@ * @;
+
+
+1.9
+date	2004.08.04.17.32.28;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.07.09.15.07.11;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.03.24.15.45.59;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.10.10.16.16.04;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.07.29.15.25.37;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.22.16.17.32;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.18.15.01.31;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.07.18.14.33.23;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.17.20.58.48;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@[w3m-dev 04096] w3m-img gtk2
+* acinclude.m4 (AC_W3M_IMAGE): add USE_GTK2
+	add --with-imagelib=gtk2
+* aclocal.m4 config.guess config.sub configure: regen
+* config.h.in: add USE_GTK2
+* w3mimg/fb/fb_gdkpixbuf.c: support USE_GTK2
+* w3mimg/fb/fb_img.h: add fb_image_init()
+* w3mimg/fb/fb_imlib2.h: fb_image_init() stub
+* w3mimg/fb/fb_w3mimg.c: call fb_image_init()
+* w3mimg/x11/x11_w3mimg.c: support USE_GTK2
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@/* $Id: fb_img.h,v 1.8 2003/07/09 15:07:11 ukai Exp $ */
+#ifndef fb_img_header
+#define fb_img_header
+#include "fb.h"
+
+void fb_image_init();
+FB_IMAGE **fb_image_load(char *filename, int w, int h, int n);
+void fb_image_set_bg(int r, int g, int b);
+int fb_image_clear(int x, int y, int w, int h);
+int get_image_size(char *filename, int *w, int *h);
+
+#endif
+@
+
+
+1.8
+log
+@* w3mimg/fb/fb_img.h (get_image_size): add missing prototypes
+* w3mimg/fb/fb.c (fb_clear): unused variable `j'
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_img.h,v 1.7 2003/03/24 15:45:59 ukai Exp $ */
+d6 1
+@
+
+
+1.7
+log
+@[w3m-dev 03829] w3mimgdisplay -anim
+* w3mimgdisplay.c (maxAnim): added, default 100
+	(main): add --anim option, w_op->max_anim
+* w3mimg/w3mimg.h (w3mimg_op): add max_anim
+* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): add max_anim
+* w3mimg/fb/fb_img.h (fb_image_load): add max_anim args
+* w3mimg/fb/fb_imlib2.c (fb_image_load): add max_anim args
+* w3mimg/fb/fb_w3mimg.c (w3mfb_load_image): pass max_anim
+* w3mimg/x11/x11_w3mimg.c (x11_load_image): max_anim
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_img.h,v 1.6 2002/10/10 16:16:04 ukai Exp $ */
+d8 1
+@
+
+
+1.6
+log
+@* [w3m-dev 03337] delete unused functions in fb.c etc. (Re: canna patch)
+* w3mimg/fb/fb.c (fb_image_rotate): delete
+	(fb_frame_rotate): delete
+	(fb_pset): delete
+	(fb_get_color): delete
+	(fb_clear): delete
+	(fb_cmap_disp): delete
+	(fb_fscrn_disp): delete
+	(fb_vscrn_disp): delete
+* w3mimg/fb/fb.h (fb_image_rotate): delete
+	(fb_frame_rotate): delete
+	(fb_pset): delete
+	(fb_get_color): delete
+	(fb_clear): delete
+	(fb_cmap_disp): delete
+	(fb_fscrn_disp): delete
+	(fb_vscrn_disp): delete
+* w3mimg/fb/fb_img.c (fb_image_draw_simple): delete
+* w3mimg/fb/fb_img.h (fb_image_draw_simple): delete
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_img.h,v 1.5 2002/07/29 15:25:37 ukai Exp $ */
+d6 1
+a6 1
+FB_IMAGE **fb_image_load(char *filename, int w, int h);
+@
+
+
+1.5
+log
+@[w3m-dev 03282] Re: w3m-img for framebuffer update
+* w3mimg/fb/fb.c (fb_image_new): ignore no image
+				calloc multiple images
+		(fb_image_fill): added
+		(fb_image_draw): width, height fix
+		(fb_image_rotate): fix typo
+		(fb_image_copy): added
+		(fb_frame_new): added
+		(fb_freme_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb.h (FB_IMAGE): add num, id, delay
+		(fb_frame_new): added
+		(fb_frame_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb_gdkpixbuf.c (get_image_size): animation support
+		(fb_image_load): animation support
+		(draw): add bg, x, y, w, h args
+* w3mimg/fb/fb_img.h (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_imlib2.c (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): animation support
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_img.h,v 1.4 2002/07/22 16:17:32 ukai Exp $ */
+a6 1
+int fb_image_draw_simple(FB_IMAGE * img, int x, int y);
+@
+
+
+1.4
+log
+@[w3m-dev 03279] w3m-img for framebuffer update
+	  http://homepage3.nifty.com/slokar/fb/w3mfb.patch.gz
+* w3mimg/fb/readme.txt: update
+* w3mimg/fb/fb.c: update
+* w3mimg/fb/fb.h: update
+* w3mimg/fb/fb_gdkpixbuf.c: update
+* w3mimg/fb/fb_img.c: update
+* w3mimg/fb/fb_img.h: update
+* w3mimg/fb/fb_imlib2.c: update
+* w3mimg/fb/fb_w3mimg.c: update
+* w3mimg/fb/fb_gdkpixbuf.h: deleted
+* w3mimg/fb/fb_imlib2.h: deleted
+* w3mimg/w3mimg.h (w3mimg_op): add get_image_size()
+* w3mimg/x11/x11_w3mimg.c: update
+* w3mimgdisplay.c (main): use get_image_size()
+* w3mimgsize.c (main): use get_image_size()
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_img.h,v 1.3 2002/07/18 15:01:31 ukai Exp $ */
+d6 1
+a6 1
+FB_IMAGE *fb_image_load(char *filename, int w, int h);
+@
+
+
+1.3
+log
+@rcsid comment
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d4 1
+a4 1
+#include "config.h"
+d6 4
+a9 17
+#if defined(USE_IMLIB2)
+#include "w3mimg/fb/fb_imlib2.h"
+#elif defined(USE_GDKPIXBUF)
+#include "w3mimg/fb/fb_gdkpixbuf.h"
+#else
+#error no Imlib2 and GdkPixbuf support
+#endif
+
+IMAGE *fb_load_image(char *filename, int w, int h);
+int fb_draw_image(IMAGE * img, int x, int y, int sx, int sy, int width,
+		  int height);
+int fb_draw_image_simple(IMAGE * img, int x, int y);
+int fb_resize_image(IMAGE * img, int width, int height);
+void fb_free_image(IMAGE * img);
+void fb_set_bg(int r, int g, int b);
+IMAGE *fb_dup_image(IMAGE * img);
+int fb_rotate_image(IMAGE * img, int angle);
+@
+
+
+1.2
+log
+@indent
+@
+text
+@d1 1
+@
+
+
+1.1
+log
+@merge w3m-img for framebuffer support
+* w3mimg/w3mimg.h: created
+* w3mimg/x11/x11_w3mimg.c: created
+* w3mimg/fb/fb_w3mimg.c: created
+* w3mimgsize.c w3mimgdisplay.c: modified
+* configure: modified
+* XMakefile: modified
+* config.h.dist: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+w3m-img for framebuffer support
+* http://homepage3.nifty.com/slokar/fb/
+* w3mimg/fb/fb.c w3mimg/fb/fb.h
+  w3mimg/fb/fb_img.c w3mimg/fb/fb_img.h
+  w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_gdkpixbuf.h
+  w3mimg/fb/fb_imlib2.c w3mimg/fb/fb_imlib.h
+  w3mimg/fb/readme.txt w3mimg/fb/license.txt: added
+From: Hiroshi Kawashima <kei@@sm.sony.co.jp>
+@
+text
+@d6 1
+a6 1
+ #include "w3mimg/fb/fb_imlib2.h"
+d8 1
+a8 1
+ #include "w3mimg/fb/fb_gdkpixbuf.h"
+d14 8
+a21 7
+int    fb_draw_image(IMAGE *img, int x, int y, int sx, int sy, int width, int height);
+int    fb_draw_image_simple(IMAGE *img, int x, int y);
+int    fb_resize_image(IMAGE *img, int width, int height);
+void   fb_free_image(IMAGE *img);
+void   fb_set_bg(int r, int g, int b);
+IMAGE *fb_dup_image(IMAGE *img);
+int    fb_rotate_image(IMAGE *img, int angle);
+@
+

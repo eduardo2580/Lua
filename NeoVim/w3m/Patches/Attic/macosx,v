@@ -1,0 +1,95 @@
+head	1.2;
+access;
+symbols
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.02;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.02;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@Jeroen Scheerder <J.Scheerder@@cwi.nl> (by way of Jeroen Scheerder)
+Subject: w3m 0.1.6 on Mac OS X
+Content-Type: text/plain; charset="us-ascii"
+
+Hi,
+
+I've compiled w3m successfully on Mac OS X (DP3).  I'm including
+patches, mainly dealing with compiler complaints about possible use of
+uninitialized data.
+
+It compiles with one warning, still:
+
+url.c:799: warning: variable `p' might be clobbered by `longjmp' or
+           `vfork'
+
+
+On a related note: I had to modify the makefile; there is no `m'
+library, and no `termcap' library, and they're not needed as well --
+but they will cause an ld failure, when present on the ld command line.
+
+Context diffs (against a 21/1/2000 0.1.6) are included, including the
+(trivial) patch to make Boehm gc compile.
+
+
+
+*** gc/gcconfig.h	Mon Mar  6 12:16:04 2000
+--- gc/gcconfig.h.org	Wed Jan 12 04:23:37 2000
+***************
+*** 180,190 ****
+  #    define POWERPC
+  #    define mach_type_known
+  # endif
+- # if defined(__APPLE__)
+- #    define MACOSX
+- #    define POWERPC
+- #    define mach_type_known
+- # endif
+  # if defined(NeXT) && defined(mc68000)
+  #   define M68K
+  #   define NEXT
+--- 180,185 ----
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

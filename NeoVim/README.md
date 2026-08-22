@@ -25,12 +25,13 @@ it can also be installed manually with `:Mason`.
 On Linux, install `xclip`, `xsel`, or `wl-clipboard` for system clipboard
 support. Windows and macOS use their native clipboard integrations.
 
-Install w3m on your platform and put it on `PATH`. On Windows, the fallback
-location is `C:\w3m.exe`. Use `:W3mGopher [host/path]` to open a Gopher
-resource; running it without an argument opens
-`gopher://gopher.floodgap.com:70/1`. Set `$BROWSER` to choose the command used
-by `:W3mShowExtenalBrowser`; `open`, `xdg-open`, or the Windows URL handler is
-selected automatically otherwise.
+The complete Lynx 2.9.3 source is already available offline in
+`Downloads/Lynx/lynx2.9.3`, with the original archive beside it. Build it with
+the platform recipe in `Downloads/Lynx/README.md`; the Neovim commands first
+look for `Downloads/Lynx/lynx2.9.3/bin/lynx.exe` and then for `lynx` on `PATH`.
+Use `:Lynx [url]` or `<leader>ww` to open a URL in a terminal, and
+`:LynxGopher [host/path]` for Gopher. URLs are passed unchanged, so Lynx can
+handle HTTP, HTTPS, FTP, Gopher, WAIS, and NNTP resources.
 
 The first startup uses Mason to install the Python tools used by this config:
 `black`, `debugpy`, `flake8`, `isort`, `mypy`, and `pylint`.

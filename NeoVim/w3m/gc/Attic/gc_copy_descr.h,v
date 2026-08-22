@@ -1,0 +1,80 @@
+head	1.2;
+access;
+symbols
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.17.16;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.17.16;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@
+/* 
+ * Copyright (c) 1999 by Silicon Graphics.  All rights reserved.
+ *
+ * THIS MATERIAL IS PROVIDED AS IS, WITH ABSOLUTELY NO WARRANTY EXPRESSED
+ * OR IMPLIED.  ANY USE IS AT YOUR OWN RISK.
+ *
+ * Permission is hereby granted to use or copy this program
+ * for any purpose,  provided the above notices are retained on all copies.
+ * Permission to modify the code and to distribute modified code is granted,
+ * provided the above notices are retained, and a notice that the code was
+ * modified is included with the above copyright notice.
+ */
+/* Descriptor for allocation request. May be redefined by client. */
+typedef struct {
+    GC_word bitmap;	/* Bitmap describing pointer locations.	*/
+			/* High order bit correspond to 0th	*/
+			/* word.  2 lsbs must be 0.		*/
+    size_t length;      /* In bytes, must be multiple of word	*/
+			/* size.  Must be >0, <= 512		*/
+} * GC_copy_descriptor;
+
+/* The collector accesses descriptors only through these two macros. */
+#define GC_SIZE_FROM_DESCRIPTOR(d) ((d) -> length)
+#define GC_BIT_MAP_FROM_DESCRIPTOR(d) ((d) -> bitmap)
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

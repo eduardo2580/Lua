@@ -1,0 +1,73 @@
+head	1.2;
+access;
+symbols
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.22.13.43.38;	author ukai;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.17.46;	author a-ito;	state Exp;
+branches
+	1.1.1.1
+	1.1.2.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.17.46;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.1.2.1
+date	2001.11.22.17.52.29;	author inu;	state dead;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@[w3m-dev 02501]
+Tsutomu Okada <okada@@furuno.co.jp>
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

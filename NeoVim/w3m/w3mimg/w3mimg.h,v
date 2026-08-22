@@ -1,0 +1,358 @@
+head	1.9;
+access;
+symbols
+	release-0-5-3:1.9
+	release-0-5-2:1.8
+	release-0-5-1:1.8
+	release-0-5:1.8
+	release-0-4-2:1.8
+	release-0-4-1:1.5
+	release-0-4:1.5
+	release-0-4-rc3:1.5
+	release-0-4-rc2:1.5
+	release-0-4-rc1:1.5
+	release-0-3-2-2:1.5
+	release-0-3-2-1:1.5
+	branch-0-3-2:1.5.0.2
+	release-0-3-2:1.5
+	release-0-3-2-rc4:1.5
+	release-0-3-2-rc3:1.5
+	release-0-3-2-rc2:1.5
+	release-0-3-2-rc1:1.5;
+locks; strict;
+comment	@ * @;
+
+
+1.9
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.07.13.16.19.10;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.07.07.15.48.17;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.24.15.45.58;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.09.09.13.59.24;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.22.16.17.32;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.18.15.14.51;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.07.18.06.07.25;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.17.20.58.48;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@/* $Id: w3mimg.h,v 1.8 2003/07/13 16:19:10 ukai Exp $ */
+#ifndef W3MIMG_W3MIMG_H
+#define W3MIMG_W3MIMG_H
+
+#include "config.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef USE_W3MIMG_FB
+#include "w3mimg/fb/fb.h"
+#include "w3mimg/fb/fb_img.h"
+#endif
+
+typedef struct {
+    void *pixmap;		/* driver specific */
+    int width;
+    int height;
+} W3MImage;
+
+typedef struct _w3mimg_op {
+    void *priv;			/* driver specific data */
+    int width, height;		/* window width, height */
+    int offset_x, offset_y;	/* offset */
+    int clear_margin;
+    int max_anim;
+
+    int (*init) (struct _w3mimg_op * self);
+    int (*finish) (struct _w3mimg_op * self);
+    int (*active) (struct _w3mimg_op * self);
+    void (*set_background) (struct _w3mimg_op * self, char *background);
+    void (*sync) (struct _w3mimg_op * self);
+    void (*close) (struct _w3mimg_op * self);
+
+    int (*load_image) (struct _w3mimg_op * self, W3MImage * img, char *fname,
+		       int w, int h);
+    int (*show_image) (struct _w3mimg_op * self, W3MImage * img,
+		       int sx, int sy, int sw, int sh, int x, int y);
+    void (*free_image) (struct _w3mimg_op * self, W3MImage * img);
+    int (*get_image_size) (struct _w3mimg_op * self, W3MImage * img,
+			   char *fname, int *w, int *h);
+    int (*clear) (struct _w3mimg_op * self, int x, int y, int w, int h);
+} w3mimg_op;
+
+#ifdef USE_W3MIMG_X11
+extern w3mimg_op *w3mimg_x11open();
+#endif
+#ifdef USE_W3MIMG_FB
+extern w3mimg_op *w3mimg_fbopen();
+#endif
+#ifdef USE_W3MIMG_WIN
+extern w3mimg_op *w3mimg_winopen();
+#endif
+
+extern w3mimg_op *w3mimg_open();
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* W3MIMG_W3MIMG_H */
+@
+
+
+1.8
+log
+@[w3m-dev 03938] clear region margin
+* w3mimgdisplay.c (clearMargin): added
+	(GetOption): add -margin
+	(ClearImage): clear margin
+* w3mi,g/w3mimg.h (w3mimg_op): clear_margin
+* w3mimg/fb/fb.c (fb_clear): x,y must be >= 0
+* w3mimg/x11/x11_w3mimg.c (x11_clear): x,y must be >= 0
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 4
+a4 1
+/* $Id: w3mimg.h,v 1.7 2003/07/07 15:48:17 ukai Exp $ */
+d7 4
+d52 3
+d57 5
+@
+
+
+1.7
+log
+@[w3m-dev 03929] clear image
+* image.c (syncImage): added
+	(drawImage): rewrite using syncImage()
+	(clearImage): use clear image command (6)
+* w3mimgdisplay.c: change protocol
+	2 => terminate drawing
+	6 => clear image
+	(main): '2' calls TermImage()
+		'6' calls ClearImage()
+		TermImage() when exit
+	(TermImage): renamed from ClearImage
+	(ClearImage): rewritten to call w_op->clear()
+* w3mimg.h/w3mimg.h (w3mimg_op): add clear()
+* w3mimg/fb/fb.c (fb_clear): added
+* w3mimg/fb/fb.h (fb_clear): added
+* w3mimg/fb/fb_img.c (fb_image_clear): added
+* w3mimg/fb/fb_w3mimg.c (w3mfb_clear): added
+	(w3mimg_fbopen): initialize wop->clear
+* w3mimg/x11/x11_w3mimg.c (x11_clear): added
+	(w3mimg_x11open): initialize wop->clear
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.6 2003/03/24 15:45:58 ukai Exp $ */
+d19 1
+@
+
+
+1.6
+log
+@[w3m-dev 03829] w3mimgdisplay -anim
+* w3mimgdisplay.c (maxAnim): added, default 100
+	(main): add --anim option, w_op->max_anim
+* w3mimg/w3mimg.h (w3mimg_op): add max_anim
+* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): add max_anim
+* w3mimg/fb/fb_img.h (fb_image_load): add max_anim args
+* w3mimg/fb/fb_imlib2.c (fb_image_load): add max_anim args
+* w3mimg/fb/fb_w3mimg.c (w3mfb_load_image): pass max_anim
+* w3mimg/x11/x11_w3mimg.c (x11_load_image): max_anim
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.5 2002/09/09 13:59:24 ukai Exp $ */
+d35 1
+@
+
+
+1.5
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.4 2002/07/22 16:17:32 ukai Exp $ */
+d19 1
+@
+
+
+1.4
+log
+@[w3m-dev 03279] w3m-img for framebuffer update
+	  http://homepage3.nifty.com/slokar/fb/w3mfb.patch.gz
+* w3mimg/fb/readme.txt: update
+* w3mimg/fb/fb.c: update
+* w3mimg/fb/fb.h: update
+* w3mimg/fb/fb_gdkpixbuf.c: update
+* w3mimg/fb/fb_img.c: update
+* w3mimg/fb/fb_img.h: update
+* w3mimg/fb/fb_imlib2.c: update
+* w3mimg/fb/fb_w3mimg.c: update
+* w3mimg/fb/fb_gdkpixbuf.h: deleted
+* w3mimg/fb/fb_imlib2.h: deleted
+* w3mimg/w3mimg.h (w3mimg_op): add get_image_size()
+* w3mimg/x11/x11_w3mimg.c: update
+* w3mimgdisplay.c (main): use get_image_size()
+* w3mimgsize.c (main): use get_image_size()
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.3 2002/07/18 15:14:51 ukai Exp $ */
+d32 1
+a32 1
+    int (*get_image_size) (struct _w3mimg_op * self, W3MImage * img, 
+@
+
+
+1.3
+log
+@indent
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.2 2002/07/18 06:07:25 ukai Exp $ */
+d32 2
+@
+
+
+1.2
+log
+@XMakefile (w3mimg/w3mimg): added
+	(w3img/fb) fixed
+* w3mimg/w3mimg.h (w3mimg_open): deleted to avoid compilation warnings
+* w3mimg/w3mimg.c: added
+* configure (imgobjs): add w3mimg/w3mimg.o
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.h,v 1.1 2002/07/17 20:58:48 ukai Exp $ */
+d10 1
+a10 1
+    void *pixmap;	/* driver specific */
+d16 3
+a18 3
+    void *priv;	/* driver specific data */
+    int width, height;	/* window width, height */
+    int offset_x, offset_y; /* offset */
+d20 6
+a25 6
+    int (*init)(struct _w3mimg_op *self);
+    int (*finish)(struct _w3mimg_op *self);
+    int (*active)(struct _w3mimg_op *self);
+    void (*set_background)(struct _w3mimg_op *self, char *background);
+    void (*sync)(struct _w3mimg_op *self);
+    void (*close)(struct _w3mimg_op *self);
+d27 5
+a31 5
+    int (*load_image)(struct _w3mimg_op *self, W3MImage *img, char *fname, 
+		      int w, int h);
+    int (*show_image)(struct _w3mimg_op *self, W3MImage *img,
+		      int sx, int sy, int sw, int sh, int x, int y);
+    void (*free_image)(struct _w3mimg_op *self, W3MImage *img);
+@
+
+
+1.1
+log
+@merge w3m-img for framebuffer support
+* w3mimg/w3mimg.h: created
+* w3mimg/x11/x11_w3mimg.c: created
+* w3mimg/fb/fb_w3mimg.c: created
+* w3mimgsize.c w3mimgdisplay.c: modified
+* configure: modified
+* XMakefile: modified
+* config.h.dist: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+w3m-img for framebuffer support
+* http://homepage3.nifty.com/slokar/fb/
+* w3mimg/fb/fb.c w3mimg/fb/fb.h
+  w3mimg/fb/fb_img.c w3mimg/fb/fb_img.h
+  w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_gdkpixbuf.h
+  w3mimg/fb/fb_imlib2.c w3mimg/fb/fb_imlib.h
+  w3mimg/fb/readme.txt w3mimg/fb/license.txt: added
+From: Hiroshi Kawashima <kei@@sm.sony.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d35 1
+a35 1
+w3mimg_op *w3mimg_x11open();
+d38 1
+a38 1
+w3mimg_op *w3mimg_fbopen();
+d41 1
+a41 12
+static w3mimg_op *w3mimg_open() {
+    w3mimg_op *w_op = NULL;
+#ifdef USE_W3MIMG_X11
+    if (w_op == NULL)
+	w_op = w3mimg_x11open();
+#endif
+#ifdef USE_W3MIMG_FB
+    if (w_op == NULL)
+	w_op = w3mimg_fbopen();
+#endif
+    return w_op;
+}
+@
+

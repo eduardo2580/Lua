@@ -1,0 +1,203 @@
+head	1.6;
+access;
+symbols
+	release-0-5-3:1.6
+	release-0-5-2:1.5
+	release-0-5-1:1.5
+	release-0-5:1.5
+	release-0-4-2:1.5
+	release-0-4-1:1.5
+	release-0-4:1.5
+	release-0-4-rc3:1.5
+	release-0-4-rc2:1.5
+	release-0-4-rc1:1.5
+	release-0-3-2-2:1.4
+	release-0-3-2-1:1.4
+	branch-0-3-2:1.4.0.2
+	release-0-3-2:1.4
+	release-0-3-2-rc4:1.4
+	release-0-3-2-rc3:1.4
+	release-0-3-2-rc2:1.4
+	release-0-3-2-rc1:1.4;
+locks; strict;
+comment	@ * @;
+
+
+1.6
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.19.03.25.56;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.19.03.24.28;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.07.18.15.14.36;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.18.06.07.39;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@/* $Id: w3mimg.c,v 1.5 2002/11/06 03:50:49 ukai Exp $ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include "w3mimg/w3mimg.h"
+
+w3mimg_op *
+w3mimg_open()
+{
+    w3mimg_op *w_op = NULL;
+#ifdef W3MIMGDISPLAY_SETUID
+    uid_t runner_uid = getuid();
+    uid_t owner_uid = geteuid();
+#endif
+#ifdef USE_W3MIMG_WIN
+    if (w_op == NULL)
+	w_op = w3mimg_winopen();
+#endif
+#ifdef USE_W3MIMG_X11
+#ifdef W3MIMGDISPLAY_SETUID
+    /* run in user privileges */
+    setreuid(owner_uid, runner_uid);
+#endif
+    if (w_op == NULL)
+	w_op = w3mimg_x11open();
+#ifdef W3MIMGDISPLAY_SETUID
+    setreuid(runner_uid, owner_uid);
+#endif
+#endif
+#ifdef USE_W3MIMG_FB
+    /* run in setuid privileges */
+    if (w_op == NULL)
+	w_op = w3mimg_fbopen();
+#endif
+    return w_op;
+}
+@
+
+
+1.5
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.c,v 1.4 2002/07/19 03:25:56 ukai Exp $ */
+d17 4
+@
+
+
+1.4
+log
+@[w3m-dev 03277] compile error on Solaris7
+* w3mimg/w3mimg.c: include <stdio.h> for NULL
+From: Hideyuki SHIRAI <shirai@@rdmg.mgcs.mei.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.c,v 1.3 2002/07/19 03:24:28 ukai Exp $ */
+d5 2
+d13 4
+d18 4
+d24 3
+d29 1
+@
+
+
+1.3
+log
+@[w3m-dev 03276] compile error on EWS4800
+* file.c (extract_auth_val): fix warnings
+* w3mimg/w3mimg.c: include <stdlib.h>
+From: Yoshinobu Sakane <sakane@@d4.bsd.nes.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.c,v 1.2 2002/07/18 15:14:36 ukai Exp $ */
+d3 1
+@
+
+
+1.2
+log
+@indent
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimg.c,v 1.1 2002/07/18 06:07:39 ukai Exp $ */
+d3 1
+@
+
+
+1.1
+log
+@XMakefile (w3mimg/w3mimg): added
+	(w3img/fb) fixed
+* w3mimg/w3mimg.h (w3mimg_open): deleted to avoid compilation warnings
+* w3mimg/w3mimg.c: added
+* configure (imgobjs): add w3mimg/w3mimg.o
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d5 3
+a7 1
+w3mimg_op *w3mimg_open() {
+a18 1
+
+@
+

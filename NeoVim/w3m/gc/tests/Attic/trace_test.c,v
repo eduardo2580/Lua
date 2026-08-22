@@ -1,0 +1,92 @@
+head	1.2;
+access;
+symbols
+	release-0-4-1:1.1
+	release-0-4:1.1
+	release-0-4-rc3:1.1
+	release-0-4-rc2:1.1
+	release-0-4-rc1:1.1
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.6
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1
+	release-0-3:1.1
+	release-0-2-5-1:1.1
+	branch-0-2-5:1.1.0.4
+	release-0-2-5:1.1
+	release-0-2-4:1.1
+	release-0-2-3-2:1.1
+	release-0-2-3-1:1.1
+	release-0-2-3:1.1
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2003.03.09.19.43.19;	author ukai;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@remove gc
+@
+text
+@#include <stdio.h>
+#define GC_DEBUG
+#include "gc.h"
+
+struct treenode {
+    struct treenode *x;
+    struct treenode *y;
+} * root[10];
+
+struct treenode * mktree(int i) {
+  struct treenode * r = GC_MALLOC(sizeof(struct treenode));
+  if (0 == i) return 0;
+  r -> x = mktree(i-1);
+  r -> y = mktree(i-1);
+  return r;
+}
+
+main()
+{
+  int i;
+  for (i = 0; i < 10; ++i) {
+    root[i] = mktree(12);
+  }
+  GC_generate_random_backtrace();
+  GC_generate_random_backtrace();
+  GC_generate_random_backtrace();
+  GC_generate_random_backtrace();
+}
+@
+
+
+1.1
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@@
+

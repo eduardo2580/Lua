@@ -1,0 +1,326 @@
+head	1.3;
+access;
+symbols
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.2
+	release-0-3-2-1:1.2
+	branch-0-3-2:1.2.0.6
+	release-0-3-2:1.2
+	release-0-3-2-rc4:1.2
+	release-0-3-2-rc3:1.2
+	release-0-3-2-rc2:1.2
+	release-0-3-2-rc1:1.2
+	release-0-3-1:1.2
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.4
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.2
+	release-0-2-3:1.2
+	inu-0-2-2-rel-1-1:1.2
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2003.03.09.19.43.06;	author ukai;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.17.01;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.17.01;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@remove gc
+@
+text
+@
+# Rewritten smakefile for amiga / sas/c. -Kjetil M.
+# Dont use the cord-package if you define parm=both or parm=reg.
+
+
+#----------------TOOLS--------------------------------
+CC=sc
+LINKER=slink
+LIBER=oml
+
+#----------------CPU OPTIONS--------------------------
+
+CPU=68060
+
+#----------------FPU OPTIONS--------------------------
+
+MATH=8
+MATHLIB=LIB:scm881.lib
+
+#----------------COMPILER OPTIONS---------------------
+
+IGNORE= IGNORE=85 IGNORE=154 IGNORE=161 IGNORE=100 
+
+OPTIMIZE=optimize optimizetime optglobal optimizerdepth=100 optimizerpeephole optloop OPTSCHED optimizerinlocal optimizerrecurdepth=100
+# optimizerinline optimizercomplexity=100
+
+OPT= $(OPTIMIZE) CPU=$(CPU) math=$(MATH) NOSTACKCHECK VERBOSE \
+MAPHUNK NOVERSION NOICONS nodebug \
+DEFINE SILENT \
+parm=reg \
+DEFINE __USE_SYSBASE
+
+
+SOPT= $(OPT) $(IGNORE) \
+DEFINE AMIGA_SKIP_SEG \
+DEFINE ATOMIC_UNCOLLECTABLE \
+DEFINE GC_AMIGA_FASTALLOC \
+DEFINE GC_AMIGA_RETRY \
+DEFINE GC_AMIGA_PRINTSTATS \
+DEFINE GC_AMIGA_GC
+
+
+#DEFINE ALL_INTERIOR_POINTERS \
+
+
+SCOPT= $(SOPT) define GC_AMIGA_MAKINGLIB
+
+CSCOPT= $(OPT) DEFINE AMIGA IGNORE=100 IGNORE=161 
+
+#------------------LINKING----------------------------
+
+
+all: gctest setjmp_t cord/cordtest
+
+clean:
+   delete *.lib gctest setjmp_t *.o *.lnk cord/*.o cord/*.lib cord/*.lnk cord/cordtest
+	smake
+
+test: setjmp_t gctest cord/cordtest
+   setjmp_t
+   gctest
+   cord/cordtest
+
+gctest: gc$(CPU).lib GCAmigaOS$(CPU).lib test.o
+   $(LINKER) LIB:c.o test.o TO gctest LIB gc$(CPU).lib LIB:sc.lib $(MATHLIB)
+
+setjmp_t: setjmp_t.o gc.h
+   $(LINKER) LIB:c.o setjmp_t.o to setjmp_t lib LIB:sc.lib
+
+cord/cordtest: cord/cordtest.o cord/cord$(CPU).lib gc$(CPU).lib
+	slink LIB:c.o cord/cordtest.o LIB $(MATHLIB) gc$(CPU).lib cord/cord$(CPU).lib LIB:sc.lib TO cord/cordtest
+
+
+#------------------LIBBING----------------------------
+
+OBJS= alloc.o reclaim.o allchblk.o misc.o mach_dep.o os_dep.o mark_rts.o headers.o mark.o obj_map.o blacklst.o finalize.o new_hblk.o real_malloc.o dyn_load.o dbg_mlc.o malloc.o stubborn.o checksums.o typd_mlc.o ptr_chck.o mallocx.o
+
+gc$(CPU).lib: $(OBJS)
+   $(LIBER) gc$(CPU).lib r $(OBJS)
+
+
+COBJS = cord/cordbscs.o cord/cordprnt.o cord/cordxtra.o
+
+cord/cord$(CPU).lib: $(COBJS)
+	oml cord/cord$(CPU).lib r $(COBJS)
+
+#------------------COMPILING--------------------------
+
+INC=  gc_private.h gc_hdrs.h gc.h gcconfig.h
+
+alloc.o : alloc.c $(INC)
+	$(CC) alloc.c $(SCOPT) ignore=7
+
+reclaim.o : reclaim.c $(INC)
+	$(CC) reclaim.c $(SCOPT)
+
+allchblk.o : allchblk.c $(INC)
+	$(CC) allchblk.c $(SCOPT)
+
+misc.o : misc.c $(INC)
+	$(CC) misc.c $(SCOPT)
+
+os_dep.o : os_dep.c $(INC) AmigaOS.c
+	$(CC) os_dep.c $(SCOPT)
+
+mark_rts.o : mark_rts.c $(INC)
+	$(CC) mark_rts.c $(SCOPT)
+
+headers.o : headers.c $(INC)
+	$(CC) headers.c $(SCOPT)
+
+mark.o : mark.c $(INC)
+	$(CC) mark.c $(SCOPT)
+
+obj_map.o : obj_map.c $(INC)
+	$(CC) obj_map.c $(SCOPT)
+
+blacklst.o : blacklst.c $(INC)
+	$(CC) blacklst.c $(SCOPT)
+
+finalize.o : finalize.c $(INC)
+	$(CC) finalize.c $(SCOPT) noopt	#Could sas/c still have problems with this one? Gctest sometimes fails to finalize all.
+
+new_hblk.o : new_hblk.c $(INC)
+	$(CC) new_hblk.c $(SCOPT)
+
+real_malloc.o : real_malloc.c $(INC)
+	$(CC) real_malloc.c $(SCOPT)
+
+dyn_load.o : dyn_load.c $(INC)
+	$(CC) dyn_load.c $(SCOPT)
+
+dbg_mlc.o : dbg_mlc.c $(INC)
+	$(CC) dbg_mlc.c $(SCOPT)
+
+malloc.o : malloc.c $(INC)
+	$(CC) malloc.c $(SCOPT)
+
+mallocx.o : mallocx.c $(INC)
+	$(CC) mallocx.c $(SCOPT)
+
+stubborn.o : stubborn.c $(INC)
+	$(CC) stubborn.c $(SCOPT)
+
+checksums.o : checksums.c $(INC)
+	$(CC) checksums.c $(SCOPT)
+
+typd_mlc.o: typd_mlc.c $(INC)
+	$(CC) typd_mlc.c $(SCOPT)
+
+mach_dep.o : mach_dep.c $(INC)
+	$(CC) mach_dep.c $(SCOPT)
+
+ptr_chck.o: ptr_chck.c $(INC)
+	$(CC) ptr_chck.c $(SCOPT)
+
+test.o : test.c $(INC)
+	$(CC) test.c $(SOPT)
+
+setjmp_t: setjmp_t.c gc.h
+   $(CC) setjmp_t.c $(SOPT)
+
+
+# cords:
+
+cord/cordbscs.o: cord/cordbscs.c
+	sc cord/cordbscs.c $(CSCOPT)
+
+cord/cordprnt.o: cord/cordprnt.c
+	sc cord/cordprnt.c $(CSCOPT)
+
+cord/cordxtra.o: cord/cordxtra.c
+	sc cord/cordxtra.c $(CSCOPT)
+
+cord/cordtest.o: cord/cordtest.c
+	sc cord/cordtest.c $(CSCOPT)
+
+
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 87
+a87 1
+OBJS= alloc.o reclaim.o allchblk.o misc.o mach_dep.o os_dep.o mark_rts.o headers.o mark.o obj_map.o blacklst.o finalize.o new_hblk.o real_malloc.o dyn_load.o dbg_mlc.o malloc.o stubborn.o checksums.o typd_mlc.o ptr_chck.o
+d91 2
+a92 1
+all: gctest setjmp_t
+a93 1
+alloc.o : alloc.c $(INC)
+d95 2
+d98 2
+d101 5
+a105 1
+os_dep.o : os_dep.c $(INC)
+d107 2
+d110 2
+d113 2
+d116 2
+d119 2
+d122 2
+a123 2
+  sc noopt finalize.c # There seems to be a bug in the optimizer (V6.51).
+                      # gctest won't work if you remove this...
+d125 2
+d128 2
+d131 2
+d134 2
+d137 5
+a141 1
+mallocx.o : malloc.c $(INC)
+d143 2
+d146 2
+d149 2
+d152 2
+d155 2
+d158 1
+d160 2
+a161 2
+gc.lib: $(OBJS)
+   oml gc.lib r $(OBJS)
+a162 2
+clean:
+   delete gc.lib gctest setjmp_t \#?.o
+d164 13
+a176 2
+gctest: gc.lib test.o
+   slink LIB:c.o test.o to $@@ lib gc.lib LIB:sc.lib LIB:scm.lib
+a177 3
+setjmp_t: setjmp_t.c gc.h
+   sc setjmp_t.c
+   slink LIB:c.o $@@.o to $@@ lib LIB:sc.lib
+a178 3
+test: setjmp_t gctest
+   setjmp_t
+   gctest
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

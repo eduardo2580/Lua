@@ -1,0 +1,615 @@
+head	1.16;
+access;
+symbols
+	release-0-5-3:1.16
+	release-0-5-2:1.15
+	release-0-5-1:1.14
+	release-0-5:1.14
+	release-0-4-2:1.13
+	release-0-4-1:1.11
+	release-0-4:1.11
+	release-0-4-rc3:1.11
+	release-0-4-rc2:1.11
+	release-0-4-rc1:1.11
+	release-0-3-2-2:1.9
+	release-0-3-2-1:1.9
+	branch-0-3-2:1.9.0.2
+	release-0-3-2:1.9
+	release-0-3-2-rc4:1.9
+	release-0-3-2-rc3:1.9
+	release-0-3-2-rc2:1.9
+	release-0-3-2-rc1:1.9
+	release-0-3-1:1.9
+	release-0-3:1.9
+	release-0-2-5-1:1.8.2.1
+	branch-0-2-5:1.8.0.2
+	release-0-2-5:1.8
+	release-0-2-4:1.5
+	release-0-2-3-2:1.3
+	release-0-2-3-1:1.3
+	release-0-2-3:1.3
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.16
+date	2010.12.15.10.50.24;	author htrb;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2007.05.31.01.19.50;	author inu;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.09.22.21.02.20;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.13.15.33.40;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.03.12.18.27.07;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.24.17.20.47;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.12.12.41.58;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.02.01.13.58.47;	author inu;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.29.19.16.00;	author ukai;	state Exp;
+branches
+	1.8.2.1;
+next	1.7;
+
+1.7
+date	2002.01.29.16.23.37;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.01.29.03.23.44;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.23.14.31.38;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.12.21.21.37.12;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.20.17.49.23;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.27;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.27;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.8.2.1
+date	2002.02.04.16.26.29;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.16
+log
+@[w3m-dev 04424] http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch
+@
+text
+@/* $Id: mktable.c,v 1.15 2007/05/31 01:19:50 inu Exp $ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "myctype.h"
+#include "config.h"
+#include "hash.h"
+#include "myctype.h"
+#include "Str.h"
+#include <gc.h>
+
+/* *INDENT-OFF* */
+defhash(HashItem_ss *, int, hss_i)
+/* *INDENT-ON* */
+
+#define keycomp(x,y) ((x)==(y))
+
+/* XXX: we assume sizeof(unsigned long) >= sizeof(void *) */
+static unsigned long
+hashfunc(HashItem_ss * x)
+{
+    return (unsigned long)x;
+}
+
+/* *INDENT-OFF* */
+defhashfunc(HashItem_ss *, int, hss_i)
+/* *INDENT-ON* */
+
+int
+main(int argc, char *argv[], char **envp)
+{
+    FILE *f;
+    Hash_ss *hash;
+    HashItem_ss **hashitems, *hi;
+    int size, n, i, j;
+    Str s, name, fbase;
+    char *p;
+    Hash_hss_i *rhash;
+
+    GC_INIT();
+    if (argc != 3) {
+	fprintf(stderr, "usage: %s hashsize file.tab > file.c\n", argv[0]);
+	exit(1);
+    }
+    size = atoi(argv[1]);
+    if (size <= 0) {
+	fprintf(stderr, "hash size should be positive\n");
+	exit(1);
+    }
+    if ((f = fopen(argv[2], "r")) == NULL) {
+	fprintf(stderr, "Can't open %s\n", argv[2]);
+	exit(1);
+    }
+    p = argv[2];
+    if (strrchr(p, '/') != NULL)
+	p = strrchr(p, '/') + 1;
+    fbase = Strnew_charp(p);
+    if (strchr(fbase->ptr, '.'))
+	while (Strlastchar(fbase) != '.')
+	    Strshrink(fbase, 1);
+    Strshrink(fbase, 1);
+
+    hash = newHash_ss(size);
+    printf("#include \"hash.h\"\n");
+    for (;;) {
+	s = Strfgets(f);
+	if (s->length == 0)
+	    exit(0);
+	Strremovetrailingspaces(s);
+	if (Strcmp_charp(s, "%%") == 0)
+	    break;
+	puts(s->ptr);
+    }
+    n = 0;
+    for (;;) {
+	s = Strfgets(f);
+	if (s->length == 0)
+	    break;
+	Strremovefirstspaces(s);
+	Strremovetrailingspaces(s);
+	name = Strnew();
+	for (p = s->ptr; *p; p++) {
+	    if (IS_SPACE(*p))
+		break;
+	    Strcat_char(name, *p);
+	}
+	while (*p && IS_SPACE(*p))
+	    p++;
+	putHash_ss(hash, name->ptr, p);
+	n++;
+    }
+    fclose(f);
+
+    hashitems = (HashItem_ss **) GC_malloc(sizeof(HashItem_ss *) * n);
+    rhash = newHash_hss_i(n * 2);
+    j = 0;
+    for (i = 0; i < hash->size; i++) {
+	for (hi = hash->tab[i]; hi != NULL; hi = hi->next) {
+	    hashitems[j] = hi;
+	    putHash_hss_i(rhash, hi, j);
+	    j++;
+	}
+    }
+    printf("static HashItem_si MyHashItem[] = {\n");
+    for (i = 0; i < j; i++) {
+	printf("    /* %d */ {\"%s\", %s, ", i,
+	       hashitems[i]->key, hashitems[i]->value);
+	if (hashitems[i]->next == NULL) {
+	    printf("NULL},\n");
+	}
+	else {
+	    printf("&MyHashItem[%d]},\n",
+		   getHash_hss_i(rhash, hashitems[i]->next, -1));
+	}
+    }
+    printf("};\n\nstatic HashItem_si *MyHashItemTbl[] = {\n");
+
+    for (i = 0; i < hash->size; i++) {
+	if (hash->tab[i])
+	    printf("    &MyHashItem[%d],\n",
+		   getHash_hss_i(rhash, hash->tab[i], -1));
+	else
+	    printf("    NULL,\n");
+    }
+    printf("};\n\n");
+    printf("Hash_si %s = { %d, MyHashItemTbl };\n", fbase->ptr, hash->size);
+
+    exit(0);
+}
+@
+
+
+1.15
+log
+@fix type, add GC_INIT().
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.14 2003/09/22 21:02:20 ukai Exp $ */
+d105 1
+a105 1
+	printf("  /* %d */ {\"%s\",%s,", i,
+d119 1
+a119 1
+	    printf("  &MyHashItem[%d],\n",
+d122 1
+a122 1
+	    printf("  NULL,\n");
+d125 1
+a125 1
+    printf("Hash_si %s = {%d, MyHashItemTbl};\n", fbase->ptr, hash->size);
+@
+
+
+1.14
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.13 2003/03/13 15:33:40 ukai Exp $ */
+d39 1
+@
+
+
+1.13
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.12 2003/03/12 18:27:07 ukai Exp $ */
+d7 1
+@
+
+
+1.12
+log
+@[w3m-dev 03819] support cd build && ../configure
+* Makefile.in: add VPATH
+		add MV
+		use $(top_srcdir), $<, $@@
+* acinclude.m4 (AC_W3M_VERSION): use $srcdir
+* configure.in (AC_W3M_VERSION): move
+* mktable.c (main): basename
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.11 2002/12/24 17:20:47 ukai Exp $ */
+d53 1
+a53 1
+	p = strrchr(p, '/')+1;
+@
+
+
+1.11
+log
+@[w3m-dev 03595] tolower, toupper
+* Str.c (Strlower): TOLOWER
+	(Strupper): TOUPPER
+* backend.c: delete ctype.h
+* etc.c (gethtmlcmd): TOLOWER
+* file.c (readHeader): TOLOWER
+	(checkOverWrite): TOLOWER
+	(guess_charset): TOLOWER
+* ftp.c: delete ctype.h
+* indep.c (strcasecmp): TOLOWER
+	(strncasecmp): TOLOWER
+	(strcasematch): TOLOWER
+* istream.c: include myctype.h
+	(ssl_get_certificate): TOLOWER
+* mailcap.c (mailcapMatch): TOLOWER
+* main.c (_quitfm): TOLOWER
+* menu.c (accesskey_menu): TOLOWER
+* mimehead.c: include myctype.h
+	(decodeWord): TOUPPER
+* mktable.c: delete ctype.h, include myctype.h
+	(main): IS_SPACE
+* myctype.h: delete ctype.h
+	(TOLOWER): added
+	(TOUPPER): added
+* parsetagx.c (parse_tag): TOLOWER
+* rc.c (str_to_bool): TOLOWER
+	(str_to_color): TOLOWER
+* regex.c: delete ctype.h, include myctype.h
+	(TOLOWER): added
+	(TOUPPER): added
+	(regmatch1): TOLOWER
+	(matchWhich): TOLOWER, TOUPPER
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.10 2002/11/12 12:41:58 ukai Exp $ */
+d51 4
+a54 1
+    fbase = Strnew_charp(argv[2]);
+@
+
+
+1.10
+log
+@[w3m-dev 03415] fix a build issue for 64bit arch
+* gcmain.c: deleted
+* main.c: no need gcmain.c
+	s/MAIN/main/
+* mktable.c: ditto
+* w3mbookmark.c: ditto
+* w3mhelperpanel.c: ditto
+From: Akira TAGOH <at@@gclab.org>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.9 2002/02/01 13:58:47 inu Exp $ */
+d4 1
+a4 1
+#include <ctype.h>
+d77 1
+a77 1
+	    if (isspace(*p))
+d81 1
+a81 1
+	while (*p && isspace(*p))
+@
+
+
+1.9
+log
+@for SunOS 4.1.x
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.8 2002/01/29 19:16:00 ukai Exp $ */
+a9 2
+#include "gcmain.c"
+
+d28 1
+a28 1
+MAIN(int argc, char *argv[], char **envp)
+@
+
+
+1.8
+log
+@indent
+@
+text
+@d1 1
+a1 2
+/* $Id: mktable.c,v 1.7 2002/01/29 16:23:37 ukai Exp $ */
+#include "config.h"
+d5 1
+@
+
+
+1.8.2.1
+log
+@w3m 0.2.5.1 - backport from w3m/0.2.5+cvs-1.299
+@
+text
+@d1 2
+a2 1
+/* $Id: mktable.c,v 1.9 2002/02/01 13:58:47 inu Exp $ */
+a5 1
+#include "config.h"
+@
+
+
+1.7
+log
+@[w3m-dev 02920] don't use inttypes.h and/or stdint.h
+* mktable.c: remove inttypes.h, uintptr_t, use unsigned long instead
+* configure: remove inttypes.h detection
+* config.h.dist: remove HAVE_INTTYPES_H
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.6 2002/01/29 03:23:44 ukai Exp $ */
+d22 1
+a22 1
+    return (unsigned long) x;
+@
+
+
+1.6
+log
+@[w3m-dev 02921] use inttypes.h instead of stdint.h
+* configure: check inttypes.h instead of stdint.h
+* config.h.dist: s/STDINT_H/INTTYPES_H/
+* mktable.c: use inttypes.h instead of stdint.h
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.5 2001/12/23 14:31:38 ukai Exp $ */
+a5 5
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#else
+typedef unsigned long uintptr_t;
+#endif
+d18 2
+a19 1
+static uintptr_t
+d22 1
+a22 1
+    return (uintptr_t) x;
+@
+
+
+1.5
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.4 2001/12/21 21:37:12 ukai Exp $ */
+d6 2
+a7 2
+#ifdef HAVE_STDINT_H
+#include "stdint.h"
+d9 1
+a9 1
+typedef unsigned int uintptr_t;
+d17 1
+d19 2
+d22 3
+a24 1
+     static uintptr_t hashfunc(HashItem_ss * x)
+d29 1
+d31 4
+a34 2
+     int
+      MAIN(int argc, char *argv[], char **envp)
+@
+
+
+1.4
+log
+@[w3m-dev 02692] w3m on linux/ia64
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: mktable.c,v 1.3 2001/11/24 02:01:26 ukai Exp $ */
+d21 1
+a21 1
+    return (uintptr_t)x;
+@
+
+
+1.3
+log
+@run make indent
+@
+text
+@d1 2
+a2 1
+/* $Id: mktable.c,v 1.2 2001/11/20 17:49:23 ukai Exp $ */
+d6 5
+d19 1
+a19 1
+     static unsigned int hashfunc(HashItem_ss * x)
+d21 1
+a21 1
+    return (unsigned int)x;
+@
+
+
+1.2
+log
+@add rcsids
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d13 1
+a13 2
+
+    static unsigned int hashfunc(HashItem_ss * x)
+d15 1
+a15 1
+    return (unsigned int) x;
+d19 2
+a20 2
+    int
+     MAIN(int argc, char *argv[], char **envp)
+d93 1
+a93 2
+	       hashitems[i]->key,
+	       hashitems[i]->value);
+d98 2
+a99 1
+	    printf("&MyHashItem[%d]},\n", getHash_hss_i(rhash, hashitems[i]->next, -1));
+d106 2
+a107 1
+	    printf("  &MyHashItem[%d],\n", getHash_hss_i(rhash, hash->tab[i], -1));
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 1
+
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

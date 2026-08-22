@@ -1,0 +1,596 @@
+head	1.9;
+access;
+symbols
+	release-0-5-3:1.9
+	release-0-5-2:1.8
+	release-0-5-1:1.5
+	release-0-5:1.5
+	release-0-4-2:1.5
+	release-0-4-1:1.5
+	release-0-4:1.5
+	release-0-4-rc3:1.5
+	release-0-4-rc2:1.5
+	release-0-4-rc1:1.5
+	release-0-3-2-2:1.4
+	release-0-3-2-1:1.4
+	branch-0-3-2:1.4.0.2
+	release-0-3-2:1.4
+	release-0-3-2-rc4:1.4
+	release-0-3-2-rc3:1.4
+	release-0-3-2-rc2:1.4
+	release-0-3-2-rc1:1.4
+	release-0-3-1:1.4
+	release-0-3:1.2
+	release-0-2-5-1:1.2
+	branch-0-2-5:1.2.0.2
+	release-0-2-5:1.2
+	release-0-2-4:1.2
+	release-0-2-3-2:1.2
+	release-0-2-3-1:1.1
+	release-0-2-3:1.1
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.9
+date	2010.07.18.13.38.30;	author htrb;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2006.04.07.15.33.56;	author inu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2006.04.07.15.31.52;	author inu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.12.18.16.48.03;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.03.15.16.10.26;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.03.14.17.51.42;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.12.21.18.33.41;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.15.00.32.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@"MAN_KEEP_FORMATTING=1"
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=325699
+@
+text
+@#!@@PERL@@
+
+$MAN = $ENV{'W3MMAN_MAN'} || '@@MAN@@';
+$QUERY = $ENV{'QUERY_STRING'} || $ARGV[0];
+$SCRIPT_NAME = $ENV{'SCRIPT_NAME'} || $0;
+$CGI = "file://$SCRIPT_NAME";
+$CGI2 = "file:";
+# $CGI2 = "file:///\$LIB/hlink.cgi?";
+$SQUEEZE = 1;
+$ENV{'PAGER'} = 'cat';
+
+if ($QUERY =~ /\=/) {
+  for (split('&', $QUERY)) {
+    ($v, $q) = split('=', $_, 2);
+    $query{$v} = &form_decode($q); 
+  }
+} else {
+  $QUERY =~ s/^man=//;
+  $query{"man"} = &form_decode($QUERY);
+}
+
+if ((! $query{"man"}) && (! $query{"local"})) {
+  if ($query{"keyword"}) {
+    $keyword = $query{"keyword"};
+    $k = &html_quote($keyword);
+    print <<EOF;
+Content-Type: text/html
+
+<html>
+<head><title>man -k $k</title></head>
+<body>
+<h2>man -k <b>$k</b></h2>
+<ul>
+EOF
+    $keyword =~ s:([^-\w\200-\377.,])::g;
+    open(F, "$MAN -k $keyword 2> /dev/null |");
+    @@line = ();
+    while(<F>) {
+      chop;
+      $_ = &html_quote($_);
+      s/(\s+-.*)$//;
+      $title = $1;
+      s@@(\w[\w.\-]*(\s*\,\s*\w[\w.\-]*)*)\s*(\([\dn]\w*\))@@&keyword_ref($1, $3)@@ge;
+      print "<li>$_$title\n";
+    }
+    close(F);
+    print <<EOF;
+</ul>
+</body>
+</html>
+EOF
+    exit;
+  }
+  print <<EOF;
+Content-Type: text/html
+
+<html>
+<head><title>man</title></head>
+<body>
+<form action="$CGI">
+<table>
+<tr><td>Manual:<td><input name=man>
+<tr><td>Section:<td><input name=section>
+<tr><td>Keyword:<td><input name=keyword>
+<tr><td><td><input type=submit> <input type=reset>
+</table>
+</form>
+</body>
+</html>
+EOF
+  exit;
+}
+
+if ($query{"local"}) {
+  $file = $query{"local"};
+  if (! ($file =~ /^\//)) {
+    $file = $query{"pwd"} . '/' . $file;
+  }
+  open(F, "MAN_KEEP_FORMATTING=1 $MAN -l $file 2> /dev/null |");
+} else {
+  $man = $query{"man"};
+  if ($man =~ s/\((\w+)\)$//) {
+    $section = $1;
+    $man_section = "$man($1)";
+  } elsif ($query{"section"}) {
+    $section = $query{"section"};
+    $man_section = "$man($section)";
+  } else {
+    $section = "";
+    $man_section = "$man";
+  }
+
+  $section =~ s:([^-\w\200-\377.,])::g;
+  $man =~ s:([^-\w\200-\377.,])::g;
+  open(F, "MAN_KEEP_FORMATTING=1 $MAN $section $man 2> /dev/null |");
+}
+$ok = 0;
+undef $header;
+$blank = -1;
+$cmd = "";
+$prev = "";
+while(<F>) {
+  if (! defined($header)) {
+    /^\s*$/ && next;
+    $header = $_;
+    $space = $header;
+    chop $space;
+    $space =~ s/\S.*//;
+  } elsif ($_ eq $header) {		# delete header
+    $blank = -1;
+    next;
+  } elsif (!/\010/ && /^$space[\w\200-\377].*\s\S/o) {	# delete footer
+    $blank = -1;
+    next;
+  }
+  if ($SQUEEZE) {
+    if (/^\s*$/) {
+      $blank || $blank++;
+      next;
+    } elsif ($blank) {
+      $blank > 0 && print "\n";
+      $blank = 0;
+    }
+  }
+
+  s/\&/\&amp;/g;
+  s/\</\&lt;/g;
+  s/\>/\&gt;/g;
+
+  s@@([\200-\377].)(\010{1,2}\1)+@@<b>$1</b>@@g;
+  s@@(\&\w+;|.)(\010\1)+@@<b>$1</b>@@g;
+  s@@__\010{1,2}((\<b\>)?[\200-\377].(\</b\>)?)@@<u>$1</u>@@g;
+  s@@_\010((\<b\>)?(\&\w+\;|.)(\</b\>)?)@@<u>$1</u>@@g;
+  s@@((\<b\>)?[\200-\377].(\</b\>)?)\010{1,2}__@@<u>$1</u>@@g;
+  s@@((\<b\>)?(\&\w+\;|.)(\</b\>)?)\010_@@<u>$1</u>@@g;
+  s@@.\010(.)@@$1@@g;
+
+  s@@\</b\>\</u\>\<b\>_\</b\>\<u\>\<b\>@@_@@g;
+  s@@\</u\>\<b\>_\</b\>\<u\>@@_@@g;
+  s@@\</u\>\<u\>@@@@g;
+  s@@\</b\>\<b\>@@@@g;
+
+  if (! $ok) {
+    /^No/ && last;
+    print <<EOF;
+Content-Type: text/html
+
+<html>
+<head><title>man $man_section</title></head>
+<body>
+<pre>
+EOF
+    print;
+    $ok = 1;
+    next;
+  }
+
+  s@@(http|ftp)://[\w.\-/~]+[\w/]@@<a href="$&">$&</a>@@g;
+  s@@(\W)(mailto:)?(\w[\w.\-]*\@@\w[\w.\-]*\.[\w.\-]*\w)@@$1<a href="mailto:$3">$2$3</a>@@g;
+  s@@(\W)(\~?/[\w.][\w.\-/~]*)@@$1 . &file_ref($2)@@ge;
+  s@@(include(<\/?[bu]\>|\s)*\&lt;)([\w.\-/]+)@@$1 . &include_ref($3)@@ge;
+  if ($prev && m@@^\s*(\<[bu]\>)*(\w[\w.\-]*)(\</[bu]\>)*(\([\dm]\w*\))@@) {
+    $cmd .= "$2$4";
+    $prev =~ s@@(\w[\w.\-]*-)((\</[bu]\>)*\s*)$@@<a href="$CGI?$cmd">$1</a>$2@@;
+    print $prev;
+    $prev = '';
+    s@@^(\s*(\<[bu]\>)*)(\w[\w.\-]*)@@@@;
+    print "$1<a href=\"$CGI?$cmd\">$3</a>";
+  } elsif ($prev) {
+    print $prev;
+    $prev = '';
+  }
+  s@@(\w[\w.\-]*)((\</[bu]\>)*)(\([\dm]\w*\))@@<a href="$CGI?$1$4">$1</a>$2$4@@g;
+  if (m@@(\w[\w.\-]*)-(\</[bu]\>)*\s*$@@) {
+    $cmd = $1;
+    $prev = $_;
+    next;
+  }
+  print;
+}
+if ($prev) {
+  print $prev;
+}
+close(F);
+if (! $ok) {
+  if ($query{'quit'}) {
+    if ($query{'local'}) {
+      print STDERR "File $file not found.\n";
+    } else {
+      print STDERR "No manual entry for $man_section.\n";
+    }
+    print STDERR "No manual entry for $man_section.\n";
+    print <<EOF;
+w3m-control: EXIT
+EOF
+    exit 1;
+  }
+  print <<EOF;
+Content-Type: text/html
+
+<html>
+<head><title>man $man_section</title></head>
+<body>
+<pre>
+EOF
+  if ($query{'local'}) {
+    print "File <B>$file</B> not found.\n";
+  } else {
+    print "No manual entry for <B>$man_section</B>.\n";
+  }
+}
+print <<EOF;
+</pre>
+</body>
+</html>
+EOF
+
+sub is_command {
+  local($_) = @@_;
+  local($p);
+
+  (! -d && -x) || return 0;
+  if (! defined(%PATH)) {
+    for $p (split(":", $ENV{'PATH'})) {
+      $p =~ s@@/+$@@@@;
+      $PATH{$p} = 1;
+    }
+  }
+  s@@/[^/]*$@@@@;
+  return defined($PATH{$_});
+}
+
+sub file_ref {
+  local($_) = @@_;
+
+  if (&is_command($_)) {
+    ($man = $_) =~ s@@.*/@@@@;
+    return "<a href=\"$CGI?$man\">$_</a>";
+  }
+  if (/^\~/ || -f || -d) {
+    return "<a href=\"$CGI2$_\">$_</a>";
+  }
+  return $_;
+}
+
+sub include_ref {
+  local($_) = @@_;
+  local($d);
+
+  for $d (
+	"/usr/include",
+	"/usr/local/include",
+	"/usr/X11R6/include",
+	"/usr/X11/include",
+	"/usr/X/include",
+	"/usr/include/X11"
+  ) {
+    -f "$d/$_" && return "<a href=\"$CGI2$d/$_\">$_</a>";
+  }
+  return $_;
+}
+
+sub keyword_ref {
+  local($_, $s) = @@_;
+  local(@@a) = ();
+
+  for (split(/\s*,\s*/)) {
+    push(@@a, "<a href=\"$CGI?$_$s\">$_</a>");
+  }
+  return join(", ", @@a) . $s;
+}
+
+sub html_quote {
+  local($_) = @@_;
+  local(%QUOTE) = (
+    '<', '&lt;',
+    '>', '&gt;',
+    '&', '&amp;',
+    '"', '&quot;',
+  );
+  s/[<>&"]/$QUOTE{$&}/g;
+  return $_;
+}
+
+sub form_decode {
+  local($_) = @@_;
+  s/\+/ /g;
+  s/%([\da-f][\da-f])/pack('c', hex($1))/egi;
+  return $_;
+}
+
+@
+
+
+1.8
+log
+@Add w3mman -l <file> command line argument for viewing of local man files.
+@
+text
+@d79 1
+a79 1
+  open(F, "$MAN -l $file 2> /dev/null |");
+d95 1
+a95 1
+  open(F, "$MAN $section $man 2> /dev/null |");
+@
+
+
+1.7
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d22 1
+a22 1
+if (! $query{"man"}) {
+d74 6
+a79 7
+$man = $query{"man"};
+if ($man =~ s/\((\w+)\)$//) {
+  $section = $1;
+  $man_section = "$man($1)";
+} elsif ($query{"section"}) {
+  $section = $query{"section"};
+  $man_section = "$man($section)";
+d81 15
+a95 2
+  $section = "";
+  $man_section = "$man";
+a96 4
+
+$section =~ s:([^-\w\200-\377.,])::g;
+$man =~ s:([^-\w\200-\377.,])::g;
+open(F, "$MAN $section $man 2> /dev/null |");
+d187 5
+d206 5
+a210 1
+  print "No manual entry for <B>$man_section</B>.\n";
+@
+
+
+1.6
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d22 1
+a22 1
+if ((! $query{"man"}) && (! $query{"local"})) {
+d74 7
+a80 6
+if ($query{"local"}) {
+  $file = $query{"local"};
+  if (! ($file =~ /^\//)) {
+    $file = $query{"pwd"} . '/' . $file;
+  }
+  open(F, "$MAN -l $file 2> /dev/null |");
+d82 3
+a84 11
+  $man = $query{"man"};
+  if ($man =~ s/\((\w+)\)$//) {
+    $section = $1;
+    $man_section = "$man($1)";
+  } elsif ($query{"section"}) {
+    $section = $query{"section"};
+    $man_section = "$man($section)";
+  } else {
+    $section = "";
+    $man_section = "$man";
+  }
+d86 3
+a88 4
+  $section =~ s:([^-\w\200-\377.,])::g;
+  $man =~ s:([^-\w\200-\377.,])::g;
+  open(F, "$MAN $section $man 2> /dev/null |");
+}
+a178 5
+    if ($query{'local'}) {
+      print STDERR "File $file not found.\n";
+    } else {
+      print STDERR "No manual entry for $man_section.\n";
+    }
+d193 1
+a193 5
+  if ($query{'local'}) {
+    print "File <B>$file</B> not found.\n";
+  } else {
+    print "No manual entry for <B>$man_section</B>.\n";
+  }
+@
+
+
+1.5
+log
+@[w3m-dev 03583] w3mman
+* scripts/w3mman/README: W3MMAN_W3M, W3MMAN_MAN
+* scripts/w3mman/w3mman.1.in: add ENVIRONMENT
+* scripts/w3mman/w3mman.in: $ENV{'W3MMAN_W3M'}, $ENV{'W3MMAN_MAN'}
+* scripts/w3mman/w3mman2html.cgi.in: $ENV{'W3MMAN_MAN'}
+				hyphenation
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d22 1
+a22 1
+if (! $query{"man"}) {
+d74 6
+a79 7
+$man = $query{"man"};
+if ($man =~ s/\((\w+)\)$//) {
+  $section = $1;
+  $man_section = "$man($1)";
+} elsif ($query{"section"}) {
+  $section = $query{"section"};
+  $man_section = "$man($section)";
+d81 15
+a95 2
+  $section = "";
+  $man_section = "$man";
+a96 4
+
+$section =~ s:([^-\w\200-\377.,])::g;
+$man =~ s:([^-\w\200-\377.,])::g;
+open(F, "$MAN $section $man 2> /dev/null |");
+d187 5
+d206 5
+a210 1
+  print "No manual entry for <B>$man_section</B>.\n";
+@
+
+
+1.4
+log
+@[w3m-dev 03133] Re: w3mman.1
+* scripts/w3mman/Makefile (MAN1_TARGETS): added
+			(MAN_TARGETS): use $(MAN_TARGETS)
+			(INSTALL_MAN): added
+			(install): use $MAN1_TARGETS, $(INSTALL_MAN)
+* scripts/w3mman/w3mman2html.cgi.in: $PAGER='cat'
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+a3 1
+$MAN = $ENV{'MAN'} || '@@MAN@@';
+d92 2
+d152 13
+a164 2
+  s@@(\W)(\~?/[\w.][/\w.\-]*)@@$1 . &file_ref($2)@@ge;
+  s@@(include(<\/?[bu]\>|\s)*\&lt;)([/\w.\-]+)@@$1 . &include_ref($3)@@ge;
+d166 5
+d172 3
+@
+
+
+1.3
+log
+@[w3m-dev 03130] w3mman.1
+* scripts/w3mman/.cvsignore: add w3mman.1
+* scripts/w3mman/Makefile (MAN_DIR): added
+	(MAN_TARGETS): added
+	(all): add $(MAN_TARGETS)
+	(.in): replace @@LIB_DIR@@
+	(install): install $(MAN_TARGETS)
+	(uninstall): uninstall $(MAN_TARGETS)
+	(clean): clean $(MAN_TARGETS)
+* scripts/w3mman/w3mman.1.in: added
+* scripts/w3mman/w3mman2html.cgi.in: undef $PAGER
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d10 1
+a10 1
+undef $ENV{'PAGER'};
+@
+
+
+1.2
+log
+@Security hole in multipart.cgi.in, w3mman2html.cgi.in
+From: Hironori Sakamoto <h-saka@@lsi.nec.co.jp>
+@
+text
+@d10 1
+@
+
+
+1.1
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d34 1
+a34 1
+    $keyword =~ s:([^\w./]):\\$1:g;
+d85 2
+a86 2
+$section =~ s:([^\w./]):\\$1:g;
+$man =~ s:([^\w./]):\\$1:g;
+@
+

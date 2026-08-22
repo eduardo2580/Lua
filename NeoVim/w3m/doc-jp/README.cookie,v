@@ -1,0 +1,198 @@
+head	1.4;
+access;
+symbols
+	release-0-5-3:1.4
+	release-0-5-2:1.2
+	release-0-5-1:1.2
+	release-0-5:1.2
+	release-0-4-2:1.2
+	release-0-4-1:1.1.1.1
+	release-0-4:1.1.1.1
+	release-0-4-rc3:1.1.1.1
+	release-0-4-rc2:1.1.1.1
+	release-0-4-rc1:1.1.1.1
+	release-0-3-2-2:1.1.1.1
+	release-0-3-2-1:1.1.1.1
+	branch-0-3-2:1.1.1.1.0.6
+	release-0-3-2:1.1.1.1
+	release-0-3-2-rc4:1.1.1.1
+	release-0-3-2-rc3:1.1.1.1
+	release-0-3-2-rc2:1.1.1.1
+	release-0-3-2-rc1:1.1.1.1
+	release-0-3-1:1.1.1.1
+	release-0-3:1.1.1.1
+	release-0-2-5-1:1.1.1.1
+	branch-0-2-5:1.1.1.1.0.4
+	release-0-2-5:1.1.1.1
+	release-0-2-4:1.1.1.1
+	release-0-2-3-2:1.1.1.1
+	release-0-2-3-1:1.1.1.1
+	release-0-2-3:1.1.1.1
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2011.01.05.10.09.19;	author htrb;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.12.28.12.28.21;	author htrb;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.05.13.17.17.54;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.40;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.40;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@* [w3m-dev 04445] Re: Update documents (README.cookie)
+* doc-jp/README.cookie: refer to RFC 2109.
+* doc/README.cookie: diito.
+@
+text
+@クッキーサポートについて
+
+                                                         (2000/11/07)  岡部克也
+                                                        okabek@@guitar.ocn.ne.jp
+
+ ・ version 0 (参照: http://www.netscape.com/newsref/std/cookie_spec.html) と,
+    version 1 (参照: http://www.ics.uci.edu/pub/ietf/http/rfc2109.txt, 
+    http://www.ics.uci.edu/pub/ietf/http/draft-ietf-http-state-man-mec-12.txt)
+    のクッキーをサポートしています.
+   
+ ・ クッキーのサポートは configure スクリプトの実行時に自動的に選択されます。
+    もしうまく動かないときは, config.h をチェックしてみてください. クッキーを利
+    用するためには, config.h で USE_COOKIE マクロが定義されている必要がありま
+    す.
+    なお、もしクッキーをサポートしたくない場合は --disable-cookie オプションを
+    付けて configure スクリプトを実行して下さい。
+   
+ ・ Option Setting Panel (通常 `o' キーにバインドされている), または起動オプシ
+    ョン (-cookie, -no-cookie) で使用するか否かを選択できます.
+   
+ ・ Option Setting Panel でクッキーを受け付けないようにする事もできます.
+    この場合, 以後のサーバから送られてくる全てのクッキーはリジェクトされますが,
+    既に受け取っているクッキーについては継続して使用されます.
+   
+ ・ C-k でクッキー一覧が表示できます. この画面で, クッキー毎に使用するか否かを
+    選択できます.
+   
+ ・ 2000/10/24 の版から, Option Setting Panel でクッキーを受け付ける (または受
+    け付けない) ドメイン (のリスト) を設定できるようになりました. 以下のフォー
+    マットで指定します:
+   
+      domain-list = domains                                                    
+                  | ""                                                         
+      domains     = domain                                                     
+                  | domain + "," + domains                                     
+      domain      = "." + domain-name      ; ドメイン名とマッチ                
+                  | host-domain-name       ; HDN とマッチ                      
+                  | ".local"               ; . を含まない全ての HDN にマッチ   
+                  | "."                    ; 全ての HDN にマッチ               
+                                                                               
+                              (HDN: host domain name)                          
+   
+    例として, 特定のドメイン (.xxx.or.jp) のクッキーのみを受け付けたい場合は,
+   
+    ┌────────────────────────────────────┐
+    │クッキーの設定                                                          │
+    │                                                                        │
+    │クッキーを使用する                              (*)ON  ( )OFF           │
+    │クッキーを受け付ける                            (*)ON  ( )OFF           │
+    │問題のあるクッキーでも受け付ける                [discard]               │
+    │クッキーを受け付けないドメイン                  [.                   ]  │
+    │クッキーを受け付けるドメイン                    [.xxx.or.jp          ]  │
+    │                                                [OK]                    │
+    └────────────────────────────────────┘
+   
+    のように設定します.
+
+ ・ ドメインに含まれる "." の数が 2 よりも小さいときは不正なクッキーと
+    見なされます (RFC 2109 4.3.2 参照) が
+    cookie_avoid_wrong_number_of_dots で指定されたドメインはこの制限を
+    受けなくなります。Option Setting Panel の "[wrong number of dots]
+    を無視するドメイン" で設定できます。
+@
+
+
+1.3
+log
+@* [w3m-dev 04440] Update documents (README.cookie)
+@
+text
+@d59 4
+a62 3
+    見なされますが cookie_avoid_wrong_number_of_dots で指定されたドメイ
+    ンはこの制限を受けなくなります。Option Setting Panel の "[wrong
+    number of dots] を無視するドメイン" で設定できます。
+@
+
+
+1.2
+log
+@[w3m-dev 03899] minor fixes
+* acinclude.m4: fix s/SSLCFLAGS/SSL_CFLAGS/
+* doc/README: update, fix typo
+* doc-jp/FAQ.html: update, fix URL
+* doc-jp/README: update
+* doc-jp/README.SSL: update
+* doc-jp/README.cookie: update
+* doc-jp/README.img: update URL
+* doc-jp/README.migemo: update
+* doc-jp/STORY.html: fix URL
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d57 5
+a61 1
+   
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d11 1
+a11 2
+ ・ configure スクリプト実行時, "4 - Cookie model", "5 - Monster model", "6 -
+    Customize" のいずれかを選ぶと利用可能になります.
+d15 2
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

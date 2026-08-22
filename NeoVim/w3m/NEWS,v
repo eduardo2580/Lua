@@ -1,0 +1,2048 @@
+head	1.80;
+access;
+symbols
+	release-0-5-3:1.80
+	release-0-5-2:1.79
+	release-0-5-1:1.78
+	release-0-5:1.77
+	release-0-4-2:1.74
+	release-0-4-1:1.67
+	release-0-4:1.66
+	release-0-4-rc3:1.65
+	release-0-4-rc2:1.65
+	release-0-4-rc1:1.65
+	release-0-3-2-2:1.37.4.3
+	release-0-3-2-1:1.37.4.2
+	branch-0-3-2:1.37.0.4
+	release-0-3-2:1.37
+	release-0-3-2-rc4:1.36
+	release-0-3-2-rc3:1.35
+	release-0-3-2-rc2:1.35
+	release-0-3-2-rc1:1.34
+	release-0-3-1:1.30
+	release-0-3:1.20
+	release-0-2-5-1:1.14.2.1
+	branch-0-2-5:1.14.0.2
+	release-0-2-5:1.14
+	release-0-2-4:1.5
+	release-0-2-3-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.80
+date	2011.01.15.07.52.48;	author inu;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2007.05.31.12.17.05;	author inu;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2004.04.28.18.19.24;	author ukai;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2004.03.21.16.50.35;	author ukai;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2003.09.25.04.38.30;	author ukai;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2003.09.22.21.29.43;	author ukai;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2003.09.22.18.11.17;	author ukai;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2003.09.22.17.37.41;	author ukai;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2003.07.26.17.20.34;	author ukai;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2003.07.22.17.24.49;	author ukai;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2003.04.06.16.27.54;	author ukai;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2003.03.10.18.10.40;	author ukai;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2003.03.09.19.40.06;	author ukai;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2003.03.06.17.36.28;	author ukai;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2003.02.23.16.37.12;	author ukai;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2003.02.05.16.45.58;	author ukai;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2003.01.23.18.44.27;	author ukai;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2003.01.15.18.16.12;	author ukai;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2003.01.15.18.15.22;	author ukai;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2003.01.15.18.14.21;	author ukai;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2003.01.15.18.12.57;	author ukai;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.12.27.16.08.46;	author ukai;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.12.18.16.42.31;	author ukai;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.12.15.12.37.33;	author ukai;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.12.10.15.53.55;	author ukai;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.12.10.15.36.10;	author ukai;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.12.06.03.40.45;	author ukai;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.12.05.16.32.47;	author ukai;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.12.04.17.02.35;	author ukai;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.12.03.16.03.59;	author ukai;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.11.26.16.56.41;	author ukai;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.11.26.02.21.14;	author ukai;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.11.21.17.13.28;	author ukai;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.11.21.16.17.15;	author ukai;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.11.19.17.47.45;	author ukai;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.11.18.17.27.05;	author ukai;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.11.15.15.21.56;	author ukai;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.11.14.16.58.28;	author ukai;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.11.12.12.36.30;	author ukai;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.11.11.15.33.34;	author ukai;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.11.09.21.55.24;	author ukai;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.11.05.17.54.39;	author ukai;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.11.05.17.35.09;	author ukai;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.11.04.17.14.18;	author ukai;	state Exp;
+branches
+	1.37.2.1
+	1.37.4.1;
+next	1.36;
+
+1.36
+date	2002.10.30.17.21.38;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.10.26.08.10.43;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.09.10.17.27.44;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.09.05.15.43.21;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.07.22.16.27.31;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.07.17.21.08.12;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.07.15.17.33.44;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.06.01.17.09.35;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.06.01.16.50.16;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.04.24.18.29.35;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.03.29.16.39.37;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.03.19.16.27.55;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.03.19.16.07.51;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.03.15.18.33.32;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.03.13.17.04.56;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.03.11.16.06.12;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.03.05.17.17.45;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.19.15.25.19;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.02.05.01.15.06;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.02.05.01.14.13;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.02.04.15.20.38;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.01.31.17.54.48;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.01.31.15.00.58;	author ukai;	state Exp;
+branches
+	1.14.2.1;
+next	1.13;
+
+1.13
+date	2002.01.29.19.08.49;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.01.25.15.28.27;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.01.16.16.52.04;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.01.15.17.23.29;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.01.15.05.50.51;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.14.16.00.59;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.01.11.20.48.04;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.01.10.04.55.07;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.01.07.13.27.22;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.12.26.12.18.06;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.12.25.13.43.51;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.12.21.21.42.49;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.12.21.19.47.48;	author ukai;	state Exp;
+branches;
+next	;
+
+1.14.2.1
+date	2002.02.04.16.26.28;	author ukai;	state Exp;
+branches;
+next	;
+
+1.37.2.1
+date	2002.11.26.06.59.35;	author ukai;	state Exp;
+branches;
+next	;
+
+1.37.4.1
+date	2002.11.26.07.13.53;	author ukai;	state Exp;
+branches;
+next	1.37.4.2;
+
+1.37.4.2
+date	2002.11.26.16.28.58;	author ukai;	state Exp;
+branches;
+next	1.37.4.3;
+
+1.37.4.3
+date	2002.12.05.16.48.31;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.80
+log
+@w3m 0.5.3 release
+@
+text
+@w3m 0.5.3 - 2011-01-15
+
+* security fix
+ - fix vulnerabilities indicated by bugs.debian.org.
+ - suppress sending Referer, if https:// -> http://
+* new features
+ - adapt w3mimg to native windows on MS Windows.
+ - support xterm-incompatible terminals without gpm.
+ - add "xhtml" to default guess.
+ - introduce option pseudo_inlines.
+ - add option to avoid "wrong number of dots" error in cookies.
+* other bug fixes
+ - fix "important" bugs from bugs.debian.org
+ - preserve spaces in multibyte context.
+ - fix proxy authentication.
+
+w3m 0.5.2 - 2007-05-31
+
+* security fix
+ - fix format string vulnerability.
+* new features
+ - support gtk2 with w3m-img.
+ - new option for LiveHTTPHeaders-like logs.
+ - new option to fontify <del>, <s>, <ins>, and so on.
+* other bug fixes
+ - avoid errors in "configure" and "make".
+ - '\n' handling in attributes' values of HTML tags.
+
+w3m 0.5.1 - 2004-04-29
+
+* fix minor bugs
+ - build problem on some platform/some configuration
+ - authentication bug
+ - ipv6 FQDN resolv
+ - SSL verify
+ - search problem on different charset page/display
+ - cleanup LANG==JA
+ - DisplayCharset default
+ - w3mhelp.cgi charset
+
+w3m 0.5	- 2004-03-22
+
+* gettextize
+* m17n patch merged
+
+w3m 0.4.2 - 2003-09-23
+
+* options: -4, -6
+* configuration file in $(sysconfdir)/$(package)/
+* func: NEXT_VISITED, PREV_VISITED
+* autoconfiscate (partially)
+* rc: use_history
+
+w3m 0.4.1 - 2003-03-07
+
+* fix bugs
+  - completion segfault in lineinput
+  - incremental search
+  - URL pattern fix
+  - UFhalfclose bug
+  - allow pipe in shell command
+  - enhance ftp directory support
+  - linenumber in edit
+  - fix Bug#181897
+  - W3M_TTY problem fixed
+
+w3m 0.4 - 2003-02-24
+
+* rc: decode_url
+* func: RESHAPE
+* rc: fold_line
+* local cookie: passed via file named $LOCAL_COOKIE or posted not in url query
+* func: SEARCH can take arg
+* URL data: support
+* URL news:, nntp: newsgroup support
+* rc: nntpserver, nntpmode, max_news
+* rc: graphic_char
+* rc: use_proxy
+* rc: preserve_timestamp
+* func: REDO, UNDO
+* func: LIST, LIST_MENU, MOVE_LIST_MENU
+* func: ACCESSKEY, LINK_MENU
+* rc: display_ins_del
+* 2 stroke keybinding
+* func: MULTIMAP
+* func: CLOSE_TAB_MOUSE, MENU_MOUSE, MOVE_MOUSE, TAB_MOUSE
+* options: -N
+* func: NEXT, PREV
+* rc: image_map_list
+* rc: open_tab_dl_list
+* func: DOWNLOAD_LIST
+* env: https_proxy
+* rc: https_proxy
+* options: -show-option
+* rc: relative_wheel_scroll
+* rc: relative_wheel_scroll_ratio
+* rc: fixed_wheel_scroll_count
+* separate auxbindir and libdir (local-CGI, file:///$LIB/)
+* configure: -auxbindir
+* rc: disable_secret_security_check (for windows?)
+* tab browsing
+* rc: open_tab_blank, close_tab_back
+* func: CLOSE_TAB, NEW_TAB, NEXT_TAB, PREV_TAB, 
+* func:	TAB_GOTO, TAB_GOTO_RELATIVE
+* func: TAB_LEFT, TAB_LINK, TAB_MENU, TAB_RIGHT
+* pre_form: ~/.w3m/pre_form
+* rc: pre_form_file: pre_form configuration file
+
+----------------------------------------------------------------
+
+w3m 0.3.2.2 - 2002-12-06
+
+* security fix: html_quote for img alt attributes
+
+----------------------------------------------------------------
+
+w3m 0.3.2.1 - 2002-11-27
+
+* security fix: html_quote for frame contents
+* backport from w3m 0.3.2+cvs
+ - fix segmentation fault by large complex table.
+	[w3m-dev 03371][w3m-dev 03438]
+
+----------------------------------------------------------------
+w3m 0.3.2 - 2002-11-05
+
+* ~/.netrc: password for ftp
+* rc: display_lineinfo: display current line number
+* rc: passwd_file: passwd file for HTTP auth
+* func: MARK_WORD
+* rc: imgsize: obsoleted
+* w3m-img for framebuffer merged
+
+----------------------------------------------------------------
+w3m 0.3.1 - 2002-07-16
+
+* func: REINIT
+	INIT_MAILCAP deleted, use REINIT MAILCAP instead
+* func: DEFINE_KEY
+* rc: keymap_file
+* rc: use_dictcommand, dictcommand
+* rc: mark_all_pages
+* configure: -mandir
+* func: COMMAND
+* -title option: set buffer name to terminal title
+* X-Face support: USE_XFACE, require uncompface
+
+----------------------------------------------------------------
+w3m 0.3 - 2002-03-06
+
+* rc: mailer
+	if mailer is set, it will be used for simple mailto: URLs
+	otherwise, w3mmail.cgi will be used (when USE_W3MMAILER defined)
+* rc: max_load_image
+* rc: display_image, auto_image, image_scale, imgdisplay, imgsize
+* func: DISPLAY_IMAGE, STOP_IMAGE
+* w3m-img merged: w3m now can display images! see doc/README.img
+
+----------------------------------------------------------------
+w3m 0.2.5.1 - 2002-02-05
+
+* backport from w3m/0.2.5+cvs-1.299
+ - fix inputAnswer() and no "ssl_forbid_method" [w3m-dev 02985]
+ - fix SunOS 4.1.4 build problem [w3m-dev 02972]
+ - fix problem with Netscape-Enterprise WWW-authenticate [w3m-dev 02968]
+
+----------------------------------------------------------------
+w3m 0.2.5 - 2002-01-31
+
+* RFC2617: HTTP Digest authentication
+* rc: default_url=0(empty) 1(current URL) 2(link URL)
+* GOTO_RELATIVE (M-u)
+* highlight for incremental search
+* support migemo (romaji search)
+* use w3mmail.cgi for mailto: URL
+* support external URI loader
+* support -dump_extra ftp://
+* new regex implementation
+
+----------------------------------------------------------------
+w3m 0.2.4 - 2002-01-07
+
+* RFC2818 server identity check
+* incremental search (C-s, C-r)
+
+----------------------------------------------------------------
+w3m 0.2.3.2 - 2001-12-22
+
+* fix security hole in w3m/scripts
+
+----------------------------------------------------------------
+w3m 0.2.3.1 - 2001-12-20
+
+* sync with cvs repository
+* fix bug in configure
+
+----------------------------------------------------------------
+w3m 0.2.3 - 2001-12-20
+
+* command line option: -help, -version
+* new libgc included
+* new runtime option use_mark, nextpage_topline, label_topline, vi_prec_num
+   emacs_like_lineedit, ftppass_hostnamegen
+* RFC2732 support (IPv6)
+* new w3mhelp system
+* several configure changes
+* code cleanups, now gcc -Wall -Werror safe
+
+----------------------------------------------------------------
+w3m 0.2.2 - 2001-11-15
+
+* sync with w3m 0.2.1-inu-1.5
+* w3m maintained in sourceforge.net/projects/w3m
+
+@
+
+
+1.79
+log
+@w3m 0.5.2 release
+@
+text
+@d1 16
+@
+
+
+1.78
+log
+@w3m 0.5.1
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+* configure.in: version 0.5.1
+* po/w3m.pot, ja.po: update-po
+@
+text
+@d1 12
+@
+
+
+1.77
+log
+@w3m 0.5
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 12
+@
+
+
+1.76
+log
+@gettextize
+@
+text
+@d1 1
+a1 1
+w3m 0.5 or 1.0?
+@
+
+
+1.75
+log
+@m17n patch merged
+@
+text
+@d3 1
+@
+
+
+1.74
+log
+@* w3m 0.4.2
+* version.c.in: update
+* doc/README: version 0.4.2, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 4
+@
+
+
+1.73
+log
+@[w3m-dev 03967] Re: IPv4/IPv6 only option patch
+* NEWS: options: -4, -6
+* fm.h (DNS_ORDER_INET_ONLY): added
+	(DNS_ORDER_INET6_ONLY): added
+	(ai_family_order_table): [3]->[7]
+* main.c (fusage): add -4/-6
+	(main): -4/-6 mapped to dns_order=4/dns_order=6
+* rc.c (dnsorders): add DNS_ORDER_INET_ONLY, DNS_ORDER_INET6_ONLY
+* url.c (dnsorders): add 3-6
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.5 or 1.0?
+d6 1
+a6 1
+* autoconfiscate
+@
+
+
+1.72
+log
+@* configuration file in $(sysconfdir)/$(package)/
+@
+text
+@d3 1
+@
+
+
+1.71
+log
+@[w3m-dev 03939] next/prev visited link
+* funcname.tab (NEXT_VISITED): added
+	(PREV_VISITED): added
+* main.c (_nextA): added
+	(_prevA): added
+	(nextVA): added
+	(prevVA): added
+* proto.h (nextVA): added
+	(prevVA): added
+* doc/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* doc-jp/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* NEWS: func: NEXT_VISITED, PREV_VISITED
+From: Yoshinobu Sakane <sakane@@d4.bsd.nes.nec.co.jp>
+@
+text
+@d3 1
+@
+
+
+1.70
+log
+@[w3m-dev 03843] cleanup macros
+* config.h.dist config.h.in etc.c file.c fm.h ftp.c linein.c
+   main.c rc.c:
+   delete EMACS_LIKE_LINEEDIT, VI_PREC_NUM, LABEL_TOPLINE,
+	NEXTPAGE_TOPLINE, FTPPASS_HOSTNAMEGEN
+   use_mark default FALSE
+   emacs_like_lineedit default FALSE
+   vi_prec_num default FALSE
+   add UseHistory, use_history
+* NEWS: rc: use_history
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.69
+log
+@fix typo
+@
+text
+@d4 1
+@
+
+
+1.68
+log
+@autoconficate
+* Makefile.in: added
+* acinclude.m4: added
+* aclocal.m4: added (generated from acinclude.m4 by aclocal)
+* configure.in: added
+* config.h.in: added
+* config.guess: added
+* config.sub: added
+* .cvsignore: add Makefile config.cache config.log config.status
+* configure: generated by autoconf
+* gc/: deleted
+* XMakefile: deleted
+* XXMakefile: deleted
+* NEWS: autoconficate
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+a3 1
+* autoconficate
+@
+
+
+1.67
+log
+@w3m 0.4.1
+* version.c.in: update
+* doc/README: version 0.4.1, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 4
+@
+
+
+1.66
+log
+@w3m 0.4
+* version.c.in: update
+* doc/README: version 0.4, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 13
+@
+
+
+1.65
+log
+@NEWS: rc: decode_url
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.4?
+@
+
+
+1.64
+log
+@NEWS: func: RESHAPE
+	rc: fold_line
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.63
+log
+@NEWS update
+@
+text
+@d1 1
+a1 1
+w3m 0.3.3 or 0.4?
+d3 2
+@
+
+
+1.62
+log
+@NEWS update
+@
+text
+@d5 1
+@
+
+
+1.61
+log
+@NEWS update
+@
+text
+@d4 1
+@
+
+
+1.60
+log
+@NEWS update
+@
+text
+@d3 1
+@
+
+
+1.59
+log
+@rc: nntpserver, nntpmode, max_news
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.58
+log
+@[w3m-dev 03582] add config options graphic_char and use_proxy
+* NEWS: rc: graphic_char, use_proxy
+* fm.h (Do_no_use_proxy): macro using use_proxy
+	(use_proxy): added
+	(no_graphic_char): deleted
+	(UseGraphicChar): added
+* main.c (main): UseGraphicChar, use_proxy
+* rc.c (CMT_GRAPHIC_CHAR): added
+	(CMT_USE_PROXY): added
+	(params1): graphic_char
+	(params4): use_proxy
+* terms.c (graph_ok): UseGraphicChar
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d3 1
+@
+
+
+1.57
+log
+@* NEWS: rc: preserve_timestamp
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d3 2
+@
+
+
+1.56
+log
+@NEWS: func: REDO, UNDO
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.55
+log
+@NEWS: func: LIST, LIST_MENU, MOVE_LIST_MENU
+@
+text
+@d3 1
+@
+
+
+1.54
+log
+@* version.c.in: w3m/0.3.2.2+cvs
+* NEWS: 0.3.2.2
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.53
+log
+@NEWS: func: ACCESSKEY, LINK_MENU
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d32 6
+@
+
+
+1.52
+log
+@NEWS: rc: display_ins_del
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.51
+log
+@NEWS: 2 stroke keybinding
+	func: MULTIMAP
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.50
+log
+@w3m 0.3.2.1 released
+@
+text
+@d3 2
+@
+
+
+1.49
+log
+@* NEWS: func: CLOSE_TAB_MOUSE, MENU_MOUSE, MOVE_MOUSE, TAB_MOUSE
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d27 9
+@
+
+
+1.48
+log
+@NEWS: options: -N
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.47
+log
+@* NEWS: func: NEXT, PREV
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.46
+log
+@rc: image_map_list
+@
+text
+@d3 1
+@
+
+
+1.45
+log
+@NEWS: rc: open_tab_dl_list
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.44
+log
+@NEWS: func: DOWNLOAD_LIST
+@
+text
+@d3 1
+@
+
+
+1.43
+log
+@NEWS: env,rc: https_proxy
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.42
+log
+@* doc/w3m.1: update
+* doc-jp/w3m.1: update
+* NEWS: update: -show-option
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 2
+@
+
+
+1.41
+log
+@[w3m-dev 03408] fix Bug#87472: MOUSE_SCROLL_LINE should be a run-time option
+* fm.h (relative_wheel_scroll): added
+	(fixed_wheel_scroll_count): added
+	(relative_wheel_scroll_ratio): added
+* main.c (mouse_scroll_line): added
+	(process_mouse): s/MOUSE_SCROLL_LINE/mouse_scroll_line()/
+* menu.c (MOUSE_SCROLL_LINE): deleted
+* terms.h (MOUSE_SCROLL_LINE): deleted
+* rc.c (CMT_RELATIVE_WHEEL_SCROLL): added
+	(CMT_RELATIVE_WHEEL_SCROLL_RATIO): added
+	(CMT_FIXED_WHEEL_SCROLL_COUNT): added
+	(wheelmode): added
+	(params3): add relative_wheel_scroll,
+			relative_wheel_scroll_ratio,
+			fixed_wheel_scroll_count
+From: AIDA Shinra <aida-s@@jcom.home.ne.jp>
+@
+text
+@d3 1
+@
+
+
+1.40
+log
+@[w3m-dev 03398] auxbindir
+* XMakefile: EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* config.h.dist: add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+* configure: add -auxbindir
+		add AUXBIN_DIR
+		LIB_DIR is cgi-bin
+		EXT_TARGETS -> LIB_TARGETS, AUXBIN_TARGETS
+* file.c (compression_decoder): libfile_p -> auxbin_p
+	(check_command): libfile_p -> auxbin_p
+			use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(acceptableEncoding): libfile_p -> auxbin_p
+	(xface2xpm): use auxbinFile() instead of libFile()
+	(uncompress_stream): libfile_p -> auxbin_p
+			use auxbinFile() instead of libFile()
+* image.c (getCharSize): use w3m_auxbin_dir() instead of w3m_lib_dir()
+	(openImgdisplay): use w3m_auxbin_dir() instead of w3m_lib_dir()
+* indep.c (w3m_auxbin_dir): added
+* indep.h (w3m_auxbin_dir): added
+* proto.h (auxbinFile): added
+* rc.c (auxbinFile): added
+	(libFile): #if 0, no longer used
+	(helpFile): used only #ifndef USE_HELP_CGI
+* NEWS: separate auxbindir and libdir (local-CGI, file:///$LIB/)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 3
+@
+
+
+1.39
+log
+@[w3m-dev 03374] disable_secret_security_check
+* etc.c (openSecurityFile): disable_secret_security_check
+* fm.h (disable_secret_security_check): added
+* rc.c (CMT_DISABLE_SECRET_SECURITY_CHECK): added
+	(disable_secret_security_check): added
+* NEWS: rc: disable_secret_security_check
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 2
+@
+
+
+1.38
+log
+@* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.37
+log
+@w3m 0.3.2
+@
+text
+@d1 11
+@
+
+
+1.37.4.1
+log
+@update NEWS
+@
+text
+@a0 7
+w3m 0.3.2.1 - 2002-11-26?
+
+* security fix: html_quote for frame contents
+* backport from w3m 0.3.2+cvs
+ - fix segmentation fault by large complex table.
+	[w3m-dev 03371][w3m-dev 03438]
+
+@
+
+
+1.37.4.2
+log
+@w3m 0.3.2.1
+* version.c.in: update
+* doc/README: version 0.3.2.1, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.3.2.1 - 2002-11-27
+@
+
+
+1.37.4.3
+log
+@w3m 0.3.2.2
+* version.c.in: update
+* doc/README: version 0.3.2.2, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@a0 4
+w3m 0.3.2.2 - 2002-12-06
+
+* security fix: html_quote for img alt attributes
+
+@
+
+
+1.37.2.1
+log
+@update
+@
+text
+@a0 7
+w3m 0.3.2.1 - 2002-11-26?
+
+* security fix: html_quote() for frame contents
+* backport from w3m/0.2.5+cvs-1.299
+ - fix segmentation fault by large complex table. 
+	[w3m-dev 03371][w3m-dev 03438]
+
+@
+
+
+1.36
+log
+@[w3m-dev 03365] ~/.netrc support
+* etc.c (add_auth_pass_entry): add netrc arg
+		add new entry to tail
+	(find_auth_pass_entry): ent->host == NULL is "default"
+	(loadPasswd): rewrite with next_token, parsePasswd,
+			openPasswdFile
+			load ~/.netrc
+	(next_token): added
+	(parsePasswd): added
+	(openPasswdFile): added
+* ftp.c (openFTP): use find_auth_user_passwd
+* NEWS: ~/.netrc
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.3.2 (release candidate)
+@
+
+
+1.35
+log
+@[w3m-dev-en 00783] hsaka@@mth.biglobe.ne.jp (Hironori SAKAMOTO)
+  add display_lineinfo option
+* display.c (displayBuffer): check displayLineInfo
+* fm.h (displayLineInfo): added
+* rc.c (CMT_DISPLINEINFO): added
+	(display_lineinfo): added
+* NEWS (rc: display_lineinfo): add
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.34
+log
+@[w3m-dev 03307] add password_file support
+* file.c (find_auth_user_passwd): added
+* fm.h (passwd_file): added
+* rc.c (CMT_PASSWDFILE): added
+	(passwdfile): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.4?
+d3 1
+@
+
+
+1.33
+log
+@[w3m-dev 03292] Re: load file at cursor
+* anchor.c (reAnchorPos): added
+	(reAnchorWord): added
+	(reAnchorAny): rewrite to use reAnchorPos()
+* funcname.tab (MARK_WORD): added
+* keybind.c (;) MARK_WORD
+* main.c (getCurWord): added
+	(chkWORD): added
+	(is_wordchar): added
+	(getCurWord): added
+	(GetWord): rewrite to use getCurWord()
+* proto.h (chkWORD): added
+	(reAnchorWord): added
+* doc/README.func: add MARK_WORD
+* doc/keymap.default: add MARK_WORD
+* doc-jp/README.func: add MARK_WORD
+* doc-jp/keymap.default: add MARK_WORD
+* NEWS: add MARK_WORD
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.32
+log
+@[w3m-dev 03280] w3m-img without w3mimgsize
+* fm.h (Imagesize): deleted
+* image.c (getImageSize): rewrite to use w3mimgdisplay
+	instead of w3mimgsize
+* rc.c (params1): remove imgsize, merged to imgdisplay
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d3 1
+@
+
+
+1.31
+log
+@merge w3m-img for framebuffer support
+* w3mimg/w3mimg.h: created
+* w3mimg/x11/x11_w3mimg.c: created
+* w3mimg/fb/fb_w3mimg.c: created
+* w3mimgsize.c w3mimgdisplay.c: modified
+* configure: modified
+* XMakefile: modified
+* config.h.dist: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+w3m-img for framebuffer support
+* http://homepage3.nifty.com/slokar/fb/
+* w3mimg/fb/fb.c w3mimg/fb/fb.h
+  w3mimg/fb/fb_img.c w3mimg/fb/fb_img.h
+  w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_gdkpixbuf.h
+  w3mimg/fb/fb_imlib2.c w3mimg/fb/fb_imlib.h
+  w3mimg/fb/readme.txt w3mimg/fb/license.txt: added
+From: Hiroshi Kawashima <kei@@sm.sony.co.jp>
+@
+text
+@d3 1
+@
+
+
+1.30
+log
+@w3m 0.3.1
+@
+text
+@d1 5
+@
+
+
+1.29
+log
+@[w3m-dev-en 00748] PATCH: Reinitialize w3m while running
+* funcname.tab (INIT_MAILCAP): deleted
+	(REINIT): added
+* main.c (config_filename): added
+	(reinit): added
+* proto.h (reinit): added
+* rc.c (rc_initialized): deleted
+* w3mhelperpanel.c (editMailcap): use REINIT MAILCAP
+From: Tushar Samant <scribble@@pobox.com>
+@
+text
+@d1 1
+a1 1
+w3m 0.4?
+@
+
+
+1.28
+log
+@[w3m-dev 03200] Re: New configuration option ``keymap_file'' and new command ``DEFINE_KEY''
+* fm.h: add <sts/stat.h>, unistd.h>
+* fm.h (keymap_file): added
+* func.c (keymap_initialized): added
+	(current_keymap_file): added
+	(setKeymap): added
+	(initKeymap): rewrite to use setKeymap()
+* funcname.tab (DEFINE_KEY): added
+* main.c (MAIN): initKeymap(TRUE)
+	(defKey): added
+* proto.h (defKey): added
+	(setKeymap): added
+	(initKeymap): add force param
+* rc.c (CMT_KEYMAP_FILE): added
+	(params3): add keymap_file
+	(sync_with_option): add initKeymap(FALSE)
+* doc/README.func (DEFINE_KEY): added
+* doc-jp/README.func: (DEFINE_KEY): added
+* scripts/w3mhelp.cgi.in: add defKey
+* NEWS:
+	func: DEFINE_KEY
+	rc: keymap_file
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d3 2
+@
+
+
+1.27
+log
+@[w3m-dev-en 00730] Re: Patch for a more flexible dictionary lookup
+* NEWS: rc: use_dictcommand, dictcommand
+* main.c (execdict): use url_quote_conv() instead of cURLcode()
+* proto.h (cURLcode): deleted
+* doc-jp/README.dict: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+[w3m-dev-en 00729] Re: Patch for a more flexible dictionary lookup
+* config.h.dist (DICT): define
+* configure (use_dict): default y
+* fm.h (DICTCMD): deleted
+	(UseDictCommand): added
+	(DictCommand): added
+* main.c (execdict): rewrite to use DictCommand, loadGeneralFile()
+* rc.c (CMT_USE_DICTCOMMAND): added
+	(CMT_DICTCOMMAND): added
+	(params1): use_dictcommand, dictcommand added
+* doc/README.dict: updated
+From:  Tushar Samant <scribble@@pobox.com>
+@
+text
+@d3 2
+@
+
+
+1.26
+log
+@[w3m-dev 03160] Re: "ttp:" is marked instead of "http:" by MARL_URL
+* NEWS:
+* anchor.c (reAnchorAny): check MarkAllPages
+* fm.h (MarkAllPages): added
+* rc.c (CMT_MARK_ALL_PAGES): added
+	(mark_all_pages): added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d3 1
+@
+
+
+1.25
+log
+@configure: -mandir
+@
+text
+@d3 1
+@
+
+
+1.24
+log
+@func: COMMAND
+@
+text
+@d3 1
+@
+
+
+1.23
+log
+@-title support
+  modified [w3m-dev-en 00710] contrib: unofficial "xterm title" patch, updated for w3m-0.3
+  by Moritz Barsnick <barsnick@@gmx.net>
+* NEWS: -title
+* fm.h (displayTitleTerm): added
+* proto.h (term_title): added
+* main.c (fusage): add -title
+	(MAIN): add -title
+	(quitfm): term_title("")
+* display.c (displayBuffer): term_title()
+* terms.c (title_str): added
+	(TERM_INFO): added
+	(term_info): modified from mouse_term_info
+	(term_info_list): modified from xterm_mouse_term
+			add "screen"
+	(set_tty): check displayTitleTerm
+	(term_title): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.22
+log
+@[w3m-dev 03127] X-Face
+* NEWS: X-Face support
+* configure (use_xface): added
+* config.h.dist (USE_XFACE): added
+	(XFACE2XBM): added
+* file.c (xface2xbm): added
+	(readHeader): X-Face: handling
+* scripts/Makefile (LIB_TARGETS): add xface2xbm
+* scripts/xface2xbm.in: added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d3 1
+@
+
+
+1.21
+log
+@release date
+@
+text
+@d1 5
+@
+
+
+1.20
+log
+@w3m 0.3
+* version.c.in: update
+* doc/README: version 0.3, release date
+* doc-jp/README: ditto
+* NEWS: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.3
+@
+
+
+1.19
+log
+@[w3m-dev 03058] mailer
+* NEWS: rc: mailer
+* fm.h (Mailer): change default
+* main.c (MAIN): $MAILER will be used as "mailer"
+* main.c (followA): if "mailer" defined & simple mailto: URL,
+	use mailer instead of w3mmail.cgi
+* main.c (cmd_loadURL): ditto
+* rc.c (params6): remove ifndef USE_W3MMAILER
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.3?
+@
+
+
+1.18
+log
+@w3m 0.2.5.1 - 2002-02-05
+@
+text
+@d3 3
+@
+
+
+1.17
+log
+@w3m 0.2.5.1 - 2002-02-05
+@
+text
+@d16 1
+@
+
+
+1.16
+log
+@update NEWS
+@
+text
+@d9 7
+@
+
+
+1.15
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 3
+@
+
+
+1.14
+log
+@w3m 0.2.5
+@
+text
+@d1 5
+@
+
+
+1.14.2.1
+log
+@w3m 0.2.5.1 - backport from w3m/0.2.5+cvs-1.299
+@
+text
+@a0 7
+w3m 0.2.5.1 - 2002-02-05
+
+* backport from w3m/0.2.5+cvs-1.299
+ - fix inputAnswer() and no "ssl_forbid_method" [w3m-dev 02985]
+ - fix SunOS 4.1.4 build problem [w3m-dev 02972]
+ - fix problem with Netscape-Enterprise WWW-authenticate [w3m-dev 02968]
+
+@
+
+
+1.13
+log
+@[w3m-dev 02928] RFC2617: HTTP Digest authentication
+* NEWS: RFC2617: HTTP Digest authentication
+* config.h.dist (USE_DIGEST_AUTH): added
+* configure (use_digest_auth): added, enabled when openssl found
+				(because it used openssl/md5.h)
+* file.c (auth_param): added
+* file.c (http_auth): added
+* file.c (extract_auth_val): added
+* file.c (qstr_unquote): added
+* file.c (extract_auth_param): added
+* file.c (get_auth_param): added
+* file.c (AuthBasicCred): added
+* file.c (digest_hex): added
+* file.c (AuthDigestCred): added
+* file.c (basic_auth_param): added
+* file.c (digest_auth_param): added
+* file.c (www_auth): added
+* file.c (findAuthentication): added
+* file.c (getAuthCookie): rewrite, use http_auth
+* file.c (loadGeneralFile): HRequest hr
+* file.c (loadGeneralFile): use findAuthentication, new getAuthCookie
+* proto.h (HTTPrequestMethod): added
+* proto.h (HTTPrequestURI): added
+* proto.h (openURL): add `hr' arg
+* url.c (HTTPrequestMethod): added
+* url.c (HTTPrequestURI): added
+* url.c (HTTPrequest): use HTTPrequestMethod and HTTPrequestURI
+* url.c (openURL): add `hr' arg
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.3?
+@
+
+
+1.12
+log
+@update NEWS
+@
+text
+@d3 1
+@
+
+
+1.11
+log
+@highlight for incremental search
+@
+text
+@d3 2
+d6 1
+a6 1
+* support migemo (romaji search) [experimental]
+@
+
+
+1.10
+log
+@[w3m-dev 02841] migemo patch
+* NEWS: migemo support
+* config.h.dist (USE_MIGEMO): added
+* configure: add use_migemo
+* fm.h (use_migemo): added
+* fm.h (migemo_command: added
+* main.c (fversion): add "migemo"
+* main.c (migemostr): added
+* main.c (srchcore): if use_migemo, use migemostr
+* rc.c (CMT_USE_MIGEMO): added
+* rc.c (CMT_MIGEMO_COMMAND): added
+* rc.c (params3): add use_migemo, migemo_command
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d3 1
+@
+
+
+1.9
+log
+@[w3m-dev 02834] mailto: use external program
+@
+text
+@d3 1
+@
+
+
+1.8
+log
+@[w3m-dev 02832] external URI loader support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.7
+log
+@[w3m-dev 02822] Print FTP directory list for -dump_extra option
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.6
+log
+@[w3m-dev 02811] new regexp implementation
+From: aito@@fw.ipsj.or.jp
+@
+text
+@d3 1
+@
+
+
+1.5
+log
+@w3m 0.2.4
+@
+text
+@d1 5
+@
+
+
+1.4
+log
+@[w3m-dev 02743] RFC2818 server identity check
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+w3m 0.2.4? 0.3?
+a4 1
+* linux/ia64 support (?)
+@
+
+
+1.3
+log
+@[w3m-dev 02726] incremental search
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.2
+log
+@[w3m-dev 02692] w3m on linux/ia64
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+@
+
+
+1.1
+log
+@w3m 0.2.3.2 - security fix in w3m/scripts
+@
+text
+@d1 5
+@
+

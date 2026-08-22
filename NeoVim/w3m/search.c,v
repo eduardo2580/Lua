@@ -1,0 +1,1520 @@
+head	1.31;
+access;
+symbols
+	release-0-5-3:1.31
+	release-0-5-2:1.31
+	release-0-5-1:1.31
+	release-0-5:1.30
+	release-0-4-2:1.29
+	release-0-4-1:1.29
+	release-0-4:1.27
+	release-0-4-rc3:1.27
+	release-0-4-rc2:1.27
+	release-0-4-rc1:1.27
+	release-0-3-2-2:1.19
+	release-0-3-2-1:1.19
+	branch-0-3-2:1.19.0.2
+	release-0-3-2:1.19
+	release-0-3-2-rc4:1.19
+	release-0-3-2-rc3:1.19
+	release-0-3-2-rc2:1.19
+	release-0-3-2-rc1:1.19
+	release-0-3-1:1.19
+	release-0-3:1.18
+	release-0-2-5-1:1.18
+	branch-0-2-5:1.18.0.2
+	release-0-2-5:1.18
+	release-0-2-4:1.5
+	release-0-2-3-2:1.4
+	release-0-2-3-1:1.4
+	release-0-2-3:1.4
+	inu-0-2-2-rel-1-1:1.2.2.1
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.31
+date	2004.03.23.16.44.02;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.09.22.21.02.21;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.03.05.18.56.30;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.03.05.18.19.17;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.01.30.16.26.18;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.01.23.18.37.21;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.01.22.16.10.29;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.01.17.16.57.20;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.12.18.16.33.19;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.11.24.16.02.22;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.11.06.15.05.35;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.03.06.03.32.11;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.01.31.03.55.35;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.01.21.17.57.28;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.01.17.15.49.04;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.01.17.15.05.43;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.01.17.10.29.14;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.01.17.09.26.33;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.01.16.19.18.21;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.01.16.19.05.37;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.01.16.19.02.16;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.01.16.16.49.55;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.16.15.37.07;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.01.11.03.00.16;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.01.11.02.24.13;	author a-ito;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.23.14.44.00;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.20.17.49.23;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.16.17.25.52;	author ukai;	state Exp;
+branches
+	1.2.2.1;
+next	1.1;
+
+1.1
+date	2001.11.08.05.15.37;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.15.37;	author a-ito;	state Exp;
+branches;
+next	;
+
+1.2.2.1
+date	2001.11.22.17.52.28;	author inu;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.31
+log
+@fix search problem on different charset page than display charset
+* proto.h (conv_search_string): added
+* search.c (migemostr): use conv_search_string
+	(conv_search_string): added
+* main.c (srchcore): use conv_search_string
+	(reMark): ditto
+* menu.c (menu_search_forward): ditto
+	(menu_search_backward): ditto
+	(menu_search_next_previous): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@/* $Id: search.c,v 1.30 2003/09/22 21:02:21 ukai Exp $ */
+#include "fm.h"
+#include "regex.h"
+#include <signal.h>
+#include <errno.h>
+#include <unistd.h>
+
+static void
+set_mark(Line *l, int pos, int epos)
+{
+    for (; pos < epos && pos < l->size; pos++)
+	l->propBuf[pos] |= PE_MARK;
+}
+
+#ifdef USE_MIGEMO
+/* Migemo: romaji --> kana+kanji in regexp */
+static FILE *migemor = NULL, *migemow = NULL;
+static int migemo_running;
+static int migemo_pid = 0;
+
+void
+init_migemo()
+{
+    migemo_active = migemo_running = use_migemo;
+    if (migemor != NULL)
+	fclose(migemor);
+    if (migemow != NULL)
+	fclose(migemow);
+    migemor = migemow = NULL;
+    if (migemo_pid)
+	kill(migemo_pid, SIGKILL);
+    migemo_pid = 0;
+}
+
+static int
+open_migemo(char *migemo_command)
+{
+    migemo_pid = open_pipe_rw(&migemor, &migemow);
+    if (migemo_pid < 0)
+	goto err0;
+    if (migemo_pid == 0) {
+	/* child */
+	setup_child(FALSE, 2, -1);
+	myExec(migemo_command);
+	/* XXX: ifdef __EMX__, use start /f ? */
+    }
+    return 1;
+  err0:
+    migemo_pid = 0;
+    migemo_active = migemo_running = 0;
+    return 0;
+}
+
+static char *
+migemostr(char *str)
+{
+    Str tmp = NULL;
+    if (migemor == NULL || migemow == NULL)
+	if (open_migemo(migemo_command) == 0)
+	    return str;
+    fprintf(migemow, "%s\n", conv_to_system(str));
+  again:
+    if (fflush(migemow) != 0) {
+	switch (errno) {
+	case EINTR:
+	    goto again;
+	default:
+	    goto err;
+	}
+    }
+    tmp = Str_conv_from_system(Strfgets(migemor));
+    Strchop(tmp);
+    if (tmp->length == 0)
+	goto err;
+    return conv_search_string(tmp->ptr, SystemCharset);
+  err:
+    /* XXX: backend migemo is not working? */
+    init_migemo();
+    migemo_active = migemo_running = 0;
+    return str;
+}
+#endif				/* USE_MIGEMO */
+
+#ifdef USE_M17N
+/* normalize search string */
+char *
+conv_search_string(char *str, wc_ces f_ces)
+{
+    if (SearchConv && !WcOption.pre_conv &&
+	Currentbuf->document_charset != f_ces)
+	str = wtf_conv_fit(str, Currentbuf->document_charset);
+    return str;
+}
+#endif
+
+int
+forwardSearch(Buffer *buf, char *str)
+{
+    char *p, *first, *last;
+    Line *l, *begin;
+    int wrapped = FALSE;
+    int pos;
+
+#ifdef USE_MIGEMO
+    if (migemo_active > 0) {
+	if (((p = regexCompile(migemostr(str), IgnoreCase)) != NULL)
+	    && ((p = regexCompile(str, IgnoreCase)) != NULL)) {
+	    message(p, 0, 0);
+	    return SR_NOTFOUND;
+	}
+    }
+    else
+#endif
+    if ((p = regexCompile(str, IgnoreCase)) != NULL) {
+	message(p, 0, 0);
+	return SR_NOTFOUND;
+    }
+    l = buf->currentLine;
+    if (l == NULL) {
+	return SR_NOTFOUND;
+    }
+    pos = buf->pos;
+    if (l->bpos) {
+	pos += l->bpos;
+	while (l->bpos && l->prev)
+	    l = l->prev;
+    }
+    begin = l;
+#ifdef USE_M17N
+    while (pos < l->size && l->propBuf[pos] & PC_WCHAR2)
+	pos++;
+#endif
+    if (pos < l->size && regexMatch(&l->lineBuf[pos], l->size - pos, 0) == 1) {
+	matchedPosition(&first, &last);
+	pos = first - l->lineBuf;
+	while (pos >= l->len && l->next && l->next->bpos) {
+	    pos -= l->len;
+	    l = l->next;
+	}
+	buf->pos = pos;
+	if (l != buf->currentLine)
+	    gotoLine(buf, l->linenumber);
+	arrangeCursor(buf);
+	set_mark(l, pos, pos + last - first);
+	return SR_FOUND;
+    }
+    for (l = l->next;; l = l->next) {
+	if (l == NULL) {
+	    if (buf->pagerSource) {
+		l = getNextPage(buf, 1);
+		if (l == NULL) {
+		    if (WrapSearch && !wrapped) {
+			l = buf->firstLine;
+			wrapped = TRUE;
+		    }
+		    else {
+			break;
+		    }
+		}
+	    }
+	    else if (WrapSearch) {
+		l = buf->firstLine;
+		wrapped = TRUE;
+	    }
+	    else {
+		break;
+	    }
+	}
+	if (l->bpos)
+	    continue;
+	if (regexMatch(l->lineBuf, l->size, 1) == 1) {
+	    matchedPosition(&first, &last);
+	    pos = first - l->lineBuf;
+	    while (pos >= l->len && l->next && l->next->bpos) {
+		pos -= l->len;
+		l = l->next;
+	    }
+	    buf->pos = pos;
+	    buf->currentLine = l;
+	    gotoLine(buf, l->linenumber);
+	    arrangeCursor(buf);
+	    set_mark(l, pos, pos + last - first);
+	    return SR_FOUND | (wrapped ? SR_WRAPPED : 0);
+	}
+	if (wrapped && l == begin)	/* no match */
+	    break;
+    }
+    return SR_NOTFOUND;
+}
+
+int
+backwardSearch(Buffer *buf, char *str)
+{
+    char *p, *q, *found, *found_last, *first, *last;
+    Line *l, *begin;
+    int wrapped = FALSE;
+    int pos;
+
+#ifdef USE_MIGEMO
+    if (migemo_active > 0) {
+	if (((p = regexCompile(migemostr(str), IgnoreCase)) != NULL)
+	    && ((p = regexCompile(str, IgnoreCase)) != NULL)) {
+	    message(p, 0, 0);
+	    return SR_NOTFOUND;
+	}
+    }
+    else
+#endif
+    if ((p = regexCompile(str, IgnoreCase)) != NULL) {
+	message(p, 0, 0);
+	return SR_NOTFOUND;
+    }
+    l = buf->currentLine;
+    if (l == NULL) {
+	return SR_NOTFOUND;
+    }
+    pos = buf->pos;
+    if (l->bpos) {
+	pos += l->bpos;
+	while (l->bpos && l->prev)
+	    l = l->prev;
+    }
+    begin = l;
+    if (pos > 0) {
+	pos--;
+#ifdef USE_M17N
+	while (pos > 0 && l->propBuf[pos] & PC_WCHAR2)
+	    pos--;
+#endif
+	p = &l->lineBuf[pos];
+	found = NULL;
+	found_last = NULL;
+	q = l->lineBuf;
+	while (regexMatch(q, &l->lineBuf[l->size] - q, q == l->lineBuf) == 1) {
+	    matchedPosition(&first, &last);
+	    if (first <= p) {
+		found = first;
+		found_last = last;
+	    }
+	    if (q - l->lineBuf >= l->size)
+		break;
+	    q++;
+#ifdef USE_M17N
+	    while (q - l->lineBuf < l->size
+		   && l->propBuf[q - l->lineBuf] & PC_WCHAR2)
+		q++;
+#endif
+	    if (q > p)
+		break;
+	}
+	if (found) {
+	    pos = found - l->lineBuf;
+	    while (pos >= l->len && l->next && l->next->bpos) {
+		pos -= l->len;
+		l = l->next;
+	    }
+	    buf->pos = pos;
+	    if (l != buf->currentLine)
+		gotoLine(buf, l->linenumber);
+	    arrangeCursor(buf);
+	    set_mark(l, pos, pos + found_last - found);
+	    return SR_FOUND;
+	}
+    }
+    for (l = l->prev;; l = l->prev) {
+	if (l == NULL) {
+	    if (WrapSearch) {
+		l = buf->lastLine;
+		wrapped = TRUE;
+	    }
+	    else {
+		break;
+	    }
+	}
+	found = NULL;
+	found_last = NULL;
+	q = l->lineBuf;
+	while (regexMatch(q, &l->lineBuf[l->size] - q, q == l->lineBuf) == 1) {
+	    matchedPosition(&first, &last);
+	    found = first;
+	    found_last = last;
+	    if (q - l->lineBuf >= l->size)
+		break;
+	    q++;
+#ifdef USE_M17N
+	    while (q - l->lineBuf < l->size
+		   && l->propBuf[q - l->lineBuf] & PC_WCHAR2)
+		q++;
+#endif
+	}
+	if (found) {
+	    pos = found - l->lineBuf;
+	    while (pos >= l->len && l->next && l->next->bpos) {
+		pos -= l->len;
+		l = l->next;
+	    }
+	    buf->pos = pos;
+	    gotoLine(buf, l->linenumber);
+	    arrangeCursor(buf);
+	    set_mark(l, pos, pos + found_last - found);
+	    return SR_FOUND | (wrapped ? SR_WRAPPED : 0);
+	}
+	if (wrapped && l == begin)	/* no match */
+	    break;
+    }
+    return SR_NOTFOUND;
+}
+@
+
+
+1.30
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.29 2003/03/05 18:56:30 ukai Exp $ */
+d75 1
+a75 1
+    return tmp->ptr;
+d84 12
+@
+
+
+1.29
+log
+@[w3m-dev 03793] incremental search fix
+main.c (dispincsrch): revert sbuf.pos fix
+		start from next position in next forward search
+	(srch): start from next position in forward saerch
+		if not found, restore original position
+	(srch_nxtprv): start from next position in next forward search
+* search.c (forwardSearch): search from current position
+	(dispincsrch): start from current position in case of
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.28 2003/03/05 18:19:17 ukai Exp $ */
+d61 1
+a61 1
+    fprintf(migemow, "%s\n", str);
+d71 1
+a71 1
+    tmp = Strfgets(migemor);
+d117 2
+a118 2
+#ifdef JP_CHARSET
+    if (l->propBuf[pos] & PC_KANJI2)
+d214 2
+a215 2
+#ifdef JP_CHARSET
+	if (l->propBuf[pos] & PC_KANJI2)
+d230 5
+a234 4
+#ifdef JP_CHARSET
+	    if (l->propBuf[q - l->lineBuf] & PC_KANJI1)
+		q += 2;
+	    else
+a235 1
+		q++;
+d272 5
+a276 4
+#ifdef JP_CHARSET
+	    if (l->propBuf[q - l->lineBuf] & PC_KANJI1)
+		q += 2;
+	    else
+a277 1
+		q++;
+@
+
+
+1.28
+log
+@[w3m-dev 03792] URL match string
+		incremental search fix
+* main.c (chkURLBuffer): allow - at end of URL string
+	(dispincsrch): start from current position in case of
+			incremental search
+* search.c (forwardSearch): found if same position
+	(backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.27 2003/01/30 16:26:18 ukai Exp $ */
+d110 1
+a110 1
+    pos = buf->pos + 1;
+@
+
+
+1.27
+log
+@[w3m-dev 03713] search with "$"
+* search.c (forwardSearch): check l->next && l->next->bpos
+	(backwardSearch): check l->size, l->next && l->next->bpos
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.26 2003/01/23 18:37:21 ukai Exp $ */
+a160 3
+	    if (wrapped && l == begin && buf->pos == first - l->lineBuf)
+		/* exactly same match */
+		break;
+d268 2
+a269 7
+	    if (wrapped && l == begin && buf->pos == first - l->lineBuf)
+		/* exactly same match */
+		;
+	    else {
+		found = first;
+		found_last = last;
+	    }
+@
+
+
+1.26
+log
+@[w3m-dev 03667] fold patch
+* anchor.c (reAnchorPos): rewrite
+	(reAnchorWord): delete reseq_anchor()
+	(reAnchorAny): use l->size
+			delete reseq_anchor()
+* backend.c (internal_get): pass TRUE to saveBuffer
+* buffer.c (newBuffer): delete n->linelen
+	(reshapeBuffer): rewrite
+* display.c (displayBuffer): FoldLine
+	(redrawLine): l->bpos
+	(cursorUp0): added
+	(cursorUp): rewrite
+	(cursorDown0): added
+	(cursowDown): rewrite
+	(cursorRight): check l->next
+			l->bwidth
+	(cursorLeft): l->prev && l->bpos
+			l->bwidth
+	(arrangeCursor): buf->currentLine->bwidth
+		buf->cursorX
+* etc.c (checkType): **oporp
+			rewrite
+	(calcPosition): realColumn allocated by New_reuse
+* file.c (addnewline): add nlines arg
+	(propBuffer): deleted
+	(colorBuffer): deleted
+	(readHeader): propBuffer
+		FOLD_BUFFER_WIDTH
+	(HTMLlineproc2body): rewrite
+	(addnewline2): added
+	(addnewline): rewrite
+	(loadBuffer): propBuffer, colorBuffer
+	(saveBuffer): cont arg
+	(getNextPage): rewrite
+* fm.h (LINELEN): 256
+	(FNLEN): deleted
+	(Line): add size, bpos, bwidth
+	(Buffer): delete linelen
+	(INIT_BUFFER_WIDTH): check showLineNum
+	(FOLD_BUFFER_WIDTH): added
+	(FoldLine): added
+* funcname.tab (RESHAPE): added
+* main.c (do_dump): pass FALSE to saveBuffer
+	(nscroll): rewrite
+	(clear_mark): l->size
+	(shiftvisualpos): rewrite
+	(pipeBuf): pass TRUE to saveBuffer
+	(linebeg): check line->prev && line->bpos
+	(linend): check line->next, line->next->bpos
+	(editScr): pass TRUE to saveBuffer
+	(svBuf): pass TRUE to saveBuffer
+	(vmSrc): pass TRUE to saveBuffer
+	(reshape): added
+	(curlno): rewrite
+* mimehead.c (LINELEN): deleted
+* proto.h (reshape): added
+	(saveBuffer): add cont arg
+	(cursorUp0): added
+	(cursorDown0): added
+	(checkType): change type oprop, ocolor, delete check_color, len
+* rc.c (CMT_FOLD_LINE): added
+	(params1): add fold_line
+	(sync_with_option): check PagerMax
+* search.c (set_mark): l->size
+	(forwardSearch): rewrite
+	(backwardSearch): rewrite
+* doc/README.func (RESHAPE): added
+* doc-jp/README.func (RESHAPE): added
+* scripts/w3mhelp.cgi.in (Buffer operation): add reshape
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.25 2003/01/22 16:10:29 ukai Exp $ */
+d124 1
+a124 1
+	while (pos >= l->len) {
+d165 1
+a165 1
+	    while (pos >= l->len) {
+d231 2
+d244 1
+a244 1
+	    while (pos >= l->len) {
+d278 2
+d289 1
+a289 1
+	    while (pos >= l->len) {
+@
+
+
+1.25
+log
+@[w3m-dev 03676] cleanup for pipe
+* etc.c (open_pipe_rw): added
+* file.c (uncompress_stream): rewrite using open_pipe_rw
+* image.c (openImgdisplay): rewrite using open_pipe_rw
+* local.c (localcgi_popen_rw): deleted
+	(localcgi_post): rewrite using open_pipe_rw
+* proto.h (open_pipe_rw): added
+* search.c (migemor): initialized to NULL
+	(migemow): initialized to NULL
+	(migemo_pid): initialized to 0
+	(open_migemo): rewrite using open_pipe_rw
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.24 2003/01/17 16:57:20 ukai Exp $ */
+d11 1
+a11 1
+    for (; pos < epos && pos < l->len; pos++)
+d106 1
+a106 1
+    l = begin = buf->currentLine;
+d111 6
+d121 1
+a121 1
+    if (pos < l->len && regexMatch(&l->lineBuf[pos], l->len - pos, 0) == 1) {
+d123 8
+a130 1
+	buf->pos = first - l->lineBuf;
+d132 1
+a132 1
+	set_mark(l, buf->pos, last - l->lineBuf);
+d157 3
+a159 1
+	if (regexMatch(l->lineBuf, l->len, 1) == 1) {
+d164 6
+a169 1
+	    buf->pos = first - l->lineBuf;
+d173 1
+a173 1
+	    set_mark(l, buf->pos, last - l->lineBuf);
+d204 1
+a204 1
+    l = begin = buf->currentLine;
+d208 9
+a216 2
+    if (buf->pos > 0) {
+	pos = buf->pos - 1;
+d225 1
+a225 1
+	while (regexMatch(q, &l->lineBuf[l->len] - q, q == l->lineBuf) == 1) {
+d241 8
+a248 1
+	    buf->pos = found - l->lineBuf;
+d250 1
+a250 1
+	    set_mark(l, buf->pos, found_last - l->lineBuf);
+d267 1
+a267 1
+	while (regexMatch(q, &l->lineBuf[l->len] - q, q == l->lineBuf) == 1) {
+d284 6
+a289 2
+	    buf->pos = found - l->lineBuf;
+	    buf->currentLine = l;
+d292 1
+a292 1
+	    set_mark(l, buf->pos, found_last - l->lineBuf);
+@
+
+
+1.24
+log
+@[w3m-dev 03646] setup child process, local CGI
+* etc.c (reset_signals): static
+			don't ignore SIGUSR1
+	(close_all_fds_except): static
+			DEV_NULL_PATH
+	(setup_child): added
+	(myExec): rewrite
+	(mySystem): rewrite
+* file.c (readHeader): check image_source
+	(loadGeneralFile): check image_source
+	(doExternal): use setup_child
+	(_doFileCopy): use setup_child
+	(doFileSave): use setup_child
+	(uncompress_stream): check image_source
+			use setup_child
+* image.c (getCharSize): no need stderr redirect
+	(openImgdisplay): use setup_child
+	(loadImage): use setup_child
+	(getImageSize): no need stderr redirect
+* local.c (writeLocalCookie): check Local_cookie_file
+	(localcgi_popen_rw): added
+	(localcgi_popen_r): deleted
+	(localcgi_post): rewrite
+	(localcgi_get): deleted
+* proto.h (localcgi_get): defined by localcgi_post
+	(reset_signals): deleted
+	(close_all_fds_except): deleted
+	(close_all_fds): deleted
+	(setup_child): added
+* search.c (open_migemo): use setup_child, myExec
+* w3mimgdisplay.c (main): use DEV_NULL_PATH
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.23 2002/12/18 16:33:19 ukai Exp $ */
+d17 1
+a17 1
+static FILE *migemor, *migemow;
+d19 1
+a19 1
+static int migemo_pid;
+d38 2
+a39 4
+    int fdr[2];
+    int fdw[2];
+
+    if (pipe(fdr) < 0)
+a40 8
+    if (pipe(fdw) < 0)
+	goto err1;
+
+    flush_tty();
+    /* migemow:fdw[1] -|-> fdw[0]=0 {migemo} fdr[1]=1 -|-> fdr[0]:migemor */
+    migemo_pid = fork();
+    if (migemo_pid < 0)
+	goto err2;
+a42 4
+	close(fdr[0]);
+	close(fdw[1]);
+	dup2(fdw[0], 0);
+	dup2(fdr[1], 1);
+a46 4
+    close(fdr[1]);
+    close(fdw[0]);
+    migemor = fdopen(fdr[0], "r");
+    migemow = fdopen(fdw[1], "w");
+a47 6
+  err2:
+    close(fdw[0]);
+    close(fdw[1]);
+  err1:
+    close(fdr[0]);
+    close(fdr[1]);
+d49 1
+@
+
+
+1.23
+log
+@[w3m-dev 03579] Re: clean up displayBuffer()
+* display.c (displayBuffer): re calcTabPos() when force or image redraw
+* main.c (_mark): force redraw
+	(reinit): redraw image
+* search.c (backwardSearch): found_last
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.22 2002/11/24 16:02:22 ukai Exp $ */
+a52 3
+	reset_signals();
+	SETPGRP();
+	close_tty();
+d57 3
+a59 4
+	close_all_fds(2);
+	execl("/bin/sh", "sh", "-c", migemo_command, NULL);
+	/* XXX: ifndef HAVE_SETPGRP, use "start /f"? */
+	exit(1);
+@
+
+
+1.22
+log
+@[w3m-dev 03471] Re: SETPGRP()
+* configure: SETPGRP() always defined
+* proto.h (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+* etc.c (close_all_fds): added
+	(myExec): #ifdef HAVE_SETPGRP
+	(mySystem): #ifndef -> #ifdef
+* file.c (_doFileCopy): delete #ifdef HAVE_SETPGRP
+	(doFileSave): ditto
+* image.c (openImgdisplay): delete #ifdef HAVE_SETPGRP
+			use close_all_fds()
+* search.c (open_migemo): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.21 2002/11/06 15:05:35 ukai Exp $ */
+d192 1
+a192 1
+    char *p, *q, *found, *first, *last;
+d223 1
+d227 1
+a227 1
+	    if (first <= p)
+d229 2
+d243 1
+a243 1
+	    set_mark(l, buf->pos, last - l->lineBuf);
+d258 1
+d265 1
+a265 1
+	    else
+d267 2
+d281 1
+a281 1
+	    set_mark(l, buf->pos, last - l->lineBuf);
+@
+
+
+1.21
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.20 2002/11/06 03:50:49 ukai Exp $ */
+a52 1
+	int i;
+a53 1
+#ifdef HAVE_SETPGRP
+a54 1
+#endif
+d60 1
+a60 7
+	dup2(open("/dev/null", O_WRONLY), 2);
+#ifndef FOPEN_MAX
+#define FOPEN_MAX 1024		/* XXX */
+#endif
+	/* close all other file descriptors (socket, ...) */
+	for (i = 3; i < FOPEN_MAX; i++)
+	    close(i);
+d62 1
+@
+
+
+1.20
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.19 2002/03/06 03:32:11 ukai Exp $ */
+d65 1
+a65 1
+#define FOPEN_MAX 1024 /* XXX */
+@
+
+
+1.19
+log
+@* version.c.in: 0.3+cvs
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.18 2002/01/31 03:55:35 ukai Exp $ */
+d53 1
+d63 7
+a69 1
+	close(2);
+@
+
+
+1.18
+log
+@[w3m-dev 02946] toggle migemo
+* fm.h (migemo_active): added
+* proto.h (inputLineHistSearch): add arg `prop' to incrfunc()
+* linein.c (inputLineHistSearch): ditto
+* main.c (isrch): ditto
+* main.c (dispincsrch): ditto
+			C-\ toggle migemo
+			underline when migemo is active
+* search.c (migemo_active): deleted
+* search.c (migemo_running): added
+* search.c (init_migemo): migemo_running
+* search.c (migemostr): ditto
+* search.c (forwardSearch): migemo_active > 0
+* search.c (backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.17 2002/01/21 17:57:28 ukai Exp $ */
+d55 1
+a55 1
+	setpgrp();
+@
+
+
+1.17
+log
+@[w3m-dev 02879] reset signals
+* etc.c (reset_signals): added
+* etc.c (mySystem): use reset_signals()
+* file.c (uncompress_stream): use reset_signals()
+* proto.h (reset_signals): added
+* search.c (init_migemo): kill by SIGKILL
+* search.c (open_migemo): use reset_signals()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.16 2002/01/17 15:49:04 ukai Exp $ */
+d18 1
+a18 1
+static int migemo_active;
+d24 1
+a24 1
+    migemo_active = use_migemo;
+d78 1
+a78 1
+    migemo_active = 0;
+d107 1
+a107 1
+    migemo_active = 0;
+d121 1
+a121 1
+    if (migemo_active) {
+d199 1
+a199 1
+    if (migemo_active) {
+@
+
+
+1.16
+log
+@[w3m-dev 02871] ignore SIGCHLD (for at least EWS4800)
+* search.c (open_migemo): signal(SIGCHLD, SIG_IGN);
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.15 2002/01/17 15:05:43 ukai Exp $ */
+d31 1
+a31 1
+	kill(migemo_pid, SIGTERM);
+d53 1
+a53 4
+	signal(SIGINT, SIG_IGN);
+#ifdef SIGCHLD
+	signal(SIGCHLD, SIG_IGN);
+#endif
+@
+
+
+1.15
+log
+@[w3m-dev 02870] don't kill migemo by SIGINT
+* main.c (w3m_exit): init_migemo() to kill migemo
+* search.c: #include <unistd.h>
+* search.c (migemo_active): added
+* search.c (migemo_pid): added
+* search.c (init_migemo): migemo_active = use_migemo
+* search.c (init_migemo): kill migemo_pid
+* search.c (open_migemo): s/pid/migemo_pid/
+* search.c (open_migemo): setpgrp()
+* search.c (open_migemo): s/use_migemo/migemo_active/
+* search.c (migemostr): ditto
+* search.c (forwardSearch): ditto
+* search.c (backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.14 2002/01/17 10:29:14 ukai Exp $ */
+d54 3
+@
+
+
+1.14
+log
+@[w3m-dev 02866]
+* search.c: #include <signal.h>
+* search.c (open_migemo): ignore SIG_INT for migemo process
+* search.c (open_migemo): close_tty()
+* search.c (open_migemo): use execl() instead of system()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.13 2002/01/17 09:26:33 ukai Exp $ */
+d6 1
+d18 2
+d24 1
+d30 3
+d40 1
+a40 1
+    int pid;
+d48 2
+a49 2
+    pid = fork();
+    if (pid < 0)
+d51 1
+a51 1
+    if (pid == 0) {
+d54 3
+d78 1
+a78 1
+    use_migemo = 0;
+d107 1
+a107 1
+    use_migemo = 0;
+d121 1
+a121 1
+    if (use_migemo) {
+d199 1
+a199 1
+    if (use_migemo) {
+@
+
+
+1.13
+log
+@[w3m-dev 02865]
+* search.c (open_migemo): add flush_tty()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.12 2002/01/16 19:18:21 ukai Exp $ */
+d4 1
+d46 2
+d53 1
+a53 1
+	system(migemo_command);
+@
+
+
+1.12
+log
+@[w3m-dev 02863] discard migemo error message
+* search.c (open_migemo): close stderr
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.11 2002/01/16 19:05:37 ukai Exp $ */
+d38 1
+@
+
+
+1.11
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.10 2002/01/16 19:02:16 ukai Exp $ */
+d48 1
+@
+
+
+1.10
+log
+@[w3m-dev 02862] SIGPIPE for migemo support
+* main.c (SigPipe): added
+* main.c (MAIN): signal(SIGPIPE, )
+* search.c: #include <errno.h>
+* search.c (migemostr): check fflush() error
+* search.c (migemostr): check result string (empty is err)
+* search.c (migemostr): if error occured, disable use_migemo
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.9 2002/01/16 16:49:55 ukai Exp $ */
+d9 2
+a10 2
+    for (; pos < epos && pos < l->len; pos++) 
+        l->propBuf[pos] |= PE_MARK;
+d56 1
+a56 1
+err2:
+d59 1
+a59 1
+err1:
+d62 1
+a62 1
+err0:
+d75 1
+a75 1
+again:
+d78 4
+a81 2
+	case EINTR: goto again;
+	default: goto err;
+d89 1
+a89 1
+err:
+@
+
+
+1.9
+log
+@[w3m-dev 02859]
+* config.h.dist (DEF_MIGEMO_COMMAND): added
+* configure (DEF_MIGEMO_COMMAND): added
+* fm.h (migemo_command): initial value is DEF_MIGEMO_COMMAND
+* main.c (migemostr): remove here, move search.c
+* main.c (srchcore): dont migemostr() here
+* proto.h (init_migemo): added
+* rc.c (sync_with_option): init_migemo()
+* search.c (init_migemo): added
+* search.c (open_migemo): added
+* search.c (migemostr): communicate background migemo
+* search.c (forwardSearch): if regexCompile for migemostr failed,
+		try original str
+* search.c (backwardSearch): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.8 2002/01/16 15:37:07 ukai Exp $ */
+d4 1
+d75 7
+a81 1
+    fflush(migemow);
+d84 2
+d87 5
+@
+
+
+1.8
+log
+@[w3m-dev 02854] highlight for incremental search
+* display.c (EFFECT_MARK_START): added
+* display.c (EFFECT_MARK_END): added
+* display.c (EFFECT_MARK_START_C): added
+* display.c (EFFECT_MARK_END_C): added
+* display.c (EFFECT_MARK_START_M): added
+* display.c (EFFECT_MARK_END_M): added
+* display.c: define_effect for MARK_{START,END}
+* display.c (mark_mode): added
+* display.c (redrawLine): if mark_mode
+* display.c (do_effects): do_effect2(PE_MARK, ...)
+* display.c (do_effects): do_effect1(PE_MARK, ...)
+* fm.h (P_EFFECT): changed to 0x01ff
+* fm.h (PE_MARK): moved
+* fm.h (mark_color): added
+* linein.c (inputLineHistSearch): incrfunc(int ch, Str str)
+* main.c (clear_mark): added
+* main.c (dispincsrch): remove arg `x', `y'
+* main.c (dispincsrch): move SAVE_BUFPOSITION()
+* main.c (srch): if (result & SR_FOUND) clear_mark()
+* main.c (cmd_mark): PE_MARK
+* main.c (nextMk): s/PM_MARK/PE_MARK/
+* main.c (prevMk): s/PM_MARK/PE_MARK/
+* proto.h (inputLineHistSearch): change prototype incfunc()
+* rc.c (CMT_MARK_COLOR): added
+* rc.c (params2): add "mark_color"
+* search.c (set_mark): added
+* search.c (forwardSearch): use set_mark()
+* search.c (backwardSearch): use set_mark()
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.7 2002/01/11 03:00:16 ukai Exp $ */
+d12 69
+d89 10
+d167 10
+@
+
+
+1.7
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.6 2002/01/11 02:24:13 a-ito Exp $ */
+d5 7
+d37 1
+d71 1
+d121 1
+d156 1
+@
+
+
+1.6
+log
+@
+2002-01-11  Akinori Ito <aito@@fw.ipsj.or.jp>
+
+	* [w3m-dev 02819]
+	* regex.c (RegexMatch): loop condition changed (from < to <= )
+	* regex.c (regmatch_iter): end condition changed (from >= to >)
+	* search.c (forwardSearch): next search fix
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.5 2001/12/23 14:44:00 ukai Exp $ */
+d26 1
+a26 2
+    if (pos < l->len &&
+	regexMatch(&l->lineBuf[pos], l->len - pos, 0) == 1) {
+@
+
+
+1.5
+log
+@[w3m-dev 02700] search refactoring
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.4 2001/11/24 02:01:26 ukai Exp $ */
+d26 2
+a27 1
+    if (regexMatch(&l->lineBuf[pos], l->len - pos, 0) == 1) {
+@
+
+
+1.4
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: search.c,v 1.3 2001/11/20 17:49:23 ukai Exp $ */
+d15 1
+a15 1
+	return FALSE;
+d19 1
+a19 2
+	disp_message("Not found", FALSE);
+	return FALSE;
+d30 1
+a30 1
+	return FALSE;
+d63 1
+a63 1
+	    return wrapped;
+d68 1
+a68 2
+    disp_message("Not found", FALSE);
+    return FALSE;
+d81 1
+a81 1
+	return FALSE;
+d85 1
+a85 2
+	disp_message("Not found", FALSE);
+	return FALSE;
+d112 1
+a112 1
+	    return FALSE;
+d146 1
+a146 1
+	    return wrapped;
+d151 1
+a151 2
+    disp_message("Not found", FALSE);
+    return FALSE;
+@
+
+
+1.3
+log
+@add rcsids
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d6 1
+a6 1
+forwardSearch(Buffer * buf, char *str)
+d74 1
+a74 1
+backwardSearch(Buffer * buf, char *str)
+d87 2
+a88 2
+        disp_message("Not found", FALSE);
+        return FALSE;
+@
+
+
+1.2
+log
+@[w3m-dev 02418]
+main.c: mailto: like pattern to mark as anchor
+search.c: check NULL
+          add disp_message() by ukai
+@
+text
+@d1 1
+@
+
+
+1.2.2.1
+log
+@
+w3m-0.2.2-inu-1.1 source
+@
+text
+@d17 4
+a20 2
+    if (l == NULL)
+       return FALSE;
+d85 4
+a88 2
+    if (l == NULL)
+       return FALSE;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d17 4
+d85 4
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

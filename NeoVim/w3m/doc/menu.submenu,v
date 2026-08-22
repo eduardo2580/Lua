@@ -1,0 +1,148 @@
+head	1.3;
+access;
+symbols
+	release-0-5-3:1.3
+	release-0-5-2:1.3
+	release-0-5-1:1.1.1.1
+	release-0-5:1.1.1.1
+	release-0-4-2:1.1.1.1
+	release-0-4-1:1.1.1.1
+	release-0-4:1.1.1.1
+	release-0-4-rc3:1.1.1.1
+	release-0-4-rc2:1.1.1.1
+	release-0-4-rc1:1.1.1.1
+	release-0-3-2-2:1.1.1.1
+	release-0-3-2-1:1.1.1.1
+	branch-0-3-2:1.1.1.1.0.6
+	release-0-3-2:1.1.1.1
+	release-0-3-2-rc4:1.1.1.1
+	release-0-3-2-rc3:1.1.1.1
+	release-0-3-2-rc2:1.1.1.1
+	release-0-3-2-rc1:1.1.1.1
+	release-0-3-1:1.1.1.1
+	release-0-3:1.1.1.1
+	release-0-2-5-1:1.1.1.1
+	branch-0-2-5:1.1.1.1.0.4
+	release-0-2-5:1.1.1.1
+	release-0-2-4:1.1.1.1
+	release-0-2-3-2:1.1.1.1
+	release-0-2-3-1:1.1.1.1
+	release-0-2-3:1.1.1.1
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2006.04.07.15.05.49;	author inu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.15;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.15;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@rewind to 10 Feb 2006.
+@
+text
+@# A sample of ~/.w3m/menu  (submenu type)
+#
+# menu MENU_ID
+#  func  LABEL FUNCTION KEYS
+#  popup LABEL MENU_ID  KEYS
+#  nop   LABEL
+# end
+#
+# MENU_ID
+#  Main:   Main Menu
+#  Select: Buffer selection menu
+
+menu Main
+ func	"Back         (b)"	BACK		"b"
+ popup	"Buffer ops  >(f)"	Buffer		"fF"
+ popup	"Link ops    >(l)"	Link		"lL"
+ nop	"----------------"
+ popup	"Bookmarks   >(B)"	Bookmark	"B"
+ func	"Help         (h)"	HELP		"hH"
+ func	"Options      (o)"	OPTIONS		"oO"
+ nop	"----------------"
+ func	"Quit         (q)"	QUIT		"qQ"
+end
+
+menu Buffer
+ popup	"Buffer select(s)"	Select		"s"
+ func	"View source  (v)"	VIEW		"vV"
+ func	"Edit source  (e)"	EDIT		"eE"
+ func	"Save source  (S)"	SAVE		"S"
+ func	"Reload       (r)"	RELOAD		"rR"
+end
+
+menu Link
+ func	"Go link      (a)"	GOTO_LINK	"a"
+ func	"Save link    (A)"	SAVE_LINK	"A"
+ func	"View image   (i)"	VIEW_IMAGE	"i"
+ func	"Save image   (I)"	SAVE_IMAGE	"I"
+ func	"View frame   (f)"	FRAME		"fF"
+end
+
+menu Bookmark
+ func   "Read bookmark       (b)"	BOOKMARK	"bB"
+ func   "Add page to bookmark(a)"	ADD_BOOKMARK	"aA"
+end
+@
+
+
+1.2
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS FUNCTION_ARGUMENT
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

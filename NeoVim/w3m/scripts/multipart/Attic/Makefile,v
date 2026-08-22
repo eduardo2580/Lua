@@ -1,0 +1,237 @@
+head	1.7;
+access;
+symbols
+	release-0-4-2:1.6
+	release-0-4-1:1.6
+	release-0-4:1.6
+	release-0-4-rc3:1.6
+	release-0-4-rc2:1.6
+	release-0-4-rc1:1.6
+	release-0-3-2-2:1.5
+	release-0-3-2-1:1.5
+	branch-0-3-2:1.5.0.4
+	release-0-3-2:1.5
+	release-0-3-2-rc4:1.5
+	release-0-3-2-rc3:1.5
+	release-0-3-2-rc2:1.5
+	release-0-3-2-rc1:1.5
+	release-0-3-1:1.5
+	release-0-3:1.5
+	release-0-2-5-1:1.5
+	branch-0-2-5:1.5.0.2
+	release-0-2-5:1.5
+	release-0-2-4:1.5
+	release-0-2-3-2:1.5
+	release-0-2-3-1:1.5
+	release-0-2-3:1.5
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.7
+date	2003.09.22.22.53.53;	author ukai;	state dead;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.11.15.19.51;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.04.16.17.07;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.22.03.21.08;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.21.09.42.23;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.21.09.21.59;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.15.00.32.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@more autoconfiscate
+@
+text
+@
+prefix		= /usr/local
+BIN_DIR		= $(prefix)/bin
+LIB_DIR		= $(prefix)/lib/w3m/cgi-bin
+DESTDIR		=
+distdir		= ./distfiles
+
+LIB_TARGETS	= multipart.cgi
+
+MKDIR		= mkdir -p
+INSTALL		= install -c
+INSTALL_SCRIPT	= $(INSTALL) -m 755
+
+PERL		= /usr/local/bin/perl
+NKF		= nkf
+
+.SUFFIXES: .in
+
+all: $(LIB_TARGETS)
+
+.in:
+	sed -e 's%@@PERL@@%$(PERL)%g'	\
+	    -e 's%@@NKF@@%$(NKF)%g'	\
+	$< > $@@
+	chmod +x $@@
+
+install: $(LIB_TARGETS)
+	-$(MKDIR) $(DESTDIR)$(LIB_DIR)
+	for file in $(LIB_TARGETS);	\
+	do	\
+		$(INSTALL_SCRIPT) $$file $(DESTDIR)$(LIB_DIR);	\
+	done
+
+uninstall:
+	-for file in $(LIB_TARGETS);	\
+	do	\
+		rm -f $(LIB_DIR)/$$file;	\
+	done
+
+clean:
+	-rm -f $(LIB_TARGETS)
+
+dist: all
+	@@-rm -fr $(distdir)/multipart
+	$(MKDIR) $(distdir)/multipart
+	cp Makefile README multipart.cgi.in $(distdir)/multipart
+	( cd $(distdir); tar -cf - multipart | GZIP='' gzip ) \
+		> $(distdir)/multipart.tar.gz
+	-rm -fr $(distdir)/multipart
+
+@
+
+
+1.6
+log
+@[w3m-dev 03406]
+* scripts/Makefile: add AUXBIN_DIR
+		update LIB_DIR, HELP_DIR
+		xface2xpm installed in AUXBIN_DIR
+* scripts/multipart/Makefile: update LIB_DIR
+* scripts/w3mman/Makefile: update LIB_DIR
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@@
+
+
+1.5
+log
+@[w3m-dev 02614] cleanup Makefiles
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d4 1
+a4 1
+LIB_DIR		= $(prefix)/lib/w3m
+@
+
+
+1.4
+log
+@[w3m-dev 02493]
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d10 1
+d28 1
+d34 6
+d41 1
+a41 1
+	rm -f $(LIB_TARGETS)
+d45 3
+a47 5
+	mkdir -p $(distdir)/multipart
+	cp Makefile README multipart.cgi multipart.cgi.in \
+		$(distdir)/multipart
+	( cd $(distdir); \
+		 tar -cf - multipart | GZIP='' gzip ) \
+@
+
+
+1.3
+log
+@[w3m-dev 02473] clean & install-scripts
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@a2 1
+DESTDIR		=
+d5 1
+d29 1
+a29 1
+		$(INSTALL_SCRIPT) $$file $(DISTDIR)$(LIB_DIR);	\
+@
+
+
+1.2
+log
+@[w3m-dev 02470]
+Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d32 3
+@
+
+
+1.1
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d3 3
+a5 2
+bindir		= $(prefix)/bin
+libdir		= $(prefix)/lib
+d8 1
+a8 1
+W3M_LIBDIR	= $(libdir)/w3m
+d14 1
+a14 1
+NKF		= /usr/local/bin/nkf
+d16 1
+a16 1
+all: multipart.cgi
+d18 3
+a20 1
+multipart.cgi: multipart.cgi.in Makefile
+d23 2
+a24 2
+	multipart.cgi.in > multipart.cgi
+	chmod +x multipart.cgi
+d26 5
+a30 2
+install: multipart.cgi
+	$(INSTALL_SCRIPT) multipart.cgi $(W3M_LIBDIR)
+@
+

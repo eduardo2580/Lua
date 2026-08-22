@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2003.09.22.21.02.28;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@merge m17n patch
+add libwc
+@
+text
+@
+# gunzip -c www.unicode.org/Public/BETA/Unicode3.2/Unihan-3.2.0d2.txt.gz \
+# | perl mk_hkscs_p2_txt.pl \
+# | sort > private/hkscs_p2.txt
+
+while(<>) {
+	/^U\+([0-9A-F]{4,5})\s+kHKSCS\s+([0-9A-F]{4})/ || next;
+	($c, $u) = ($2, $1);
+	print "$c\t$u\n";
+}
+@

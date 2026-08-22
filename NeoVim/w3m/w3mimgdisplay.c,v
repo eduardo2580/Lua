@@ -1,0 +1,1391 @@
+head	1.19;
+access;
+symbols
+	release-0-5-3:1.19
+	release-0-5-2:1.18
+	release-0-5-1:1.18
+	release-0-5:1.18
+	release-0-4-2:1.18
+	release-0-4-1:1.12
+	release-0-4:1.12
+	release-0-4-rc3:1.12
+	release-0-4-rc2:1.12
+	release-0-4-rc1:1.12
+	release-0-3-2-2:1.8
+	release-0-3-2-1:1.8
+	branch-0-3-2:1.8.0.2
+	release-0-3-2:1.8
+	release-0-3-2-rc4:1.7
+	release-0-3-2-rc3:1.7
+	release-0-3-2-rc2:1.7
+	release-0-3-2-rc1:1.7
+	release-0-3-1:1.2
+	release-0-3:1.2;
+locks; strict;
+comment	@ * @;
+
+
+1.19
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.07.13.16.20.42;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.07.13.16.19.10;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.07.08.17.29.56;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.07.07.15.49.03;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.07.07.15.48.16;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.24.15.45.57;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.01.17.16.57.21;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.25.16.14.45;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.27.16.46.34;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.10.31.09.36.22;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.09.29.15.14.32;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.07.22.16.17.32;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.07.18.06.49.39;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.18.06.27.23;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.17.20.58.48;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.01.31.18.28.24;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.01.31.17.54.57;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.19
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@/* $Id: w3mimgdisplay.c,v 1.18 2003/07/13 16:20:42 ukai Exp $ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include "config.h"
+#include "w3mimg/w3mimg.h"
+
+w3mimg_op *w_op;
+static char *background = NULL;
+static int offset_x = 0, offset_y = 0;
+static int defined_bg = 0, defined_x = 0, defined_y = 0, defined_test = 0;
+static int defined_debug = 0;
+static char *defined_size = NULL;
+
+#define MAX_IMAGE 1000
+static W3MImage *imageBuf = NULL;
+static int maxImage = 0, maxAnim = 100, clearMargin = 0;
+
+static void GetOption(int argc, char **argv);
+static void DrawImage(char *buf, int redraw);
+static void TermImage(void);
+static void ClearImage(char *buf);
+
+int
+main(int argc, char **argv)
+{
+    int len;
+    char buf[1024 + 128];
+#ifdef W3MIMGDISPLAY_SETUID
+    uid_t runner_uid = getuid();
+    uid_t owner_uid = geteuid();
+
+    /* swap real and effective */
+    setreuid(owner_uid, runner_uid);
+#endif
+    GetOption(argc, argv);
+    if (!defined_debug)
+	freopen(DEV_NULL_PATH, "w", stderr);
+
+#ifdef W3MIMGDISPLAY_SETUID
+    /* 
+     * back real and effective
+     * run w3mimg_open() in setuid privileges
+     */
+    setreuid(runner_uid, owner_uid);
+#endif
+    w_op = w3mimg_open();
+#ifdef W3MIMGDISPLAY_SETUID
+    /* make sure drop privileges now */
+    setreuid(runner_uid, runner_uid);
+#endif
+    if (w_op == NULL)
+	exit(1);
+    if (defined_x)
+	w_op->offset_x = offset_x;
+    if (defined_y)
+	w_op->offset_y = offset_y;
+
+    w_op->max_anim = maxAnim;
+    w_op->clear_margin = clearMargin;
+
+    if (defined_test) {
+	printf("%d %d\n", w_op->width - w_op->offset_x,
+	       w_op->height - w_op->offset_y);
+	w_op->close(w_op);
+	exit(0);
+    }
+
+    if (defined_size) {
+	if (w_op->init(w_op)) {
+	    W3MImage img;
+	    int w, h;
+	    if (w_op->get_image_size(w_op, &img, defined_size, &w, &h))
+		printf("%d %d\n", w, h);
+	}
+	w_op->close(w_op);
+	exit(0);
+    }
+
+    w_op->set_background(w_op, background);
+
+    while (fgets(buf, sizeof(buf), stdin) != NULL) {
+	if (!(isdigit(buf[0]) && buf[1] == ';')) {
+	    fputc('\n', stdout);
+	    fflush(stdout);
+	    continue;
+	}
+	len = strlen(buf);
+	if (buf[len - 1] == '\n') {
+	    buf[--len] = '\0';
+	    if (buf[len - 1] == '\r')
+		buf[--len] = '\0';
+	}
+	/*
+	 * w3mimg protocol
+	 *  0  1  2 ....
+	 * +--+--+--+--+ ...... +--+--+
+	 * |op|; |args             |\n|
+	 * +--+--+--+--+ .......+--+--+
+	 *
+	 * args is separeted by ';'
+	 * op   args
+	 *  0;  params          draw image
+	 *  1;  params          redraw image
+	 *  2;  -none-          terminate drawing
+	 *  3;  -none-          sync drawing
+	 *  4;  -none-          nop, sync communication
+	 *                      response '\n'
+	 *  5;  path            get size of image,
+	 *                      response "<width> <height>\n"
+	 *  6;  params(6)       clear image
+	 *
+	 * params
+	 *      <n>;<x>;<y>;<w>;<h>;<sx>;<sy>;<sw>;<sh>;<path>
+	 * params(6)
+	 *      <x>;<y>;<w>;<h>
+	 *   
+	 */
+	switch (buf[0]) {
+	case '0':
+	    DrawImage(&buf[2], 0);
+	    break;
+	case '1':
+	    DrawImage(&buf[2], 1);
+	    break;
+	case '2':
+	    TermImage();
+	    break;
+	case '3':
+	    w_op->sync(w_op);
+	    break;
+	case '4':
+	    fputs("\n", stdout);
+	    fflush(stdout);
+	    break;
+	case '5':
+	    if (w_op->init(w_op)) {
+		W3MImage img;
+		int w, h;
+		if (w_op->get_image_size(w_op, &img, &buf[2], &w, &h)) {
+		    fprintf(stdout, "%d %d\n", w, h);
+		    fflush(stdout);
+		}
+		else {
+		    fprintf(stdout, "\n");
+		    fflush(stdout);
+		}
+	    }
+	    else {
+		fprintf(stdout, "\n");
+		fflush(stdout);
+	    }
+	    break;
+	case '6':
+	    ClearImage(&buf[2]);
+	    break;
+	}
+    }
+    TermImage();
+    w_op->close(w_op);
+    exit(0);
+}
+
+static void
+GetOption(int argc, char **argv)
+{
+    int i;
+
+    for (i = 1; i < argc; i++) {
+	if (!strcmp("-bg", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    background = argv[i];
+	    defined_bg = 1;
+	}
+	else if (!strcmp("-x", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    offset_x = atoi(argv[i]);
+	    defined_x = 1;
+	}
+	else if (!strcmp("-y", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    offset_y = atoi(argv[i]);
+	    defined_y = 1;
+	}
+	else if (!strcmp("-test", argv[i])) {
+	    defined_test = 1;
+	}
+	else if (!strcmp("-anim", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    maxAnim = atoi(argv[i]);
+	}
+	else if (!strcmp("-margin", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    clearMargin = atoi(argv[i]);
+	    if (clearMargin < 0)
+		clearMargin = 0;
+	}
+	else if (!strcmp("-size", argv[i])) {
+	    if (++i >= argc)
+		exit(1);
+	    defined_size = argv[i];
+	}
+	else if (!strcmp("-debug", argv[i])) {
+	    defined_debug = 1;
+	}
+	else {
+	    exit(1);
+	}
+    }
+}
+
+void
+DrawImage(char *buf, int redraw)
+{
+    char *p = buf;
+    int n = 0, x = 0, y = 0, w = 0, h = 0, sx = 0, sy = 0, sw = 0, sh = 0;
+
+    if (!p)
+	return;
+    for (; isdigit(*p); p++)
+	n = 10 * n + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	x = 10 * x + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	y = 10 * y + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	w = 10 * w + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	h = 10 * h + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	sx = 10 * sx + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	sy = 10 * sy + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	sw = 10 * sw + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	sh = 10 * sh + (*p - '0');
+    if (*(p++) != ';')
+	return;
+
+    n--;
+    if (n < 0 || n >= MAX_IMAGE)
+	return;
+    if (redraw) {
+	if (!w_op->active(w_op) || n >= maxImage || !imageBuf[n].pixmap)
+	    return;
+	goto draw_image;
+    }
+    w_op->init(w_op);
+
+    if (n >= maxImage) {
+	int i = maxImage;
+	maxImage = i ? (i * 2) : 2;
+	if (maxImage > MAX_IMAGE)
+	    maxImage = MAX_IMAGE;
+	else if (n >= maxImage)
+	    maxImage = n + 1;
+	imageBuf = (W3MImage *) realloc((void *)imageBuf,
+					sizeof(W3MImage) * maxImage);
+	for (; i < maxImage; i++)
+	    imageBuf[i].pixmap = NULL;
+    }
+    if (imageBuf[n].pixmap) {
+	w_op->free_image(w_op, &imageBuf[n]);
+	imageBuf[n].pixmap = NULL;
+    }
+
+    if (w_op->load_image(w_op, &imageBuf[n], p, w, h) == 0)
+	imageBuf[n].pixmap = NULL;
+
+  draw_image:
+    if (imageBuf[n].pixmap)
+	w_op->show_image(w_op, &imageBuf[n], sx, sy, sw, sh, x, y);
+}
+
+void
+TermImage(void)
+{
+    w_op->finish(w_op);
+    if (imageBuf) {
+	int i;
+	for (i = 0; i < maxImage; i++) {
+	    w_op->free_image(w_op, &imageBuf[i]);
+	}
+	free(imageBuf);
+	imageBuf = NULL;
+    }
+    maxImage = 0;
+}
+
+void
+ClearImage(char *buf)
+{
+    char *p = buf;
+    int x = 0, y = 0, w = 0, h = 0;
+
+    if (!p)
+	return;
+    for (; isdigit(*p); p++)
+	x = 10 * x + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	y = 10 * y + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	w = 10 * w + (*p - '0');
+    if (*(p++) != ';')
+	return;
+    for (; isdigit(*p); p++)
+	h = 10 * h + (*p - '0');
+
+    w_op->clear(w_op,
+		x + offset_x - w_op->clear_margin,
+		y + offset_y - w_op->clear_margin,
+		w + w_op->clear_margin * 2, h + w_op->clear_margin * 2);
+}
+@
+
+
+1.18
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.17 2003/07/13 16:19:10 ukai Exp $ */
+d68 1
+d79 1
+@
+
+
+1.17
+log
+@[w3m-dev 03938] clear region margin
+* w3mimgdisplay.c (clearMargin): added
+	(GetOption): add -margin
+	(ClearImage): clear margin
+* w3mi,g/w3mimg.h (w3mimg_op): clear_margin
+* w3mimg/fb/fb.c (fb_clear): x,y must be >= 0
+* w3mimg/x11/x11_w3mimg.c (x11_clear): x,y must be >= 0
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.16 2003/07/08 17:29:56 ukai Exp $ */
+d339 1
+a339 2
+		w + w_op->clear_margin * 2,
+		h + w_op->clear_margin * 2);
+@
+
+
+1.16
+log
+@[w3m-dev 03931] Re: clear image
+* w3mimgdisplay.c (ClearImage): offset
+* w3mimg/fb/fb.c (fb_clear): memcpy by pixel_size
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.15 2003/07/07 15:49:03 ukai Exp $ */
+d20 1
+a20 1
+static int maxImage = 0, maxAnim = 100;
+d61 1
+d63 1
+d197 7
+d336 5
+a340 1
+    w_op->clear(w_op, x + offset_x, y + offset_y, w, h);
+@
+
+
+1.15
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.14 2003/07/07 15:48:16 ukai Exp $ */
+d327 1
+a327 1
+    w_op->clear(w_op, x, y, w, h);
+@
+
+
+1.14
+log
+@[w3m-dev 03929] clear image
+* image.c (syncImage): added
+	(drawImage): rewrite using syncImage()
+	(clearImage): use clear image command (6)
+* w3mimgdisplay.c: change protocol
+	2 => terminate drawing
+	6 => clear image
+	(main): '2' calls TermImage()
+		'6' calls ClearImage()
+		TermImage() when exit
+	(TermImage): renamed from ClearImage
+	(ClearImage): rewritten to call w_op->clear()
+* w3mimg.h/w3mimg.h (w3mimg_op): add clear()
+* w3mimg/fb/fb.c (fb_clear): added
+* w3mimg/fb/fb.h (fb_clear): added
+* w3mimg/fb/fb_img.c (fb_image_clear): added
+* w3mimg/fb/fb_w3mimg.c (w3mfb_clear): added
+	(w3mimg_fbopen): initialize wop->clear
+* w3mimg/x11/x11_w3mimg.c (x11_clear): added
+	(w3mimg_x11open): initialize wop->clear
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.13 2003/03/24 15:45:57 ukai Exp $ */
+d64 1
+a64 1
+	printf("%d %d\n", w_op->width - w_op->offset_x, 
+d101 10
+a110 10
+	 * op	args
+	 *  0;  params		draw image
+	 *  1;  params		redraw image
+	 *  2;  -none-		terminate drawing
+	 *  3;  -none-		sync drawing
+	 *  4;  -none-		nop, sync communication
+	 *			response '\n'
+	 *  5;  path		get size of image,
+	 *			response "<width> <height>\n"
+	 *  6;  params(6)	clear image
+d113 1
+a113 1
+	 *	<n>;<x>;<y>;<w>;<h>;<sx>;<sy>;<sw>;<sh>;<path>
+d115 1
+a115 1
+	 *	<x>;<y>;<w>;<h>
+d142 2
+a143 1
+		} else {
+d147 2
+a148 1
+	    } else {
+d258 1
+a258 1
+	if (! w_op->active(w_op) || n >= maxImage || !imageBuf[n].pixmap)
+d272 1
+a272 1
+				     sizeof(W3MImage) * maxImage);
+d282 1
+a282 1
+       imageBuf[n].pixmap = NULL;
+d286 1
+a286 1
+       w_op->show_image(w_op, &imageBuf[n], sx, sy, sw, sh, x, y);
+@
+
+
+1.13
+log
+@[w3m-dev 03829] w3mimgdisplay -anim
+* w3mimgdisplay.c (maxAnim): added, default 100
+	(main): add --anim option, w_op->max_anim
+* w3mimg/w3mimg.h (w3mimg_op): add max_anim
+* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): add max_anim
+* w3mimg/fb/fb_img.h (fb_image_load): add max_anim args
+* w3mimg/fb/fb_imlib2.c (fb_image_load): add max_anim args
+* w3mimg/fb/fb_w3mimg.c (w3mfb_load_image): pass max_anim
+* w3mimg/x11/x11_w3mimg.c (x11_load_image): max_anim
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.12 2003/01/17 16:57:21 ukai Exp $ */
+d24 2
+a25 1
+static void ClearImage(void);
+d104 1
+a104 1
+	 *  2;  -none-		clear image
+d110 1
+d114 2
+d126 1
+a126 1
+	    ClearImage();
+d151 3
+d156 1
+a156 1
+    ClearImage();
+d288 1
+a288 1
+ClearImage(void)
+d300 26
+@
+
+
+1.12
+log
+@[w3m-dev 03646] setup child process, local CGI
+* etc.c (reset_signals): static
+			don't ignore SIGUSR1
+	(close_all_fds_except): static
+			DEV_NULL_PATH
+	(setup_child): added
+	(myExec): rewrite
+	(mySystem): rewrite
+* file.c (readHeader): check image_source
+	(loadGeneralFile): check image_source
+	(doExternal): use setup_child
+	(_doFileCopy): use setup_child
+	(doFileSave): use setup_child
+	(uncompress_stream): check image_source
+			use setup_child
+* image.c (getCharSize): no need stderr redirect
+	(openImgdisplay): use setup_child
+	(loadImage): use setup_child
+	(getImageSize): no need stderr redirect
+* local.c (writeLocalCookie): check Local_cookie_file
+	(localcgi_popen_rw): added
+	(localcgi_popen_r): deleted
+	(localcgi_post): rewrite
+	(localcgi_get): deleted
+* proto.h (localcgi_get): defined by localcgi_post
+	(reset_signals): deleted
+	(close_all_fds_except): deleted
+	(close_all_fds): deleted
+	(setup_child): added
+* search.c (open_migemo): use setup_child, myExec
+* w3mimgdisplay.c (main): use DEV_NULL_PATH
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.11 2002/12/25 16:14:45 ukai Exp $ */
+d20 1
+a20 1
+static int maxImage = 0;
+d60 1
+d180 5
+@
+
+
+1.11
+log
+@[w3m-dev 03602] Re: w3mimgdisplay core dump
+* w3mimgdisplay.c (DrawImage): check load_image, imageBuf[n].pixmap
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): check img->pixmap
+* w3mimg/x11/x11_w3mimg.c (x11_show_image): check img->pixmap
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.10 2002/11/27 16:46:34 ukai Exp $ */
+d40 1
+a40 1
+	freopen("/dev/null", "w", stderr);
+@
+
+
+1.10
+log
+@[w3m-dev 03497] incorrect image size
+	* image.c (getImageSize): invoke w3mimgdiplay -size instead of "5;..."
+	* w3mimgdisplay.c (defined_size): added
+			(main): if defined_size get_image_size()
+			(GetOption): -size
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.9 2002/11/06 03:50:49 ukai Exp $ */
+d266 2
+a267 1
+    w_op->load_image(w_op, &imageBuf[n], p, w, h);
+d270 2
+a271 1
+    w_op->show_image(w_op, &imageBuf[n], sx, sy, sw, sh, x, y);
+@
+
+
+1.9
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.8 2002/10/31 09:36:22 ukai Exp $ */
+d16 1
+d67 10
+d179 5
+@
+
+
+1.8
+log
+@fix compilation warnings
+* w3mimgdisplay.c: add #include <string.h> for strlen, strcmp
+* w3mimg/fb/fb.c: add #include <string.h> for memset
+* w3mimg/fb/fb_w3mimg.c: add #include <string.h> for memset
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.7 2002/09/29 15:14:32 ukai Exp $ */
+d6 2
+d30 7
+a36 1
+
+d39 1
+a39 1
+	fclose(stderr);
+d41 7
+d49 4
+@
+
+
+1.7
+log
+@[w3m-dev 03325] Re: hang up when seeing web page that contains xbm file
+* w3mimgdisplay.c (main): alreays return response
+		even if size is unknown
+From: qhwt@@myrealbox.com
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.6 2002/07/22 16:17:32 ukai Exp $ */
+d5 1
+@
+
+
+1.6
+log
+@[w3m-dev 03279] w3m-img for framebuffer update
+	  http://homepage3.nifty.com/slokar/fb/w3mfb.patch.gz
+* w3mimg/fb/readme.txt: update
+* w3mimg/fb/fb.c: update
+* w3mimg/fb/fb.h: update
+* w3mimg/fb/fb_gdkpixbuf.c: update
+* w3mimg/fb/fb_img.c: update
+* w3mimg/fb/fb_img.h: update
+* w3mimg/fb/fb_imlib2.c: update
+* w3mimg/fb/fb_w3mimg.c: update
+* w3mimg/fb/fb_gdkpixbuf.h: deleted
+* w3mimg/fb/fb_imlib2.h: deleted
+* w3mimg/w3mimg.h (w3mimg_op): add get_image_size()
+* w3mimg/x11/x11_w3mimg.c: update
+* w3mimgdisplay.c (main): use get_image_size()
+* w3mimgsize.c (main): use get_image_size()
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.5 2002/07/18 06:49:39 ukai Exp $ */
+d106 3
+d110 3
+@
+
+
+1.5
+log
+@add w3mimg protocol in comment
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.4 2002/07/18 06:27:23 ukai Exp $ */
+d102 3
+a104 2
+		if (w_op->load_image(w_op, &img, &buf[2], 0, 0)) {
+		    fprintf(stdout, "%d %d\n", img.width, img.height);
+a105 1
+		    w_op->free_image(w_op, &img);
+@
+
+
+1.4
+log
+@* w3mimgdisplay.c (main): '5' for w3mimgsize
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.3 2002/07/17 20:58:48 ukai Exp $ */
+d60 22
+@
+
+
+1.3
+log
+@merge w3m-img for framebuffer support
+* w3mimg/w3mimg.h: created
+* w3mimg/x11/x11_w3mimg.c: created
+* w3mimg/fb/fb_w3mimg.c: created
+* w3mimgsize.c w3mimgdisplay.c: modified
+* configure: modified
+* XMakefile: modified
+* config.h.dist: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+w3m-img for framebuffer support
+* http://homepage3.nifty.com/slokar/fb/
+* w3mimg/fb/fb.c w3mimg/fb/fb.h
+  w3mimg/fb/fb_img.c w3mimg/fb/fb_img.h
+  w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_gdkpixbuf.h
+  w3mimg/fb/fb_imlib2.c w3mimg/fb/fb_imlib.h
+  w3mimg/fb/readme.txt w3mimg/fb/license.txt: added
+From: Hiroshi Kawashima <kei@@sm.sony.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.2 2002/01/31 18:28:24 ukai Exp $ */
+a76 1
+#if 0 /* def USE_W3MIMG_FB */
+d78 7
+a84 5
+	    if (w3mimg_mode == W3MIMG_FB_MODE) {
+		IMAGE *im = fb_load_image(&buf[2], 0, 0);
+		fprintf(stdout, "%d %d\n", im->width, im->height);
+		fflush(stdout);
+		fb_free_image(im);
+a86 1
+#endif
+@
+
+
+1.2
+log
+@gcc -Wall -Werror safe
+* anchor.c (addMultirowsImg): unused variable: fi
+* display.c (redrawLineImage): unused variable: ncol
+* file.c (process_img): uninitialized variables: r2, ni, w0, i0, ismap
+		unused variable: url, ext
+* file.c (loadHTMLstream): need volatile image_flag
+* image.c (image_index): int
+* image.c (getCharSize): need prototype
+* image.c (getImage): uninitialized variable: key
+		return NULL
+* map.c (follow_map_menu): used only USE_IMAGE: px, py, map
+* map.c (newMapArea): used only USE_IMAGE: p, i, max
+* proto.h (addMultirowsImg): added
+* w3mimgdisplay.c (main): format string fix
+* w3mimgdisplay.c (DrawImage): need (Pixmap) cast
+
+* inflate.c: indent
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.1 2002/01/31 17:54:57 ukai Exp $ */
+d4 3
+a6 1
+#include <Imlib.h>
+d8 1
+a8 3
+static Display *display;
+static Window window, parent;
+static unsigned long background_pixel;
+d10 1
+a10 1
+static int offset_x = 2, offset_y = 2;
+d15 1
+a15 6
+typedef struct {
+    Pixmap pixmap;
+    int width;
+    int height;
+} Image;
+static Image *imageBuf = NULL;
+a16 1
+static GC imageGC = NULL;
+a21 46
+/* *INDENT-OFF* */
+/*
+  xterm/kterm/hanterm/cxterm
+    top window (WINDOWID)
+      +- text window
+           +- scrollbar
+  rxvt/aterm/Eterm/wterm
+    top window (WINDOWID)
+      +- text window
+      +- scrollbar
+      +- menubar (etc.)
+  gnome-terminal
+    top window
+      +- text window (WINDOWID)
+      +- scrollbar
+      +- menubar
+  mlterm (-s)
+    top window
+      +- text window (WINDOWID)
+      +- scrollbar
+  mlterm
+    top window = text window (WINDOWID)
+
+  powershell
+    top window
+      +- window
+      |    +- text window
+      |    +- scrollbar
+      +- menubar (etc.)
+  dtterm
+    top window
+      +- window
+           +- window
+           |    +- window
+           |         +- text window
+           |         +- scrollbar
+           +- menubar
+  hpterm
+    top window
+      +- window
+           +- text window
+           +- scrollbar
+           +- (etc.)
+*/
+/* *INDENT-ON* */
+
+d25 1
+a25 4
+    Window root, *children;
+    XWindowAttributes attr;
+    XColor screen_def, exact_def;
+    int revert, nchildren, len, width, height, i;
+a26 1
+    char *id;
+d32 2
+a33 8
+    display = XOpenDisplay(NULL);
+    if (!display)
+	exit(1);
+    if ((id = getenv("WINDOWID")) != NULL)
+	window = (Window) atoi(id);
+    else
+	XGetInputFocus(display, &window, &revert);
+    if (!window)
+d35 4
+a38 45
+
+    XGetWindowAttributes(display, window, &attr);
+    width = attr.width;
+    height = attr.height;
+    while (1) {
+	Window p_window;
+
+	XQueryTree(display, window, &root, &parent, &children, &nchildren);
+	if (defined_debug)
+	    fprintf(stderr,
+		    "window=%lx root=%lx parent=%lx nchildren=%d width=%d height=%d\n",
+		    (unsigned long)window, (unsigned long)root,
+		    (unsigned long)parent, nchildren, width, height);
+	p_window = window;
+	for (i = 0; i < nchildren; i++) {
+	    XGetWindowAttributes(display, children[i], &attr);
+	    if (defined_debug)
+		fprintf(stderr,
+			"children[%d]=%lx x=%d y=%d width=%d height=%d\n", i,
+			children[i], attr.x, attr.y, attr.width, attr.height);
+	    if (attr.width > width * 0.7 && attr.height > height * 0.7) {
+		/* maybe text window */
+		width = attr.width;
+		height = attr.height;
+		window = children[i];
+	    }
+	}
+	if (p_window == window)
+	    break;
+    }
+    if (!defined_x) {
+	for (i = 0; i < nchildren; i++) {
+	    XGetWindowAttributes(display, children[i], &attr);
+	    if (attr.x <= 0 && attr.width < 30 && attr.height > height * 0.7) {
+		if (defined_debug)
+		    fprintf(stderr,
+			    "children[%d]=%lx x=%d y=%d width=%d height=%d\n",
+			    i, children[i], attr.x, attr.y, attr.width,
+			    attr.height);
+		/* scrollbar of xterm/kterm ? */
+		offset_x += attr.x + attr.width + attr.border_width * 2;
+		break;
+	    }
+	}
+    }
+d41 2
+a42 1
+	printf("%d %d\n", width - offset_x, height - offset_y);
+d46 1
+a46 25
+    if (defined_bg && XAllocNamedColor(display, DefaultColormap(display, 0),
+				       background, &screen_def, &exact_def))
+	background_pixel = screen_def.pixel;
+    else {
+	Pixmap p;
+	GC gc;
+	XImage *i;
+
+	p = XCreatePixmap(display, window, 1, 1, DefaultDepth(display, 0));
+	gc = XCreateGC(display, window, 0, NULL);
+	if (!p || !gc)
+	    exit(1);
+	XCopyArea(display, window, p, gc, (offset_x >= 1) ? (offset_x - 1) : 0,
+		  (offset_y >= 1) ? (offset_y - 1) : 0, 1, 1, 0, 0);
+	i = XGetImage(display, p, 0, 0, 1, 1, -1, ZPixmap);
+	if (!i)
+	    exit(1);
+	background_pixel = XGetPixel(i, 0, 0);
+	XDestroyImage(i);
+	XFreeGC(display, gc);
+	XFreePixmap(display, p);
+	/*
+	 * background_pixel = WhitePixel(display, 0);
+	 */
+    }
+d71 1
+a71 1
+	    XSync(display, False);
+d77 10
+d90 1
+a90 3
+    /*
+     * XCloseDisplay(display);
+     */
+a132 2
+    static ImlibData *id = NULL;
+    ImlibImage *im;
+d179 1
+a179 1
+	if (!imageGC || n >= maxImage || !imageBuf[n].pixmap)
+d183 2
+a184 10
+    if (!id) {
+	id = Imlib_init(display);
+	if (!id)
+	    return;
+    }
+    if (!imageGC) {
+	imageGC = XCreateGC(display, parent, 0, NULL);
+	if (!imageGC)
+	    return;
+    }
+d192 2
+a193 2
+	imageBuf = (Image *) realloc((void *)imageBuf,
+				     sizeof(Image) * maxImage);
+d195 1
+a195 1
+	    imageBuf[i].pixmap = (Pixmap) NULL;
+d198 2
+a199 2
+	XFreePixmap(display, imageBuf[n].pixmap);
+	imageBuf[n].pixmap = (Pixmap) NULL;
+d202 2
+a203 17
+    im = Imlib_load_image(id, p);
+    if (!im)
+	return;
+    if (!w)
+	w = im->rgb_width;
+    if (!h)
+	h = im->rgb_height;
+    imageBuf[n].pixmap = XCreatePixmap(display, parent, w, h,
+				       DefaultDepth(display, 0));
+    if (!imageBuf[n].pixmap)
+	return;
+    XSetForeground(display, imageGC, background_pixel);
+    XFillRectangle(display, imageBuf[n].pixmap, imageGC, 0, 0, w, h);
+    Imlib_paste_image(id, im, imageBuf[n].pixmap, 0, 0, w, h);
+    Imlib_kill_image(id, im);
+    imageBuf[n].width = w;
+    imageBuf[n].height = h;
+d205 1
+a205 3
+    XCopyArea(display, imageBuf[n].pixmap, window, imageGC,
+	      sx, sy, (sw ? sw : imageBuf[n].width),
+	      (sh ? sh : imageBuf[n].height), x + offset_x, y + offset_y);
+d211 1
+a211 4
+    if (imageGC) {
+	XFreeGC(display, imageGC);
+	imageGC = NULL;
+    }
+d215 1
+a215 2
+	    if (imageBuf[i].pixmap)
+		XFreePixmap(display, imageBuf[i].pixmap);
+@
+
+
+1.1
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: w3mimgdisplay.c,v 1.1.2.5 2002/01/18 17:11:24 h-saka Exp $ */
+d107 3
+a109 2
+		    "window=%x root=%x parent=%x nchildren=%d width=%d height=%d\n",
+		    window, root, parent, nchildren, width, height);
+d115 1
+a115 1
+			"children[%d]=%x x=%d y=%d width=%d height=%d\n", i,
+d133 1
+a133 1
+			    "children[%d]=%x x=%d y=%d width=%d height=%d\n",
+d169 3
+a171 3
+/*
+	background_pixel = WhitePixel(display, 0);
+*/
+d323 1
+a323 1
+	    imageBuf[i].pixmap = NULL;
+d327 1
+a327 1
+	imageBuf[n].pixmap = NULL;
+@
+

@@ -1,0 +1,2433 @@
+head	1.33;
+access;
+symbols
+	release-0-5-3:1.33
+	release-0-5-2:1.33
+	release-0-5-1:1.30
+	release-0-5:1.30
+	release-0-4-2:1.27
+	release-0-4-1:1.26
+	release-0-4:1.26
+	release-0-4-rc3:1.26
+	release-0-4-rc2:1.26
+	release-0-4-rc1:1.24
+	release-0-3-2-2:1.11
+	release-0-3-2-1:1.11
+	branch-0-3-2:1.11.0.2
+	release-0-3-2:1.11
+	release-0-3-2-rc4:1.11
+	release-0-3-2-rc3:1.11
+	release-0-3-2-rc2:1.11
+	release-0-3-2-rc1:1.11
+	release-0-3-1:1.10
+	release-0-3:1.9
+	release-0-2-5-1:1.7
+	branch-0-2-5:1.7.0.2
+	release-0-2-5:1.7
+	release-0-2-4:1.7
+	release-0-2-3-2:1.7
+	release-0-2-3-1:1.7
+	release-0-2-3:1.7
+	inu-0-2-2-rel-1-1:1.3
+	inu-0-2-2:1.3.0.2
+	inu-0-2-2-base:1.3
+	release-0-2-2:1.3
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@ * @;
+
+
+1.33
+date	2006.04.08.11.33.16;	author inu;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2006.04.07.13.21.11;	author inu;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2006.04.05.14.18.53;	author inu;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.09.26.17.59.51;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.09.24.18.48.58;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.09.22.21.02.16;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.03.19.16.20.11;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.02.11.10.36.17;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.02.11.10.35.48;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.02.05.16.45.07;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.02.05.16.43.56;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.02.05.16.23.28;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.01.23.18.37.20;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.01.06.15.37.49;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.01.06.15.36.57;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.12.24.17.24.33;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.12.24.17.24.05;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.12.16.15.41.27;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.12.10.15.36.10;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.12.09.15.51.08;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.12.05.16.29.04;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.09.05.15.43.21;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.03.29.16.39.37;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.01.31.18.28.24;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.01.31.17.54.48;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.12.14.17.10.54;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.11.24.02.01.26;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.11.22.14.07.38;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.11.16.22.02.00;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.15.00.32.13;	author a-ito;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.17;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.14.10;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.14.10;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.33
+log
+@check A tag in HTMLlineproc2body().
+@
+text
+@/* $Id: anchor.c,v 1.32 2006/04/07 13:21:11 inu Exp $ */
+#include "fm.h"
+#include "myctype.h"
+#include "regex.h"
+
+#define FIRST_ANCHOR_SIZE 30
+
+AnchorList *
+putAnchor(AnchorList *al, char *url, char *target, Anchor **anchor_return,
+	  char *referer, char *title, unsigned char key, int line, int pos)
+{
+    int n, i, j;
+    Anchor *a;
+    BufferPoint bp;
+    if (al == NULL) {
+	al = New(AnchorList);
+	al->anchors = NULL;
+	al->nanchor = al->anchormax = 0;
+	al->acache = -1;
+    }
+    if (al->anchormax == 0) {
+	/* first time; allocate anchor buffer */
+	al->anchors = New_N(Anchor, FIRST_ANCHOR_SIZE);
+	al->anchormax = FIRST_ANCHOR_SIZE;
+    }
+    if (al->nanchor == al->anchormax) {	/* need realloc */
+	al->anchormax *= 2;
+	al->anchors = New_Reuse(Anchor, al->anchors, al->anchormax);
+    }
+    bp.line = line;
+    bp.pos = pos;
+    n = al->nanchor;
+    if (!n || bpcmp(al->anchors[n - 1].start, bp) < 0)
+	i = n;
+    else
+	for (i = 0; i < n; i++) {
+	    if (bpcmp(al->anchors[i].start, bp) >= 0) {
+		for (j = n; j > i; j--)
+		    al->anchors[j] = al->anchors[j - 1];
+		break;
+	    }
+	}
+    a = &al->anchors[i];
+    a->url = url;
+    a->target = target;
+    a->referer = referer;
+    a->title = title;
+    a->accesskey = key;
+    a->slave = FALSE;
+    a->start = bp;
+    a->end = bp;
+    al->nanchor++;
+    if (anchor_return)
+	*anchor_return = a;
+    return al;
+}
+
+
+Anchor *
+registerHref(Buffer *buf, char *url, char *target, char *referer, char *title,
+	     unsigned char key, int line, int pos)
+{
+    Anchor *a;
+    buf->href = putAnchor(buf->href, url, target, &a, referer, title, key,
+			  line, pos);
+    return a;
+}
+
+Anchor *
+registerName(Buffer *buf, char *url, int line, int pos)
+{
+    Anchor *a;
+    buf->name = putAnchor(buf->name, url, NULL, &a, NULL, NULL, '\0', line,
+			  pos);
+    return a;
+}
+
+Anchor *
+registerImg(Buffer *buf, char *url, char *title, int line, int pos)
+{
+    Anchor *a;
+    buf->img = putAnchor(buf->img, url, NULL, &a, NULL, title, '\0', line,
+			 pos);
+    return a;
+}
+
+Anchor *
+registerForm(Buffer *buf, FormList *flist, struct parsed_tag *tag, int line,
+	     int pos)
+{
+    Anchor *a;
+    FormItemList *fi;
+
+    fi = formList_addInput(flist, tag);
+    if (fi == NULL)
+	return NULL;
+    buf->formitem = putAnchor(buf->formitem, (char *)fi, flist->target, &a,
+			      NULL, NULL, '\0', line, pos);
+    return a;
+}
+
+int
+onAnchor(Anchor *a, int line, int pos)
+{
+    BufferPoint bp;
+    bp.line = line;
+    bp.pos = pos;
+
+    if (bpcmp(bp, a->start) < 0)
+	return -1;
+    if (bpcmp(a->end, bp) <= 0)
+	return 1;
+    return 0;
+}
+
+Anchor *
+retrieveAnchor(AnchorList *al, int line, int pos)
+{
+    Anchor *a;
+    size_t b, e;
+    int cmp;
+
+    if (al == NULL || al->nanchor == 0)
+	return NULL;
+
+    if (al->acache < 0 || al->acache >= al->nanchor)
+	al->acache = 0;
+
+    for (b = 0, e = al->nanchor - 1; b <= e; al->acache = (b + e) / 2) {
+	a = &al->anchors[al->acache];
+	cmp = onAnchor(a, line, pos);
+	if (cmp == 0)
+	    return a;
+	else if (cmp > 0)
+	    b = al->acache + 1;
+	else if (al->acache == 0)
+	    return NULL;
+	else
+	    e = al->acache - 1;
+    }
+    return NULL;
+}
+
+Anchor *
+retrieveCurrentAnchor(Buffer *buf)
+{
+    if (buf->currentLine == NULL)
+	return NULL;
+    return retrieveAnchor(buf->href, buf->currentLine->linenumber, buf->pos);
+}
+
+Anchor *
+retrieveCurrentImg(Buffer *buf)
+{
+    if (buf->currentLine == NULL)
+	return NULL;
+    return retrieveAnchor(buf->img, buf->currentLine->linenumber, buf->pos);
+}
+
+Anchor *
+retrieveCurrentForm(Buffer *buf)
+{
+    if (buf->currentLine == NULL)
+	return NULL;
+    return retrieveAnchor(buf->formitem,
+			  buf->currentLine->linenumber, buf->pos);
+}
+
+Anchor *
+searchAnchor(AnchorList *al, char *str)
+{
+    int i;
+    Anchor *a;
+    if (al == NULL)
+	return NULL;
+    for (i = 0; i < al->nanchor; i++) {
+	a = &al->anchors[i];
+	if (a->hseq < 0)
+	  continue;
+	if (!strcmp(a->url, str))
+	    return a;
+    }
+    return NULL;
+}
+
+Anchor *
+searchURLLabel(Buffer *buf, char *url)
+{
+    return searchAnchor(buf->name, url);
+}
+
+#ifdef USE_NNTP
+static Anchor *
+_put_anchor_news(Buffer *buf, char *p1, char *p2, int line, int pos)
+{
+    Str tmp;
+
+    if (*p1 == '<') {
+	p1++;
+	if (*(p2 - 1) == '>')
+	    p2--;
+    }
+    tmp = wc_Str_conv_strict(Strnew_charp_n(p1, p2 - p1), InnerCharset,
+			     buf->document_charset);
+    tmp = Sprintf("news:%s", file_quote(tmp->ptr));
+    return registerHref(buf, tmp->ptr, NULL, NO_REFERER, NULL, '\0', line,
+			pos);
+}
+#endif				/* USE_NNTP */
+
+static Anchor *
+_put_anchor_all(Buffer *buf, char *p1, char *p2, int line, int pos)
+{
+    Str tmp;
+
+    tmp = wc_Str_conv_strict(Strnew_charp_n(p1, p2 - p1), InnerCharset,
+			     buf->document_charset);
+    return registerHref(buf, url_quote(tmp->ptr), NULL, NO_REFERER, NULL,
+			'\0', line, pos);
+}
+
+static void
+reseq_anchor0(AnchorList *al, short *seqmap)
+{
+    int i;
+    Anchor *a;
+
+    if (!al)
+	return;
+
+    for (i = 0; i < al->nanchor; i++) {
+	a = &al->anchors[i];
+	if (a->hseq >= 0) {
+	    a->hseq = seqmap[a->hseq];
+	}
+    }
+}
+
+/* renumber anchor */
+static void
+reseq_anchor(Buffer *buf)
+{
+    int i, j, n, nmark = (buf->hmarklist) ? buf->hmarklist->nmark : 0;
+    short *seqmap;
+    Anchor *a, *a1;
+    HmarkerList *ml = NULL;
+
+    if (!buf->href)
+	return;
+
+    n = nmark;
+    for (i = 0; i < buf->href->nanchor; i++) {
+	a = &buf->href->anchors[i];
+	if (a->hseq == -2)
+	    n++;
+    }
+
+    if (n == nmark)
+	return;
+
+    seqmap = NewAtom_N(short, n);
+
+    for (i = 0; i < n; i++)
+	seqmap[i] = i;
+
+    n = nmark;
+    for (i = 0; i < buf->href->nanchor; i++) {
+	a = &buf->href->anchors[i];
+	if (a->hseq == -2) {
+	    a->hseq = n;
+	    a1 = closest_next_anchor(buf->href, NULL, a->start.pos,
+				     a->start.line);
+	    a1 = closest_next_anchor(buf->formitem, a1, a->start.pos,
+				     a->start.line);
+	    if (a1 && a1->hseq >= 0) {
+		seqmap[n] = seqmap[a1->hseq];
+		for (j = a1->hseq; j < nmark; j++)
+		    seqmap[j]++;
+	    }
+	    ml = putHmarker(ml, a->start.line, a->start.pos, seqmap[n]);
+	    n++;
+	}
+    }
+
+    for (i = 0; i < nmark; i++) {
+	ml = putHmarker(ml, buf->hmarklist->marks[i].line,
+			buf->hmarklist->marks[i].pos, seqmap[i]);
+    }
+    buf->hmarklist = ml;
+
+    reseq_anchor0(buf->href, seqmap);
+    reseq_anchor0(buf->formitem, seqmap);
+}
+
+static char *
+reAnchorPos(Buffer *buf, Line *l, char *p1, char *p2,
+	    Anchor *(*anchorproc) (Buffer *, char *, char *, int, int))
+{
+    Anchor *a;
+    int spos, epos;
+    int i, hseq = -2;
+
+    spos = p1 - l->lineBuf;
+    epos = p2 - l->lineBuf;
+    for (i = spos; i < epos; i++) {
+	if (l->propBuf[i] & (PE_ANCHOR | PE_FORM))
+	    return p2;
+    }
+    for (i = spos; i < epos; i++)
+	l->propBuf[i] |= PE_ANCHOR;
+    while (spos > l->len && l->next && l->next->bpos) {
+	spos -= l->len;
+	epos -= l->len;
+	l = l->next;
+    }
+    while (1) {
+	a = anchorproc(buf, p1, p2, l->linenumber, spos);
+	a->hseq = hseq;
+	if (hseq == -2) {
+	    reseq_anchor(buf);
+	    hseq = a->hseq;
+	}
+	a->end.line = l->linenumber;
+	if (epos > l->len && l->next && l->next->bpos) {
+	    a->end.pos = l->len;
+	    spos = 0;
+	    epos -= l->len;
+	    l = l->next;
+	}
+	else {
+	    a->end.pos = epos;
+	    break;
+	}
+    }
+    return p2;
+}
+
+void
+reAnchorWord(Buffer *buf, Line *l, int spos, int epos)
+{
+    reAnchorPos(buf, l, &l->lineBuf[spos], &l->lineBuf[epos], _put_anchor_all);
+}
+
+/* search regexp and register them as anchors */
+/* returns error message if any               */
+static char *
+reAnchorAny(Buffer *buf, char *re,
+	    Anchor *(*anchorproc) (Buffer *, char *, char *, int, int))
+{
+    Line *l;
+    char *p = NULL, *p1, *p2;
+
+    if (re == NULL || *re == '\0') {
+	return NULL;
+    }
+    if ((re = regexCompile(re, 1)) != NULL) {
+	return re;
+    }
+    for (l = MarkAllPages ? buf->firstLine : buf->topLine; l != NULL &&
+	 (MarkAllPages || l->linenumber < buf->topLine->linenumber + LASTLINE);
+	 l = l->next) {
+	if (p && l->bpos)
+	    goto next_line;
+	p = l->lineBuf;
+	for (;;) {
+	    if (regexMatch(p, &l->lineBuf[l->size] - p, p == l->lineBuf) == 1) {
+		matchedPosition(&p1, &p2);
+		p = reAnchorPos(buf, l, p1, p2, anchorproc);
+	    }
+	    else
+		break;
+	}
+      next_line:
+	if (MarkAllPages && l->next == NULL && buf->pagerSource &&
+	    !(buf->bufferprop & BP_CLOSE))
+	    getNextPage(buf, PagerMax);
+    }
+    return NULL;
+}
+
+char *
+reAnchor(Buffer *buf, char *re)
+{
+    return reAnchorAny(buf, re, _put_anchor_all);
+}
+
+#ifdef USE_NNTP
+char *
+reAnchorNews(Buffer *buf, char *re)
+{
+    return reAnchorAny(buf, re, _put_anchor_news);
+}
+
+char *
+reAnchorNewsheader(Buffer *buf)
+{
+    Line *l;
+    char *p, *p1, *p2;
+    static char *header_mid[] = {
+	"Message-Id:", "References:", "In-Reply-To:", NULL
+    };
+    static char *header_group[] = {
+	"Newsgroups:", NULL
+    };
+    char **header, **q;
+    int i, search = FALSE;
+
+    if (!buf || !buf->firstLine)
+	return NULL;
+    for (i = 0; i <= 1; i++) {
+	if (i == 0) {
+	    regexCompile("<[!-;=?-~]+@@[a-zA-Z0-9\\.\\-_]+>", 1);
+	    header = header_mid;
+	}
+	else {
+	    regexCompile("[a-zA-Z0-9\\.\\-_]+", 1);
+	    header = header_group;
+	}
+	for (l = buf->firstLine; l != NULL && l->real_linenumber == 0;
+	     l = l->next) {
+	    if (l->bpos)
+		continue;
+	    p = l->lineBuf;
+	    if (!IS_SPACE(*p)) {
+		search = FALSE;
+		for (q = header; *q; q++) {
+		    if (!strncasecmp(p, *q, strlen(*q))) {
+			search = TRUE;
+			p = strchr(p, ':') + 1;
+			break;
+		    }
+		}
+	    }
+	    if (!search)
+		continue;
+	    for (;;) {
+		if (regexMatch(p, &l->lineBuf[l->size] - p, p == l->lineBuf)
+		    == 1) {
+		    matchedPosition(&p1, &p2);
+		    p = reAnchorPos(buf, l, p1, p2, _put_anchor_news);
+		}
+		else
+		    break;
+	    }
+	}
+    }
+    reseq_anchor(buf);
+    return NULL;
+}
+#endif				/* USE_NNTP */
+
+#define FIRST_MARKER_SIZE 30
+HmarkerList *
+putHmarker(HmarkerList *ml, int line, int pos, int seq)
+{
+    if (ml == NULL) {
+	ml = New(HmarkerList);
+	ml->marks = NULL;
+	ml->nmark = 0;
+	ml->markmax = 0;
+	ml->prevhseq = -1;
+    }
+    if (ml->markmax == 0) {
+	ml->markmax = FIRST_MARKER_SIZE;
+	ml->marks = NewAtom_N(BufferPoint, ml->markmax);
+	bzero(ml->marks, sizeof(BufferPoint) * ml->markmax);
+    }
+    if (seq + 1 > ml->nmark)
+	ml->nmark = seq + 1;
+    if (ml->nmark >= ml->markmax) {
+	ml->markmax = ml->nmark * 2;
+	ml->marks = New_Reuse(BufferPoint, ml->marks, ml->markmax);
+    }
+    ml->marks[seq].line = line;
+    ml->marks[seq].pos = pos;
+    ml->marks[seq].invalid = 0;
+    return ml;
+}
+
+Anchor *
+closest_next_anchor(AnchorList *a, Anchor *an, int x, int y)
+{
+    int i;
+
+    if (a == NULL || a->nanchor == 0)
+	return an;
+    for (i = 0; i < a->nanchor; i++) {
+	if (a->anchors[i].hseq < 0)
+	    continue;
+	if (a->anchors[i].start.line > y ||
+	    (a->anchors[i].start.line == y && a->anchors[i].start.pos > x)) {
+	    if (an == NULL || an->start.line > a->anchors[i].start.line ||
+		(an->start.line == a->anchors[i].start.line &&
+		 an->start.pos > a->anchors[i].start.pos))
+		an = &a->anchors[i];
+	}
+    }
+    return an;
+}
+
+Anchor *
+closest_prev_anchor(AnchorList *a, Anchor *an, int x, int y)
+{
+    int i;
+
+    if (a == NULL || a->nanchor == 0)
+	return an;
+    for (i = 0; i < a->nanchor; i++) {
+	if (a->anchors[i].hseq < 0)
+	    continue;
+	if (a->anchors[i].end.line < y ||
+	    (a->anchors[i].end.line == y && a->anchors[i].end.pos <= x)) {
+	    if (an == NULL || an->end.line < a->anchors[i].end.line ||
+		(an->end.line == a->anchors[i].end.line &&
+		 an->end.pos < a->anchors[i].end.pos))
+		an = &a->anchors[i];
+	}
+    }
+    return an;
+}
+
+void
+shiftAnchorPosition(AnchorList *al, HmarkerList *hl, int line, int pos,
+		    int shift)
+{
+    Anchor *a;
+    size_t b, e, s = 0;
+    int cmp;
+
+    if (al == NULL || al->nanchor == 0)
+	return;
+
+    s = al->nanchor / 2;
+    for (b = 0, e = al->nanchor - 1; b <= e; s = (b + e + 1) / 2) {
+	a = &al->anchors[s];
+	cmp = onAnchor(a, line, pos);
+	if (cmp == 0)
+	    break;
+	else if (cmp > 0)
+	    b = s + 1;
+	else if (s == 0)
+	    break;
+	else
+	    e = s - 1;
+    }
+    for (; s < al->nanchor; s++) {
+	a = &al->anchors[s];
+	if (a->start.line > line)
+	    break;
+	if (a->start.pos > pos) {
+	    a->start.pos += shift;
+	    if (hl->marks[a->hseq].line == line)
+		hl->marks[a->hseq].pos = a->start.pos;
+	}
+	if (a->end.pos >= pos)
+	    a->end.pos += shift;
+    }
+}
+
+#ifdef USE_IMAGE
+void
+addMultirowsImg(Buffer *buf, AnchorList *al)
+{
+    int i, j, k, col, ecol, pos;
+    Image *img;
+    Anchor a_img, a_href, a_form, *a;
+    Line *l, *ls;
+
+    if (al == NULL || al->nanchor == 0)
+	return;
+    for (i = 0; i < al->nanchor; i++) {
+	a_img = al->anchors[i];
+	img = a_img.image;
+	if (a_img.hseq < 0 || !img || img->rows <= 1)
+	    continue;
+	for (l = buf->firstLine; l != NULL; l = l->next) {
+	    if (l->linenumber == img->y)
+		break;
+	}
+	if (!l)
+	    continue;
+	if (a_img.y == a_img.start.line)
+	    ls = l;
+	else {
+	    for (ls = l; ls != NULL;
+		 ls = (a_img.y < a_img.start.line) ? ls->next : ls->prev) {
+		if (ls->linenumber == a_img.start.line)
+		    break;
+	    }
+	    if (!ls)
+		continue;
+	}
+	a = retrieveAnchor(buf->href, a_img.start.line, a_img.start.pos);
+	if (a)
+	    a_href = *a;
+	else
+	    a_href.url = NULL;
+	a = retrieveAnchor(buf->formitem, a_img.start.line, a_img.start.pos);
+	if (a)
+	    a_form = *a;
+	else
+	    a_form.url = NULL;
+	col = COLPOS(ls, a_img.start.pos);
+	ecol = COLPOS(ls, a_img.end.pos);
+	for (j = 0; l && j < img->rows; l = l->next, j++) {
+	    if (a_img.start.line == l->linenumber)
+		continue;
+	    pos = columnPos(l, col);
+	    a = registerImg(buf, a_img.url, a_img.title, l->linenumber, pos);
+	    a->hseq = -a_img.hseq;
+	    a->slave = TRUE;
+	    a->image = img;
+	    a->end.pos = pos + ecol - col;
+	    for (k = pos; k < a->end.pos; k++)
+		l->propBuf[k] |= PE_IMAGE;
+	    if (a_href.url) {
+		a = registerHref(buf, a_href.url, a_href.target,
+				 a_href.referer, a_href.title,
+				 a_href.accesskey, l->linenumber, pos);
+		a->hseq = a_href.hseq;
+		a->slave = TRUE;
+		a->end.pos = pos + ecol - col;
+		for (k = pos; k < a->end.pos; k++)
+		    l->propBuf[k] |= PE_ANCHOR;
+	    }
+	    if (a_form.url) {
+		buf->formitem = putAnchor(buf->formitem, a_form.url,
+					  a_form.target, &a, NULL, NULL, '\0',
+					  l->linenumber, pos);
+		a->hseq = a_form.hseq;
+		a->end.pos = pos + ecol - col;
+	    }
+	}
+	img->rows = 0;
+    }
+}
+#endif
+
+void
+addMultirowsForm(Buffer *buf, AnchorList *al)
+{
+    int i, j, k, col, ecol, pos;
+    Anchor a_form, *a;
+    FormItemList *fi;
+    Line *l, *ls;
+
+    if (al == NULL || al->nanchor == 0)
+	return;
+    for (i = 0; i < al->nanchor; i++) {
+	a_form = al->anchors[i];
+	al->anchors[i].rows = 1;
+	if (a_form.hseq < 0 || a_form.rows <= 1)
+	    continue;
+	for (l = buf->firstLine; l != NULL; l = l->next) {
+	    if (l->linenumber == a_form.y)
+		break;
+	}
+	if (!l)
+	    continue;
+	if (a_form.y == a_form.start.line)
+	    ls = l;
+	else {
+	    for (ls = l; ls != NULL;
+		 ls = (a_form.y < a_form.start.line) ? ls->next : ls->prev) {
+		if (ls->linenumber == a_form.start.line)
+		    break;
+	    }
+	    if (!ls)
+		continue;
+	}
+	fi = (FormItemList *)a_form.url;
+	col = COLPOS(ls, a_form.start.pos);
+	ecol = COLPOS(ls, a_form.end.pos);
+	for (j = 0; l && j < a_form.rows; l = l->next, j++) {
+	    pos = columnPos(l, col);
+	    if (j == 0) {
+		buf->hmarklist->marks[a_form.hseq].line = l->linenumber;
+		buf->hmarklist->marks[a_form.hseq].pos = pos;
+	    }
+	    if (a_form.start.line == l->linenumber)
+		continue;
+	    buf->formitem = putAnchor(buf->formitem, a_form.url,
+				      a_form.target, &a, NULL, NULL, '\0',
+				      l->linenumber, pos);
+	    a->hseq = a_form.hseq;
+	    a->y = a_form.y;
+	    a->end.pos = pos + ecol - col;
+	    l->lineBuf[pos - 1] = '[';
+	    l->lineBuf[a->end.pos] = ']';
+	    for (k = pos; k < a->end.pos; k++)
+		l->propBuf[k] |= PE_FORM;
+	}
+    }
+}
+
+char *
+getAnchorText(Buffer *buf, AnchorList *al, Anchor *a)
+{
+    int hseq, i;
+    Line *l;
+    Str tmp = NULL;
+    char *p, *ep;
+
+    if (!a || a->hseq < 0)
+	return NULL;
+    hseq = a->hseq;
+    l = buf->firstLine;
+    for (i = 0; i < al->nanchor; i++) {
+	a = &al->anchors[i];
+	if (a->hseq != hseq)
+	    continue;
+	for (; l; l = l->next) {
+	    if (l->linenumber == a->start.line)
+		break;
+	}
+	if (!l)
+	    break;
+	p = l->lineBuf + a->start.pos;
+	ep = l->lineBuf + a->end.pos;
+	for (; p < ep && IS_SPACE(*p); p++) ;
+	if (p == ep)
+	    continue;
+	if (!tmp)
+	    tmp = Strnew_size(ep - p);
+	else
+	    Strcat_char(tmp, ' ');
+	Strcat_charp_n(tmp, p, ep - p);
+    }
+    return tmp ? tmp->ptr : NULL;
+}
+
+Buffer *
+link_list_panel(Buffer *buf)
+{
+    LinkList *l;
+    AnchorList *al;
+    Anchor *a;
+    FormItemList *fi;
+    int i;
+    char *t, *u, *p;
+    ParsedURL pu;
+    /* FIXME: gettextize? */
+    Str tmp = Strnew_charp("<title>Link List</title>\
+<h1 align=center>Link List</h1>\n");
+
+    if (buf->bufferprop & BP_INTERNAL ||
+	(buf->linklist == NULL && buf->href == NULL && buf->img == NULL)) {
+	return NULL;
+    }
+
+    if (buf->linklist) {
+	Strcat_charp(tmp, "<hr><h2>Links</h2>\n<ol>\n");
+	for (l = buf->linklist; l; l = l->next) {
+	    if (l->url) {
+		parseURL2(l->url, &pu, baseURL(buf));
+		p = parsedURL2Str(&pu)->ptr;
+		u = html_quote(p);
+		if (DecodeURL)
+		    p = html_quote(url_unquote_conv(p, buf->document_charset));
+		else
+		    p = u;
+	    }
+	    else
+		u = p = "";
+	    if (l->type == LINK_TYPE_REL)
+		t = " [Rel]";
+	    else if (l->type == LINK_TYPE_REV)
+		t = " [Rev]";
+	    else
+		t = "";
+	    t = Sprintf("%s%s\n", l->title ? l->title : "", t)->ptr;
+	    t = html_quote(t);
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", p,
+			   "\n", NULL);
+	}
+	Strcat_charp(tmp, "</ol>\n");
+    }
+
+    if (buf->href) {
+	Strcat_charp(tmp, "<hr><h2>Anchors</h2>\n<ol>\n");
+	al = buf->href;
+	for (i = 0; i < al->nanchor; i++) {
+	    a = &al->anchors[i];
+	    if (a->hseq < 0 || a->slave)
+		continue;
+	    parseURL2(a->url, &pu, baseURL(buf));
+	    p = parsedURL2Str(&pu)->ptr;
+	    u = html_quote(p);
+	    if (DecodeURL)
+		p = html_quote(url_unquote_conv(p, buf->document_charset));
+	    else
+		p = u;
+	    t = getAnchorText(buf, al, a);
+	    t = t ? html_quote(t) : "";
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", p,
+			   "\n", NULL);
+	}
+	Strcat_charp(tmp, "</ol>\n");
+    }
+
+    if (buf->img) {
+	Strcat_charp(tmp, "<hr><h2>Images</h2>\n<ol>\n");
+	al = buf->img;
+	for (i = 0; i < al->nanchor; i++) {
+	    a = &al->anchors[i];
+	    if (a->slave)
+		continue;
+	    parseURL2(a->url, &pu, baseURL(buf));
+	    p = parsedURL2Str(&pu)->ptr;
+	    u = html_quote(p);
+	    if (DecodeURL)
+		p = html_quote(url_unquote_conv(p, buf->document_charset));
+	    else
+		p = u;
+	    if (a->title && *a->title)
+		t = html_quote(a->title);
+	    else if (DecodeURL)
+		t = html_quote(url_unquote_conv
+			       (a->url, buf->document_charset));
+	    else
+		t = html_quote(a->url);
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", p,
+			   "\n", NULL);
+	    a = retrieveAnchor(buf->formitem, a->start.line, a->start.pos);
+	    if (!a)
+		continue;
+	    fi = (FormItemList *)a->url;
+	    fi = fi->parent->item;
+	    if (fi->parent->method == FORM_METHOD_INTERNAL &&
+		!Strcmp_charp(fi->parent->action, "map") && fi->value) {
+		MapList *ml = searchMapList(buf, fi->value->ptr);
+		ListItem *mi;
+		MapArea *m;
+		if (!ml)
+		    continue;
+		Strcat_charp(tmp, "<br>\n<b>Image map</b>\n<ol>\n");
+		for (mi = ml->area->first; mi != NULL; mi = mi->next) {
+		    m = (MapArea *) mi->ptr;
+		    if (!m)
+			continue;
+		    parseURL2(m->url, &pu, baseURL(buf));
+		    p = parsedURL2Str(&pu)->ptr;
+		    u = html_quote(p);
+		    if (DecodeURL)
+			p = html_quote(url_unquote_conv(p,
+							buf->
+							document_charset));
+		    else
+			p = u;
+		    if (m->alt && *m->alt)
+			t = html_quote(m->alt);
+		    else if (DecodeURL)
+			t = html_quote(url_unquote_conv(m->url,
+							buf->
+							document_charset));
+		    else
+			t = html_quote(m->url);
+		    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t,
+				   "</a><br>", p, "\n", NULL);
+		}
+		Strcat_charp(tmp, "</ol>\n");
+	    }
+	}
+	Strcat_charp(tmp, "</ol>\n");
+    }
+
+    return loadHTMLString(tmp);
+}
+@
+
+
+1.32
+log
+@rewind to 10 Feb 2006.
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.30 2003/09/26 17:59:51 ukai Exp $ */
+d178 2
+d476 1
+d784 1
+a784 1
+	    if (a->slave)
+@
+
+
+1.31
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@a177 2
+	if (a->hseq < 0)
+	  continue;
+a473 1
+    ml->marks[seq].invalid = 0;
+d781 1
+a781 1
+	    if (a->hseq < 0 || a->slave)
+@
+
+
+1.30
+log
+@add comments
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.29 2003/09/24 18:48:58 ukai Exp $ */
+d178 2
+d476 1
+d784 1
+a784 1
+	    if (a->slave)
+@
+
+
+1.29
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.28 2003/09/22 21:02:16 ukai Exp $ */
+d739 1
+@
+
+
+1.28
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.27 2003/03/19 16:20:11 ukai Exp $ */
+d814 2
+a815 1
+		t = html_quote(url_unquote_conv(a->url, buf->document_charset));
+d842 2
+a843 1
+							buf->document_charset));
+d850 2
+a851 1
+							buf->document_charset));
+@
+
+
+1.27
+log
+@[w3m-dev 03825] re-anchor for fold line
+* anchor.c (reAnchorPos): fix for fold line
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.26 2003/02/11 10:36:17 ukai Exp $ */
+d201 2
+a202 1
+    tmp = conv_str(Strnew_charp_n(p1, p2 - p1), InnerCode, buf->document_code);
+d214 2
+a215 1
+    tmp = conv_str(Strnew_charp_n(p1, p2 - p1), InnerCode, buf->document_code);
+d519 38
+d755 1
+a755 1
+		    p = html_quote(url_unquote_conv(p, buf->document_code));
+d786 1
+a786 1
+		p = html_quote(url_unquote_conv(p, buf->document_code));
+d808 1
+a808 1
+		p = html_quote(url_unquote_conv(p, buf->document_code));
+d814 1
+a814 1
+		t = html_quote(url_unquote_conv(a->url, buf->document_code));
+d841 1
+a841 1
+							buf->document_code));
+d848 1
+a848 1
+							buf->document_code));
+@
+
+
+1.26
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.25 2003/02/11 10:35:48 ukai Exp $ */
+d307 5
+d320 1
+a320 1
+	if (epos > l->len) {
+@
+
+
+1.25
+log
+@[w3m-dev-en 00868] fix mark_all_pages
+* anchor.c (reAnchorAny): next_line process for MarkAllPages
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.24 2003/02/05 16:45:07 ukai Exp $ */
+d364 1
+a364 1
+  next_line:
+@
+
+
+1.24
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.23 2003/02/05 16:43:56 ukai Exp $ */
+d354 1
+a354 1
+	    continue;
+d364 4
+@
+
+
+1.23
+log
+@[w3m-dev 03730] display decoded URL
+* anchor.c (link_list_panel): support DecodeURL
+* display.c (make_lastline_link): support DecodeURL
+* etc.c (url_unquote_conv): added
+* fm.h (DecodeURL): added
+* history.c (historyBuffer): support DecodeURL
+* indep.c (QUOTE_MAP): added
+	(HTML_QUOTE_MAP): added
+	(html_quote_char): deleted
+	(url_quote): use is_url_quote
+	(file_quote): use is_file_quote
+	(is_url_safe): deleted
+	(Str_form_quote): use is_url_unsafe
+	(Str_url_unquote): add safe args
+	(is_shell_safe): delete
+	(shell_quote): use is_shell_unsafe
+* indep.h (QUOTE_MAP): added
+	(HTML_QUOTE_MAP): added
+	(HTML_QUOTE_MASK): added
+	(SHELL_UNSAFE_MASK): added
+	(URL_QUOTE_MASK): added
+	(FILE_QUOTE_MASK): added
+	(URL_UNSAFE_MASK): added
+	(GET_QUOTE_TYPE): added
+	(is_html_quote): added
+	(is_shell_unsafe): added
+	(is_url_quote): added
+	(is_file_quote): added
+	(is_url_unsafe): added
+	(html_quote_char): added
+	(html_quote_char): deleted
+	(Str_url_unquote): added safe
+	(form_unquote): Str_url_unquote changes
+* linein.c (_prev): support DecodeURL
+	(_next): ditto
+* main.c (goURL0): support DecodeURL
+	(_peekURL): ditto
+	(curURL): ditto
+* map.c (follow_map_panel): support DecodeURL
+	(append_map_info): ditto
+	(append_link_info): ditto
+	(append_frame_info): ditto
+	(page_info_panel): ditto
+* menu.c (initSelectMenu): delete SCM_LOCAL_CGI
+		support DecodeURL
+	(initSelTabMenu): delete SCM_LOCAL_CGI
+		support DecodeURL
+	(link_menu): support DecodeURL
+* parsetagx.c (parse_tag): is_html_quote
+* proto.h (url_unquote_conv): added
+* rc.c (CMT_DECODE_URL): added
+	(params1): add decode_url
+* url.c (openURL): Str_url_unquote non safe
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.22 2003/02/05 16:23:28 ukai Exp $ */
+d737 1
+a737 1
+		 p = html_quote(url_unquote_conv(p, buf->document_code));
+d739 1
+a739 1
+		 p = u;
+d759 1
+a759 1
+		 p = html_quote(url_unquote_conv(p, buf->document_code));
+d761 1
+a761 1
+		 p = u;
+d791 2
+a792 2
+			 p = html_quote(url_unquote_conv(p,
+							 buf->document_code));
+d794 1
+a794 1
+			 p = u;
+@
+
+
+1.22
+log
+@[w3m-dev 03729] buf fix of reAnchorNewsheader()
+* anchor.c (reAnchorAny): check l->bpos
+	 (reAnchorNewsheader): check l->bpos
+				strlen(*q)
+				lineBuf[l->size]
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.21 2003/01/23 18:37:20 ukai Exp $ */
+d688 1
+a688 1
+    char *t, *u;
+d703 6
+a708 1
+		u = html_quote(parsedURL2Str(&pu)->ptr);
+d711 1
+a711 1
+		u = "";
+d720 1
+a720 1
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", u,
+d734 6
+a739 1
+	    u = html_quote(parsedURL2Str(&pu)->ptr);
+d742 1
+a742 1
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", u,
+d756 13
+a768 4
+	    u = html_quote(parsedURL2Str(&pu)->ptr);
+	    t = (a->title && *a->title) ? html_quote(a->title) :
+		html_quote(a->url);
+	    Strcat_m_charp(tmp, "<li><a href=\"", u, "\">", t, "</a><br>", u,
+d788 14
+a801 3
+		    u = html_quote(parsedURL2Str(&pu)->ptr);
+		    t = (m->alt && *m->alt) ? html_quote(m->alt) :
+			html_quote(m->url);
+d803 1
+a803 1
+				   "</a><br>", u, "\n", NULL);
+@
+
+
+1.21
+log
+@[w3m-dev 03667] fold patch
+* anchor.c (reAnchorPos): rewrite
+	(reAnchorWord): delete reseq_anchor()
+	(reAnchorAny): use l->size
+			delete reseq_anchor()
+* backend.c (internal_get): pass TRUE to saveBuffer
+* buffer.c (newBuffer): delete n->linelen
+	(reshapeBuffer): rewrite
+* display.c (displayBuffer): FoldLine
+	(redrawLine): l->bpos
+	(cursorUp0): added
+	(cursorUp): rewrite
+	(cursorDown0): added
+	(cursowDown): rewrite
+	(cursorRight): check l->next
+			l->bwidth
+	(cursorLeft): l->prev && l->bpos
+			l->bwidth
+	(arrangeCursor): buf->currentLine->bwidth
+		buf->cursorX
+* etc.c (checkType): **oporp
+			rewrite
+	(calcPosition): realColumn allocated by New_reuse
+* file.c (addnewline): add nlines arg
+	(propBuffer): deleted
+	(colorBuffer): deleted
+	(readHeader): propBuffer
+		FOLD_BUFFER_WIDTH
+	(HTMLlineproc2body): rewrite
+	(addnewline2): added
+	(addnewline): rewrite
+	(loadBuffer): propBuffer, colorBuffer
+	(saveBuffer): cont arg
+	(getNextPage): rewrite
+* fm.h (LINELEN): 256
+	(FNLEN): deleted
+	(Line): add size, bpos, bwidth
+	(Buffer): delete linelen
+	(INIT_BUFFER_WIDTH): check showLineNum
+	(FOLD_BUFFER_WIDTH): added
+	(FoldLine): added
+* funcname.tab (RESHAPE): added
+* main.c (do_dump): pass FALSE to saveBuffer
+	(nscroll): rewrite
+	(clear_mark): l->size
+	(shiftvisualpos): rewrite
+	(pipeBuf): pass TRUE to saveBuffer
+	(linebeg): check line->prev && line->bpos
+	(linend): check line->next, line->next->bpos
+	(editScr): pass TRUE to saveBuffer
+	(svBuf): pass TRUE to saveBuffer
+	(vmSrc): pass TRUE to saveBuffer
+	(reshape): added
+	(curlno): rewrite
+* mimehead.c (LINELEN): deleted
+* proto.h (reshape): added
+	(saveBuffer): add cont arg
+	(cursorUp0): added
+	(cursorDown0): added
+	(checkType): change type oprop, ocolor, delete check_color, len
+* rc.c (CMT_FOLD_LINE): added
+	(params1): add fold_line
+	(sync_with_option): check PagerMax
+* search.c (set_mark): l->size
+	(forwardSearch): rewrite
+	(backwardSearch): rewrite
+* doc/README.func (RESHAPE): added
+* doc-jp/README.func (RESHAPE): added
+* scripts/w3mhelp.cgi.in (Buffer operation): add reshape
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.20 2003/01/15 16:11:43 ukai Exp $ */
+d342 1
+a342 1
+    char *p, *p1, *p2;
+d353 2
+d408 2
+d414 1
+a414 1
+		    if (!strncasecmp(p, *q, sizeof(*q) - 1)) {
+d424 1
+a424 1
+		if (regexMatch(p, &l->lineBuf[l->len] - p, p == l->lineBuf)
+@
+
+
+1.20
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.19 2003/01/06 15:37:49 ukai Exp $ */
+d297 1
+a297 1
+    int i;
+d305 1
+a305 5
+    a = anchorproc(buf, p1, p2, l->linenumber, p1 - l->lineBuf);
+    a->end.line = l->linenumber;
+    a->end.pos = epos;
+    a->hseq = -2;
+    for (i = a->start.pos; i < a->end.pos; i++)
+d307 19
+a332 1
+    reseq_anchor(buf);
+d355 1
+a355 1
+	    if (regexMatch(p, &l->lineBuf[l->len] - p, p == l->lineBuf) == 1) {
+a362 1
+    reseq_anchor(buf);
+@
+
+
+1.19
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.18 2003/01/06 15:36:57 ukai Exp $ */
+d201 1
+a201 4
+    tmp = Strnew_charp_n(p1, p2 - p1);
+#ifdef JP_CHARSET
+    tmp = conv_str(tmp, InnerCode, buf->document_code);
+#endif
+d213 1
+a213 4
+    tmp = Strnew_charp_n(p1, p2 - p1);
+#ifdef JP_CHARSET
+    tmp = conv_str(tmp, InnerCode, buf->document_code);
+#endif
+@
+
+
+1.18
+log
+@[w3m-dev 03610] Re: news:<newsgroup>
+* anchor.c (_put_anchor_news): check '<'
+	(reAnchorNewsheader): added
+* file.c (loadSomething): Subject: as buffername
+	(checkHeader): check buf->document_header
+	(loadGeneralFile): reAnchorNewsheader
+* html.h (SCM_NNTP_GROUP): added
+* main.c (main): delete USE_NNTP in switch (newbuf->real_scheme)
+	(chkNMIDBuffer): lowercase in url_like_pat
+* news.c (add_news_message): add scheme, group as arg
+	(openNewsStream): check SCM_NNTP_GROUP
+			check current_news.host
+	(readNewsgroup): rewrite to support nntp:,news: extension
+* proto.h (reAnchorNewsheader): added
+* url.c (DefaultPort): add 119 for nntp group
+	(parseURL2): rewrite to support nntp:,news: extension
+	(_parsedURL2Str): add for SCM_NNTP_GROUP
+	(openURL): rewrite to support nntp:,news: extension
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.17 2002/12/24 17:24:33 ukai Exp $ */
+d398 1
+a398 1
+	    l = l->next) {
+@
+
+
+1.17
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.16 2002/12/24 17:24:05 ukai Exp $ */
+d196 5
+a200 3
+    p1++;
+    if (*(p2 - 1) == '>')
+	p2--;
+d370 55
+@
+
+
+1.16
+log
+@[w3m-dev 03596] LIST
+* anchor.c (link_list_panel): check internal
+From: Hiroaki Shimotsu <shim@@d5.bs1.fc.nec.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.15 2002/12/16 15:41:27 ukai Exp $ */
+d626 2
+a627 3
+        (buf->linklist == NULL && buf->href == NULL &&
+         buf->img == NULL)) {
+		return NULL;
+@
+
+
+1.15
+log
+@[w3m-dev 03576] Re: news support
+* anchor.c (_put_anchor_news): convert to document code and quote
+	(_put_anchor_all): convert to document code
+* main.c (chkNMIDBuffer): change url_like_pat
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.14 2002/12/10 15:36:10 ukai Exp $ */
+d624 6
+@
+
+
+1.14
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.13 2002/12/09 15:51:08 ukai Exp $ */
+d199 5
+a203 3
+    tmp = Strnew_size(sizeof("news:") - 1 + (p2 - p1));
+    Strcat_charp_n(tmp, "news:", sizeof("news:") - 1);
+    Strcat_charp_n(tmp, p1, p2 - p1);
+d212 7
+a218 1
+    return registerHref(buf, allocStr(p1, p2 - p1), NULL, NO_REFERER, NULL,
+@
+
+
+1.13
+log
+@[w3m-dev 03549] link list
+* anchor.c (addMultirowsImg): add a->slave
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* funcname.tab (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* main.c (anchorMn): added
+	(accessKey): use anchorMn()
+	(listMn): added
+	(movlistMn): added
+	(linkLst): added
+* map.c (searchMapList): not static
+* menu.c (accesskey_menu): pass AnchorList to getAnchorText()
+	(lmKeys): added
+	(lmKeys2): added
+	(nlmKeys): added
+	(nlmKeys2): added
+	(lmGoto): added
+	(lmSelect): added
+	(list_menu): added
+* proto.h (linkLst): added
+	(listMn): added
+	(movlistMn): added
+	(list_menu): added
+	(searchMapList): added
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* doc/README.func (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* doc-jp/README.func (LINK_MENU): fix message
+	(LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* scripts/w3mhelp.cgi.in (Page/Cursor motion): add movlistMn
+	(Hyperlink operation): add linkLst linkMn
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.12 2002/12/05 16:29:04 ukai Exp $ */
+d646 2
+a647 2
+	        continue;
+            parseURL2(a->url, &pu, baseURL(buf));
+d663 2
+a664 2
+	        continue;
+            parseURL2(a->url, &pu, baseURL(buf));
+@
+
+
+1.12
+log
+@[w3m-dev 03529] Support of title, accesskey of anchor
+* anchor.c (putAnchor): arg title, key
+			initialize slave
+	(registerHref): arg title, key
+	(registerName): title = NULL, key = '\0'
+	(registerForm): title = NULL, key = '\0'
+	(_put_anchor_news): title = NULL, key = '\0'
+	(_put_anchor_all): title = NULL, key = '\0'
+	(addMultirowsImg): register title, accesskey
+	(addMultirowsForm): title = NULL, key = '\0'
+	(getAnchorText): added
+* display.c (displayBuffer): show title if any
+* file.c (set_breakpoint): use bcopy
+	(back_to_breakpoint): use bcopy
+	(flushline): s/anchor/anchor.url/
+		     s/anchor_hseq/anchor.hseq/
+		     s/anchor_target/anchor.target/
+		     add anchor.*
+	(close_effect0): s/anchor/anchor.url/
+			s/anchor_hseq/anchor.hseq/
+	(close_anchor): use bzero
+	(process_img): ATTR_TITLE,
+	(HTMLtagproc1): s/anchor/anchor.url/
+			target, referer, title, accesskey, hseq
+	(HTMLlineproc2body): ATTR_TITLE, ATTR_ACCESSKEY
+	(init_henv): use bzero
+* fm.h (Anchor): add title, accesskey, slave
+	(Breakpoint): use Anchor
+	(struct readbuffer): use Anchor
+* funcname.tab (ACCESSKEY): added
+	(LINK_MENU): added
+* html.c (ALST_A): add ATTR_TITLE, ATTR_ACCESSKEY
+	(ALST_IMG): add ATTR_TITLE
+	(ALST_IMG_ALT): add ATTR_TITLE
+	(AttrMAP): add accesskey, renum
+* html.h (ATTR_ACCESSKEY): added
+	(ATTR_*): renum 50->60
+* main.c (linkMn): added
+	(accessKey): added
+* menu.c (LinkMenu): deleted
+	(LinkV): deleted
+	(initLinkMenu): deleted
+	(lmGoURL): deleted
+	(popupMenu): delete initLinkMenu()
+	(initMenu): delete Link
+	(link_menu): added
+	(accesskey_menu): added
+* proto.h (linkMn): added
+	(link_menu): added
+	(accessKey): added
+	(accesskey_menu): added
+	(putAnchor): arg title, key
+	(registerHref): arg title, key
+	(registerImg): arg title
+	(getAnchorText): added
+* doc/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* doc-jp/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* scripts/w3mhelp.cgi.in (Hyperlink operation): add linkMn accessKey
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.11 2002/09/05 15:43:21 ukai Exp $ */
+d483 1
+d569 1
+a569 1
+getAnchorText(Buffer *buf, Anchor *a)
+a570 1
+    AnchorList *al = buf->href;
+d574 1
+d590 5
+d596 1
+a596 1
+	    tmp = Strnew_size(a->end.pos - a->start.pos);
+d599 1
+a599 2
+	Strcat_charp_n(tmp, &l->lineBuf[a->start.pos],
+		       a->end.pos - a->start.pos);
+d602 99
+@
+
+
+1.11
+log
+@[w3m-dev 03292] Re: load file at cursor
+* anchor.c (reAnchorPos): added
+	(reAnchorWord): added
+	(reAnchorAny): rewrite to use reAnchorPos()
+* funcname.tab (MARK_WORD): added
+* keybind.c (;) MARK_WORD
+* main.c (getCurWord): added
+	(chkWORD): added
+	(is_wordchar): added
+	(getCurWord): added
+	(GetWord): rewrite to use getCurWord()
+* proto.h (chkWORD): added
+	(reAnchorWord): added
+* doc/README.func: add MARK_WORD
+* doc/keymap.default: add MARK_WORD
+* doc-jp/README.func: add MARK_WORD
+* doc-jp/keymap.default: add MARK_WORD
+* NEWS: add MARK_WORD
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.10 2002/03/29 16:39:37 ukai Exp $ */
+d10 1
+a10 1
+	  char *referer, int line, int pos)
+d47 3
+d60 2
+a61 2
+registerHref(Buffer *buf, char *url, char *target, char *referer, int line,
+	     int pos)
+d64 2
+a65 1
+    buf->href = putAnchor(buf->href, url, target, &a, referer, line, pos);
+d73 2
+a74 1
+    buf->name = putAnchor(buf->name, url, NULL, &a, NULL, line, pos);
+d79 1
+a79 1
+registerImg(Buffer *buf, char *url, int line, int pos)
+d82 2
+a83 1
+    buf->img = putAnchor(buf->img, url, NULL, &a, NULL, line, pos);
+d97 2
+a98 2
+    buf->formitem = putAnchor(buf->formitem,
+			      (char *)fi, flist->target, &a, NULL, line, pos);
+d202 2
+a203 1
+    return registerHref(buf, tmp->ptr, NULL, NO_REFERER, line, pos);
+d210 2
+a211 2
+    return registerHref(buf, allocStr(p1, p2 - p1), NULL, NO_REFERER, line,
+			pos);
+d481 1
+a481 1
+	    a = registerImg(buf, a_img.url, l->linenumber, pos);
+d489 2
+a490 1
+				 a_href.referer, l->linenumber, pos);
+d492 1
+d499 1
+a499 1
+					  a_form.target, &a, NULL,
+d554 2
+a555 2
+				      a_form.target, &a, NULL, l->linenumber,
+				      pos);
+d565 32
+@
+
+
+1.10
+log
+@[w3m-dev 03160] Re: "ttp:" is marked instead of "http:" by MARL_URL
+* NEWS:
+* anchor.c (reAnchorAny): check MarkAllPages
+* fm.h (MarkAllPages): added
+* rc.c (CMT_MARK_ALL_PAGES): added
+	(mark_all_pages): added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.9 2002/01/31 18:28:24 ukai Exp $ */
+d280 30
+a317 3
+    Anchor *a;
+    int i;
+    int spos, epos;
+d332 1
+a332 14
+		spos = p1 - l->lineBuf;
+		epos = p2 - l->lineBuf;
+		for (i = spos; i < epos; i++) {
+		    if (l->propBuf[i] & (PE_ANCHOR | PE_FORM))
+			goto _next;
+		}
+		a = anchorproc(buf, p1, p2, l->linenumber, p1 - l->lineBuf);
+		a->end.line = l->linenumber;
+		a->end.pos = epos;
+		a->hseq = -2;
+		for (i = a->start.pos; i < a->end.pos; i++)
+		    l->propBuf[i] |= PE_ANCHOR;
+	      _next:
+		p = p2;
+@
+
+
+1.9
+log
+@gcc -Wall -Werror safe
+* anchor.c (addMultirowsImg): unused variable: fi
+* display.c (redrawLineImage): unused variable: ncol
+* file.c (process_img): uninitialized variables: r2, ni, w0, i0, ismap
+		unused variable: url, ext
+* file.c (loadHTMLstream): need volatile image_flag
+* image.c (image_index): int
+* image.c (getCharSize): need prototype
+* image.c (getImage): uninitialized variable: key
+		return NULL
+* map.c (follow_map_menu): used only USE_IMAGE: px, py, map
+* map.c (newMapArea): used only USE_IMAGE: p, i, max
+* proto.h (addMultirowsImg): added
+* w3mimgdisplay.c (main): format string fix
+* w3mimgdisplay.c (DrawImage): need (Pixmap) cast
+
+* inflate.c: indent
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.8 2002/01/31 17:54:48 ukai Exp $ */
+d298 3
+a300 1
+    for (l = buf->firstLine; l != NULL; l = l->next) {
+@
+
+
+1.8
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.7 2001/12/14 17:10:54 ukai Exp $ */
+a472 1
+		FormItemList *fi = (FormItemList *)a_form.url;
+@
+
+
+1.7
+log
+@[w3m-dev 02656]
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.6 2001/11/24 02:01:26 ukai Exp $ */
+d408 77
+@
+
+
+1.6
+log
+@run make indent
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.5 2001/11/22 14:07:38 ukai Exp $ */
+d188 1
+a188 1
+    Str tmp = Strnew_charp("news:");
+d193 3
+a195 3
+    while (p1 < p2) {
+	Strcat_char(tmp, *(p1++));
+    }
+@
+
+
+1.5
+log
+@[w3m-dev 02506]
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.4 2001/11/16 22:02:00 ukai Exp $ */
+d9 2
+a10 1
+putAnchor(AnchorList * al, char *url, char *target, Anchor ** anchor_return, char *referer, int line, int pos)
+d26 1
+a26 1
+    if (al->nanchor == al->anchormax) {		/* need realloc */
+d28 1
+a28 2
+	al->anchors = New_Reuse(Anchor, al->anchors,
+				al->anchormax);
+d33 1
+a33 1
+    if (!n || bpcmp(al->anchors[n-1].start, bp) < 0)
+d36 6
+a41 5
+    for (i = 0; i < n; i++) {
+	if (bpcmp(al->anchors[i].start, bp) >= 0) {
+	    for (j = n; j > i; j--)
+		al->anchors[j] = al->anchors[j - 1];
+	    break;
+a42 1
+    }
+d57 2
+a58 1
+registerHref(Buffer * buf, char *url, char *target, char *referer, int line, int pos)
+d66 1
+a66 1
+registerName(Buffer * buf, char *url, int line, int pos)
+d74 1
+a74 1
+registerImg(Buffer * buf, char *url, int line, int pos)
+d82 2
+a83 1
+registerForm(Buffer * buf, FormList * flist, struct parsed_tag * tag, int line, int pos)
+d92 1
+a92 5
+			      (char *) fi,
+			      flist->target,
+			      &a,
+			      NULL,
+			      line, pos);
+d97 1
+a97 1
+onAnchor(Anchor * a, int line, int pos)
+d111 1
+a111 1
+retrieveAnchor(AnchorList * al, int line, int pos)
+d139 1
+a139 1
+retrieveCurrentAnchor(Buffer * buf)
+d143 1
+a143 3
+    return retrieveAnchor(buf->href,
+			  buf->currentLine->linenumber,
+			  buf->pos);
+d147 1
+a147 1
+retrieveCurrentImg(Buffer * buf)
+d151 1
+a151 3
+    return retrieveAnchor(buf->img,
+			  buf->currentLine->linenumber,
+			  buf->pos);
+d155 1
+a155 1
+retrieveCurrentForm(Buffer * buf)
+d160 1
+a160 2
+			  buf->currentLine->linenumber,
+			  buf->pos);
+d164 1
+a164 1
+searchAnchor(AnchorList * al, char *str)
+d179 1
+a179 1
+searchURLLabel(Buffer * buf, char *url)
+d186 1
+a186 1
+_put_anchor_news(Buffer * buf, char *p1, char *p2, int line, int pos)
+d201 1
+a201 1
+_put_anchor_all(Buffer * buf, char *p1, char *p2, int line, int pos)
+d203 2
+a204 1
+    return registerHref(buf, allocStr(p1, p2 - p1), NULL, NO_REFERER, line, pos);
+d208 1
+a208 1
+reseq_anchor0(AnchorList * al, short *seqmap)
+d226 1
+a226 1
+reseq_anchor(Buffer * buf)
+d256 4
+a259 2
+	    a1 = closest_next_anchor(buf->href, NULL, a->start.pos, a->start.line);
+	    a1 = closest_next_anchor(buf->formitem, a1, a->start.pos, a->start.line);
+d283 2
+a284 1
+reAnchorAny(Buffer * buf, char *re, Anchor * (*anchorproc) (Buffer *, char *, char *, int, int))
+d327 1
+a327 1
+reAnchor(Buffer * buf, char *re)
+d334 1
+a334 1
+reAnchorNews(Buffer * buf, char *re)
+d342 1
+a342 1
+putHmarker(HmarkerList * ml, int line, int pos, int seq)
+d360 1
+a360 2
+	ml->marks = New_Reuse(BufferPoint, ml->marks,
+			      ml->markmax);
+d368 1
+a368 1
+closest_next_anchor(AnchorList * a, Anchor * an, int x, int y)
+d378 1
+a378 1
+	(a->anchors[i].start.line == y && a->anchors[i].start.pos > x)) {
+d389 1
+a389 1
+closest_prev_anchor(AnchorList * a, Anchor * an, int x, int y)
+d418 1
+a418 1
+       return;
+d420 10
+a429 10
+       a_form = al->anchors[i];
+       al->anchors[i].rows = 1;
+       if (a_form.hseq < 0 || a_form.rows <= 1)
+           continue;
+       for (l = buf->firstLine; l != NULL; l = l->next) {
+           if (l->linenumber == a_form.y)
+        break;
+       }
+       if (! l)
+           continue;
+d434 1
+a434 1
+		ls = (a_form.y < a_form.start.line) ? ls->next : ls->prev) {
+d438 13
+a450 1
+	    if (! ls)
+d452 10
+a462 21
+       fi = (FormItemList *) a_form.url;
+       col = COLPOS(ls, a_form.start.pos);
+       ecol = COLPOS(ls, a_form.end.pos);
+       for (j = 0; l && j < a_form.rows; l = l->next, j++) {
+           pos = columnPos(l, col);
+           if (j == 0) {
+        buf->hmarklist->marks[a_form.hseq].line = l->linenumber;
+        buf->hmarklist->marks[a_form.hseq].pos = pos;
+           }
+           if (a_form.start.line == l->linenumber)
+        continue;
+           buf->formitem = putAnchor(buf->formitem, a_form.url,
+        a_form.target, &a, NULL, l->linenumber, pos);
+           a->hseq = a_form.hseq;
+           a->y = a_form.y;
+           a->end.pos = pos + ecol - col;
+           l->lineBuf[pos - 1] = '[';
+           l->lineBuf[a->end.pos] = ']';
+           for (k = pos; k < a->end.pos; k++)
+         l->propBuf[k] |= PE_FORM;
+       }
+@
+
+
+1.4
+log
+@follow autoconf conventions, #include cleanups
+@
+text
+@d1 1
+a1 1
+/* $Id: anchor.c,v 1.3 2001/11/15 00:32:13 a-ito Exp $ */
+a356 3
+#ifdef __CYGWIN__
+	bzero((char *) ml->marks, sizeof(BufferPoint) * ml->markmax);
+#else				/* not __CYGWIN__ */
+a357 1
+#endif				/* not __CYGWIN__ */
+@
+
+
+1.3
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@d1 1
+a1 5
+/* $Id: anchor.c,v 1.2.2.5 2001/01/22 12:46:54 okabe Exp $ */
+#ifdef __EMX__
+#include <strings.h>
+#endif
+
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a98 1
+    fi->anchor_num = buf->formitem->nanchor - 1;
+d360 1
+a360 1
+	ml->marks = New_N(BufferPoint, ml->markmax);
+d419 56
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

@@ -1,0 +1,1182 @@
+head	1.21;
+access;
+symbols
+	release-0-5-3:1.21
+	release-0-5-2:1.21
+	release-0-5-1:1.21
+	release-0-5:1.21
+	release-0-4-2:1.20
+	release-0-4-1:1.19
+	release-0-4:1.19
+	release-0-4-rc3:1.19
+	release-0-4-rc2:1.19
+	release-0-4-rc1:1.19
+	release-0-3-2-2:1.10
+	release-0-3-2-1:1.10
+	branch-0-3-2:1.10.0.2
+	release-0-3-2:1.10
+	release-0-3-2-rc4:1.10
+	release-0-3-2-rc3:1.10
+	release-0-3-2-rc2:1.10
+	release-0-3-2-rc1:1.10
+	release-0-3-1:1.9
+	release-0-3:1.7
+	release-0-2-5-1:1.6
+	branch-0-2-5:1.6.0.2
+	release-0-2-5:1.6
+	release-0-2-4:1.5
+	release-0-2-3-2:1.3
+	release-0-2-3-1:1.3
+	release-0-2-3:1.3
+	inu-0-2-2-rel-1-1:1.2
+	inu-0-2-2:1.2.0.2
+	inu-0-2-2-base:1.2
+	release-0-2-2:1.2
+	release-0-2-1-inu-1-5:1.2
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.21
+date	2003.09.22.21.02.22;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.07.22.17.24.49;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.01.23.18.37.21;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.12.11.02.57.30;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.12.09.15.51.10;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.12.05.16.29.13;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.12.04.17.08.27;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.11.25.16.57.18;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.11.21.16.15.58;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.11.18.17.43.40;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.11.05.17.10.07;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.09.05.15.43.22;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.06.01.16.50.16;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.03.19.16.06.52;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.01.31.17.54.57;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.01.22.16.59.11;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.12.25.17.29.31;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.12.25.13.43.51;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2001.11.30.16.35.44;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.14;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.21
+log
+@merge m17n patch
+add libwc
+@
+text
+@ABORT		Quit w3m without confirmation
+ACCESSSKEY	Popup acceskey menu
+ADD_BOOKMARK	Add current page to bookmark
+ALARM		Set alarm
+BACK		Back to previous buffer
+BEGIN		Go to the first line
+BOOKMARK	Read bookmark
+CENTER_H	Move to the center line
+CENTER_V	Move to the center column
+CHARSET		Change the current document charset
+CLOSE_TAB	Close current tab
+CLOSE_TAB_MOUSE	Close tab on mouse cursor (for mouse action)
+COMMAND		Execute w3m command(s)
+COOKIE		View cookie list
+DEFAULT_CHARSET	Change the default document charset
+DEFINE_KEY	Define a binding between a key stroke and a user command
+DELETE_PREVBUF  Delete previous buffer (mainly for local-CGI)
+DICT_WORD	Execute dictionary command (see README.dict)
+DICT_WORD_AT   Execute dictionary command for word at cursor
+DISPLAY_IMAGE	Restart loading and drawing of images
+DOWN		Scroll down one line
+DOWNLOAD	Save document source to file
+DOWNLOAD_LIST	Display download list panel
+EDIT		Edit current document
+EDIT_SCREEN	Edit currently rendered document
+END		Go to the last line
+EXEC_SHELL	Execute shell command
+EXIT		Quit w3m without confirmation
+EXTERN		Execute external browser
+EXTERN_LINK	View current link using external browser
+FRAME		Render frame
+GOTO		Go to URL
+GOTO_LINE	Go to specified line
+GOTO_LINK	Go to current link
+GOTO_RELATIVE	Go to relative URL
+HELP		View help
+HISTORY		View history of URL
+INFO		View info of current document
+INTERRUPT	Stop loading document
+INIT_MAILCAP    Reread mailcap (mainly for local-CGI)
+ISEARCH		Incremental search forward
+ISEARCH_BACK	Incremental search backward
+LEFT		Shift screen one column
+LINE_BEGIN	Go to the beginning of line
+LINE_END	Go to the end of line
+LINE_INFO	Show current line number
+LINK_BEGIN     Go to the first link
+LINK_END       Go to the last link
+LINK_MENU	Popup link element menu
+LIST		Show all links and images
+LIST_MENU	Popup link list menu and go to selected link
+LOAD		Load local file
+MAIN_MENU	Popup menu
+MARK		Set/unset mark
+MARK_MID	Mark Message-ID-like strings as anchors
+MARK_URL	Mark URL-like strings as anchors
+MARK_WORD	Mark current word as anchor
+MENU		Popup menu
+MENU_MOUSE	Popup menu at mouse cursor (for mouse action)
+MOUSE_TOGGLE   Toggle activity of mouse
+MOVE_DOWN      Move cursor down (a half screen scroll at the end of screen)
+MOVE_DOWN1     Move cursor down (1 line scroll at the end of screen)
+MOVE_LEFT      Move cursor left (a half screen shift at the left edge)
+MOVE_LEFT1     Move cursor left (1 columns shift at the left edge)
+MOVE_LIST_MENU	Popup link list menu and move cursor to selected link
+MOVE_MOUSE	Move cursor to mouse cursor (for mouse action)
+MOVE_RIGHT     Move cursor right (a half screen shift at the right edge)
+MOVE_RIGHT1    Move cursor right (1 columns shift at the right edge)
+MOVE_UP                Move cursor up (a half screen scroll at the top of screen)
+MOVE_UP1       Move cursor up (1 line scrol at the top of screen)
+MSGS        Display error messages
+NEW_TAB		Open new tab
+NEXT		Move to next buffer
+NEXT_DOWN      Move to next downward link 
+NEXT_LEFT      Move to next left link 
+NEXT_LEFT_UP   Move to next left (or upward) link 
+NEXT_LINK	Move to next link
+NEXT_MARK	Move to next word
+NEXT_PAGE	Move to next page
+NEXT_RIGHT     Move to next right link 
+NEXT_RIGHT_DOWN        Move to next right (or downward) link 
+NEXT_TAB	Move to next tab
+NEXT_UP                Move to next upward link 
+NEXT_VISITED    Move to next visited link
+NEXT_WORD	Move to next word
+NOTHING		Do nothing
+NULL		Do nothing
+OPTIONS		Option setting panel
+PEEK		Peek current URL
+PEEK_IMG	Peek image URL 
+PEEK_LINK      Peek link URL
+PIPE_BUF       Send rendered document to pipe
+PIPE_SHELL	Execute shell command and browse
+PREV		Move to previous buffer
+PREV_LINK	Move to previous link
+PREV_MARK	Move to previous mark
+PREV_PAGE	Move to previous page
+PREV_TAB	Move to previous tab
+PREV_VISITED    Move to previous visited link
+PREV_WORD	Move to previous word
+PRINT		Save buffer to file
+QUIT		Quit w3m
+READ_SHELL	Execute shell command and load
+REDO		Cancel the last undo
+REDRAW		Redraw screen
+REG_MARK	Set mark using regexp
+REINIT		Reload configuration files
+RELOAD		Reload buffer
+RESHAPE		Re-render buffer
+RIGHT		Shift screen one column right
+SAVE		Save document source to file
+SAVE_IMAGE	Save image to file
+SAVE_LINK	Save link to file
+SAVE_SCREEN	Save rendered document to file
+SEARCH		Search forward
+SEARCH_BACK	Search backward
+SEARCH_FORE	Search forward
+SEARCH_NEXT	Search next regexp
+SEARCH_PREV	Search previous regexp
+SELECT		Go to buffer selection panel
+SELECT_MENU    Popup buffer selection menu
+SETENV        Set environment variable
+SET_OPTION     Set option
+SHELL		Execute shell command
+SHIFT_LEFT	Shift screen left
+SHIFT_RIGHT	Shift screen right
+SOURCE		View HTML source
+STOP_IMAGE	Stop loading and drawing of images
+SUBMIT		Submit form
+SUSPEND		Stop loading document
+TAB_GOTO	Open URL on new tab
+TAB_GOTO_RELATIVE	Open relative URL on new tab
+TAB_LEFT	Move current tab left
+TAB_LINK	Open current link on new tab
+TAB_MENU	Popup tab selection menu
+TAB_MOUSE	Move to tab on mouse cursor (for mouse action)
+TAB_RIGHT	Move current tab right
+UNDO		Cancel the last cursor movement
+UP		Scroll up one line
+VERSION                Display version of w3m
+VIEW		View HTML source
+VIEW_BOOKMARK	View bookmark
+VIEW_IMAGE	View image
+WHEREIS		Search forward
+WRAP_TOGGLE    Toggle wrap search mode
+@
+
+
+1.20
+log
+@[w3m-dev 03939] next/prev visited link
+* funcname.tab (NEXT_VISITED): added
+	(PREV_VISITED): added
+* main.c (_nextA): added
+	(_prevA): added
+	(nextVA): added
+	(prevVA): added
+* proto.h (nextVA): added
+	(prevVA): added
+* doc/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* doc-jp/README.func (NEXT_VISITED): added
+	(PREV_VISITED): added
+* NEWS: func: NEXT_VISITED, PREV_VISITED
+From: Yoshinobu Sakane <sakane@@d4.bsd.nes.nec.co.jp>
+@
+text
+@d10 1
+d15 1
+@
+
+
+1.19
+log
+@[w3m-dev 03667] fold patch
+* anchor.c (reAnchorPos): rewrite
+	(reAnchorWord): delete reseq_anchor()
+	(reAnchorAny): use l->size
+			delete reseq_anchor()
+* backend.c (internal_get): pass TRUE to saveBuffer
+* buffer.c (newBuffer): delete n->linelen
+	(reshapeBuffer): rewrite
+* display.c (displayBuffer): FoldLine
+	(redrawLine): l->bpos
+	(cursorUp0): added
+	(cursorUp): rewrite
+	(cursorDown0): added
+	(cursowDown): rewrite
+	(cursorRight): check l->next
+			l->bwidth
+	(cursorLeft): l->prev && l->bpos
+			l->bwidth
+	(arrangeCursor): buf->currentLine->bwidth
+		buf->cursorX
+* etc.c (checkType): **oporp
+			rewrite
+	(calcPosition): realColumn allocated by New_reuse
+* file.c (addnewline): add nlines arg
+	(propBuffer): deleted
+	(colorBuffer): deleted
+	(readHeader): propBuffer
+		FOLD_BUFFER_WIDTH
+	(HTMLlineproc2body): rewrite
+	(addnewline2): added
+	(addnewline): rewrite
+	(loadBuffer): propBuffer, colorBuffer
+	(saveBuffer): cont arg
+	(getNextPage): rewrite
+* fm.h (LINELEN): 256
+	(FNLEN): deleted
+	(Line): add size, bpos, bwidth
+	(Buffer): delete linelen
+	(INIT_BUFFER_WIDTH): check showLineNum
+	(FOLD_BUFFER_WIDTH): added
+	(FoldLine): added
+* funcname.tab (RESHAPE): added
+* main.c (do_dump): pass FALSE to saveBuffer
+	(nscroll): rewrite
+	(clear_mark): l->size
+	(shiftvisualpos): rewrite
+	(pipeBuf): pass TRUE to saveBuffer
+	(linebeg): check line->prev && line->bpos
+	(linend): check line->next, line->next->bpos
+	(editScr): pass TRUE to saveBuffer
+	(svBuf): pass TRUE to saveBuffer
+	(vmSrc): pass TRUE to saveBuffer
+	(reshape): added
+	(curlno): rewrite
+* mimehead.c (LINELEN): deleted
+* proto.h (reshape): added
+	(saveBuffer): add cont arg
+	(cursorUp0): added
+	(cursorDown0): added
+	(checkType): change type oprop, ocolor, delete check_color, len
+* rc.c (CMT_FOLD_LINE): added
+	(params1): add fold_line
+	(sync_with_option): check PagerMax
+* search.c (set_mark): l->size
+	(forwardSearch): rewrite
+	(backwardSearch): rewrite
+* doc/README.func (RESHAPE): added
+* doc-jp/README.func (RESHAPE): added
+* scripts/w3mhelp.cgi.in (Buffer operation): add reshape
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d82 1
+d97 1
+@
+
+
+1.18
+log
+@[w3m-dev 03554] Re: Undo/Redo
+* doc/README.func (REDO): added
+		(UNDO): added
+* doc-jp/README.func (REDO): added
+		(UNDO): added
+* scripts/w3mhelp.cgi.in: (Page/Cursor motion): add undoPos, redoPos
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d105 1
+@
+
+
+1.17
+log
+@[w3m-dev 03549] link list
+* anchor.c (addMultirowsImg): add a->slave
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* funcname.tab (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* main.c (anchorMn): added
+	(accessKey): use anchorMn()
+	(listMn): added
+	(movlistMn): added
+	(linkLst): added
+* map.c (searchMapList): not static
+* menu.c (accesskey_menu): pass AnchorList to getAnchorText()
+	(lmKeys): added
+	(lmKeys2): added
+	(nlmKeys): added
+	(nlmKeys2): added
+	(lmGoto): added
+	(lmSelect): added
+	(list_menu): added
+* proto.h (linkLst): added
+	(listMn): added
+	(movlistMn): added
+	(list_menu): added
+	(searchMapList): added
+	(getAnchorText): arg AnchorList *al
+	(link_list_panel): added
+* doc/README.func (LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* doc-jp/README.func (LINK_MENU): fix message
+	(LIST): added
+	(LIST_MENU): added
+	(MOVE_LIST_MENU): added
+* scripts/w3mhelp.cgi.in (Page/Cursor motion): add movlistMn
+	(Hyperlink operation): add linkLst linkMn
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d100 1
+d133 1
+@
+
+
+1.16
+log
+@[w3m-dev 03529] Support of title, accesskey of anchor
+* anchor.c (putAnchor): arg title, key
+			initialize slave
+	(registerHref): arg title, key
+	(registerName): title = NULL, key = '\0'
+	(registerForm): title = NULL, key = '\0'
+	(_put_anchor_news): title = NULL, key = '\0'
+	(_put_anchor_all): title = NULL, key = '\0'
+	(addMultirowsImg): register title, accesskey
+	(addMultirowsForm): title = NULL, key = '\0'
+	(getAnchorText): added
+* display.c (displayBuffer): show title if any
+* file.c (set_breakpoint): use bcopy
+	(back_to_breakpoint): use bcopy
+	(flushline): s/anchor/anchor.url/
+		     s/anchor_hseq/anchor.hseq/
+		     s/anchor_target/anchor.target/
+		     add anchor.*
+	(close_effect0): s/anchor/anchor.url/
+			s/anchor_hseq/anchor.hseq/
+	(close_anchor): use bzero
+	(process_img): ATTR_TITLE,
+	(HTMLtagproc1): s/anchor/anchor.url/
+			target, referer, title, accesskey, hseq
+	(HTMLlineproc2body): ATTR_TITLE, ATTR_ACCESSKEY
+	(init_henv): use bzero
+* fm.h (Anchor): add title, accesskey, slave
+	(Breakpoint): use Anchor
+	(struct readbuffer): use Anchor
+* funcname.tab (ACCESSKEY): added
+	(LINK_MENU): added
+* html.c (ALST_A): add ATTR_TITLE, ATTR_ACCESSKEY
+	(ALST_IMG): add ATTR_TITLE
+	(ALST_IMG_ALT): add ATTR_TITLE
+	(AttrMAP): add accesskey, renum
+* html.h (ATTR_ACCESSKEY): added
+	(ATTR_*): renum 50->60
+* main.c (linkMn): added
+	(accessKey): added
+* menu.c (LinkMenu): deleted
+	(LinkV): deleted
+	(initLinkMenu): deleted
+	(lmGoURL): deleted
+	(popupMenu): delete initLinkMenu()
+	(initMenu): delete Link
+	(link_menu): added
+	(accesskey_menu): added
+* proto.h (linkMn): added
+	(link_menu): added
+	(accessKey): added
+	(accesskey_menu): added
+	(putAnchor): arg title, key
+	(registerHref): arg title, key
+	(registerImg): arg title
+	(getAnchorText): added
+* doc/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* doc-jp/README.func (ACCESSKEY): added
+		(LINK_MENU): added
+* scripts/w3mhelp.cgi.in (Hyperlink operation): add linkMn accessKey
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d48 2
+d63 1
+@
+
+
+1.15
+log
+@[w3m-dev 03524] fix doc*/README.func, w3mhelp.cgi.in
+* doc/README.func (REINIT): added
+* doc-jp/README.func (REINIT): added
+* scripts/w3mhelp.cgi.in (Page/Cursor motion):
+			add moveR1 movL1 movD1 movU1 ldown1 lup1
+	(File/Stream operation): add pipeBuf
+	(Miscellany): add dispVer execCmd reinit
+	(load_keymap): rewrite
+	(norm_key): rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d2 1
+d47 1
+@
+
+
+1.14
+log
+@[w3m-dev 03478] mouse action configuration
+* display.c (displayBuffer): mouse_menu -> mouse_action.menu_str
+			mouse_action.lastline_str
+		(redrawNLine): mouse_menu -> mouse_action.menu_str
+* fm.h (MouseMenuMap): deleted
+	(MouseActionMap): added
+	(MouseAction): added
+	(mouse_action): added
+* func.c (default_mouse_action): added
+	(setMouseAction0): added
+	(setMouseAction1): added
+	(setMouseAction2): added
+	(initMouseMenu): deleted
+	(initMouseAction): added
+* funcname.tab (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+* main.c (main): initMouseMenu() -> initMouseAction()
+		mouse_menu -> mouse_action
+	(posTab): mouse_menu -> mouse_action
+		check y > LastTab->y
+	(mouse_menu_action): deleted
+	(do_mouse_action): added
+	(process_mouse): mouse_menu -> mouse_action
+		do_mouse_action()
+	(movMs): added
+	(menuMs): added
+	(tabMs): added
+	(closeTMs): added
+	(reinit): initMouseMenu() -> initMouseAction()
+		resource: MOUSE_MENU -> MOUSE
+	(calcTabPos): mouse_menu -> mouse_action
+* menu.c (mainMn): mouse_menu -> mouse_action
+	(selMn): mouse_menu -> mouse_action
+	(tabMn): mouse_menu -> mouse_action
+	(initMenu): add SelectTag to w3mMenuList
+* proto.h (movMs): added
+	(menuMs): added
+	(tabMs): added
+	(closeTMs): added
+	(initMouseMenu): deleted
+	(initMouseAction): added
+* rc.c (sync_with_option): initMouseMenu() -> initMouseAction()
+* doc/README.func (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+* doc-jp/README.func (CLOSE_TAB_MOUSE): added
+	(MENU_MOUSE): added
+	(MOVE_MOUSE): added
+	(TAB_MOUSE): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d97 1
+@
+
+
+1.13
+log
+@[w3m-dev 03454] next / previous buffer
+* funcname.tab (NEXT): added
+		(PREV): added
+* main.c (nextBf): added
+	(prevBf): added
+* proto.h (nextBf): added
+	(prevBf): added
+* doc/README.func (NEXT): added
+		(PREV): added
+* doc-jp/README.func (NEXT): added
+		(PREV): added
+* scripts/w3mhelp.cgi.in (Buffer operation): nextBf prevBf
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d10 1
+d53 1
+d59 1
+d124 1
+@
+
+
+1.12
+log
+@[w3m-dev 03449] Add DOWNLOAD_LIST to doc*/README.func and scripts/w3mhelp.cgi.in
+* doc-jp/README.func (DOWNLOAD_LIST): added
+* doc/README.func (DOWNLOAD_LIST): added
+* scripts/w3mhelp.cgi.in (Miscellany): add ldDL
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d63 1
+d83 1
+@
+
+
+1.11
+log
+@[w3m-dev 03372] tab browser
+* display.c (displayBuffer): add ny
+			rootY offset by tab
+			tab line
+	(cursorDown): offset rootY
+	(arrangeCursor): offset rootY
+* etc.c (columnSkip): offset rootY
+	(lineSkip): offset rootY
+	(currentLineSkip): offset rootY
+* file.c (HTMLlineproc2body): ATTR_TARGET
+* fm.h (MapArea): add target
+	(Buffer): add rootY
+	(TabBuffer): added
+	(Currentbuf): comment out
+	(Firstbuf): comment out
+	(CurrentTab): added
+	(FirstTab): added
+	(LastTab): added
+	(open_tab_blank): added
+	(close_tab_back): added
+	(nTab): added
+	(TabCols): added
+	(N_TAB): added
+	(Currentbuf): CurrentTab->currentBuffer
+	(Firstbuf): CurrentTab->firstBuffer
+* funcname.tab (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* html.c (ALST_AREA): add ATTR_TARGET
+* image.c (showImageProgress): offset rootY
+* main.c (_newT): added
+	(followTab): added
+	(moveTab): added
+	(check_target): added
+	(MAIN): init tab related values
+		buf => tab
+	(nscroll): offset rootY
+	(pgFore): offset rootY
+	(pgBack): offset rootY
+	(ctrCsrV): offset rootY
+	(_movD): offset rootY
+	(_movU): offset rootY
+	(_goLine): offset rootY
+	(_mark): offset rootY
+	(followA): check target
+	(_followForm): offset rootY
+	(drawAnchorCursor0): offset rootY
+	(drawAnchorCursor): offset rootY
+	(backBf): check close_tab_back
+	(follow_map): rewrite for tab, check target
+	(posTab): added
+	(process_mouse): tab operation
+			offset rootY
+	(deleteFiles): for all buffers in all tabs
+	(newTab): added
+	(newT): added
+	(numTab): added
+	(deleteTab): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(followTab): added
+	(tabA): added
+	(tabURL0): added
+	(tabURL): added
+	(tabrURL): added
+	(moveTab): added
+	(tabR): added
+	(tabL): added
+* map.c (follow_map_menu): return MapArea
+	(newMapArea): add target args
+* menu.c (SelTabMenu): added
+	(SelTabV): added
+	(initSelTabMenu): added
+	(smChTab): added
+	(smDelTab): added
+	(MainMenuItem): add Select Tab
+				on New Tab
+	(popupMenu): add initSelTabMenu()
+			offset rootY
+	(mainMn): offset rootY
+	(selMn): offset rootY
+	(initSelectMenu): offset rootY
+	(tabMn): added
+* proto.h (newT): added
+	(closeT): added
+	(nextT): added
+	(prevT): added
+	(tabA): added
+	(tabURL): added
+	(tabrURL): added
+	(tabR): added
+	(tabL): added
+	(newTab): added
+	(deleteTab): added
+	(follow_map_menu): return MapArea
+	(newMapArea): add target arg
+	(tabMn): added
+* rc.c (CMT_OPEN_TAB_BLANK): added
+	(CMT_CLOSE_TAB_BACK): added
+	(open_tab_blank): added
+	(close_tab_back): added
+* doc/README.func (CLOSE_TAB): added
+	(NEW_TAB): added
+	(NEXT_TAB): added
+	(PREV_TAB): added
+	(TAB_GOTO): added
+	(TAB_GOTO_RELATIVE): added
+	(TAB_LEFT): added
+	(TAB_LINK): added
+	(TAB_MENU): added
+	(TAB_RIGHT): added
+* doc-jp/README.func: ditto doc/README.func
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d19 1
+@
+
+
+1.10
+log
+@[w3m-dev 03292] Re: load file at cursor
+* anchor.c (reAnchorPos): added
+	(reAnchorWord): added
+	(reAnchorAny): rewrite to use reAnchorPos()
+* funcname.tab (MARK_WORD): added
+* keybind.c (;) MARK_WORD
+* main.c (getCurWord): added
+	(chkWORD): added
+	(is_wordchar): added
+	(getCurWord): added
+	(GetWord): rewrite to use getCurWord()
+* proto.h (chkWORD): added
+	(reAnchorWord): added
+* doc/README.func: add MARK_WORD
+* doc/keymap.default: add MARK_WORD
+* doc-jp/README.func: add MARK_WORD
+* doc-jp/keymap.default: add MARK_WORD
+* NEWS: add MARK_WORD
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d9 1
+d61 1
+d70 1
+d84 1
+d113 6
+@
+
+
+1.9
+log
+@[w3m-dev 03200] Re: New configuration option ``keymap_file'' and new command ``DEFINE_KEY''
+* fm.h: add <sts/stat.h>, unistd.h>
+* fm.h (keymap_file): added
+* func.c (keymap_initialized): added
+	(current_keymap_file): added
+	(setKeymap): added
+	(initKeymap): rewrite to use setKeymap()
+* funcname.tab (DEFINE_KEY): added
+* main.c (MAIN): initKeymap(TRUE)
+	(defKey): added
+* proto.h (defKey): added
+	(setKeymap): added
+	(initKeymap): add force param
+* rc.c (CMT_KEYMAP_FILE): added
+	(params3): add keymap_file
+	(sync_with_option): add initKeymap(FALSE)
+* doc/README.func (DEFINE_KEY): added
+* doc-jp/README.func: (DEFINE_KEY): added
+* scripts/w3mhelp.cgi.in: add defKey
+* NEWS:
+	func: DEFINE_KEY
+	rc: keymap_file
+From: Kiyokazu SUTO <suto@@ks-and-ks.ne.jp>
+@
+text
+@d48 1
+@
+
+
+1.8
+log
+@[w3m-dev 03136] Add COMMAND to execute multiple commands
+* fm.h (CurrentMenuData): deleted
+	(CurrentCmdData): added
+* func.c (getKey): check next char of ^
+	(getWord): get word until ';'
+	(getQWord): rewrite using Str
+* funcname.tab (COMMAND): added
+* main.c (MAIN): delete CurrentMenuData
+		initialize CurrentCmdData
+	(searchKeyData): use CurrentCmdData
+	(execCmd): added
+	(SigAlarm): delete CurrentMenuData, use CurrentCmdData
+* menu.c (action_menu): delete CurrentMenuData, use CurrentCmdData
+* proto.h (execCmd): added
+* doc/README.func (ALARM): capitalize
+		(COMMAND): added
+* doc-jp/README.func (COMMAND): added
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d11 1
+@
+
+
+1.7
+log
+@w3m-img merge (w3m-0.2.4+cvs-1.278-img-2.2.patch.gz)
+* NEWS: w3m-img merge
+* .cvsignore: add w3mimgdisplay, w3mimgsize
+* XMakefile: add image.c to SRCS
+	     add image.o to OBJS
+             add IMGDISPLAY, IMGSIZE
+* config.h.dist: USE_IMAGE, IMGSIZE, IMGDISPLAY
+* configure: add find_imlib
+		ask use_image
+	(config.h) add $imgtarget to EXT_TARGETS
+		   $def_use_image
+		   IMGSIZE, IMGDISPLAY
+* fm.h (MAX_IMAGE): added
+* fm.h (DEFAULT_PIXEL_PER_CHAR): fix for USE_IMAGE
+* fm.h (DEFAULT_PIXEL_PER_LINE): added
+* fm.h (B_REDRAW_IMAGE): added
+* fm.h (IMG_FLAG_SKIP): added
+* fm.h (IMG_FLAG_AUTO): added
+* fm.h (IMG_FLAG_START): added
+* fm.h (IMG_FLAG_STOP): added
+* fm.h (IMG_FLAG_NEXT): added
+* fm.h (IMG_FLAG_UNLOADED): added
+* fm.h (IMG_FLAG_LOADED): added
+* fm.h (IMG_FLAG_ERROR): added
+* fm.h (MapArea): added
+* fm.h (MapList): s/urls/alts/, add area
+* fm.h (ImageCache): added
+* fm.h (Image): added
+* fm.h (Anchor): add image
+* fm.h (Buffer): add imarklist, image_flag, need_reshape
+* fm.h (RG_FRAME_SRC): added
+* fm.h (ALIGN_MIDDLE): added
+* fm.h (ALIGN_TOP): added
+* fm.h (ALIGN_BOTTOM): added
+* fm.h (QuietMessage): added
+* fm.h (Imgdisplay): added
+* fm.h (Imgsize): added
+* fm.h (activeImage): added
+* fm.h (displayImage): added
+* fm.h (autoImage): added
+* fm.h (useExtImageViewer): added
+* fm.h (image_source): added
+* fm.h (view_unseenobject): change default if USE_IMAGE
+* fm.h (set_pixel_per_char): added
+* fm.h (pixel_per_line): added
+* fm.h (set_pixel_per_line): added
+* fm.h (image_scale): added
+* proto.h (dispI): added
+* proto.h (stopI): added
+* proto.h (deleteImage): added
+* proto.h (getAllImage): added
+* proto.h (loadImage): added
+* proto.h (getImage): added
+* proto.h (getImageSize): added
+* proto.h (process_img): add width arg
+* proto.h (loadImageBuffer): added
+* proto.h (follow_map_menu): add a_img arg
+* proto.h (getMapXY): added
+* proto.h (newMapArea): added
+* proto.h (touch_cursor): added
+* proto.h (cURLcode): added
+* proto.h (initImage): added
+* proto.h (termImage): added
+* proto.h (addImage): added
+* proto.h (drawImage): added
+* proto.h (clearImage): added
+* anchor.c (addMultirowsImg): added
+* buffer.c (discardBuffer): deleteImage if USE_IMAGE
+* buffer.c (reshapeBuffer): buf->need_reshape check
+* display.c (fmTerm): if activeImage, stop load image
+* display.c (fmInit): if displayImage, initImage
+* display.c (image_touch): added
+* display.c (draw_image_flag): added
+* display.c (redrawLineImage): added
+* display.c (displayBuffer): buf->need_reshape = TRUE
+			mode == B_REDRAW_IMAGE
+			image flag checks
+			force redraw image in mode == B_REDRAW_IMAGE
+			displayBuffer if need reshape
+			drawImage
+* display.c (redrawNLine): redrawLineImage
+* display.c (redrawLineImage): added
+* display.c (disp_message_nsec): return immediately if QuietMessage
+* etc.c (reset_signals): ignore SIGUSR1
+* file.c (frame_source): added
+* file.c (_MoveFile): added
+* file.c (cur_baseURL): added
+* file.c (cur_document_code): added
+* file.c (cur_iseq): added
+* file.c (loadGeneralFile): fix fmInitialized and prevtrap checks
+			save cur_baseURL
+			image_source load
+			loadImageBuffer for "image/*"
+			frame_source flag
+			fix b->type when proc is loadImageBuffer
+* file.c (process_img): add width arg
+		parse height and width attr, align
+		fix for inline-image
+* file.c (process_input): fix for form <input type="image">
+* file.c (HTMLtagproc1): pass h_env->limit to process_img()
+		fix <img_alt> for inline-image
+		save cur_baseURL
+* file.c (HTMLlineproc2body): fix <img_alt> for inline-image
+* file.c (loadHTMLstream): fix for inline-image
+		fix fmInitialized and prevtrap checks
+		save cur_document_code
+		save image_flag
+* file.c (loadGopherDir): save cur_document_code
+		fix fmInitialized and prevtrap checks
+* file.c (loadImageBuffer): added for inline-image
+* file.c (save2tmp): fix fmInitialized and prevtrap checks
+* frame.c (frame_download_source): set RG_FRAME_SRC flag
+		image check
+* funcname.tab (DISPLAY_IMAGE): added
+* funcname.tab (STOP_IMAGE): added
+* html.c (ALST_IMG): add align, ismap
+* html.c (ALST_AREA): add shape, coords
+* html.c (ALST_IMG_ALT): add width, height, usemap, ismap, hseq,
+			xoffset, yoffset, top_margin, bottom_margin
+* html.c (AttrMap): add shape, coords, ismap, xoffset, yoffset
+* html.h (ATTR_SHAPE): added
+* html.h (ATTR_COORDS): added
+* html.h (ATTR_ISMAP): added
+* html.h (ATTR_XOFFSET): added
+* html.h (ATTR_YOFFSET): added
+* html.h (ATTR_TOP_MARGIN): added
+* html.h (ATTR_BOTTOM_MARGIN): added
+* html.h (SHAPE_UNKNOWN): added
+* html.h (SHAPE_DEFAULT): added
+* html.h (SHAPE_RECT): added
+* html.h (SHAPE_CIRCLE): added
+* html.h (SHAPE_POLY): added
+* image.c: added
+* main.c (fversion): add USE_IMAGE
+* main.c (fusage): -ppl option
+* main.c (MAIN): set_pixel_per_char if ppc specified
+		-ppl option
+		loadImage
+* main.c (pushBuffer): deleteImage
+* main.c (quitfm): termImage
+* main.c (selBuf): deleteImage
+* main.c (followA): fix for inline-image and map area
+* main.c (query_from_followform): getMapXY()
+* main.c (setOpt): displayBuffer B_REDRAW_IMAGE
+* main.c (follow_map): fix calculate x, y
+* main.c (dispI): added
+* main.c (stopI): added
+* map.c: include <math.h>
+* map.c (inMapArea): added
+* map.c (follow_map_menu): add a_img arg to handle inline-image
+* map.c (follow_map_panel): use MapArea
+* map.c (getMapXY): added
+* map.c (newMapArea): added
+* menu.c (smChBuf): deleteImage
+* parsetagx.c (toAlign): align top, bottom, middle
+* rc.c (P_SCALE): added
+* rc.c (CMT_PIXEL_PER_LINE): added
+* rc.c (CMT_DISP_IMAGE): added
+* rc.c (CMT_AUTO_IMAGE): added
+* rc.c (CMT_EXT_IMAGE_VIEWER): added
+* rc.c (CMT_IMAGE_SCALE): added
+* rc.c (CMT_IMGDISPLAY): added
+* rc.c (CMT_IMGSIZE): added
+* rc.c (show_param): P_PIXELS
+* rc.c (set_param): P_PIXELS
+* rc.c (sync_with_option): initImage
+* rc.c (to_str): P_PIXELS
+* table.c (feed_table_tag): fix <img> for inline-image
+* tagtable.tab (image): added
+* terms.c (wgetch): retry read when EINTR or EAGAIN
+* terms.c (touch_cursor): added
+* w3mimgdisplay.c: added
+* w3mimgsize.c: added
+* doc/README.func (DISPLAY_IMAGE): added
+* doc/README.func (STOP_IMAGE): added
+* doc/README.img: added
+* doc-jp/README.func (DISPLAY_IMAGE): added
+* doc-jp/README.func (STOP_IMAGE): added
+* doc-jp/README.img: added
+* scripts/w3mhelp.cgi.in: show dispI, stopI
+* scripts/multipart/multipart.cgi.in: inline image support
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d3 1
+a3 1
+ALARM		set alarm
+d9 1
+@
+
+
+1.6
+log
+@[w3m-dev 02885] Re: goURL
+* funcname.tab (GOTO_RELATIVE): added
+* main.c (goURL0): renamed from goURL
+  don't add http:// here, if base URL is NULL, cmd_loadURL() will add http:// when necessary
+* main.c (goURL): go to URL with current URL
+* main.c (gorURL): go to relative URL
+* proto.h (gorURL): added
+* doc/README.func (GOTO_RELATIVE): added
+* doc-jp/README.func (GOTO_RELATIVE): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d13 1
+d103 1
+@
+
+
+1.5
+log
+@[w3m-dev 02729]
+From: Hironori Sakamoto <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d26 1
+@
+
+
+1.4
+log
+@[w3m-dev 02726] incremental search
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d14 1
+a14 1
+DOWNLOAD       Save HTML source
+d84 1
+a84 1
+SAVE		Save HTML source to file
+d101 1
+a101 1
+SUBMIT		submit
+@
+
+
+1.3
+log
+@add ALARM, SUBMIT
+@
+text
+@d31 2
+@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@d3 1
+d99 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d9 1
+a9 1
+DELETE_PREVBUF  Delete previous buffer
+d11 1
+d13 1
+a13 1
+DOWN_LOAD	Save HTML source
+d29 1
+a29 1
+INIT_MAILCAP    Reread mailcap
+d34 2
+d42 13
+a54 4
+MOVE_DOWN	Move cursor down
+MOVE_LEFT	Move cursor left
+MOVE_RIGHT	Move cursor right
+MOVE_UP		Move cursor up
+d58 3
+a65 1
+PEEK_LINK	Peek link URL
+d67 2
+d91 3
+d100 1
+d105 1
+a105 1
+WRAP_TOGGLE   Toggle wrap search mode
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

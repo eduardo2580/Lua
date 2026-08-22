@@ -1,0 +1,2777 @@
+head	1.45;
+access;
+symbols
+	release-0-5-3:1.45
+	release-0-5-2:1.42
+	release-0-5-1:1.37
+	release-0-5:1.37
+	release-0-4-2:1.25;
+locks; strict;
+comment	@# @;
+
+
+1.45
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2010.12.15.10.30.07;	author htrb;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2010.07.26.11.24.14;	author htrb;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2006.04.07.13.21.11;	author inu;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2006.04.05.14.18.53;	author inu;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2005.02.14.16.36.30;	author ukai;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2004.11.08.17.08.09;	author ukai;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2004.08.04.17.32.27;	author ukai;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.03.12.17.52.59;	author ukai;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2003.10.22.18.44.31;	author ukai;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2003.10.21.17.12.09;	author ukai;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2003.10.10.16.33.13;	author ukai;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.10.05.16.59.37;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.09.30.15.42.38;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.09.25.18.09.00;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.09.25.16.56.08;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.09.24.14.05.06;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.09.22.23.01.27;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.09.22.22.53.52;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.09.22.21.02.15;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.09.16.14.23.21;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.05.13.17.17.52;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.05.06.16.24.49;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.04.09.17.46.17;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.04.08.16.27.23;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.04.07.16.39.30;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.04.04.16.00.26;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.03.27.17.18.43;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.03.26.15.19.38;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.03.18.15.25.48;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.03.12.18.27.04;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.12.17.21.58;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.12.17.20.44;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.03.11.17.11.20;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.03.11.16.52.15;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.03.11.16.35.51;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.11.16.29.40;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.03.11.16.18.27;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.03.10.17.55.11;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.10.17.50.51;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.10.17.28.54;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.10.16.10.58;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.10.16.07.36;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.10.16.04.13;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.09.19.40.07;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.45
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@dnl w3m autoconf macros
+#
+# ----------------------------------------------------------------
+# AC_W3M_VERSION
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_VERSION],
+[AC_SUBST(CURRENT_VERSION)
+ cvsver=`$AWK '\$[1] ~ /Id:/ { print \$[3]}' $srcdir/ChangeLog`
+ sed -e 's/define CURRENT_VERSION "\(.*\)+cvs/define CURRENT_VERSION "\1+cvs-'$cvsver'/' $srcdir/version.c.in > version.c
+ CURRENT_VERSION=`sed -n 's/.*define CURRENT_VERSION *"w3m\/\(.*\)".*$/\1/p' version.c`])
+#
+# ----------------------------------------------------------------
+# AC_W3M_COLOR
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_COLOR],
+[AC_SUBST(USE_COLOR)
+AC_MSG_CHECKING(if color escape sequence for kterm/pxvt is enabled)
+AC_ARG_ENABLE(color,
+ [  --disable-color		disable color for vt100 terminal],,
+ [enable_color="yes"])
+test x"$enable_color" = xyes && AC_DEFINE(USE_COLOR)
+AC_MSG_RESULT($enable_color)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_ANSI_COLOR
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_ANSI_COLOR],
+[AC_SUBST(USE_ANSI_COLOR)
+AC_MSG_CHECKING(if ansi color escape sequence support is enabled)
+AC_ARG_ENABLE(ansi_color,
+ [   --disable-ansi-color		disable ansi color escape sequence],,
+ [enable_ansi_color="$enable_color"])
+ test x"$enable_ansi_color" = xyes && AC_DEFINE(USE_ANSI_COLOR)
+ AC_MSG_RESULT($enable_ansi_color)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_BG_COLOR
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_BG_COLOR],
+[AC_SUBST(USE_BG_COLOR)
+AC_MSG_CHECKING(if background color support is enabled)
+AC_ARG_ENABLE(bgcolor,
+ [   --disable-bgcolor		disable to set background color],,
+ [enable_bgcolor="$enable_color"])
+ test x"$enable_bgcolor" = xyes && AC_DEFINE(USE_BG_COLOR)
+AC_MSG_RESULT($enable_bgcolor)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_MENU
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MENU],
+[AC_SUBST(USE_MENU)
+AC_MSG_CHECKING(if popup menu is enabled)
+AC_ARG_ENABLE(menu,
+ [  --disable-menu		disable popup menu],,
+ [enable_menu="yes"])
+ test x"$enable_menu" = xyes && AC_DEFINE(USE_MENU)
+ AC_MSG_RESULT($enable_menu)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_MOUSE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MOUSE],
+[AC_SUBST(USE_MOUSE)
+AC_MSG_CHECKING(if mouse operation enabled)
+AC_ARG_ENABLE(mouse,
+ [  --disable-mouse		disable mouse operation],,
+ [enable_mouse="yes"])
+test x"$enable_mouse" = xyes && AC_DEFINE(USE_MOUSE)
+AC_MSG_RESULT($enable_mouse)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_COOKIE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_COOKIE],
+[AC_SUBST(USE_COOKIE)
+AC_MSG_CHECKING(if cookie is enabled)
+AC_ARG_ENABLE(cookie,
+ [  --disable-cookie		disable cookie],,
+ [enable_cookie="yes"])
+test x"$enable_cookie" = xyes && AC_DEFINE(USE_COOKIE)
+AC_MSG_RESULT($enable_cookie)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_DICT
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_DICT],
+[AC_SUBST(USE_DICT)
+AC_MSG_CHECKING(if dictionary lookup is enabled)
+AC_ARG_ENABLE(dict,
+ [  --disable-dict		disable dictionary lookup (see README.dict)],,
+ [enable_dict="yes"])
+ test x"$enable_dict" = xyes && AC_DEFINE(USE_DICT)
+ AC_MSG_RESULT($enable_dict)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_HISTORY
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_HISTORY],
+[AC_SUBST(USE_HISTORY)
+AC_MSG_CHECKING(if URL history is enabled)
+AC_ARG_ENABLE(history,
+ [  --disable-history		disable URL history],,
+ [enable_history="yes"])
+ test x"$enable_history" = xyes && AC_DEFINE(USE_HISTORY)
+ AC_MSG_RESULT($enable_history)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_NNTP
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_NNTP],
+[AC_SUBST(USE_NNTP)
+ AC_MSG_CHECKING(if nntp is enabled)
+ AC_ARG_ENABLE(nntp,
+  [  --disable-nntp		disable NNTP],,
+  [enable_nntp="yes"])
+ test x"$enable_nntp" = xyes && AC_DEFINE(USE_NNTP)
+ AC_MSG_RESULT($enable_nntp)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_GOPHER
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_GOPHER],
+[AC_SUBST(USE_GOPHER)
+ AC_MSG_CHECKING(if gopher is enabled)
+ AC_ARG_ENABLE(gopher,
+  [  --enable-gopher		enable GOPHER],,
+  [enable_gopher="no"])
+ test x"$enable_gopher" = xyes &&  AC_DEFINE(USE_GOPHER)
+ AC_MSG_RESULT($enable_gopher)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_M17N
+# ----------------------------------------------------------------
+# m17n enable?
+AC_DEFUN([AC_W3M_M17N],
+[AC_SUBST(USE_M17N)
+AC_SUBST(USE_UNICODE)
+AC_SUBST(WCTARGET)
+AC_SUBST(WCCFLAGS)
+AC_SUBST(DISPLAY_CHARSET)
+AC_SUBST(SYSTEM_CHARSET)
+AC_SUBST(DOCUMENT_CHARSET)
+AC_SUBST(POSUBST)
+AC_SUBST(POLANG)
+WCTARGET=""; WCCFLAGS=""; wcinclude=""; wclib=""
+AC_MSG_CHECKING(if m17n support is enabled)
+AC_ARG_ENABLE(m17n,
+ [  --disable-m17n		do not use m17n],,
+ [enable_m17n="yes"])
+AC_MSG_RESULT($enable_m17n)
+if test x"$enable_m17n" = xno; then
+  w3m_lang="en"
+  WCTARGET=""
+  WCCFLAGS=""
+  wcinclude=""
+  wclib=""
+  display_charset='WC_CES_US_ASCII'
+  system_charset='WC_CES_US_ASCII'
+  document_charset='WC_CES_US_ASCII'
+else
+ AC_DEFINE(USE_M17N)
+ WCTARGET="libwc/libwc.a"
+ WCCFLAGS='-I$(srcdir) -I$(srcdir)/..'
+ wcinclude='-I$(srcdir)/libwc'
+ wclib="-L./libwc -lwc"
+ AC_MSG_CHECKING(if unicode support is enabled)
+ AC_ARG_ENABLE(unicode,
+  [   --disable-unicode		do not use unicode],,
+  [enable_unicode="yes"])
+ AC_MSG_RESULT($enable_unicode)
+ if test x"$enable_m17n" = xyes; then
+  charset=US-ASCII
+ else
+  charset=$enable_m17n
+ fi
+ if test x"$enable_unicode" = xyes; then
+    WCCFLAGS="-DUSE_UNICODE $WCCFLAGS"
+    if test x"$charset" = xUS-ASCII; then
+     charset=UTF-8
+    fi
+    AC_DEFINE(USE_UNICODE)
+ fi
+ AC_MSG_CHECKING(if message l10n)
+ AC_ARG_ENABLE(messagel10n,
+   [   --enable-messagel10n=LL	message l10n instead of NLS],,
+   [enable_messagel10n="no"])
+ if test x$enable_messagel10n = xyes; then
+  enable_messagel10n="ja";
+ fi
+ AC_MSG_RESULT($enable_messagel10n)
+ if test x$enable_messagel10n = xno; then
+    :
+ else
+    POSUBST="\$(top_srcdir)/posubst"
+    POLANG="$enable_messagel10n"
+ fi
+ AC_MSG_CHECKING(if japanese support is enabled)
+ AC_ARG_ENABLE(japanese,
+   [   --enable-japanese=CODE	support Japanese CODE=(S|E|J|U)],,
+   [enable_japanese="no"])
+ AC_MSG_RESULT($enable_japanese)
+ if test x"$enable_japanese" = xno; then
+   w3m_lang="en"
+ else
+   w3m_lang="ja"
+   case "$enable_japanese" in
+   E*) charset=EUC-JP;;
+   S*) charset=Shift_JIS;;
+   J*) charset=ISO-2022-JP;;
+   U*) charset=UTF-8;;
+   esac 
+ fi
+ display_charset=$charset
+ AC_MSG_CHECKING(which charset is used for display)
+ AC_ARG_WITH(charset,
+  [  --with-charset=CHARSET],
+  [test x"with_charset" = xyes || display_charset="$with_charset"])
+ AC_MSG_RESULT($display_charset)
+ display_charset=`awk '$[1] == "'$display_charset'" {print $[2]}' $srcdir/charset-list`
+ case "$display_charset" in
+   WC_CES_ISO_2022_JP*)
+     system_charset=WC_CES_EUC_JP
+     document_charset=WC_CES_EUC_JP
+     ;;
+   WC_CES_SHIFT_JIS)
+     system_charset=$display_charset
+     # for auto-detect
+     document_charset=WC_CES_EUC_JP
+     ;;
+   WC_CES_ISO_2022_CN|WC_CES_HZ_GB_2312)
+     system_charset=WC_CES_EUC_CN
+     document_charset=WC_CES_EUC_CN
+     ;;
+   WC_CES_BIG5)
+     system_charset=$display_charset
+     # for auto-detect
+     document_charset=WC_CES_EUC_TW
+     ;;
+  WC_CES_ISO_2022_KR)
+     system_charset=WC_CES_EUC_KR
+     document_charset=WC_CES_EUC_KR
+     ;;
+  *)
+     system_charset=$display_charset
+     document_charset=$display_charset
+     ;;
+ esac
+fi
+W3M_LANGDEF=`echo $w3m_lang | tr 'a-z' 'A-Z'`
+W3M_LANG=$W3M_LANGDEF
+AC_DEFINE_UNQUOTED(W3M_LANG, $W3M_LANG)
+AC_DEFINE_UNQUOTED(WCTARGET, "$WCTARGET")
+AC_DEFINE_UNQUOTED(WCCFLAGS, "$WCCFLAGS")
+CFLAGS="$CFLAGS $wcinclude"
+W3M_LIBS="$W3M_LIBS $wclib"
+AC_DEFINE_UNQUOTED(DISPLAY_CHARSET, $display_charset)
+AC_DEFINE_UNQUOTED(SYSTEM_CHARSET, $system_charset)
+AC_DEFINE_UNQUOTED(DOCUMENT_CHARSET, $document_charset)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_KEYMAP
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_KEYMAP],
+[AC_SUBST(KEYMAP_FILE)
+ AC_MSG_CHECKING(default keymap)
+ AC_ARG_ENABLE(keymap,
+  [  --enable-keymap[=w3m|lynx]	default keybind style(w3m or lynx)],,
+  [enable_keymap="w3m"])
+ AC_MSG_RESULT($enable_keymap)
+ case x"$enable_keymap" in
+ xw3m)
+  KEYMAP_FILE="keybind";;
+ xlynx)
+  KEYMAP_FILE="keybind_lynx";;
+ *)
+  AC_MSG_ERROR([keymap should be either w3m or lynx.]);;
+ esac
+ AC_SUBST(HELP_FILE)
+ HELP_FILE=w3mhelp-${enable_keymap}_$w3m_lang.html
+ AC_DEFINE_UNQUOTED(HELP_FILE, "$HELP_FILE")
+ AC_SUBST(KEYBIND)
+ AC_DEFINE_UNQUOTED(KEYBIND, $enable_keymap)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_MIGEMO
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MIGEMO],
+[AC_SUBST(USE_MIGEMO)
+ AC_SUBST(DEF_MIGEMO_COMMAND)
+ migemo_command="migemo -t egrep /usr/local/share/migemo/migemo-dict"
+ AC_MSG_CHECKING(if migemo is supported with)
+ AC_ARG_WITH(migemo,
+  [  --with-migemo=MIGEMO_COMMAND	migemo command],
+  [test x"$with_migemo" = xyes || migemo_command="$with_migemo"])
+ if test "${with_migemo+set}" = set -a "$with_migemo" != "no"; then
+   AC_DEFINE(USE_MIGEMO)
+ fi
+ AC_MSG_RESULT($migemo_command)
+ AC_DEFINE_UNQUOTED(DEF_MIGEMO_COMMAND, "$migemo_command")])
+#
+# ----------------------------------------------------------------
+# AC_W3M_EDITOR
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_EDITOR],
+[AC_SUBST(DEF_EDITOR)
+w3m_editor="/usr/bin/vi"
+AC_MSG_CHECKING(which editor is used by default)
+AC_ARG_WITH(editor,
+ [  --with-editor=EDITOR		default editor (/usr/bin/vi)],
+ [w3m_editor="$with_editor"])
+AC_MSG_RESULT($w3m_editor)
+AC_DEFINE_UNQUOTED(DEF_EDITOR, "$w3m_editor")])
+#
+# ----------------------------------------------------------------
+# AC_W3M_MAILER
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MAILER],
+[AC_SUBST(DEF_MAILER)
+w3m_mailer="/usr/bin/mail"
+AC_MSG_CHECKING(which mailer is used by default)
+AC_ARG_WITH(mailer,
+ [  --with-mailer=MAILER		default mailer (/usr/bin/mail)],
+ [w3m_mailer="$with_mailer"])
+AC_MSG_RESULT($w3m_mailer)
+AC_DEFINE_UNQUOTED(DEF_MAILER, "$w3m_mailer")])
+#
+# ----------------------------------------------------------------
+# AC_W3M_EXT_BROWSER
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_EXT_BROWSER],
+[AC_SUBST(DEF_EXT_BROWSER)
+w3m_browser="/usr/bin/mozilla"
+AC_MSG_CHECKING(which external browser is used by default)
+AC_ARG_WITH(browser,
+ [  --with-browser=BROWSER	default browser (/usr/bin/mozilla)],
+ [w3m_browser="$with_browser"])
+AC_MSG_RESULT($w3m_browser)
+AC_DEFINE_UNQUOTED(DEF_EXT_BROWSER, "$w3m_browser")])
+#
+# ----------------------------------------------------------------
+# AC_W3M_HELP_CGI
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_HELP_CGI],
+[AC_SUBST(USE_HELP_CGI)
+ AC_MSG_CHECKING(if help cgi is enabled)
+ AC_ARG_ENABLE(help_cgi,
+  [  --disable-help-cgi		disable help cgi],,
+  [enable_help_cgi="yes"])
+ test x"$enable_help_cgi" = xyes && AC_DEFINE(USE_HELP_CGI)
+ AC_MSG_RESULT($enable_help_cgi)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_EXTERNAL_URI_LOADER
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_EXTERNAL_URI_LOADER],
+[AC_SUBST(USE_EXTERNAL_URI_LOADER)
+ AC_MSG_CHECKING(if external URI loader is enabled)
+ AC_ARG_ENABLE(external_uri_loader,
+ [  --disable-external-uri-loader	disable external URI loader],,
+ [enable_external_uri_loader="yes"])
+ test x"$enable_external_uri_loader" = xyes && AC_DEFINE(USE_EXTERNAL_URI_LOADER)
+ AC_MSG_RESULT($enable_external_uri_loader)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_W3MMAILER
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_W3MMAILER],
+[AC_SUBST(USE_W3MMAILER)
+ AC_MSG_CHECKING(if w3mmail is used)
+ AC_ARG_ENABLE(w3mmailer,
+ [   --disable-w3mmailer		disable w3mmailer],,
+ [enable_w3mmailer="$enable_external_uri_loader"])
+ test x"$enable_external_uri_loader" = xno && enable_w3mmailer=no
+ test x"$enable_w3mmailer" = xyes && AC_DEFINE(USE_W3MMAILER)
+ AC_MSG_RESULT($enable_w3mmailer)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_EXTLIBS(libs)
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_EXTLIBS],
+[lib=$1
+ AC_MSG_CHECKING(for -l$lib)
+ extlib="not found"
+ for dir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib /lib64 /usr/lib64
+ do
+   if test -f $dir/lib$lib.a -o -f $dir/lib$lib.so ; then 
+    LIBS="$LIBS -l$lib"
+    extlib="found at $dir"
+    break
+   fi
+ done
+ AC_MSG_RESULT($extlib)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_TERMLIB
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_TERMLIB],
+[AC_MSG_CHECKING(terminal library)
+AC_ARG_WITH(termlib,
+ [  --with-termlib[=LIBS]		terminal library
+				LIBS is space separated list of:
+				  terminfo mytinfo termcap ncurses curses],,
+ [with_termlib="yes"])
+ AC_MSG_RESULT($with_termlib)
+ test x"$with_termlib" = xyes && with_termlib="terminfo mytinfo termlib termcap ncurses curses"
+ for lib in $with_termlib; do
+   AC_CHECK_LIB($lib, tgetent, [W3M_LIBS="$W3M_LIBS -l$lib"; break])
+ done
+])
+#
+# ----------------------------------------------------------------
+# AC_W3M_GC
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_GC],
+[AC_MSG_CHECKING(GC library exists)
+AC_SUBST(LIBGC)
+AC_ARG_WITH(gc,
+ [  --with-gc[=PREFIX]	  	libgc PREFIX],
+ [test x"$with_gc" = xno && AC_MSG_ERROR([You can not build w3m without gc])],
+ [with_gc="yes"])
+ AC_MSG_RESULT($with_gc)
+ test x"$with_gc" = xyes && with_gc="/usr /usr/local ${HOME}"
+ unset ac_cv_header_gc_h
+ AC_CHECK_HEADER(gc.h)
+ if test x"$ac_cv_header_gc_h" = xno; then
+   AC_MSG_CHECKING(GC header location)
+   AC_MSG_RESULT($with_gc)
+   gcincludedir=no
+   for dir in $with_gc; do
+     for inc in include include/gc; do
+       cppflags="$CPPFLAGS"
+       CPPFLAGS="$CPPFLAGS -I$dir/$inc"
+       AC_MSG_CHECKING($dir/$inc)
+       unset ac_cv_header_gc_h
+       AC_CHECK_HEADER(gc.h, [gcincludedir="$dir/$inc"; CFLAGS="$CFLAGS -I$dir/$inc"; break])
+       CPPFLAGS="$cppflags"
+     done
+     if test x"$gcincludedir" != xno; then
+       break;
+     fi
+   done
+   if test x"$gcincludedir" = xno; then
+     AC_MSG_ERROR([gc.h not found])
+   fi
+ fi
+ unset ac_cv_lib_gc_GC_init
+ AC_CHECK_LIB(gc, GC_init, [LIBGC="-lgc"])
+ if test x"$ac_cv_lib_gc_GC_init" = xno; then
+    AC_MSG_CHECKING(GC library location)
+    AC_MSG_RESULT($with_gc)
+    gclibdir=no
+    for dir in $with_gc; do
+      ldflags="$LDFLAGS"
+      LDFLAGS="$LDFLAGS -L$dir/lib"
+      AC_MSG_CHECKING($dir)
+      unset ac_cv_lib_gc_GC_init
+      AC_CHECK_LIB(gc, GC_init, [gclibdir="$dir/lib"; LIBGC="-L$dir/lib -lgc"; break])
+      LDFLAGS="$ldflags"
+    done
+    if test x"$gclibdir" = xno; then
+      AC_MSG_ERROR([libgc not found])
+    fi
+ fi])
+#
+# ----------------------------------------------------------------
+# AC_W3M_SSL_DIGEST_AUTH
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SSL_DIGEST_AUTH],
+[AC_SUBST(USE_SSL)
+AC_SUBST(USE_SSL_VERIFY)
+AC_MSG_CHECKING(if SSL is suported)
+AC_ARG_WITH(ssl,
+ [  --with-ssl[=PREFIX]		support https protocol],,
+ [with_ssl="yes"])
+AC_MSG_RESULT($with_ssl)
+if test x"$with_ssl" != xno; then
+  PKG_CHECK_MODULES(SSL, openssl,,[
+    AC_MSG_CHECKING(for SSL library/header)
+    test x"$with_ssl" = xyes && with_ssl="/usr/openssl /usr/ssl /usr /usr/local/openssl /usr/local/ssl /usr/local"
+    AC_MSG_RESULT($with_ssl)
+    for dir in $with_ssl
+    do
+       if test -f "$dir/include/openssl/ssl.h"; then
+          SSL_CFLAGS="$SSL_CFLAGS -I$dir/include/openssl"
+          if test "$dir" != "/usr"; then
+             SSL_CFLAGS="$SSL_CFLAGS -I$dir/include"
+          fi
+       elif test "$dir" != "/usr" -a -f "$dir/include/ssl.h"; then
+          SSL_CFLAGS="$SSL_CFLAGS -I$dir/include"
+       fi
+       if test "$dir" != "/usr" -a -f "$dir/lib/libssl.a"; then
+	  SSL_LIBS="$SSL_LIBS -L$dir/lib"
+       fi
+    done
+  ])
+  AC_CHECK_LIB(ssl, SSL_new,
+	[w3m_ssl="found"; CFLAGS="$CFLAGS $SSL_CFLAGS" W3M_LIBS="$W3M_LIBS $SSL_LIBS -lssl -lcrypto"],
+	[w3m_ssl="not found"],
+	[$SSL_LIBS -lcrypto])
+
+  if test x"$w3m_ssl" = xfound; then
+    AC_DEFINE(USE_SSL)
+    AC_MSG_CHECKING(if SSL certificate verify is enabled)
+    AC_ARG_ENABLE(sslverify,
+      [   --disable-sslverify		verify SSL certificate],,
+      [enable_sslverify="yes"])
+    test x"$enable_sslverify" = xyes && AC_DEFINE(USE_SSL_VERIFY)
+    AC_MSG_RESULT($enable_sslverify)
+  fi
+fi
+AC_SUBST(USE_DIGEST_AUTH)
+AC_MSG_CHECKING(if digest auth is enabled)
+AC_ARG_ENABLE(digest_auth,
+ [  --disable-digest-auth		disable digest auth],,
+ [enable_digest_auth="yes"])
+if test x"$enable_digest_auth" = xyes -a x"$w3m_ssl" = xfound; then
+  AC_DEFINE(USE_DIGEST_AUTH)
+else
+  enable_digest_auth="no"
+fi
+AC_MSG_RESULT($enable_digest_auth)
+])
+#
+# ----------------------------------------------------------------
+# AC_W3M_ALARM
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_ALARM],
+[AC_SUBST(USE_ALARM)
+ AC_MSG_CHECKING(if alarm is enabled)
+ AC_ARG_ENABLE(alarm,
+ [  --disable-alarm		disable alarm],,
+ [enable_alarm="yes"])
+ AC_MSG_RESULT($enable_alarm)
+ if test x"$enable_alarm" = xyes; then
+   AC_TRY_COMPILE(
+    [#include <unistd.h>
+#include <signal.h>],
+    [int sa = SIGALRM;
+     void (*a) = alarm;],
+   [AC_DEFINE(USE_ALARM)])
+ fi])
+#
+# ----------------------------------------------------------------
+# AC_W3M_CHECK_VER(name, version, major, minor, micro, 
+#		action-if-ok, message-if-badver, action-if-nover)
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_CHECK_VER],
+[version="$2"
+ if test x"$version" != x; then
+   AC_MSG_CHECKING($1 version)
+   AC_MSG_RESULT($version)
+   set -- `echo "$version" | sed 's/[[^0-9]]/ /g'`
+   if test "$[1]" -ne "$3" -o "$[2]" -lt "$4" || test "$[2]" -eq "$4" -a "$[3]" -lt "$5"; then
+     AC_MSG_WARN([$1 is too old. Install $1 (version >= $3.$4.$5)])
+     $7
+   else
+     $6
+   fi
+ else
+   AC_MSG_WARN([$1 is not installed.  Install $1 (version >= $3.$4.$5)])
+   $7
+ fi])
+#
+# ----------------------------------------------------------------
+# AC_W3M_IMAGE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_IMAGE],
+[AC_SUBST(USE_IMAGE)
+ AC_SUBST(USE_W3MIMG_X11)
+ AC_SUBST(USE_W3MIMG_FB)
+ AC_SUBST(USE_W3MIMG_WIN)
+ AC_SUBST(IMGLINK)
+ AC_SUBST(W3MIMGDISPLAY_SETUID)
+ AC_SUBST(INSTALL_W3MIMGDISPLAY)
+ INSTALL_W3MIMGDISPLAY='${INSTALL_PROGRAM}'
+ AC_DEFINE(INSTALL_W3MIMGDISPLAY, $INSTALL_W3MIMGDISPLAY)
+ AC_SUBST(USE_GDKPIXBUF)
+ AC_SUBST(USE_GTK2)
+ AC_SUBST(USE_IMLIB)
+ AC_SUBST(USE_IMLIB2)
+ AC_SUBST(IMGTARGETS)
+ AC_SUBST(IMGOBJS)
+ AC_SUBST(IMGX11CFLAGS)
+ AC_SUBST(IMGX11LDFLAGS)
+ AC_SUBST(IMGFBCFLAGS)
+ AC_SUBST(IMGFBLDFLAGS)
+ AC_SUBST(IMGWINCFLAGS)
+ AC_SUBST(IMGWINLDFLAGS)
+ AC_MSG_CHECKING(if image is enabled)
+ AC_ARG_ENABLE(image,
+ [  --enable-image[=DEVS]		enable inline image handler for DEVS
+				 DEVS may be comma separeted: x11,fb,fb+s,win
+				 default: autodetected.
+				 'no' means disable inline image],,
+ [enable_image="yes"])
+ AC_MSG_RESULT($enable_image)
+ if test x"$enable_image" != xno; then
+  IMGOBJS=w3mimg.o
+  if test x"$enable_image" = xyes; then
+    enable_image=x11
+    case "`uname -s`" in
+    Linux|linux|LINUX) 
+	if test -c /dev/fb0; then
+	  enable_image=x11,fb
+        fi;;
+    CYGWIN*)
+	enable_image=x11,win;;
+    esac
+  fi   
+  save_ifs="$IFS"; IFS=",";
+  set x $enable_image; shift
+  IFS="$save_ifs"
+  for img in "$[]@@"; do
+    case $img in
+      x11) x11=yes;;
+      fb)  fb=yes;;
+      fb+s) fb=yes
+           AC_DEFINE(W3MIMGDISPLAY_SETUID)
+           INSTALL_W3MIMGDISPLAY='${INSTALL} -o root -m 4755 -s'
+           AC_DEFINE(INSTALL_W3MIMGDISPLAY, $INSTALL_W3MIMGDISPLAY);;
+      win) win=yes;;
+    esac
+  done
+  enable_image=yes
+  AC_DEFINE(USE_IMAGE)
+  AC_MSG_CHECKING(image library)
+  AC_ARG_WITH(imagelib,
+   [  --with-imagelib=IMAGELIBS		image library
+				 IMAGELIBS may be space separeted list of: 
+				    gtk2 gdk-pixbuf imlib imlib2],,
+
+   [with_imagelib="yes"])
+  if test x"$with_imagelib" = xyes; then
+    with_imagelib="gtk2 gdk-pixbuf imlib imlib2"
+  fi
+  AC_MSG_RESULT($with_imagelib)
+  with_imlib=no
+  with_imlib2=no
+  with_gdkpixbuf=no
+  with_gtk2=no
+  for imagelib in $with_imagelib
+  do
+   case "$imagelib" in
+   imlib)
+     with_imlib="yes"
+     if test x"$IMLIB_CONFIG" = x; then
+       IMLIB_CONFIG=imlib-config
+     fi;;
+   imlib2)
+     with_imlib2="yes"
+     if test x"$IMLIB2_CONFIG" = x; then
+       IMLIB2_CONFIG=imlib2-config
+     fi;;
+   gdk-pixbuf)
+     with_gdkpixbuf="yes"
+     if test x"$GDKPIXBUF_CONFIG" = x; then
+       GDKPIXBUF_CONFIG=gdk-pixbuf-config
+     fi;;
+   gtk2)
+     with_gtk2="yes"
+     if test x"$PKG_CONFIG" = x; then
+       PKG_CONFIG=pkg-config
+     else
+       PKG_CONFIG=:
+     fi;;
+   esac
+  done
+  IMGTARGETS=""
+  IMGLINK='$(CC)'
+  if test x"$with_gtk2" = xyes; then
+   AC_W3M_CHECK_VER([GdkPixbuf],
+	[`$PKG_CONFIG --modversion gdk-pixbuf-2.0 2>/dev/null`],
+	2, 0, 0,
+	[have_gdkpixbuf="yes"; have_gtk2="yes"],
+	[have_gdkpixbuf="no"; have_gtk2="no"])
+  fi
+  if test x"$with_gdkpixbuf" = xyes; then
+   if test x"$have_gdkpixbuf" != xyes; then
+    AC_W3M_CHECK_VER([GdkPixbuf],
+	[`$GDKPIXBUF_CONFIG --version 2>/dev/null`],
+	0, 16, 0,
+	[have_gdkpixbuf="yes"],
+	[have_gdkpixbuf="no"])
+   fi
+  fi
+  if test x"$with_imlib" = xyes; then
+   AC_W3M_CHECK_VER([Imlib],
+	[`$IMLIB_CONFIG --version 2>/dev/null`],
+	1, 9, 8,
+	[have_imlib="yes"],
+	[have_imlib="no"])
+  fi
+  if test x"$with_imlib2" = xyes; then
+   AC_W3M_CHECK_VER([Imlib2],
+	[`$IMLIB2_CONFIG --version 2>/dev/null`],
+	1, 0, 5,
+	[have_imlib2="yes"],
+	[have_imlib2="no"])
+  fi
+  if test x"$x11" = xyes; then
+   if test x"$have_gtk2" = xyes; then
+     AC_DEFINE(USE_W3MIMG_X11)
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+     IMGTARGETS="x11"    
+     AC_DEFINE(USE_GDKPIXBUF)
+     AC_DEFINE(USE_GTK2)
+     IMGX11CFLAGS="`${PKG_CONFIG} --cflags gdk-pixbuf-2.0 gdk-pixbuf-xlib-2.0 gtk+-2.0`"
+     IMGX11LDFLAGS="`${PKG_CONFIG} --libs gdk-pixbuf-2.0 gdk-pixbuf-xlib-2.0 gtk+-2.0`"
+   elif test x"$have_gdkpixbuf" = xyes; then
+     AC_DEFINE(USE_W3MIMG_X11)
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+     IMGTARGETS="x11"    
+     AC_DEFINE(USE_GDKPIXBUF)
+     IMGX11CFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+     IMGX11LDFLAGS="`${GDKPIXBUF_CONFIG} --libs` -lgdk_pixbuf_xlib"
+   elif test x"$have_imlib" = xyes; then
+     AC_DEFINE(USE_W3MIMG_X11)
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+     IMGTARGETS="x11"    
+     AC_DEFINE(USE_IMLIB)
+     IMGX11CFLAGS="`${IMLIB_CONFIG} --cflags`"
+     IMGX11LDFLAGS="`${IMLIB_CONFIG} --libs`"
+     IMGTARGETS="x11"    
+   elif test x"$have_imlib2" = xyes; then
+     AC_DEFINE(USE_W3MIMG_X11)
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+     IMGTARGETS="x11"    
+     AC_DEFINE(USE_IMLIB2)
+     IMGX11CFLAGS="`${IMLIB2_CONFIG} --cflags`"
+     IMGX11LDFLAGS="`${IMLIB2_CONFIG} --libs`"
+   else
+     AC_MSG_WARN([unable to build w3mimgdisplay with X11 support])
+   fi
+  fi
+  if test x"$fb" = xyes; then
+   if test x"$have_gtk2" = xyes; then
+     AC_DEFINE(USE_W3MIMG_FB)
+     IMGOBJS="$IMGOBJS fb/fb_w3mimg.o fb/fb.o fb/fb_img.o"
+     IMGTARGETS="${IMGTARGETS} fb"
+     AC_DEFINE(USE_GDKPIXBUF)
+     AC_DEFINE(USE_GTK2)
+     IMGFBCFLAGS="`${PKG_CONFIG} --cflags gdk-pixbuf-2.0 gtk+-2.0`"
+     IMGFBLDFLAGS="`${PKG_CONFIG} --libs gdk-pixbuf-2.0 gtk+-2.0`"
+   elif test x"$have_gdkpixbuf" = xyes; then
+     AC_DEFINE(USE_W3MIMG_FB)
+     IMGOBJS="$IMGOBJS fb/fb_w3mimg.o fb/fb.o fb/fb_img.o"
+     IMGTARGETS="${IMGTARGETS} fb"
+     AC_DEFINE(USE_GDKPIXBUF)
+     IMGFBCFLAGS="`${GDKPIXBUF_CONFIG} --cflags`"
+     IMGFBLDFLAGS="`${GDKPIXBUF_CONFIG} --libs`"
+   elif test x"$have_imlib2" = xyes; then
+     AC_DEFINE(USE_W3MIMG_FB)
+     IMGOBJS="$IMGOBJS fb/fb_w3mimg.o fb/fb.o fb/fb_img.o"
+     IMGTARGETS="${IMGTARGETS} fb"
+     AC_DEFINE(USE_IMLIB2)
+     IMGOBJS="$IMGOBJS fb/fb_w3mimg.o fb/fb.o fb/fb_img.o"
+     IMGFBCFLAGS="`${IMLIB2_CONFIG} --cflags`"
+     IMGFBLDFLAGS="`${IMLIB2_CONFIG} --libs`"
+   else
+     AC_MSG_WARN([unable to build w3mimgdisplay with FB support])
+   fi
+  fi
+  if test x"$win" = xyes; then
+    AC_DEFINE(USE_W3MIMG_WIN)
+    IMGOBJS="$IMGOBJS win/win_w3mimg.o"
+    IMGTARGETS="${IMGTARGETS} win"
+    IMGWINCFLAGS="-I/usr/include/w32api"
+    IMGWINLDFLAGS="-lgdiplus -lgdi32 -luser32"
+    IMGLINK='$(CXX)'
+  fi
+  AC_DEFINE(IMGTARGETS, "$IMGTARGETS")
+  AC_DEFINE(IMGOBJS, "$IMGOBJS")
+  AC_DEFINE(IMGX11CFLAGS, "$IMGX11CFLAGS")
+  AC_DEFINE(IMGX11LDFLAGS, "$IMGX11LDFLAGS")
+  AC_DEFINE(IMGFBCFLAGS, "$IMGFBCFLAGS")
+  AC_DEFINE(IMGFBLDFLAGS, "$IMGFBLDFLAGS")
+  AC_DEFINE(IMGLINK, "$IMGLINK")
+  AC_DEFINE(IMGWINCFLAGS, "$IMGWINCFLAGS")
+  AC_DEFINE(IMGWINLDFLAGS, "$IMGWINLDFLAGS")
+ fi])
+# ----------------------------------------------------------------
+# AC_W3M_XFACE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_XFACE],
+[AC_SUBST(USE_XFACE)
+ AC_MSG_CHECKING(if xface is enabled)
+ AC_ARG_ENABLE(xface,
+  [   --disable-xface		disable xface support],,
+  [enable_xface="$enable_image"])
+ test x"$enable_xface" = xyes && AC_DEFINE(USE_XFACE)
+ AC_MSG_RESULT($enable_xface)
+ AC_CHECK_PROG(uncompface, uncompface, "yes", "no")
+ test "$uncompface" = "no" && AC_MSG_WARN([uncompface is not installed.])
+])
+#
+# ----------------------------------------------------------------
+# AC_W3M_IPv6
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_IPv6],
+[AC_MSG_CHECKING(if IPv6 support is enabled)
+AC_ARG_ENABLE(ipv6,
+ [  --disable-ipv6		disable IPv6],,
+ [enable_ipv6="yes"])
+AC_MSG_RESULT($enable_ipv6)
+
+if test x"$enable_ipv6" = xyes; then
+ AC_MSG_CHECKING(if IPv6 API available)
+ AC_SUBST(INET6)
+ AC_CHECK_FUNC(getaddrinfo, 
+	[enable_ipv6="yes"],
+	[enable_ipv6="no"])
+ if test x"$enable_ipv6" = xno; then
+    AC_MSG_CHECKING(for libinet6)
+    for dir in /usr/local/v6/lib /usr/local/lib /usr/lib
+    do
+	if test -f $dir/libinet6.a; then
+	  if test $dir != "/usr/lib"; then
+		W3M_LIBS="$W3M_LIBS -L$dir"
+	  fi
+	  AC_CHECK_LIB(inet6, getaddrinfo,
+		[enable_ipv6="yes"
+	         use_libinet6="found"; W3M_LIBS="$W3M_LIBS -linet6"; break],
+		[use_libinet6="not found"])
+	fi
+    done
+    AC_MSG_RESULT($use_libinet6)
+ fi
+ if test x"$enable_ipv6" = xyes; then
+    AC_SUBST(HAVE_OLD_SS_FAMILY)
+    AC_MSG_CHECKING(if struct sockaddr_storage has an ss_family member)
+    AC_TRY_COMPILE([
+#include <sys/types.h>
+#include <sys/socket.h>
+      ], [
+	struct sockaddr_storage ss;
+	int i = ss.ss_family;
+      ],
+      [AC_MSG_RESULT(yes)],
+      [AC_TRY_COMPILE([
+#include <sys/types.h>
+#include <sys/socket.h>
+	],
+	[
+	struct sockaddr_storage ss;
+	int i = ss.__ss_family;
+	],
+	[AC_MSG_RESULT(no, but __ss_family exists)
+	 AC_DEFINE(HAVE_OLD_SS_FAMILY)],
+	[AC_MSG_RESULT(no)
+	 AC_MSG_WARN(IPv6 support is disabled)
+	 enable_ipv6="no"])
+      ])
+ fi
+ if test x"$enable_ipv6" = xyes; then
+    AC_DEFINE(INET6)
+ fi
+fi])
+#
+# ----------------------------------------------------------------
+# AC_W3M_SYS_ERRLIST
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SYS_ERRLIST],
+[AC_SUBST(HAVE_SYS_ERRLIST)
+AC_MSG_CHECKING(for sys_errlist)
+AC_TRY_COMPILE(
+changequote(<<,>>)dnl
+<<extern char *sys_errlist[];>>,
+<<printf(sys_errlist[0]);>>,
+changequote([,])dnl
+[have_sys_errlist="yes"; AC_DEFINE(HAVE_SYS_ERRLIST)],
+[have_sys_errlist="no"])
+AC_MSG_RESULT($have_sys_errlist)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_SIGSETJMP
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SIGSETJMP],
+[AC_SUBST(HAVE_SIGSETJMP)
+AC_MSG_CHECKING(for sigsetjmp)
+AC_TRY_COMPILE(
+[#include <setjmp.h>],
+[ jmp_buf env;
+   if (sigsetjmp(env, 1) != 0) { exit(0); } siglongjmp(env, 1);],
+[have_sigsetjmp="yes"; AC_DEFINE(HAVE_SIGSETJMP)],
+[have_sigsetjmp="no"])
+AC_MSG_RESULT($have_sigsetjmp)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_SIGNAL_RETURN
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SIGNAL],
+[AC_TYPE_SIGNAL
+ AC_SUBST(RETSIGTYPE)
+ AC_SUBST(SIGNAL_RETURN)
+ if test x"$ac_cv_type_signal" = xvoid; then
+  AC_DEFINE(SIGNAL_RETURN,return)
+ else
+  AC_DEFINE(SIGNAL_RETURN,return 0)
+ fi])
+@
+
+
+1.44
+log
+@[w3m-dev 04419] AC_W3M_EXTLIBS does not check /lib64
+@
+text
+@d572 2
+d588 2
+d593 1
+a593 1
+				 DEVS may be comma separeted: x11,fb,fb+s
+d607 2
+d612 3
+a614 1
+  for img in $enable_image; do
+d622 1
+a624 1
+  IFS="$save_ifs"
+d670 1
+d764 8
+d777 4
+a780 1
+  AC_DEFINE(IMGFBLDFLAGS, "$IMGLDFLAGS")
+@
+
+
+1.43
+log
+@* define AC_W3M_SSL_DIGEST_AUTH
+@
+text
+@d385 1
+a385 1
+ for dir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib
+@
+
+
+1.42
+log
+@rewind to 10 Feb 2006.
+@
+text
+@a285 12
+# AC_W3M_DIGEST_AUTH
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_DIGEST_AUTH],
+[AC_SUBST(USE_DIGEST_AUTH)
+ AC_MSG_CHECKING(if digest auth is enabled)
+ AC_ARG_ENABLE(digest_auth,
+ [  --disable-digest-auth		disable digest auth],,
+ [enable_digest_auth="yes"])
+ test x"$enable_digest_auth" = xyes && AC_DEFINE(USE_DIGEST_AUTH)
+ AC_MSG_RESULT($enable_digest_auth)])
+#
+# ----------------------------------------------------------------
+d417 1
+d448 1
+a448 1
+ AC_CHECK_LIB(gc, GC_init, [LIBS="$LIBS -lgc"])
+d458 1
+a458 1
+      AC_CHECK_LIB(gc, GC_init, [gclibdir="$dir/lib"; LIBS="$LIBS -L$dir/lib -lgc"; break])
+d467 1
+a467 1
+# AC_W3M_SSL
+d469 1
+a469 1
+AC_DEFUN([AC_W3M_SSL],
+d511 13
+a523 1
+fi])
+@
+
+
+1.41
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@a72 12
+# AC_W3M_REMOTE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_REMOTE],
+[AC_SUBST(USE_MOUSE)
+AC_MSG_CHECKING(if remote operation enabled)
+AC_ARG_ENABLE(remote,
+ [  --disable-remote		disable remote operation],,
+ [enable_remote="yes"])
+test x"$enable_remote" = xyes && AC_DEFINE(USE_REMOTE)
+AC_MSG_RESULT($enable_remote)])
+#
+# ----------------------------------------------------------------
+a879 24
+#
+# ----------------------------------------------------------------
+# AC_W3M_SO_PEERCRED
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SO_PEERCRED],
+[AC_SUBST(HAVE_SO_PEERCRED)
+AC_MSG_CHECKING(for SO_PEERCRED)
+AC_TRY_COMPILE(
+[#include <sys/socket.h>],
+[ int sopt = SO_PEERCRED;
+   exit(sopt);],
+[have_so_peercred="yes"; AC_DEFINE(HAVE_SO_PEERCRED)],
+[have_so_peercred="no"])
+AC_MSG_RESULT($have_so_peercred)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_GETPEEREID
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_GETPEEREID],
+[AC_SUBST(HAVE_GETPEEREID)
+AC_MSG_CHECKING(for getpeereid)
+AC_CHECK_FUNC(getpeereid, 
+[have_getpeereid="yes"; AC_DEFINE(HAVE_GETPEEREID)],
+[have_getpeereid="no"])])
+@
+
+
+1.40
+log
+@[w3m-dev-en 01045] From newbie: problem with w3m-0.5.1 installation
+* acinclude.m4 (AC_W3M_SSL): define USE_SSL after ssl library found
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d73 12
+d892 24
+@
+
+
+1.39
+log
+@[w3m-dev 04128] Re: w3mimgdisplay
+* acinclude.m4 (AC_W3M_IMAGE): check not yes
+* aclocal.m4, configure: regen
+* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load):
+   fb_image_fill in case GDK_PIXBUF_FRAME_DISPOSE
+* w3mimg/x11/x11_w3mimg.c (get_animation_size):
+   return n
+  (x11_load_image):
+   fill in case GDK_PIXBUF_FRAME_DISPOSE
+@
+text
+@a488 1
+  AC_DEFINE(USE_SSL)
+d514 1
+@
+
+
+1.38
+log
+@[w3m-dev 04096] w3m-img gtk2
+* acinclude.m4 (AC_W3M_IMAGE): add USE_GTK2
+	add --with-imagelib=gtk2
+* aclocal.m4 config.guess config.sub configure: regen
+* config.h.in: add USE_GTK2
+* w3mimg/fb/fb_gdkpixbuf.c: support USE_GTK2
+* w3mimg/fb/fb_img.h: add fb_image_init()
+* w3mimg/fb/fb_imlib2.h: fb_image_init() stub
+* w3mimg/fb/fb_w3mimg.c: call fb_image_init()
+* w3mimg/x11/x11_w3mimg.c: support USE_GTK2
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d669 1
+a669 1
+   if test x"$have_gdkpixbuf" = xno; then
+@
+
+
+1.37
+log
+@[w3m-dev 04041] spell-miss in configure
+* acinclude.m4 (AC_W3M_M17N): fix help-string
+  suggested by sakane@@d4.bsd.nes.nec.co.jp (Yoshinobu Sakane)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d576 1
+d622 1
+a622 1
+				    gdk-pixbuf imlib imlib2],,
+d626 1
+a626 1
+    with_imagelib="gdk-pixbuf imlib imlib2"
+d632 1
+d651 7
+d661 7
+d669 2
+a670 1
+   AC_W3M_CHECK_VER([GdkPixbuf],
+d675 1
+d692 1
+a692 1
+   if test x"$have_gdkpixbuf" = xyes; then
+d694 2
+d697 5
+d703 2
+a706 1
+     IMGTARGETS="x11"    
+d709 2
+a711 1
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+d717 2
+a719 1
+     IMGOBJS="$IMGOBJS x11/x11_w3mimg.o"
+a721 1
+     IMGTARGETS="x11"    
+d727 1
+a727 1
+   if test x"$have_gdkpixbuf" = xyes; then
+d729 2
+d732 5
+d738 2
+a741 1
+     IMGTARGETS="${IMGTARGETS} fb"
+d744 2
+a749 1
+     IMGTARGETS="${IMGTARGETS} fb"
+@
+
+
+1.36
+log
+@[w3m-dev 04010] support for deprecated __ss_family
+* acinclude.m4 (AC_W3M_IPv6): check __ss_family
+* config.h.in: add HAVE_OLD_SS_FAMILY
+* ftp.c (ftp_pasv): ifdef HAVE_OLD_SS_FAMILY
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d149 1
+a149 1
+ [  --disable-m17n		support m17n],,
+d169 1
+a169 1
+  [   --disable-unicode		support unicode],,
+@
+
+
+1.35
+log
+@OpenLDAP¤ÈActive Directory¤¬µÕ?
+@
+text
+@d754 1
+a754 1
+	[enable_ipv6="yes"; AC_DEFINE(INET6)],
+d765 1
+a765 1
+		[enable_ipv6="yes"; AC_DEFINE(INET6)
+d771 29
+@
+
+
+1.34
+log
+@* scripts/Makefile.in (w3mhelp-funcname.pl): depends ../funcname.tab
+* Makefile.in (IMGOBJS): deleted
+	(indep.o): depends on fm.h funcname1.h
+	(IMGDISPLAY): depends on w3mimg/w3mimg.a
+	(w3mimg/w3mimg.a): renamed from w3mimg
+* acinclude.m4 (AC_W3M_IMAGE): modify IMBOBJS
+* w3mimg/Makefile.in (AR): added
+		(RANLIB): added
+		(IMGOBJS): added
+		(w3mimg.a): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+* [w3m-dev 03990] Re: post-m17n merge problem?
+* Makefile.in (MAN1): need $(top_srcdir)
+		(MAN1_JA): ditto
+		(LOBJS): depends on fm.h funcname1.h
+		(INFLATE): depends on $(ALIB)
+		(libwc/libwc.a): renamed from libwc
+		(IMGDISPLAY): depends on $(IMGOBJS) instead of w3mimg
+			  depends on $(ALIB)
+		(w3mimgdisplay.o): depends on w3mimg/w3mimg.h
+* acinclude.m4 (AC_W3M_M17N): WCTARGET is libwc/libwc.a
+* configure.in (HELP_DIR): expand ${prefix}
+From: qhwt@@myrealbox.com
+@
+text
+@d458 3
+a460 3
+ unset ac_cv_lib_gc_GC_version
+ AC_CHECK_LIB(gc, GC_version, [LIBS="$LIBS -lgc"])
+ if test x"$ac_cv_lib_gc_GC_version" = xno; then
+d468 2
+a469 2
+      unset ac_cv_lib_gc_GC_version
+      AC_CHECK_LIB(gc, GC_version, [gclibdir="$dir/lib"; LIBS="$LIBS -L$dir/lib -lgc"; break])
+@
+
+
+1.33
+log
+@* --with-imagelib request on [w3m-dev 03981]
+	 from Mamoru KOMACHI <usata@@sodan.ecc.u-tokyo.ac.jp>
+* acinclude.m4 (AC_W3M_IMAGE): add --with-imagelib
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d163 1
+a163 1
+ WCTARGET="libwc"
+d593 1
+a593 1
+  IMGOBJS=w3mimg/w3mimg.o
+d677 1
+a677 1
+     IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+d684 1
+a684 1
+     IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+d691 1
+a691 1
+     IMGOBJS="$IMGOBJS w3mimg/x11/x11_w3mimg.o"
+d703 1
+a703 1
+     IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"
+d710 1
+a710 1
+     IMGOBJS="$IMGOBJS w3mimg/fb/fb_w3mimg.o w3mimg/fb/fb.o w3mimg/fb/fb_img.o"
+@
+
+
+1.32
+log
+@* acinclude.m4 (AC_W3M_SSL): use PKG_CHECK_MODULES
+From: Akira TAGOH <at@@gclab.org>
+@
+text
+@d617 9
+a625 8
+  if test x"$IMLIB_CONFIG" = x; then
+    IMLIB_CONFIG=imlib-config
+  fi
+  if test x"$IMLIB2_CONFIG" = x; then
+    IMLIB2_CONFIG=imlib2-config
+  fi
+  if test x"$GDKPIXBUF_CONFIG" = x; then
+    GDKPIXBUF_CONFIG=gdk-pixbuf-config
+d627 24
+d652 2
+a653 1
+  AC_W3M_CHECK_VER([GdkPixbuf],
+d657 4
+a660 2
+	[have_gdkpixbuf="no"
+  AC_W3M_CHECK_VER([Imlib],
+d665 3
+a667 1
+  AC_W3M_CHECK_VER([Imlib2],
+d671 2
+a672 1
+	[have_imlib2="no"])])
+@
+
+
+1.31
+log
+@add posubst,  compile-time message l10n
+* Makefile.in: @@POSUBST@@
+* acinclude.m4(AC_W3M_M17N): add POSUBST, POLANG
+	--enable-messagel10n
+* configure.in (W3M_LANG): subst
+	(AM_GET_GNUTEXT): if messagel10n enabled, don't use NLS
+	(AC_OUTOUT): add posubst, chmod +x
+* menu.c: remove if LANG == JA messages
+* rc.c: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d490 19
+a508 17
+  AC_MSG_CHECKING(for SSL library/header)
+  test x"$with_ssl" = xyes && with_ssl="/usr/openssl /usr/ssl /usr /usr/local/openssl /usr/local/ssl /usr/local"
+  AC_MSG_RESULT($with_ssl)
+  for dir in $with_ssl
+  do
+     if test -f "$dir/include/openssl/ssl.h"; then
+        SSL_CFLAGS="$SSL_CFLAGS -I$dir/include/openssl"
+        if test "$dir" != "/usr"; then
+           SSL_CFLAGS="$SSL_CFLAGS -I$dir/include"
+        fi
+     elif test "$dir" != "/usr" -a -f "$dir/include/ssl.h"; then
+        SSL_CFLAGS="$SSL_CFLAGS -I$dir/include"
+     fi
+     if test "$dir" != "/usr" -a -f "$dir/lib/libssl.a"; then
+	SSL_LIBS="$SSL_LIBS -L$dir/lib"
+     fi
+  done
+@
+
+
+1.30
+log
+@check header locale.h
+check func setlocale
+no need to output intl/Makefile
+@
+text
+@d144 2
+d184 14
+d200 1
+a200 2
+   [   --enable-japanese=CODE	support Japanese message instead of NLS
+				CODE=(S|E|J|U)],,
+@
+
+
+1.29
+log
+@based on [w3m-dev 03970]
+  SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+* acinclude.m4 (AC_W3M_IMAGE): add IMGTARGETS
+* w3mimg/Makefile.in (all): use @@IMGTARGETS@@
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d170 5
+a174 1
+ charset=US-ASCII
+d177 3
+a179 1
+    charset=UTF-8
+d184 1
+a184 1
+   [   --enable-japanese=CODE	support Japanese character sets
+@
+
+
+1.28
+log
+@use srcdir
+@
+text
+@d555 1
+d603 1
+d626 1
+d633 1
+d640 1
+d652 1
+d659 1
+d664 1
+@
+
+
+1.27
+log
+@more autoconfiscate
+@
+text
+@d162 2
+a163 2
+ WCCFLAGS="-I. -I.."
+ wcinclude="-I./libwc"
+d199 1
+a199 1
+ display_charset=`awk '$[1] == "'$display_charset'" {print $[2]}' charset-list`
+@
+
+
+1.26
+log
+@merge m17n patch
+add libwc
+@
+text
+@d161 1
+a161 1
+ WCTARGET="wctarget"
+@
+
+
+1.25
+log
+@[w3m-dev 03960]
+* acinclude.m4 (AC_W3M_CHECK_VER): fix version check logic
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d133 1
+a133 1
+# AC_W3M_LANG
+d135 16
+a150 12
+# Checks for Japanese 
+AC_DEFUN([AC_W3M_LANG],
+[AC_SUBST(W3M_LANG)
+AC_SUBST(DISPLAY_CODE)
+AC_SUBST(SYSTEM_CODE)
+AC_MSG_CHECKING(if japanese support is enabled)
+AC_ARG_ENABLE(japanese,
+ [  --enable-japanese=CODE	support Japanese character sets
+				CODE=(S|E|j|N|n|m)],,
+ [enable_japanese="no"])
+AC_MSG_RESULT($enable_japanese)
+if test x"$enable_japanese" = xno; then
+d152 7
+a158 2
+  AC_DEFINE(DISPLAY_CODE, 'x')
+  AC_DEFINE(SYSTEM_CODE, 'x')
+d160 68
+a227 10
+  w3m_lang="ja";
+  case x"$enable_japanese" in
+  xS) AC_DEFINE_UNQUOTED(DISPLAY_CODE, '$enable_japanese')
+      AC_DEFINE(SYSTEM_CODE, 'S');;
+  xE|xj|xN|xn|xm) 
+      AC_DEFINE_UNQUOTED(DISPLAY_CODE, '$enable_japanese')
+      AC_DEFINE(SYSTEM_CODE, 'E');;
+  *) AC_DEFINE(DISPLAY_CODE, 'E')
+     AC_DEFINE(SYSTEM_CODE, 'E');;
+  esac;
+d231 8
+a238 15
+AC_DEFINE_UNQUOTED(W3M_LANG,$W3M_LANG)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_KANJI_SYMBOLS
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_KANJI_SYMBOLS],
+[AC_SUBST(KANJI_SYMBOLS)
+if test x"$enable_japanese" != xno; then
+ AC_MSG_CHECKING(if kanji symbols is used)
+ AC_ARG_ENABLE(kanjisymbols,
+  [   --disable-kanjisymbols	use kanji symbols (enable japanese only)],,
+  [enable_kanjisymbols="yes"])
+ test x"$enable_kanjisymbols" = xyes && AC_DEFINE(KANJI_SYMBOLS)
+ AC_MSG_RESULT($enable_kanjisymbols)
+fi])
+@
+
+
+1.24
+log
+@[w3m-dev 03899] minor fixes
+* acinclude.m4: fix s/SSLCFLAGS/SSL_CFLAGS/
+* doc/README: update, fix typo
+* doc-jp/FAQ.html: update, fix URL
+* doc-jp/README: update
+* doc-jp/README.SSL: update
+* doc-jp/README.cookie: update
+* doc-jp/README.img: update URL
+* doc-jp/README.migemo: update
+* doc-jp/STORY.html: fix URL
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@d470 1
+a470 1
+   if test "$[1]" -ne "$3" -o "$[2]" -lt "$4" -o "$[3]" -lt "$5"; then
+@
+
+
+1.23
+log
+@[w3m-dev 03888] autodetect ssl
+* acinclude.m4 (AC_W3M_SSL): use SSL_*
+* configure.in: move AC_W3M_SSL after AC_W3M_EXTLIBS
+@
+text
+@d420 1
+a420 1
+        SSL_CFLAGS="$SSLCFLAGS -I$dir/include"
+@
+
+
+1.22
+log
+@[w3m-dev 03870] Re: configure --help
+* acinclude.m4 (AC_W3M_IMAGE): fix help message
+		(AC_W3M_SSL): fix typo
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d415 1
+a415 1
+        CFLAGS="$CFLAGS -I$dir/include/openssl"
+d417 1
+a417 1
+           CFLAGS="$CFLAGS -I$dir/include"
+d420 1
+a420 1
+        CFLAGS="$CFLAGS -I$dir/include"
+d423 1
+a423 1
+	W3M_LIBS="$W3M_LIBS -L$dir/lib"
+d427 1
+a427 1
+	[w3m_ssl="found"; W3M_LIBS="$W3M_LIBS -lssl -lcrypto"],
+d429 1
+a429 1
+	[-lcrypto])
+@
+
+
+1.21
+log
+@[w3m-dev 03865] Re: configure --help
+* acinclude.m4 (AC_W3M_ANSI_COLOR): depends USE_COLOR
+	(AC_W3M_BG_COLOR): depends USE_COLOR
+	(AC_W3M_W3MMAILER): depends external_uri_loader
+* fm.h: undef USE_BG_COLOR ifndef USE_COLOR
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d434 1
+a434 1
+      [   --disable-sslverify		vefify SSL certificate],,
+d502 4
+a505 1
+ [  --disable-image[=x11,fb,fb+s]	enable inline image handler],,
+d610 1
+a610 1
+  [   --disable-xface		enable xface support],,
+@
+
+
+1.20
+log
+@[w3m-dev 03858] configure cleanup
+* acinclude.m4 configure.in: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d31 2
+a32 2
+ [  --disable-ansi-color		disable ansi color escape sequence],,
+ [enable_ansi_color="yes"])
+d43 2
+a44 2
+ [  --disable-bgcolor		disable to set background color],,
+ [enable_bgcolor="yes"])
+d303 1
+a303 1
+ [  --disable-w3mmailer		disable w3mmailer],,
+@
+
+
+1.19
+log
+@[w3m-dev 03838] W3M_LIBS splitted from LIBS
+* Makefile.in (W3M_LIBS): added
+* acinclude.m4 (AC_W3M_TERMLIB): use W3M_LIB
+	(AC_W3M_SSL): ditto
+* configure.in (W3M_LIBS): added
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d19 1
+a19 1
+ [  --disable-color		disable color escape sequence for kterm/pxvt],,
+d174 1
+a174 1
+  [   --enable-kanjisymbols	use kanji symbols (enable japanese only)],,
+d502 1
+a502 1
+ [  --enable-image[=x11,fb,fb+s]	enable inline image handler],,
+d607 1
+a607 1
+  [   --enable-xface		enable xface support],,
+@
+
+
+1.18
+log
+@[w3m-dev 03836] CFLAGS for SSL in configure
+* acinclude.m4 (AC_W3M_SSL): add -I$dir/include to CFLAGS
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d339 1
+a339 1
+   AC_CHECK_LIB($lib, tgetent, [LIBS="$LIBS -l$lib"; break])
+d423 1
+a423 1
+	LIBS="$LIBS -L$dir/lib"
+d427 1
+a427 1
+	[w3m_ssl="found"; LIBS="$LIBS -lssl -lcrypto"],
+d637 1
+a637 1
+		LIBS="$LIBS -L$dir"
+d641 1
+a641 1
+	         use_libinet6="found"; LIBS="$LIBS -linet6"; break],
+@
+
+
+1.17
+log
+@[w3m-dev 03831] fix typo
+* acinclude.m4 (AC_W3M_LANG): SYSTEM_CODE
+* configure.in: fix typo CYGIN
+From: WATANABE Katsuyuki <knabe@@sannet.ne.jp>
+@
+text
+@d416 3
+@
+
+
+1.16
+log
+@[w3m-dev-en 00908] Re: autoconf: --without-migemo is a nop
+* acinclude.m4 (AC_W3M_MIGEMO): dont define USE_MIGEMO
+			when with_migemo=no
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d154 1
+a154 1
+      AC_DEFINE(DISPLAY_CODE, 'S');;
+@
+
+
+1.15
+log
+@[w3m-dev 03819] support cd build && ../configure
+* Makefile.in: add VPATH
+		add MV
+		use $(top_srcdir), $<, $@@
+* acinclude.m4 (AC_W3M_VERSION): use $srcdir
+* configure.in (AC_W3M_VERSION): move
+* mktable.c (main): basename
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d227 1
+a227 1
+ if test "${with_migemo+set}" = set; then
+@
+
+
+1.14
+log
+@fix indent
+@
+text
+@d8 2
+a9 2
+ cvsver=`$AWK '\$[1] ~ /Id:/ { print \$[3]}' ChangeLog`
+ sed -e 's/define CURRENT_VERSION "\(.*\)+cvs/define CURRENT_VERSION "\1+cvs-'$cvsver'/' version.c.in > version.c
+@
+
+
+1.13
+log
+@[w3m-dev 03818] fix autoconf
+* Makefile.in (CGIBIN_DIR): added
+	(AUXBIN_DIR): added
+	(HELP_DIR): added
+	(RC_DIR): added
+	(MAKE_ARGS): added
+	(TARGET): use $(package)
+	(MAN1_TARGET): ditto
+	(install): use $(*_DIR)
+* acinclude.m4 (AC_W3M_TERMLIB): added
+	(AC_W3M_GC): default search prefix /usr /usr/local $HOME
+		fix searches
+	(AC_W3M_SSL): fix bugs
+* config.h (RC_DIR): remove tailing /
+	(SYS_MAILCAP): use ETC_DIR
+	(SYS_MIMETYPES): ditto
+	(USER_MIMETYPES): homedir
+* configure.in: quote
+	(AC_W3M_TERMLIB): use
+* Bonus/oldconfigure.sh: rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d142 2
+a143 1
+ [  --enable-japanese=CODE	support Japanese character sets, CODE=(S|E|j|N|n|m)],,
+d332 1
+a332 1
+ [  --with-termlib[=LIBS]	terminal library
+@
+
+
+1.12
+log
+@[w3m-dev 03816] --enable-lynx => --enable-keymap=lynx
+* acinclude.m4 (AC_W3M_KEYMAP): --enable-lynx => --enable-keymap=lynx
+* Bonus/oldconfigure.sh: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d326 17
+d352 1
+d357 1
+a357 3
+   AC_MSG_RESULT()
+   gc_includedir="$with_gc/include"
+   test x"$with_gc" = xyes && gc_includedir="/usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include"
+d359 12
+a370 7
+   for dir in $gc_includedir; do
+     cppflags="$CPPFLAGS"
+     CPPFLAGS="$CPPFLAGS -I$dir"
+     AC_MSG_CHECKING($dir)
+     unset ac_cv_header_gc_h
+     AC_CHECK_HEADER(gc.h, [gcincludedir=$dir; CPPFLAGS="$CPPFLAGS -I$dir"; CFLAGS="$CFLAGS -I$dir"; break])
+     CPPFLAGS="$cppflags"
+d380 1
+a380 3
+    AC_MSG_RESULT()
+    gc_libdir="$with_gc/lib"
+    test x"$gc_libdir" = xyes && gc_libdir="/lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib"
+d382 1
+a382 1
+    for dir in $gc_libdir; do
+d384 1
+a384 1
+      LDFLAGS="$LDFLAGS -L$dir"
+d386 2
+a387 2
+      unset ac_cv_gc_GC_version
+      AC_CHECK_LIB(gc, GC_version, [gclibdir=$dir; LIBS="$LIBS -L$dir -lgc"; break])
+d409 2
+a410 1
+  test x"$with_ssl" = xyes || with_ssl="/usr/openssl /usr/ssl /usr /usr/local/openssl /usr/local/ssl /usr/local"
+d415 1
+a415 1
+     elif test -f "$dir/include/ssl.h"; then
+d418 1
+a418 1
+     if test -f "$dir/lib/libssl.a"; then
+@
+
+
+1.11
+log
+@[w3m-dev 03814] fix autoconf
+* acinclude.m4: quote variables
+* Bonus/oldconfigure.sh: configure using old config.param
+From: Yuji Abe <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d184 13
+a196 13
+ w3m_keybind="w3m"
+ AC_MSG_CHECKING(lynx style keybind is used)
+ AC_ARG_ENABLE(lynx,
+  [  --enable-lynx			lynx style keybind],,
+  [enable_lynx="no"])
+ AC_MSG_RESULT($enable_lynx)
+ if test x"$enable_lynx" = xyes; then
+  w3m_keybind="lynx"
+  KEYMAP_FILE="keybind_lynx"
+ else
+  w3m_keybind="w3m"
+  KEYMAP_FILE="keybind"
+ fi
+d198 1
+a198 1
+ HELP_FILE=w3mhelp-${w3m_keybind}_$w3m_lang.html
+d201 1
+a201 1
+ AC_DEFINE_UNQUOTED(KEYBIND, $w3m_keybind)])
+@
+
+
+1.10
+log
+@[w3m-dev 03812] fix autoconf
+* acinclude.m4 (AC_W3M_IMAGE): default is autodetect x11,fb
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d21 1
+a21 1
+test x$enable_color = xyes && AC_DEFINE(USE_COLOR)
+d33 1
+a33 1
+ test x$enable_ansi_color = xyes && AC_DEFINE(USE_ANSI_COLOR)
+d45 1
+a45 1
+ test x$enable_bgcolor = xyes && AC_DEFINE(USE_BG_COLOR)
+d57 1
+a57 1
+ test x$enable_menu = xyes && AC_DEFINE(USE_MENU)
+d69 1
+a69 1
+test x$enable_mouse = xyes && AC_DEFINE(USE_MOUSE)
+d81 1
+a81 1
+test x$enable_cookie = xyes && AC_DEFINE(USE_COOKIE)
+d93 1
+a93 1
+ test x$enable_dict = xyes && AC_DEFINE(USE_DICT)
+d105 1
+a105 1
+ test x$enable_history = xyes && AC_DEFINE(USE_HISTORY)
+d117 1
+a117 1
+ test x$enable_nntp = xyes && AC_DEFINE(USE_NNTP)
+d129 1
+a129 1
+ test x$enable_gopher = xyes &&  AC_DEFINE(USE_GOPHER)
+d145 1
+a145 1
+if test x$enable_japanese = xno; then
+d151 1
+a151 1
+  case x$enable_japanese in
+d170 1
+a170 1
+if test x$enable_japanese != xno; then
+d175 1
+a175 1
+ test x$enable_kanjisymbols = xyes && AC_DEFINE(KANJI_SYMBOLS)
+d190 1
+a190 1
+ if test x$enable_lynx = xyes; then
+d212 1
+a212 1
+ test x$enable_digest_auth = xyes && AC_DEFINE(USE_DIGEST_AUTH)
+d225 1
+a225 1
+  [test x$with_migemo = xyes || migemo_command="$with_migemo"])
+d241 1
+a241 1
+ [w3m_editor=$with_editor])
+d254 1
+a254 1
+ [w3m_mailer=$with_mailer])
+d267 1
+a267 1
+ [w3m_browser=$with_browser])
+d280 1
+a280 1
+ test x$enable_help_cgi = xyes && AC_DEFINE(USE_HELP_CGI)
+d292 1
+a292 1
+ test x$enable_external_uri_loader = xyes && AC_DEFINE(USE_EXTERNAL_URI_LOADER)
+d304 2
+a305 2
+ test x$enable_external_uri_loader = xno && enable_w3mmailer=no
+ test x$enable_w3mmailer = xyes && AC_DEFINE(USE_W3MMAILER)
+d332 2
+a333 2
+ [test x$with_gc = xno && AC_MSG_ERROR([You can not build w3m without gc])],
+ [with_gc=yes])
+d337 1
+a337 1
+ if test x$ac_cv_header_gc_h = xno; then
+d351 1
+a351 1
+   if test x$gcincludedir = xno; then
+d357 1
+a357 1
+ if test x$ac_cv_lib_gc_GC_version = xno; then
+d371 1
+a371 1
+    if test x$gclibdir = xno; then
+d387 1
+a387 1
+if test x$with_ssl != xno; then
+d407 1
+a407 1
+  if test x$w3m_ssl = xfound; then
+d412 1
+a412 1
+    test x$enable_sslverify = xyes && AC_DEFINE(USE_SSL_VERIFY)
+d427 1
+a427 1
+ if test x$enable_alarm = xyes; then
+d441 2
+a442 2
+[version=$2
+ if test x$version != x; then
+d478 1
+a478 1
+ [  --disable-image=x11,fb,fb+s	disable inline image],,
+d481 1
+a481 1
+ if test x$enable_image != xno; then
+d483 1
+a483 1
+  if test x$enable_image = xyes; then
+d506 1
+a506 1
+  if test x$IMLIB_CONFIG = x; then
+d509 1
+a509 1
+  if test x$IMLIB2_CONFIG = x; then
+d512 1
+a512 1
+  if test x$GDKPIXBUF_CONFIG = x; then
+d518 2
+a519 2
+	[have_gdkpixbuf=yes],
+	[have_gdkpixbuf=no
+d523 2
+a524 2
+	[have_imlib=yes],
+	[have_imlib=no])
+d528 4
+a531 4
+	[have_imlib2=yes],
+	[have_imlib2=no])])
+  if test x$x11 = xyes; then
+   if test x$have_gdkpixbuf = xyes; then
+d537 1
+a537 1
+   elif test x$have_imlib = xyes; then
+d543 1
+a543 1
+   elif test x$have_imlib2 = xyes; then
+d553 2
+a554 2
+  if test x$fb = xyes; then
+   if test x$have_gdkpixbuf = xyes; then
+d560 1
+a560 1
+   elif test x$have_imlib2 = xyes; then
+d585 1
+a585 1
+ test x$enable_xface = xyes && AC_DEFINE(USE_XFACE)
+d601 1
+a601 1
+if test x$enable_ipv6 = xyes; then
+d605 3
+a607 3
+	[enable_ipv6=yes; AC_DEFINE(INET6)],
+	[enable_ipv6=no])
+ if test x$enable_ipv6 = xno; then
+d616 1
+a616 1
+		[enable_ipv6=yes; AC_DEFINE(INET6)
+d661 1
+a661 1
+ if test x$ac_cv_type_signal = xvoid; then
+@
+
+
+1.9
+log
+@[w3m-dev 03810] autoconf
+* acinclude.m4 (AC_W3M_EXTLIBS): use $dir
+		(AC_W3M_GC): PREFIX is optional
+		(AC_W3M_SSL): PREFIX is optional
+			with_ssl=yes, check usual dirs
+			use $dir
+		(AC_W3M_IPv6): use $dir
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d479 1
+a479 1
+ [enable_image="x11,fb"])
+@
+
+
+1.8
+log
+@[w3m-dev 03808] fix autoconf
+* acinclude.m4 (AC_W3M_GC): --with-gc takes PREFIX
+			check include first
+	(AC_W3M_CHECK_VER): show checking message
+	(AC_W3M_IMAGE): if gdkpixbuf found, don't check imlib*
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d315 1
+a315 1
+ for extlibdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib
+d317 1
+a317 1
+   if test -f $extlibdir/lib$lib.a -o -f $extlibdir/lib$lib.so ; then 
+d319 1
+a319 1
+    extlib="found at $extlibdir"
+d331 1
+a331 1
+ [  --with-gc=PREFIX	  	libgc PREFIX],
+d384 1
+a384 1
+ [  --with-ssl=PATH		support https protocol],,
+d390 2
+a391 2
+  test -d $with_ssl || with_ssl="/usr/openssl /usr/ssl /usr /usr/local/openssl /usr/local/ssl /usr/local"
+  for i in $with_ssl
+d393 4
+a396 4
+     if test -f "$i/include/openssl/ssl.h"; then
+        CFLAGS="$CFLAGS -I$i/include/openssl"
+     elif test -f "$i/include/ssl.h"; then
+        CFLAGS="$CFLAGS -I$i/include"
+d398 2
+a399 2
+     if test -f "$i/lib/libssl.a"; then
+	LIBS="$LIBS -L$i/lib"
+a443 3
+   save_ifs="$IFS"; IFS="."
+   set -- $version
+   IFS="$save_ifs"
+d445 1
+d609 1
+a609 1
+    for libdir in /usr/local/v6/lib /usr/local/lib /usr/lib
+d611 3
+a613 3
+	if test -f $libdir/libinet6.a; then
+	  if test $libdir != "/usr/lib"; then
+		LIBS="$LIBS -L$libdir"
+@
+
+
+1.7
+log
+@fix indent
+@
+text
+@d331 1
+a331 1
+ [  --with-gc=PATH	  	libgc PATH],
+a334 18
+ unset ac_cv_lib_gc_GC_version
+ AC_CHECK_LIB(gc, GC_version, [LIBS="$LIBS -lgc"])
+ if test x$ac_cv_lib_gc_GC_version = xno; then
+    AC_MSG_CHECKING(GC library location)
+    gc_libdir="$with_gc"
+    test x"$gc_libdir" = xyes && gc_libdir="/lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib"
+   gclibdir=no
+   for dir in $gc_libdir; do
+     ldflags="$LDFLAGS"
+     LDFLAGS="$LDFLAGS -L$dir"
+     AC_CHECK_LIB(gc, GC_version, [gclibdir=$dir; LIBS="$LIBS -L$dir -lgc"; break])
+     LDFLAGS="$ldflags"
+     unset ac_cv_gc_GC_version
+   done
+   if test x$gclibdir = xno; then
+    AC_MSG_ERROR([libgc not found])
+   fi
+ fi
+d339 3
+a341 2
+   gc_includedir="$with_gc"
+   test x"$gc_includedir" = xyes && gc_includedir="/usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include"
+a342 1
+   unset ac_cv_header_gc_h
+d347 2
+a348 1
+     AC_CHECK_HEADER(gc.h, [gcincludedir=$dir; CPPFLAGS="$CPPFLAGS -I$dir"; break])
+a349 1
+     unset ac_cv_header_gc_h
+d354 20
+d443 1
+d447 1
+d449 1
+a449 1
+     AC_MSG_WARN([$1 is too old Install $1 (version >= $3.$4.$5)])
+d455 1
+d521 1
+a521 1
+	[have_gdkpixbuf=no])
+d531 1
+a531 1
+	[have_imlib2=no])
+@
+
+
+1.6
+log
+@[w3m-dev 03804] fix autoconf
+* acinclude.m4 (AC_W3M_MENU): default enabled
+		(AC_W3M_MOUSE): default enabled
+		(AC_W3M_COOKIE): default enabled
+		(AC_W3M_LANG): can't detect locale here.
+			autoconf set LANG=C
+		(AC_W3M_DIGEST_AUTH): default enabled
+		(AC_W3M_SSL): default enabled
+* configure.in (AC_W3M_DIGEST_AUTH): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d55 1
+a55 1
+ [  --disable-menu			disable popup menu],,
+d210 1
+a210 1
+ [  --disable-digest-auth	disable digest auth],,
+@
+
+
+1.5
+log
+@[w3m-dev 03804] fix autoconf
+* acinclude.m4 (AC_W3M_MODEL): deleted
+	(AC_W3M_COLOR): default enable
+	(AC_W3M_ANSI_COLOR): default enable
+	(AC_W3M_BG_COLOR): default enable
+	(AC_W3M_SHOW_PARAMS): deleted
+	(AC_W3M_DICT): default enable
+	(AC_W3M_HISTORY): default enable
+	(AC_W3M_VIEW_UNSEENOBJECTS): deleted
+	(AC_W3M_FORMAT_NICE): deleted
+	(AC_W3M_ID_EXT): deleted
+	(AC_W3M_FTPPASS_HOSTNAMEGEN): deleted
+	(AC_W3M_NNTP): default enabled
+	(AC_W3M_LANG): autodetect whether japanese is enabled
+	(AC_W3M_KANJI_SYMBOLS): default enabled
+	(AC_W3M_EMACS_LIKE_LINEEDIT): deleted
+	(AC_W3M_VI_PREC_NUM): deleted
+	(AC_W3M_MARK): deleted
+	(AC_W3M_LABEL_TOPLINE): deleted
+	(AC_W3M_NEXTPAGE_TOPLINE): deleted
+	(AC_W3M_SSL): fix without ssl
+	(AC_W3M_IMAGE): default enabled
+	(AC_W3M_XFACE): check uncompface
+	(AC_W3M_IPv6): enable_ipv6 if inet6 lib found
+* configure.in (AC_PROG_CPP): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d55 2
+a56 2
+ [  --enable-menu			enable popup menu],,
+ [enable_menu="no"])
+d67 2
+a68 2
+ [  --enable-mouse		enable mouse operation],,
+ [enable_mouse="no"])
+d79 2
+a80 2
+ [  --enable-cookie		enable cookie],,
+ [enable_cookie="no"])
+d143 1
+a143 4
+ [case "${LC_ALL:-$LANG}" in
+  ja*) enable_japanese="yes";;
+  *) enable_japanese="no";;
+  esac])
+d210 2
+a211 2
+ [  --enable-digest-auth	enable digest auth],,
+ [enable_digest_auth="no"])
+d383 1
+a383 1
+ [with_ssl="no"])
+@
+
+
+1.4
+log
+@[w3m-dev 03803] fix autoconf
+* acinclude.m4 (AC_W3M_MIGEMO): add missing test
+				needs quote
+	(AC_W3M_SSL): delete x
+From: Yuji Abe <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@a10 42
+# ----------------------------------------------------------------
+# AC_W3M_MODEL
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MODEL], 
+[AC_SUBST(W3M_MODEL)
+ AC_SUBST(W3M_TARGET)
+ W3M_TARGET=$target
+ AC_DEFINE_UNQUOTED(W3M_TARGET, $W3M_TARGET)
+ W3M_MODEL=custom
+AC_MSG_CHECKING(if --enable-model option specified)
+AC_ARG_ENABLE(model,
+ [  --enable-model=MODEL    specify build model (baby|little|mouse|cookie|monster)
+                            baby=minumum set
+                            little=color,menu
+                            mouse=color,menu,mouse
+                            cookie=color,menu,mouse,cookie
+                            monster=color,menu,mouse,cookie,ssl],
+ [W3M_MODEL=$enable_model
+  case x$enable_model in
+  xbaby) 
+	: ${enable_color=no} ${enable_menu=no} ${enable_mouse=no} \
+	  ${enable_cookie=no} ${with_ssl=no}
+	;;
+  xlittle)
+	: ${enable_color=yes} ${enable_menu=yes} ${enable_mouse=no} \
+	  ${enable_cookie=no} ${with_ssl=no}
+	;;
+  xmouse)
+	: ${enable_color=yes} ${enable_menu=yes} ${enable_mouse=yes} \
+	  ${enable_cookie=no} ${with_ssl=no}
+	;;
+  xcookie)
+	: ${enable_color=yes} ${enable_menu=yes} ${enable_mouse=yes} \
+	  ${enable_cookie=yes} ${with_ssl=no}
+	;;
+  xyes|xmonster) enable_model=monster
+	: ${enable_color=yes} ${enable_menu=yes} ${enable_mouse=yes} \
+	  ${enable_cookie=yes} ${with_ssl=yes}
+	;;
+  *) W3M_MODEL=custom;;
+  esac])
+AC_MSG_RESULT($enable_model)])
+d19 2
+a20 2
+ [  --enable-color          enable color escape sequence for kterm/pxvt],,
+ [enable_color="no"])
+d31 2
+a32 2
+ [  --enable-ansi-color     enable ansi color escape sequence is enabled],,
+ [enable_ansi_color="no"])
+d43 2
+a44 2
+ [  --enable-bgcolor        enable to set background color],,
+ [enable_bgcolor="no"])
+d55 1
+a55 1
+ [  --enable-menu           enable popup menu],,
+d65 1
+a65 1
+AC_MSG_CHECKING(if --enable-mouse option specified)
+d67 1
+a67 1
+ [  --enable-mouse          enable mouse operation],,
+d79 1
+a79 1
+ [  --enable-cookie         enable cookie],,
+a84 12
+# AC_W3M_SHOW_PARAMS
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_SHOW_PARAMS],
+[AC_SUBST(SHOW_PARAMS)
+AC_MSG_CHECKING(if showparams is enabled)
+AC_ARG_ENABLE(showparams,
+ [  --enable-showparams     enable listings of options],,
+ [enable_showparams="no"])
+ test x$enable_showparams = xyes && AC_DEFINE(SHOW_PARAMS)
+ AC_MSG_RESULT($enable_showparams)])
+#
+# ----------------------------------------------------------------
+d91 2
+a92 2
+ [  --enable-dict           enable dictionary lookup see README.dict],,
+ [enable_dict="no"])
+d103 2
+a104 2
+ [  --enable-history        enable URL history],,
+ [enable_history="no"])
+a108 48
+# AC_W3M_VIEW_UNSEENOBJECTS
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_VIEW_UNSEENOBJECTS],
+[AC_SUBST(VIEW_UNSEENOBJECTS)
+AC_MSG_CHECKING(if viewunseen is enabled)
+AC_ARG_ENABLE(viewunseen,
+ [  --enable-viewunseen     enable to make a link to unseen objects],,
+ [enable_viewunseen="no"])
+ test x$enable_viewunseen = xyes && AC_DEFINE(VIEW_UNSEENOBJECTS)
+ AC_MSG_RESULT($enable_viewunseen)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_FORMAT_NICE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_FORMAT_NICE],
+[AC_SUBST(FORMAT_NICE)
+ AC_MSG_CHECKING(if format-nice is enabled)
+ AC_ARG_ENABLE(format_nice,
+ [  --enable-format-nice     do word fill],,
+ [enable_format_nice="no"])
+ test x$enable_format_nice = xyes && AC_DEFINE(FORMAT_NICE)
+ AC_MSG_RESULT($enable_format_nice)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_ID_EXT
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_ID_EXT],
+[AC_SUBST(ID_EXT)
+AC_MSG_CHECKING(if id attribute is enabled)
+AC_ARG_ENABLE(idext,
+ [  --disable-idext         disable id attribute],,
+ [enable_idext="yes"])
+ test "x$enable_idext" = xyes && AC_DEFINE(ID_EXT)
+ AC_MSG_RESULT($enable_idext)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_FTPPASS_HOSTNAMEGEN
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_FTPPASS_HOSTNAMEGEN],
+[AC_SUBST(FTPPASS_HOSTNAMEGEN)
+ AC_MSG_CHECKING(if ftppwgen is enabled)
+ AC_ARG_ENABLE(ftppwgen,
+  [  --disable-ftppwgen      dont generate domain parts of passwords for anon ftp logins],,
+ [enable_ftppwgen="yes"])
+ test "x$enable_ftppwgen" = xyes && AC_DEFINE(FTPPASS_HOSTNAMEGEN)
+ AC_MSG_RESULT($enable_ftppwgen)])
+#
+# ----------------------------------------------------------------
+d115 2
+a116 2
+  [  --enable-nntp           enable NNTP],,
+  [enable_nntp="no"])
+d127 1
+a127 1
+  [  --enable-gopher         enable GOPHER],,
+d140 1
+a140 1
+AC_MSG_CHECKING(if --enable-japanese option specified)
+d142 5
+a146 2
+ [  --enable-japanese=CODE       support Japanese character sets, CODE=(S|E|j|N|n|m)],,
+ [enable_japanese="no"])
+d174 1
+a174 1
+ AC_MSG_CHECKING(if --enable-kanjisymbols option specified)
+d176 3
+a178 3
+  [   --enable-kanjisymbols   use kanji symbols],
+  [test x$enable_kanjisymbols = xyes && AC_DEFINE(KANJI_SYMBOLS)],
+  [enable_kanjisymbols="no"])
+d190 1
+a190 1
+  [  --enable-lynx           lynx style keybind],,
+a206 60
+# AC_W3M_EMACS_LIKE_LINEEDIT
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_EMACS_LIKE_LINEEDIT],
+[AC_SUBST(EMACS_LIKE_LINEEDIT)
+ AC_MSG_CHECKING(emacs like lineedit is used)
+ AC_ARG_ENABLE(emacs_like_lineedit,
+ [   --enable-emacs-like-lineedit     emacs like lineedit],,
+ [enable_emacs_like_lineedit="no"])
+ test x$enable_emacs_like_lineedit = xyes && AC_DEFINE(EMACS_LIKE_LINEEDIT)
+ AC_MSG_RESULT($enable_emacs_like_lineedit)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_VI_PREC_NUM
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_VI_PREC_NUM],
+[AC_SUBST(VI_PREC_NUM)
+AC_MSG_CHECKING(if --enable-vinum option specified)
+AC_ARG_ENABLE(vinum,
+ [  --enable-vinum          enable vi-like behavior for for '2 SPC' or '2 b'],,
+ [enable_vinum="no"])
+test x$enable_vinum = xyes && AC_DEFINE(VI_PREC_NUM)
+AC_MSG_RESULT($enable_vinum)])
+#
+# ----------------------------------------------------------------
+# AC_W3M_MARK
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_MARK],
+[AC_SUBST(USE_MARK)
+AC_MSG_CHECKING(if --enable-mark option specified)
+AC_ARG_ENABLE(mark,
+ [  --enable-mark           enable mark operations],,
+ [enable_mark="no"])
+ test x$enable_mark = xyes && AC_DEFINE(USE_MARK)
+ AC_MSG_RESULT($enable_mark)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_LABEL_TOPLINE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_LABEL_TOPLINE],
+[AC_SUBST(LABEL_TOPLINE)
+ AC_MSG_CHECKING(if label at topline enabled)
+ AC_ARG_ENABLE(label_topline,
+ [  --enable-label-topline    enable label top line],,
+ [enable_label_topline="no"])
+ test x$enable_label_topline = xyes && AC_DEFINE(LABEL_TOPLINE)
+ AC_MSG_RESULT($enable_label_topline)])
+# 
+# ----------------------------------------------------------------
+# AC_W3M_NEXTPAGE_TOPLINE
+# ----------------------------------------------------------------
+AC_DEFUN([AC_W3M_NEXTPAGE_TOPLINE],
+[AC_SUBST(NEXTPAGE_TOPLINE)
+ AC_MSG_CHECKING(if nextpage topline enabled)
+ AC_ARG_ENABLE(nextpage_topline,
+ [  --enable-nextpage-topline    enable nextpage top line],,
+ [enable_nextpage_topline="no"])
+ test x$enable_nextpage_topline = xyes && AC_DEFINE(NEXTPAGE_TOPLINE)
+ AC_MSG_RESULT($enable_nextpage_topline)])
+#
+# ----------------------------------------------------------------
+d213 1
+a213 1
+ [  --enable-digest-auth        enable digest auth],,
+d227 1
+a227 1
+  [  --with-migemo=MIGEMO_COMMAND   migemo command],
+d243 1
+a243 1
+ [  --with-editor=EDITOR         default editor (/usr/bin/vi)],
+d256 1
+a256 1
+ [  --with-mailer=MAILER         default mailer (/usr/bin/mail)],
+d269 1
+a269 1
+ [  --with-browser=BROWSER       default browser (/usr/bin/mozilla)],
+d281 1
+a281 1
+  [  --disable-help-cgi           disable help cgi],,
+d293 1
+a293 1
+ [  --disable-external-uri-loader    disable external URI loader],,
+d305 1
+a305 1
+ [  --disable-w3mmailer           disable w3mmailer],,
+d334 1
+a334 1
+ [  --with-gc=PATH	  libgc PATH],
+d385 1
+a385 1
+ [  --with-ssl=PATH        support https protocol],,
+d388 1
+a388 1
+if test "${with_ssl+set}" = set; then
+d391 1
+a391 1
+  test -d $with_ssl || $with_ssl="/usr/openssl /usr/ssl /usr /usr/local/openssl /usr/local/ssl /usr/local"
+d411 1
+a411 1
+      [   --disable-sslverify      vefify SSL certificate],,
+d425 1
+a425 1
+ [  --disable-alarm	 disable alarm],,
+d478 2
+a479 2
+ [ --enable-image=x11,fb,fb+s        enable inline image],,
+ [enable_image="no"])
+d583 1
+a583 1
+  [--enable-xface           enable xface support],,
+d586 4
+a589 1
+ AC_MSG_RESULT($enable_xface)])
+d595 1
+a595 1
+[AC_MSG_CHECKING(if --enable-ipv6 option specified)
+d597 1
+a597 1
+ [  --disable-ipv6          disable IPv6],,
+d616 2
+a617 1
+		[use_libinet6="found"; LIBS="$LIBS -linet6"; break],
+@
+
+
+1.3
+log
+@[w3m-dev 03802] fix autoconf
+* acinclude.m4 (AC_W3M_CHECK_VER): warn only
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d387 1
+a387 1
+  [x$with_migemo = xyes || migemo_command=$with_migemo])
+d547 1
+a547 1
+if test x"${with_ssl+set}" = xset; then
+@
+
+
+1.2
+log
+@[w3m-dev 03801] fix autoconf
+* acinclude.m4 (AC_W3M_BG_COLOR): fix typo
+	(AC_W3M_KANJI_SYMBOLS): check enable_japanese != 'no'
+	(AC_W3M_KEYMAP): needs {}
+	(AC_W3M_EXTLIBS): don't modify libdir, use extlibdir
+	(AC_W3M_SSL): missing x
+	(AC_W3M_IMAGE): add AC_DEFINE(USE_IMAGE)
+* config.h.in: s/USE_KANJI_SYMBOLS/KANJI_SYMBOLS/
+	add SIZEOF_LONG_LONG
+	don't use //, use /* */
+* configure.in: add AC_CHECK_SIZEOF(long long, 0)
+From: Yuji Abe <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d607 4
+a610 1
+    AC_MSG_ERROR([$1 is too old Install $1 (version >= $3.$4.$5)])
+a611 1
+   $6
+@
+
+
+1.1
+log
+@autoconficate
+* Makefile.in: added
+* acinclude.m4: added
+* aclocal.m4: added (generated from acinclude.m4 by aclocal)
+* configure.in: added
+* config.h.in: added
+* config.guess: added
+* config.sub: added
+* .cvsignore: add Makefile config.cache config.log config.status
+* configure: generated by autoconf
+* gc/: deleted
+* XMakefile: deleted
+* XXMakefile: deleted
+* NEWS: autoconficate
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d87 1
+a87 1
+ test x$enable_ansi_color = xyes && AC_DEFINE(USE_ANSI_COLOR)
+d272 1
+a272 1
+if test x$enable_japanese = xyes; then
+d300 1
+a300 1
+ HELP_FILE=w3mhelp-$w3m_keybind_$w3m_lang.html
+d477 1
+a477 1
+ for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib
+d479 1
+a479 1
+   if test -f $libdir/lib$lib.a -o -f $libdir/lib$lib.so ; then 
+d481 1
+a481 1
+    extlib="found at $libdir"
+d547 1
+a547 1
+if test "${with_ssl+set}" = xset; then
+d662 1
+@
+

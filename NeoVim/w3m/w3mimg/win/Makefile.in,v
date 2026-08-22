@@ -1,0 +1,55 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.21.10.13.55;	author htrb;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@w3mimgdisplay supports Windows console (http://www.j10n.org/files/w3m-cvs-1.1040-misc.patch).
+@
+text
+@#
+# w3mimg/win/Makefile
+#
+#
+@@SET_MAKE@@
+SHELL=@@SHELL@@
+srcdir = @@srcdir@@
+top_srcdir = @@top_srcdir@@
+VPATH = $(srcdir):.
+CFLAGS=$(OPTS) -I../.. -I$(top_srcdir) -I$(srcdir) @@CFLAGS@@ @@CPPFLAGS@@ @@DEFS@@ $(IMGCFLAGS)
+RM=rm
+CC=@@CC@@
+CXX=@@CXX@@
+
+IMGCFLAGS=@@IMGWINCFLAGS@@
+OBJS=win_w3mimg.o
+
+all: win_w3mimg.o
+
+win_w3mimg.o: win_w3mimg.cpp
+	$(CXX) $(CFLAGS) -c $<
+
+clean:
+	@@-$(RM) -f *.o
+
+distclean: clean
+	-$(RM) -f Makefile
+
+#
+
+
+@

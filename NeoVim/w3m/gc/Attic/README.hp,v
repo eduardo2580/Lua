@@ -1,0 +1,65 @@
+head	1.2;
+access;
+symbols
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2001.11.09.04.59.18;	author a-ito;	state dead;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.17.01;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.17.01;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@
+Updates from 0.2.1 into 0.2.1-inu-1.5
+@
+text
+@Dynamic loading support requires that executables be linked with -ldld.
+The alternative is to build the collector without defining DYNAMIC_LOADING
+in gcconfig.h and ensuring that all garbage collectable objects are
+accessible without considering statically allocated variables in dynamic
+libraries.
+
+The collector should compile with either plain cc or cc -Ae.  CC -Aa
+fails to define _HPUX_SOURCE and thus will not configure the collector
+correctly.
+
+There is currently no thread support.
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

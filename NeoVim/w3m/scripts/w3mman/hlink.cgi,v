@@ -1,0 +1,152 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1
+	release-0-4-2:1.1
+	release-0-4-1:1.1
+	release-0-4:1.1
+	release-0-4-rc3:1.1
+	release-0-4-rc2:1.1
+	release-0-4-rc1:1.1
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.6
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1
+	release-0-3:1.1
+	release-0-2-5-1:1.1
+	branch-0-2-5:1.1.0.4
+	release-0-2-5:1.1
+	release-0-2-4:1.1
+	release-0-2-3-2:1.1
+	release-0-2-3-1:1.1
+	release-0-2-3:1.1
+	inu-0-2-2-rel-1-1:1.1
+	inu-0-2-2:1.1.0.2
+	inu-0-2-2-base:1.1
+	release-0-2-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2001.11.15.00.32.14;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@
+Update to w3m-0.2.1-inu-1.6.
+@
+text
+@#!/usr/local/bin/perl
+
+$SCRIPT_NAME = $ENV{'SCRIPT_NAME'} || $0;
+$CGI = "file://$SCRIPT_NAME?";
+
+if ($ENV{'QUERY_STRING'}) {
+  $file = $ENV{'QUERY_STRING'};
+} else {
+  $file = $ARGV[0];
+}
+$file = &cleanup($file);
+
+if (-d $file) {
+  print <<EOF;
+Location: file:$file
+EOF
+  exit;
+}
+if (! open(FILE, "< $file")) {
+  $file = &html_quote($file);
+  $_ = "$file: " . &html_quote($!);
+  print <<EOF;
+Content-Type: text/html
+
+<head><title>$file</title></head>
+<b>$_</b>
+EOF
+  exit 1;
+}
+
+$file = &html_quote($file);
+($dir = $file) =~ s@@[^/]*$@@@@;
+
+print <<EOF;
+Content-Type: text/html
+
+<head><title>$file</title></head>
+<pre>
+EOF
+while (<FILE>) {
+  $_ = &html_quote($_);
+
+  s/^(\#\s*include\s+)(\&quot;.*\&quot;|\&lt\;.*\&gt\;)/$1 . &header_ref($2)/ge;
+
+  print;
+}
+close(FILE);
+print "</pre>\n";
+
+sub header_ref {
+  local($_) = @@_;
+  local($d);
+
+  if (s/^\&quot;//) {
+    s/\&quot;$//;
+    return "&quot;<a href=\"$CGI$dir$_\">$_</a>&quot;";
+  }
+  s/^\&lt\;//;
+  s/\&gt\;$//;
+
+  for $d (
+	"/usr/include",
+	"/usr/local/include",
+	"/usr/X11R6/include",
+	"/usr/X11/include",
+	"/usr/X/include",
+	"/usr/include/X11"
+  ) {
+    -f "$d/$_" && return "&lt;<a href=\"$CGI$d/$_\">$_</a>&gt;";
+  }
+  return $_;
+}
+
+
+sub html_quote {
+  local($_) = @@_;
+  local(%QUOTE) = (
+    '<', '&lt;',
+    '>', '&gt;',
+    '&', '&amp;',
+    '"', '&quot;',
+  );
+  s/[<>&"]/$QUOTE{$&}/g;
+  return $_;
+}
+
+sub cleanup {
+  local($_) = @@_;
+
+  s@@//+@@/@@g;
+  s@@/\./@@/@@g;
+  while(m@@/\.\./@@) {
+    s@@^/(\.\./)+@@/@@;
+    s@@/[^/]+/\.\./@@/@@;
+  }
+  return $_;
+}
+@

@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols
+	release-0-5-3:1.1
+	release-0-5-2:1.1
+	release-0-5-1:1.1
+	release-0-5:1.1
+	release-0-4-2:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2003.04.15.14.46.23;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@[w3m-dev 03880] Re: convert \ -> / in URL
+* Bonus/backslash_to_slash.cgi: added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@#!/usr/bin/perl
+# keymap "x \\" GOTO file:/$LIB/backslash_to_slash.cgi 
+
+$_ = $ENV{W3M_CURRENT_LINK} || exit;
+s@@\\@@/@@g;
+print <<EOF;
+Location: $_
+
+EOF
+@

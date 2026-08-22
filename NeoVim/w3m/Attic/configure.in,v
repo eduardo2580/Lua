@@ -1,0 +1,1029 @@
+head	1.34;
+access;
+symbols
+	release-0-5-1:1.31
+	release-0-5:1.29
+	release-0-4-2:1.14;
+locks; strict;
+comment	@# @;
+
+
+1.34
+date	2005.02.26.17.13.59;	author ukai;	state dead;
+branches;
+next	1.33;
+
+1.33
+date	2005.02.26.17.06.44;	author ukai;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.10.13.16.52.51;	author ukai;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.04.28.18.19.25;	author ukai;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.04.04.16.47.20;	author ukai;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.03.21.16.01.39;	author ukai;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.03.21.15.12.18;	author ukai;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.10.20.16.49.10;	author ukai;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.10.17.16.46.23;	author ukai;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.10.10.16.33.13;	author ukai;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.10.05.16.16.17;	author ukai;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.10.05.16.14.02;	author ukai;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.09.25.18.09.01;	author ukai;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.09.25.16.56.10;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.09.25.16.39.16;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.09.25.04.36.35;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.09.25.03.35.48;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.09.23.18.42.25;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.09.22.22.53.52;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.09.22.21.02.17;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.05.06.16.24.51;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.04.10.17.10.12;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.04.07.16.39.43;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.04.04.16.00.38;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.03.26.15.19.47;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.22.14.58.33;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.03.12.18.27.07;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.03.12.17.20.46;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.03.11.16.18.31;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.03.10.18.30.34;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.03.10.17.50.53;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.03.10.17.28.54;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.03.10.16.04.20;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.03.09.19.40.08;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.34
+log
+@configure.ac: rename from configure.in. this is for autoconf2.50
+@
+text
+@dnl w3m autoconf
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(w3m, 0.5.1, ukai@@debian.or.jp)
+PACKAGE=w3m
+VERSION=0.5.1
+AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+AC_SUBST(PACKAGE)
+AC_SUBST(VERSION)
+
+AC_SUBST(W3M)
+W3M=w3m
+AC_DEFINE(W3M, w3m)
+
+AC_SUBST(W3M_LANG)
+W3M_LANG=${LC_ALL:-$LANG}
+dnl AM_INIT_AUTOMAKE(w3m, 0.4)
+AC_CONFIG_HEADER(config.h)
+dnl Checks for programs.
+dnl AC_PROG_CXX
+AC_PROG_AWK
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_RANLIB
+AC_PATH_PROGS(PERL, perl, /usr/local/bin/perl)
+AC_PATH_PROGS(NKF, nkf, /usr/local/bin/nkf)
+AC_PATH_PROGS(MAN, man, /usr/bin/man)
+AC_CANONICAL_HOST
+
+AC_EXEEXT
+AC_SUBST(EXEEXT)
+
+AUXBIN_TARGETS=
+
+AC_SUBST(W3M_TARGET)
+AC_SUBST(W3M_LIBS)
+W3M_TARGET=$target
+AC_DEFINE_UNQUOTED(W3M_TARGET, $W3M_TARGET)
+
+AC_W3M_M17N
+if test x$enable_messagel10n = xno; then
+ AM_GNU_GETTEXT([external])
+fi
+
+NLSTARGET=""
+if test x"$USE_NLS" = xyes; then
+  NLSTARGET="po"
+fi
+AC_SUBST(INTLTARGET)
+AC_SUBST(NLSTARGET)
+
+AC_W3M_COLOR
+AC_W3M_ANSI_COLOR
+AC_W3M_BG_COLOR
+
+AC_W3M_IMAGE
+if test x"$enable_image" != xno; then
+ AUXBIN_TARGETS="$AUXBIN_TARGETS w3mimgdisplay\$(EXT)"
+ AC_W3M_XFACE
+fi
+
+AC_W3M_KEYMAP
+AC_W3M_MENU
+AC_W3M_MOUSE
+AC_W3M_HISTORY
+AC_W3M_ALARM
+
+AC_W3M_COOKIE
+AC_W3M_DIGEST_AUTH
+AC_W3M_NNTP
+AC_W3M_GOPHER
+
+AC_W3M_DICT
+AC_W3M_HELP_CGI
+AC_W3M_EXTERNAL_URI_LOADER
+AC_W3M_W3MMAILER
+AC_W3M_MIGEMO
+AC_W3M_EDITOR
+AC_W3M_MAILER
+AC_W3M_EXT_BROWSER
+
+dnl Checks for ext libs
+for lib in bsd BSD 44bsd socket nsl dld dl
+do
+ AC_W3M_EXTLIBS($lib)
+done
+
+AC_W3M_IPv6
+AC_W3M_SSL
+
+dnl Checks for libraries.
+AC_CHECK_FUNC(sqrt,,[AC_CHECK_LIB(m, sqrt)])
+if test x"$enable_mouse" = xyes; then
+ AC_SUBST(USE_W3M)
+ AC_CHECK_LIB(gpm, Gpm_Open, [AC_DEFINE(USE_GPM)
+   		W3M_LIBS="$W3M_LIBS -lgpm"])
+ AC_SUBST(USE_SYSMOUSE)
+ AC_TRY_CPP([#include <machine/console.h>
+   MOUSE_GETINFO], [AC_DEFINE(USE_SYSMOUSE)])
+fi
+AC_SUBST(AUXBIN_TARGETS)
+AC_W3M_TERMLIB
+AC_W3M_GC
+AC_CHECK_LIB(z, zError, [AUXBIN_TARGETS="$AUXBIN_TARGETS inflate\$(EXT)"])
+
+AC_DEFINE(AUXBIN_TARGETS, "$AUXBIN_TARGETS")
+
+AC_SUBST(USE_BINMODE_STREAM)
+case "$host_os" in
+  *cygwin*|*os2-emx*)
+    AC_DEFINE(USE_BINMODE_STREAM)
+    ;;
+esac
+
+AC_HEADER_DIRENT
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+dnl AC_CHECK_HEADERS(fcntl.h malloc.h sgtty.h strings.h sys/ioctl.h sys/time.h termio.h unistd.h setjmp.h)
+AC_CHECK_HEADER(termios.h, [AC_DEFINE(HAVE_TERMIOS_H)],
+	 [AC_CHECK_HEADER(termio.h, [AC_DEFINE(HAVE_TERMIO_H)],
+	  [AC_CHECK_HEADER(sgtty.h, [AC_DEFINE(HAVE_SGTTY_H)])])])
+AC_CHECK_HEADER([float.h], [AC_DEFINE(HAVE_FLOAT_H)])
+AC_CHECK_HEADER([sys/select.h], [AC_DEFINE(HAVE_SYS_SELECT_H)])
+AC_CHECK_HEADER([locale.h], [AC_DEFINE(HAVE_LOCALE_H)])
+AC_CHECK_HEADER([stdint.h], [AC_DEFINE(HAVE_STDINT_H)])
+AC_CHECK_HEADER([inttypes.h], [AC_DEFINE(HAVE_INTTYPES_H)])
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+dnl AC_C_CONST
+dnl AC_C_INLINE
+dnl AC_TYPE_PID_T
+dnl AC_TYPE_SIZE_T
+dnl AC_HEADER_TIME
+dnl AC_STRUCT_TM
+AC_CHECK_SIZEOF(long long, 0)
+
+dnl Checks for library functions.
+dnl AC_FUNC_ALLOCA
+dnl AC_PROG_GCC_TRADITIONAL
+dnl AC_FUNC_MEMCMP
+dnl AC_FUNC_MMAP
+dnl AC_FUNC_SETVBUF_REVERSED
+dnl AC_FUNC_VPRINTF
+AC_CHECK_FUNCS(strcasecmp strcasestr strchr memcpy strerror bcopy setpgrp chdir getcwd getwd readlink setenv putenv strtoll stroq atoll atoq symlink readlink lstat srand48 srandom getpassphrase waitpid setlocale)
+AC_FUNC_STRFTIME
+AC_FUNC_WAIT3
+AC_FUNC_SETPGRP
+AM_LANGINFO_CODESET
+AC_W3M_SYS_ERRLIST
+AC_W3M_SIGSETJMP
+AC_W3M_SIGNAL
+
+AC_SUBST(HELP_DIR)
+HELP_DIR="$datadir/$PACKAGE"
+AC_DEFINE(HELP_DIR, "$HELP_DIR")
+AC_SUBST(RC_DIR)
+RC_DIR="~/.$PACKAGE"
+AC_DEFINE(RC_DIR, "$RC_DIR")
+AC_SUBST(DOCDIRS)
+DOCDIRS="doc:en_English doc-jp:ja_Japanese"
+AC_DEFINE_UNQUOTED(DOCDIRS, "$DOCDIRS")
+
+AC_W3M_VERSION
+AC_OUTPUT([Makefile posubst po/Makefile.in \
+scripts/Makefile scripts/dirlist.cgi \
+scripts/w3mhelp.cgi \
+scripts/w3mmail.cgi scripts/xface2xpm \
+scripts/multipart/Makefile scripts/multipart/multipart.cgi \
+scripts/w3mman/Makefile scripts/w3mman/w3mman scripts/w3mman/w3mman.1 \
+scripts/w3mman/w3mman2html.cgi \
+libwc/Makefile \
+w3mimg/Makefile w3mimg/fb/Makefile w3mimg/x11/Makefile \
+w3mhelp-w3m_en.html w3mhelp-w3m_ja.html \
+w3mhelp-lynx_en.html w3mhelp-lynx_ja.html])
+
+chmod +x posubst
+@
+
+
+1.33
+log
+@[w3m-dev 04143] Patch for OS/2
+* config.h.in: ifdef HAVE_SETPGRP
+* configure.in: define USE_BINMODE_STREAM for *os2-emx*
+* islang.c: ULONG -> unsigned long
+* main.c: ULONG -> unsigned long
+@
+text
+@@
+
+
+1.32
+log
+@Bug#276246: w3m's locale parsing should at least see '@@euro' modifier
+* config.h (HAVE_LANGINFO_CODESET): added
+* configure.in (AM_LANGINFO_CODESET): added
+* libwc/charset.c: #include <langinfo.h>
+       (wc_charset_to_ces): use nl_langinfo(CODESET)
+From: Fumitoshi UKAI <ukai@@debian.or.jp>
+@
+text
+@d113 1
+a113 1
+  *cygwin*)
+@
+
+
+1.31
+log
+@w3m 0.5.1
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+* configure.in: version 0.5.1
+* po/w3m.pot, ja.po: update-po
+@
+text
+@d151 1
+@
+
+
+1.30
+log
+@[w3m-dev 04049] w3m-cvs-1.914-misc.patch
+* Makefile.in (funcname.tab): dont modify when target is unchanged.
+	(CFLAGS): need $(CPPFLAGS)?
+* config.h.in: add HAVE_STDINT_H, HAVE_INTTYPES_H
+* configure.in: s/AC_CANONICAL_SYSTEM/AC_CANONICAL_HOST/
+	don't use AC_CYGWIN
+	don't use $CYGWIN, use $host_os *cygwin*
+	AC_DEFINE in AC_CHECK_HEADER (float.h, sys/select.h)
+	add stdint.h, inttypes.h
+* etc.c (find_auth_pass_entry): host is case insensitive
+* libwc/wc_types.h: use stdint.h or inttypes.h
+* main.c (MAIN); need GC_init()
+From: AIDA Shinra <shinra@@j10n.org>
+@
+text
+@d3 1
+a3 1
+AC_INIT(w3m, 0.5, ukai@@debian.or.jp)
+d5 1
+a5 1
+VERSION=0.5
+@
+
+
+1.29
+log
+@w3mimg/Makefile.in (distclean): rm -f w3mimg.a
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d31 1
+a31 1
+AC_CANONICAL_SYSTEM
+a32 1
+AC_CYGWIN
+d112 5
+a116 3
+if test x$CYGWIN = xyes; then
+ AC_DEFINE(USE_BINMODE_STREAM)
+fi
+d125 2
+a126 2
+AC_CHECK_HEADER([float.h])
+AC_CHECK_HEADER([sys/select.h])
+d128 2
+@
+
+
+1.28
+log
+@[w3m-dev 04046]
+* configure.in (AC_W3M_IPv6): should check it after ext libs
+From: Akihiro Sagawa <sagawa@@sohgoh.net>
+@
+text
+@d3 1
+a3 1
+AC_INIT(w3m, 0.4.2, ukai@@debian.or.jp)
+d5 1
+a5 1
+VERSION=0.4.2
+@
+
+
+1.27
+log
+@[w3m-dev 03996] HELP_DIR and funcname.tab
+* configure.in (HELP_DIR): don't eval
+* scripts/w3mhelp.cgi: subst @@prefix@@ for $helpdir
+From: SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+@
+text
+@a75 1
+AC_W3M_IPv6
+d92 1
+@
+
+
+1.26
+log
+@[w3m-dev 03996] HELP_DIR and funcname.tab
+  reported by SAKAI Kiyotaka <ksakai@@kso.netwk.ntt-at.co.jp>
+* configure.in: don't use posix shell syntax $(..)
+* funcname.tab: deleted
+@
+text
+@d153 1
+a153 1
+HELP_DIR=`eval echo "$datadir/$PACKAGE"`
+@
+
+
+1.25
+log
+@* scripts/Makefile.in (w3mhelp-funcname.pl): depends ../funcname.tab
+* Makefile.in (IMGOBJS): deleted
+	(indep.o): depends on fm.h funcname1.h
+	(IMGDISPLAY): depends on w3mimg/w3mimg.a
+	(w3mimg/w3mimg.a): renamed from w3mimg
+* acinclude.m4 (AC_W3M_IMAGE): modify IMBOBJS
+* w3mimg/Makefile.in (AR): added
+		(RANLIB): added
+		(IMGOBJS): added
+		(w3mimg.a): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+* [w3m-dev 03990] Re: post-m17n merge problem?
+* Makefile.in (MAN1): need $(top_srcdir)
+		(MAN1_JA): ditto
+		(LOBJS): depends on fm.h funcname1.h
+		(INFLATE): depends on $(ALIB)
+		(libwc/libwc.a): renamed from libwc
+		(IMGDISPLAY): depends on $(IMGOBJS) instead of w3mimg
+			  depends on $(ALIB)
+		(w3mimgdisplay.o): depends on w3mimg/w3mimg.h
+* acinclude.m4 (AC_W3M_M17N): WCTARGET is libwc/libwc.a
+* configure.in (HELP_DIR): expand ${prefix}
+From: qhwt@@myrealbox.com
+@
+text
+@d153 1
+a153 1
+HELP_DIR=$(eval echo "$datadir/$PACKAGE")
+@
+
+
+1.24
+log
+@fix variable usage
+@
+text
+@d153 2
+a154 2
+HELP_DIR="$datadir/$PACKAGE"
+AC_DEFINE_UNQUOTED(HELP_DIR, "$HELP_DIR")
+d157 1
+a157 1
+AC_DEFINE_UNQUOTED(RC_DIR, "$RC_DIR")
+@
+
+
+1.23
+log
+@fix problem reported on [w3m-dev 03981]
+  from Mamoru KOMACHI <usata@@sodan.ecc.u-tokyo.ac.jp>
+* configure.in: add AC_SUBST(HELP_DIR)
+* Makefile.in (HELP_DIR): use AC_SUBT(HELP_DIR)
+* scripts/Makefile.in: add PACKAGE, VERSION, DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add SUBDIRS
+		(install unstall): do $(SUBDIRS)
+* scripts/multipart/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+		 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+* scripts/w3mman/Makefile.in: add PACKAGE,VERSION,DOMAIN
+		use PACKAGE instead of package:
+			 CGIBIN_DIR,AUXBIN_DIR,CONF_DIR
+		add HELP_DIR
+		add BIN_DIR, MAN1_DIR
+		LIB_TARGETS->CGIBIN_TARGETS
+		fix INSTALL_MAN
+@
+text
+@d153 1
+a153 1
+HELP_DIR="$(datadir)/$(PACKAGE)"
+@
+
+
+1.22
+log
+@add posubst,  compile-time message l10n
+* Makefile.in: @@POSUBST@@
+* acinclude.m4(AC_W3M_M17N): add POSUBST, POLANG
+	--enable-messagel10n
+* configure.in (W3M_LANG): subst
+	(AM_GET_GNUTEXT): if messagel10n enabled, don't use NLS
+	(AC_OUTOUT): add posubst, chmod +x
+* menu.c: remove if LANG == JA messages
+* rc.c: ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d152 3
+@
+
+
+1.21
+log
+@check header locale.h
+check func setlocale
+no need to output intl/Makefile
+@
+text
+@d15 1
+d45 3
+a47 1
+AM_GNU_GETTEXT([external])
+d160 1
+a160 1
+AC_OUTPUT([Makefile po/Makefile.in \
+d172 1
+@
+
+
+1.20
+log
+@* remove ./intl
+* configure.in: external fo AM_GNU_GETTEXT
+* Makefile.in: remove intl, INTLTARGET
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d123 1
+d141 1
+a141 1
+AC_CHECK_FUNCS(strcasecmp strcasestr strchr memcpy strerror bcopy setpgrp chdir getcwd getwd readlink setenv putenv strtoll stroq atoll atoq symlink readlink lstat srand48 srandom getpassphrase waitpid)
+d157 1
+a157 1
+AC_OUTPUT([Makefile  intl/Makefile po/Makefile.in \
+@
+
+
+1.19
+log
+@add NLSTARGET
+@
+text
+@d44 1
+a44 1
+AM_GNU_GETTEXT
+a45 1
+INTLTARGET=""
+a47 1
+  INTLTARGET="intl"
+@
+
+
+1.18
+log
+@fix [w3m-dev 03975] Re: gettextize
+* Makefile.in: add INTLTARGET, cleanup
+* configure.in: INTLTARGET=intl if USE_NLS
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d47 1
+d50 1
+d53 1
+@
+
+
+1.17
+log
+@gettextize initial modifications
+@
+text
+@d46 6
+@
+
+
+1.16
+log
+@more autoconfiscate
+@
+text
+@d3 8
+a10 4
+AC_INIT(fm.h)
+AC_SUBST(package)
+package=w3m
+AC_DEFINE(package,w3m)
+d44 1
+d142 1
+a142 1
+RC_DIR="~/.$package"
+d149 1
+a149 1
+AC_OUTPUT(Makefile \
+d159 1
+a159 1
+w3mhelp-lynx_en.html w3mhelp-lynx_ja.html)
+@
+
+
+1.15
+log
+@merge m17n patch
+add libwc
+@
+text
+@d4 7
+d24 2
+d136 7
+d144 11
+a154 1
+AC_OUTPUT(Makefile w3mhelp-w3m_en.html w3mhelp-w3m_ja.html w3mhelp-lynx_en.html w3mhelp-lynx_ja.html)
+@
+
+
+1.14
+log
+@[w3m-dev 03888] autodetect ssl
+* acinclude.m4 (AC_W3M_SSL): use SSL_*
+* configure.in: move AC_W3M_SSL after AC_W3M_EXTLIBS
+@
+text
+@d30 1
+a30 2
+AC_W3M_LANG
+AC_W3M_KANJI_SYMBOLS
+@
+
+
+1.13
+log
+@* configure.in (AUXBIN_TARGETS): don't reset, move to head
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@a53 1
+AC_W3M_SSL
+d69 2
+@
+
+
+1.12
+log
+@[w3m-dev 03858] configure cleanup
+* acinclude.m4 configure.in: update
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d23 2
+a81 1
+AUXBIN_TARGETS=
+@
+
+
+1.11
+log
+@[w3m-dev 03838] W3M_LIBS splitted from LIBS
+* Makefile.in (W3M_LIBS): added
+* acinclude.m4 (AC_W3M_TERMLIB): use W3M_LIB
+	(AC_W3M_SSL): ditto
+* configure.in (W3M_LIBS): added
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d35 5
+a39 1
+AC_W3M_MIGEMO
+d41 2
+d44 2
+a46 1
+AC_W3M_MENU
+a47 2
+AC_W3M_DICT
+AC_W3M_HISTORY
+d51 2
+d54 5
+a58 2
+AC_W3M_KEYMAP
+
+a61 3
+AC_W3M_HELP_CGI
+AC_W3M_EXTERNAL_URI_LOADER
+AC_W3M_W3MMAILER
+a78 1
+AC_W3M_ALARM
+a80 5
+AC_W3M_IMAGE
+if test x"$enable_image" != xno; then
+ AUXBIN_TARGETS="$AUXBIN_TARGETS w3mimgdisplay\$(EXT)"
+ AC_W3M_XFACE
+fi
+a82 2
+AC_W3M_SSL
+AC_W3M_IPv6
+@
+
+
+1.10
+log
+@[w3m-dev 03831] fix typo
+* acinclude.m4 (AC_W3M_LANG): SYSTEM_CODE
+* configure.in: fix typo CYGIN
+From: WATANABE Katsuyuki <knabe@@sannet.ne.jp>
+@
+text
+@d24 1
+d67 1
+a67 1
+   		LIBS="$LIBS -lgpm"])
+@
+
+
+1.9
+log
+@[w3m-dev 03827] Re: checking for GC_version... no
+* configure.in: add dl for extlibs
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d88 1
+a88 1
+if test x$CYGIN = xyes; then
+@
+
+
+1.8
+log
+@[w3m-dev 03819] support cd build && ../configure
+* Makefile.in: add VPATH
+		add MV
+		use $(top_srcdir), $<, $@@
+* acinclude.m4 (AC_W3M_VERSION): use $srcdir
+* configure.in (AC_W3M_VERSION): move
+* mktable.c (main): basename
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d56 1
+a56 1
+for lib in bsd BSD 44bsd socket nsl dld
+@
+
+
+1.7
+log
+@[w3m-dev 03818] fix autoconf
+* Makefile.in (CGIBIN_DIR): added
+	(AUXBIN_DIR): added
+	(HELP_DIR): added
+	(RC_DIR): added
+	(MAKE_ARGS): added
+	(TARGET): use $(package)
+	(MAN1_TARGET): ditto
+	(install): use $(*_DIR)
+* acinclude.m4 (AC_W3M_TERMLIB): added
+	(AC_W3M_GC): default search prefix /usr /usr/local $HOME
+		fix searches
+	(AC_W3M_SSL): fix bugs
+* config.h (RC_DIR): remove tailing /
+	(SYS_MAILCAP): use ETC_DIR
+	(SYS_MIMETYPES): ditto
+	(USER_MIMETYPES): homedir
+* configure.in: quote
+	(AC_W3M_TERMLIB): use
+* Bonus/oldconfigure.sh: rewrite
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@a25 1
+AC_W3M_VERSION
+d126 1
+d128 1
+@
+
+
+1.6
+log
+@[w3m-dev 03808] fix autoconf
+* acinclude.m4 (AC_W3M_GC): --with-gc takes PREFIX
+			check include first
+	(AC_W3M_CHECK_VER): show checking message
+	(AC_W3M_IMAGE): if gdkpixbuf found, don't check imlib*
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d64 1
+a64 7
+AC_CHECK_LIB(termcap, tgetent)
+AC_CHECK_LIB(termlib, tgetent)
+AC_CHECK_LIB(terminfo, tgetent)
+AC_CHECK_LIB(mytinfo, tgetent)
+AC_CHECK_LIB(curses, tgetent)
+AC_CHECK_LIB(ncurses, tgetent)
+if test x$enable_mouse = xyes; then
+a71 1
+AC_W3M_GC
+d76 1
+a76 1
+if test x$enable_image != xno; then
+d80 2
+@
+
+
+1.5
+log
+@* Makefile.in (MODEL): delete @@W3M_TARGET@@
+* configure.in: AC_SUBST(W3M_TARGET)
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d4 1
+@
+
+
+1.4
+log
+@[w3m-dev 03804] fix autoconf
+* acinclude.m4 (AC_W3M_MENU): default enabled
+		(AC_W3M_MOUSE): default enabled
+		(AC_W3M_COOKIE): default enabled
+		(AC_W3M_LANG): can't detect locale here.
+			autoconf set LANG=C
+		(AC_W3M_DIGEST_AUTH): default enabled
+		(AC_W3M_SSL): default enabled
+* configure.in (AC_W3M_DIGEST_AUTH): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d22 3
+@
+
+
+1.3
+log
+@[w3m-dev 03804] fix autoconf
+* acinclude.m4 (AC_W3M_MODEL): deleted
+	(AC_W3M_COLOR): default enable
+	(AC_W3M_ANSI_COLOR): default enable
+	(AC_W3M_BG_COLOR): default enable
+	(AC_W3M_SHOW_PARAMS): deleted
+	(AC_W3M_DICT): default enable
+	(AC_W3M_HISTORY): default enable
+	(AC_W3M_VIEW_UNSEENOBJECTS): deleted
+	(AC_W3M_FORMAT_NICE): deleted
+	(AC_W3M_ID_EXT): deleted
+	(AC_W3M_FTPPASS_HOSTNAMEGEN): deleted
+	(AC_W3M_NNTP): default enabled
+	(AC_W3M_LANG): autodetect whether japanese is enabled
+	(AC_W3M_KANJI_SYMBOLS): default enabled
+	(AC_W3M_EMACS_LIKE_LINEEDIT): deleted
+	(AC_W3M_VI_PREC_NUM): deleted
+	(AC_W3M_MARK): deleted
+	(AC_W3M_LABEL_TOPLINE): deleted
+	(AC_W3M_NEXTPAGE_TOPLINE): deleted
+	(AC_W3M_SSL): fix without ssl
+	(AC_W3M_IMAGE): default enabled
+	(AC_W3M_XFACE): check uncompface
+	(AC_W3M_IPv6): enable_ipv6 if inet6 lib found
+* configure.in (AC_PROG_CPP): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d39 1
+@
+
+
+1.2
+log
+@[w3m-dev 03801] fix autoconf
+* acinclude.m4 (AC_W3M_BG_COLOR): fix typo
+	(AC_W3M_KANJI_SYMBOLS): check enable_japanese != 'no'
+	(AC_W3M_KEYMAP): needs {}
+	(AC_W3M_EXTLIBS): don't modify libdir, use extlibdir
+	(AC_W3M_SSL): missing x
+	(AC_W3M_IMAGE): add AC_DEFINE(USE_IMAGE)
+* config.h.in: s/USE_KANJI_SYMBOLS/KANJI_SYMBOLS/
+	add SIZEOF_LONG_LONG
+	don't use //, use /* */
+* configure.in: add AC_CHECK_SIZEOF(long long, 0)
+From: Yuji Abe <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d10 1
+a22 1
+AC_W3M_MODEL
+a31 6
+AC_W3M_EMACS_LIKE_LINEEDIT
+AC_W3M_VI_PREC_NUM
+AC_W3M_MARK
+
+AC_W3M_LABEL_TOPLINE
+AC_W3M_NEXTPAGE_TOPLINE
+a36 1
+AC_W3M_SHOW_PARAMS
+a38 4
+AC_W3M_VIEW_UNSEENOBJECTS
+AC_W3M_FORMAT_NICE
+AC_W3M_ID_EXT
+AC_W3M_FTPPASS_HOSTNAMEGEN
+@
+
+
+1.1
+log
+@autoconficate
+* Makefile.in: added
+* acinclude.m4: added
+* aclocal.m4: added (generated from acinclude.m4 by aclocal)
+* configure.in: added
+* config.h.in: added
+* config.guess: added
+* config.sub: added
+* .cvsignore: add Makefile config.cache config.log config.status
+* configure: generated by autoconf
+* gc/: deleted
+* XMakefile: deleted
+* XXMakefile: deleted
+* NEWS: autoconficate
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d121 1
+@
+

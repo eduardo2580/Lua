@@ -10,6 +10,62 @@ package.path = config_root .. "/lua/?.lua;" .. package.path
 require("core.options")
 require("core.keymaps")
 require("core.prerequisites").setup()
+vim.cmd([[cnoreabbrev <expr> lynx getcmdtype() == ':' && getcmdline() =~# '^lynx\%($\| \)' ? 'Lynx' : 'lynx']])
+
+local function lynx_command()
+  local local_candidates = {
+    config_root .. "/Downloads/Lynx/native/lynx.exe",
+    config_root .. "/Downloads/Lynx/native/lynx",
+    config_root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx.exe",
+    config_root .. "/Downloads/Lynx/lynx2.9.3/bin/lynx",
+  }
+  for _, candidate in ipairs(local_candidates) do
+    if vim.fn.executable(candidate) == 1 then return candidate end
+  end
+  local command = vim.fn.exepath("lynx")
+  if command == "" then command = vim.fn.exepath("lynx.exe") end
+  return command
+end
+
+local function open_lynx(target)
+  local command = lynx_command()
+  if command == "" then
+    vim.notify(
+      "Lynx is not built. See Downloads/Lynx/README.md and run the local build recipe.",
+      vim.log.levels.ERROR
+    )
+    return
+  end
+
+  vim.cmd("botright new")
+  vim.api.nvim_win_set_height(0, math.max(10, vim.o.lines - 8))
+  vim.fn.termopen({ command, target }, {
+    on_exit = function(_, code)
+      if code ~= 0 then
+        vim.schedule(function()
+          vim.notify("Lynx exited with code " .. code, vim.log.levels.WARN)
+        end)
+      end
+    end,
+  })
+  vim.cmd("startinsert")
+end
+
+vim.api.nvim_create_user_command("Lynx", function(opts)
+  open_lynx(opts.args ~= "" and opts.args or "https://lynx.invisible-island.net/")
+end, { nargs = "?", desc = "Open a URL in Lynx" })
+
+vim.api.nvim_create_user_command("LynxGopher", function(opts)
+  local target = opts.args
+  if target == "" then
+    target = "gopher://gopher.floodgap.com:70/1"
+  elseif not target:match("^gophers?://") then
+    target = "gopher://" .. target
+  end
+  open_lynx(target)
+end, { nargs = "?", desc = "Open a Gopher URL in Lynx" })
+
+vim.keymap.set("n", "<leader>ww", "<cmd>Lynx<CR>", { desc = "Open Lynx browser" })
 
 -- ============================================================================
 --  COMPATIBILITY SHIM
@@ -902,57 +958,6 @@ local plugins = {
     build = "cd app && yarn install",
     ft    = "markdown",
     keys  = { { "<leader>mp", "<cmd>MarkdownPreview<CR>", desc = "Preview markdown" } },
-  },
-
-  -- ── W3M BROWSER ───────────────────────────────────────────────────────────
-  {
-    "yuratomo/w3m.vim",
-    init = function()
-      local is_windows = vim.uv.os_uname().sysname == "Windows_NT"
-      local w3m_command = vim.fn.exepath("w3m")
-      if is_windows and w3m_command == "" then w3m_command = "C:\\w3m.exe" end
-      vim.g["w3m#command"] = w3m_command
-      vim.g["w3m#disable_vimproc"] = 1
-
-      local browser = vim.env.BROWSER
-      if not browser or browser == "" then
-        if is_windows then
-          browser = "rundll32 url.dll,FileProtocolHandler"
-        elseif vim.uv.os_uname().sysname == "Darwin" then
-          browser = "open"
-        else
-          browser = "xdg-open"
-        end
-      end
-      vim.g["w3m#external_browser"] = browser
-
-      vim.api.nvim_create_user_command("W3mGopher", function(opts)
-        local target = opts.args
-        if target == "" then
-          target = "gopher://gopher.floodgap.com:70/1"
-        elseif not target:match("^gopher://") then
-          target = "gopher://" .. target
-        end
-        vim.cmd({ cmd = "W3m", args = { target } })
-      end, { nargs = "?", desc = "Open a Gopher URL in w3m" })
-    end,
-    cond = function()
-      local w3m_command = vim.fn.exepath("w3m")
-      if vim.uv.os_uname().sysname == "Windows_NT" and w3m_command == "" then
-        w3m_command = "C:\\w3m.exe"
-      end
-      return vim.fn.executable(w3m_command) == 1
-    end,
-    cmd = {
-      "W3m", "W3mTab", "W3mSplit", "W3mVSplit", "W3mLocal",
-      "W3mHistory", "W3mHistoryClear", "W3mClose", "W3mCopyUrl",
-      "W3mReload", "W3mAddressBar", "W3mShowTitle", "W3mShowExtenalBrowser",
-      "W3mShowSource", "W3mShowDump", "W3mSyntaxOff", "W3mSyntaxOn",
-      "W3mSetUserAgent", "W3mGopher",
-    },
-    keys = {
-      { "<leader>ww", "<cmd>W3m<CR>", desc = "Open w3m browser" },
-    },
   },
 
   -- ── EMMET ──────────────────────────────────────────────────────────────────

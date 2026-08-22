@@ -1,0 +1,3529 @@
+head	1.14;
+access;
+symbols
+	release-0-5-3:1.14
+	release-0-5-2:1.8
+	release-0-5-1:1.3
+	release-0-5:1.2;
+locks; strict;
+comment	@# @;
+
+
+1.14
+date	2011.01.15.07.52.48;	author inu;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2010.08.20.09.47.09;	author htrb;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2010.08.04.14.06.36;	author htrb;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2010.07.26.11.38.53;	author htrb;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2010.07.25.09.55.05;	author htrb;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2010.07.21.10.40.59;	author htrb;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2007.05.31.12.17.05;	author inu;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2007.05.28.11.06.40;	author inu;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2007.05.23.13.07.44;	author inu;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2006.12.10.11.01.24;	author inu;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.07.15.16.26.04;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.04.28.18.19.26;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.09.25.18.35.14;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.09.24.18.35.06;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@w3m 0.5.3 release
+@
+text
+@# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Fumitoshi UKAI
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: w3m 0.5.3\n"
+"Report-Msgid-Bugs-To: satodai@@w3m.jp\n"
+"POT-Creation-Date: 2010-08-20 18:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: menu.c:267
+msgid " Back         (b) "
+msgstr ""
+
+#: menu.c:268
+msgid " Select Buffer(s) "
+msgstr ""
+
+#: menu.c:270
+msgid " Select Tab   (t) "
+msgstr ""
+
+#: menu.c:272
+msgid " View Source  (v) "
+msgstr ""
+
+#: menu.c:273
+msgid " Edit Source  (e) "
+msgstr ""
+
+#: menu.c:274
+msgid " Save Source  (S) "
+msgstr ""
+
+#: menu.c:275
+msgid " Reload       (r) "
+msgstr ""
+
+#: menu.c:276 menu.c:283 menu.c:287
+msgid " ---------------- "
+msgstr ""
+
+#: menu.c:277
+msgid " Go Link      (a) "
+msgstr ""
+
+#: menu.c:278
+msgid "   on New Tab (n) "
+msgstr ""
+
+#: menu.c:279
+msgid " Save Link    (A) "
+msgstr ""
+
+#: menu.c:280
+msgid " View Image   (i) "
+msgstr ""
+
+#: menu.c:281
+msgid " Save Image   (I) "
+msgstr ""
+
+#: menu.c:282
+msgid " View Frame   (f) "
+msgstr ""
+
+#: menu.c:284
+msgid " Bookmark     (B) "
+msgstr ""
+
+#: menu.c:285
+msgid " Help         (h) "
+msgstr ""
+
+#: menu.c:286
+msgid " Option       (o) "
+msgstr ""
+
+#: menu.c:288
+msgid " Quit         (q) "
+msgstr ""
+
+#: rc.c:60
+msgid "External Viewer Setup"
+msgstr ""
+
+#: rc.c:61
+msgid "Tab width in characters"
+msgstr ""
+
+#: rc.c:62
+msgid "Indent for HTML rendering"
+msgstr ""
+
+#: rc.c:63
+msgid "Number of pixels per character (4.0...32.0)"
+msgstr ""
+
+#: rc.c:64
+msgid "Number of pixels per line (4.0...64.0)"
+msgstr ""
+
+#: rc.c:65
+msgid "Number of remembered lines when used as a pager"
+msgstr ""
+
+#: rc.c:66
+msgid "Use URL history"
+msgstr ""
+
+#: rc.c:67
+msgid "Number of remembered URL"
+msgstr ""
+
+#: rc.c:68
+msgid "Save URL history"
+msgstr ""
+
+#: rc.c:69
+msgid "Render frames automatically"
+msgstr ""
+
+#: rc.c:70
+msgid "Treat argument without scheme as URL"
+msgstr ""
+
+#: rc.c:71
+msgid "Use _self as default target"
+msgstr ""
+
+#: rc.c:72
+msgid "Open link on new tab if target is _blank or _new"
+msgstr ""
+
+#: rc.c:73
+msgid "Open download list panel on new tab"
+msgstr ""
+
+#: rc.c:74
+msgid "Display link URL automatically"
+msgstr ""
+
+#: rc.c:75
+msgid "Display link numbers"
+msgstr ""
+
+#: rc.c:76
+msgid "Display decoded URL"
+msgstr ""
+
+#: rc.c:77
+msgid "Display current line number"
+msgstr ""
+
+#: rc.c:78
+msgid "Display inline images"
+msgstr ""
+
+#: rc.c:79
+msgid "Display pseudo-ALTs for inline images with no ALT or TITLE string"
+msgstr ""
+
+#: rc.c:81
+msgid "Load inline images automatically"
+msgstr ""
+
+#: rc.c:82
+msgid "Maximum processes for parallel image loading"
+msgstr ""
+
+#: rc.c:83
+msgid "Use external image viewer"
+msgstr ""
+
+#: rc.c:84
+msgid "Scale of image (%)"
+msgstr ""
+
+#: rc.c:85
+msgid "External command to display image"
+msgstr ""
+
+#: rc.c:86
+msgid "Use link list of image map"
+msgstr ""
+
+#: rc.c:88
+msgid "Display file names in multi-column format"
+msgstr ""
+
+#: rc.c:89
+msgid "Use ASCII equivalents to display entities"
+msgstr ""
+
+#: rc.c:90
+msgid "Character type for border of table and menu"
+msgstr ""
+
+#: rc.c:91
+msgid "Fold lines in TEXTAREA"
+msgstr ""
+
+#: rc.c:92
+msgid "Display INS, DEL, S and STRIKE element"
+msgstr ""
+
+#: rc.c:93
+msgid "Display with color"
+msgstr ""
+
+#: rc.c:94
+msgid "Color of normal character"
+msgstr ""
+
+#: rc.c:95
+msgid "Color of anchor"
+msgstr ""
+
+#: rc.c:96
+msgid "Color of image link"
+msgstr ""
+
+#: rc.c:97
+msgid "Color of form"
+msgstr ""
+
+#: rc.c:98
+msgid "Enable coloring of active link"
+msgstr ""
+
+#: rc.c:99
+msgid "Color of currently active link"
+msgstr ""
+
+#: rc.c:100
+msgid "Use visited link color"
+msgstr ""
+
+#: rc.c:101
+msgid "Color of visited link"
+msgstr ""
+
+#: rc.c:102
+msgid "Color of background"
+msgstr ""
+
+#: rc.c:103
+msgid "Color of mark"
+msgstr ""
+
+#: rc.c:104
+msgid "Use proxy"
+msgstr ""
+
+#: rc.c:105
+msgid "URL of HTTP proxy host"
+msgstr ""
+
+#: rc.c:107
+msgid "URL of HTTPS proxy host"
+msgstr ""
+
+#: rc.c:110
+msgid "URL of GOPHER proxy host"
+msgstr ""
+
+#: rc.c:112
+msgid "URL of FTP proxy host"
+msgstr ""
+
+#: rc.c:113
+msgid "Domains to be accessed directly (no proxy)"
+msgstr ""
+
+#: rc.c:114
+msgid "Check noproxy by network address"
+msgstr ""
+
+#: rc.c:115
+msgid "Disable cache"
+msgstr ""
+
+#: rc.c:117
+msgid "News server"
+msgstr ""
+
+#: rc.c:118
+msgid "Mode of news server"
+msgstr ""
+
+#: rc.c:119
+msgid "Number of news messages"
+msgstr ""
+
+#: rc.c:121
+msgid "Order of name resolution"
+msgstr ""
+
+#: rc.c:122
+msgid "Directory corresponding to / (document root)"
+msgstr ""
+
+#: rc.c:123
+msgid "Directory corresponding to /~user"
+msgstr ""
+
+#: rc.c:124
+msgid "Directory corresponding to /cgi-bin"
+msgstr ""
+
+#: rc.c:125
+msgid "Confirm when quitting with q"
+msgstr ""
+
+#: rc.c:126
+msgid "Close tab if buffer is last when back"
+msgstr ""
+
+#: rc.c:128
+msgid "Enable mark operations"
+msgstr ""
+
+#: rc.c:130
+msgid "Enable Emacs-style line editing"
+msgstr ""
+
+#: rc.c:131
+msgid "Enable vi-like numeric prefix"
+msgstr ""
+
+#: rc.c:132
+msgid "Move cursor to top line when going to label"
+msgstr ""
+
+#: rc.c:133
+msgid "Move cursor to top line when moving to next page"
+msgstr ""
+
+#: rc.c:134
+msgid "Fold lines of plain text file"
+msgstr ""
+
+#: rc.c:135
+msgid "Show line numbers"
+msgstr ""
+
+#: rc.c:136
+msgid "Show search string"
+msgstr ""
+
+#: rc.c:137
+msgid "List of mime.types files"
+msgstr ""
+
+#: rc.c:138
+msgid "List of mailcap files"
+msgstr ""
+
+#: rc.c:139
+msgid "List of urimethodmap files"
+msgstr ""
+
+#: rc.c:140
+msgid "Editor"
+msgstr ""
+
+#: rc.c:141
+msgid "Mailer"
+msgstr ""
+
+#: rc.c:142
+msgid "How to call Mailer for mailto URLs with options"
+msgstr ""
+
+#: rc.c:143
+msgid "External Browser"
+msgstr ""
+
+#: rc.c:144
+msgid "Second External Browser"
+msgstr ""
+
+#: rc.c:145
+msgid "Third External Browser"
+msgstr ""
+
+#: rc.c:146
+msgid "Disable secret file security check"
+msgstr ""
+
+#: rc.c:147
+msgid "Password file"
+msgstr ""
+
+#: rc.c:148
+msgid "File for setting form on loading"
+msgstr ""
+
+#: rc.c:149
+msgid "Password for anonymous FTP (your mail address)"
+msgstr ""
+
+#: rc.c:150
+msgid "Generate domain part of password for FTP"
+msgstr ""
+
+#: rc.c:151
+msgid "User-Agent identification string"
+msgstr ""
+
+#: rc.c:152
+msgid "Accept-Encoding header"
+msgstr ""
+
+#: rc.c:153
+msgid "Accept header"
+msgstr ""
+
+#: rc.c:154
+msgid "Accept-Language header"
+msgstr ""
+
+#: rc.c:155
+msgid "Treat URL-like strings as links in all pages"
+msgstr ""
+
+#: rc.c:156
+msgid "Wrap search"
+msgstr ""
+
+#: rc.c:157
+msgid "Display unseen objects (e.g. bgimage tag)"
+msgstr ""
+
+#: rc.c:158
+msgid "Uncompress compressed data automatically when downloading"
+msgstr ""
+
+#: rc.c:160
+msgid "Run external viewer in a separate session"
+msgstr ""
+
+#: rc.c:162
+msgid "Run external viewer in the background"
+msgstr ""
+
+#: rc.c:164
+msgid "Use external program for directory listing"
+msgstr ""
+
+#: rc.c:165
+msgid "URL of directory listing command"
+msgstr ""
+
+#: rc.c:167
+msgid "Enable dictionary lookup through CGI"
+msgstr ""
+
+#: rc.c:168
+msgid "URL of dictionary lookup command"
+msgstr ""
+
+#: rc.c:170
+msgid "Display link name for images lacking ALT"
+msgstr ""
+
+#: rc.c:171
+msgid "Index file for directories"
+msgstr ""
+
+#: rc.c:172
+msgid "Prepend http:// to URL automatically"
+msgstr ""
+
+#: rc.c:173
+msgid "Default value for open-URL command"
+msgstr ""
+
+#: rc.c:174
+msgid "Decode Content-Transfer-Encoding when saving"
+msgstr ""
+
+#: rc.c:175
+msgid "Preserve timestamp when saving"
+msgstr ""
+
+#: rc.c:177
+msgid "Enable mouse"
+msgstr ""
+
+#: rc.c:178
+msgid "Scroll in reverse direction of mouse drag"
+msgstr ""
+
+#: rc.c:179
+msgid "Behavior of wheel scroll speed"
+msgstr ""
+
+#: rc.c:180
+msgid "(A only)Scroll by # (%) of screen"
+msgstr ""
+
+#: rc.c:181
+msgid "(B only)Scroll by # lines"
+msgstr ""
+
+#: rc.c:183
+msgid "Free memory of undisplayed buffers"
+msgstr ""
+
+#: rc.c:184
+msgid "Suppress `Referer:' header"
+msgstr ""
+
+#: rc.c:185
+msgid "Search case-insensitively"
+msgstr ""
+
+#: rc.c:186
+msgid "Use LESSOPEN"
+msgstr ""
+
+#: rc.c:189
+msgid "Perform SSL server verification"
+msgstr ""
+
+#: rc.c:190
+msgid "PEM encoded certificate file of client"
+msgstr ""
+
+#: rc.c:191
+msgid "PEM encoded private key file of client"
+msgstr ""
+
+#: rc.c:192
+msgid "Path to directory for PEM encoded certificates of CAs"
+msgstr ""
+
+#: rc.c:193
+msgid "File consisting of PEM encoded certificates of CAs"
+msgstr ""
+
+#: rc.c:195
+msgid "List of forbidden SSL methods (2: SSLv2, 3: SSLv3, t:TLSv1)"
+msgstr ""
+
+#: rc.c:198
+msgid "Enable cookie processing"
+msgstr ""
+
+#: rc.c:199
+msgid "Print a message when receiving a cookie"
+msgstr ""
+
+#: rc.c:200
+msgid "Accept cookies"
+msgstr ""
+
+#: rc.c:201
+msgid "Action to be taken on invalid cookie"
+msgstr ""
+
+#: rc.c:202
+msgid "Domains to reject cookies from"
+msgstr ""
+
+#: rc.c:203
+msgid "Domains to accept cookies from"
+msgstr ""
+
+#: rc.c:204
+msgid "Domains to avoid [wrong number of dots]"
+msgstr ""
+
+#: rc.c:206
+msgid "Number of redirections to follow"
+msgstr ""
+
+#: rc.c:207
+msgid "Enable processing of meta-refresh tag"
+msgstr ""
+
+#: rc.c:210
+msgid "Enable Migemo (Roma-ji search)"
+msgstr ""
+
+#: rc.c:211
+msgid "Migemo command"
+msgstr ""
+
+#: rc.c:215
+msgid "Display charset"
+msgstr ""
+
+#: rc.c:216
+msgid "Default document charset"
+msgstr ""
+
+#: rc.c:217
+msgid "Automatic charset detect when loading"
+msgstr ""
+
+#: rc.c:218
+msgid "System charset"
+msgstr ""
+
+#: rc.c:219
+msgid "System charset follows locale(LC_CTYPE)"
+msgstr ""
+
+#: rc.c:220
+msgid "Output halfdump with display charset"
+msgstr ""
+
+#: rc.c:221
+msgid "Use multi column characters"
+msgstr ""
+
+#: rc.c:222
+msgid "Use combining characters"
+msgstr ""
+
+#: rc.c:223
+msgid "Use double width for some Unicode characters"
+msgstr ""
+
+#: rc.c:224
+msgid "Use Unicode language tags"
+msgstr ""
+
+#: rc.c:225
+msgid "Charset conversion using Unicode map"
+msgstr ""
+
+#: rc.c:226
+msgid "Charset conversion when loading"
+msgstr ""
+
+#: rc.c:227
+msgid "Adjust search string for document charset"
+msgstr ""
+
+#: rc.c:228
+msgid "Fix character width when conversion"
+msgstr ""
+
+#: rc.c:229
+msgid "Use GB 12345 Unicode map instead of GB 2312's"
+msgstr ""
+
+#: rc.c:230
+msgid "Use JIS X 0201 Roman for ISO-2022-JP"
+msgstr ""
+
+#: rc.c:231
+msgid "Use JIS C 6226:1978 for ISO-2022-JP"
+msgstr ""
+
+#: rc.c:232
+msgid "Use JIS X 0201 Katakana"
+msgstr ""
+
+#: rc.c:233
+msgid "Use JIS X 0212:1990 (Supplemental Kanji)"
+msgstr ""
+
+#: rc.c:234
+msgid "Use JIS X 0213:2000 (2000JIS)"
+msgstr ""
+
+#: rc.c:235
+msgid "Strict ISO-2022-JP/KR/CN"
+msgstr ""
+
+#: rc.c:236
+msgid "Treat 4 bytes char. of GB18030 as Unicode"
+msgstr ""
+
+#: rc.c:237
+msgid "Simple Preserve space"
+msgstr ""
+
+#: rc.c:240
+msgid "keymap file"
+msgstr ""
+
+#: rc.c:257
+msgid "black"
+msgstr ""
+
+#: rc.c:258
+msgid "red"
+msgstr ""
+
+#: rc.c:259
+msgid "green"
+msgstr ""
+
+#: rc.c:260
+msgid "yellow"
+msgstr ""
+
+#: rc.c:261
+msgid "blue"
+msgstr ""
+
+#: rc.c:262
+msgid "magenta"
+msgstr ""
+
+#: rc.c:263
+msgid "cyan"
+msgstr ""
+
+#: rc.c:264
+msgid "white"
+msgstr ""
+
+#: rc.c:265
+msgid "terminal"
+msgstr ""
+
+#: rc.c:284
+msgid "none"
+msgstr ""
+
+#: rc.c:285
+msgid "current URL"
+msgstr ""
+
+#: rc.c:286
+msgid "link URL"
+msgstr ""
+
+#: rc.c:291
+msgid "simple"
+msgstr ""
+
+#: rc.c:292
+msgid "use tag"
+msgstr ""
+
+#: rc.c:293
+msgid "fontify"
+msgstr ""
+
+#: rc.c:299
+msgid "A:relative to screen height"
+msgstr ""
+
+#: rc.c:300
+msgid "B:fixed speed"
+msgstr ""
+
+#: rc.c:307
+msgid "unspecified"
+msgstr ""
+
+#: rc.c:308
+msgid "inet inet6"
+msgstr ""
+
+#: rc.c:309
+msgid "inet6 inet"
+msgstr ""
+
+#: rc.c:310
+msgid "inet only"
+msgstr ""
+
+#: rc.c:311
+msgid "inet6 only"
+msgstr ""
+
+#: rc.c:318
+msgid "discard"
+msgstr ""
+
+#: rc.c:320
+msgid "accept"
+msgstr ""
+
+#: rc.c:322
+msgid "ask"
+msgstr ""
+
+#: rc.c:329
+msgid "use internal mailer instead"
+msgstr ""
+
+#: rc.c:331
+msgid "ignore options and use only the address"
+msgstr ""
+
+#: rc.c:332
+msgid "use full mailto URL"
+msgstr ""
+
+#: rc.c:341
+msgid "OFF"
+msgstr ""
+
+#: rc.c:342
+msgid "Only ISO 2022"
+msgstr ""
+
+#: rc.c:343
+msgid "ON"
+msgstr ""
+
+#: rc.c:349
+msgid "ASCII"
+msgstr ""
+
+#: rc.c:350
+msgid "charset specific"
+msgstr ""
+
+#: rc.c:351
+msgid "DEC special graphics"
+msgstr ""
+
+#: rc.c:714
+msgid "Display Settings"
+msgstr ""
+
+#: rc.c:716
+msgid "Color Settings"
+msgstr ""
+
+#: rc.c:718
+msgid "Miscellaneous Settings"
+msgstr ""
+
+#: rc.c:719
+msgid "Directory Settings"
+msgstr ""
+
+#: rc.c:720
+msgid "External Program Settings"
+msgstr ""
+
+#: rc.c:721
+msgid "Network Settings"
+msgstr ""
+
+#: rc.c:722
+msgid "Proxy Settings"
+msgstr ""
+
+#: rc.c:724
+msgid "SSL Settings"
+msgstr ""
+
+#: rc.c:727
+msgid "Cookie Settings"
+msgstr ""
+
+#: rc.c:730
+msgid "Charset Settings"
+msgstr ""
+
+#. TRANSLATORS:
+#. * AcceptLang default: this is used in Accept-Language: HTTP request
+#. * header. For example, ja.po should translate it as
+#. * "ja;q=1.0, en;q=0.5" like that.
+#.
+#: rc.c:1209
+msgid "en;q=1.0"
+msgstr ""
+@
+
+
+1.13
+log
+@Introduce option mailto_options
+@
+text
+@d9 1
+a9 1
+"Project-Id-Version: PACKAGE VERSION\n"
+@
+
+
+1.12
+log
+@fix conditions for UseGraphicChar
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2010-08-04 18:33+0900\n"
+d381 4
+d388 1
+a388 1
+#: rc.c:143
+d392 1
+a392 1
+#: rc.c:144
+d396 1
+a396 1
+#: rc.c:145
+d400 1
+a400 1
+#: rc.c:146
+d404 1
+a404 1
+#: rc.c:147
+d408 1
+a408 1
+#: rc.c:148
+d412 1
+a412 1
+#: rc.c:149
+d416 1
+a416 1
+#: rc.c:150
+d420 1
+a420 1
+#: rc.c:151
+d424 1
+a424 1
+#: rc.c:152
+d428 1
+a428 1
+#: rc.c:153
+d432 1
+a432 1
+#: rc.c:154
+d436 1
+a436 1
+#: rc.c:155
+d440 1
+a440 1
+#: rc.c:156
+d444 1
+a444 1
+#: rc.c:157
+d448 1
+a448 1
+#: rc.c:159
+d452 1
+a452 1
+#: rc.c:161
+d456 1
+a456 1
+#: rc.c:163
+d460 1
+a460 1
+#: rc.c:164
+d464 1
+a464 1
+#: rc.c:166
+d468 1
+a468 1
+#: rc.c:167
+d472 1
+a472 1
+#: rc.c:169
+d476 1
+a476 1
+#: rc.c:170
+d480 1
+a480 1
+#: rc.c:171
+d484 1
+a484 1
+#: rc.c:172
+d488 1
+a488 1
+#: rc.c:173
+d492 1
+a492 1
+#: rc.c:174
+d496 1
+a496 1
+#: rc.c:176
+d500 1
+a500 1
+#: rc.c:177
+d504 1
+a504 1
+#: rc.c:178
+d508 1
+a508 1
+#: rc.c:179
+d512 1
+a512 1
+#: rc.c:180
+d516 1
+a516 1
+#: rc.c:182
+d520 1
+a520 1
+#: rc.c:183
+d524 1
+a524 1
+#: rc.c:184
+d528 1
+a528 1
+#: rc.c:185
+d532 1
+a532 1
+#: rc.c:188
+d536 1
+a536 1
+#: rc.c:189
+d540 1
+a540 1
+#: rc.c:190
+d544 1
+a544 1
+#: rc.c:191
+d548 1
+a548 1
+#: rc.c:192
+d552 1
+a552 1
+#: rc.c:194
+d556 1
+a556 1
+#: rc.c:197
+d560 1
+a560 1
+#: rc.c:198
+d564 1
+a564 1
+#: rc.c:199
+d568 1
+a568 1
+#: rc.c:200
+d572 1
+a572 1
+#: rc.c:201
+d576 1
+a576 1
+#: rc.c:202
+d580 1
+a580 1
+#: rc.c:203
+d584 1
+a584 1
+#: rc.c:205
+d588 1
+a588 1
+#: rc.c:206
+d592 1
+a592 1
+#: rc.c:209
+d596 1
+a596 1
+#: rc.c:210
+d600 1
+a600 1
+#: rc.c:214
+d604 1
+a604 1
+#: rc.c:215
+d608 1
+a608 1
+#: rc.c:216
+d612 1
+a612 1
+#: rc.c:217
+d616 1
+a616 1
+#: rc.c:218
+d620 1
+a620 1
+#: rc.c:219
+d624 1
+a624 1
+#: rc.c:220
+d628 1
+a628 1
+#: rc.c:221
+d632 1
+a632 1
+#: rc.c:222
+d636 1
+a636 1
+#: rc.c:223
+d640 1
+a640 1
+#: rc.c:224
+d644 1
+a644 1
+#: rc.c:225
+d648 1
+a648 1
+#: rc.c:226
+d652 1
+a652 1
+#: rc.c:227
+d656 1
+a656 1
+#: rc.c:228
+d660 1
+a660 1
+#: rc.c:229
+d664 1
+a664 1
+#: rc.c:230
+d668 1
+a668 1
+#: rc.c:231
+d672 1
+a672 1
+#: rc.c:232
+d676 1
+a676 1
+#: rc.c:233
+d680 1
+a680 1
+#: rc.c:234
+d684 1
+a684 1
+#: rc.c:235
+d688 1
+a688 1
+#: rc.c:236
+d692 1
+a692 1
+#: rc.c:239
+d696 1
+a696 1
+#: rc.c:256
+d700 1
+a700 1
+#: rc.c:257
+d704 1
+a704 1
+#: rc.c:258
+d708 1
+a708 1
+#: rc.c:259
+d712 1
+a712 1
+#: rc.c:260
+d716 1
+a716 1
+#: rc.c:261
+d720 1
+a720 1
+#: rc.c:262
+d724 1
+a724 1
+#: rc.c:263
+d728 1
+a728 1
+#: rc.c:264
+d732 1
+a732 1
+#: rc.c:283
+d736 1
+a736 1
+#: rc.c:284
+d740 1
+a740 1
+#: rc.c:285
+d744 1
+a744 1
+#: rc.c:290
+d748 1
+a748 1
+#: rc.c:291
+d752 1
+a752 1
+#: rc.c:292
+d756 1
+a756 1
+#: rc.c:298
+d760 1
+a760 1
+#: rc.c:299
+d764 1
+a764 1
+#: rc.c:306
+d768 1
+a768 1
+#: rc.c:307
+d772 1
+a772 1
+#: rc.c:308
+d776 1
+a776 1
+#: rc.c:309
+d780 1
+a780 1
+#: rc.c:310
+d784 1
+a784 1
+#: rc.c:317
+d788 1
+a788 1
+#: rc.c:319
+d792 1
+a792 1
+#: rc.c:321
+d796 4
+d801 8
+d812 1
+a812 1
+#: rc.c:332
+d816 1
+a816 1
+#: rc.c:333
+d820 1
+a820 1
+#: rc.c:339
+d824 1
+a824 1
+#: rc.c:340
+d828 1
+a828 1
+#: rc.c:341
+d832 1
+a832 1
+#: rc.c:702
+d836 1
+a836 1
+#: rc.c:704
+d840 1
+a840 1
+#: rc.c:706
+d844 1
+a844 1
+#: rc.c:707
+d848 1
+a848 1
+#: rc.c:708
+d852 1
+a852 1
+#: rc.c:709
+d856 1
+a856 1
+#: rc.c:710
+d860 1
+a860 1
+#: rc.c:712
+d864 1
+a864 1
+#: rc.c:715
+d868 1
+a868 1
+#: rc.c:718
+d877 1
+a877 1
+#: rc.c:1197
+@
+
+
+1.11
+log
+@* [w3m-dev 04237] [patch] cookie avoid [wrong number of dots]
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2010-07-26 16:12+0900\n"
+d15 1
+d205 1
+a205 1
+msgid "Use graphic char for border of table and menu"
+d804 13
+a816 1
+#: rc.c:695
+d820 1
+a820 1
+#: rc.c:697
+d824 1
+a824 1
+#: rc.c:699
+d828 1
+a828 1
+#: rc.c:700
+d832 1
+a832 1
+#: rc.c:701
+d836 1
+a836 1
+#: rc.c:702
+d840 1
+a840 1
+#: rc.c:703
+d844 1
+a844 1
+#: rc.c:705
+d848 1
+a848 1
+#: rc.c:708
+d852 1
+a852 1
+#: rc.c:711
+d861 1
+a861 1
+#: rc.c:1190
+@
+
+
+1.10
+log
+@* merge ambiguous width patch
+* http://www.j10n.org/files/w3m-cvs-1.914-ambwidth.patch
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2010-07-24 17:31+0900\n"
+d575 5
+a579 1
+#: rc.c:204
+d583 1
+a583 1
+#: rc.c:205
+d587 1
+a587 1
+#: rc.c:208
+d591 1
+a591 1
+#: rc.c:209
+d595 1
+a595 1
+#: rc.c:213
+d599 1
+a599 1
+#: rc.c:214
+d603 1
+a603 1
+#: rc.c:215
+d607 1
+a607 1
+#: rc.c:216
+d611 1
+a611 1
+#: rc.c:217
+d615 1
+a615 1
+#: rc.c:218
+d619 1
+a619 1
+#: rc.c:219
+d623 1
+a623 1
+#: rc.c:220
+d627 1
+a627 1
+#: rc.c:221
+d631 1
+a631 1
+#: rc.c:222
+d635 1
+a635 1
+#: rc.c:223
+d639 1
+a639 1
+#: rc.c:224
+d643 1
+a643 1
+#: rc.c:225
+d647 1
+a647 1
+#: rc.c:226
+d651 1
+a651 1
+#: rc.c:227
+d655 1
+a655 1
+#: rc.c:228
+d659 1
+a659 1
+#: rc.c:229
+d663 1
+a663 1
+#: rc.c:230
+d667 1
+a667 1
+#: rc.c:231
+d671 1
+a671 1
+#: rc.c:232
+d675 1
+a675 1
+#: rc.c:233
+d679 1
+a679 1
+#: rc.c:234
+d683 1
+a683 1
+#: rc.c:235
+d687 1
+a687 1
+#: rc.c:238
+d691 1
+a691 1
+#: rc.c:255
+d695 1
+a695 1
+#: rc.c:256
+d699 1
+a699 1
+#: rc.c:257
+d703 1
+a703 1
+#: rc.c:258
+d707 1
+a707 1
+#: rc.c:259
+d711 1
+a711 1
+#: rc.c:260
+d715 1
+a715 1
+#: rc.c:261
+d719 1
+a719 1
+#: rc.c:262
+d723 1
+a723 1
+#: rc.c:263
+d727 1
+a727 1
+#: rc.c:282
+d731 1
+a731 1
+#: rc.c:283
+d735 1
+a735 1
+#: rc.c:284
+d739 1
+a739 1
+#: rc.c:289
+d743 1
+a743 1
+#: rc.c:290
+d747 1
+a747 1
+#: rc.c:291
+d751 1
+a751 1
+#: rc.c:297
+d755 1
+a755 1
+#: rc.c:298
+d759 1
+a759 1
+#: rc.c:305
+d763 1
+a763 1
+#: rc.c:306
+d767 1
+a767 1
+#: rc.c:307
+d771 1
+a771 1
+#: rc.c:308
+d775 1
+a775 1
+#: rc.c:309
+d779 1
+a779 1
+#: rc.c:316
+d783 1
+a783 1
+#: rc.c:318
+d787 1
+a787 1
+#: rc.c:320
+d791 1
+a791 1
+#: rc.c:330
+d795 1
+a795 1
+#: rc.c:331
+d799 1
+a799 1
+#: rc.c:332
+d803 1
+a803 1
+#: rc.c:691
+d807 1
+a807 1
+#: rc.c:693
+d811 1
+a811 1
+#: rc.c:695
+d815 1
+a815 1
+#: rc.c:696
+d819 1
+a819 1
+#: rc.c:697
+d823 1
+a823 1
+#: rc.c:698
+d827 1
+a827 1
+#: rc.c:699
+d831 1
+a831 1
+#: rc.c:701
+d835 1
+a835 1
+#: rc.c:704
+d839 1
+a839 1
+#: rc.c:707
+d848 1
+a848 1
+#: rc.c:1183
+@
+
+
+1.9
+log
+@* update messages.
+* use UTF-8.
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2010-07-21 19:30+0900\n"
+d624 4
+d631 1
+a631 1
+#: rc.c:222
+d635 1
+a635 1
+#: rc.c:223
+d639 1
+a639 1
+#: rc.c:224
+d643 1
+a643 1
+#: rc.c:225
+d647 1
+a647 1
+#: rc.c:226
+d651 1
+a651 1
+#: rc.c:227
+d655 1
+a655 1
+#: rc.c:228
+d659 1
+a659 1
+#: rc.c:229
+d663 1
+a663 1
+#: rc.c:230
+d667 1
+a667 1
+#: rc.c:231
+d671 1
+a671 1
+#: rc.c:232
+d675 1
+a675 1
+#: rc.c:233
+d679 1
+a679 1
+#: rc.c:234
+d683 1
+a683 1
+#: rc.c:237
+d687 1
+a687 1
+#: rc.c:254
+d691 1
+a691 1
+#: rc.c:255
+d695 1
+a695 1
+#: rc.c:256
+d699 1
+a699 1
+#: rc.c:257
+d703 1
+a703 1
+#: rc.c:258
+d707 1
+a707 1
+#: rc.c:259
+d711 1
+a711 1
+#: rc.c:260
+d715 1
+a715 1
+#: rc.c:261
+d719 1
+a719 1
+#: rc.c:262
+d723 1
+a723 1
+#: rc.c:281
+d727 1
+a727 1
+#: rc.c:282
+d731 1
+a731 1
+#: rc.c:283
+d735 1
+a735 1
+#: rc.c:288
+d739 1
+a739 1
+#: rc.c:289
+d743 1
+a743 1
+#: rc.c:290
+d747 1
+a747 1
+#: rc.c:296
+d751 1
+a751 1
+#: rc.c:297
+d755 1
+a755 1
+#: rc.c:304
+d759 1
+a759 1
+#: rc.c:305
+d763 1
+a763 1
+#: rc.c:306
+d767 1
+a767 1
+#: rc.c:307
+d771 1
+a771 1
+#: rc.c:308
+d775 1
+a775 1
+#: rc.c:315
+d779 1
+a779 1
+#: rc.c:317
+d783 1
+a783 1
+#: rc.c:319
+d787 1
+a787 1
+#: rc.c:329
+d791 1
+a791 1
+#: rc.c:330
+d795 1
+a795 1
+#: rc.c:331
+d799 1
+a799 13
+#: rc.c:337
+msgid "No"
+msgstr ""
+
+#: rc.c:338
+msgid "Yes, but only charset specific"
+msgstr ""
+
+#: rc.c:339
+msgid "Yes"
+msgstr ""
+
+#: rc.c:695
+d803 1
+a803 1
+#: rc.c:697
+d807 1
+a807 1
+#: rc.c:699
+d811 1
+a811 1
+#: rc.c:700
+d815 1
+a815 1
+#: rc.c:701
+d819 1
+a819 1
+#: rc.c:702
+d823 1
+a823 1
+#: rc.c:703
+d827 1
+a827 1
+#: rc.c:705
+d831 1
+a831 1
+#: rc.c:708
+d835 1
+a835 1
+#: rc.c:711
+d844 1
+a844 1
+#: rc.c:1187
+@
+
+
+1.8
+log
+@w3m 0.5.2 release
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2007-05-28 19:49+0900\n"
+d152 4
+d159 1
+a159 1
+#: rc.c:76
+d163 1
+a163 1
+#: rc.c:77
+d168 4
+d175 1
+a175 1
+#: rc.c:80
+d179 1
+a179 1
+#: rc.c:81
+d183 1
+a183 1
+#: rc.c:82
+d187 1
+a187 1
+#: rc.c:83
+d191 1
+a191 1
+#: rc.c:84
+d195 1
+a195 1
+#: rc.c:86
+d199 1
+a199 1
+#: rc.c:87
+d203 1
+a203 1
+#: rc.c:88
+d207 1
+a207 1
+#: rc.c:89
+d211 1
+a211 1
+#: rc.c:90
+d215 1
+a215 1
+#: rc.c:91
+d219 1
+a219 1
+#: rc.c:92
+d223 1
+a223 1
+#: rc.c:93
+d227 1
+a227 1
+#: rc.c:94
+d231 1
+a231 1
+#: rc.c:95
+d235 1
+a235 1
+#: rc.c:96
+d239 1
+a239 1
+#: rc.c:97
+d243 1
+a243 1
+#: rc.c:98
+d247 1
+a247 1
+#: rc.c:99
+d251 1
+a251 1
+#: rc.c:100
+d255 1
+a255 1
+#: rc.c:101
+d259 1
+a259 1
+#: rc.c:102
+d263 1
+a263 1
+#: rc.c:103
+d267 1
+a267 1
+#: rc.c:105
+d271 1
+a271 1
+#: rc.c:108
+d275 1
+a275 1
+#: rc.c:110
+d279 1
+a279 1
+#: rc.c:111
+d283 1
+a283 1
+#: rc.c:112
+d287 1
+a287 1
+#: rc.c:113
+d291 1
+a291 1
+#: rc.c:115
+d295 1
+a295 1
+#: rc.c:116
+d299 1
+a299 1
+#: rc.c:117
+d303 1
+a303 1
+#: rc.c:119
+d307 1
+a307 1
+#: rc.c:120
+d311 1
+a311 1
+#: rc.c:121
+d315 1
+a315 1
+#: rc.c:122
+d319 1
+a319 1
+#: rc.c:123
+d323 1
+a323 1
+#: rc.c:124
+d327 1
+a327 1
+#: rc.c:126
+d331 1
+a331 1
+#: rc.c:128
+d335 1
+a335 1
+#: rc.c:129
+d339 1
+a339 1
+#: rc.c:130
+d343 1
+a343 1
+#: rc.c:131
+d347 1
+a347 1
+#: rc.c:132
+d351 1
+a351 1
+#: rc.c:133
+d355 1
+a355 1
+#: rc.c:134
+d359 1
+a359 1
+#: rc.c:135
+d363 1
+a363 1
+#: rc.c:136
+d367 1
+a367 1
+#: rc.c:137
+d371 1
+a371 1
+#: rc.c:138
+d375 1
+a375 1
+#: rc.c:139
+d379 1
+a379 1
+#: rc.c:140
+d383 1
+a383 1
+#: rc.c:141
+d387 1
+a387 1
+#: rc.c:142
+d391 1
+a391 1
+#: rc.c:143
+d395 1
+a395 1
+#: rc.c:144
+d399 1
+a399 1
+#: rc.c:145
+d403 1
+a403 1
+#: rc.c:146
+d407 1
+a407 1
+#: rc.c:147
+d411 1
+a411 1
+#: rc.c:148
+d415 1
+a415 1
+#: rc.c:149
+d419 1
+a419 1
+#: rc.c:150
+d423 1
+a423 1
+#: rc.c:151
+d427 1
+a427 1
+#: rc.c:152
+d431 1
+a431 1
+#: rc.c:153
+d435 1
+a435 1
+#: rc.c:154
+d439 1
+a439 1
+#: rc.c:155
+d443 1
+a443 1
+#: rc.c:157
+d447 1
+a447 1
+#: rc.c:159
+d451 1
+a451 1
+#: rc.c:161
+d455 1
+a455 1
+#: rc.c:162
+d459 1
+a459 1
+#: rc.c:164
+d463 1
+a463 1
+#: rc.c:165
+d467 1
+a467 1
+#: rc.c:167
+d471 1
+a471 1
+#: rc.c:168
+d475 1
+a475 1
+#: rc.c:169
+d479 1
+a479 1
+#: rc.c:170
+d483 1
+a483 1
+#: rc.c:171
+d487 1
+a487 1
+#: rc.c:172
+d491 1
+a491 1
+#: rc.c:174
+d495 1
+a495 1
+#: rc.c:175
+d499 1
+a499 1
+#: rc.c:176
+d503 1
+a503 1
+#: rc.c:177
+d507 1
+a507 1
+#: rc.c:178
+d511 1
+a511 1
+#: rc.c:180
+d515 1
+a515 1
+#: rc.c:181
+d519 1
+a519 1
+#: rc.c:182
+d523 1
+a523 1
+#: rc.c:183
+d527 1
+a527 1
+#: rc.c:186
+d531 1
+a531 1
+#: rc.c:187
+d535 1
+a535 1
+#: rc.c:188
+d539 1
+a539 1
+#: rc.c:189
+d543 1
+a543 1
+#: rc.c:190
+d547 1
+a547 1
+#: rc.c:192
+d551 1
+a551 1
+#: rc.c:195
+d555 1
+a555 1
+#: rc.c:196
+d559 1
+a559 1
+#: rc.c:197
+d563 1
+a563 1
+#: rc.c:198
+d567 1
+a567 1
+#: rc.c:199
+d571 1
+a571 1
+#: rc.c:200
+d575 1
+a575 1
+#: rc.c:202
+d579 1
+a579 1
+#: rc.c:203
+d583 1
+a583 1
+#: rc.c:206
+d587 1
+a587 1
+#: rc.c:207
+d591 1
+a591 1
+#: rc.c:211
+d595 1
+a595 1
+#: rc.c:212
+d599 1
+a599 1
+#: rc.c:213
+d603 1
+a603 1
+#: rc.c:214
+d607 1
+a607 1
+#: rc.c:215
+d611 1
+a611 1
+#: rc.c:216
+d615 1
+a615 1
+#: rc.c:217
+d619 1
+a619 1
+#: rc.c:218
+d623 1
+a623 1
+#: rc.c:219
+d627 1
+a627 1
+#: rc.c:220
+d631 1
+a631 1
+#: rc.c:221
+d635 1
+a635 1
+#: rc.c:222
+d639 1
+a639 1
+#: rc.c:223
+d643 1
+a643 1
+#: rc.c:224
+d647 1
+a647 1
+#: rc.c:225
+d651 1
+a651 1
+#: rc.c:226
+d655 1
+a655 1
+#: rc.c:227
+d659 1
+a659 1
+#: rc.c:228
+d663 1
+a663 1
+#: rc.c:229
+d667 1
+a667 1
+#: rc.c:230
+d671 1
+a671 1
+#: rc.c:231
+d676 4
+d683 1
+a683 1
+#: rc.c:251
+d687 1
+a687 1
+#: rc.c:252
+d691 1
+a691 1
+#: rc.c:253
+d695 1
+a695 1
+#: rc.c:254
+d699 1
+a699 1
+#: rc.c:255
+d703 1
+a703 1
+#: rc.c:256
+d707 1
+a707 1
+#: rc.c:257
+d711 1
+a711 1
+#: rc.c:258
+d715 1
+a715 1
+#: rc.c:259
+d719 1
+a719 1
+#: rc.c:278
+d723 1
+a723 1
+#: rc.c:279
+d727 1
+a727 1
+#: rc.c:280
+d731 1
+a731 1
+#: rc.c:285
+d735 1
+a735 1
+#: rc.c:286
+d739 1
+a739 1
+#: rc.c:287
+d743 1
+a743 1
+#: rc.c:293
+d747 1
+a747 1
+#: rc.c:294
+d751 1
+a751 1
+#: rc.c:301
+d755 1
+a755 1
+#: rc.c:302
+d759 1
+a759 1
+#: rc.c:303
+d763 1
+a763 1
+#: rc.c:304
+d767 1
+a767 1
+#: rc.c:305
+d771 1
+a771 1
+#: rc.c:312
+d775 1
+a775 1
+#: rc.c:314
+d779 1
+a779 1
+#: rc.c:316
+d783 1
+a783 1
+#: rc.c:326
+d787 1
+a787 1
+#: rc.c:327
+d791 1
+a791 1
+#: rc.c:328
+d795 13
+a807 1
+#: rc.c:679
+d811 1
+a811 1
+#: rc.c:681
+d815 1
+a815 1
+#: rc.c:683
+d819 1
+a819 1
+#: rc.c:684
+d823 1
+a823 1
+#: rc.c:685
+d827 1
+a827 1
+#: rc.c:686
+d831 1
+a831 1
+#: rc.c:687
+d835 1
+a835 1
+#: rc.c:689
+d839 1
+a839 1
+#: rc.c:692
+d843 1
+a843 1
+#: rc.c:695
+d852 1
+a852 1
+#: rc.c:1169
+@
+
+
+1.7
+log
+@pot-update.
+@
+text
+@d10 1
+a10 1
+"Report-Msgid-Bugs-To: ukai@@debian.or.jp\n"
+@
+
+
+1.6
+log
+@[w3m-dev 04236] expand display_ins_del to select a type of fontify.
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2007-05-07 10:49+0900\n"
+d204 1
+a204 1
+msgid "Display DEL, S and STRIKE element"
+d724 1
+a724 1
+msgid "normal"
+d828 1
+a828 1
+#: rc.c:1163
+@
+
+
+1.5
+log
+@[w3m-dev 04184] automatic uncompression in downloading
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2004-07-14 15:51+0900\n"
+d548 4
+d555 1
+a555 1
+#: rc.c:197
+d559 1
+a559 1
+#: rc.c:198
+d563 1
+a563 1
+#: rc.c:199
+d567 1
+a567 1
+#: rc.c:201
+d571 1
+a571 1
+#: rc.c:202
+d575 1
+a575 1
+#: rc.c:205
+d579 1
+a579 1
+#: rc.c:206
+d583 1
+a583 1
+#: rc.c:210
+d587 1
+a587 1
+#: rc.c:211
+d591 1
+a591 1
+#: rc.c:212
+d595 1
+a595 1
+#: rc.c:213
+d599 1
+a599 1
+#: rc.c:214
+d603 1
+a603 1
+#: rc.c:215
+d607 1
+a607 1
+#: rc.c:216
+d611 1
+a611 1
+#: rc.c:217
+d615 1
+a615 1
+#: rc.c:218
+d619 1
+a619 1
+#: rc.c:219
+d623 1
+a623 1
+#: rc.c:220
+d627 1
+a627 1
+#: rc.c:221
+d631 1
+a631 1
+#: rc.c:222
+d635 1
+a635 1
+#: rc.c:223
+d639 1
+a639 1
+#: rc.c:224
+d643 1
+a643 1
+#: rc.c:225
+d647 1
+a647 1
+#: rc.c:226
+d651 1
+a651 1
+#: rc.c:227
+d655 1
+a655 1
+#: rc.c:228
+d659 1
+a659 1
+#: rc.c:229
+d663 1
+a663 1
+#: rc.c:230
+d667 1
+a667 1
+#: rc.c:233
+d671 1
+a671 1
+#: rc.c:250
+d675 1
+a675 1
+#: rc.c:251
+d679 1
+a679 1
+#: rc.c:252
+d683 1
+a683 1
+#: rc.c:253
+d687 1
+a687 1
+#: rc.c:254
+d691 1
+a691 1
+#: rc.c:255
+d695 1
+a695 1
+#: rc.c:256
+d699 1
+a699 1
+#: rc.c:257
+d703 1
+a703 1
+#: rc.c:258
+d707 1
+a707 1
+#: rc.c:277
+d711 1
+a711 1
+#: rc.c:278
+d715 1
+a715 1
+#: rc.c:279
+d720 12
+d735 1
+a735 1
+#: rc.c:286
+d739 1
+a739 1
+#: rc.c:293
+d743 1
+a743 1
+#: rc.c:294
+d747 1
+a747 1
+#: rc.c:295
+d751 1
+a751 1
+#: rc.c:296
+d755 1
+a755 1
+#: rc.c:297
+d759 1
+a759 1
+#: rc.c:304
+d763 1
+a763 1
+#: rc.c:306
+d767 1
+a767 1
+#: rc.c:308
+d771 1
+a771 1
+#: rc.c:318
+d775 1
+a775 1
+#: rc.c:319
+d779 1
+a779 1
+#: rc.c:320
+d783 1
+a783 1
+#: rc.c:667
+d787 1
+a787 1
+#: rc.c:669
+d791 1
+a791 1
+#: rc.c:671
+d795 1
+a795 1
+#: rc.c:672
+d799 1
+a799 1
+#: rc.c:673
+d803 1
+a803 1
+#: rc.c:674
+d807 1
+a807 1
+#: rc.c:675
+d811 1
+a811 1
+#: rc.c:677
+d815 1
+a815 1
+#: rc.c:680
+d819 1
+a819 1
+#: rc.c:683
+d828 1
+a828 1
+#: rc.c:1151
+@
+
+
+1.4
+log
+@[w3m-dev 04091] option panel: gettextize select list
+* rc.c: gettextize option select list.
+* rc.c: add gettextize message.
+* po/w3m.pot: ditto.
+* po/ja.po: ditto.
+From: WATANABE Katsuyuki <knabe@@sannet.ne.jp>
+@
+text
+@d431 5
+a435 1
+#: rc.c:156
+d439 1
+a439 1
+#: rc.c:158
+d443 1
+a443 1
+#: rc.c:160
+d447 1
+a447 1
+#: rc.c:161
+d451 1
+a451 1
+#: rc.c:163
+d455 1
+a455 1
+#: rc.c:164
+d459 1
+a459 1
+#: rc.c:166
+d463 1
+a463 1
+#: rc.c:167
+d467 1
+a467 1
+#: rc.c:168
+d471 1
+a471 1
+#: rc.c:169
+d475 1
+a475 1
+#: rc.c:170
+d479 1
+a479 1
+#: rc.c:171
+d483 1
+a483 1
+#: rc.c:173
+d487 1
+a487 1
+#: rc.c:174
+d491 1
+a491 1
+#: rc.c:175
+d495 1
+a495 1
+#: rc.c:176
+d499 1
+a499 1
+#: rc.c:177
+d503 1
+a503 1
+#: rc.c:179
+d507 1
+a507 1
+#: rc.c:180
+d511 1
+a511 1
+#: rc.c:181
+d515 1
+a515 1
+#: rc.c:182
+d519 1
+a519 1
+#: rc.c:185
+d523 1
+a523 1
+#: rc.c:186
+d527 1
+a527 1
+#: rc.c:187
+d531 1
+a531 1
+#: rc.c:188
+d535 1
+a535 1
+#: rc.c:189
+d539 1
+a539 1
+#: rc.c:191
+d543 1
+a543 1
+#: rc.c:194
+d547 1
+a547 1
+#: rc.c:195
+d551 1
+a551 1
+#: rc.c:196
+d555 1
+a555 1
+#: rc.c:197
+d559 1
+a559 1
+#: rc.c:198
+d563 1
+a563 1
+#: rc.c:200
+d567 1
+a567 1
+#: rc.c:201
+d571 1
+a571 1
+#: rc.c:204
+d575 1
+a575 1
+#: rc.c:205
+d579 1
+a579 1
+#: rc.c:209
+d583 1
+a583 1
+#: rc.c:210
+d587 1
+a587 1
+#: rc.c:211
+d591 1
+a591 1
+#: rc.c:212
+d595 1
+a595 1
+#: rc.c:213
+d599 1
+a599 1
+#: rc.c:214
+d603 1
+a603 1
+#: rc.c:215
+d607 1
+a607 1
+#: rc.c:216
+d611 1
+a611 1
+#: rc.c:217
+d615 1
+a615 1
+#: rc.c:218
+d619 1
+a619 1
+#: rc.c:219
+d623 1
+a623 1
+#: rc.c:220
+d627 1
+a627 1
+#: rc.c:221
+d631 1
+a631 1
+#: rc.c:222
+d635 1
+a635 1
+#: rc.c:223
+d639 1
+a639 1
+#: rc.c:224
+d643 1
+a643 1
+#: rc.c:225
+d647 1
+a647 1
+#: rc.c:226
+d651 1
+a651 1
+#: rc.c:227
+d655 1
+a655 1
+#: rc.c:228
+d659 1
+a659 1
+#: rc.c:229
+d663 1
+a663 1
+#: rc.c:232
+d667 1
+a667 1
+#: rc.c:249
+d671 1
+a671 1
+#: rc.c:250
+d675 1
+a675 1
+#: rc.c:251
+d679 1
+a679 1
+#: rc.c:252
+d683 1
+a683 1
+#: rc.c:253
+d687 1
+a687 1
+#: rc.c:254
+d691 1
+a691 1
+#: rc.c:255
+d695 1
+a695 1
+#: rc.c:256
+d699 1
+a699 1
+#: rc.c:257
+d703 1
+a703 1
+#: rc.c:276
+d707 1
+a707 1
+#: rc.c:277
+d711 1
+a711 1
+#: rc.c:278
+d715 1
+a715 1
+#: rc.c:284
+d719 1
+a719 1
+#: rc.c:285
+d723 1
+a723 1
+#: rc.c:292
+d727 1
+a727 1
+#: rc.c:293
+d731 1
+a731 1
+#: rc.c:294
+d735 1
+a735 1
+#: rc.c:295
+d739 1
+a739 1
+#: rc.c:296
+d743 1
+a743 1
+#: rc.c:303
+d747 1
+a747 1
+#: rc.c:305
+d751 1
+a751 1
+#: rc.c:307
+d755 1
+a755 1
+#: rc.c:317
+d759 1
+a759 1
+#: rc.c:318
+d763 1
+a763 1
+#: rc.c:319
+d767 1
+a767 1
+#: rc.c:666
+d771 1
+a771 1
+#: rc.c:668
+d775 1
+a775 1
+#: rc.c:670
+d779 1
+a779 1
+#: rc.c:671
+d783 1
+a783 1
+#: rc.c:672
+d787 1
+a787 1
+#: rc.c:673
+d791 1
+a791 1
+#: rc.c:674
+d795 1
+a795 1
+#: rc.c:676
+d799 1
+a799 1
+#: rc.c:679
+d803 1
+a803 1
+#: rc.c:682
+d812 1
+a812 1
+#: rc.c:1150
+@
+
+
+1.3
+log
+@w3m 0.5.1
+* version.c.in: update
+* doc/README: version 0.5, release date, maintainer
+* doc-jp/README: ditto
+* NEWS: update
+* configure.in: version 0.5.1
+* po/w3m.pot, ja.po: update-po
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2004-04-29 03:17+0900\n"
+d719 44
+@
+
+
+1.2
+log
+@update-po
+@
+text
+@d11 1
+a11 1
+"POT-Creation-Date: 2003-09-26 03:34+0900\n"
+d663 1
+a663 1
+#: rc.c:262
+d667 1
+a667 1
+#: rc.c:263
+d671 1
+a671 1
+#: rc.c:264
+d675 1
+a675 1
+#: rc.c:265
+d679 1
+a679 1
+#: rc.c:266
+d683 1
+a683 1
+#: rc.c:267
+d687 1
+a687 1
+#: rc.c:268
+d691 1
+a691 1
+#: rc.c:269
+d695 1
+a695 1
+#: rc.c:270
+d699 1
+a699 1
+#: rc.c:296
+d703 1
+a703 1
+#: rc.c:297
+d707 1
+a707 1
+#: rc.c:298
+d711 1
+a711 1
+#: rc.c:311
+d715 1
+a715 1
+#: rc.c:312
+d719 1
+a719 1
+#: rc.c:717
+d723 1
+a723 1
+#: rc.c:719
+d727 1
+a727 1
+#: rc.c:721
+d731 1
+a731 1
+#: rc.c:722
+d735 1
+a735 1
+#: rc.c:723
+d739 1
+a739 1
+#: rc.c:724
+d743 1
+a743 1
+#: rc.c:725
+d747 1
+a747 1
+#: rc.c:727
+d751 1
+a751 1
+#: rc.c:730
+d755 1
+a755 1
+#: rc.c:733
+d764 1
+a764 1
+#: rc.c:1206
+@
+
+
+1.1
+log
+@gettextize
+* Makefile.in: updated
+* menu.c: gettextize
+* rc.c: gettextize
+* intl/.cvsignore: added
+* po/.cvsignore: added
+* po/Makevars: added
+* po/Makevars.template: removed
+* po/POTFILES.in: updated
+* po/w3m.pot: created
+* po/ja.po: created
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d2 1
+a2 1
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+d11 2
+a12 2
+"POT-Creation-Date: 2003-09-25 02:19+0900\n"
+"PO-Revision-Date: 2003-09-25 02:23+0900\n"
+d19 1
+a19 1
+#: menu.c:299
+d23 1
+a23 1
+#: menu.c:300
+d27 1
+a27 1
+#: menu.c:301
+d31 1
+a31 1
+#: menu.c:302
+d35 1
+a35 1
+#: menu.c:303
+d39 1
+a39 1
+#: menu.c:304
+d43 1
+a43 1
+#: menu.c:305
+d47 1
+a47 1
+#: menu.c:306 menu.c:313 menu.c:317
+d51 1
+a51 1
+#: menu.c:307
+d55 1
+a55 1
+#: menu.c:308
+d59 1
+a59 1
+#: menu.c:309
+d63 1
+a63 1
+#: menu.c:310
+d67 1
+a67 1
+#: menu.c:311
+d71 1
+a71 1
+#: menu.c:312
+d75 1
+a75 1
+#: menu.c:314
+d79 1
+a79 1
+#: menu.c:315
+d83 1
+a83 1
+#: menu.c:316
+d87 1
+a87 1
+#: menu.c:318
+d91 1
+a91 1
+#: rc.c:240
+d95 1
+a95 1
+#: rc.c:241
+d99 1
+a99 1
+#: rc.c:242
+d103 1
+a103 1
+#: rc.c:243
+d107 1
+a107 1
+#: rc.c:244
+d111 1
+a111 1
+#: rc.c:245
+d115 1
+a115 1
+#: rc.c:246
+d119 1
+a119 1
+#: rc.c:247
+d123 1
+a123 1
+#: rc.c:248
+d127 1
+a127 1
+#: rc.c:249
+d131 1
+a131 1
+#: rc.c:250
+d135 1
+a135 1
+#: rc.c:251
+d139 1
+a139 1
+#: rc.c:252
+d143 1
+a143 1
+#: rc.c:253
+d147 1
+a147 1
+#: rc.c:254
+d151 1
+a151 1
+#: rc.c:255
+d155 1
+a155 1
+#: rc.c:256
+d159 1
+a159 1
+#: rc.c:257
+d163 1
+a163 1
+#: rc.c:259
+d167 1
+a167 1
+#: rc.c:260
+d171 1
+a171 1
+#: rc.c:261
+d175 1
+a175 1
+#: rc.c:262
+d179 1
+a179 1
+#: rc.c:263
+d183 1
+a183 1
+#: rc.c:264
+d187 1
+a187 1
+#: rc.c:266
+d191 1
+a191 1
+#: rc.c:267
+d195 1
+a195 1
+#: rc.c:268
+d199 1
+a199 1
+#: rc.c:269
+d203 1
+a203 1
+#: rc.c:270
+d207 1
+a207 1
+#: rc.c:271
+d211 1
+a211 1
+#: rc.c:272
+d215 1
+a215 1
+#: rc.c:273
+d219 1
+a219 1
+#: rc.c:274
+d223 1
+a223 1
+#: rc.c:275
+d227 1
+a227 1
+#: rc.c:276
+d231 1
+a231 1
+#: rc.c:277
+d235 1
+a235 1
+#: rc.c:278
+d239 1
+a239 1
+#: rc.c:279
+d243 1
+a243 1
+#: rc.c:280
+d247 1
+a247 1
+#: rc.c:281
+d251 1
+a251 1
+#: rc.c:282
+d255 1
+a255 1
+#: rc.c:283
+d259 1
+a259 1
+#: rc.c:285
+d263 1
+a263 1
+#: rc.c:288
+d267 1
+a267 1
+#: rc.c:290
+d271 1
+a271 1
+#: rc.c:291
+d275 1
+a275 1
+#: rc.c:292
+d279 1
+a279 1
+#: rc.c:293
+d283 1
+a283 1
+#: rc.c:295
+d287 1
+a287 1
+#: rc.c:296
+d291 1
+a291 1
+#: rc.c:297
+d295 1
+a295 1
+#: rc.c:299
+d299 1
+a299 1
+#: rc.c:300
+d303 1
+a303 1
+#: rc.c:301
+d307 1
+a307 1
+#: rc.c:302
+d311 1
+a311 1
+#: rc.c:303
+d315 1
+a315 1
+#: rc.c:304
+d319 1
+a319 1
+#: rc.c:306
+d323 1
+a323 1
+#: rc.c:308
+d327 1
+a327 1
+#: rc.c:309
+d331 1
+a331 1
+#: rc.c:310
+d335 1
+a335 1
+#: rc.c:311
+d339 1
+a339 1
+#: rc.c:312
+d343 1
+a343 1
+#: rc.c:313
+d347 1
+a347 1
+#: rc.c:314
+d351 1
+a351 1
+#: rc.c:315
+d355 1
+a355 1
+#: rc.c:316
+d359 1
+a359 1
+#: rc.c:317
+d363 1
+a363 1
+#: rc.c:318
+d367 1
+a367 1
+#: rc.c:319
+d371 1
+a371 1
+#: rc.c:320
+d375 1
+a375 1
+#: rc.c:321
+d379 1
+a379 1
+#: rc.c:322
+d383 1
+a383 1
+#: rc.c:323
+d387 1
+a387 1
+#: rc.c:324
+d391 1
+a391 1
+#: rc.c:325
+d395 1
+a395 1
+#: rc.c:326
+d399 1
+a399 1
+#: rc.c:327
+d403 1
+a403 1
+#: rc.c:328
+d407 1
+a407 1
+#: rc.c:329
+d411 1
+a411 1
+#: rc.c:330
+d415 1
+a415 1
+#: rc.c:331
+d419 1
+a419 1
+#: rc.c:332
+d423 1
+a423 1
+#: rc.c:333
+d427 1
+a427 1
+#: rc.c:334
+d431 1
+a431 1
+#: rc.c:336
+d435 1
+a435 1
+#: rc.c:338
+d439 1
+a439 1
+#: rc.c:340
+d443 1
+a443 1
+#: rc.c:341
+d447 1
+a447 1
+#: rc.c:343
+d451 1
+a451 1
+#: rc.c:344
+d455 1
+a455 1
+#: rc.c:346
+d459 1
+a459 1
+#: rc.c:347
+d463 1
+a463 1
+#: rc.c:348
+d467 1
+a467 1
+#: rc.c:349
+d471 1
+a471 1
+#: rc.c:350
+d475 1
+a475 1
+#: rc.c:351
+d479 1
+a479 1
+#: rc.c:353
+d483 1
+a483 1
+#: rc.c:354
+d487 1
+a487 1
+#: rc.c:355
+d491 2
+a492 3
+#: rc.c:356
+#, no-c-format
+msgid "(A only)Scroll by # % of screen"
+d495 1
+a495 1
+#: rc.c:357
+d499 1
+a499 1
+#: rc.c:359
+d503 1
+a503 1
+#: rc.c:360
+d507 1
+a507 1
+#: rc.c:361
+d511 1
+a511 1
+#: rc.c:362
+d515 1
+a515 1
+#: rc.c:365
+d519 1
+a519 1
+#: rc.c:366
+d523 1
+a523 1
+#: rc.c:367
+d527 1
+a527 1
+#: rc.c:368
+d531 1
+a531 1
+#: rc.c:369
+d535 1
+a535 1
+#: rc.c:371
+d539 1
+a539 1
+#: rc.c:374
+d543 1
+a543 1
+#: rc.c:375
+d547 1
+a547 1
+#: rc.c:376
+d551 1
+a551 1
+#: rc.c:377
+d555 1
+a555 1
+#: rc.c:378
+d559 1
+a559 1
+#: rc.c:380
+d563 1
+a563 1
+#: rc.c:381
+d567 1
+a567 1
+#: rc.c:384
+d571 1
+a571 1
+#: rc.c:385
+d575 1
+a575 1
+#: rc.c:389
+d579 1
+a579 1
+#: rc.c:390
+d583 1
+a583 1
+#: rc.c:391
+d587 1
+a587 1
+#: rc.c:392
+d591 1
+a591 1
+#: rc.c:393
+d595 1
+a595 1
+#: rc.c:394
+d599 1
+a599 1
+#: rc.c:395
+d603 1
+a603 1
+#: rc.c:396
+d607 1
+a607 1
+#: rc.c:397
+d611 1
+a611 1
+#: rc.c:398
+d615 1
+a615 1
+#: rc.c:399
+d619 1
+a619 1
+#: rc.c:400
+d623 1
+a623 1
+#: rc.c:401
+d627 1
+a627 1
+#: rc.c:402
+d631 1
+a631 1
+#: rc.c:403
+d635 1
+a635 1
+#: rc.c:404
+d639 1
+a639 1
+#: rc.c:405
+d643 1
+a643 1
+#: rc.c:406
+d647 1
+a647 1
+#: rc.c:407
+d651 1
+a651 1
+#: rc.c:408
+d655 1
+a655 1
+#: rc.c:409
+d659 1
+a659 1
+#: rc.c:412
+d663 1
+a663 1
+#: rc.c:444
+d667 1
+a667 1
+#: rc.c:445
+d671 1
+a671 1
+#: rc.c:446
+d675 1
+a675 1
+#: rc.c:447
+d679 1
+a679 1
+#: rc.c:448
+d683 1
+a683 1
+#: rc.c:449
+d687 1
+a687 1
+#: rc.c:450
+d691 1
+a691 1
+#: rc.c:451
+d695 1
+a695 1
+#: rc.c:452
+d699 1
+a699 1
+#: rc.c:478
+d703 1
+a703 1
+#: rc.c:479
+d707 1
+a707 1
+#: rc.c:480
+d711 1
+a711 1
+#: rc.c:493
+d715 1
+a715 1
+#: rc.c:494
+d719 1
+a719 1
+#: rc.c:899
+d723 1
+a723 1
+#: rc.c:901
+d727 1
+a727 1
+#: rc.c:903
+d731 1
+a731 1
+#: rc.c:904
+d735 1
+a735 1
+#: rc.c:905
+d739 1
+a739 1
+#: rc.c:906
+d743 1
+a743 1
+#: rc.c:907
+d747 1
+a747 1
+#: rc.c:909
+d751 1
+a751 1
+#: rc.c:912
+d755 1
+a755 1
+#: rc.c:915
+d759 6
+a764 1
+#: rc.c:1386
+@
+

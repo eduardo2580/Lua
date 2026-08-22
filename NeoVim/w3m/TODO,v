@@ -1,0 +1,540 @@
+head	1.21;
+access;
+symbols
+	release-0-5-3:1.21
+	release-0-5-2:1.21
+	release-0-5-1:1.21
+	release-0-5:1.20
+	release-0-4-2:1.19
+	release-0-4-1:1.19
+	release-0-4:1.19
+	release-0-4-rc3:1.19
+	release-0-4-rc2:1.18
+	release-0-4-rc1:1.16;
+locks; strict;
+comment	@# @;
+
+
+1.21
+date	2004.04.04.16.47.20;	author ukai;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.09.22.21.37.36;	author ukai;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.02.17.15.58.00;	author ukai;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.02.11.15.28.59;	author ukai;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.02.11.10.38.13;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.02.05.16.17.10;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.02.03.15.50.21;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.01.23.18.44.27;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.01.08.17.28.45;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.01.07.15.57.45;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.27.16.08.46;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.12.20.20.17.47;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.12.12.23.41.21;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.12.03.15.15.45;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.24.16.03.31;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.11.15.14.54;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.08.16.08.06;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.08.16.06.51;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.06.15.13.54;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.06.05.13.05;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.11.05.17.55.57;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.21
+log
+@[w3m-dev 04049] w3m-cvs-1.914-misc.patch
+* Makefile.in (funcname.tab): dont modify when target is unchanged.
+	(CFLAGS): need $(CPPFLAGS)?
+* config.h.in: add HAVE_STDINT_H, HAVE_INTTYPES_H
+* configure.in: s/AC_CANONICAL_SYSTEM/AC_CANONICAL_HOST/
+	don't use AC_CYGWIN
+	don't use $CYGWIN, use $host_os *cygwin*
+	AC_DEFINE in AC_CHECK_HEADER (float.h, sys/select.h)
+	add stdint.h, inttypes.h
+* etc.c (find_auth_pass_entry): host is case insensitive
+* libwc/wc_types.h: use stdint.h or inttypes.h
+* main.c (MAIN); need GC_init()
+From: AIDA Shinra <shinra@@j10n.org>
+@
+text
+@TODO lists
+
+refactoring
+ backend - ??
+ file - ??
+ local ?
+ func ?
+ indep ?
+ main
+
+utilities
+ Str - string modules
+ myctype
+ entity
+ symbol
+ hash
+ textlist
+ etc - system informations
+ history
+ inflate
+ matrix
+ regex
+
+configuration
+ rc
+
+UI
+ display
+ menu
+ search
+ keybind
+ linein
+ terms
+ mouse
+
+buffer
+ buffer
+
+loader - main controller
+ loader
+  - connection management
+  - protocol backends
+  - media management
+  - media processing
+
+URL
+ url
+  - protocol backends
+
+media management
+ mailcap
+ mimehead
+ mimetyps
+  - media procesings
+
+media processing
+ html
+  parsetag
+  parsetagx
+  anchor
+  form
+  frame
+  map
+  table
+  tagtable
+ plain
+ image
+  
+connection management
+ conn
+  ssl?
+ istream
+
+protocol backend
+ http
+  auth
+  cookie
+ ftp
+ news
+ ...
+
+
+Documentation
+ release notes for w3m-0.4
+	[w3m-dev 03739]
+
+new features
+* Keep alive
+* incremental display, background download
+	[w3m-dev 03389] background download
+* bookmark editor
+	[w3m-dev 03394] bookmark editor
+* w3mimgdisplay without X
+	[w3m-dev 03723] Re: w3mimgdisplayfb (independent of X)
+	http://homepage3.nifty.com/slokar/fb/w3mimgfb-0.6.tar.gz
+	http://homepage3.nifty.com/slokar/stimg/stimg-0.0.0.tar.gz
+* Internationalized Domain Name support
+	[w3m-dev 03727] Re: IDN support (test)
+	requires idnkit (http://www.nic.ad.jp/ja/idn/) and iconv.
+* SMB
+	Bonus/smb.cgi
+* JavaScript
+* gettextize
+
+cleanups
+* autoconfisicate
+* code review, cleanup
+
+bugs
+* fix [w3m-dev 02658] problem when form is reset
+  http://mi.med.tohoku.ac.jp/~satodai/w3m-dev/200112.month/2658.html
+
+* wishlist? [w3m-dev 03507] save space in JP chars
+
+* [w3m-dev-en 00875] USE_RAW_SCROLL
+
+[sf.net] http://sf.net/projects/w3m
+
+[bugs] http://bugs.debian.org/w3m
+
+* support for the <button> tag (HTML 4.01)
+ http://bugs.debian.org/136810
+
+* not working 'Ignore case when search' on non latin pages
+ http://bugs.debian.org/138891
+ => after m17n merge
+
+fixed
+
+wontfix / impossible to fix
+* w3m -dump generates too long lines
+ http://bugs.debian.org/149288 
+
+wishlist?
+* w3mman -l doesn't work
+ http://bugs.debian.org/138805
+
+done
+* merge m17n
+@
+
+
+1.20
+log
+@m17n patch merge done
+@
+text
+@d3 80
+@
+
+
+1.19
+log
+@update TODO
+@
+text
+@a21 1
+* merge m17n
+d23 1
+d58 2
+@
+
+
+1.18
+log
+@clean fixed
+@
+text
+@d35 2
+@
+
+
+1.17
+log
+@release note for w3m 0.4
+@
+text
+@d19 1
+a19 2
+	idnkit (http://www.nic.ad.jp/ja/idn/) と iconv が必要です。
+
+d21 1
+a38 6
+* parsing bug: omitting </p> should not matter, but it does
+ http://bugs.debian.org/115521
+
+* MOUSE_SCROLL_LINE should be a run-time option
+ http://bugs.debian.org/87472
+
+d46 1
+a46 13
+* w3m: Unable to use mozilla bugzilla
+ http://bugs.debian.org/170506
+ => [w3m-dev 03469]?
+    backport from w3m-js?
+
+fixed?
+* would like "forward to next buffer"
+ http://bugs.debian.org/51771
+ => tab browse?
+
+* alt attributes in area elements are ignored
+ http://bugs.debian.org/81555
+ => fixed in w3m 0.3? 
+@
+
+
+1.16
+log
+@update TODO
+@
+text
+@d4 2
+@
+
+
+1.15
+log
+@update TODO
+@
+text
+@d15 3
+@
+
+
+1.14
+log
+@NEWS: func: RESHAPE
+	rc: fold_line
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d11 4
+@
+
+
+1.13
+log
+@update TODO
+@
+text
+@a10 1
+* [w3m-dev 03591] fold lines of plain text
+@
+
+
+1.12
+log
+@update TODO
+@
+text
+@a11 1
+* [w3m-dev 03612] data: URL scheme
+@
+
+
+1.11
+log
+@rc: nntpserver, nntpmode, max_news
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d12 1
+@
+
+
+1.10
+log
+@update TODO
+@
+text
+@a5 1
+* news:<newsgroups> support
+@
+
+
+1.9
+log
+@update TODO
+@
+text
+@d12 1
+a12 2
+* preserve timestamp
+	[w3m-dev 03560][w3m-dev 03561]
+@
+
+
+1.8
+log
+@update
+@
+text
+@d12 3
+@
+
+
+1.7
+log
+@update TODO
+@
+text
+@d24 2
+@
+
+
+1.6
+log
+@close Bug#96349
+@
+text
+@d41 5
+@
+
+
+1.5
+log
+@update TODO
+@
+text
+@a27 3
+* when <img usemap> is inside a link, the map is not used
+ http://bugs.debian.org/96349
+
+@
+
+
+1.4
+log
+@update TODO
+@
+text
+@d10 2
+@
+
+
+1.3
+log
+@update TODO
+@
+text
+@d8 2
+a9 1
+* incremental display
+@
+
+
+1.2
+log
+@w3mimgdisplay setuid done
+@
+text
+@d3 3
+d7 5
+d13 1
+a14 1
+
+d17 3
+a19 1
+* merge m17n
+d31 5
+a35 2
+* w3mman -l doesn't work
+ http://bugs.debian.org/138805
+d37 3
+a39 2
+* w3m -dump generates too long lines
+ http://bugs.debian.org/149288 
+d41 1
+d44 1
+d48 5
+a52 3
+ 
+* MOUSE_SCROLL_LINE should be a run-time option
+ http://bugs.debian.org/87472
+d54 3
+a56 2
+* support for the <button> tag (HTML 4.01)
+ http://bugs.debian.org/136810
+a57 2
+* not working 'Ignore case when search' on non latin pages
+ http://bugs.debian.org/138891
+@
+
+
+1.1
+log
+@add TODO
+@
+text
+@a4 3
+* w3mimgdisplay setuid
+  - pam_console isn't secure enough
+
+@
+

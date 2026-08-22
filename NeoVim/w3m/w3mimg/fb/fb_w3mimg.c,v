@@ -1,0 +1,723 @@
+head	1.14;
+access;
+symbols
+	release-0-5-3:1.14
+	release-0-5-2:1.14
+	release-0-5-1:1.13
+	release-0-5:1.13
+	release-0-4-2:1.13
+	release-0-4-1:1.8
+	release-0-4:1.8
+	release-0-4-rc3:1.8
+	release-0-4-rc2:1.8
+	release-0-4-rc1:1.8
+	release-0-3-2-2:1.5
+	release-0-3-2-1:1.5
+	branch-0-3-2:1.5.0.2
+	release-0-3-2:1.5
+	release-0-3-2-rc4:1.4
+	release-0-3-2-rc3:1.4
+	release-0-3-2-rc2:1.4
+	release-0-3-2-rc1:1.4;
+locks; strict;
+comment	@ * @;
+
+
+1.14
+date	2004.08.04.17.32.28;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.08.29.15.06.52;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.07.07.15.48.17;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.04.03.16.35.48;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.03.26.15.34.19;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.03.24.15.46.00;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.12.25.16.18.19;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.12.25.16.14.45;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.06.03.50.49;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.10.31.09.36.22;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.09.09.14.00.49;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.07.29.15.25.37;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.07.22.16.17.32;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.07.17.20.58.48;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@[w3m-dev 04096] w3m-img gtk2
+* acinclude.m4 (AC_W3M_IMAGE): add USE_GTK2
+	add --with-imagelib=gtk2
+* aclocal.m4 config.guess config.sub configure: regen
+* config.h.in: add USE_GTK2
+* w3mimg/fb/fb_gdkpixbuf.c: support USE_GTK2
+* w3mimg/fb/fb_img.h: add fb_image_init()
+* w3mimg/fb/fb_imlib2.h: fb_image_init() stub
+* w3mimg/fb/fb_w3mimg.c: call fb_image_init()
+* w3mimg/x11/x11_w3mimg.c: support USE_GTK2
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@/* $Id: fb_w3mimg.c,v 1.13 2003/08/29 15:06:52 ukai Exp $ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#include "w3mimg/fb/fb.h"
+#include "w3mimg/fb/fb_img.h"
+#include "w3mimg/w3mimg.h"
+
+static int
+w3mfb_init(w3mimg_op * self)
+{
+    if (self == NULL)
+	return 0;
+    /* XXX */
+    return 1;
+}
+
+static int
+w3mfb_finish(w3mimg_op * self)
+{
+    if (self == NULL)
+	return 0;
+    return 1;
+}
+
+static int
+w3mfb_active(w3mimg_op * self)
+{
+    if (self == NULL)
+	return 0;
+    return 1;
+}
+
+static void
+w3mfb_set_background(w3mimg_op * self, char *background)
+{
+    if (self == NULL)
+	return;
+    if (background) {
+	int r, g, b;
+	if (sscanf(background, "#%02x%02x%02x", &r, &g, &b) == 3)
+	    fb_image_set_bg(r, g, b);
+    }
+}
+
+static void
+w3mfb_sync(w3mimg_op * self)
+{
+    return;
+}
+
+static void
+w3mfb_close(w3mimg_op * self)
+{
+    fb_close();
+}
+
+static int
+w3mfb_clear(w3mimg_op * self, int x, int y, int w, int h)
+{
+    if (self == NULL)
+	return 0;
+    fb_image_clear(x, y, w, h);
+    return 1;
+}
+
+static int
+w3mfb_load_image(w3mimg_op * self, W3MImage * img, char *fname, int w, int h)
+{
+    FB_IMAGE **im;
+
+    if (self == NULL)
+	return 0;
+    im = fb_image_load(fname, w, h, self->max_anim);
+    if (!im)
+	return 0;
+    img->pixmap = im;
+    img->width = im[0]->width;
+    img->height = im[0]->height;
+    return 1;
+}
+
+static int
+w3mfb_show_image(w3mimg_op * self, W3MImage * img, int sx, int sy,
+		 int sw, int sh, int x, int y)
+{
+    int i;
+    FB_IMAGE **frame;
+#define WAIT_CNT 4
+
+    if (self == NULL)
+	return 0;
+
+    if (img->pixmap == NULL)
+	return 0;
+
+    frame = (FB_IMAGE **) img->pixmap;
+    i = frame[0]->id;
+    fb_image_draw(frame[i],
+		  x + self->offset_x, y + self->offset_y,
+		  sx, sy, (sw ? sw : img->width), (sh ? sh : img->height));
+    if (frame[0]->num > 1) {
+	if (frame[1]->id > WAIT_CNT) {
+	    frame[1]->id = 0;
+	    if (i < frame[0]->num - 1)
+		frame[0]->id = i + 1;
+	    else
+		frame[0]->id = 0;
+	}
+	frame[1]->id += 1;
+    }
+    return 1;
+}
+
+static void
+w3mfb_free_image(w3mimg_op * self, W3MImage * img)
+{
+    if (self == NULL)
+	return;
+    if (img && img->pixmap) {
+	fb_frame_free((FB_IMAGE **) img->pixmap);
+	img->pixmap = NULL;
+	img->width = 0;
+	img->height = 0;
+    }
+}
+
+static int
+w3mfb_get_image_size(w3mimg_op * self, W3MImage * img,
+		     char *fname, int *w, int *h)
+{
+    int i;
+
+    if (self == NULL)
+	return 0;
+    i = get_image_size(fname, w, h);
+    if (i)
+	return 0;
+    return 1;
+}
+
+#ifdef W3MIMGDISPLAY_SETUID
+static int
+check_tty_console(char *tty)
+{
+    if (tty == NULL || *tty == '\0')
+	return 0;
+    if (strncmp(tty, "/dev/", 5) == 0)
+	tty += 5;
+    if (strncmp(tty, "tty", 3) == 0 && isdigit(*(tty + 3)))
+	return 1;
+    if (strncmp(tty, "vc/", 3) == 0 && isdigit(*(tty + 3)))
+	return 1;
+    return 0;
+}
+#else
+#define check_tty_console(tty)	1
+#endif
+
+w3mimg_op *
+w3mimg_fbopen()
+{
+    w3mimg_op *wop = NULL;
+    wop = (w3mimg_op *) malloc(sizeof(w3mimg_op));
+    if (wop == NULL)
+	return NULL;
+    memset(wop, 0, sizeof(w3mimg_op));
+
+    if (!check_tty_console(getenv("W3M_TTY")) && strcmp("jfbterm", getenv("TERM")) != 0) {
+	fprintf(stderr, "w3mimgdisplay/fb: tty is not console\n");
+	goto error;
+    }
+
+    if (fb_open())
+	goto error;
+
+    wop->width = fb_width();
+    wop->height = fb_height();
+
+    wop->init = w3mfb_init;
+    wop->finish = w3mfb_finish;
+    wop->active = w3mfb_active;
+    wop->set_background = w3mfb_set_background;
+    wop->sync = w3mfb_sync;
+    wop->close = w3mfb_close;
+    wop->clear = w3mfb_clear;
+
+    wop->load_image = w3mfb_load_image;
+    wop->show_image = w3mfb_show_image;
+    wop->free_image = w3mfb_free_image;
+    wop->get_image_size = w3mfb_get_image_size;
+
+    /* XXX */
+    fb_image_init();
+
+    return wop;
+  error:
+    free(wop);
+    return NULL;
+}
+@
+
+
+1.13
+log
+@[w3m-dev 03958] w3mimgdisplay on jfbterm
+* w3mimg/fb/fb_w3mimg.c (w3mimg_fbopen): check TERM=jfbterm
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.12 2003/07/07 15:48:17 ukai Exp $ */
+d20 1
+d199 3
+@
+
+
+1.12
+log
+@[w3m-dev 03929] clear image
+* image.c (syncImage): added
+	(drawImage): rewrite using syncImage()
+	(clearImage): use clear image command (6)
+* w3mimgdisplay.c: change protocol
+	2 => terminate drawing
+	6 => clear image
+	(main): '2' calls TermImage()
+		'6' calls ClearImage()
+		TermImage() when exit
+	(TermImage): renamed from ClearImage
+	(ClearImage): rewritten to call w_op->clear()
+* w3mimg.h/w3mimg.h (w3mimg_op): add clear()
+* w3mimg/fb/fb.c (fb_clear): added
+* w3mimg/fb/fb.h (fb_clear): added
+* w3mimg/fb/fb_img.c (fb_image_clear): added
+* w3mimg/fb/fb_w3mimg.c (w3mfb_clear): added
+	(w3mimg_fbopen): initialize wop->clear
+* w3mimg/x11/x11_w3mimg.c (x11_clear): added
+	(w3mimg_x11open): initialize wop->clear
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.11 2003/04/03 16:35:48 ukai Exp $ */
+d174 1
+a174 1
+    if (!check_tty_console(getenv("W3M_TTY"))) {
+@
+
+
+1.11
+log
+@[w3m-dev 03837] Re: gif animation with no delay_time
+* w3mimg/fb/fb_gdkpixbuf.c (get_animation_size): add delay
+			check delay_time
+	(get_image_size): no need delay time
+	(fb_image_load): check delay
+	(draw): no bg
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): delete delay skip loop
+* w3mimg/x11/x11_w3mimg.c (get_animation_size): add delay
+			check delay_time
+	(x11_load_image): check delay
+	(x11_get_image_size): no need delay time
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.10 2003/03/26 15:34:19 ukai Exp $ */
+d64 9
+d191 1
+@
+
+
+1.10
+log
+@[w3m-dev 03833] gif animation with no delay_time
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): skip delay<=0
+* w3mimg/x11/x11_w3mimg.c (x11_image): add delay
+	(x11_img_new): initialize delay
+	(x11_load_image): initialize delay
+	(x11_show_image): jump to last image if delay<=0
+From: ABE Yuji <cbo46560@@pop12.odn.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.9 2003/03/24 15:46:00 ukai Exp $ */
+a94 4
+    while (i < frame[0]->num - 1 && frame[i]->delay <= 0) {
+	frame[0]->id += 1;
+	i = frame[0]->id;
+    }
+@
+
+
+1.9
+log
+@[w3m-dev 03829] w3mimgdisplay -anim
+* w3mimgdisplay.c (maxAnim): added, default 100
+	(main): add --anim option, w_op->max_anim
+* w3mimg/w3mimg.h (w3mimg_op): add max_anim
+* w3mimg/fb/fb_gdkpixbuf.c (fb_image_load): add max_anim
+* w3mimg/fb/fb_img.h (fb_image_load): add max_anim args
+* w3mimg/fb/fb_imlib2.c (fb_image_load): add max_anim args
+* w3mimg/fb/fb_w3mimg.c (w3mfb_load_image): pass max_anim
+* w3mimg/x11/x11_w3mimg.c (x11_load_image): max_anim
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.8 2002/12/25 16:18:19 ukai Exp $ */
+d95 4
+@
+
+
+1.8
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.7 2002/12/25 16:14:45 ukai Exp $ */
+d70 1
+a70 1
+    im = fb_image_load(fname, w, h);
+@
+
+
+1.7
+log
+@[w3m-dev 03602] Re: w3mimgdisplay core dump
+* w3mimgdisplay.c (DrawImage): check load_image, imageBuf[n].pixmap
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): check img->pixmap
+* w3mimg/x11/x11_w3mimg.c (x11_show_image): check img->pixmap
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.6 2002/11/06 03:50:49 ukai Exp $ */
+d91 1
+a91 1
+       return 0;
+d146 1
+a146 1
+    if (strncmp(tty, "tty", 3) == 0 && isdigit(*(tty+3)))
+d148 1
+a148 1
+    if (strncmp(tty, "vc/", 3) == 0 && isdigit(*(tty+3)))
+d165 1
+a165 1
+    if (! check_tty_console(getenv("W3M_TTY"))) {
+@
+
+
+1.6
+log
+@[w3m-dev 03379] setuid w3mimgdisplay and check console tty
+* XMakefile: w3mimgdisplay install by INSTALL_W3MIMGDISPLAY
+* configure: ask setuid w3mimgdisplay
+	(w3mimgdisplay_setuid): added
+	(INSTALL_W3MIMGDISPLAY): added
+* etc.c (mySystem): close until FOPEN_MAX
+* image.c (openImgdisplay): setenv W3M_TTY
+		stderr to /dev/null
+		close until FOPEN_MAX
+* install-sh: -o, -g for owner, group
+* proto.h (ttyname_tty): added
+* search.c (open_migemo): stderr to /dev/null
+		close until FOPEN_MAX
+* terms.c (ttyname_tty): added
+* w3mimgdisplay.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+		stderr to /dev/null
+* w3mimg/w3mimg.c: include <sys/types.h>, <unistd.h>
+		W3MIMGDISPLAY_SETUID
+* w3mimg/fb/fb_w3mimg.c (check_tty_console): added
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.5 2002/10/31 09:36:22 ukai Exp $ */
+d89 3
+@
+
+
+1.5
+log
+@fix compilation warnings
+* w3mimgdisplay.c: add #include <string.h> for strlen, strcmp
+* w3mimg/fb/fb.c: add #include <string.h> for memset
+* w3mimg/fb/fb_w3mimg.c: add #include <string.h> for memset
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.4 2002/09/09 14:00:49 ukai Exp $ */
+d6 4
+d135 18
+d161 5
+@
+
+
+1.4
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.3 2002/07/29 15:25:37 ukai Exp $ */
+d5 1
+@
+
+
+1.3
+log
+@[w3m-dev 03282] Re: w3m-img for framebuffer update
+* w3mimg/fb/fb.c (fb_image_new): ignore no image
+				calloc multiple images
+		(fb_image_fill): added
+		(fb_image_draw): width, height fix
+		(fb_image_rotate): fix typo
+		(fb_image_copy): added
+		(fb_frame_new): added
+		(fb_freme_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb.h (FB_IMAGE): add num, id, delay
+		(fb_frame_new): added
+		(fb_frame_free): added
+		(fb_frame_rotate): added
+* w3mimg/fb/fb_gdkpixbuf.c (get_image_size): animation support
+		(fb_image_load): animation support
+		(draw): add bg, x, y, w, h args
+* w3mimg/fb/fb_img.h (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_imlib2.c (fb_image_load): return FB_IMAGE**
+* w3mimg/fb/fb_w3mimg.c (w3mfb_show_image): animation support
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.2 2002/07/22 16:17:32 ukai Exp $ */
+d11 1
+a11 1
+w3mfb_init(w3mimg_op *self)
+d19 1
+a19 1
+w3mfb_finish(w3mimg_op *self)
+d27 1
+a27 1
+w3mfb_active(w3mimg_op *self)
+d35 1
+a35 1
+w3mfb_set_background(w3mimg_op *self, char *background)
+d47 1
+a47 1
+w3mfb_sync(w3mimg_op *self)
+d53 1
+a53 1
+w3mfb_close(w3mimg_op *self)
+d59 1
+a59 1
+w3mfb_load_image(w3mimg_op *self, W3MImage *img, char *fname, int w, int h)
+d75 2
+a76 3
+w3mfb_show_image(w3mimg_op *self, W3MImage *img, int sx, int sy, 
+		 int sw, int sh,
+		 int x, int y)
+d85 1
+a85 1
+    frame = (FB_IMAGE **)img->pixmap;
+d89 10
+a98 11
+		  sx, sy,
+		  (sw ? sw : img->width), (sh ? sh : img->height));
+    if(frame[0]->num > 1){
+      if(frame[1]->id > WAIT_CNT){
+	frame[1]->id = 0;
+	if(i < frame[0]->num - 1)
+	  frame[0]->id = i + 1;
+	else
+	  frame[0]->id = 0;
+      }
+      frame[1]->id += 1;
+d104 1
+a104 1
+w3mfb_free_image(w3mimg_op *self, W3MImage *img)
+d109 1
+a109 1
+	fb_frame_free((FB_IMAGE **)img->pixmap);
+d117 1
+a117 1
+w3mfb_get_image_size(w3mimg_op *self, W3MImage *img, 
+d134 1
+a134 1
+    wop = (w3mimg_op *)malloc(sizeof(w3mimg_op));
+d144 1
+a144 1
+    
+d158 1
+a158 1
+error:
+@
+
+
+1.2
+log
+@[w3m-dev 03279] w3m-img for framebuffer update
+	  http://homepage3.nifty.com/slokar/fb/w3mfb.patch.gz
+* w3mimg/fb/readme.txt: update
+* w3mimg/fb/fb.c: update
+* w3mimg/fb/fb.h: update
+* w3mimg/fb/fb_gdkpixbuf.c: update
+* w3mimg/fb/fb_img.c: update
+* w3mimg/fb/fb_img.h: update
+* w3mimg/fb/fb_imlib2.c: update
+* w3mimg/fb/fb_w3mimg.c: update
+* w3mimg/fb/fb_gdkpixbuf.h: deleted
+* w3mimg/fb/fb_imlib2.h: deleted
+* w3mimg/w3mimg.h (w3mimg_op): add get_image_size()
+* w3mimg/x11/x11_w3mimg.c: update
+* w3mimgdisplay.c (main): use get_image_size()
+* w3mimgsize.c (main): use get_image_size()
+From: Hiroyuki Ito <hito@@crl.go.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: fb_w3mimg.c,v 1.1 2002/07/17 20:58:48 ukai Exp $ */
+d61 1
+a61 1
+    FB_IMAGE *im;
+d69 2
+a70 2
+    img->width = im->width;
+    img->height = im->height;
+d79 4
+d86 3
+a88 1
+    fb_image_draw((FB_IMAGE *)img->pixmap,
+d91 11
+a101 2
+		  (sw ? sw : img->width),
+		  (sh ? sh : img->height));
+d111 1
+a111 1
+	fb_image_free((FB_IMAGE *)img->pixmap);
+@
+
+
+1.1
+log
+@merge w3m-img for framebuffer support
+* w3mimg/w3mimg.h: created
+* w3mimg/x11/x11_w3mimg.c: created
+* w3mimg/fb/fb_w3mimg.c: created
+* w3mimgsize.c w3mimgdisplay.c: modified
+* configure: modified
+* XMakefile: modified
+* config.h.dist: updated
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+
+w3m-img for framebuffer support
+* http://homepage3.nifty.com/slokar/fb/
+* w3mimg/fb/fb.c w3mimg/fb/fb.h
+  w3mimg/fb/fb_img.c w3mimg/fb/fb_img.h
+  w3mimg/fb/fb_gdkpixbuf.c w3mimg/fb/fb_gdkpixbuf.h
+  w3mimg/fb/fb_imlib2.c w3mimg/fb/fb_imlib.h
+  w3mimg/fb/readme.txt w3mimg/fb/license.txt: added
+From: Hiroshi Kawashima <kei@@sm.sony.co.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d42 1
+a42 1
+	    fb_set_bg(r, g, b);
+d61 1
+a61 1
+    IMAGE *im;
+d65 1
+a65 1
+    im = fb_load_image(fname, w, h);
+d82 1
+a82 1
+    fb_draw_image((IMAGE *)img->pixmap,
+d96 1
+a96 1
+	fb_free_image((IMAGE *)img->pixmap);
+d103 14
+d142 1
+@
+

@@ -1,0 +1,168 @@
+head	1.4;
+access;
+symbols
+	release-0-5-3:1.4
+	release-0-5-2:1.4
+	release-0-5-1:1.2
+	release-0-5:1.2
+	release-0-4-2:1.2
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.1.1.1
+	release-0-3-2-1:1.1.1.1
+	branch-0-3-2:1.1.1.1.0.6
+	release-0-3-2:1.1.1.1
+	release-0-3-2-rc4:1.1.1.1
+	release-0-3-2-rc3:1.1.1.1
+	release-0-3-2-rc2:1.1.1.1
+	release-0-3-2-rc1:1.1.1.1
+	release-0-3-1:1.1.1.1
+	release-0-3:1.1.1.1
+	release-0-2-5-1:1.1.1.1
+	branch-0-2-5:1.1.1.1.0.4
+	release-0-2-5:1.1.1.1
+	release-0-2-4:1.1.1.1
+	release-0-2-3-2:1.1.1.1
+	release-0-2-3-1:1.1.1.1
+	release-0-2-3:1.1.1.1
+	inu-0-2-2-rel-1-1:1.1.1.1
+	inu-0-2-2:1.1.1.1.0.2
+	inu-0-2-2-base:1.1.1.1
+	release-0-2-2:1.1.1.1
+	release-0-2-1-inu-1-5:1.1.1.1
+	release-0-2-1:1.1.1.1
+	start:1.1.1.1
+	aito-soft:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2006.04.07.15.05.49;	author inu;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2006.04.05.14.18.54;	author inu;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.12.13.03.02.04;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.08.05.16.15;	author a-ito;	state Exp;
+branches
+	1.1.1.1;
+next	;
+
+1.1.1.1
+date	2001.11.08.05.16.15;	author a-ito;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@rewind to 10 Feb 2006.
+@
+text
+@# A sample of ~/.w3m/menu  (default)
+#
+# menu MENU_ID
+#  func  LABEL FUNCTION KEYS
+#  popup LABEL MENU_ID  KEYS
+#  nop   LABEL
+# end
+#
+# MENU_ID
+#  Main:   Main menu
+#  Select: Buffer selection menu
+
+menu Main
+  func   " Back         (b) "  BACK		"b"
+  popup  " Select Buffer(s) "  Select		"s"
+  popup  " Select Tab   (t) "  SelectTab	"tT"
+  func   " View Source  (v) "  VIEW		"vV"
+  func   " Edit Source  (e) "  EDIT		"eE"
+  func   " Save Source  (S) "  SAVE		"S"
+  func   " Reload       (r) "  RELOAD		"rR"
+  nop    " -----------------"  
+
+  func   " Go Link      (a) "  GOTO_LINK	"a"
+  func   "   on New Tab (n) "  TAB_LINK		"nN"
+  func   " Save Link    (A) "  SAVE_LINK	"A"
+  func   " View Image   (i) "  VIEW_IMAGE	"i"
+  func   " Save Image   (I) "  SAVE_IMAGE	"I"
+  func   " View Frame   (f) "  FRAME		"fF"
+  nop    " ---------------- "
+  func   " Bookmark     (B) "  BOOKMARK		"B"  
+  func   " Help         (h) "  HELP		"hH"
+  func   " Option       (o) "  OPTIONS		"oO"
+  nop    " ---------------- "
+  func   " Quit         (q) "  QUIT		"qQ"
+end
+@
+
+
+1.3
+log
+@apply multiple patches on w3m-dev(-en) ML since Jun 2005 to Jan 2006.
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS FUNCTION_ARGUMENT
+@
+
+
+1.2
+log
+@[w3m-dev 03567] default keybinding
+* doc-jp/keymap.default (C-q,C-t,(,),+,-,D,L,T,m,r,{,|,},
+			M-c,M-k,M-l,M-m,M-o,M-t): assign
+* doc/keymap.default: ditto
+* keybind.c: ditto
+* doc-jp/keymap.lynx (C-q,C-t,C-u,(,),,,.,;,D,L,T,W,[,],
+			m,r,w,{,|,},M-<,M->,M-W,M-c,M-g,
+			M-k,M-l,M-m,M-n,M-o,M-p,M-t,M-w): assign
+* doc/keymap.lynx: ditto
+* keybind_lynx.c: ditto
+* doc-jp/menu.default (Main): Select,SelectTab,TAB_LINK
+* doc/menu.default: ditto
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d4 1
+a4 1
+#  func  LABEL FUNCTION KEYS
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d15 2
+a16 1
+  func   " Select Buffer(s) "  SELECT		"s"
+d24 1
+@
+
+
+1.1.1.1
+log
+@w3m source
+@
+text
+@@

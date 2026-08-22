@@ -1,0 +1,84 @@
+head	1.3;
+access;
+symbols
+	release-0-4-1:1.2
+	release-0-4:1.2
+	release-0-4-rc3:1.2
+	release-0-4-rc2:1.2
+	release-0-4-rc1:1.2
+	release-0-3-2-2:1.1
+	release-0-3-2-1:1.1
+	branch-0-3-2:1.1.0.4
+	release-0-3-2:1.1
+	release-0-3-2-rc4:1.1
+	release-0-3-2-rc3:1.1
+	release-0-3-2-rc2:1.1
+	release-0-3-2-rc1:1.1
+	release-0-3-1:1.1
+	release-0-3:1.1
+	release-0-2-5-1:1.1
+	branch-0-2-5:1.1.0.2
+	release-0-2-5:1.1
+	release-0-2-4:1.1
+	release-0-2-3-2:1.1
+	release-0-2-3-1:1.1
+	release-0-2-3:1.1;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2003.03.09.19.44.03;	author ukai;	state dead;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.18.17.32.53;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.11.19.07.53.56;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@remove gc
+@
+text
+@base_lib
+gctest
+if_mach
+if_not_there
+threadlibs
+@
+
+
+1.2
+log
+@[w3m-dev 03448] Some fixes
+* url.c (KeyAbort): SIGNAL_RETURN
+* .cvsginore: delete w3mimgsize
+* scripts/.cvsignore: delete xface2xbm
+* scripts/xface2xbm.in: deleted
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@@
+
+
+1.1
+log
+@.cvsignore
+exclude gctest, if_mach, if_not_there, threadlibs
+@
+text
+@d1 1
+@
+

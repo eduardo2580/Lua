@@ -1,0 +1,1333 @@
+head	1.17;
+access;
+symbols
+	release-0-5-3:1.17
+	release-0-5-2:1.17
+	release-0-5-1:1.17
+	release-0-5:1.17
+	release-0-4-2:1.15
+	release-0-4-1:1.15
+	release-0-4:1.15
+	release-0-4-rc3:1.15
+	release-0-4-rc2:1.15
+	release-0-4-rc1:1.15;
+locks; strict;
+comment	@ * @;
+
+
+1.17
+date	2003.10.05.18.52.51;	author ukai;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.09.22.21.02.20;	author ukai;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.01.29.17.10.49;	author ukai;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.01.15.16.24.25;	author ukai;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.01.15.16.14.41;	author ukai;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.01.15.16.11.43;	author ukai;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.01.10.17.06.25;	author ukai;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.01.07.15.56.41;	author ukai;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.01.07.15.53.43;	author ukai;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.01.06.15.49.29;	author ukai;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.01.06.15.37.50;	author ukai;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.01.06.15.36.59;	author ukai;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.12.27.16.46.13;	author ukai;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.12.27.16.31.49;	author ukai;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.12.27.16.30.54;	author ukai;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.12.27.16.09.18;	author ukai;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.12.27.16.07.44;	author ukai;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.17
+log
+@fix build error --disbable-m17n
+* config.h.in: undef USE_M17N, USE_UNICODE
+* etc.c (url_unquote_conv): USE_M17N
+* file.c (convertLine): USE_M17N
+	(loadHTMLStream): fix ifdef USE_IMAGE->USE_M17N
+	(loadBuffer): fix USE_M17N
+	(getNextPage): fix USE_M17N
+* fm.h (USE_M17N): don't define USE_M17N in case LANG == JA
+		(this should be done by configure)
+	(wc_ces): dummy typedef
+	(wc_Str_conv): fix non-m17n macro args
+	(wc_Str_conv_strict): ditto
+* ftp.c (loadFTPDir): fix undefined USE_M17N
+* mimehead.c (decodeWord): ditto
+	(decodeMIME): ditto
+* news.c (loadNewsgroup): ditto
+* proto.h (convertLine): ditto
+	(loadGopherDir): ditto
+	(loadFTPDir): ditto
+	(loadNewsgroup): ditto
+	(decodeWord): ditto
+	(decodeMIME): ditto
+	(url_unquote_conv): ditto
+* terms.c (SETCH): ditto
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@/* $Id: news.c,v 1.16 2003/09/22 21:02:20 ukai Exp $ */
+#include "fm.h"
+#include "myctype.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <signal.h>
+#include <setjmp.h>
+
+#ifdef USE_NNTP
+
+#define NEWS_ENDLINE(p) \
+    ((*(p) == '.' && ((p)[1] == '\n' || (p)[1] == '\r' || (p)[1] == '\0')) || \
+    *(p) == '\n' || *(p) == '\r' || *(p) == '\0')
+
+typedef struct _News {
+    char *host;
+    int port;
+    char *mode;
+    InputStream rf;
+    FILE *wf;
+} News;
+
+static News current_news = { NULL, 0, NULL, NULL, NULL };
+
+static JMP_BUF AbortLoading;
+
+static MySignalHandler
+KeyAbort(SIGNAL_ARG)
+{
+    LONGJMP(AbortLoading, 1);
+    SIGNAL_RETURN;
+}
+
+static Str
+news_command(News * news, char *cmd, char *arg, int *status)
+{
+    Str tmp;
+
+    if (!news->host)
+	return NULL;
+    if (cmd) {
+	if (arg)
+	    tmp = Sprintf("%s %s\r\n", cmd, arg);
+	else
+	    tmp = Sprintf("%s\r\n", cmd);
+	fwrite(tmp->ptr, sizeof(char), tmp->length, news->wf);
+	fflush(news->wf);
+    }
+    if (!status)
+	return NULL;
+    *status = -1;
+    tmp = StrISgets(news->rf);
+    if (tmp->length)
+	sscanf(tmp->ptr, "%d", status);
+    return tmp;
+}
+
+static void
+news_close(News * news)
+{
+    if (!news->host)
+	return;
+    if (news->rf) {
+	IStype(news->rf) &= ~IST_UNCLOSE;
+	ISclose(news->rf);
+	news->rf = NULL;
+    }
+    if (news->wf) {
+	fclose(news->wf);
+	news->wf = NULL;
+    }
+    news->host = NULL;
+}
+
+static int
+news_open(News * news)
+{
+    int sock, status;
+
+    sock = openSocket(news->host, "nntp", news->port);
+    if (sock < 0)
+	goto open_err;
+    news->rf = newInputStream(sock);
+    news->wf = fdopen(dup(sock), "wb");
+    if (!news->rf || !news->wf)
+	goto open_err;
+    IStype(news->rf) |= IST_UNCLOSE;
+    news_command(news, NULL, NULL, &status);
+    if (status != 200 && status != 201)
+	goto open_err;
+    if (news->mode) {
+	news_command(news, "MODE", news->mode, &status);
+	if (status != 200 && status != 201)
+	    goto open_err;
+    }
+    return TRUE;
+  open_err:
+    news_close(news);
+    return FALSE;
+}
+
+static void
+news_quit(News * news)
+{
+    news_command(news, "QUIT", NULL, NULL);
+    news_close(news);
+}
+
+static char *
+name_from_address(char *str, int n)
+{
+    char *s, *p;
+    int l, space = TRUE;
+
+    s = allocStr(str, -1);
+    SKIP_BLANKS(s);
+    if (*s == '<' && (p = strchr(s, '>'))) {
+	*p++ = '\0';
+	SKIP_BLANKS(p);
+	if (*p == '\0')		/* <address> */
+	    s++;
+	else			/* <address> name ? */
+	    s = p;
+    }
+    else if ((p = strchr(s, '<')))	/* name <address> */
+	*p = '\0';
+    else if ((p = strchr(s, '(')))	/* address (name) */
+	s = p;
+    if (*s == '"' && (p = strchr(s + 1, '"'))) {	/* "name" */
+	*p = '\0';
+	s++;
+    }
+    else if (*s == '(' && (p = strchr(s + 1, ')'))) {	/* (name) */
+	*p = '\0';
+	s++;
+    }
+    for (p = s, l = 0; *p; p += get_mclen(p)) {
+	if (IS_SPACE(*p)) {
+	    if (space)
+		continue;
+	    space = TRUE;
+	}
+	else
+	    space = FALSE;
+	l += get_mcwidth(p);
+	if (l > n)
+	    break;
+    }
+    *p = '\0';
+    return s;
+}
+
+static char *
+html_quote_s(char *str)
+{
+    Str tmp = NULL;
+    char *p, *q;
+    int space = TRUE;
+
+    for (p = str; *p; p++) {
+	if (IS_SPACE(*p)) {
+	    if (space)
+		continue;
+	    q = "&nbsp;";
+	    space = TRUE;
+	}
+	else {
+	    q = html_quote_char(*p);
+	    space = FALSE;
+	}
+	if (q) {
+	    if (tmp == NULL)
+		tmp = Strnew_charp_n(str, (int)(p - str));
+	    Strcat_charp(tmp, q);
+	}
+	else {
+	    if (tmp)
+		Strcat_char(tmp, *p);
+	}
+    }
+    if (tmp)
+	return tmp->ptr;
+    return str;
+}
+
+static void
+add_news_message(Str str, int index, char *date, char *name, char *subject,
+		 char *mid, char *scheme, char *group)
+{
+    time_t t;
+    struct tm *tm;
+
+    name = name_from_address(name, 16);
+    t = mymktime(date);
+    tm = localtime(&t);
+    Strcat(str,
+	   Sprintf("<tr valign=top><td>%d<td nowrap>(%02d/%02d)<td nowrap>%s",
+		   index, tm->tm_mon + 1, tm->tm_mday, html_quote_s(name)));
+    if (group)
+	Strcat(str, Sprintf("<td><a href=\"%s%s/%d\">%s</a>\n", scheme, group,
+			    index, html_quote(subject)));
+    else
+	Strcat(str, Sprintf("<td><a href=\"%s%s\">%s</a>\n", scheme,
+			    html_quote(file_quote(mid)), html_quote(subject)));
+}
+
+/*
+ * [News article]
+ *  * RFC 1738
+ *    nntp://<host>:<port>/<newsgroup-name>/<article-number>
+ *    news:<message-id>
+ *
+ *  * Extension
+ *    nntp://<host>:<port>/<newsgroup-name>/<message-id>
+ *    nntp://<host>:<port>/<message-id>
+ *    news:<newsgroup-name>/<article-number>
+ *    news:<newsgroup-name>/<message-id>
+ *
+ * [News group]
+ *  * RFC 1738
+ *    news:<newsgroup-name>
+ *
+ *  * Extension
+ *    nntp://<host>:<port>/<newsgroup-name>
+ *    nntp://<host>:<port>/<newsgroup-name>/<start-number>-<end-number>
+ *    news:<newsgroup-name>/<start-number>-<end-number>
+ *
+ * <message-id> = <unique>@@<full_domain_name>
+ */
+
+InputStream
+openNewsStream(ParsedURL *pu)
+{
+    char *host, *mode, *group, *p;
+    Str tmp;
+    int port, status;
+
+    if (pu->file == NULL || *pu->file == '\0')
+	return NULL;
+    if (pu->scheme == SCM_NNTP || pu->scheme == SCM_NNTP_GROUP)
+	host = pu->host;
+    else
+	host = NNTP_server;
+    if (!host || *host == '\0') {
+	if (current_news.host)
+	    news_quit(&current_news);
+	return NULL;
+    }
+    if (pu->scheme != SCM_NNTP && pu->scheme != SCM_NNTP_GROUP &&
+	(p = strchr(host, ':'))) {
+	host = allocStr(host, p - host);
+	port = atoi(p + 1);
+    }
+    else
+	port = pu->port;
+    if (NNTP_mode && *NNTP_mode)
+	mode = NNTP_mode;
+    else
+	mode = NULL;
+    if (current_news.host) {
+	if (!strcmp(current_news.host, host) && current_news.port == port) {
+	    tmp = news_command(&current_news, "MODE", mode ? mode : "READER",
+			       &status);
+	    if (status != 200 && status != 201)
+		news_close(&current_news);
+	}
+	else
+	    news_quit(&current_news);
+    }
+    if (!current_news.host) {
+	current_news.host = allocStr(host, -1);
+	current_news.port = port;
+	current_news.mode = mode ? allocStr(mode, -1) : NULL;
+	if (!news_open(&current_news))
+	    return NULL;
+    }
+    if (pu->scheme == SCM_NNTP || pu->scheme == SCM_NEWS) {
+	/* News article */
+	group = file_unquote(allocStr(pu->file, -1));
+	p = strchr(group, '/');
+	if (p == NULL) {	/* <message-id> */
+	    if (!strchr(group, '@@'))
+		return NULL;
+	    p = group;
+	}
+	else {			/* <newsgroup>/<message-id or article-number> */
+	    *p++ = '\0';
+	    news_command(&current_news, "GROUP", group, &status);
+	    if (status != 211)
+		return NULL;
+	}
+	if (strchr(p, '@@'))	/* <message-id> */
+	    news_command(&current_news, "ARTICLE", Sprintf("<%s>", p)->ptr,
+			 &status);
+	else			/* <article-number> */
+	    news_command(&current_news, "ARTICLE", p, &status);
+	if (status != 220)
+	    return NULL;
+	return current_news.rf;
+    }
+    return NULL;
+}
+
+
+#ifdef USE_M17N
+Str
+loadNewsgroup(ParsedURL *pu, wc_ces * charset)
+#else
+Str
+loadNewsgroup0(ParsedURL *pu)
+#endif
+{
+    volatile Str page;
+    Str tmp;
+    URLFile f;
+    Buffer *buf;
+    char *qgroup, *p, *q, *s, *t, *n;
+    char *volatile scheme, *volatile group, *volatile list;
+    int status, i, first, last;
+    volatile int flag = 0, start = 0, end = 0;
+    MySignalHandler(*volatile prevtrap) (SIGNAL_ARG) = NULL;
+#ifdef USE_M17N
+    wc_ces doc_charset = DocumentCharset, mime_charset;
+
+    *charset = WC_CES_US_ASCII;
+#endif
+    if (current_news.host == NULL || !pu->file || *pu->file == '\0')
+	return NULL;
+    group = allocStr(pu->file, -1);
+    if (pu->scheme == SCM_NNTP_GROUP)
+	scheme = "/";
+    else
+	scheme = "news:";
+    if ((list = strchr(group, '/'))) {
+	/* <newsgroup>/<start-number>-<end-number> */
+	*list++ = '\0';
+    }
+    if (fmInitialized) {
+	message(Sprintf("Reading newsgroup %s...", group)->ptr, 0, 0);
+	refresh();
+    }
+    qgroup = html_quote(group);
+    group = file_unquote(group);
+    page = Strnew_m_charp("<html>\n<head>\n<base href=\"",
+			  parsedURL2Str(pu)->ptr, "\">\n<title>Newsgroup: ",
+			  qgroup, "</title>\n</head>\n<body>\n<h1>Newsgroup: ",
+			  qgroup, "</h1>\n<hr>\n", NULL);
+
+    if (SETJMP(AbortLoading) != 0) {
+	news_close(&current_news);
+	Strcat_charp(page, "</table>\n<p>Transfer Interrupted!\n");
+	goto news_end;
+    }
+    TRAP_ON;
+
+    tmp = news_command(&current_news, "GROUP", group, &status);
+    if (status != 211)
+	goto news_list;
+    if (sscanf(tmp->ptr, "%d %d %d %d", &status, &i, &first, &last) != 4)
+	goto news_list;
+    if (list && *list) {
+	if ((p = strchr(list, '-'))) {
+	    *p++ = '\0';
+	    end = atoi(p);
+	}
+	start = atoi(list);
+	if (start > 0) {
+	    if (start < first)
+		start = first;
+	    if (end <= 0)
+		end = start + MaxNewsMessage - 1;
+	}
+    }
+    if (start <= 0) {
+	start = first;
+	end = last;
+	if (end - start > MaxNewsMessage - 1)
+	    start = end - MaxNewsMessage + 1;
+    }
+    page = Sprintf("<html>\n<head>\n<base href=\"%s\">\n\
+<title>Newsgroup: %s %d-%d</title>\n\
+</head>\n<body>\n<h1>Newsgroup: %s %d-%d</h1>\n<hr>\n", parsedURL2Str(pu)->ptr, qgroup, start, end, qgroup, start, end);
+    if (start > first) {
+	i = start - MaxNewsMessage;
+	if (i < first)
+	    i = first;
+	Strcat(page, Sprintf("<a href=\"%s%s/%d-%d\">[%d-%d]</a>\n", scheme,
+			     qgroup, i, start - 1, i, start - 1));
+    }
+
+    Strcat_charp(page, "<table>\n");
+    news_command(&current_news, "XOVER", Sprintf("%d-%d", start, end)->ptr,
+		 &status);
+    if (status == 224) {
+	f.scheme = SCM_NEWS;
+	while (1) {
+	    tmp = StrISgets(current_news.rf);
+	    if (NEWS_ENDLINE(tmp->ptr))
+		break;
+	    if (sscanf(tmp->ptr, "%d", &i) != 1)
+		continue;
+	    if (!(s = strchr(tmp->ptr, '\t')))
+		continue;
+	    s++;
+	    if (!(n = strchr(s, '\t')))
+		continue;
+	    *n++ = '\0';
+	    if (!(t = strchr(n, '\t')))
+		continue;
+	    *t++ = '\0';
+	    if (!(p = strchr(t, '\t')))
+		continue;
+	    *p++ = '\0';
+	    if (*p == '<')
+		p++;
+	    if (!(q = strchr(p, '>')) && !(q = strchr(p, '\t')))
+		continue;
+	    *q = '\0';
+	    tmp = decodeMIME(Strnew_charp(s), &mime_charset);
+	    s = convertLine(&f, tmp, HEADER_MODE,
+			    mime_charset ? &mime_charset : charset,
+			    mime_charset ? mime_charset : doc_charset)->ptr;
+	    tmp = decodeMIME(Strnew_charp(n), &mime_charset);
+	    n = convertLine(&f, tmp, HEADER_MODE,
+			    mime_charset ? &mime_charset : charset,
+			    mime_charset ? mime_charset : doc_charset)->ptr;
+	    add_news_message(page, i, t, n, s, p, scheme,
+			     pu->scheme == SCM_NNTP_GROUP ? qgroup : NULL);
+	}
+    }
+    else {
+	init_stream(&f, SCM_NEWS, current_news.rf);
+	buf = newBuffer(INIT_BUFFER_WIDTH);
+	for (i = start; i <= end && i <= last; i++) {
+	    news_command(&current_news, "HEAD", Sprintf("%d", i)->ptr,
+			 &status);
+	    if (status != 221)
+		continue;
+	    readHeader(&f, buf, FALSE, NULL);
+	    if (!(p = checkHeader(buf, "Message-ID:")))
+		continue;
+	    if (*p == '<')
+		p++;
+	    if (!(q = strchr(p, '>')) && !(q = strchr(p, '\t')))
+		*q = '\0';
+	    if (!(s = checkHeader(buf, "Subject:")))
+		continue;
+	    if (!(n = checkHeader(buf, "From:")))
+		continue;
+	    if (!(t = checkHeader(buf, "Date:")))
+		continue;
+	    add_news_message(page, i, t, n, s, p, scheme,
+			     pu->scheme == SCM_NNTP_GROUP ? qgroup : NULL);
+	}
+    }
+    Strcat_charp(page, "</table>\n");
+
+    if (end < last) {
+	i = end + MaxNewsMessage;
+	if (i > last)
+	    i = last;
+	Strcat(page, Sprintf("<a href=\"%s%s/%d-%d\">[%d-%d]</a>\n", scheme,
+			     qgroup, end + 1, i, end + 1, i));
+    }
+    flag = 1;
+
+  news_list:
+    tmp = Sprintf("ACTIVE %s", group);
+    if (!strchr(group, '*'))
+	Strcat_charp(tmp, ".*");
+    news_command(&current_news, "LIST", tmp->ptr, &status);
+    if (status != 215)
+	goto news_end;
+    while (1) {
+	tmp = StrISgets(current_news.rf);
+	if (NEWS_ENDLINE(tmp->ptr))
+	    break;
+	if (flag < 2) {
+	    if (flag == 1)
+		Strcat_charp(page, "<hr>\n");
+	    Strcat_charp(page, "<table>\n");
+	    flag = 2;
+	}
+	p = tmp->ptr;
+	for (q = p; *q && !IS_SPACE(*q); q++) ;
+	*(q++) = '\0';
+	if (sscanf(q, "%d %d", &last, &first) == 2 && last >= first)
+	    i = last - first + 1;
+	else
+	    i = 0;
+	Strcat(page,
+	       Sprintf
+	       ("<tr><td align=right>%d<td><a href=\"%s%s\">%s</a>\n", i,
+		scheme, html_quote(file_quote(p)), html_quote(p)));
+    }
+    if (flag == 2)
+	Strcat_charp(page, "</table>\n");
+
+  news_end:
+    Strcat_charp(page, "</body>\n</html>\n");
+    TRAP_OFF;
+    return page;
+}
+
+void
+closeNews(void)
+{
+    news_close(&current_news);
+}
+
+void
+disconnectNews(void)
+{
+    news_quit(&current_news);
+}
+
+#endif				/* USE_NNTP */
+@
+
+
+1.16
+log
+@merge m17n patch
+add libwc
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.15 2003/01/29 17:10:49 ukai Exp $ */
+d305 2
+d309 4
+@
+
+
+1.15
+log
+@[w3m-dev 03708] Re: Don't stop loading image when moving to next page.
+* config.h.dist (lstat): define ifndef HAVE_LSTAT
+* configure (config.h) ditto
+* display.c (fmTerm): new loadImage
+	(save_current_buf): only ifdef USE_BUFINFO
+	(displayBuffer): new loadImage
+* etc.c (setup_child): TrapSignal
+* file.c (loadGeneralFile): TRAP_OFF, TRAP_ON
+	(loadHTMLstream): ditto
+	(loadGopherDir): ditto
+	(loadBuffer): ditto
+	(loadImageBuffer): ditto
+	(getNextPage): ditto
+	(save2tmp): ditto
+* fm.h (TrapSignal): added
+	(TRAP_ON): added
+	(TRAP_OFF): added
+* form.c (HAVE_LSTAT): deleted
+* frame.c (createFrameFile): TRAP_OFF, TRAP_ON
+* image.c (image_buffer): added
+	(deleteImage): new loadImage
+	(getAllImage): initialize image_buffer
+	(loadImage): rewrite
+* main.c (main): new loadImage
+	(checkDownloadList): remove ifdef HAVE_LSTAT
+* news.c (loadNwesgroup): TRAP_ON, TRAP_OFF
+* proto.h (loadImage): add buf arg
+* url.c (openSocket): TRAP_ON, TRAP_OFF
+	(check_no_proxy): TRAP_ON, TRAP_OFF
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.14 2003/01/15 16:24:25 ukai Exp $ */
+d114 1
+a114 1
+    int i, l, space = TRUE;
+d138 1
+a138 2
+    for (p = s, l = 0; *p; p += i) {
+	i = get_mclen(get_mctype(p));
+d146 1
+a146 1
+	l += i;
+d306 1
+a306 1
+loadNewsgroup(ParsedURL *pu, char *code)
+d317 2
+d320 2
+a323 3
+#ifdef JP_CHARSET
+    *code = DocumentCode;
+#endif
+d414 8
+a421 2
+	    s = convertLine(&f, decodeMIME(s), code, HEADER_MODE)->ptr;
+	    n = convertLine(&f, decodeMIME(n), code, HEADER_MODE)->ptr;
+@
+
+
+1.14
+log
+@* file.c (loadGopherDir): convertLine RAW_MODE
+* ftp.c (loadFTPDir): ditto
+* fix indent
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.13 2003/01/15 16:14:41 ukai Exp $ */
+d317 1
+a317 1
+    MySignalHandler(*volatile trap) (SIGNAL_ARG) = NULL;
+d349 1
+a349 3
+    trap = signal(SIGINT, KeyAbort);
+    if (fmInitialized)
+	term_cbreak();
+d490 1
+a490 3
+    if (fmInitialized)
+	term_raw();
+    signal(SIGINT, trap);
+@
+
+
+1.13
+log
+@[w3m-dev 03641] Re: cleanup (don't close connection of news server)
+* ftp.c (ftp_command): fix fwrite arg
+* news.c (news_command): fix fwrite arg
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.12 2003/01/15 16:11:43 ukai Exp $ */
+d346 1
+a346 2
+	Strcat_charp(page,
+		     "</table>\n<p>Transfer Interrupted!\n");
+d353 1
+a353 2
+    tmp =
+	news_command(&current_news, "GROUP", group, &status);
+d379 1
+a379 3
+</head>\n<body>\n<h1>Newsgroup: %s %d-%d</h1>\n<hr>\n",
+		   parsedURL2Str(pu)->ptr, qgroup, start, end, qgroup, start,
+		   end);
+d426 2
+a427 1
+	    news_command(&current_news, "HEAD", Sprintf("%d", i)->ptr, &status);
+@
+
+
+1.12
+log
+@[w3m-dev 03640] Re: cleanup (don't close connection of news server)
+	* anchor.c (_put_ahchor_news): always conv_str
+		(_put_anchor_all): always conv_str
+	* etc.c (close_all_fds): deleted
+		(close_all_fds_except): added, except fd=f is left open
+	* file.c (guess_filename): added
+		(UFhalfclose): added
+		(convertLine): cleanup_line if not raw mode
+			check uf
+		(readHeader): always convertLine
+		(loadGeneralFile): rewrite
+		(loadGopherDir): return Str, args change to ParsedURL and code
+				rewrite
+		(saveBuffer): always conv_str
+		(_doFileCopy): close_all_fds
+		(doFileSave): close_all_fds_except
+		(uncompress_stream): dup, close_all_fds_except
+	* form.c (form_fputs_decode): always conv_str
+		(input_textarea): convertLine
+	* frame.c (createFrameFile): convertLine
+	* ftp.c (loadFTPDir): arg code
+				rewrite
+		(readFTPDir): convertLine
+	* html.h (UFfileno): added
+	* image.c (loadImage): close_all_fds
+	* indep.h (RAW_MODE): added
+	* local.c (loadLocalDir): return Str
+		(dirBuffer): rewrite
+		(localcgi_popen_r): close_all_fds
+	* main.c (main): check SCM_LOCAL
+			print err_msg
+	* news.c (news_command): args cmd and arg
+		(news_quit): news_command
+		(openNewsStream): news_command
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(closeNews): added
+	* proto.h (loadGopherDir): update
+		(conv_str): define for no JP_CHARSET
+		(readFTPDir): deleted
+		(loadFTPDir): added
+		(readNewsgroup): deleted
+		(loadNewsgroup): added
+		(dirBuffer): deleted
+		(loadLocalDir): added
+		(close_all_fds): defined by close_all_fds_except
+		(close_all_fds_except): added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.11 2003/01/10 17:06:25 ukai Exp $ */
+d47 1
+a47 1
+	fwrite(tmp->ptr, tmp->length, sizeof(char), news->wf);
+@
+
+
+1.11
+log
+@[w3m-dev 03632] cleanup (don't close connection of news server)
+* file.c (loadSomething): remove UFclose nntp:,news:
+	(loadFile): UFclose
+	(loadGeneralFile): always UFclose
+* html.h (UFclose): only reset when ISclose ==0
+* istream.c (ISclose): return int
+	(ISfileno): flag IST_UNCLOSE
+* istream.h (ISclose): return int
+	(IST_UNCLOSE): added
+* news.c (news_close): reset IST_UNCLOSE
+	(news_open): set IST_UNCLOSE
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.10 2003/01/07 15:56:41 ukai Exp $ */
+d36 1
+a36 1
+news_command(News * news, char *command, int *status)
+d42 6
+a47 2
+    if (command) {
+	fprintf(news->wf, "%s\r\n", command);
+d89 1
+a89 1
+    news_command(news, NULL, &status);
+d93 1
+a93 1
+	news_command(news, Sprintf("MODE %s", news->mode)->ptr, &status);
+d106 1
+a106 1
+    news_command(news, "QUIT", NULL);
+d264 2
+a265 2
+	    tmp = Sprintf("MODE %s", mode ? mode : "READER");
+	    tmp = news_command(&current_news, tmp->ptr, &status);
+d290 1
+a290 2
+	    news_command(&current_news, Sprintf("GROUP %s", group)->ptr,
+			 &status);
+d295 1
+a295 1
+	    news_command(&current_news, Sprintf("ARTICLE <%s>", p)->ptr,
+d298 1
+a298 2
+	    news_command(&current_news, Sprintf("ARTICLE %s", p)->ptr,
+			 &status);
+d307 1
+a307 1
+readNewsgroup(ParsedURL *pu)
+a316 1
+    char code = '\0';
+d321 3
+d339 4
+a342 2
+    page = Sprintf("<title>Newsgroup: %s</title>\n\
+<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n", qgroup, qgroup);
+d346 2
+a347 1
+	Strcat_charp(page, "</table><p>Transfer Interrupted!\n");
+d355 1
+a355 1
+	news_command(&current_news, Sprintf("GROUP %s", group)->ptr, &status);
+d379 5
+a383 2
+    page = Sprintf("<title>Newsgroup: %s %d-%d</title>\n\
+<h1>Newsgroup:&nbsp;%s %d-%d</h1>\n<hr>\n", qgroup, start, end, qgroup, start, end);
+d393 1
+a393 1
+    news_command(&current_news, Sprintf("XOVER %d-%d", start, end)->ptr,
+d420 2
+a421 2
+	    s = convertLine(&f, decodeMIME(s), &code, HEADER_MODE)->ptr;
+	    n = convertLine(&f, decodeMIME(n), &code, HEADER_MODE)->ptr;
+d430 1
+a430 1
+	    news_command(&current_news, Sprintf("HEAD %d", i)->ptr, &status);
+d462 1
+a462 1
+    tmp = Sprintf("LIST ACTIVE %s", group);
+d465 1
+a465 1
+    news_command(&current_news, tmp->ptr, &status);
+d494 1
+d499 6
+@
+
+
+1.10
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.9 2003/01/07 15:53:43 ukai Exp $ */
+d61 1
+d84 1
+@
+
+
+1.9
+log
+@[w3m-dev 03611] relative URL
+* news.c (openNewsStream): don't skip '/' for nntp:
+	(readNewsgroup): cleanup
+* url.c (parseURL): don't copy user & password
+	(parseURL2): fix for group, don't copy user & password
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.8 2003/01/06 15:49:29 ukai Exp $ */
+d310 1
+a310 1
+    char * volatile scheme, * volatile group, * volatile list;
+@
+
+
+1.8
+log
+@fix build warnings
+* url.c (parseURL2): fix comparison between pointer and integer
+* news.c (readNewsgroup): variable `scheme',`group',`list' might be clobbered by `longjmp' or `vfork'
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.7 2003/01/06 15:37:50 ukai Exp $ */
+d275 1
+a275 6
+	group = allocStr(pu->file, -1);
+	if (pu->scheme == SCM_NNTP && *group == '/') {
+	    /* first char of pu->file is '/' */
+	    group++;
+	}
+	group = file_unquote(group);
+d319 2
+a320 5
+    if (pu->scheme == SCM_NNTP_GROUP) {
+	if (*group == '/')
+	    group++;
+	scheme = "nntp:/";
+    }
+@
+
+
+1.7
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.6 2003/01/06 15:36:59 ukai Exp $ */
+d314 2
+a315 1
+    char *scheme, *group, *qgroup, *list, *p, *q, *s, *t, *n;
+@
+
+
+1.6
+log
+@[w3m-dev 03610] Re: news:<newsgroup>
+* anchor.c (_put_anchor_news): check '<'
+	(reAnchorNewsheader): added
+* file.c (loadSomething): Subject: as buffername
+	(checkHeader): check buf->document_header
+	(loadGeneralFile): reAnchorNewsheader
+* html.h (SCM_NNTP_GROUP): added
+* main.c (main): delete USE_NNTP in switch (newbuf->real_scheme)
+	(chkNMIDBuffer): lowercase in url_like_pat
+* news.c (add_news_message): add scheme, group as arg
+	(openNewsStream): check SCM_NNTP_GROUP
+			check current_news.host
+	(readNewsgroup): rewrite to support nntp:,news: extension
+* proto.h (reAnchorNewsheader): added
+* url.c (DefaultPort): add 119 for nntp group
+	(parseURL2): rewrite to support nntp:,news: extension
+	(_parsedURL2Str): add for SCM_NNTP_GROUP
+	(openURL): rewrite to support nntp:,news: extension
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.5 2002/12/27 16:46:13 ukai Exp $ */
+d287 1
+a287 1
+	else {	/* <newsgroup>/<message-id or article-number> */
+d297 1
+a297 1
+	else	/* <article-number> */
+d341 1
+a341 2
+<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n",
+	 	   qgroup, qgroup);
+d361 1
+a361 1
+	    end = atoi(p); 
+d378 1
+a378 2
+<h1>Newsgroup:&nbsp;%s %d-%d</h1>\n<hr>\n",
+	 	   qgroup, start, end, qgroup, start, end);
+@
+
+
+1.5
+log
+@fix build errors
+* display.c (make_lastline_message): fix error for undef JP_CHARSET
+* news.c (readNewsgroup: `code' always required
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.4 2002/12/27 16:31:49 ukai Exp $ */
+d184 1
+a184 1
+		 char *mid)
+d193 8
+a200 4
+	   Sprintf
+	   ("<tr valign=top><td>%d<td nowrap>(%02d/%02d)<td nowrap>%s<td><a href=\"news:%s\">%s</a>\n",
+	    index, tm->tm_mon + 1, tm->tm_mday, html_quote_s(name),
+	    html_quote(file_quote(mid)), html_quote(subject)));
+d203 24
+d236 1
+a236 1
+    if (pu->scheme == SCM_NNTP)
+d240 3
+a242 1
+    if (!host || *host == '\0')
+d244 3
+a246 1
+    if (pu->scheme != SCM_NNTP && (p = strchr(host, ':'))) {
+d273 8
+a280 3
+    if (pu->scheme == SCM_NNTP) {
+	/* first char of pu->file is '/' */
+	group = file_unquote(Strnew_charp(pu->file + 1)->ptr);
+d282 18
+a299 14
+	if (p == NULL)
+	    return NULL;
+	*p++ = '\0';
+	news_command(&current_news, Sprintf("GROUP %s", group)->ptr, &status);
+	if (status != 211)
+	    return NULL;
+	news_command(&current_news, Sprintf("ARTICLE %s", p)->ptr, &status);
+	if (status != 220)
+	    return NULL;
+	return current_news.rf;
+    }
+    else if (pu->scheme == SCM_NEWS) {
+	tmp = Sprintf("ARTICLE <%s>", url_unquote(pu->file));
+	news_command(&current_news, tmp->ptr, &status);
+d314 1
+a314 2
+    char *group, *p, *q, *s, *t, *n;
+    char *volatile qgroup;
+d322 12
+a333 4
+    group = file_unquote(pu->file);
+    qgroup = html_quote(group);
+    page = Strnew();
+
+d338 6
+a352 6
+    page =
+	Sprintf
+	("<title>Newsgroup: %s</title>\n<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n",
+	 qgroup, qgroup);
+
+    qgroup = html_quote(file_quote(group));	/* URL */
+d359 6
+a364 2
+    if (pu->label) {
+	start = atoi(pu->label);
+d368 2
+a369 1
+	    end = start + MaxNewsMessage;
+d374 7
+a380 4
+	end = last + 1;
+	if (end - start > MaxNewsMessage)
+	    start = end - MaxNewsMessage;
+    }
+d385 2
+a386 2
+	Strcat(page, Sprintf("<a href=\"news:%s#%d\">[%d-%d]</a>\n",
+			     qgroup, i, i, start - 1));
+d390 1
+a390 1
+    news_command(&current_news, Sprintf("XOVER %d-%d", start, end - 1)->ptr,
+d419 2
+a420 1
+	    add_news_message(page, i, t, n, s, p);
+d426 1
+a426 1
+	for (i = start; i < end && i <= last; i++) {
+d443 2
+a444 1
+	    add_news_message(page, i, t, n, s, p);
+d449 2
+a450 2
+    if (end <= last) {
+	i = end + MaxNewsMessage - 1;
+d453 2
+a454 2
+	Strcat(page, Sprintf("<a href=\"news:%s#%d\">[%d-%d]</a>\n",
+			     qgroup, end, end, i));
+d459 4
+a462 2
+    news_command(&current_news, Sprintf("LIST ACTIVE %s.*", group)->ptr,
+		 &status);
+a477 1
+	i = 0;
+d480 2
+d484 2
+a485 2
+	       ("<tr><td align=right>%d<td><a href=\"news:%s\">%s</a>\n", i,
+		html_quote(file_quote(p)), html_quote(p)));
+@
+
+
+1.4
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.3 2002/12/27 16:30:54 ukai Exp $ */
+a276 1
+#ifdef JP_CHARSET
+a277 1
+#endif
+@
+
+
+1.3
+log
+@gcc -Wall -Werror clean
+* file.c (loadHTMLstream): unused variable `p'
+* news.c (news_command): unused variable `c'
+	(news_open): unused variable `tmp'
+	(readNewsgroup): volatile page, qgroup, flag, start, end
+			uninitialized variable `page'
+* url.c (openURL): unused variable `fw', `r', `stream'
+From: Fumitoshi UKAI  <ukai@@debian.or.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.2 2002/12/27 16:09:18 ukai Exp $ */
+d274 1
+a274 1
+    char * volatile qgroup;
+@
+
+
+1.2
+log
+@fix indent
+@
+text
+@d1 1
+a1 1
+/* $Id: news.c,v 1.1 2002/12/27 16:07:44 ukai Exp $ */
+a38 1
+    char c;
+a73 1
+    Str tmp;
+d269 2
+a270 1
+    Str page, tmp;
+d273 4
+a276 2
+    char *group, *qgroup, *p, *q, *s, *t, *n;
+    int status, flag = 0, i, first, last, start = 0, end = 0;
+d286 1
+@
+
+
+1.1
+log
+@[w3m-dev 03608] news:<newsgroup>
+* XMakefile (LSRCS): add news.c
+	(LOBJS): add news.o
+* file.c (loadSOmething): don't UFclose() for nntp/news
+	(readHeader): remove . at beginning of line for news
+		img link to file:
+	(loadGeneralFile): add SCM_NEWS_GROUP
+		don't UFclose() for nntp/news
+	(loadHTMLstream): . line check for news
+	(loadBuffer): . line check for news
+* fm.h (NNTP_server): added
+	(NNTP_mode): added
+	(MaxNewsMessage): added
+* html.h (SCM_NEWS_GROUP): added
+* main.c (main): NNTP_server or NNTPSERVER
+		NNTP_mode or NNTPMODE
+		add SCM_NEWS_GROUP
+	(followA): remove news:..@@.. check
+	(cmd_loadURL): remove news:...@@.. check
+	(w3m_exit): disconnectNews
+* proto.h (openNewsStream): added
+	(readNewsgroup): added
+	(disconnectNews): added
+* rc.c (CMT_NNTP_SERVER): added
+	(CMT_NNTP_MODE): added
+	(CMT_MAX_NEWS): added
+	(params9): add nntpserver, nntpmode, max_news
+* url.c (DefaultPort): add 119 for news group
+	(parseURL2): news:..@@... is SCM_NEWS_GROUP
+	(_parsedURL2Str): add news for SCM_NEWS_GROUP
+	(openURL): cleanup SCM_NEWS
+		add SCM_NEWS_GROUP
+* news.c: added
+From: Hironori SAKAMOTO <hsaka@@mth.biglobe.ne.jp>
+@
+text
+@d1 1
+a1 1
+/* $Id$ */
+d36 1
+a36 1
+news_command(News *news, char *command, int *status)
+d57 1
+a57 1
+news_close(News *news)
+d73 1
+a73 1
+news_open(News *news)
+d100 1
+a100 1
+news_quit(News *news)
+d117 1
+a117 1
+	if (*p == '\0')			/* <address> */
+d119 1
+a119 1
+	else				/* <address> name ? */
+d195 4
+a198 3
+	   Sprintf("<tr valign=top><td>%d<td nowrap>(%02d/%02d)<td nowrap>%s<td><a href=\"news:%s\">%s</a>\n",
+		   index, tm->tm_mon + 1, tm->tm_mday, html_quote_s(name),
+		   html_quote(file_quote(mid)), html_quote(subject)));
+d227 1
+a227 2
+	if (!strcmp(current_news.host, host) &&
+	    current_news.port == port) {
+d299 4
+a302 2
+    page = Sprintf("<title>Newsgroup: %s</title>\n<h1>Newsgroup:&nbsp;%s</h1>\n<hr>\n",
+			 qgroup, qgroup);
+d305 2
+a306 1
+    tmp = news_command(&current_news, Sprintf("GROUP %s", group)->ptr, &status);
+d335 1
+a335 1
+					&status);
+d367 1
+a367 1
+	init_stream(&f, SCM_NEWS, current_news.rf); 
+d422 3
+a424 2
+	       Sprintf("<tr><td align=right>%d<td><a href=\"news:%s\">%s</a>\n",
+		       i, html_quote(file_quote(p)), html_quote(p)));
+d442 1
+a442 1
+#endif		/* USE_NNTP */
+@
+
