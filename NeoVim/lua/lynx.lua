@@ -33,6 +33,34 @@ local function lynx_command()
   return vim.fn.exepath("lynx") ~= "" and vim.fn.exepath("lynx") or vim.fn.exepath("lynx.exe")
 end
 
+local function python_executable()
+  if vim.fn.executable("python3") == 1 then
+    return "python3"
+  elseif vim.fn.executable("python") == 1 then
+    return "python"
+  end
+  return "python3"
+end
+
+local lss_support_cache = nil
+local function lynx_supports_lss()
+  if lss_support_cache ~= nil then
+    return lss_support_cache
+  end
+  local cmd = lynx_command()
+  if cmd == "" then
+    lss_support_cache = false
+    return false
+  end
+  local help_out = vim.fn.system({ cmd, "-help" })
+  if type(help_out) == "string" and (help_out:match("%-lss") or help_out:match("%-LSS")) then
+    lss_support_cache = true
+  else
+    lss_support_cache = false
+  end
+  return lss_support_cache
+end
+
 local ssl_support_cache = nil
 local function lynx_supports_ssl()
   if ssl_support_cache ~= nil then
@@ -44,8 +72,13 @@ local function lynx_supports_ssl()
     return false
   end
   local version_out = vim.fn.system({ cmd, "-version" })
-  if type(version_out) == "string" and (version_out:upper():match("SSL") or version_out:upper():match("TLS")) then
-    ssl_support_cache = true
+  if type(version_out) == "string" then
+    local upper = version_out:upper()
+    if upper:match("SSL") or upper:match("TLS") or upper:match("GNUTLS") or upper:match("OPENSSL") or upper:match("MBEDTLS") then
+      ssl_support_cache = true
+    else
+      ssl_support_cache = false
+    end
   else
     ssl_support_cache = false
   end
@@ -98,7 +131,8 @@ local function fetch_and_cache(url, force_reload)
     local _ = vim.fn.system(download_cmd)
     if vim.v.shell_error == 0 and vim.fn.filereadable(cache_path) == 1 and vim.fn.getfsize(cache_path) > 0 then
       if cache_path:match("%.json$") then
-        local formatted = vim.fn.system({ "python3", "-m", "json.tool", cache_path })
+        local py_cmd = python_executable()
+        local formatted = vim.fn.system({ py_cmd, "-m", "json.tool", cache_path })
         if vim.v.shell_error == 0 and formatted and formatted ~= "" then
           local f = io.open(cache_path, "w")
           if f then
@@ -163,7 +197,7 @@ local function lynx_args(url)
     table.insert(args, "-cfg")
     table.insert(args, (cfg.cfg_file:gsub("\\", "/")))
   end
-  if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 then
+  if cfg.lss_file and vim.fn.filereadable(cfg.lss_file) == 1 and lynx_supports_lss() then
     table.insert(args, "-lss")
     table.insert(args, (cfg.lss_file:gsub("\\", "/")))
   end
