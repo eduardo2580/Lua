@@ -338,6 +338,7 @@ function M.setup(opts)
   end, { nargs = "?", desc = "Reload current or specified URL from internet" })
 
   vim.keymap.set("n", "<leader>bb", M.toggle, { desc = "Toggle Lynx browser" })
+  vim.keymap.set("n", "<leader>lb", M.toggle, { desc = "Open Lynx browser" })
   vim.keymap.set("n", "<leader>ww", M.toggle, { desc = "Open Lynx browser" })
   vim.keymap.set("n", "gx", M.gx, { desc = "Open link under cursor in Lynx" })
 

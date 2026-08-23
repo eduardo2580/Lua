@@ -740,14 +740,42 @@ local plugins = {
   },
   {
     "lewis6991/gitsigns.nvim",
-    event = "BufReadPre",
+    event = { "BufReadPre", "BufNewFile" },
+    keys = {
+      { "]h", function() require("gitsigns").next_hunk() end, desc = "Next change" },
+      { "[h", function() require("gitsigns").prev_hunk() end, desc = "Previous change" },
+      { "<leader>ga", function() require("gitsigns").stage_hunk() end, desc = "Stage hunk" },
+      { "<leader>gr", function() require("gitsigns").reset_hunk() end, desc = "Reset hunk" },
+      { "<leader>gp", function() require("gitsigns").preview_hunk() end, desc = "Preview hunk" },
+      { "<leader>gb", function() require("gitsigns").blame_line() end, desc = "Blame line" },
+      { "<leader>gB", function() require("gitsigns").toggle_current_line_blame() end, desc = "Toggle line blame" },
+      { "<leader>gD", function() require("gitsigns").diffthis() end, desc = "Diff buffer" },
+    },
     config = function()
       require("gitsigns").setup({
         current_line_blame = false,
       })
-      vim.keymap.set("n", "]h", "<cmd>Gitsigns next_hunk<CR>", { desc = "Next change" })
-      vim.keymap.set("n", "[h", "<cmd>Gitsigns prev_hunk<CR>", { desc = "Previous change" })
-      vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>", { desc = "Blame line" })
+    end,
+  },
+  {
+    "tpope/vim-fugitive",
+    cmd = { "Git", "G", "GBrowse" },
+    keys = {
+      { "<leader>gs", "<cmd>Git<CR>", desc = "Git status" },
+      { "<leader>gP", "<cmd>Git push<CR>", desc = "Push" },
+      { "<leader>gL", "<cmd>Git pull<CR>", desc = "Pull" },
+      { "<leader>go", "<cmd>GBrowse<CR>", desc = "Open on remote" },
+    },
+  },
+  {
+    "NeogitOrg/neogit",
+    cmd = "Neogit",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>gn", "<cmd>Neogit<CR>", desc = "Open Neogit" },
+    },
+    config = function()
+      require("neogit").setup({})
     end,
   },
 
@@ -920,19 +948,27 @@ local plugins = {
 
   -- ── GAMES ──────────────────────────────────────────────────────────────────
   { "alec-gibson/nvim-tetris", cmd = "Tetris", keys = { { "<leader>vt", "<cmd>Tetris<CR>", desc = "Tetris" } } },
-  { "ThePrimeagen/vim-be-good", cmd = "VimBeGood", keys = { { "<leader>vv", "<cmd>VimBeGood<CR>", desc = "Vim motion game" } } },
   { "seandewar/nvimesweeper", cmd = "Nvimesweeper", keys = { { "<leader>vm", "<cmd>Nvimesweeper<CR>", desc = "Minesweeper" } } },
-  {
-    "rktjmp/shenzhen-solitaire.nvim",
-    cmd = { "ShenzhenSolitaireNewGame", "ShenzhenSolitaireNextGame" },
-    keys = { { "<leader>vz", "<cmd>ShenzhenSolitaireNewGame<CR>", desc = "Shenzhen Solitaire" } },
-  },
   { "zyedidia/vim-snake", cmd = "Snake", keys = { { "<leader>vn", "<cmd>Snake<CR>", desc = "Snake" } } },
   {
     "jim-fx/sudoku.nvim",
     cmd = "Sudoku",
     keys = { { "<leader>vu", "<cmd>Sudoku<CR>", desc = "Sudoku" } },
-    config = function() require("sudoku").setup({}) end,
+    config = function()
+      require("sudoku").setup({
+        mappings = {
+          { key = "1", action = "insert=1" },
+          { key = "2", action = "insert=2" },
+          { key = "3", action = "insert=3" },
+          { key = "4", action = "insert=4" },
+          { key = "5", action = "insert=5" },
+          { key = "6", action = "insert=6" },
+          { key = "7", action = "insert=7" },
+          { key = "8", action = "insert=8" },
+          { key = "9", action = "insert=9" },
+        },
+      })
+    end,
   },
   { "seandewar/killersheep.nvim", cmd = "KillKillKill", keys = { { "<leader>vk", "<cmd>KillKillKill<CR>", desc = "Killer Sheep" } } },
   {
@@ -940,9 +976,10 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "BlackJackNewGame", "BlackJackQuit", "BlackJackResetScores" },
     keys = { { "<leader>vb", "<cmd>BlackJackNewGame<CR>", desc = "Blackjack" } },
+    config = function()
+      require("blackjack.window").card_style = "large"
+    end,
   },
-  { "efueyo/td.nvim", cmd = { "TDStart", "TDToggle", "TDStop" }, keys = { { "<leader>vd", "<cmd>TDStart<CR>", desc = "Tower Defense" } } },
-  { "luk400/vim-lichess", cmd = "LichessFindGame", keys = { { "<leader>vc", "<cmd>LichessFindGame<CR>", desc = "Chess (Lichess)" } } },
 
   -- ── AUTOPAIRS ──────────────────────────────────────────────────────────────
   {
@@ -1041,7 +1078,22 @@ local plugins = {
       wk.add({
         { "<leader>f", group = "Find" },
         { "<leader>g", group = "Git" },
+        { "<leader>ga", desc = "Stage hunk" },
+        { "<leader>gb", desc = "Blame line" },
+        { "<leader>gB", desc = "Toggle line blame" },
+        { "<leader>gD", desc = "Diff buffer" },
+        { "<leader>gc", desc = "Close diff view" },
+        { "<leader>gd", desc = "Open diff view" },
+        { "<leader>gg", desc = "Open Lazygit" },
+        { "<leader>gL", desc = "Pull" },
+        { "<leader>gn", desc = "Open Neogit" },
+        { "<leader>go", desc = "Open on remote" },
+        { "<leader>gp", desc = "Preview hunk" },
+        { "<leader>gP", desc = "Push" },
+        { "<leader>gr", desc = "Reset hunk" },
+        { "<leader>gs", desc = "Git status" },
         { "<leader>l", group = "LSP" },
+        { "<leader>lb", "<cmd>Lynx<CR>", desc = "Lynx browser" },
         { "<leader>t", group = "Terminal and Tests" },
         { "<leader>w", group = "Save" },
         { "<leader>q", group = "Quit and Sessions" },
